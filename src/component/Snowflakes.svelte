@@ -1,6 +1,6 @@
 <script>
     import { onMount } from 'svelte'
-	import { mx, my, dx, dy } from "../stores"
+	  import { mx, my, dx, dy } from "../mouseStatus"
   
     // a bunch of variables defining the snow and how it falls
     const SNOWFLAKES_COUNT = 100
@@ -24,7 +24,6 @@
     function getDir(a, b, time){
         return a + b / (time * 0.5) > 0.0 ? true : false;
     }
-
 
     // this function generates the random configuration with all necessary values
     function randomSnowflakeConfig(i) {
@@ -85,7 +84,7 @@
             $mx - boundary/2 <= p_flake_x && p_flake_x <= $mx + boundary / 2 && 
             $my - boundary/2 <= p_flake_y && p_flake_y <= $my + boundary / 2 ){
                 let distance = Math.sqrt(Math.pow(p_flake_x - $mx, 2) + Math.pow(p_flake_y - $my,2)) / 1000
-                flake.MouseForce = [-1/distance * 15 * $dx / document.body.clientWidth, -1/distance * 15 * $dy / document.body.clientHeight];
+                flake.MouseForce = [-1/distance * 5 * $dx / document.body.clientWidth, -1/distance * 5 * $dy / document.body.clientHeight];
                 flake.MouseTouchedTime = 1;
                 flake.EnableMouseForce = false;
             }
