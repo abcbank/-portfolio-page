@@ -1,22 +1,23 @@
 
 <script>
     import { onMount } from "svelte";
+	import { season } from "./global"
 	import { mx, my, dx, dy, clicked } from "./mouseStatus"
 	import { norm1, norm2, norm3, norm4, norm5, norm6, norm7, norm8, norm9, norm10, norm11, norm12 } from "./fishTemplate"
     import Navbar from "./component/Navbar.svelte";
 	import Snowflakes from "./component/Snowflakes.svelte";
 	import Sakuraflakes from "./component/Sakura.svelte"
 	import Lake from "./component/Lake.svelte"
-	export let name;
 	import jQuery from "jquery"
 
 	let premx = 0;
 	let premy = 0;
 	$mx = 0;
 	$my = 0;
-	let season = "";
+	$season = "";
 	let timer;
-	let background;
+	let background = [];
+
 
     jQuery.get('/assets/ascii/fish_1.txt', function(data) {
         $norm1 = data;
@@ -67,8 +68,9 @@
     });
 
 
-	function handleMouseclick() {
-		$clicked = true;
+	function handleMouseclick(event) {
+		$clicked = $clicked + 1 % 100;
+		console.log($clicked);
 	}
 	function handleMousemove(event) {
 		clearTimeout(timer)
@@ -85,23 +87,23 @@
 	}
 	onMount(() => {		
 		let month = new Date().getMonth() + 1;
+
+		background['Spring'] = "linear-gradient(to bottom, #a1c4fd 0%, turquoise 60%,#c2e9fb 90%,#8A3B12 100%)";
+		background['Summer'] = "linear-gradient(-45deg, #089acf, #0bcea0)";
+		background['Fall'] = "#fff"
+		background['Winter'] = "linear-gradient(to bottom, #071B26 0%,#071B26 30%,#8A3B12 90%, #fff 100%)"
 		
 		if(3 <= month && month <= 5){
-			background = "#fff"
-			season = "Spring";
+			$season = "Spring";
 		}
 		else if(6 <= month && month <= 8){
-			background = "linear-gradient(to right, #BDFFF3, #4AC29A)";
-			season = "Summer"
+			$season = "Summer"
 		}
 		else if(9 <= month && month <= 11){
-			season = "Fall"
+			$season = "Fall"
 		}
 		else{
-			background = "linear-gradient(to right, #BDFFF3, #4AC29A)";
-			season = "Summer"
-			// background = "#fff"
-			// season = "Winter"
+			$season = "Winter"
 		}
 	})
 	
@@ -109,17 +111,15 @@
 		alert('Button Clicked');
 	}
 </script>
-<main on:mousemove={handleMousemove} style="background:{ background };">
+<main on:mousemove={handleMousemove} on:click={handleMouseclick} style="background:{ background[$season] };">
 	<div class="full-landing-image">
 		<Navbar  />
-		{#if season == "Spring"}
+		{#if $season == "Spring"}
 		<Sakuraflakes />
-		{:else if season == "Summer"}
+		{:else if $season == "Summer"}
 		<Lake/>
-		{:else if season == "Fall"}
-		<Sakuraflakes />
+		{:else if $season == "Fall"}
 		{:else}
-		<!-- <Lake/> -->
 		<Snowflakes />
 		{/if}
 		<div id="details">
@@ -133,7 +133,6 @@
 		width:100%;
 		max-width: 240px;
 		height:100vh;
-		background: linear-gradient(to right, #BDFFF3, #4AC29A);;
 		overflow:hidden;
 	}
 	h1 {

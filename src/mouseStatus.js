@@ -23,7 +23,7 @@ export const dy = writable(0, () => {
     return () => {
     }
 });
-export const clicked= writable(false, () => {
+export const clicked= writable(0, () => {
   
     return () => {
     }
@@ -35,7 +35,7 @@ export let mouse = readable({
     my : 0,
     dx : 0,
     dy : 0,
-    clicked : false
+    clicked : 0
 }, (set) => {
 
     return () => {

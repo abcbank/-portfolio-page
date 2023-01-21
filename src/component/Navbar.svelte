@@ -1,4 +1,6 @@
 <script lang="ts">
+  import jQuery from 'jquery'
+	import { season } from "../global"
   import {
     Collapse,
     Navbar,
@@ -82,6 +84,40 @@
         </NavItem>
       </Nav>
     </Collapse>
+    
+      <div style="float:left;">
+        <Dropdown>
+          <DropdownToggle caret> { $season }</DropdownToggle>
+          <DropdownMenu>
+            <DropdownItem on:click={() => 
+            {
+              $season = "Spring"
+              jQuery(".full-landing-image").ripples('pause');
+              jQuery(".full-landing-image").ripples('hide');
+            }}>Spring</DropdownItem>
+            <DropdownItem on:click={() => 
+            {
+              $season = "Summer"
+              jQuery(".full-landing-image").ripples('play');
+              jQuery(".full-landing-image").ripples('show');
+            }}>Summer</DropdownItem>
+            
+            <DropdownItem on:click={() => 
+            {
+              $season = "Fall"
+              jQuery(".full-landing-image").ripples('pause');
+              jQuery(".full-landing-image").ripples('hide');
+            }}>Fall</DropdownItem>
+            
+            <DropdownItem on:click={() => 
+            {
+              $season = "Winter"
+              jQuery(".full-landing-image").ripples('pause');
+              jQuery(".full-landing-image").ripples('hide');
+            }}>Winter</DropdownItem>
+          </DropdownMenu>
+        </Dropdown>
+      </div>
   </Navbar>
 </div>
 
