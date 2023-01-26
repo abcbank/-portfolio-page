@@ -1,6 +1,5 @@
 <script>
     import { onMount } from 'svelte'
-	  import { mx, my, dx, dy } from "../mouseStatus"
   
     // a bunch of variables defining the snow and how it falls
     const SNOWFLAKES_COUNT = 100
@@ -15,6 +14,25 @@
     const MS_BETWEEN_FRAMES = 1000 / TARGET_FPS
   
     const boundary = 100;
+
+    let mx = 0;
+    let my = 0;
+    let dx = 0;
+    let dy = 0;
+    let timer;
+        
+    function handleMouseMove({clientX, clientY}){
+        clearTimeout(timer)
+        timer = setTimeout(() => {
+          dx = 0;
+          dy = 0;
+        }, 50)
+        
+        dx = mx - clientX;
+        dy = my - clientY;
+        mx = clientX
+        my = clientY
+    }
 
     function getPower(a, b, time){
         return a + b / (time * 0.5)
@@ -80,17 +98,17 @@
             let p_flake_y = flake.y * document.body.clientHeight / 100;
             
             if( flake.EnableMouseForce &&
-            $mx != 0 && $mx != 0 && 
-            $mx - boundary/2 <= p_flake_x && p_flake_x <= $mx + boundary / 2 && 
-            $my - boundary/2 <= p_flake_y && p_flake_y <= $my + boundary / 2 ){
-                let distance = Math.sqrt(Math.pow(p_flake_x - $mx, 2) + Math.pow(p_flake_y - $my,2)) / 1000
-                flake.MouseForce = [-1/distance * 5 * $dx / document.body.clientWidth, -1/distance * 5 * $dy / document.body.clientHeight];
+            mx != 0 && mx != 0 && 
+            mx - boundary/2 <= p_flake_x && p_flake_x <= mx + boundary / 2 && 
+            my - boundary/2 <= p_flake_y && p_flake_y <= my + boundary / 2 ){
+                let distance = Math.sqrt(Math.pow(p_flake_x - mx, 2) + Math.pow(p_flake_y - my,2)) / 1000
+                flake.MouseForce = [-1/distance * 5 * dx / document.body.clientWidth, -1/distance * 5 * dy / document.body.clientHeight];
                 flake.MouseTouchedTime = 1;
                 flake.EnableMouseForce = false;
             }
             else if(
-            $mx - boundary/2 <= p_flake_x && p_flake_x <= $mx + boundary / 2 && 
-            $my - boundary/2 <= p_flake_y && p_flake_y <= $my + boundary / 2){
+            mx - boundary/2 <= p_flake_x && p_flake_x <= mx + boundary / 2 && 
+            my - boundary/2 <= p_flake_y && p_flake_y <= my + boundary / 2){
                 flake.EnableMouseForce = true;
             }
 
@@ -123,6 +141,8 @@
     })
   </script>
 
+<svelte:window 
+    on:mousemove={handleMouseMove}/>
 <div class="snowframe" aria-hidden="true">
     {#each snowflakes as flake}
       <div

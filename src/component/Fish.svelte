@@ -4,7 +4,6 @@
 	import { norm1, norm2, norm3, norm4, norm5, norm6, norm7, norm8, norm9, norm10, norm11, norm12 } from "../fishTemplate"
     import { linear, circInOut,  cubicInOut, expoInOut } from 'svelte/easing';
     import { tweened } from 'svelte/motion';
-    import { mx, my, clicked } from "../mouseStatus"
 
     // a bunch of variables defining the snow and how it falls
     const FLAKES_COUNT = 10
@@ -23,7 +22,9 @@
     let config;
     let idx = 0;
     let lastTime = 0;
-    let mouseclick = 0;
+    // let mouseclick = 0;
+    let mx,my;
+    let mouseclick =false;
 
     function createConfig(){
         return {
@@ -43,7 +44,7 @@
     }
 
     function mouseClicked(){
-        return mouseclick != $clicked;
+        // return mouseclick != $clicked;
     }
     function axisFilter(i){
         if(i < 0)
@@ -138,10 +139,11 @@
         let elapsed = nextFrame(timestamp, lastTime);
 
         if(elapsed > MS_BETWEEN_FRAMES){
-            if(mouseClicked()){
-                mouseclick = $clicked;
-                let mouseX = 100 - (document.body.clientWidth - $mx) / document.body.clientWidth * 100;
-                let mouseY = 100 - (document.body.clientHeight - $my) / document.body.clientHeight * 100;
+            if(mouseclick){
+                // mouseclick = $clicked;
+                mouseclick = false;
+                let mouseX = 100 - (document.body.clientWidth - mx) / document.body.clientWidth * 100;
+                let mouseY = 100 - (document.body.clientHeight - my) / document.body.clientHeight * 100;
 
                 let runningVector = [config.startPoint[0] - mouseX, config.startPoint[1] - mouseY];
                 let distance = getPower(runningVector);
@@ -154,7 +156,7 @@
                 }
             }
             else{
-                    move();
+                move();
             }
         }
       }
@@ -162,7 +164,18 @@
   
       return () => cancelAnimationFrame(frame)
     })
+    function handleMouseDown(){
+        mouseclick = true;
+    }
+    function handleMouseMove({clientX, clientY}){
+        mx = clientX
+        my = clientY
+    }
   </script>
+  
+<svelte:window 
+    on:mousedown={handleMouseDown}
+    on:mousemove={handleMouseMove}/>
 <div class="Fish" style="transform: translate(-50%, -50%) rotate({Math.atan2(config.movingVector[1], config.movingVector[0]) + Math.PI / 2}rad) scale({config.scale}); left: {config.startPoint[0]}%; top: {config.startPoint[1]}%;">
     <pre>
     <br/>

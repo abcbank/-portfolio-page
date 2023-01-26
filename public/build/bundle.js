@@ -1019,48 +1019,6 @@ var app = (function (jQuery) {
     });
 
     /* 쓰기 전용 */
-    const mx = writable(0, () => {
-      
-        return () => {
-        }
-    });
-      
-    const my = writable(0, () => {
-      
-        return () => {
-        }
-    });
-
-    const dx = writable(0, () => {
-      
-        return () => {
-        }
-    });
-    const dy = writable(0, () => {
-      
-        return () => {
-        }
-    });
-    const clicked= writable(0, () => {
-      
-        return () => {
-        }
-    });
-
-    /* 읽기 전용 */
-    readable({
-        mx : 0,
-        my : 0,
-        dx : 0,
-        dy : 0,
-        clicked : 0
-    }, (set) => {
-
-        return () => {
-        }
-    });
-
-    /* 쓰기 전용 */
     const norm1 = writable("", () => {
       
         return () => {
@@ -8835,7 +8793,7 @@ var app = (function (jQuery) {
 
     	const block = {
     		c: function create() {
-    			t = text("About Me");
+    			t = text("Profile");
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, t, anchor);
@@ -10121,7 +10079,7 @@ var app = (function (jQuery) {
     			div = element("div");
     			create_component(dropdown.$$.fragment);
     			set_style(div, "float", "left");
-    			add_location(div, file$6, 87, 6, 2675);
+    			add_location(div, file$6, 87, 6, 2674);
     		},
     		m: function mount(target, anchor) {
     			mount_component(navbarbrand, target, anchor);
@@ -10402,14 +10360,14 @@ var app = (function (jQuery) {
 
     function get_each_context$1(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[8] = list[i];
+    	child_ctx[10] = list[i];
     	return child_ctx;
     }
 
-    // (127:4) {#each snowflakes as flake}
+    // (147:4) {#each snowflakes as flake}
     function create_each_block$1(ctx) {
     	let div;
-    	let t0_value = /*flake*/ ctx[8].snowIcon + "";
+    	let t0_value = /*flake*/ ctx[10].snowIcon + "";
     	let t0;
     	let t1;
     	let div_style_value;
@@ -10420,8 +10378,8 @@ var app = (function (jQuery) {
     			t0 = text(t0_value);
     			t1 = space();
     			attr_dev(div, "class", "snowflake svelte-1d2e7rn");
-    			attr_dev(div, "style", div_style_value = `opacity: ${/*flake*/ ctx[8].opacity}; transform: scale(${/*flake*/ ctx[8].scale}) rotate(${/*flake*/ ctx[8].rotation}deg); left: ${/*flake*/ ctx[8].x}%; top: calc(${/*flake*/ ctx[8].y}% - ${/*flake*/ ctx[8].scale}rem)`);
-    			add_location(div, file$5, 127, 6, 4780);
+    			attr_dev(div, "style", div_style_value = `opacity: ${/*flake*/ ctx[10].opacity}; transform: scale(${/*flake*/ ctx[10].scale}) rotate(${/*flake*/ ctx[10].rotation}deg); left: ${/*flake*/ ctx[10].x}%; top: calc(${/*flake*/ ctx[10].y}% - ${/*flake*/ ctx[10].scale}rem)`);
+    			add_location(div, file$5, 147, 6, 5152);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -10429,9 +10387,9 @@ var app = (function (jQuery) {
     			append_dev(div, t1);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*snowflakes*/ 1 && t0_value !== (t0_value = /*flake*/ ctx[8].snowIcon + "")) set_data_dev(t0, t0_value);
+    			if (dirty & /*snowflakes*/ 1 && t0_value !== (t0_value = /*flake*/ ctx[10].snowIcon + "")) set_data_dev(t0, t0_value);
 
-    			if (dirty & /*snowflakes*/ 1 && div_style_value !== (div_style_value = `opacity: ${/*flake*/ ctx[8].opacity}; transform: scale(${/*flake*/ ctx[8].scale}) rotate(${/*flake*/ ctx[8].rotation}deg); left: ${/*flake*/ ctx[8].x}%; top: calc(${/*flake*/ ctx[8].y}% - ${/*flake*/ ctx[8].scale}rem)`)) {
+    			if (dirty & /*snowflakes*/ 1 && div_style_value !== (div_style_value = `opacity: ${/*flake*/ ctx[10].opacity}; transform: scale(${/*flake*/ ctx[10].scale}) rotate(${/*flake*/ ctx[10].rotation}deg); left: ${/*flake*/ ctx[10].x}%; top: calc(${/*flake*/ ctx[10].y}% - ${/*flake*/ ctx[10].scale}rem)`)) {
     				attr_dev(div, "style", div_style_value);
     			}
     		},
@@ -10444,7 +10402,7 @@ var app = (function (jQuery) {
     		block,
     		id: create_each_block$1.name,
     		type: "each",
-    		source: "(127:4) {#each snowflakes as flake}",
+    		source: "(147:4) {#each snowflakes as flake}",
     		ctx
     	});
 
@@ -10453,6 +10411,8 @@ var app = (function (jQuery) {
 
     function create_fragment$5(ctx) {
     	let div;
+    	let mounted;
+    	let dispose;
     	let each_value = /*snowflakes*/ ctx[0];
     	validate_each_argument(each_value);
     	let each_blocks = [];
@@ -10471,7 +10431,7 @@ var app = (function (jQuery) {
 
     			attr_dev(div, "class", "snowframe");
     			attr_dev(div, "aria-hidden", "true");
-    			add_location(div, file$5, 125, 0, 4697);
+    			add_location(div, file$5, 145, 0, 5069);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -10481,6 +10441,11 @@ var app = (function (jQuery) {
 
     			for (let i = 0; i < each_blocks.length; i += 1) {
     				each_blocks[i].m(div, null);
+    			}
+
+    			if (!mounted) {
+    				dispose = listen_dev(window, "mousemove", /*handleMouseMove*/ ctx[1], false, false, false);
+    				mounted = true;
     			}
     		},
     		p: function update(ctx, [dirty]) {
@@ -10513,6 +10478,8 @@ var app = (function (jQuery) {
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(div);
     			destroy_each(each_blocks, detaching);
+    			mounted = false;
+    			dispose();
     		}
     	};
 
@@ -10546,22 +10513,32 @@ var app = (function (jQuery) {
     }
 
     function instance$5($$self, $$props, $$invalidate) {
-    	let $my;
-    	let $mx;
-    	let $dy;
-    	let $dx;
-    	validate_store(my, 'my');
-    	component_subscribe($$self, my, $$value => $$invalidate(1, $my = $$value));
-    	validate_store(mx, 'mx');
-    	component_subscribe($$self, mx, $$value => $$invalidate(2, $mx = $$value));
-    	validate_store(dy, 'dy');
-    	component_subscribe($$self, dy, $$value => $$invalidate(3, $dy = $$value));
-    	validate_store(dx, 'dx');
-    	component_subscribe($$self, dx, $$value => $$invalidate(4, $dx = $$value));
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('Snowflakes', slots, []);
     	const SNOW_ICONS = ['❆', '❅', '❄'];
     	const MS_BETWEEN_FRAMES = 1000 / TARGET_FPS$2;
+    	let mx = 0;
+    	let my = 0;
+    	let dx = 0;
+    	let dy = 0;
+    	let timer;
+
+    	function handleMouseMove({ clientX, clientY }) {
+    		clearTimeout(timer);
+
+    		timer = setTimeout(
+    			() => {
+    				dx = 0;
+    				dy = 0;
+    			},
+    			50
+    		);
+
+    		dx = mx - clientX;
+    		dy = my - clientY;
+    		mx = clientX;
+    		my = clientY;
+    	}
 
     	// this function generates the random configuration with all necessary values
     	function randomSnowflakeConfig(i) {
@@ -10609,17 +10586,17 @@ var app = (function (jQuery) {
     					let p_flake_x = flake.x * document.body.clientWidth / 100;
     					let p_flake_y = flake.y * document.body.clientHeight / 100;
 
-    					if (flake.EnableMouseForce && $mx != 0 && $mx != 0 && $mx - boundary$1 / 2 <= p_flake_x && p_flake_x <= $mx + boundary$1 / 2 && $my - boundary$1 / 2 <= p_flake_y && p_flake_y <= $my + boundary$1 / 2) {
-    						let distance = Math.sqrt(Math.pow(p_flake_x - $mx, 2) + Math.pow(p_flake_y - $my, 2)) / 1000;
+    					if (flake.EnableMouseForce && mx != 0 && mx != 0 && mx - boundary$1 / 2 <= p_flake_x && p_flake_x <= mx + boundary$1 / 2 && my - boundary$1 / 2 <= p_flake_y && p_flake_y <= my + boundary$1 / 2) {
+    						let distance = Math.sqrt(Math.pow(p_flake_x - mx, 2) + Math.pow(p_flake_y - my, 2)) / 1000;
 
     						flake.MouseForce = [
-    							-1 / distance * 5 * $dx / document.body.clientWidth,
-    							-1 / distance * 5 * $dy / document.body.clientHeight
+    							-1 / distance * 5 * dx / document.body.clientWidth,
+    							-1 / distance * 5 * dy / document.body.clientHeight
     						];
 
     						flake.MouseTouchedTime = 1;
     						flake.EnableMouseForce = false;
-    					} else if ($mx - boundary$1 / 2 <= p_flake_x && p_flake_x <= $mx + boundary$1 / 2 && $my - boundary$1 / 2 <= p_flake_y && p_flake_y <= $my + boundary$1 / 2) {
+    					} else if (mx - boundary$1 / 2 <= p_flake_x && p_flake_x <= mx + boundary$1 / 2 && my - boundary$1 / 2 <= p_flake_y && p_flake_y <= my + boundary$1 / 2) {
     						flake.EnableMouseForce = true;
     					}
 
@@ -10656,10 +10633,6 @@ var app = (function (jQuery) {
 
     	$$self.$capture_state = () => ({
     		onMount,
-    		mx,
-    		my,
-    		dx,
-    		dy,
     		SNOWFLAKES_COUNT,
     		SNOWFLAKE_MIN_SCALE,
     		MELTING_SPEED: MELTING_SPEED$2,
@@ -10670,17 +10643,24 @@ var app = (function (jQuery) {
     		TARGET_FPS: TARGET_FPS$2,
     		MS_BETWEEN_FRAMES,
     		boundary: boundary$1,
+    		mx,
+    		my,
+    		dx,
+    		dy,
+    		timer,
+    		handleMouseMove,
     		getPower: getPower$2,
     		getDir: getDir$1,
     		randomSnowflakeConfig,
-    		snowflakes,
-    		$my,
-    		$mx,
-    		$dy,
-    		$dx
+    		snowflakes
     	});
 
     	$$self.$inject_state = $$props => {
+    		if ('mx' in $$props) mx = $$props.mx;
+    		if ('my' in $$props) my = $$props.my;
+    		if ('dx' in $$props) dx = $$props.dx;
+    		if ('dy' in $$props) dy = $$props.dy;
+    		if ('timer' in $$props) timer = $$props.timer;
     		if ('snowflakes' in $$props) $$invalidate(0, snowflakes = $$props.snowflakes);
     	};
 
@@ -10688,7 +10668,7 @@ var app = (function (jQuery) {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [snowflakes];
+    	return [snowflakes, handleMouseMove];
     }
 
     class Snowflakes extends SvelteComponentDev {
@@ -10710,11 +10690,11 @@ var app = (function (jQuery) {
 
     function get_each_context(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[6] = list[i];
+    	child_ctx[8] = list[i];
     	return child_ctx;
     }
 
-    // (131:4) {#each sakuraflakes as flake}
+    // (150:4) {#each sakuraflakes as flake}
     function create_each_block(ctx) {
     	let div;
     	let div_style_value;
@@ -10724,17 +10704,17 @@ var app = (function (jQuery) {
     			div = element("div");
     			attr_dev(div, "class", "sakuraflake svelte-fdqqpk");
 
-    			attr_dev(div, "style", div_style_value = `opacity: ${/*flake*/ ctx[6].opacity}; height: ${/*flake*/ ctx[6].height}; width: ${/*flake*/ ctx[6].width}; border-radius: ${/*flake*/ ctx[6].borderRadius[0]}px ${/*flake*/ ctx[6].borderRadius[1]}px;
-        transform: scale(1) rotate(${/*flake*/ ctx[6].rotation}deg); left: ${/*flake*/ ctx[6].x}%; top: calc(${/*flake*/ ctx[6].y}% - 1rem)`);
+    			attr_dev(div, "style", div_style_value = `opacity: ${/*flake*/ ctx[8].opacity}; height: ${/*flake*/ ctx[8].height}; width: ${/*flake*/ ctx[8].width}; border-radius: ${/*flake*/ ctx[8].borderRadius[0]}px ${/*flake*/ ctx[8].borderRadius[1]}px;
+        transform: scale(1) rotate(${/*flake*/ ctx[8].rotation}deg); left: ${/*flake*/ ctx[8].x}%; top: calc(${/*flake*/ ctx[8].y}% - 1rem)`);
 
-    			add_location(div, file$4, 131, 6, 4919);
+    			add_location(div, file$4, 150, 6, 5289);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*sakuraflakes*/ 1 && div_style_value !== (div_style_value = `opacity: ${/*flake*/ ctx[6].opacity}; height: ${/*flake*/ ctx[6].height}; width: ${/*flake*/ ctx[6].width}; border-radius: ${/*flake*/ ctx[6].borderRadius[0]}px ${/*flake*/ ctx[6].borderRadius[1]}px;
-        transform: scale(1) rotate(${/*flake*/ ctx[6].rotation}deg); left: ${/*flake*/ ctx[6].x}%; top: calc(${/*flake*/ ctx[6].y}% - 1rem)`)) {
+    			if (dirty & /*sakuraflakes*/ 1 && div_style_value !== (div_style_value = `opacity: ${/*flake*/ ctx[8].opacity}; height: ${/*flake*/ ctx[8].height}; width: ${/*flake*/ ctx[8].width}; border-radius: ${/*flake*/ ctx[8].borderRadius[0]}px ${/*flake*/ ctx[8].borderRadius[1]}px;
+        transform: scale(1) rotate(${/*flake*/ ctx[8].rotation}deg); left: ${/*flake*/ ctx[8].x}%; top: calc(${/*flake*/ ctx[8].y}% - 1rem)`)) {
     				attr_dev(div, "style", div_style_value);
     			}
     		},
@@ -10747,7 +10727,7 @@ var app = (function (jQuery) {
     		block,
     		id: create_each_block.name,
     		type: "each",
-    		source: "(131:4) {#each sakuraflakes as flake}",
+    		source: "(150:4) {#each sakuraflakes as flake}",
     		ctx
     	});
 
@@ -10756,6 +10736,8 @@ var app = (function (jQuery) {
 
     function create_fragment$4(ctx) {
     	let div;
+    	let mounted;
+    	let dispose;
     	let each_value = /*sakuraflakes*/ ctx[0];
     	validate_each_argument(each_value);
     	let each_blocks = [];
@@ -10774,7 +10756,7 @@ var app = (function (jQuery) {
 
     			attr_dev(div, "class", "sakuraframe");
     			attr_dev(div, "aria-hidden", "true");
-    			add_location(div, file$4, 129, 0, 4832);
+    			add_location(div, file$4, 148, 0, 5202);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -10784,6 +10766,11 @@ var app = (function (jQuery) {
 
     			for (let i = 0; i < each_blocks.length; i += 1) {
     				each_blocks[i].m(div, null);
+    			}
+
+    			if (!mounted) {
+    				dispose = listen_dev(window, "mousemove", /*handleMouseMove*/ ctx[1], false, false, false);
+    				mounted = true;
     			}
     		},
     		p: function update(ctx, [dirty]) {
@@ -10816,6 +10803,8 @@ var app = (function (jQuery) {
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(div);
     			destroy_each(each_blocks, detaching);
+    			mounted = false;
+    			dispose();
     		}
     	};
 
@@ -10879,21 +10868,31 @@ var app = (function (jQuery) {
     }
 
     function instance$4($$self, $$props, $$invalidate) {
-    	let $my;
-    	let $mx;
-    	let $dy;
-    	let $dx;
-    	validate_store(my, 'my');
-    	component_subscribe($$self, my, $$value => $$invalidate(1, $my = $$value));
-    	validate_store(mx, 'mx');
-    	component_subscribe($$self, mx, $$value => $$invalidate(2, $mx = $$value));
-    	validate_store(dy, 'dy');
-    	component_subscribe($$self, dy, $$value => $$invalidate(3, $dy = $$value));
-    	validate_store(dx, 'dx');
-    	component_subscribe($$self, dx, $$value => $$invalidate(4, $dx = $$value));
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('Sakura', slots, []);
     	const MS_BETWEEN_FRAMES = 1000 / TARGET_FPS$1;
+    	let mx = 0;
+    	let my = 0;
+    	let dx = 0;
+    	let dy = 0;
+    	let timer;
+
+    	function handleMouseMove({ clientX, clientY }) {
+    		clearTimeout(timer);
+
+    		timer = setTimeout(
+    			() => {
+    				dx = 0;
+    				dy = 0;
+    			},
+    			50
+    		);
+
+    		dx = mx - clientX;
+    		dy = my - clientY;
+    		mx = clientX;
+    		my = clientY;
+    	}
 
     	// actially generating the sakuraflakes
     	let sakuraflakes = new Array(FLAKES_COUNT$1).fill().map((_, i) => randomSnowflakeConfig()).sort((a, b) => a.scale - b.scale);
@@ -10920,17 +10919,17 @@ var app = (function (jQuery) {
     					let p_flake_x = flake.x * document.body.clientWidth / 100;
     					let p_flake_y = flake.y * document.body.clientHeight / 100;
 
-    					if (flake.EnableMouseForce && $mx != 0 && $mx != 0 && $mx - boundary / 2 <= p_flake_x && p_flake_x <= $mx + boundary / 2 && $my - boundary / 2 <= p_flake_y && p_flake_y <= $my + boundary / 2) {
-    						let distance = Math.sqrt(Math.pow(p_flake_x - $mx, 2) + Math.pow(p_flake_y - $my, 2)) / 1000;
+    					if (flake.EnableMouseForce && mx != 0 && mx != 0 && mx - boundary / 2 <= p_flake_x && p_flake_x <= mx + boundary / 2 && my - boundary / 2 <= p_flake_y && p_flake_y <= my + boundary / 2) {
+    						let distance = Math.sqrt(Math.pow(p_flake_x - mx, 2) + Math.pow(p_flake_y - my, 2)) / 1000;
 
     						flake.MouseForce = [
-    							-1 / distance * 5 * $dx / document.body.clientWidth,
-    							-1 / distance * 5 * $dy / document.body.clientHeight
+    							-1 / distance * 5 * dx / document.body.clientWidth,
+    							-1 / distance * 5 * dy / document.body.clientHeight
     						];
 
     						flake.MouseTouchedTime = 1;
     						flake.EnableMouseForce = false;
-    					} else if ($mx - boundary / 2 <= p_flake_x && p_flake_x <= $mx + boundary / 2 && $my - boundary / 2 <= p_flake_y && p_flake_y <= $my + boundary / 2) {
+    					} else if (mx - boundary / 2 <= p_flake_x && p_flake_x <= mx + boundary / 2 && my - boundary / 2 <= p_flake_y && p_flake_y <= my + boundary / 2) {
     						flake.EnableMouseForce = true;
     					}
 
@@ -10967,10 +10966,6 @@ var app = (function (jQuery) {
 
     	$$self.$capture_state = () => ({
     		onMount,
-    		mx,
-    		my,
-    		dx,
-    		dy,
     		FLAKES_COUNT: FLAKES_COUNT$1,
     		MELTING_SPEED: MELTING_SPEED$1,
     		WIND_FORCE: WIND_FORCE$1,
@@ -10981,17 +10976,24 @@ var app = (function (jQuery) {
     		MAX_SIZE: MAX_SIZE$1,
     		MS_BETWEEN_FRAMES,
     		boundary,
+    		mx,
+    		my,
+    		dx,
+    		dy,
+    		timer,
     		getPower: getPower$1,
     		getDir,
+    		handleMouseMove,
     		randomSnowflakeConfig,
-    		sakuraflakes,
-    		$my,
-    		$mx,
-    		$dy,
-    		$dx
+    		sakuraflakes
     	});
 
     	$$self.$inject_state = $$props => {
+    		if ('mx' in $$props) mx = $$props.mx;
+    		if ('my' in $$props) my = $$props.my;
+    		if ('dx' in $$props) dx = $$props.dx;
+    		if ('dy' in $$props) dy = $$props.dy;
+    		if ('timer' in $$props) timer = $$props.timer;
     		if ('sakuraflakes' in $$props) $$invalidate(0, sakuraflakes = $$props.sakuraflakes);
     	};
 
@@ -10999,7 +11001,7 @@ var app = (function (jQuery) {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [sakuraflakes];
+    	return [sakuraflakes, handleMouseMove];
     }
 
     class Sakura extends SvelteComponentDev {
@@ -11118,7 +11120,7 @@ var app = (function (jQuery) {
     /* src\component\Fish.svelte generated by Svelte v3.55.1 */
     const file$3 = "src\\component\\Fish.svelte";
 
-    // (194:8) {:else}
+    // (207:8) {:else}
     function create_else_block$1(ctx) {
     	const block = { c: noop, m: noop, p: noop, d: noop };
 
@@ -11126,14 +11128,14 @@ var app = (function (jQuery) {
     		block,
     		id: create_else_block$1.name,
     		type: "else",
-    		source: "(194:8) {:else}",
+    		source: "(207:8) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (192:28) 
+    // (205:28) 
     function create_if_block_11(ctx) {
     	let t;
 
@@ -11156,14 +11158,14 @@ var app = (function (jQuery) {
     		block,
     		id: create_if_block_11.name,
     		type: "if",
-    		source: "(192:28) ",
+    		source: "(205:28) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (190:28) 
+    // (203:28) 
     function create_if_block_10(ctx) {
     	let t;
 
@@ -11186,14 +11188,14 @@ var app = (function (jQuery) {
     		block,
     		id: create_if_block_10.name,
     		type: "if",
-    		source: "(190:28) ",
+    		source: "(203:28) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (188:27) 
+    // (201:27) 
     function create_if_block_9(ctx) {
     	let t;
 
@@ -11216,14 +11218,14 @@ var app = (function (jQuery) {
     		block,
     		id: create_if_block_9.name,
     		type: "if",
-    		source: "(188:27) ",
+    		source: "(201:27) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (186:27) 
+    // (199:27) 
     function create_if_block_8(ctx) {
     	let t;
 
@@ -11246,14 +11248,14 @@ var app = (function (jQuery) {
     		block,
     		id: create_if_block_8.name,
     		type: "if",
-    		source: "(186:27) ",
+    		source: "(199:27) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (184:27) 
+    // (197:27) 
     function create_if_block_7(ctx) {
     	let t;
 
@@ -11276,14 +11278,14 @@ var app = (function (jQuery) {
     		block,
     		id: create_if_block_7.name,
     		type: "if",
-    		source: "(184:27) ",
+    		source: "(197:27) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (182:27) 
+    // (195:27) 
     function create_if_block_6(ctx) {
     	let t;
 
@@ -11306,14 +11308,14 @@ var app = (function (jQuery) {
     		block,
     		id: create_if_block_6.name,
     		type: "if",
-    		source: "(182:27) ",
+    		source: "(195:27) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (180:27) 
+    // (193:27) 
     function create_if_block_5(ctx) {
     	let t;
 
@@ -11336,14 +11338,14 @@ var app = (function (jQuery) {
     		block,
     		id: create_if_block_5.name,
     		type: "if",
-    		source: "(180:27) ",
+    		source: "(193:27) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (178:27) 
+    // (191:27) 
     function create_if_block_4(ctx) {
     	let t;
 
@@ -11366,14 +11368,14 @@ var app = (function (jQuery) {
     		block,
     		id: create_if_block_4.name,
     		type: "if",
-    		source: "(178:27) ",
+    		source: "(191:27) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (176:27) 
+    // (189:27) 
     function create_if_block_3(ctx) {
     	let t;
 
@@ -11396,14 +11398,14 @@ var app = (function (jQuery) {
     		block,
     		id: create_if_block_3.name,
     		type: "if",
-    		source: "(176:27) ",
+    		source: "(189:27) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (174:27) 
+    // (187:27) 
     function create_if_block_2$1(ctx) {
     	let t;
 
@@ -11426,14 +11428,14 @@ var app = (function (jQuery) {
     		block,
     		id: create_if_block_2$1.name,
     		type: "if",
-    		source: "(174:27) ",
+    		source: "(187:27) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (172:27) 
+    // (185:27) 
     function create_if_block_1$1(ctx) {
     	let t;
 
@@ -11456,14 +11458,14 @@ var app = (function (jQuery) {
     		block,
     		id: create_if_block_1$1.name,
     		type: "if",
-    		source: "(172:27) ",
+    		source: "(185:27) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (170:8) {#if idx == 0}
+    // (183:8) {#if idx == 0}
     function create_if_block$1(ctx) {
     	let t;
 
@@ -11486,7 +11488,7 @@ var app = (function (jQuery) {
     		block,
     		id: create_if_block$1.name,
     		type: "if",
-    		source: "(170:8) {#if idx == 0}",
+    		source: "(183:8) {#if idx == 0}",
     		ctx
     	});
 
@@ -11503,6 +11505,8 @@ var app = (function (jQuery) {
     	let t2;
     	let t3;
     	let t4;
+    	let mounted;
+    	let dispose;
 
     	function select_block_type(ctx, dirty) {
     		if (/*idx*/ ctx[1] == 0) return create_if_block$1;
@@ -11535,14 +11539,14 @@ var app = (function (jQuery) {
     			if_block.c();
     			t3 = text("\r\n    ");
     			t4 = text("\r\n    ");
-    			add_location(br, file$3, 167, 4, 5900);
-    			add_location(b, file$3, 168, 4, 5911);
-    			add_location(pre, file$3, 166, 4, 5889);
+    			add_location(br, file$3, 180, 4, 6191);
+    			add_location(b, file$3, 181, 4, 6202);
+    			add_location(pre, file$3, 179, 4, 6180);
     			attr_dev(div, "class", "Fish svelte-yeiyoz");
     			set_style(div, "transform", "translate(-50%, -50%) rotate(" + (Math.atan2(/*config*/ ctx[0].movingVector[1], /*config*/ ctx[0].movingVector[0]) + Math.PI / 2) + "rad) scale(" + /*config*/ ctx[0].scale + ")");
     			set_style(div, "left", /*config*/ ctx[0].startPoint[0] + "%");
     			set_style(div, "top", /*config*/ ctx[0].startPoint[1] + "%");
-    			add_location(div, file$3, 165, 0, 5654);
+    			add_location(div, file$3, 178, 0, 5945);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -11558,6 +11562,15 @@ var app = (function (jQuery) {
     			if_block.m(b, null);
     			append_dev(b, t3);
     			append_dev(pre, t4);
+
+    			if (!mounted) {
+    				dispose = [
+    					listen_dev(window, "mousedown", /*handleMouseDown*/ ctx[14], false, false, false),
+    					listen_dev(window, "mousemove", /*handleMouseMove*/ ctx[15], false, false, false)
+    				];
+
+    				mounted = true;
+    			}
     		},
     		p: function update(ctx, [dirty]) {
     			if (current_block_type === (current_block_type = select_block_type(ctx)) && if_block) {
@@ -11589,6 +11602,8 @@ var app = (function (jQuery) {
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(div);
     			if_block.d();
+    			mounted = false;
+    			run_all(dispose);
     		}
     	};
 
@@ -11629,14 +11644,15 @@ var app = (function (jQuery) {
     	return Math.sqrt(Math.pow(Vector[0], 2) + Math.pow(Vector[1], 2) + 1);
     }
 
+    function mouseClicked() {
+    	
+    } // return mouseclick != $clicked;
+
     function axisFilter(i) {
     	if (i < 0) return 0; else if (i > 100) return 100; else return i;
     }
 
     function instance$3($$self, $$props, $$invalidate) {
-    	let $my;
-    	let $mx;
-    	let $clicked;
     	let $norm1;
     	let $norm2;
     	let $norm3;
@@ -11649,12 +11665,6 @@ var app = (function (jQuery) {
     	let $norm10;
     	let $norm11;
     	let $norm12;
-    	validate_store(my, 'my');
-    	component_subscribe($$self, my, $$value => $$invalidate(16, $my = $$value));
-    	validate_store(mx, 'mx');
-    	component_subscribe($$self, mx, $$value => $$invalidate(17, $mx = $$value));
-    	validate_store(clicked, 'clicked');
-    	component_subscribe($$self, clicked, $$value => $$invalidate(18, $clicked = $$value));
     	validate_store(norm1, 'norm1');
     	component_subscribe($$self, norm1, $$value => $$invalidate(2, $norm1 = $$value));
     	validate_store(norm2, 'norm2');
@@ -11686,11 +11696,11 @@ var app = (function (jQuery) {
     	let config;
     	let idx = 0;
     	let lastTime = 0;
-    	let mouseclick = 0;
 
-    	function mouseClicked() {
-    		return mouseclick != $clicked;
-    	}
+    	// let mouseclick = 0;
+    	let mx, my;
+
+    	let mouseclick = false;
 
     	function nextFrame(timestamp) {
     		let elapsed = timestamp - lastTime;
@@ -11823,10 +11833,12 @@ var app = (function (jQuery) {
     			let elapsed = nextFrame(timestamp);
 
     			if (elapsed > MS_BETWEEN_FRAMES) {
-    				if (mouseClicked()) {
-    					mouseclick = $clicked;
-    					let mouseX = 100 - (document.body.clientWidth - $mx) / document.body.clientWidth * 100;
-    					let mouseY = 100 - (document.body.clientHeight - $my) / document.body.clientHeight * 100;
+    				if (mouseclick) {
+    					// mouseclick = $clicked;
+    					mouseclick = false;
+
+    					let mouseX = 100 - (document.body.clientWidth - mx) / document.body.clientWidth * 100;
+    					let mouseY = 100 - (document.body.clientHeight - my) / document.body.clientHeight * 100;
     					let runningVector = [config.startPoint[0] - mouseX, config.startPoint[1] - mouseY];
     					let distance = getPower(runningVector);
 
@@ -11844,6 +11856,15 @@ var app = (function (jQuery) {
     		loop();
     		return () => cancelAnimationFrame(frame);
     	});
+
+    	function handleMouseDown() {
+    		mouseclick = true;
+    	}
+
+    	function handleMouseMove({ clientX, clientY }) {
+    		mx = clientX;
+    		my = clientY;
+    	}
 
     	const writable_props = [];
 
@@ -11871,9 +11892,6 @@ var app = (function (jQuery) {
     		cubicInOut,
     		expoInOut,
     		tweened,
-    		mx,
-    		my,
-    		clicked,
     		FLAKES_COUNT,
     		MELTING_SPEED,
     		WIND_FORCE,
@@ -11887,6 +11905,8 @@ var app = (function (jQuery) {
     		config,
     		idx,
     		lastTime,
+    		mx,
+    		my,
     		mouseclick,
     		createConfig,
     		getPower,
@@ -11898,9 +11918,8 @@ var app = (function (jQuery) {
     		runningAway,
     		moveToDest,
     		move,
-    		$my,
-    		$mx,
-    		$clicked,
+    		handleMouseDown,
+    		handleMouseMove,
     		$norm1,
     		$norm2,
     		$norm3,
@@ -11920,6 +11939,8 @@ var app = (function (jQuery) {
     		if ('config' in $$props) $$invalidate(0, config = $$props.config);
     		if ('idx' in $$props) $$invalidate(1, idx = $$props.idx);
     		if ('lastTime' in $$props) lastTime = $$props.lastTime;
+    		if ('mx' in $$props) mx = $$props.mx;
+    		if ('my' in $$props) my = $$props.my;
     		if ('mouseclick' in $$props) mouseclick = $$props.mouseclick;
     	};
 
@@ -11941,7 +11962,9 @@ var app = (function (jQuery) {
     		$norm9,
     		$norm10,
     		$norm11,
-    		$norm12
+    		$norm12,
+    		handleMouseDown,
+    		handleMouseMove
     	];
     }
 
@@ -12153,11 +12176,9 @@ var app = (function (jQuery) {
     }
 
     /* src\App.svelte generated by Svelte v3.55.1 */
-
-    const { console: console_1 } = globals;
     const file = "src\\App.svelte";
 
-    // (123:2) {:else}
+    // (101:2) {:else}
     function create_else_block(ctx) {
     	let snowflakes;
     	let current;
@@ -12189,14 +12210,14 @@ var app = (function (jQuery) {
     		block,
     		id: create_else_block.name,
     		type: "else",
-    		source: "(123:2) {:else}",
+    		source: "(101:2) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (122:30) 
+    // (100:30) 
     function create_if_block_2(ctx) {
     	const block = {
     		c: noop,
@@ -12210,14 +12231,14 @@ var app = (function (jQuery) {
     		block,
     		id: create_if_block_2.name,
     		type: "if",
-    		source: "(122:30) ",
+    		source: "(100:30) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (120:32) 
+    // (98:32) 
     function create_if_block_1(ctx) {
     	let lake;
     	let current;
@@ -12249,14 +12270,14 @@ var app = (function (jQuery) {
     		block,
     		id: create_if_block_1.name,
     		type: "if",
-    		source: "(120:32) ",
+    		source: "(98:32) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (118:2) {#if $season == "Spring"}
+    // (96:2) {#if $season == "Spring"}
     function create_if_block(ctx) {
     	let sakuraflakes;
     	let current;
@@ -12288,7 +12309,7 @@ var app = (function (jQuery) {
     		block,
     		id: create_if_block.name,
     		type: "if",
-    		source: "(118:2) {#if $season == \\\"Spring\\\"}",
+    		source: "(96:2) {#if $season == \\\"Spring\\\"}",
     		ctx
     	});
 
@@ -12306,8 +12327,6 @@ var app = (function (jQuery) {
     	let div0;
     	let project_2022;
     	let current;
-    	let mounted;
-    	let dispose;
     	navbar = new Navbar_1({ $$inline: true });
     	const if_block_creators = [create_if_block, create_if_block_1, create_if_block_2, create_else_block];
     	const if_blocks = [];
@@ -12335,12 +12354,12 @@ var app = (function (jQuery) {
     			create_component(project_2022.$$.fragment);
     			attr_dev(div0, "id", "details");
     			attr_dev(div0, "class", "svelte-1glxevl");
-    			add_location(div0, file, 125, 2, 3222);
+    			add_location(div0, file, 103, 2, 2708);
     			attr_dev(div1, "class", "full-landing-image");
-    			add_location(div1, file, 116, 1, 3022);
+    			add_location(div1, file, 94, 1, 2508);
     			set_style(main, "background", /*background*/ ctx[0][/*$season*/ ctx[1]]);
     			attr_dev(main, "class", "svelte-1glxevl");
-    			add_location(main, file, 114, 0, 2896);
+    			add_location(main, file, 92, 0, 2441);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -12355,15 +12374,6 @@ var app = (function (jQuery) {
     			append_dev(div1, div0);
     			mount_component(project_2022, div0, null);
     			current = true;
-
-    			if (!mounted) {
-    				dispose = [
-    					listen_dev(main, "mousemove", /*handleMousemove*/ ctx[3], false, false, false),
-    					listen_dev(main, "click", /*handleMouseclick*/ ctx[2], false, false, false)
-    				];
-
-    				mounted = true;
-    			}
     		},
     		p: function update(ctx, [dirty]) {
     			let previous_block_index = current_block_type_index;
@@ -12410,8 +12420,6 @@ var app = (function (jQuery) {
     			destroy_component(navbar);
     			if_blocks[current_block_type_index].d();
     			destroy_component(project_2022);
-    			mounted = false;
-    			run_all(dispose);
     		}
     	};
 
@@ -12432,11 +12440,6 @@ var app = (function (jQuery) {
 
     function instance($$self, $$props, $$invalidate) {
     	let $season;
-    	let $my;
-    	let $dy;
-    	let $mx;
-    	let $dx;
-    	let $clicked;
     	let $norm12;
     	let $norm11;
     	let $norm10;
@@ -12451,47 +12454,34 @@ var app = (function (jQuery) {
     	let $norm1;
     	validate_store(season, 'season');
     	component_subscribe($$self, season, $$value => $$invalidate(1, $season = $$value));
-    	validate_store(my, 'my');
-    	component_subscribe($$self, my, $$value => $$invalidate(7, $my = $$value));
-    	validate_store(dy, 'dy');
-    	component_subscribe($$self, dy, $$value => $$invalidate(8, $dy = $$value));
-    	validate_store(mx, 'mx');
-    	component_subscribe($$self, mx, $$value => $$invalidate(9, $mx = $$value));
-    	validate_store(dx, 'dx');
-    	component_subscribe($$self, dx, $$value => $$invalidate(10, $dx = $$value));
-    	validate_store(clicked, 'clicked');
-    	component_subscribe($$self, clicked, $$value => $$invalidate(11, $clicked = $$value));
     	validate_store(norm12, 'norm12');
-    	component_subscribe($$self, norm12, $$value => $$invalidate(12, $norm12 = $$value));
+    	component_subscribe($$self, norm12, $$value => $$invalidate(2, $norm12 = $$value));
     	validate_store(norm11, 'norm11');
-    	component_subscribe($$self, norm11, $$value => $$invalidate(13, $norm11 = $$value));
+    	component_subscribe($$self, norm11, $$value => $$invalidate(3, $norm11 = $$value));
     	validate_store(norm10, 'norm10');
-    	component_subscribe($$self, norm10, $$value => $$invalidate(14, $norm10 = $$value));
+    	component_subscribe($$self, norm10, $$value => $$invalidate(4, $norm10 = $$value));
     	validate_store(norm9, 'norm9');
-    	component_subscribe($$self, norm9, $$value => $$invalidate(15, $norm9 = $$value));
+    	component_subscribe($$self, norm9, $$value => $$invalidate(5, $norm9 = $$value));
     	validate_store(norm8, 'norm8');
-    	component_subscribe($$self, norm8, $$value => $$invalidate(16, $norm8 = $$value));
+    	component_subscribe($$self, norm8, $$value => $$invalidate(6, $norm8 = $$value));
     	validate_store(norm7, 'norm7');
-    	component_subscribe($$self, norm7, $$value => $$invalidate(17, $norm7 = $$value));
+    	component_subscribe($$self, norm7, $$value => $$invalidate(7, $norm7 = $$value));
     	validate_store(norm6, 'norm6');
-    	component_subscribe($$self, norm6, $$value => $$invalidate(18, $norm6 = $$value));
+    	component_subscribe($$self, norm6, $$value => $$invalidate(8, $norm6 = $$value));
     	validate_store(norm5, 'norm5');
-    	component_subscribe($$self, norm5, $$value => $$invalidate(19, $norm5 = $$value));
+    	component_subscribe($$self, norm5, $$value => $$invalidate(9, $norm5 = $$value));
     	validate_store(norm4, 'norm4');
-    	component_subscribe($$self, norm4, $$value => $$invalidate(20, $norm4 = $$value));
+    	component_subscribe($$self, norm4, $$value => $$invalidate(10, $norm4 = $$value));
     	validate_store(norm3, 'norm3');
-    	component_subscribe($$self, norm3, $$value => $$invalidate(21, $norm3 = $$value));
+    	component_subscribe($$self, norm3, $$value => $$invalidate(11, $norm3 = $$value));
     	validate_store(norm2, 'norm2');
-    	component_subscribe($$self, norm2, $$value => $$invalidate(22, $norm2 = $$value));
+    	component_subscribe($$self, norm2, $$value => $$invalidate(12, $norm2 = $$value));
     	validate_store(norm1, 'norm1');
-    	component_subscribe($$self, norm1, $$value => $$invalidate(23, $norm1 = $$value));
+    	component_subscribe($$self, norm1, $$value => $$invalidate(13, $norm1 = $$value));
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('App', slots, []);
     	let premx = 0;
     	let premy = 0;
-    	set_store_value(mx, $mx = 0, $mx);
-    	set_store_value(my, $my = 0, $my);
-    	set_store_value(season, $season = "", $season);
     	let timer;
     	let background = [];
 
@@ -12543,30 +12533,6 @@ var app = (function (jQuery) {
     		set_store_value(norm12, $norm12 = data, $norm12);
     	});
 
-    	function handleMouseclick(event) {
-    		set_store_value(clicked, $clicked = $clicked + 1 % 100, $clicked);
-    		console.log($clicked);
-    	}
-
-    	function handleMousemove(event) {
-    		clearTimeout(timer);
-
-    		timer = setTimeout(
-    			() => {
-    				set_store_value(dx, $dx = 0, $dx);
-    				set_store_value(dy, $dy = 0, $dy);
-    			},
-    			50
-    		);
-
-    		premx = $mx;
-    		premy = $my;
-    		set_store_value(mx, $mx = event.clientX, $mx);
-    		set_store_value(my, $my = event.clientY, $my);
-    		set_store_value(dx, $dx = premx - $mx, $dx);
-    		set_store_value(dy, $dy = premy - $my, $dy);
-    	}
-
     	onMount(() => {
     		let month = new Date().getMonth() + 1;
     		$$invalidate(0, background['Spring'] = "linear-gradient(to bottom, #a1c4fd 0%, turquoise 60%,#c2e9fb 90%,#8A3B12 100%)", background);
@@ -12588,17 +12554,12 @@ var app = (function (jQuery) {
     	const writable_props = [];
 
     	Object.keys($$props).forEach(key => {
-    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console_1.warn(`<App> was created with unknown prop '${key}'`);
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<App> was created with unknown prop '${key}'`);
     	});
 
     	$$self.$capture_state = () => ({
     		onMount,
     		season,
-    		mx,
-    		my,
-    		dx,
-    		dy,
-    		clicked,
     		norm1,
     		norm2,
     		norm3,
@@ -12621,15 +12582,8 @@ var app = (function (jQuery) {
     		premy,
     		timer,
     		background,
-    		handleMouseclick,
-    		handleMousemove,
     		handleClick,
     		$season,
-    		$my,
-    		$dy,
-    		$mx,
-    		$dx,
-    		$clicked,
     		$norm12,
     		$norm11,
     		$norm10,
@@ -12655,7 +12609,7 @@ var app = (function (jQuery) {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [background, $season, handleMouseclick, handleMousemove];
+    	return [background, $season];
     }
 
     class App extends SvelteComponentDev {

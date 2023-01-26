@@ -2,7 +2,6 @@
 <script>
     import { onMount } from "svelte";
 	import { season } from "./global"
-	import { mx, my, dx, dy, clicked } from "./mouseStatus"
 	import { norm1, norm2, norm3, norm4, norm5, norm6, norm7, norm8, norm9, norm10, norm11, norm12 } from "./fishTemplate"
     import Navbar from "./component/Navbar.svelte";
 	import Snowflakes from "./component/Snowflakes.svelte";
@@ -13,9 +12,6 @@
 
 	let premx = 0;
 	let premy = 0;
-	$mx = 0;
-	$my = 0;
-	$season = "";
 	let timer;
 	let background = [];
 
@@ -68,24 +64,6 @@
         $norm12 = data;
     });
 
-
-	function handleMouseclick(event) {
-		$clicked = $clicked + 1 % 100;
-		console.log($clicked);
-	}
-	function handleMousemove(event) {
-		clearTimeout(timer)
-		timer = setTimeout(() => {
-			$dx = 0;
-			$dy = 0;
-		}, 50)
-		premx = $mx;
-		premy = $my;
-		$mx = event.clientX;
-		$my = event.clientY;
-		$dx = premx - $mx;
-		$dy = premy - $my; 		
-	}
 	onMount(() => {		
 		let month = new Date().getMonth() + 1;
 
@@ -112,7 +90,7 @@
 		alert('Button Clicked');
 	}
 </script>
-<main on:mousemove={handleMousemove} on:click={handleMouseclick} style="background:{ background[$season] };">
+<main style="background:{ background[$season] };">
 	<Navbar  />
 	<div class="full-landing-image">
 		{#if $season == "Spring"}

@@ -1,6 +1,5 @@
 <script>
     import { onMount } from 'svelte'
-	import { mx, my, dx, dy } from "../mouseStatus"
   
     // a bunch of variables defining the snow and how it falls
     const FLAKES_COUNT = 100
@@ -16,6 +15,12 @@
   
     const boundary = 100;
 
+    let mx = 0;
+    let my = 0;
+    let dx = 0;
+    let dy = 0;
+    let timer;
+
     function getPower(a, b, time){
         return a + b / (time * 0.5)
         //Math.abs(a + b / (time * 0.5)) 
@@ -24,7 +29,19 @@
     function getDir(a, b, time){
         return a + b / (time * 0.5) > 0.0 ? true : false;
     }
-
+        
+    function handleMouseMove({clientX, clientY}){
+        clearTimeout(timer)
+        timer = setTimeout(() => {
+          dx = 0;
+          dy = 0;
+        }, 50)
+        
+        dx = mx - clientX;
+        dy = my - clientY;
+        mx = clientX
+        my = clientY
+    }
 
     // this function generates the random configuration with all necessary values
     function randomSnowflakeConfig(i) {
@@ -48,7 +65,7 @@
         temp.borderRadius = [MAX_SIZE + Math.floor(Math.random() * 10), Math.floor(1 + Math.random() * (temp.width / 4))]
       return temp;
     }
-  
+
     // actially generating the sakuraflakes
     let sakuraflakes = new Array(FLAKES_COUNT)
       .fill()
@@ -84,17 +101,17 @@
             let p_flake_y = flake.y * document.body.clientHeight / 100;
             
             if( flake.EnableMouseForce &&
-            $mx != 0 && $mx != 0 && 
-            $mx - boundary/2 <= p_flake_x && p_flake_x <= $mx + boundary / 2 && 
-            $my - boundary/2 <= p_flake_y && p_flake_y <= $my + boundary / 2 ){
-                let distance = Math.sqrt(Math.pow(p_flake_x - $mx, 2) + Math.pow(p_flake_y - $my,2)) / 1000
-                flake.MouseForce = [-1/distance * 5 * $dx / document.body.clientWidth, -1/distance * 5 * $dy / document.body.clientHeight];
+            mx != 0 && mx != 0 && 
+            mx - boundary/2 <= p_flake_x && p_flake_x <= mx + boundary / 2 && 
+            my - boundary/2 <= p_flake_y && p_flake_y <= my + boundary / 2 ){
+                let distance = Math.sqrt(Math.pow(p_flake_x - mx, 2) + Math.pow(p_flake_y - my,2)) / 1000
+                flake.MouseForce = [-1/distance * 5 * dx / document.body.clientWidth, -1/distance * 5 * dy / document.body.clientHeight];
                 flake.MouseTouchedTime = 1;
                 flake.EnableMouseForce = false;
             }
             else if(
-            $mx - boundary/2 <= p_flake_x && p_flake_x <= $mx + boundary / 2 && 
-            $my - boundary/2 <= p_flake_y && p_flake_y <= $my + boundary / 2){
+            mx - boundary/2 <= p_flake_x && p_flake_x <= mx + boundary / 2 && 
+            my - boundary/2 <= p_flake_y && p_flake_y <= my + boundary / 2){
                 flake.EnableMouseForce = true;
             }
 
@@ -127,6 +144,8 @@
     })
   </script>
 
+<svelte:window 
+    on:mousemove={handleMouseMove}/>
 <div class="sakuraframe" aria-hidden="true">
     {#each sakuraflakes as flake}
       <div
