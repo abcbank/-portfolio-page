@@ -8,6 +8,7 @@
 	import Snowflakes from "./component/Snowflakes.svelte";
 	import Sakuraflakes from "./component/Sakura.svelte"
 	import Lake from "./component/Lake.svelte"
+	import Project_2022 from "./component/Project_2022.svelte"
 	import jQuery from "jquery"
 
 	let premx = 0;
@@ -91,7 +92,7 @@
 		background['Spring'] = "linear-gradient(to bottom, #a1c4fd 0%, turquoise 60%,#c2e9fb 90%,#8A3B12 100%)";
 		background['Summer'] = "linear-gradient(-45deg, #089acf, #0bcea0)";
 		background['Fall'] = "#fff"
-		background['Winter'] = "linear-gradient(to bottom, #071B26 0%,#071B26 30%,#8A3B12 90%, #fff 100%)"
+		background['Winter'] = "linear-gradient(to bottom, #071B26 0%,#071B26 30%,#8A3B12 95%, #fff 100%)"
 		
 		if(3 <= month && month <= 5){
 			$season = "Spring";
@@ -112,8 +113,8 @@
 	}
 </script>
 <main on:mousemove={handleMousemove} on:click={handleMouseclick} style="background:{ background[$season] };">
+	<Navbar  />
 	<div class="full-landing-image">
-		<Navbar  />
 		{#if $season == "Spring"}
 		<Sakuraflakes />
 		{:else if $season == "Summer"}
@@ -123,6 +124,7 @@
 		<Snowflakes />
 		{/if}
 		<div id="details">
+			<Project_2022 />
 		</div>
 	</div>
 </main>
@@ -131,7 +133,6 @@
 	main {
 		margin: 0 auto;
 		width:100%;
-		max-width: 240px;
 		height:100vh;
 		overflow:hidden;
 	}
@@ -141,7 +142,14 @@
 		font-size: 4em;
 		font-weight: 100;
 	}
-
+	full-landing-image{
+		display:flex;
+	}
+	#details{
+		padding:5%;
+		width:100%;
+		height:100%;
+	}
 	@media (min-width: 640px) {
 		main {
 			max-width: none;

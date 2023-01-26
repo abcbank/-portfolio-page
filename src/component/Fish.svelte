@@ -32,7 +32,9 @@
             destPoint: [Math.random() * 100,Math.random() * 100],
             movingVector: [0,0],
             sleepingTime : 0,
-            time: 0
+            time: 0,
+            runningOffset: 0.7 + Math.random() * 0.3,
+            runningAway: false
         }
     }
 
@@ -51,19 +53,90 @@
         else
             return i
     }
+
+    function nextFrame(timestamp){
+        let elapsed = timestamp - lastTime;
+        let speed = getPower(config.movingVector);
+        if(elapsed / 30 * speed > MS_BETWEEN_FRAMES && config.sleepingTime == 0){
+            lastTime = timestamp
+            idx = (idx + 1 ) % 12;
+        }
+        return elapsed;
+    }
+    function destArrived(awaitTime){
+        if(config.sleepingTime < awaitTime){
+            config.sleepingTime++;
+        }
+        else{
+            config.sleepingTime = 0;
+            config.time = 0;
+            config.movingVector = [0,0]
+            config.destPoint = [Math.random() * 100, Math.random() * 100]
+            config.runningAway = false;
+        }
+    }
+    function runAway(mouseX, mouseY, runningVector){
+        let distance = getPower(runningVector);
+
+        runningVector = [runningVector[0] / distance, runningVector[1] / distance]
+        config.movingVector = [runningVector[0] * 150, runningVector[1] * 150];
+        config.startPoint = [axisFilter(config.startPoint[0] + config.movingVector[0] / 15), axisFilter(config.startPoint[1] + config.movingVector[1] / 15)];
+       
+        let destX = axisFilter(mouseX + runningVector[0] * 1000 / distance);
+        let destY = axisFilter(mouseY + runningVector[1] * 1000 / distance);
+
+        config.time = 0;
+        config.sleepingTime = 0;
+        config.time++;
+        config.runningAway = true;
+    }
+
+    function runningAway(){
+        let toMovePower = getPower(config.movingVector)
+        if(toMovePower < 2){
+            destArrived(20);
+        }
+        else{
+            config.movingVector = [config.movingVector[0] * config.runningOffset, config.movingVector[1]  * config.runningOffset];
+        }
+        if(config.sleepingTime == 0){
+            config.startPoint = [config.startPoint[0] + config.movingVector[0] / 30, config.startPoint[1] + config.movingVector[1] / 30];
+        }
+        config.time++;
+    }
+
+    function moveToDest(){
+        let toMoveVector = [config.destPoint[0] - config.startPoint[0], config.destPoint[1] - config.startPoint[1]];
+        let toMovePower = getPower(toMoveVector)
+        if(toMovePower < 2){
+            destArrived(80);
+        }
+        else{
+            var offset = Math.random();
+            config.movingVector = [config.movingVector[0] * offset + toMoveVector[0] * (1 - offset) * config.time / 500, config.movingVector[1] * offset  + toMoveVector[1] * (1 - offset) * config.time / 500];
+        }
+        if(config.sleepingTime == 0){
+            config.startPoint = [config.startPoint[0] + config.movingVector[0] / 30, config.startPoint[1] + config.movingVector[1] / 30];
+        }
+        config.time++;
+    }
+    function move(){
+        if(config.runningAway){
+            runningAway();
+        }
+        else{
+            moveToDest();
+        }
+    }
+
     config = createConfig();
     onMount(async () => {
       let frame
-  
       function loop(timestamp) {
         frame = requestAnimationFrame(loop)
 
-        const elapsed = timestamp - lastTime;
-        let speed = getPower(config.movingVector);
-        if(elapsed / 150 * speed > MS_BETWEEN_FRAMES && config.sleepingTime == 0){
-            lastTime = timestamp
-            idx = (idx + 1 ) % 12;      
-        }
+        let elapsed = nextFrame(timestamp, lastTime);
+
         if(elapsed > MS_BETWEEN_FRAMES){
             if(mouseClicked()){
                 mouseclick = $clicked;
@@ -72,64 +145,16 @@
 
                 let runningVector = [config.startPoint[0] - mouseX, config.startPoint[1] - mouseY];
                 let distance = getPower(runningVector);
+
                 if(distance < 30){
-                    runningVector = [runningVector[0] / distance, runningVector[1] / distance]
-
-                    let destX = axisFilter(mouseX + runningVector[0] * 1000 / distance);
-                    let destY = axisFilter(mouseY + runningVector[1] * 1000 / distance);
-
-                    config.movingVector = [runningVector[0] * 5000, runningVector[1] * 5000];
-
-                    config.startPoint = [axisFilter(config.startPoint[0] + config.movingVector[0] / 1500), axisFilter(config.startPoint[1] + config.movingVector[1] / 1500)];
-                    config.destPoint = [axisFilter(config.startPoint[0] + config.movingVector[0] / 100 ), axisFilter(config.startPoint[1] + config.movingVector[1] / 100)];
-                    config.time = 0;
-                    config.sleepingTime = 0;
-                    config.time++;
+                    runAway(mouseX, mouseY, runningVector);
                 } 
                 else{
-                    let toMoveVector = [config.destPoint[0] - config.startPoint[0], config.destPoint[1] - config.startPoint[1]];
-                    let toMovePower = getPower(toMoveVector)
-                    if(toMovePower < 2){
-                        if(config.sleepingTime < 80){
-                            config.sleepingTime++;
-                        }
-                        else{
-                            config.sleepingTime = 0;
-                            config.time = 0;
-                            config.destPoint = [Math.random() * 100, Math.random() * 100]
-                        }
-                    }
-                    else{
-                        var offset = Math.random();
-                        config.movingVector = [config.movingVector[0] * offset + toMoveVector[0] * (1 - offset) * config.time / 500, config.movingVector[1] * offset  + toMoveVector[1] * (1 - offset) * config.time / 500];
-                    }
-                    if(config.sleepingTime == 0){
-                        config.startPoint = [config.startPoint[0] + config.movingVector[0] / 300, config.startPoint[1] + config.movingVector[1] / 300];
-                    }
-                    config.time++;
+                    move();
                 }
             }
             else{
-                let toMoveVector = [config.destPoint[0] - config.startPoint[0], config.destPoint[1] - config.startPoint[1]];
-                let toMovePower = getPower(toMoveVector)
-                if(toMovePower < 2){
-                    if(config.sleepingTime < 80){
-                        config.sleepingTime++;
-                    }
-                    else{
-                        config.sleepingTime = 0;
-                        config.time = 0;
-                        config.destPoint = [Math.random() * 100, Math.random() * 100]
-                    }
-                }
-                else{
-                    var offset = Math.random();
-                    config.movingVector = [config.movingVector[0] * offset + toMoveVector[0] * (1 - offset) * config.time / 500, config.movingVector[1] * offset  + toMoveVector[1] * (1 - offset) * config.time / 500];
-                }
-                if(config.sleepingTime == 0){
-                    config.startPoint = [config.startPoint[0] + config.movingVector[0] / 300, config.startPoint[1] + config.movingVector[1] / 300];
-                }
-                config.time++;
+                    move();
             }
         }
       }
@@ -138,7 +163,7 @@
       return () => cancelAnimationFrame(frame)
     })
   </script>
-<div class="Fish" style="transform: translate(-50%, -50%) rotate({Math.atan2(config.movingVector[1], config.movingVector[0]) + 0.5 * Math.PI}rad) scale({config.scale}); left: {config.startPoint[0]}%; top: {config.startPoint[1]}%;">
+<div class="Fish" style="transform: translate(-50%, -50%) rotate({Math.atan2(config.movingVector[1], config.movingVector[0]) + Math.PI / 2}rad) scale({config.scale}); left: {config.startPoint[0]}%; top: {config.startPoint[1]}%;">
     <pre>
     <br/>
     <b>
