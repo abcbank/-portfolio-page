@@ -54,7 +54,7 @@
     <Collapse { toggleEnabled } navbar expand="md" on:update={handleUpdate}>
       <Nav class="ms-auto" navbar>
         <NavItem>
-          <NavLink href="#components/">About Me</NavLink>
+          <NavLink href="#components/">Profile</NavLink>
         </NavItem>
         
         <Dropdown nav inNavbar>
