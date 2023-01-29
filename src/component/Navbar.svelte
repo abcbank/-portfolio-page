@@ -122,6 +122,12 @@
 </div>
 
 <style>
+  .NavBar{
+    position:absolute;
+    top:0%;
+    width:100%;
+    z-index:9999;
+  }
   .logo {
     width:30px; 
     height:30px;

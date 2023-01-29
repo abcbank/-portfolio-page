@@ -180,6 +180,7 @@
     <pre>
     <br/>
     <b>
+
         {#if idx == 0}
             { $norm1 }
         {:else if idx == 1}

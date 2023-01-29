@@ -7,12 +7,12 @@
 	import Snowflakes from "./component/Snowflakes.svelte";
 	import Sakuraflakes from "./component/Sakura.svelte"
 	import Lake from "./component/Lake.svelte"
+	import Park from "./component/Park.svelte"
 	import Project_2022 from "./component/Project_2022.svelte"
 	import jQuery from "jquery"
 
 	let premx = 0;
 	let premy = 0;
-	let timer;
 	let background = [];
 
 
@@ -91,13 +91,13 @@
 	}
 </script>
 <main style="background:{ background[$season] };">
-	<Navbar  />
 	<div class="full-landing-image">
 		{#if $season == "Spring"}
 		<Sakuraflakes />
 		{:else if $season == "Summer"}
 		<Lake/>
 		{:else if $season == "Fall"}
+		<Park />
 		{:else}
 		<Snowflakes />
 		{/if}
@@ -105,6 +105,7 @@
 			<Project_2022 />
 		</div>
 	</div>
+	<Navbar  />
 </main>
 
 <style>
