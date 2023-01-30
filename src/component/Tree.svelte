@@ -12,7 +12,7 @@
 
     var growth_rate = 2;
     var maximum_bend = 90 / 180 * Math.PI;
-    var smallest_branch = 45;
+    var smallest_branch = 40 + 10 * Math.random();
     var hue = 0;
     var fps;
     var canvas;

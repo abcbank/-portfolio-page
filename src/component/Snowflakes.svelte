@@ -1,4 +1,5 @@
 <script>
+  	import { season } from "../global"
     import { onMount } from 'svelte'
   
     // a bunch of variables defining the snow and how it falls
@@ -136,8 +137,10 @@
       }
   
       loop()
-  
-      return () => cancelAnimationFrame(frame)
+      if($season == "Winter")
+        return () => cancelAnimationFrame(frame)
+      else
+        return;
     })
   </script>
 

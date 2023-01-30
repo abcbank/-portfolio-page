@@ -1,11 +1,10 @@
-<script lang="ts">
+<script>
   import jQuery from 'jquery'
 	import { season } from "../global"
   import {
     Collapse,
     Navbar,
     NavbarToggler,
-    NavbarBrand,
     Nav,
     NavItem,
     NavLink,
@@ -14,11 +13,12 @@
     DropdownMenu,
     DropdownItem
   } from 'sveltestrap';
+  import NavLogo from "./Navlogo.svelte"
   
   let toggleEnabled = false;
   let isOpen_Project = false;
   let isOpen_Outsourcing = false;
-
+  
   function handleUpdate(event) {
     if(ProjectMouseup)
       isOpen_Project = event.detail.isOpen;
@@ -39,17 +39,11 @@
   function OutsourcingOpenMouseOut(e) {
     OutsourcingMouseUp = false;
   }
-
 </script>
 
 <div class="NavBar">
   <Navbar color="dark" dark expand="md">
-    <NavbarBrand href="/">
-      <img class="logo" alt="logo" src="assets/image/icon.png" />
-      <span class="logo-text">
-        abcBank
-      </span>
-    </NavbarBrand>
+    <NavLogo />
     <NavbarToggler on:click={() => (toggleEnabled = !toggleEnabled)} />
     <Collapse { toggleEnabled } navbar expand="md" on:update={handleUpdate}>
       <Nav class="ms-auto" navbar>
@@ -124,15 +118,14 @@
 <style>
   .NavBar{
     position:absolute;
+    background-color: transparent;
     top:0%;
     width:100%;
     z-index:9999;
+    opacity:0.3;
+    transition: opacity 0.2s ease
   }
-  .logo {
-    width:30px; 
-    height:30px;
-  }
-  .logo-text{
-    padding-left:10px;
+  .NavBar:hover{
+    opacity:0.8
   }
 </style>

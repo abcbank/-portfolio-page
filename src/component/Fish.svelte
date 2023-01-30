@@ -1,4 +1,5 @@
 <script>
+    import { season } from "../global"
     import { onMount } from 'svelte'
     import jQuery from "jquery";
 	import { norm1, norm2, norm3, norm4, norm5, norm6, norm7, norm8, norm9, norm10, norm11, norm12 } from "../fishTemplate"
@@ -161,8 +162,10 @@
         }
       }
       loop()
-  
-      return () => cancelAnimationFrame(frame)
+      if($season == "Summer")
+        return () => cancelAnimationFrame(frame)
+      else
+        return;
     })
     function handleMouseDown(){
         mouseclick = true;
