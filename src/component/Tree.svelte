@@ -25,7 +25,7 @@
 
     var canvasWidth = 800;
     var canvasHeight = 700;
-    var Scale = 1.5
+    var Scale = 1
     var LandOffset = 40 * Math.random();
     var trees = [];
 

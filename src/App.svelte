@@ -1,7 +1,7 @@
 
 <script>
     import { onMount } from "svelte";
-	import { season } from "./global"
+	import { ContextVisible, season } from "./global"
 	import { bench, fish_01, fish_02, fish_03, fish_04, fish_05, fish_06, fish_07, fish_08, fish_09, fish_10, fish_11, fish_12 } from "./asciiArts"
     import Navbar from "./component/Navbar.svelte";
 	import Snowflakes from "./component/Snowflakes.svelte";
@@ -38,7 +38,19 @@
 	let premy = 0;
 	let background = [];
 
-
+	let month = new Date().getMonth() + 1;
+	if(3 <= month && month <= 5){
+		$season = "Spring";
+	}
+	else if(6 <= month && month <= 8){
+		$season = "Summer"
+	}
+	else if(9 <= month && month <= 11){
+		$season = "Fall"
+	}
+	else{
+		$season = "Winter"
+	}
     jQuery.get('/assets/ascii/fish_1.txt', function(data) {
         $fish_01 = data;
     });
@@ -92,30 +104,12 @@
     });
 
 	onMount(() => {		
-		let month = new Date().getMonth() + 1;
-		
+		$ContextVisible = true;
 		background['Spring'] = "linear-gradient(to bottom, #089acf 0%, #a1c4fd 60%,#c2e9fb 90%,#8A3B12 100%)";
 		background['Summer'] = "linear-gradient(-45deg, #089acf, #0bcea0)";
 		background['Fall'] = "linear-gradient(to bottom, #0051ffb4 0%, #a1c4fd 60%,#c2e9fb 90%,#8A3B12 100%)";
 		background['Winter'] = "linear-gradient(to bottom, #071B26 0%,#071B26 30%,#8A3B12 95%, #fff 100%)"
-		
-		if(3 <= month && month <= 5){
-			$season = "Spring";
-		}
-		else if(6 <= month && month <= 8){
-			$season = "Summer"
-		}
-		else if(9 <= month && month <= 11){
-			$season = "Fall"
-		}
-		else{
-			$season = "Winter"
-		}
 	})
-	
-	function handleClick() {
-		alert('Button Clicked');
-	}
 </script>
 <main style="background:{ background[$season] };">
 	<div class="full-landing-image">
@@ -128,9 +122,11 @@
 		{:else}
 		<Snowflakes />
 		{/if}
+		{#if $ContextVisible}
 		<div id="details">
 			<Router {routes} />
 		</div>
+		{/if}
 	</div>
 	<Navbar  />
 </main>

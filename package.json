@@ -12,6 +12,7 @@
     "@rollup/plugin-commonjs": "^17.0.0",
     "@rollup/plugin-node-resolve": "^11.0.0",
     "magic-snowflakes": "^6.1.0",
+    "mdi-svelte": "^1.1.2",
     "node-sass": "^8.0.0",
     "rollup": "^2.3.4",
     "rollup-plugin-css-only": "^3.1.0",
@@ -22,9 +23,11 @@
     "svelte-preprocess": "^5.0.1"
   },
   "dependencies": {
+    "@mdi/js": "^7.1.96",
     "bootstrap": "^5.2.3",
     "sakura-js": "^1.1.1",
     "sirv-cli": "^2.0.0",
+    "svelte-kit": "^1.2.0",
     "svelte-spa-router": "^3.3.0",
     "sveltestrap": "^5.10.0"
   }
