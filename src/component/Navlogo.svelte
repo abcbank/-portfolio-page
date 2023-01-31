@@ -26,7 +26,7 @@
 </script>
 
 <div class="NavLogo" on:mouseenter={LogoHovered} style={LogoStyle}>
-    <NavbarBrand href="/" >
+    <NavbarBrand href="#/" >
     <img class="logo" alt="logo" src="assets/image/icon.png" />
     <span class="logo-text">
         abcBank

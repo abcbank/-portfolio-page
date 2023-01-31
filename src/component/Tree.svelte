@@ -1,6 +1,7 @@
 <script>    
 	import { season } from "../global"
     import { onMount } from 'svelte'
+
     var requestAnimationFrame = (function() {
         return window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame ||
         function(callback, element) {
@@ -13,7 +14,7 @@
     var growth_rate = 2;
     var maximum_bend = 90 / 180 * Math.PI;
     var smallest_branch = 40 + 10 * Math.random();
-    var hue = 0;
+    var hue = 360 * Math.random();
     var fps;
     var canvas;
     var ctx;
@@ -24,8 +25,8 @@
 
     var canvasWidth = 800;
     var canvasHeight = 700;
-    var Scale = 0.6
-
+    var Scale = 1.5
+    var LandOffset = 40 * Math.random();
     var trees = [];
 
     var StopTrigger = true;
@@ -49,7 +50,7 @@
             theta = -0.5 + Math.random(),
             origin = {
                 x: canvas.width / 2,
-                y: canvas.height - 40
+                y: canvas.height - LandOffset
             };
         var mag = 100
         trees[i] = {

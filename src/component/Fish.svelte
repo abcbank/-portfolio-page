@@ -1,20 +1,11 @@
 <script>
     import { season } from "../global"
     import { onMount } from 'svelte'
-    import jQuery from "jquery";
-	import { norm1, norm2, norm3, norm4, norm5, norm6, norm7, norm8, norm9, norm10, norm11, norm12 } from "../fishTemplate"
+	import { fish, fish_01, fish_02, fish_03, fish_04, fish_05, fish_06, fish_07, fish_08, fish_09, fish_10, fish_11, fish_12 } from "../asciiArts"
     import { linear, circInOut,  cubicInOut, expoInOut } from 'svelte/easing';
-    import { tweened } from 'svelte/motion';
 
     // a bunch of variables defining the snow and how it falls
-    const FLAKES_COUNT = 10
-    const MELTING_SPEED = 1.12
-    const WIND_FORCE = 0.01
-    const MIN_DURATION = 10000
-    const MAX_DURATION = 30000
     const TARGET_FPS = 60
-    const MIN_SIZE = 10
-    const MAX_SIZE = 14
   
     const MS_BETWEEN_FRAMES = 1000 / TARGET_FPS
 
@@ -23,7 +14,7 @@
     let config;
     let idx = 0;
     let lastTime = 0;
-    // let mouseclick = 0;
+
     let mx,my;
     let mouseclick =false;
 
@@ -44,9 +35,6 @@
         return Math.sqrt(Math.pow(Vector[0], 2) + Math.pow(Vector[1], 2) + 1);
     }
 
-    function mouseClicked(){
-        // return mouseclick != $clicked;
-    }
     function axisFilter(i){
         if(i < 0)
             return 0;
@@ -77,15 +65,12 @@
             config.runningAway = false;
         }
     }
-    function runAway(mouseX, mouseY, runningVector){
+    function runAway(runningVector){
         let distance = getPower(runningVector);
 
         runningVector = [runningVector[0] / distance, runningVector[1] / distance]
         config.movingVector = [runningVector[0] * 150, runningVector[1] * 150];
         config.startPoint = [axisFilter(config.startPoint[0] + config.movingVector[0] / 15), axisFilter(config.startPoint[1] + config.movingVector[1] / 15)];
-       
-        let destX = axisFilter(mouseX + runningVector[0] * 1000 / distance);
-        let destY = axisFilter(mouseY + runningVector[1] * 1000 / distance);
 
         config.time = 0;
         config.sleepingTime = 0;
@@ -150,7 +135,7 @@
                 let distance = getPower(runningVector);
 
                 if(distance < 30){
-                    runAway(mouseX, mouseY, runningVector);
+                    runAway(runningVector);
                 } 
                 else{
                     move();
@@ -185,30 +170,29 @@
     <b>
 
         {#if idx == 0}
-            { $norm1 }
+            { $fish_01 }
         {:else if idx == 1}
-            { $norm2 }
+            { $fish_02 }
         {:else if idx == 2}
-            { $norm3 }
+            { $fish_03 }
         {:else if idx == 3}
-            { $norm4 }
+            { $fish_04 }
         {:else if idx == 4}
-            { $norm5 }
+            { $fish_05 }
         {:else if idx == 5}
-            { $norm6 }
+            { $fish_06 }
         {:else if idx == 6}
-            { $norm7 }
+            { $fish_07 }
         {:else if idx == 7}
-            { $norm8 }
+            { $fish_08 }
         {:else if idx == 8}
-            { $norm9 }
+            { $fish_09 }
         {:else if idx == 9}
-            { $norm10 }
+            { $fish_10 }
         {:else if idx == 10}
-            { $norm11 }
+            { $fish_11 }
         {:else if idx == 11}
-            { $norm12 }
-        {:else}
+            { $fish_12 }
         {/if}
     </b>
     </pre>
@@ -229,8 +213,5 @@
         -khtml-user-select: none;
         -webkit-user-select: none;
         user-select: none;
-    }
-    .Fish .pre{
-        background-color:#fff;
     }
 </style>

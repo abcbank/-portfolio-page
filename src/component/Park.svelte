@@ -2,24 +2,32 @@
     import jQuery from 'jquery'
     import { onMount } from 'svelte'
 	import Tree from "./Tree.svelte"
+    import { bench } from "../asciiArts"
 
     let mouse = [0,0]
+    let pmouse = [0,0]
+    let BenchRect;
     let config = []
     function createConfig(){
         return {
-            location: [mouse[0] / document.body.clientWidth * 100 , 95]
+            location: [mouse[0] / document.body.clientWidth * 100 , 98]
         }
     }
 
     function handleMouseDown(){
-        if(config.length < 10 ){
+
+        if(config.length < 10 && !(BenchRect.left - 50 <= mouse[0] && mouse[0] <= BenchRect.right + 50)){
             config.push(createConfig());
             config = config
         }
     }
     function handleMouseMove({clientX, clientY}){
         mouse = [clientX, clientY]
+        pmouse = [clientX * document.body.clientWidth / 100, clientY * document.body.clientHeight / 100]
     }
+    onMount(()=> {
+        BenchRect = document.getElementsByClassName('Bench')[0].getBoundingClientRect();
+    })
 </script>
 
 <svelte:window 
@@ -30,6 +38,14 @@
     {#each config as tree}
     <Tree location = {tree.location}/>
     {/each}
+    <div class="Bench" style="top:90%; left:20%;">
+        <pre>
+        <br/>
+        <b>
+            { $bench }
+        </b>
+        </pre>
+    </div>
 </div>
 
 <style>
@@ -41,45 +57,16 @@
         height:100%;
         z-index:1;
     }
-    .temp{
+    .Bench{
         position: absolute;
-        top:20%;
-        left:20%;
-        width:100%;
-        height:100px;
-
-        background:
-            repeating-linear-gradient(190deg, rgba(0, 132, 255, 0.5) 10%,
-                rgba(0, 255, 234, 0.5) 20%, rgba(98, 100, 219, 0.5) 30%,
-                rgba(0, 60, 255, 0.5) 40%, rgba(0, 238, 255, 0.5) 50%,
-                rgba(4, 0, 250, 0.5) 60%, rgba(148, 189, 250, 0.5) 70%,
-                rgba(0, 17, 255, 0.5)  75%),
-            repeating-linear-gradient(-190deg, rgba(0, 132, 255, 0.5) 8%,
-                rgba(0, 255, 234, 0.5) 16%, rgba(98, 100, 219, 0.5) 24%,
-                rgba(0, 60, 255, 0.5)  32%, rgba(0, 238, 255, 0.5) 40%,
-                rgba(4, 0, 250, 0.5)   48%, rgba(148, 189, 250, 0.5) 56%,
-                rgba(0, 17, 255, 0.5) 60%),
-            repeating-linear-gradient(23deg, red 10%, orange 20%,
-                yellow 30%, green 40%, blue 50%,
-                indigo 60%, violet 70%, red 73%);
-    }
-    .tem{
-        position: absolute;
-        top:40%;
-        left:40%;
-        width:100px;
-        height:100px;
-
-        background:
-            repeating-linear-gradient(190deg, rgba(0, 132, 255, 0.5) 10%,
-                rgba(0, 255, 234, 0.5) 20%, rgba(98, 100, 219, 0.5) 30%,
-                rgba(0, 60, 255, 0.5) 40%, rgba(0, 238, 255, 0.5) 50%,
-                rgba(4, 0, 250, 0.5) 60%, rgba(148, 189, 250, 0.5) 70%,
-                rgba(0, 17, 255, 0.5)  75%),
-            repeating-linear-gradient(-190deg, rgba(0, 132, 255, 0.5) 8%,
-                rgba(0, 255, 234, 0.5) 16%, rgba(98, 100, 219, 0.5) 24%,
-                rgba(0, 60, 255, 0.5)  32%, rgba(0, 238, 255, 0.5) 40%,
-                rgba(4, 0, 250, 0.5)   48%, rgba(148, 189, 250, 0.5) 56%,
-                rgba(0, 17, 255, 0.5) 60%)
+        color:#000;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%) scale(0.2,0.1);
+        z-index:9998;
+        -ms-user-select: none; 
+        -moz-user-select: -moz-none;
+        -khtml-user-select: none;
+        -webkit-user-select: none;
+        user-select: none;
     }
 </style>

@@ -18,26 +18,34 @@
   let toggleEnabled = false;
   let isOpen_Project = false;
   let isOpen_Outsourcing = false;
-  
+
+  let size = [1,1,1,1]
+
   function handleUpdate(event) {
     if(ProjectMouseup)
       isOpen_Project = event.detail.isOpen;
     if(OutsourcingMouseUp)
       isOpen_Outsourcing = event.detail.isOpen;
   }
-  let ProjectMouseup = false;
-  let OutsourcingMouseUp = false;
+  let ProjectMouseup;
+  let OutsourcingMouseUp;
+  let Project;
+  let Outsourcing;
   function ProjectOpenMouseUp(e) {
-    ProjectMouseup = true;
+    document.getElementById("ProjectMenu").classList.toggle("Show");
+    size[1] = 1.2
   }
   function ProjectOpenMouseOut(e) {
     ProjectMouseup = false;
+    size [1]= 1
   }
   function OutsourcingOpenMouseUp(e) {
     OutsourcingMouseUp = true;
+    size[2] = 1.2
   }
   function OutsourcingOpenMouseOut(e) {
     OutsourcingMouseUp = false;
+    size[2] = 1.0
   }
 </script>
 
@@ -47,35 +55,43 @@
     <NavbarToggler on:click={() => (toggleEnabled = !toggleEnabled)} />
     <Collapse { toggleEnabled } navbar expand="md" on:update={handleUpdate}>
       <Nav class="ms-auto" navbar>
-        <NavItem>
-          <NavLink href="#components/">Profile</NavLink>
-        </NavItem>
+        <div class="Items">
+          <NavItem>
+            <NavLink href="#/Profile">Profile</NavLink>
+          </NavItem>
+        </div>
+        <div class="Items" on:mouseover={ProjectOpenMouseUp} on:mouseout={ProjectOpenMouseOut} on:focus={() => {}} on:blur={() => {}}  style="transform: scale({size[1]});">
+          <Dropdown nav inNavbar>
+            <DropdownToggle nav class="nav-link" caret>Projects</DropdownToggle>
+            <DropdownMenu  right>
+              <DropdownItem href="#/2021/Projects">2021</DropdownItem>
+              <DropdownItem divider />
+              <DropdownItem href="#/2022/Projects">2022</DropdownItem>
+              <DropdownItem divider />
+              <DropdownItem href="#/2023/Projects">2023</DropdownItem>
+              <!-- <DropdownItem divider />
+              <DropdownItem>Reset</DropdownItem> -->
+            </DropdownMenu>
+          </Dropdown>
+        </div>
+        <div class="Items" on:mouseover={OutsourcingOpenMouseUp} on:mouseout={OutsourcingOpenMouseOut} on:focus={() => {}} on:blur={() => {}}  style="transform: scale({size[2]});">
+          <Dropdown nav inNavbar>
+            <DropdownToggle nav class="nav-link" caret on:mouseover={OutsourcingOpenMouseUp} on:mouseout={OutsourcingOpenMouseOut}>Outsourcing</DropdownToggle>
+            <DropdownMenu  right>
+              <DropdownItem href="#/2022/Outsourcing">2022</DropdownItem>
+              <DropdownItem divider />
+              <DropdownItem href="#/2023/Outsourcing">2023</DropdownItem>
+              <!-- <DropdownItem divider />
+              <DropdownItem>Reset</DropdownItem> -->
+            </DropdownMenu>
+          </Dropdown>
+        </div>
+        <div class="Items">
+          <NavItem>
+            <NavLink href="https://github.com/abcbank">GitHub</NavLink>
+          </NavItem>
+        </div>
         
-        <Dropdown nav inNavbar>
-          <DropdownToggle nav class="nav-link" caret on:mouseover={ProjectOpenMouseUp} on:mouseout={ProjectOpenMouseOut}>Projects</DropdownToggle>
-          <DropdownMenu color="dark" dark right>
-            <DropdownItem>2022</DropdownItem>
-            <DropdownItem divider />
-            <DropdownItem>2023</DropdownItem>
-            <!-- <DropdownItem divider />
-            <DropdownItem>Reset</DropdownItem> -->
-          </DropdownMenu>
-        </Dropdown>
-
-        <Dropdown nav inNavbar>
-          <DropdownToggle nav class="nav-link" caret on:mouseover={OutsourcingOpenMouseUp} on:mouseout={OutsourcingOpenMouseOut}>Outsourcing</DropdownToggle>
-          <DropdownMenu  right>
-            <DropdownItem>2022</DropdownItem>
-            <DropdownItem divider />
-            <DropdownItem>2023</DropdownItem>
-            <!-- <DropdownItem divider />
-            <DropdownItem>Reset</DropdownItem> -->
-          </DropdownMenu>
-        </Dropdown>
-        
-        <NavItem>
-          <NavLink href="https://github.com/abcbank">GitHub</NavLink>
-        </NavItem>
       </Nav>
     </Collapse>
     
@@ -122,10 +138,18 @@
     top:0%;
     width:100%;
     z-index:9999;
-    opacity:0.3;
-    transition: opacity 0.2s ease
+    opacity:0.6;
+    transition: opacity 0.3s ease
   }
   .NavBar:hover{
     opacity:0.8
   }
+
+  .NavBar .Items{
+    transition: all  0.1s ease-in-out;
+  }
+  .NavBar .Items:hover{
+    transform: scale(1.2);
+  }
+  
 </style>

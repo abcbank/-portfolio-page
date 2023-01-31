@@ -2,14 +2,37 @@
 <script>
     import { onMount } from "svelte";
 	import { season } from "./global"
-	import { norm1, norm2, norm3, norm4, norm5, norm6, norm7, norm8, norm9, norm10, norm11, norm12 } from "./fishTemplate"
+	import { bench, fish_01, fish_02, fish_03, fish_04, fish_05, fish_06, fish_07, fish_08, fish_09, fish_10, fish_11, fish_12 } from "./asciiArts"
     import Navbar from "./component/Navbar.svelte";
 	import Snowflakes from "./component/Snowflakes.svelte";
 	import Sakuraflakes from "./component/Sakura.svelte"
 	import Lake from "./component/Lake.svelte"
 	import Park from "./component/Park.svelte"
-	import Project_2022 from "./component/Project_2022.svelte"
 	import jQuery from "jquery"
+	import Router from 'svelte-spa-router'
+
+	import Main from './component/routes/Main.svelte'
+	import Profile from './component/routes/Profile.svelte'
+	import Projects from './component/routes/Projects.svelte'
+	import Outsourcing from './component/routes/Outsourcing.svelte'
+	import Projects_2021 from './component/routes/2021/Projects.svelte'
+	import Projects_2022 from './component/routes/2022/Projects.svelte'
+	import Projects_2023 from './component/routes/2023/Projects.svelte'
+
+	import Outsourcing_2022 from './component/routes/2022/Outsourcing.svelte'
+	import Outsourcing_2023 from './component/routes/2023/Outsourcing.svelte'
+
+	const routes = {
+		'/': Main,
+		'/Profile': Profile,
+		'/2021/Projects':Projects_2021,
+		'/2022/Projects':Projects_2022,
+		'/2023/Projects':Projects_2023,
+		'/Projects':Projects,
+		'/2022/Outsourcing':Outsourcing_2022,
+		'/2023/Outsourcing':Outsourcing_2023,
+		'/Outsourcing':Outsourcing
+	}
 
 	let premx = 0;
 	let premy = 0;
@@ -17,59 +40,63 @@
 
 
     jQuery.get('/assets/ascii/fish_1.txt', function(data) {
-        $norm1 = data;
+        $fish_01 = data;
     });
 	
     jQuery.get('/assets/ascii/fish_2.txt', function(data) {
-        $norm2 = data;
+        $fish_02 = data;
     });
 	
     jQuery.get('/assets/ascii/fish_3.txt', function(data) {
-        $norm3 = data;
+        $fish_03 = data;
     });
 	
     jQuery.get('/assets/ascii/fish_4.txt', function(data) {
-        $norm4 = data;
+        $fish_04 = data;
     });
 
     jQuery.get('/assets/ascii/fish_5.txt', function(data) {
-        $norm5 = data;
+        $fish_05 = data;
     });
 	
     jQuery.get('/assets/ascii/fish_6.txt', function(data) {
-        $norm6 = data;
+        $fish_06 = data;
     });
 	
     jQuery.get('/assets/ascii/fish_7.txt', function(data) {
-        $norm7 = data;
+        $fish_07 = data;
     });
 	
     jQuery.get('/assets/ascii/fish_8.txt', function(data) {
-        $norm8 = data;
+        $fish_08 = data;
     });
 
     jQuery.get('/assets/ascii/fish_9.txt', function(data) {
-        $norm9 = data;
+        $fish_09 = data;
     });
 	
     jQuery.get('/assets/ascii/fish_10.txt', function(data) {
-        $norm10 = data;
+        $fish_10 = data;
     });
 	
     jQuery.get('/assets/ascii/fish_11.txt', function(data) {
-        $norm11 = data;
+        $fish_11 = data;
     });
 	
     jQuery.get('/assets/ascii/fish_12.txt', function(data) {
-        $norm12 = data;
+        $fish_12 = data;
+    });
+
+    jQuery.get('/assets/ascii/bench.txt', function(data) {
+        $bench = data;
     });
 
 	onMount(() => {		
 		let month = new Date().getMonth() + 1;
-
-		background['Spring'] = "linear-gradient(to bottom, #a1c4fd 0%, turquoise 60%,#c2e9fb 90%,#8A3B12 100%)";
+		
+		background['Spring'] = "linear-gradient(to bottom, #089acf 0%, #a1c4fd 60%,#c2e9fb 90%,#8A3B12 100%)";
 		background['Summer'] = "linear-gradient(-45deg, #089acf, #0bcea0)";
-		background['Fall'] = "#fff"
+		background['Fall'] = "linear-gradient(to bottom, #0051ffb4 0%, #a1c4fd 60%,#c2e9fb 90%,#8A3B12 100%)";
 		background['Winter'] = "linear-gradient(to bottom, #071B26 0%,#071B26 30%,#8A3B12 95%, #fff 100%)"
 		
 		if(3 <= month && month <= 5){
@@ -102,7 +129,7 @@
 		<Snowflakes />
 		{/if}
 		<div id="details">
-			<Project_2022 />
+			<Router {routes} />
 		</div>
 	</div>
 	<Navbar  />
@@ -115,19 +142,15 @@
 		height:100vh;
 		overflow:hidden;
 	}
-	h1 {
-		color: #ff3e00;
-		text-transform: uppercase;
-		font-size: 4em;
-		font-weight: 100;
-	}
-	full-landing-image{
+
+	.full-landing-image{
 		display:flex;
 	}
 	#details{
-		padding:5%;
-		width:100%;
-		height:100%;
+        position:flex;
+		margin:5%;
+		width:90%;
+		height:90%;
 	}
 	@media (min-width: 640px) {
 		main {
