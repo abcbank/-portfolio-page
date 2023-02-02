@@ -38,28 +38,28 @@
     clearTimeout(t_1)
     t_1 = setTimeout(() => {
         ProjectOpen = ProjectOpen_pre;
-    }, 200)
+    }, 100)
   }
   function ProjectOpenMouseOut(e) {
     ProjectOpen_pre = false;
     clearTimeout(t_1)
     t_1 = setTimeout(() => {
         ProjectOpen = ProjectOpen_pre;
-    }, 200)
+    }, 100)
   }
   function OutsourcingOpenMouseUp(e) {
     OutsourcingOpen_pre = true;
     clearTimeout(t_2)
     t_2 = setTimeout(() => {
       OutsourcingOpen = OutsourcingOpen_pre;
-    }, 200)
+    }, 100)
   }
   function OutsourcingOpenMouseOut(e) {
     OutsourcingOpen_pre = false;
     clearTimeout(t_2)
     t_2 = setTimeout(() => {
       OutsourcingOpen = OutsourcingOpen_pre;
-    }, 200)
+    }, 100)
   }
   function closeCollapse(){
     isOpen_pre = false;
@@ -145,10 +145,10 @@ on:mouseleave|preventDefault={() => {closeCollapse()}}>
   }
 
   .NavBar .Items{
-    transition: all  0.1s ease-in-out;
+    transition: all  0.2s ease-in-out;
   }
   .NavBar .Items:hover{
-    transform: scale(1.0);
+    transform: scale(1.2);
   }
   
 </style>

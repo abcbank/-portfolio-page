@@ -5,6 +5,9 @@
     import { onMount } from "svelte";
     let background = [];
 
+	function changeSlide(slide) {
+		cur = slide;
+	}
 
 	export let slides = [
 		{ childComponent:DefaultSlide, bg: 'transparent', color: '#fff'},
@@ -28,17 +31,7 @@
 	function next(e) {
 		cur = ++cur % slides.length
 	}
-	
-    const ARROW_LEFT = 37;
-	const ARROW_RIGHT = 39;
-	function handleShortcut(e) {
-        if (e.keyCode === ARROW_LEFT ) {
-						prev();
-        }
-		    if (e.keyCode === ARROW_RIGHT ) {
-            next();
-        }
-    }
+
 	onMount(() => {		
 		// background['Spring'] = "#fff";
 		// background['Summer'] = "#fff";
@@ -81,6 +74,13 @@
             {/if}
         {/each}
     </div>
+    <div class="footer">
+        <div class="dots">
+            {#each slides as slide, i}
+                <button on:click={()=>changeSlide(i)} class="dot" class:selected={cur == i}>{i+1}</button>
+            {/each}
+        </div>
+    </div>
 </div>
 
 <style>	
@@ -114,4 +114,34 @@
         opacity:0.7;
         z-index: 500;
     }
+
+    .footer{
+        width:100%;
+        position:absolute;
+        bottom:0;
+    }
+
+	.dots {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-top: 8px;
+	}
+	
+	.dot {
+		width: 8px;
+		height: 8px;
+		background: #000;
+		border-radius: 25%;
+		font-size: 0;
+		margin: 0.3rem;
+		opacity: 0.3;
+
+        transition: all ease 0.2s;
+	}
+	
+	.dot.selected {
+        width:10px;
+		opacity: 1;
+	}
 </style>
