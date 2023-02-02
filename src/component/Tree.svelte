@@ -23,8 +23,8 @@
     var frameCounter = 0;
     var trackFrames = 150;
 
-    var canvasWidth = 800;
-    var canvasHeight = 700;
+    var canvasWidth = 1000;
+    var canvasHeight = 800;
     var Scale = 1
     var LandOffset = 40 * Math.random();
     var trees = [];
@@ -45,8 +45,8 @@
     }
 
     function plant_tree(i) {
-        var l = 50,
-            thickness = 8 + 10 * Math.random(),
+        var l = 60,
+            thickness = 16 + 20 * Math.random(),
             theta = -0.5 + Math.random(),
             origin = {
                 x: canvas.width / 2,

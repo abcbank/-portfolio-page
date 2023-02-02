@@ -4,24 +4,22 @@
   import {
     Collapse,
     Navbar,
-    NavbarToggler,
     Nav,
     NavItem,
     NavLink,
     Dropdown,
     DropdownToggle,
     DropdownMenu,
-    DropdownItem,
-    ButtonDropdown
+    DropdownItem
   } from 'sveltestrap';
   import NavLogo from "./Navlogo.svelte"
   import NavUISelector from "./NavUISelector.svelte"  
-  import { push, pop, replace } from "svelte-spa-router";
+  import { push } from "svelte-spa-router";
   
+  export let height;
+
   let isOpen = false;
   let isOpen_pre = false;
-
-  let size = [1,1,1,1]
 
   let t;
   let t_1;
@@ -34,8 +32,7 @@
   let OutsourcingOpen;
   let ProjectOpen_pre;
   let OutsourcingOpen_pre;
-  let Project;
-  let Outsourcing;
+
   function ProjectOpenMouseUp(e) {
     ProjectOpen_pre = true;
     clearTimeout(t_1)
@@ -81,6 +78,7 @@
 </script>
 
 <div class="NavBar"
+bind:clientHeight={height}
 on:mouseenter|preventDefault={() => {openCollapse()}} 
 on:mouseleave|preventDefault={() => {closeCollapse()}}>
   <Navbar color="dark" dark expand="md">
@@ -96,7 +94,7 @@ on:mouseleave|preventDefault={() => {closeCollapse()}}>
         </div>
         <div class="Items" on:mouseenter={ProjectOpenMouseUp} on:mouseleave={ProjectOpenMouseOut}>
           <Dropdown isOpen={ ProjectOpen } nav inNavbar>
-            <DropdownToggle nav class="nav-link" caret>Projects</DropdownToggle>
+            <DropdownToggle nav class="nav-link" caret on:click={() => {isOpen = false; push("/Projects");}}>Projects</DropdownToggle>
             <DropdownMenu>
               <DropdownItem on:click={()=> {isOpen = false; push("/2021/Projects");}}>2021</DropdownItem>
               <DropdownItem divider />
@@ -110,7 +108,7 @@ on:mouseleave|preventDefault={() => {closeCollapse()}}>
         </div>
         <div class="Items" on:mouseenter={OutsourcingOpenMouseUp} on:mouseleave={OutsourcingOpenMouseOut}>
           <Dropdown isOpen={ OutsourcingOpen } nav inNavbar>
-            <DropdownToggle nav class="nav-link" caret>Outsourcing</DropdownToggle>
+            <DropdownToggle nav class="nav-link" caret on:click={() => {isOpen = false; push("/Outsourcing");}}>Outsourcing</DropdownToggle>
             <DropdownMenu>
               <DropdownItem  on:click={()=> {isOpen = false; push("/2022/Outsourcing");}}>2022</DropdownItem>
               <DropdownItem divider />

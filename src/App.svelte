@@ -37,6 +37,7 @@
 	let premx = 0;
 	let premy = 0;
 	let background = [];
+	let NavbarComponent = 0;
 
 	let month = new Date().getMonth() + 1;
 	if(3 <= month && month <= 5){
@@ -112,6 +113,7 @@
 	})
 </script>
 <main style="background:{ background[$season] };">
+	<Navbar bind:height={NavbarComponent} />
 	<div class="full-landing-image">
 		{#if $season == "Spring"}
 		<Sakuraflakes />
@@ -123,12 +125,11 @@
 		<Snowflakes />
 		{/if}
 		{#if $ContextVisible}
-		<div id="details">
+		<div id="details" style="top:{NavbarComponent}px; height:{document.body.clientHeight - NavbarComponent}px;">
 			<Router {routes} />
 		</div>
 		{/if}
 	</div>
-	<Navbar  />
 </main>
 
 <style>
@@ -143,9 +144,8 @@
 		display:flex;
 	}
 	#details{
-        position:flex;
-		margin:5%;
-		width:90%;
+        position:absolute;
+		width:100%;
 		height:90%;
 	}
 	@media (min-width: 640px) {
