@@ -10,11 +10,12 @@
 	}
 
 	export let slides = [
-		{ childComponent:DefaultSlide, bg: 'transparent', color: '#fff'},
-		{ childComponent:DefaultSlide, bg: 'transparent', color: '#fff'},
-		{ childComponent:DefaultSlide, bg: 'transparent', color: '#fff'},
-		{ childComponent:DefaultSlide, bg: 'transparent', color: '#fff'},
+		{ childComponent:DefaultSlide, bg: 'transparent', color: '#fff', buttonBackColor: "#000", buttonBorderColor: "#fff", buttonSelectedColor: "#000"},
+		{ childComponent:DefaultSlide, bg: 'transparent', color: '#fff', buttonBackColor: "#000", buttonBorderColor: "#fff", buttonSelectedColor: "#000"},
+		{ childComponent:DefaultSlide, bg: 'transparent', color: '#fff', buttonBackColor: "#000", buttonBorderColor: "#fff", buttonSelectedColor: "#000"},
+		{ childComponent:DefaultSlide, bg: 'transparent', color: '#fff', buttonBackColor: "#000", buttonBorderColor: "#fff", buttonSelectedColor: "#000"},
 	]
+    console.log(slides[0].buttonBackColor)
 
 	let cur = 0;
     let t;
@@ -77,7 +78,9 @@
     <div class="footer">
         <div class="dots">
             {#each slides as slide, i}
-                <button on:click={()=>changeSlide(i)} class="dot" class:selected={cur == i}>{i+1}</button>
+                <button on:click={()=>changeSlide(i)} 
+                    class="dot" class:selected={cur == i} 
+                    style="background:{cur== i ? slide.buttonSelectedColor : slide.buttonBackColor}; border: 1px solid {slide.buttonBorderColor}">{i+1}</button>
             {/each}
         </div>
     </div>
@@ -132,6 +135,7 @@
 		width: 8px;
 		height: 8px;
 		background: #000;
+        border: 1px solid #fff;
 		border-radius: 25%;
 		font-size: 0;
 		margin: 0.3rem;
@@ -143,5 +147,6 @@
 	.dot.selected {
         width:10px;
 		opacity: 1;
+		border-radius: 25%;
 	}
 </style>
