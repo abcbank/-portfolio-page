@@ -1,6 +1,4 @@
 <script>
-  import jquery from 'jquery'
-	import { season } from "../global"
   import {
     Collapse,
     Navbar,
@@ -148,7 +146,7 @@ on:mouseleave|preventDefault={() => {closeCollapse()}}>
     transition: all  0.2s ease-in-out;
   }
   .NavBar .Items:hover{
-    transform: scale(1.2);
+    transform: scale(1.0);
   }
   
 </style>

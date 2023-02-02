@@ -20,6 +20,7 @@
 	let cur = 0;
     let t;
     let enbleToMove = true;
+    let drawComponent = true;
 
 	const transition_args = {
 		duration: 200,

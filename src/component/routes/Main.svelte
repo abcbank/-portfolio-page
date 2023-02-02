@@ -43,7 +43,6 @@
     in:fade={{delay:200, duration: 200,}} 
     out:fade={{duration: 200,}}>
     <DefaultPage 
-        
         slides={[
             { childComponent:Slide01, bg: backColor[$season], color: foreColor[$season], buttonBackColor: btnBackColor[$season], buttonBorderColor: btnBdrColor[$season], buttonSelectedColor: btnSelectedColor[$season]},
             { childComponent:Slide02, bg: backColor[$season], color: foreColor[$season], buttonBackColor: btnBackColor[$season], buttonBorderColor: btnBdrColor[$season], buttonSelectedColor: btnSelectedColor[$season]},

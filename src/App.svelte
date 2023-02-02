@@ -38,6 +38,8 @@
 	let premy = 0;
 	let background = [];
 	let NavbarComponent = 0;
+	let drawComponent = true;
+	let t;
 
 	let month = new Date().getMonth() + 1;
 	if(3 <= month && month <= 5){
@@ -111,18 +113,30 @@
 		background['Fall'] = "linear-gradient(to bottom, #0051ffb4 0%, #a1c4fd 60%,#c2e9fb 90%,#8A3B12 100%)";
 		background['Winter'] = "linear-gradient(to bottom, #071B26 0%,#071B26 30%,#8A3B12 95%, #fff 100%)"
 	})
+
+    function windowResize(){
+        drawComponent = false;
+        clearTimeout(t)
+        t = setTimeout(() => {
+            drawComponent = true;
+        }, 50)
+    }
 </script>
+
+<svelte:window on:resize={windowResize} />
 <main style="background:{ background[$season] };">
 	<Navbar bind:height={NavbarComponent} />
 	<div class="full-landing-image">
 		{#if $season == "Spring"}
-		<Sakuraflakes />
+			<Sakuraflakes />
 		{:else if $season == "Summer"}
-		<Lake/>
+			<Lake/>
 		{:else if $season == "Fall"}
-		<Park />
+			{#if drawComponent}
+				<Park />
+			{/if}
 		{:else}
-		<Snowflakes />
+			<Snowflakes />
 		{/if}
 		{#if $ContextVisible}
 		<div id="details" style="top:{NavbarComponent}px; height:{document.body.clientHeight - NavbarComponent}px;">

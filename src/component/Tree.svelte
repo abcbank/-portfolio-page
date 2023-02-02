@@ -13,7 +13,7 @@
 
     var growth_rate = 2;
     var maximum_bend = 90 / 180 * Math.PI;
-    var smallest_branch = 40 + 10 * Math.random();
+    var smallest_branch = 25 + 10 * Math.random();
     var hue = 360 * Math.random();
     var fps;
     var canvas;
@@ -46,8 +46,8 @@
 
     function plant_tree(i) {
         var l = 60,
-            thickness = 16 + 20 * Math.random(),
-            theta = -0.5 + Math.random(),
+            thickness = 8 + 10 * Math.random(),
+            theta = -0.5 + 0.3 * i + 0.5 * Math.random(),
             origin = {
                 x: canvas.width / 2,
                 y: canvas.height - LandOffset
@@ -114,7 +114,7 @@
         shoot(branch, i);
 
         var theta2 = branch.theta + (Math.random() * maximum_bend - maximum_bend / 2);
-        var magnitude2 = branch.magnitude * (Math.random() * 0.2 + 0.7);
+        var magnitude2 = branch.magnitude * (Math.random() * 0.4 + 0.5);
         var lightness2 = branch.lightness * 0.9;
         trees[i].branches.push(create_branch({
             x: branch.tip.x,
