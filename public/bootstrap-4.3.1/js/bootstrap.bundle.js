@@ -6,7 +6,7 @@
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('jquery')) :
   typeof define === 'function' && define.amd ? define(['exports', 'jquery'], factory) :
-  (global = global || self, factory(global.bootstrap = {}, global.jQuery));
+  (global = global || self, factory(global.bootstrap = {}, global.jquery));
 }(this, function (exports, $) { 'use strict';
 
   $ = $ && $.hasOwnProperty('default') ? $['default'] : $;
@@ -233,7 +233,7 @@
   var DATA_KEY = 'bs.alert';
   var EVENT_KEY = "." + DATA_KEY;
   var DATA_API_KEY = '.data-api';
-  var JQUERY_NO_CONFLICT = $.fn[NAME];
+  var jquery_NO_CONFLICT = $.fn[NAME];
   var Selector = {
     DISMISS: '[data-dismiss="alert"]'
   };
@@ -330,7 +330,7 @@
     } // Static
     ;
 
-    Alert._jQueryInterface = function _jQueryInterface(config) {
+    Alert._jqueryInterface = function _jqueryInterface(config) {
       return this.each(function () {
         var $element = $(this);
         var data = $element.data(DATA_KEY);
@@ -375,16 +375,16 @@
   $(document).on(Event.CLICK_DATA_API, Selector.DISMISS, Alert._handleDismiss(new Alert()));
   /**
    * ------------------------------------------------------------------------
-   * jQuery
+   * jquery
    * ------------------------------------------------------------------------
    */
 
-  $.fn[NAME] = Alert._jQueryInterface;
+  $.fn[NAME] = Alert._jqueryInterface;
   $.fn[NAME].Constructor = Alert;
 
   $.fn[NAME].noConflict = function () {
-    $.fn[NAME] = JQUERY_NO_CONFLICT;
-    return Alert._jQueryInterface;
+    $.fn[NAME] = jquery_NO_CONFLICT;
+    return Alert._jqueryInterface;
   };
 
   /**
@@ -398,7 +398,7 @@
   var DATA_KEY$1 = 'bs.button';
   var EVENT_KEY$1 = "." + DATA_KEY$1;
   var DATA_API_KEY$1 = '.data-api';
-  var JQUERY_NO_CONFLICT$1 = $.fn[NAME$1];
+  var jquery_NO_CONFLICT$1 = $.fn[NAME$1];
   var ClassName$1 = {
     ACTIVE: 'active',
     BUTTON: 'btn',
@@ -483,7 +483,7 @@
     } // Static
     ;
 
-    Button._jQueryInterface = function _jQueryInterface(config) {
+    Button._jqueryInterface = function _jqueryInterface(config) {
       return this.each(function () {
         var data = $(this).data(DATA_KEY$1);
 
@@ -522,23 +522,23 @@
       button = $(button).closest(Selector$1.BUTTON);
     }
 
-    Button._jQueryInterface.call($(button), 'toggle');
+    Button._jqueryInterface.call($(button), 'toggle');
   }).on(Event$1.FOCUS_BLUR_DATA_API, Selector$1.DATA_TOGGLE_CARROT, function (event) {
     var button = $(event.target).closest(Selector$1.BUTTON)[0];
     $(button).toggleClass(ClassName$1.FOCUS, /^focus(in)?$/.test(event.type));
   });
   /**
    * ------------------------------------------------------------------------
-   * jQuery
+   * jquery
    * ------------------------------------------------------------------------
    */
 
-  $.fn[NAME$1] = Button._jQueryInterface;
+  $.fn[NAME$1] = Button._jqueryInterface;
   $.fn[NAME$1].Constructor = Button;
 
   $.fn[NAME$1].noConflict = function () {
-    $.fn[NAME$1] = JQUERY_NO_CONFLICT$1;
-    return Button._jQueryInterface;
+    $.fn[NAME$1] = jquery_NO_CONFLICT$1;
+    return Button._jqueryInterface;
   };
 
   /**
@@ -552,7 +552,7 @@
   var DATA_KEY$2 = 'bs.carousel';
   var EVENT_KEY$2 = "." + DATA_KEY$2;
   var DATA_API_KEY$2 = '.data-api';
-  var JQUERY_NO_CONFLICT$2 = $.fn[NAME$2];
+  var jquery_NO_CONFLICT$2 = $.fn[NAME$2];
   var ARROW_LEFT_KEYCODE = 37; // KeyboardEvent.which value for left arrow key
 
   var ARROW_RIGHT_KEYCODE = 39; // KeyboardEvent.which value for right arrow key
@@ -1034,7 +1034,7 @@
     } // Static
     ;
 
-    Carousel._jQueryInterface = function _jQueryInterface(config) {
+    Carousel._jqueryInterface = function _jqueryInterface(config) {
       return this.each(function () {
         var data = $(this).data(DATA_KEY$2);
 
@@ -1087,7 +1087,7 @@
         config.interval = false;
       }
 
-      Carousel._jQueryInterface.call($(target), config);
+      Carousel._jqueryInterface.call($(target), config);
 
       if (slideIndex) {
         $(target).data(DATA_KEY$2).to(slideIndex);
@@ -1124,21 +1124,21 @@
     for (var i = 0, len = carousels.length; i < len; i++) {
       var $carousel = $(carousels[i]);
 
-      Carousel._jQueryInterface.call($carousel, $carousel.data());
+      Carousel._jqueryInterface.call($carousel, $carousel.data());
     }
   });
   /**
    * ------------------------------------------------------------------------
-   * jQuery
+   * jquery
    * ------------------------------------------------------------------------
    */
 
-  $.fn[NAME$2] = Carousel._jQueryInterface;
+  $.fn[NAME$2] = Carousel._jqueryInterface;
   $.fn[NAME$2].Constructor = Carousel;
 
   $.fn[NAME$2].noConflict = function () {
-    $.fn[NAME$2] = JQUERY_NO_CONFLICT$2;
-    return Carousel._jQueryInterface;
+    $.fn[NAME$2] = jquery_NO_CONFLICT$2;
+    return Carousel._jqueryInterface;
   };
 
   /**
@@ -1152,7 +1152,7 @@
   var DATA_KEY$3 = 'bs.collapse';
   var EVENT_KEY$3 = "." + DATA_KEY$3;
   var DATA_API_KEY$3 = '.data-api';
-  var JQUERY_NO_CONFLICT$3 = $.fn[NAME$3];
+  var jquery_NO_CONFLICT$3 = $.fn[NAME$3];
   var Default$1 = {
     toggle: true,
     parent: ''
@@ -1276,7 +1276,7 @@
       }
 
       if (actives) {
-        Collapse._jQueryInterface.call($(actives).not(this._selector), 'hide');
+        Collapse._jqueryInterface.call($(actives).not(this._selector), 'hide');
 
         if (!activesData) {
           $(actives).data(DATA_KEY$3, null);
@@ -1392,7 +1392,7 @@
       var parent;
 
       if (Util.isElement(this._config.parent)) {
-        parent = this._config.parent; // It's a jQuery object
+        parent = this._config.parent; // It's a jquery object
 
         if (typeof this._config.parent.jquery !== 'undefined') {
           parent = this._config.parent[0];
@@ -1423,7 +1423,7 @@
       return selector ? document.querySelector(selector) : null;
     };
 
-    Collapse._jQueryInterface = function _jQueryInterface(config) {
+    Collapse._jqueryInterface = function _jqueryInterface(config) {
       return this.each(function () {
         var $this = $(this);
         var data = $this.data(DATA_KEY$3);
@@ -1484,21 +1484,21 @@
       var data = $target.data(DATA_KEY$3);
       var config = data ? 'toggle' : $trigger.data();
 
-      Collapse._jQueryInterface.call($target, config);
+      Collapse._jqueryInterface.call($target, config);
     });
   });
   /**
    * ------------------------------------------------------------------------
-   * jQuery
+   * jquery
    * ------------------------------------------------------------------------
    */
 
-  $.fn[NAME$3] = Collapse._jQueryInterface;
+  $.fn[NAME$3] = Collapse._jqueryInterface;
   $.fn[NAME$3].Constructor = Collapse;
 
   $.fn[NAME$3].noConflict = function () {
-    $.fn[NAME$3] = JQUERY_NO_CONFLICT$3;
-    return Collapse._jQueryInterface;
+    $.fn[NAME$3] = jquery_NO_CONFLICT$3;
+    return Collapse._jqueryInterface;
   };
 
   /**!
@@ -3959,7 +3959,7 @@
         scrollParents: []
       };
 
-      // get reference and popper elements (allow jQuery wrappers)
+      // get reference and popper elements (allow jquery wrappers)
       this.reference = reference && reference.jquery ? reference[0] : reference;
       this.popper = popper && popper.jquery ? popper[0] : popper;
 
@@ -4091,7 +4091,7 @@
   var DATA_KEY$4 = 'bs.dropdown';
   var EVENT_KEY$4 = "." + DATA_KEY$4;
   var DATA_API_KEY$4 = '.data-api';
-  var JQUERY_NO_CONFLICT$4 = $.fn[NAME$4];
+  var jquery_NO_CONFLICT$4 = $.fn[NAME$4];
   var ESCAPE_KEYCODE = 27; // KeyboardEvent.which value for Escape (Esc) key
 
   var SPACE_KEYCODE = 32; // KeyboardEvent.which value for space key
@@ -4220,7 +4220,7 @@
         if (this._config.reference === 'parent') {
           referenceElement = parent;
         } else if (Util.isElement(this._config.reference)) {
-          referenceElement = this._config.reference; // Check if it's jQuery element
+          referenceElement = this._config.reference; // Check if it's jquery element
 
           if (typeof this._config.reference.jquery !== 'undefined') {
             referenceElement = this._config.reference[0];
@@ -4415,7 +4415,7 @@
     } // Static
     ;
 
-    Dropdown._jQueryInterface = function _jQueryInterface(config) {
+    Dropdown._jqueryInterface = function _jqueryInterface(config) {
       return this.each(function () {
         var data = $(this).data(DATA_KEY$4);
 
@@ -4588,22 +4588,22 @@
     event.preventDefault();
     event.stopPropagation();
 
-    Dropdown._jQueryInterface.call($(this), 'toggle');
+    Dropdown._jqueryInterface.call($(this), 'toggle');
   }).on(Event$4.CLICK_DATA_API, Selector$4.FORM_CHILD, function (e) {
     e.stopPropagation();
   });
   /**
    * ------------------------------------------------------------------------
-   * jQuery
+   * jquery
    * ------------------------------------------------------------------------
    */
 
-  $.fn[NAME$4] = Dropdown._jQueryInterface;
+  $.fn[NAME$4] = Dropdown._jqueryInterface;
   $.fn[NAME$4].Constructor = Dropdown;
 
   $.fn[NAME$4].noConflict = function () {
-    $.fn[NAME$4] = JQUERY_NO_CONFLICT$4;
-    return Dropdown._jQueryInterface;
+    $.fn[NAME$4] = jquery_NO_CONFLICT$4;
+    return Dropdown._jqueryInterface;
   };
 
   /**
@@ -4617,7 +4617,7 @@
   var DATA_KEY$5 = 'bs.modal';
   var EVENT_KEY$5 = "." + DATA_KEY$5;
   var DATA_API_KEY$5 = '.data-api';
-  var JQUERY_NO_CONFLICT$5 = $.fn[NAME$5];
+  var jquery_NO_CONFLICT$5 = $.fn[NAME$5];
   var ESCAPE_KEYCODE$1 = 27; // KeyboardEvent.which value for Escape (Esc) key
 
   var Default$3 = {
@@ -5099,7 +5099,7 @@
     } // Static
     ;
 
-    Modal._jQueryInterface = function _jQueryInterface(config, relatedTarget) {
+    Modal._jqueryInterface = function _jqueryInterface(config, relatedTarget) {
       return this.each(function () {
         var data = $(this).data(DATA_KEY$5);
 
@@ -5172,20 +5172,20 @@
       });
     });
 
-    Modal._jQueryInterface.call($(target), config, this);
+    Modal._jqueryInterface.call($(target), config, this);
   });
   /**
    * ------------------------------------------------------------------------
-   * jQuery
+   * jquery
    * ------------------------------------------------------------------------
    */
 
-  $.fn[NAME$5] = Modal._jQueryInterface;
+  $.fn[NAME$5] = Modal._jqueryInterface;
   $.fn[NAME$5].Constructor = Modal;
 
   $.fn[NAME$5].noConflict = function () {
-    $.fn[NAME$5] = JQUERY_NO_CONFLICT$5;
-    return Modal._jQueryInterface;
+    $.fn[NAME$5] = jquery_NO_CONFLICT$5;
+    return Modal._jqueryInterface;
   };
 
   /**
@@ -5319,7 +5319,7 @@
   var VERSION$6 = '4.3.1';
   var DATA_KEY$6 = 'bs.tooltip';
   var EVENT_KEY$6 = "." + DATA_KEY$6;
-  var JQUERY_NO_CONFLICT$6 = $.fn[NAME$6];
+  var jquery_NO_CONFLICT$6 = $.fn[NAME$6];
   var CLASS_PREFIX = 'bs-tooltip';
   var BSCLS_PREFIX_REGEX = new RegExp("(^|\\s)" + CLASS_PREFIX + "\\S+", 'g');
   var DISALLOWED_ATTRIBUTES = ['sanitize', 'whiteList', 'sanitizeFn'];
@@ -5680,7 +5680,7 @@
 
     _proto.setElementContent = function setElementContent($element, content) {
       if (typeof content === 'object' && (content.nodeType || content.jquery)) {
-        // Content is a DOM node or a jQuery
+        // Content is a DOM node or a jquery
         if (this.config.html) {
           if (!$(content).parent().is($element)) {
             $element.empty().append(content);
@@ -5947,7 +5947,7 @@
     } // Static
     ;
 
-    Tooltip._jQueryInterface = function _jQueryInterface(config) {
+    Tooltip._jqueryInterface = function _jqueryInterface(config) {
       return this.each(function () {
         var data = $(this).data(DATA_KEY$6);
 
@@ -6013,17 +6013,17 @@
   }();
   /**
    * ------------------------------------------------------------------------
-   * jQuery
+   * jquery
    * ------------------------------------------------------------------------
    */
 
 
-  $.fn[NAME$6] = Tooltip._jQueryInterface;
+  $.fn[NAME$6] = Tooltip._jqueryInterface;
   $.fn[NAME$6].Constructor = Tooltip;
 
   $.fn[NAME$6].noConflict = function () {
-    $.fn[NAME$6] = JQUERY_NO_CONFLICT$6;
-    return Tooltip._jQueryInterface;
+    $.fn[NAME$6] = jquery_NO_CONFLICT$6;
+    return Tooltip._jqueryInterface;
   };
 
   /**
@@ -6036,7 +6036,7 @@
   var VERSION$7 = '4.3.1';
   var DATA_KEY$7 = 'bs.popover';
   var EVENT_KEY$7 = "." + DATA_KEY$7;
-  var JQUERY_NO_CONFLICT$7 = $.fn[NAME$7];
+  var jquery_NO_CONFLICT$7 = $.fn[NAME$7];
   var CLASS_PREFIX$1 = 'bs-popover';
   var BSCLS_PREFIX_REGEX$1 = new RegExp("(^|\\s)" + CLASS_PREFIX$1 + "\\S+", 'g');
 
@@ -6133,7 +6133,7 @@
     } // Static
     ;
 
-    Popover._jQueryInterface = function _jQueryInterface(config) {
+    Popover._jqueryInterface = function _jqueryInterface(config) {
       return this.each(function () {
         var data = $(this).data(DATA_KEY$7);
 
@@ -6200,17 +6200,17 @@
   }(Tooltip);
   /**
    * ------------------------------------------------------------------------
-   * jQuery
+   * jquery
    * ------------------------------------------------------------------------
    */
 
 
-  $.fn[NAME$7] = Popover._jQueryInterface;
+  $.fn[NAME$7] = Popover._jqueryInterface;
   $.fn[NAME$7].Constructor = Popover;
 
   $.fn[NAME$7].noConflict = function () {
-    $.fn[NAME$7] = JQUERY_NO_CONFLICT$7;
-    return Popover._jQueryInterface;
+    $.fn[NAME$7] = jquery_NO_CONFLICT$7;
+    return Popover._jqueryInterface;
   };
 
   /**
@@ -6224,7 +6224,7 @@
   var DATA_KEY$8 = 'bs.scrollspy';
   var EVENT_KEY$8 = "." + DATA_KEY$8;
   var DATA_API_KEY$6 = '.data-api';
-  var JQUERY_NO_CONFLICT$8 = $.fn[NAME$8];
+  var jquery_NO_CONFLICT$8 = $.fn[NAME$8];
   var Default$6 = {
     offset: 10,
     method: 'auto',
@@ -6315,7 +6315,7 @@
           var targetBCR = target.getBoundingClientRect();
 
           if (targetBCR.width || targetBCR.height) {
-            // TODO (fat): remove sketch reliance on jQuery position/offset
+            // TODO (fat): remove sketch reliance on jquery position/offset
             return [$(target)[offsetMethod]().top + offsetBase, targetSelector];
           }
         }
@@ -6454,7 +6454,7 @@
     } // Static
     ;
 
-    ScrollSpy._jQueryInterface = function _jQueryInterface(config) {
+    ScrollSpy._jqueryInterface = function _jqueryInterface(config) {
       return this.each(function () {
         var data = $(this).data(DATA_KEY$8);
 
@@ -6503,21 +6503,21 @@
     for (var i = scrollSpysLength; i--;) {
       var $spy = $(scrollSpys[i]);
 
-      ScrollSpy._jQueryInterface.call($spy, $spy.data());
+      ScrollSpy._jqueryInterface.call($spy, $spy.data());
     }
   });
   /**
    * ------------------------------------------------------------------------
-   * jQuery
+   * jquery
    * ------------------------------------------------------------------------
    */
 
-  $.fn[NAME$8] = ScrollSpy._jQueryInterface;
+  $.fn[NAME$8] = ScrollSpy._jqueryInterface;
   $.fn[NAME$8].Constructor = ScrollSpy;
 
   $.fn[NAME$8].noConflict = function () {
-    $.fn[NAME$8] = JQUERY_NO_CONFLICT$8;
-    return ScrollSpy._jQueryInterface;
+    $.fn[NAME$8] = jquery_NO_CONFLICT$8;
+    return ScrollSpy._jqueryInterface;
   };
 
   /**
@@ -6531,7 +6531,7 @@
   var DATA_KEY$9 = 'bs.tab';
   var EVENT_KEY$9 = "." + DATA_KEY$9;
   var DATA_API_KEY$7 = '.data-api';
-  var JQUERY_NO_CONFLICT$9 = $.fn[NAME$9];
+  var jquery_NO_CONFLICT$9 = $.fn[NAME$9];
   var Event$9 = {
     HIDE: "hide" + EVENT_KEY$9,
     HIDDEN: "hidden" + EVENT_KEY$9,
@@ -6700,7 +6700,7 @@
     } // Static
     ;
 
-    Tab._jQueryInterface = function _jQueryInterface(config) {
+    Tab._jqueryInterface = function _jqueryInterface(config) {
       return this.each(function () {
         var $this = $(this);
         var data = $this.data(DATA_KEY$9);
@@ -6739,20 +6739,20 @@
   $(document).on(Event$9.CLICK_DATA_API, Selector$9.DATA_TOGGLE, function (event) {
     event.preventDefault();
 
-    Tab._jQueryInterface.call($(this), 'show');
+    Tab._jqueryInterface.call($(this), 'show');
   });
   /**
    * ------------------------------------------------------------------------
-   * jQuery
+   * jquery
    * ------------------------------------------------------------------------
    */
 
-  $.fn[NAME$9] = Tab._jQueryInterface;
+  $.fn[NAME$9] = Tab._jqueryInterface;
   $.fn[NAME$9].Constructor = Tab;
 
   $.fn[NAME$9].noConflict = function () {
-    $.fn[NAME$9] = JQUERY_NO_CONFLICT$9;
-    return Tab._jQueryInterface;
+    $.fn[NAME$9] = jquery_NO_CONFLICT$9;
+    return Tab._jqueryInterface;
   };
 
   /**
@@ -6765,7 +6765,7 @@
   var VERSION$a = '4.3.1';
   var DATA_KEY$a = 'bs.toast';
   var EVENT_KEY$a = "." + DATA_KEY$a;
-  var JQUERY_NO_CONFLICT$a = $.fn[NAME$a];
+  var jquery_NO_CONFLICT$a = $.fn[NAME$a];
   var Event$a = {
     CLICK_DISMISS: "click.dismiss" + EVENT_KEY$a,
     HIDE: "hide" + EVENT_KEY$a,
@@ -6914,7 +6914,7 @@
     } // Static
     ;
 
-    Toast._jQueryInterface = function _jQueryInterface(config) {
+    Toast._jqueryInterface = function _jqueryInterface(config) {
       return this.each(function () {
         var $element = $(this);
         var data = $element.data(DATA_KEY$a);
@@ -6957,17 +6957,17 @@
   }();
   /**
    * ------------------------------------------------------------------------
-   * jQuery
+   * jquery
    * ------------------------------------------------------------------------
    */
 
 
-  $.fn[NAME$a] = Toast._jQueryInterface;
+  $.fn[NAME$a] = Toast._jqueryInterface;
   $.fn[NAME$a].Constructor = Toast;
 
   $.fn[NAME$a].noConflict = function () {
-    $.fn[NAME$a] = JQUERY_NO_CONFLICT$a;
-    return Toast._jQueryInterface;
+    $.fn[NAME$a] = jquery_NO_CONFLICT$a;
+    return Toast._jqueryInterface;
   };
 
   /**
@@ -6979,7 +6979,7 @@
 
   (function () {
     if (typeof $ === 'undefined') {
-      throw new TypeError('Bootstrap\'s JavaScript requires jQuery. jQuery must be included before Bootstrap\'s JavaScript.');
+      throw new TypeError('Bootstrap\'s JavaScript requires jquery. jquery must be included before Bootstrap\'s JavaScript.');
     }
 
     var version = $.fn.jquery.split(' ')[0].split('.');
@@ -6990,7 +6990,7 @@
     var maxMajor = 4;
 
     if (version[0] < ltMajor && version[1] < minMinor || version[0] === minMajor && version[1] === minMinor && version[2] < minPatch || version[0] >= maxMajor) {
-      throw new Error('Bootstrap\'s JavaScript requires at least jQuery v1.9.1 but less than v4.0.0');
+      throw new Error('Bootstrap\'s JavaScript requires at least jquery v1.9.1 but less than v4.0.0');
     }
   })();
 

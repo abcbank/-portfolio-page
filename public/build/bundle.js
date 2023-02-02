@@ -1,11 +1,11 @@
 
 (function(l, r) { if (!l || l.getElementById('livereloadscript')) return; r = l.createElement('script'); r.async = 1; r.src = '//' + (self.location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1'; r.id = 'livereloadscript'; l.getElementsByTagName('head')[0].appendChild(r) })(self.document);
-var app = (function (jQuery) {
+var app = (function (jquery) {
     'use strict';
 
     function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
 
-    var jQuery__default = /*#__PURE__*/_interopDefaultLegacy(jQuery);
+    var jquery__default = /*#__PURE__*/_interopDefaultLegacy(jquery);
 
     function noop() { }
     const identity = x => x;
@@ -9813,7 +9813,7 @@ var app = (function (jQuery) {
     	return block;
     }
 
-    // (38:8) <MenuItem on:click={() => {              SetUIStatus("Spring")              $season = "Spring"              jQuery(".full-landing-image").ripples('pause');              jQuery(".full-landing-image").ripples('hide');          }} leftIcon={mdiSprout} rightIcon={UIStatus["Spring"]}>
+    // (38:8) <MenuItem on:click={() => {              SetUIStatus("Spring")              $season = "Spring"              jquery(".full-landing-image").ripples('pause');              jquery(".full-landing-image").ripples('hide');          }} leftIcon={mdiSprout} rightIcon={UIStatus["Spring"]}>
     function create_default_slot_5$1(ctx) {
     	let t;
 
@@ -9833,14 +9833,14 @@ var app = (function (jQuery) {
     		block,
     		id: create_default_slot_5$1.name,
     		type: "slot",
-    		source: "(38:8) <MenuItem on:click={() => {              SetUIStatus(\\\"Spring\\\")              $season = \\\"Spring\\\"              jQuery(\\\".full-landing-image\\\").ripples('pause');              jQuery(\\\".full-landing-image\\\").ripples('hide');          }} leftIcon={mdiSprout} rightIcon={UIStatus[\\\"Spring\\\"]}>",
+    		source: "(38:8) <MenuItem on:click={() => {              SetUIStatus(\\\"Spring\\\")              $season = \\\"Spring\\\"              jquery(\\\".full-landing-image\\\").ripples('pause');              jquery(\\\".full-landing-image\\\").ripples('hide');          }} leftIcon={mdiSprout} rightIcon={UIStatus[\\\"Spring\\\"]}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (44:8) <MenuItem on:click={() => {              SetUIStatus("Summer")              $season = "Summer"              jQuery(".full-landing-image").ripples('play');              jQuery(".full-landing-image").ripples('show');          }} leftIcon={mdiWaves} rightIcon={UIStatus["Summer"]}>
+    // (44:8) <MenuItem on:click={() => {              SetUIStatus("Summer")              $season = "Summer"              jquery(".full-landing-image").ripples('play');              jquery(".full-landing-image").ripples('show');          }} leftIcon={mdiWaves} rightIcon={UIStatus["Summer"]}>
     function create_default_slot_4$1(ctx) {
     	let t;
 
@@ -9860,14 +9860,14 @@ var app = (function (jQuery) {
     		block,
     		id: create_default_slot_4$1.name,
     		type: "slot",
-    		source: "(44:8) <MenuItem on:click={() => {              SetUIStatus(\\\"Summer\\\")              $season = \\\"Summer\\\"              jQuery(\\\".full-landing-image\\\").ripples('play');              jQuery(\\\".full-landing-image\\\").ripples('show');          }} leftIcon={mdiWaves} rightIcon={UIStatus[\\\"Summer\\\"]}>",
+    		source: "(44:8) <MenuItem on:click={() => {              SetUIStatus(\\\"Summer\\\")              $season = \\\"Summer\\\"              jquery(\\\".full-landing-image\\\").ripples('play');              jquery(\\\".full-landing-image\\\").ripples('show');          }} leftIcon={mdiWaves} rightIcon={UIStatus[\\\"Summer\\\"]}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (50:8) <MenuItem on:click={() => {              SetUIStatus("Fall")              $season = "Fall"              jQuery(".full-landing-image").ripples('pause');              jQuery(".full-landing-image").ripples('hide');          }}   leftIcon={mdiLeafMaple} rightIcon={UIStatus["Fall"]}>
+    // (50:8) <MenuItem on:click={() => {              SetUIStatus("Fall")              $season = "Fall"              jquery(".full-landing-image").ripples('pause');              jquery(".full-landing-image").ripples('hide');          }}   leftIcon={mdiLeafMaple} rightIcon={UIStatus["Fall"]}>
     function create_default_slot_3$1(ctx) {
     	let t;
 
@@ -9887,14 +9887,14 @@ var app = (function (jQuery) {
     		block,
     		id: create_default_slot_3$1.name,
     		type: "slot",
-    		source: "(50:8) <MenuItem on:click={() => {              SetUIStatus(\\\"Fall\\\")              $season = \\\"Fall\\\"              jQuery(\\\".full-landing-image\\\").ripples('pause');              jQuery(\\\".full-landing-image\\\").ripples('hide');          }}   leftIcon={mdiLeafMaple} rightIcon={UIStatus[\\\"Fall\\\"]}>",
+    		source: "(50:8) <MenuItem on:click={() => {              SetUIStatus(\\\"Fall\\\")              $season = \\\"Fall\\\"              jquery(\\\".full-landing-image\\\").ripples('pause');              jquery(\\\".full-landing-image\\\").ripples('hide');          }}   leftIcon={mdiLeafMaple} rightIcon={UIStatus[\\\"Fall\\\"]}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (56:8) <MenuItem on:click={() => {              SetUIStatus("Winter")              $season = "Winter"              jQuery(".full-landing-image").ripples('pause');              jQuery(".full-landing-image").ripples('hide');          }} leftIcon={mdiSnowflake} rightIcon={UIStatus["Winter"]}>
+    // (56:8) <MenuItem on:click={() => {              SetUIStatus("Winter")              $season = "Winter"              jquery(".full-landing-image").ripples('pause');              jquery(".full-landing-image").ripples('hide');          }} leftIcon={mdiSnowflake} rightIcon={UIStatus["Winter"]}>
     function create_default_slot_2$1(ctx) {
     	let t;
 
@@ -9914,7 +9914,7 @@ var app = (function (jQuery) {
     		block,
     		id: create_default_slot_2$1.name,
     		type: "slot",
-    		source: "(56:8) <MenuItem on:click={() => {              SetUIStatus(\\\"Winter\\\")              $season = \\\"Winter\\\"              jQuery(\\\".full-landing-image\\\").ripples('pause');              jQuery(\\\".full-landing-image\\\").ripples('hide');          }} leftIcon={mdiSnowflake} rightIcon={UIStatus[\\\"Winter\\\"]}>",
+    		source: "(56:8) <MenuItem on:click={() => {              SetUIStatus(\\\"Winter\\\")              $season = \\\"Winter\\\"              jquery(\\\".full-landing-image\\\").ripples('pause');              jquery(\\\".full-landing-image\\\").ripples('hide');          }} leftIcon={mdiSnowflake} rightIcon={UIStatus[\\\"Winter\\\"]}>",
     		ctx
     	});
 
@@ -10322,29 +10322,29 @@ var app = (function (jQuery) {
     	const click_handler_1 = () => {
     		SetUIStatus("Spring");
     		set_store_value(season, $season = "Spring", $season);
-    		jQuery__default["default"](".full-landing-image").ripples('pause');
-    		jQuery__default["default"](".full-landing-image").ripples('hide');
+    		jquery__default["default"](".full-landing-image").ripples('pause');
+    		jquery__default["default"](".full-landing-image").ripples('hide');
     	};
 
     	const click_handler_2 = () => {
     		SetUIStatus("Summer");
     		set_store_value(season, $season = "Summer", $season);
-    		jQuery__default["default"](".full-landing-image").ripples('play');
-    		jQuery__default["default"](".full-landing-image").ripples('show');
+    		jquery__default["default"](".full-landing-image").ripples('play');
+    		jquery__default["default"](".full-landing-image").ripples('show');
     	};
 
     	const click_handler_3 = () => {
     		SetUIStatus("Fall");
     		set_store_value(season, $season = "Fall", $season);
-    		jQuery__default["default"](".full-landing-image").ripples('pause');
-    		jQuery__default["default"](".full-landing-image").ripples('hide');
+    		jquery__default["default"](".full-landing-image").ripples('pause');
+    		jquery__default["default"](".full-landing-image").ripples('hide');
     	};
 
     	const click_handler_4 = () => {
     		SetUIStatus("Winter");
     		set_store_value(season, $season = "Winter", $season);
-    		jQuery__default["default"](".full-landing-image").ripples('pause');
-    		jQuery__default["default"](".full-landing-image").ripples('hide');
+    		jquery__default["default"](".full-landing-image").ripples('pause');
+    		jquery__default["default"](".full-landing-image").ripples('hide');
     	};
 
     	$$self.$capture_state = () => ({
@@ -10361,7 +10361,7 @@ var app = (function (jQuery) {
     		DropdownMenu,
     		IconButton,
     		MenuItem,
-    		jQuery: jQuery__default["default"],
+    		jquery: jquery__default["default"],
     		onMount,
     		ToggleSwitch,
     		SwitchStatus,
@@ -12790,7 +12790,7 @@ var app = (function (jQuery) {
     	};
 
     	$$self.$capture_state = () => ({
-    		jQuery: jQuery__default["default"],
+    		jquery: jquery__default["default"],
     		season,
     		Collapse,
     		Navbar,
@@ -14491,13 +14491,13 @@ var app = (function (jQuery) {
     	validate_slots('Lake', slots, []);
 
     	onMount(() => {
-    		jQuery__default["default"](".full-landing-image").ripples({
+    		jquery__default["default"](".full-landing-image").ripples({
     			resolution: 256, // 렌더링 값이 클수록 잔물결 효과가 느리게 전파
     			perturbance: 0.02, // 잔물경 굴절 강도. 0은 굴절 없음
     			
     		});
 
-    		jQuery__default["default"](".full-landing-image").ripples('play');
+    		jquery__default["default"](".full-landing-image").ripples('play');
     	});
 
     	const writable_props = [];
@@ -14506,7 +14506,7 @@ var app = (function (jQuery) {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<Lake> was created with unknown prop '${key}'`);
     	});
 
-    	$$self.$capture_state = () => ({ jQuery: jQuery__default["default"], onMount, Fish });
+    	$$self.$capture_state = () => ({ jquery: jquery__default["default"], onMount, Fish });
     	return [];
     }
 
@@ -14849,7 +14849,7 @@ var app = (function (jQuery) {
     	return child_ctx;
     }
 
-    // (38:4) {#each config as tree}
+    // (37:4) {#each config as tree}
     function create_each_block$1(ctx) {
     	let tree;
     	let current;
@@ -14890,7 +14890,7 @@ var app = (function (jQuery) {
     		block,
     		id: create_each_block$1.name,
     		type: "each",
-    		source: "(38:4) {#each config as tree}",
+    		source: "(37:4) {#each config as tree}",
     		ctx
     	});
 
@@ -14944,15 +14944,15 @@ var app = (function (jQuery) {
     			t4 = text(/*$bench*/ ctx[1]);
     			t5 = text("\r\n        ");
     			t6 = text("\r\n        ");
-    			add_location(br, file$M, 42, 8, 1222);
-    			add_location(b, file$M, 43, 8, 1237);
-    			add_location(pre, file$M, 41, 8, 1207);
+    			add_location(br, file$M, 41, 8, 1189);
+    			add_location(b, file$M, 42, 8, 1204);
+    			add_location(pre, file$M, 40, 8, 1174);
     			attr_dev(div0, "class", "Bench svelte-1fw58m6");
     			set_style(div0, "top", "90%");
     			set_style(div0, "left", "20%");
-    			add_location(div0, file$M, 40, 4, 1151);
+    			add_location(div0, file$M, 39, 4, 1118);
     			attr_dev(div1, "class", "Park svelte-1fw58m6");
-    			add_location(div1, file$M, 36, 0, 1044);
+    			add_location(div1, file$M, 35, 0, 1011);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -15098,7 +15098,6 @@ var app = (function (jQuery) {
     	});
 
     	$$self.$capture_state = () => ({
-    		jQuery: jQuery__default["default"],
     		onMount,
     		Tree,
     		bench,
@@ -23438,55 +23437,55 @@ var app = (function (jQuery) {
     		set_store_value(season, $season = "Winter", $season);
     	}
 
-    	jQuery__default["default"].get('/assets/ascii/fish_1.txt', function (data) {
+    	jquery__default["default"].get('/assets/ascii/fish_1.txt', function (data) {
     		set_store_value(fish_01, $fish_01 = data, $fish_01);
     	});
 
-    	jQuery__default["default"].get('/assets/ascii/fish_2.txt', function (data) {
+    	jquery__default["default"].get('/assets/ascii/fish_2.txt', function (data) {
     		set_store_value(fish_02, $fish_02 = data, $fish_02);
     	});
 
-    	jQuery__default["default"].get('/assets/ascii/fish_3.txt', function (data) {
+    	jquery__default["default"].get('/assets/ascii/fish_3.txt', function (data) {
     		set_store_value(fish_03, $fish_03 = data, $fish_03);
     	});
 
-    	jQuery__default["default"].get('/assets/ascii/fish_4.txt', function (data) {
+    	jquery__default["default"].get('/assets/ascii/fish_4.txt', function (data) {
     		set_store_value(fish_04, $fish_04 = data, $fish_04);
     	});
 
-    	jQuery__default["default"].get('/assets/ascii/fish_5.txt', function (data) {
+    	jquery__default["default"].get('/assets/ascii/fish_5.txt', function (data) {
     		set_store_value(fish_05, $fish_05 = data, $fish_05);
     	});
 
-    	jQuery__default["default"].get('/assets/ascii/fish_6.txt', function (data) {
+    	jquery__default["default"].get('/assets/ascii/fish_6.txt', function (data) {
     		set_store_value(fish_06, $fish_06 = data, $fish_06);
     	});
 
-    	jQuery__default["default"].get('/assets/ascii/fish_7.txt', function (data) {
+    	jquery__default["default"].get('/assets/ascii/fish_7.txt', function (data) {
     		set_store_value(fish_07, $fish_07 = data, $fish_07);
     	});
 
-    	jQuery__default["default"].get('/assets/ascii/fish_8.txt', function (data) {
+    	jquery__default["default"].get('/assets/ascii/fish_8.txt', function (data) {
     		set_store_value(fish_08, $fish_08 = data, $fish_08);
     	});
 
-    	jQuery__default["default"].get('/assets/ascii/fish_9.txt', function (data) {
+    	jquery__default["default"].get('/assets/ascii/fish_9.txt', function (data) {
     		set_store_value(fish_09, $fish_09 = data, $fish_09);
     	});
 
-    	jQuery__default["default"].get('/assets/ascii/fish_10.txt', function (data) {
+    	jquery__default["default"].get('/assets/ascii/fish_10.txt', function (data) {
     		set_store_value(fish_10, $fish_10 = data, $fish_10);
     	});
 
-    	jQuery__default["default"].get('/assets/ascii/fish_11.txt', function (data) {
+    	jquery__default["default"].get('/assets/ascii/fish_11.txt', function (data) {
     		set_store_value(fish_11, $fish_11 = data, $fish_11);
     	});
 
-    	jQuery__default["default"].get('/assets/ascii/fish_12.txt', function (data) {
+    	jquery__default["default"].get('/assets/ascii/fish_12.txt', function (data) {
     		set_store_value(fish_12, $fish_12 = data, $fish_12);
     	});
 
-    	jQuery__default["default"].get('/assets/ascii/bench.txt', function (data) {
+    	jquery__default["default"].get('/assets/ascii/bench.txt', function (data) {
     		set_store_value(bench, $bench = data, $bench);
     	});
 
@@ -23531,7 +23530,7 @@ var app = (function (jQuery) {
     		Sakuraflakes: Sakura,
     		Lake,
     		Park,
-    		jQuery: jQuery__default["default"],
+    		jquery: jquery__default["default"],
     		Router,
     		Main,
     		Profile,
@@ -23609,5 +23608,5 @@ var app = (function (jQuery) {
 
     return app;
 
-})(jQuery);
+})(jquery);
 //# sourceMappingURL=bundle.js.map

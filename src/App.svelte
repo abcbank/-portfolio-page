@@ -8,7 +8,7 @@
 	import Sakuraflakes from "./component/Sakura.svelte"
 	import Lake from "./component/Lake.svelte"
 	import Park from "./component/Park.svelte"
-	import jQuery from "jquery"
+	import jquery from "jquery"
 	import Router from 'svelte-spa-router'
 
 	import Main from './component/routes/Main.svelte'
@@ -52,55 +52,55 @@
 	else{
 		$season = "Winter"
 	}
-    jQuery.get('/assets/ascii/fish_1.txt', function(data) {
+    jquery.get('/assets/ascii/fish_1.txt', function(data) {
         $fish_01 = data;
     });
 	
-    jQuery.get('/assets/ascii/fish_2.txt', function(data) {
+    jquery.get('/assets/ascii/fish_2.txt', function(data) {
         $fish_02 = data;
     });
 	
-    jQuery.get('/assets/ascii/fish_3.txt', function(data) {
+    jquery.get('/assets/ascii/fish_3.txt', function(data) {
         $fish_03 = data;
     });
 	
-    jQuery.get('/assets/ascii/fish_4.txt', function(data) {
+    jquery.get('/assets/ascii/fish_4.txt', function(data) {
         $fish_04 = data;
     });
 
-    jQuery.get('/assets/ascii/fish_5.txt', function(data) {
+    jquery.get('/assets/ascii/fish_5.txt', function(data) {
         $fish_05 = data;
     });
 	
-    jQuery.get('/assets/ascii/fish_6.txt', function(data) {
+    jquery.get('/assets/ascii/fish_6.txt', function(data) {
         $fish_06 = data;
     });
 	
-    jQuery.get('/assets/ascii/fish_7.txt', function(data) {
+    jquery.get('/assets/ascii/fish_7.txt', function(data) {
         $fish_07 = data;
     });
 	
-    jQuery.get('/assets/ascii/fish_8.txt', function(data) {
+    jquery.get('/assets/ascii/fish_8.txt', function(data) {
         $fish_08 = data;
     });
 
-    jQuery.get('/assets/ascii/fish_9.txt', function(data) {
+    jquery.get('/assets/ascii/fish_9.txt', function(data) {
         $fish_09 = data;
     });
 	
-    jQuery.get('/assets/ascii/fish_10.txt', function(data) {
+    jquery.get('/assets/ascii/fish_10.txt', function(data) {
         $fish_10 = data;
     });
 	
-    jQuery.get('/assets/ascii/fish_11.txt', function(data) {
+    jquery.get('/assets/ascii/fish_11.txt', function(data) {
         $fish_11 = data;
     });
 	
-    jQuery.get('/assets/ascii/fish_12.txt', function(data) {
+    jquery.get('/assets/ascii/fish_12.txt', function(data) {
         $fish_12 = data;
     });
 
-    jQuery.get('/assets/ascii/bench.txt', function(data) {
+    jquery.get('/assets/ascii/bench.txt', function(data) {
         $bench = data;
     });
 

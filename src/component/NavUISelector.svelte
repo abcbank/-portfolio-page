@@ -6,7 +6,7 @@
 	import DropdownMenu from './Dropdown/DropdownMenu.svelte';
 	import IconButton from './Dropdown/IconButton.svelte';
     import MenuItem from './Dropdown/MenuItem.svelte'
-    import jQuery from 'jquery'
+    import jquery from 'jquery'
     import { onMount } from 'svelte'
     import ToggleSwitch from './Switch/ToggleSwitch.svelte'
 
@@ -38,26 +38,26 @@
         <MenuItem on:click={() => {
             SetUIStatus("Spring")
             $season = "Spring"
-            jQuery(".full-landing-image").ripples('pause');
-            jQuery(".full-landing-image").ripples('hide');
+            jquery(".full-landing-image").ripples('pause');
+            jquery(".full-landing-image").ripples('hide');
         }} leftIcon={mdiSprout} rightIcon={UIStatus["Spring"]}>Spring</MenuItem>
         <MenuItem on:click={() => {
             SetUIStatus("Summer")
             $season = "Summer"
-            jQuery(".full-landing-image").ripples('play');
-            jQuery(".full-landing-image").ripples('show');
+            jquery(".full-landing-image").ripples('play');
+            jquery(".full-landing-image").ripples('show');
         }} leftIcon={mdiWaves} rightIcon={UIStatus["Summer"]}>Summer</MenuItem>
         <MenuItem on:click={() => {
             SetUIStatus("Fall")
             $season = "Fall"
-            jQuery(".full-landing-image").ripples('pause');
-            jQuery(".full-landing-image").ripples('hide');
+            jquery(".full-landing-image").ripples('pause');
+            jquery(".full-landing-image").ripples('hide');
         }}   leftIcon={mdiLeafMaple} rightIcon={UIStatus["Fall"]}>Fall</MenuItem>
         <MenuItem on:click={() => {
             SetUIStatus("Winter")
             $season = "Winter"
-            jQuery(".full-landing-image").ripples('pause');
-            jQuery(".full-landing-image").ripples('hide');
+            jquery(".full-landing-image").ripples('pause');
+            jquery(".full-landing-image").ripples('hide');
         }} leftIcon={mdiSnowflake} rightIcon={UIStatus["Winter"]}>Winter</MenuItem>
     </DropdownMenu>
 </NavItem>

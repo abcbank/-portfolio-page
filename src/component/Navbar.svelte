@@ -1,5 +1,5 @@
 <script>
-  import jQuery from 'jquery'
+  import jquery from 'jquery'
 	import { season } from "../global"
   import {
     Collapse,

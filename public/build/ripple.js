@@ -1,5 +1,5 @@
 /*!
- * jQuery Ripples plugin v0.5.3 / https://github.com/sirxemic/jquery.ripples
+ * jquery Ripples plugin v0.5.3 / https://github.com/sirxemic/jquery.ripples
  * MIT License
  * @author sirxemic / https://sirxemic.com/
  */
@@ -15,14 +15,14 @@
 	}
 	else {
 		// Browser globals
-		factory(jQuery);
+		factory(jquery);
 	}
 }(function($) {
 
 	'use strict';
 
 	var gl;
-	var $window = $(window); // There is only one window, so why not cache the jQuery-wrapped window?
+	var $window = $(window); // There is only one window, so why not cache the jquery-wrapped window?
 
 	function isPercentage(str) {
 		return str[str.length - 1] == '%';

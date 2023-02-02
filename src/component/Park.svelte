@@ -1,5 +1,4 @@
 <script>
-    import jQuery from 'jquery'
     import { onMount } from 'svelte'
 	import Tree from "./Tree.svelte"
     import { bench } from "../asciiArts"
