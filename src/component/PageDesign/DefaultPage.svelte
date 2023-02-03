@@ -64,7 +64,8 @@
 
     // Helper functions
     function getPositionX(event) {
-		console.log(event);
+		console.log(event.touches[0]);
+		console.log(event.touches[0].clientX);
       return event.type.includes('mouse')
         ? event.pageX
         : event.touches[0].clientX;
