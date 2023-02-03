@@ -46,11 +46,14 @@
 	function handleMouseUp({clientX, clientY}){
 		if(!$Device["isMobile"]){
 			if(isMouseDown){
-				if(mouseDownLocation[0] - clientX > 0){
-					next();
-				}
-				else{
-					prev();
+				let distance = Math.abs(mouseDownLocation[0] - clientX);
+				if(distance > document.body.clientWidth / 10){
+					if(mouseDownLocation[0] - clientX > 0){
+						next();
+					}
+					else{
+						prev();
+					}
 				}
 				isMouseDown = false;
 			}
@@ -65,11 +68,14 @@
 	function handleTouchEnd({clientX, clientY}){
 		if($Device["isMobile"]){
 			if(isMouseDown){
-				if(mouseDownLocation[0] - clientX > 0){
-					next();
-				}
-				else{
-					prev();
+				let distance = Math.abs(mouseDownLocation[0] - clientX);
+				if(distance > document.body.clientWidth / 10){
+					if(mouseDownLocation[0] - clientX > 0){
+						next();
+					}
+					else{
+						prev();
+					}
 				}
 				isMouseDown = false;
 			}

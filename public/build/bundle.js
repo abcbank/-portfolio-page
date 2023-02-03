@@ -16606,19 +16606,19 @@ var app = (function (jquery) {
 
     function get_each_context(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[17] = list[i];
-    	child_ctx[19] = i;
+    	child_ctx[20] = list[i];
+    	child_ctx[22] = i;
     	return child_ctx;
     }
 
     function get_each_context_1(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[17] = list[i];
-    	child_ctx[21] = i;
+    	child_ctx[20] = list[i];
+    	child_ctx[24] = i;
     	return child_ctx;
     }
 
-    // (88:12) {#if id === cur}
+    // (119:12) {#if id === cur}
     function create_if_block$1(ctx) {
     	let div;
     	let switch_instance;
@@ -16626,11 +16626,11 @@ var app = (function (jquery) {
     	let div_intro;
     	let div_outro;
     	let current;
-    	var switch_value = /*slide*/ ctx[17].childComponent;
+    	var switch_value = /*slide*/ ctx[20].childComponent;
 
     	function switch_props(ctx) {
     		return {
-    			props: { color: /*slide*/ ctx[17].color },
+    			props: { color: /*slide*/ ctx[20].color },
     			$$inline: true
     		};
     	}
@@ -16644,9 +16644,9 @@ var app = (function (jquery) {
     			div = element("div");
     			if (switch_instance) create_component(switch_instance.$$.fragment);
     			t_1 = space();
-    			set_style(div, "background", /*slide*/ ctx[17].bg);
+    			set_style(div, "background", /*slide*/ ctx[20].bg);
     			attr_dev(div, "class", "slide svelte-1s4xugr");
-    			add_location(div, file$K, 88, 12, 2626);
+    			add_location(div, file$K, 119, 12, 3484);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -16657,9 +16657,9 @@ var app = (function (jquery) {
     		p: function update(new_ctx, dirty) {
     			ctx = new_ctx;
     			const switch_instance_changes = {};
-    			if (dirty & /*slides*/ 1) switch_instance_changes.color = /*slide*/ ctx[17].color;
+    			if (dirty & /*slides*/ 1) switch_instance_changes.color = /*slide*/ ctx[20].color;
 
-    			if (switch_value !== (switch_value = /*slide*/ ctx[17].childComponent)) {
+    			if (switch_value !== (switch_value = /*slide*/ ctx[20].childComponent)) {
     				if (switch_instance) {
     					group_outros();
     					const old_component = switch_instance;
@@ -16684,7 +16684,7 @@ var app = (function (jquery) {
     			}
 
     			if (!current || dirty & /*slides*/ 1) {
-    				set_style(div, "background", /*slide*/ ctx[17].bg);
+    				set_style(div, "background", /*slide*/ ctx[20].bg);
     			}
     		},
     		i: function intro(local) {
@@ -16716,18 +16716,18 @@ var app = (function (jquery) {
     		block,
     		id: create_if_block$1.name,
     		type: "if",
-    		source: "(88:12) {#if id === cur}",
+    		source: "(119:12) {#if id === cur}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (87:8) {#each slides as slide, id}
+    // (118:8) {#each slides as slide, id}
     function create_each_block_1(ctx) {
     	let if_block_anchor;
     	let current;
-    	let if_block = /*id*/ ctx[21] === /*cur*/ ctx[2] && create_if_block$1(ctx);
+    	let if_block = /*id*/ ctx[24] === /*cur*/ ctx[2] && create_if_block$1(ctx);
 
     	const block = {
     		c: function create() {
@@ -16740,7 +16740,7 @@ var app = (function (jquery) {
     			current = true;
     		},
     		p: function update(ctx, dirty) {
-    			if (/*id*/ ctx[21] === /*cur*/ ctx[2]) {
+    			if (/*id*/ ctx[24] === /*cur*/ ctx[2]) {
     				if (if_block) {
     					if_block.p(ctx, dirty);
 
@@ -16782,23 +16782,23 @@ var app = (function (jquery) {
     		block,
     		id: create_each_block_1.name,
     		type: "each",
-    		source: "(87:8) {#each slides as slide, id}",
+    		source: "(118:8) {#each slides as slide, id}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (102:12) {#each slides as slide, i}
+    // (133:12) {#each slides as slide, i}
     function create_each_block(ctx) {
     	let button;
-    	let t_1_value = /*i*/ ctx[19] + 1 + "";
+    	let t_1_value = /*i*/ ctx[22] + 1 + "";
     	let t_1;
     	let mounted;
     	let dispose;
 
     	function click_handler() {
-    		return /*click_handler*/ ctx[9](/*i*/ ctx[19]);
+    		return /*click_handler*/ ctx[11](/*i*/ ctx[22]);
     	}
 
     	const block = {
@@ -16807,13 +16807,13 @@ var app = (function (jquery) {
     			t_1 = text(t_1_value);
     			attr_dev(button, "class", "dot svelte-1s4xugr");
 
-    			set_style(button, "background", /*cur*/ ctx[2] == /*i*/ ctx[19]
-    			? /*slide*/ ctx[17].buttonSelectedColor
-    			: /*slide*/ ctx[17].buttonBackColor);
+    			set_style(button, "background", /*cur*/ ctx[2] == /*i*/ ctx[22]
+    			? /*slide*/ ctx[20].buttonSelectedColor
+    			: /*slide*/ ctx[20].buttonBackColor);
 
-    			set_style(button, "border", "1px solid " + /*slide*/ ctx[17].buttonBorderColor);
-    			toggle_class(button, "selected", /*cur*/ ctx[2] == /*i*/ ctx[19]);
-    			add_location(button, file$K, 102, 16, 3101);
+    			set_style(button, "border", "1px solid " + /*slide*/ ctx[20].buttonBorderColor);
+    			toggle_class(button, "selected", /*cur*/ ctx[2] == /*i*/ ctx[22]);
+    			add_location(button, file$K, 133, 16, 3959);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, button, anchor);
@@ -16828,17 +16828,17 @@ var app = (function (jquery) {
     			ctx = new_ctx;
 
     			if (dirty & /*cur, slides*/ 5) {
-    				set_style(button, "background", /*cur*/ ctx[2] == /*i*/ ctx[19]
-    				? /*slide*/ ctx[17].buttonSelectedColor
-    				: /*slide*/ ctx[17].buttonBackColor);
+    				set_style(button, "background", /*cur*/ ctx[2] == /*i*/ ctx[22]
+    				? /*slide*/ ctx[20].buttonSelectedColor
+    				: /*slide*/ ctx[20].buttonBackColor);
     			}
 
     			if (dirty & /*slides*/ 1) {
-    				set_style(button, "border", "1px solid " + /*slide*/ ctx[17].buttonBorderColor);
+    				set_style(button, "border", "1px solid " + /*slide*/ ctx[20].buttonBorderColor);
     			}
 
     			if (dirty & /*cur*/ 4) {
-    				toggle_class(button, "selected", /*cur*/ ctx[2] == /*i*/ ctx[19]);
+    				toggle_class(button, "selected", /*cur*/ ctx[2] == /*i*/ ctx[22]);
     			}
     		},
     		d: function destroy(detaching) {
@@ -16852,7 +16852,7 @@ var app = (function (jquery) {
     		block,
     		id: create_each_block.name,
     		type: "each",
-    		source: "(102:12) {#each slides as slide, i}",
+    		source: "(133:12) {#each slides as slide, i}",
     		ctx
     	});
 
@@ -16906,14 +16906,14 @@ var app = (function (jquery) {
     			}
 
     			attr_dev(div0, "class", "inner-wrapper svelte-1s4xugr");
-    			add_location(div0, file$K, 85, 4, 2494);
+    			add_location(div0, file$K, 116, 4, 3352);
     			attr_dev(div1, "class", "dots svelte-1s4xugr");
-    			add_location(div1, file$K, 100, 8, 3025);
+    			add_location(div1, file$K, 131, 8, 3883);
     			attr_dev(div2, "class", "footer svelte-1s4xugr");
-    			add_location(div2, file$K, 99, 4, 2995);
+    			add_location(div2, file$K, 130, 4, 3853);
     			attr_dev(div3, "class", "Page svelte-1s4xugr");
     			set_style(div3, "background", /*background*/ ctx[1][/*$season*/ ctx[3]]);
-    			add_location(div3, file$K, 84, 0, 2424);
+    			add_location(div3, file$K, 115, 0, 3282);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -16938,9 +16938,13 @@ var app = (function (jquery) {
 
     			if (!mounted) {
     				dispose = [
+    					listen_dev(window, "touchstart", /*handleTouchStart*/ ctx[8], false, false, false),
+    					listen_dev(window, "touchend", /*handleTouchEnd*/ ctx[9], false, false, false),
+    					listen_dev(window, "touchcancel", /*handleTouchEnd*/ ctx[9], false, false, false),
     					listen_dev(window, "mousedown", /*handleMouseDown*/ ctx[6], false, false, false),
     					listen_dev(window, "mouseup", /*handleMouseUp*/ ctx[7], false, false, false),
-    					listen_dev(div0, "mousewheel", /*onWheel*/ ctx[8], false, false, false)
+    					listen_dev(window, "mouseleave", /*handleMouseUp*/ ctx[7], false, false, false),
+    					listen_dev(div0, "mousewheel", /*onWheel*/ ctx[10], false, false, false)
     				];
 
     				mounted = true;
@@ -17042,7 +17046,10 @@ var app = (function (jquery) {
     }
 
     function instance$K($$self, $$props, $$invalidate) {
+    	let $Device;
     	let $season;
+    	validate_store(Device, 'Device');
+    	component_subscribe($$self, Device, $$value => $$invalidate(16, $Device = $$value));
     	validate_store(season, 'season');
     	component_subscribe($$self, season, $$value => $$invalidate(3, $season = $$value));
     	let { $$slots: slots = {}, $$scope } = $$props;
@@ -17106,19 +17113,52 @@ var app = (function (jquery) {
     	}
 
     	function handleMouseDown({ clientX, clientY }) {
-    		mouseDownLocation = [clientX, clientY];
-    		isMouseDown = true;
+    		if (!$Device["isMobile"]) {
+    			mouseDownLocation = [clientX, clientY];
+    			isMouseDown = true;
+    		}
     	}
 
     	function handleMouseUp({ clientX, clientY }) {
-    		if (isMouseDown) {
-    			if (mouseDownLocation[0] - clientX > 0) {
-    				next();
-    			} else {
-    				prev();
-    			}
+    		if (!$Device["isMobile"]) {
+    			if (isMouseDown) {
+    				let distance = Math.abs(mouseDownLocation[0] - clientX);
 
-    			isMouseDown = false;
+    				if (distance > document.body.clientWidth / 10) {
+    					if (mouseDownLocation[0] - clientX > 0) {
+    						next();
+    					} else {
+    						prev();
+    					}
+    				}
+
+    				isMouseDown = false;
+    			}
+    		}
+    	}
+
+    	function handleTouchStart({ clientX, clientY }) {
+    		if ($Device["isMobile"]) {
+    			mouseDownLocation = [clientX, clientY];
+    			isMouseDown = true;
+    		}
+    	}
+
+    	function handleTouchEnd({ clientX, clientY }) {
+    		if ($Device["isMobile"]) {
+    			if (isMouseDown) {
+    				let distance = Math.abs(mouseDownLocation[0] - clientX);
+
+    				if (distance > document.body.clientWidth / 10) {
+    					if (mouseDownLocation[0] - clientX > 0) {
+    						next();
+    					} else {
+    						prev();
+    					}
+    				}
+
+    				isMouseDown = false;
+    			}
     		}
     	}
 
@@ -17169,6 +17209,7 @@ var app = (function (jquery) {
     	$$self.$capture_state = () => ({
     		DefaultSlide,
     		hslide,
+    		Device,
     		season,
     		onMount,
     		background,
@@ -17185,7 +17226,10 @@ var app = (function (jquery) {
     		next,
     		handleMouseDown,
     		handleMouseUp,
+    		handleTouchStart,
+    		handleTouchEnd,
     		onWheel,
+    		$Device,
     		$season
     	});
 
@@ -17213,6 +17257,8 @@ var app = (function (jquery) {
     		transition_args,
     		handleMouseDown,
     		handleMouseUp,
+    		handleTouchStart,
+    		handleTouchEnd,
     		onWheel,
     		click_handler
     	];
