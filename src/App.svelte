@@ -120,6 +120,7 @@
 				break;
 			}
 		}
+		console.log($Device["isMobile"])
 		$ContextVisible = true;
 		background['Spring'] = "linear-gradient(to bottom, #089acf 0%, #a1c4fd 60%,#c2e9fb 90%,#8A3B12 100%)";
 		background['Summer'] = "linear-gradient(-45deg, #089acf, #0bcea0)";
