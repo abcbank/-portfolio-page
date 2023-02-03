@@ -12,7 +12,9 @@
 
     let SwitchStatus = $ContextVisible;
     let width = 0;
+    
     export let top = 0;
+    let isOpen = false;
 
     let UIStatus = {}
     function SetUIStatus(UIType){
@@ -20,6 +22,9 @@
             UIStatus[key] = "";
         }
         UIStatus[UIType] = mdiCheckBold;
+        if( $Device["isMobile"] ){
+            isOpen = false;
+        }
     }
 
     onMount(()=>{
@@ -27,7 +32,7 @@
     })
 </script>
 <div class = "UISelector" style="top:{top}px;" in:fade={{ delay: 100 }}>
-<NavItem isMobile={ $Device["isMobile"] }>
+<NavItem bind:open={isOpen} isMobile={ $Device["isMobile"] }>
     <span slot="trigger">
         <IconButton path={mdiCodeBrackets }/>
     </span>

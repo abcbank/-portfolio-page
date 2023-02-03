@@ -1,8 +1,7 @@
 <script>
     import { empty } from "svelte/internal";
 
-
-    let open = false;
+    export let open = false;
     let open_pre = false;
     let t;
     let openTimerRunning = false;
