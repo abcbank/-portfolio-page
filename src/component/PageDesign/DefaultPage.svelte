@@ -40,6 +40,7 @@
 	function handleMouseDown({clientX, clientY}){
 		mouseDownLocation = [clientX, clientY];
 		isMouseDown = true;
+		console.log(mouseDownLocation)
 	}
 	function handleMouseUp({clientX, clientY}){
 		if(isMouseDown){
@@ -50,6 +51,7 @@
 				prev();
 			}
 			isMouseDown = false;
+			console.log([clientX, clientY])
 		}
 	}
 
