@@ -1,7 +1,7 @@
 <script>
     import DefaultSlide from './Slide/defaultSlide.svelte';
     import { hslide } from './hslide.js';
-	import { season } from "../../global"
+	import { Device, season } from "../../global"
     import { onMount } from "svelte";
     let background = [];
 
@@ -38,18 +38,41 @@
 	}
 	
 	function handleMouseDown({clientX, clientY}){
-		mouseDownLocation = [clientX, clientY];
-		isMouseDown = true;
+		if(!$Device["isMobile"]){
+			mouseDownLocation = [clientX, clientY];
+			isMouseDown = true;
+		}
 	}
 	function handleMouseUp({clientX, clientY}){
-		if(isMouseDown){
-			if(mouseDownLocation[0] - clientX > 0){
-				next();
+		if(!$Device["isMobile"]){
+			if(isMouseDown){
+				if(mouseDownLocation[0] - clientX > 0){
+					next();
+				}
+				else{
+					prev();
+				}
+				isMouseDown = false;
 			}
-			else{
-				prev();
+		}
+	}
+	function handleTouchStart({clientX, clientY}){
+		if($Device["isMobile"]){
+			mouseDownLocation = [clientX, clientY];
+			isMouseDown = true;
+		}
+	}
+	function handleTouchEnd({clientX, clientY}){
+		if($Device["isMobile"]){
+			if(isMouseDown){
+				if(mouseDownLocation[0] - clientX > 0){
+					next();
+				}
+				else{
+					prev();
+				}
+				isMouseDown = false;
 			}
-			isMouseDown = false;
 		}
 	}
 
@@ -80,7 +103,9 @@
     }
 </script>
 
-<svelte:window on:touchstart={handleMouseDown} on:touchend={handleMouseUp} on:touchcancel={handleMouseUp} on:mousedown={handleMouseDown} on:mouseup={handleMouseUp} on:mouseleave={handleMouseUp}/>
+<svelte:window 
+on:touchstart={handleTouchStart} on:touchend={handleTouchEnd} on:touchcancel={handleTouchEnd} 
+on:mousedown={handleMouseDown} on:mouseup={handleMouseUp} on:mouseleave={handleMouseUp}/>
 
 <div class = "Page" style="background:{ background[$season] };">
     <div class="inner-wrapper" on:mousewheel={onWheel}>
