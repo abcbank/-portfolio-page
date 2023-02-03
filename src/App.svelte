@@ -109,11 +109,11 @@
 	var mobile_keys = new Array('iphone','ipad','android','blackberry','windows phone',
             'windows ce','lg','mot','samsung','sonyericsson','nokia');
 
-	$Device["agent"] = navigator.userAgent.toLowerCase;
-	console.log($Device["agent"])
+	$Device["agent"] = navigator.userAgent.toLowerCase();
 
 	onMount(() => {		
 		$Device["isMobile"] = false;
+		console.log($Device["agent"])
 		
 		for(var i in mobile_keys){
 			if(navigator.userAgent.match(mobile_keys[i])){ 
