@@ -80,7 +80,7 @@
     }
 </script>
 
-<svelte:window on:mousedown={handleMouseDown} on:mouseup={handleMouseUp}/>
+<svelte:window on:touchstart={handleMouseDown} on:touchend={handleMouseUp} on:touchcancel={handleMouseUp} on:mousedown={handleMouseDown} on:mouseup={handleMouseUp} on:mouseleave={handleMouseUp}/>
 
 <div class = "Page" style="background:{ background[$season] };">
     <div class="inner-wrapper" on:mousewheel={onWheel}>
