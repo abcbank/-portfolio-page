@@ -110,7 +110,7 @@
             'windows ce','lg','mot','samsung','sonyericsson','nokia');
 
 	$Device["agent"] = navigator.userAgent.toLowerCase;
-	console.log($Device["isMobile"])
+	console.log($Device["agent"])
 
 	onMount(() => {		
 		$Device["isMobile"] = false;
