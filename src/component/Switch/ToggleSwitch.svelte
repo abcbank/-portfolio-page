@@ -69,7 +69,7 @@
 
 <style>
 			:root {
-		--accent-color: CornflowerBlue;
+		--accent-color: rgb(57, 3, 128);
 		--gray: #ccc;
 	}
     /* Inner Design Option */

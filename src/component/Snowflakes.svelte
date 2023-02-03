@@ -1,5 +1,5 @@
 <script>
-  	import { season } from "../global"
+  	import { Device, season } from "../global"
     import { onMount } from 'svelte'
   
     // a bunch of variables defining the snow and how it falls
@@ -23,6 +23,7 @@
     let timer;
         
     function handleMouseMove({clientX, clientY}){
+      if(!$Device["isMobile"]){
         clearTimeout(timer)
         timer = setTimeout(() => {
           dx = 0;
@@ -33,6 +34,7 @@
         dy = my - clientY;
         mx = clientX
         my = clientY
+      }
     }
 
     function getPower(a, b, time){

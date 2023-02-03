@@ -16,3 +16,8 @@ export const Device = writable({}, () => {
     return () => {
     }
 });
+export const LastPage = writable({}, () => {
+  
+    return () => {
+    }
+});

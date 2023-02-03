@@ -1,8 +1,9 @@
 <script>
     import DefaultSlide from './Slide/defaultSlide.svelte';
     import { hslide } from './hslide.js';
-	import { Device, season } from "../../global"
+	import { LastPage, season } from "../../global"
     import { onMount } from "svelte";
+    import { mdiRayEndArrow } from '@mdi/js';
     let background = [];
 
 	// State
@@ -17,9 +18,8 @@
 		{ childComponent:DefaultSlide, bg: 'transparent', color: '#fff', buttonBackColor: "#000", buttonBorderColor: "#fff", buttonSelectedColor: "#000"},
 		{ childComponent:DefaultSlide, bg: 'transparent', color: '#fff', buttonBackColor: "#000", buttonBorderColor: "#fff", buttonSelectedColor: "#000"},
 	]
-    console.log(slides[0].buttonBackColor)
-
-	let cur = 0;
+	
+	let cur = $LastPage["WindowResized"] == true ? $LastPage["Index"] : 0;
     let t;
     let enbleToMove = true;
     let drawComponent = true;
@@ -27,6 +27,8 @@
 	let isDragging = false;
 	let mouseDownLocation = 0;
 	let mouseLocation = 0;
+	
+	$LastPage["WindowResized"] = false;
 
 	const transition_args = {
 		duration: 200,
@@ -34,20 +36,23 @@
 	
 	function prev(e) {
 		cur = --cur >= 0 ? cur : slides.length - 1;
+		$LastPage["Index"] = cur;
+		
 	}
 	
 	function next(e) {
 		cur = ++cur % slides.length
+		$LastPage["Index"] = cur;
 	}
 	
     function touchStart(e) {
-        mouseDownLocation = getPositionX(e);
+        mouseLocation = mouseDownLocation = getPositionX(e);
+		
         isDragging = true;
     }
 
     function touchMove(e) {
 		if(isDragging){
-			console.log(e);
 			mouseLocation = getPositionX(e);
 		}
     }

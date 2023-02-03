@@ -10,4 +10,8 @@
 </DefaultSlide>
 
 <style>
+    .context{
+        overflow: hidden; 
+        white-space: nowrap;
+    }
 </style>

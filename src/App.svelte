@@ -1,7 +1,7 @@
 
 <script>
     import { onMount } from "svelte";
-	import { Device, ContextVisible, season } from "./global"
+	import { LastPage, Device, ContextVisible, season } from "./global"
 	import { bench, fish_01, fish_02, fish_03, fish_04, fish_05, fish_06, fish_07, fish_08, fish_09, fish_10, fish_11, fish_12 } from "./asciiArts"
     import Navbar from "./component/Navbar.svelte";
 	import Snowflakes from "./component/Snowflakes.svelte";
@@ -113,6 +113,8 @@
 
 	onMount(() => {		
 		$Device["isMobile"] = false;
+		$LastPage["WindowResized"] = false;
+		$LastPage["Index"] = 0;
 		
 		for(var i in mobile_keys){
 			if($Device["agent"].match(mobile_keys[i])){ 
@@ -129,10 +131,11 @@
 
     function windowResize(){
         drawComponent = false;
+		$LastPage["WindowResized"] = true;
         clearTimeout(t)
         t = setTimeout(() => {
             drawComponent = true;
-        }, 50)
+        }, 300)
     }
 </script>
 
@@ -151,7 +154,7 @@
 		{:else}
 			<Snowflakes />
 		{/if}
-		{#if $ContextVisible}
+		{#if $ContextVisible && drawComponent}
 		<div id="details" style="top:{NavbarComponent}px; height:{document.body.clientHeight - NavbarComponent}px;">
 			<Router {routes} />
 		</div>

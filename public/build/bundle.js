@@ -1174,6 +1174,11 @@ var app = (function (jquery) {
         return () => {
         }
     });
+    const LastPage = writable({}, () => {
+      
+        return () => {
+        }
+    });
 
     /* 쓰기 전용 */
     const bench = writable("", () => {
@@ -9257,6 +9262,7 @@ var app = (function (jquery) {
     var mdiCheckBold = "M9,20.42L2.79,14.21L5.62,11.38L9,14.77L18.88,4.88L21.71,7.71L9,20.42Z";
     var mdiCodeBrackets = "M15,4V6H18V18H15V20H20V4M4,4V20H9V18H6V6H9V4H4Z";
     var mdiLeafMaple = "M21.79,13L16,16L17,18L13,17.25V21H11V17.25L7,18L8,16L2.21,13L3.21,11.27L1.61,8L5.21,7.77L6.21,6L9.63,9.9L8,5H10L12,2L14,5H16L14.37,9.9L17.79,6L18.79,7.73L22.39,7.96L20.79,11.19L21.79,13Z";
+    var mdiRayEndArrow = "M1,12L5,16V13H17.17C17.58,14.17 18.69,15 20,15A3,3 0 0,0 23,12A3,3 0 0,0 20,9C18.69,9 17.58,9.83 17.17,11H5V8L1,12Z";
     var mdiSnowflake = "M20.79,13.95L18.46,14.57L16.46,13.44V10.56L18.46,9.43L20.79,10.05L21.31,8.12L19.54,7.65L20,5.88L18.07,5.36L17.45,7.69L15.45,8.82L13,7.38V5.12L14.71,3.41L13.29,2L12,3.29L10.71,2L9.29,3.41L11,5.12V7.38L8.5,8.82L6.5,7.69L5.92,5.36L4,5.88L4.47,7.65L2.7,8.12L3.22,10.05L5.55,9.43L7.55,10.56V13.45L5.55,14.58L3.22,13.96L2.7,15.89L4.47,16.36L4,18.12L5.93,18.64L6.55,16.31L8.55,15.18L11,16.62V18.88L9.29,20.59L10.71,22L12,20.71L13.29,22L14.7,20.59L13,18.88V16.62L15.5,15.17L17.5,16.3L18.12,18.63L20,18.12L19.53,16.35L21.3,15.88L20.79,13.95M9.5,10.56L12,9.11L14.5,10.56V13.44L12,14.89L9.5,13.44V10.56Z";
     var mdiSprout = "M2,22V20C2,20 7,18 12,18C17,18 22,20 22,20V22H2M11.3,9.1C10.1,5.2 4,6.1 4,6.1C4,6.1 4.2,13.9 9.9,12.7C9.5,9.8 8,9 8,9C10.8,9 11,12.4 11,12.4V17C11.3,17 11.7,17 12,17C12.3,17 12.7,17 13,17V12.8C13,12.8 13,8.9 16,7.9C16,7.9 14,10.9 14,12.9C21,13.6 21,4 21,4C21,4 12.1,3 11.3,9.1Z";
     var mdiWaves = "M20,12H22V14H20C18.62,14 17.26,13.65 16,13C13.5,14.3 10.5,14.3 8,13C6.74,13.65 5.37,14 4,14H2V12H4C5.39,12 6.78,11.53 8,10.67C10.44,12.38 13.56,12.38 16,10.67C17.22,11.53 18.61,12 20,12M20,6H22V8H20C18.62,8 17.26,7.65 16,7C13.5,8.3 10.5,8.3 8,7C6.74,7.65 5.37,8 4,8H2V6H4C5.39,6 6.78,5.53 8,4.67C10.44,6.38 13.56,6.38 16,4.67C17.22,5.53 18.61,6 20,6M20,18H22V20H20C18.62,20 17.26,19.65 16,19C13.5,20.3 10.5,20.3 8,19C6.74,19.65 5.37,20 4,20H2V18H4C5.39,18 6.78,17.53 8,16.67C10.44,18.38 13.56,18.38 16,16.67C17.22,17.53 18.61,18 20,18Z";
@@ -10334,12 +10340,12 @@ var app = (function (jquery) {
     			attr_dev(div0, "id", `label-${/*uniqueID*/ ctx[6]}`);
     			add_location(div0, file$U, 57, 4, 1567);
     			attr_dev(div1, "role", "radiogroup");
-    			attr_dev(div1, "class", "group-container svelte-ao2ii4");
+    			attr_dev(div1, "class", "group-container svelte-cukkt5");
     			attr_dev(div1, "aria-labelledby", `label-${/*uniqueID*/ ctx[6]}`);
     			set_style(div1, "font-size", /*fontSize*/ ctx[5] + "px");
     			attr_dev(div1, "id", `group-${/*uniqueID*/ ctx[6]}`);
     			add_location(div1, file$U, 52, 4, 1395);
-    			attr_dev(div2, "class", "s s--multi svelte-ao2ii4");
+    			attr_dev(div2, "class", "s s--multi svelte-cukkt5");
     			add_location(div2, file$U, 51, 0, 1365);
     		},
     		m: function mount(target, anchor) {
@@ -10423,9 +10429,9 @@ var app = (function (jquery) {
     			attr_dev(button, "role", "switch");
     			attr_dev(button, "aria-checked", /*checked*/ ctx[1]);
     			attr_dev(button, "aria-labelledby", `switch-${/*uniqueID*/ ctx[6]}`);
-    			attr_dev(button, "class", "svelte-ao2ii4");
+    			attr_dev(button, "class", "svelte-cukkt5");
     			add_location(button, file$U, 43, 4, 1188);
-    			attr_dev(div, "class", "s s--slider svelte-ao2ii4");
+    			attr_dev(div, "class", "s s--slider svelte-cukkt5");
     			set_style(div, "font-size", /*fontSize*/ ctx[5] + "px");
     			add_location(div, file$U, 41, 0, 1074);
     		},
@@ -10496,18 +10502,18 @@ var app = (function (jquery) {
     			span2 = element("span");
     			span2.textContent = "off";
     			attr_dev(span0, "id", `switch-${/*uniqueID*/ ctx[6]}`);
-    			attr_dev(span0, "class", "svelte-ao2ii4");
+    			attr_dev(span0, "class", "svelte-cukkt5");
     			add_location(span0, file$U, 30, 4, 764);
-    			attr_dev(span1, "class", "svelte-ao2ii4");
+    			attr_dev(span1, "class", "svelte-cukkt5");
     			add_location(span1, file$U, 36, 12, 973);
-    			attr_dev(span2, "class", "svelte-ao2ii4");
+    			attr_dev(span2, "class", "svelte-cukkt5");
     			add_location(span2, file$U, 37, 12, 1002);
     			attr_dev(button, "role", "switch");
     			attr_dev(button, "aria-checked", /*checked*/ ctx[1]);
     			attr_dev(button, "aria-labelledby", `switch-${/*uniqueID*/ ctx[6]}`);
-    			attr_dev(button, "class", "svelte-ao2ii4");
+    			attr_dev(button, "class", "svelte-cukkt5");
     			add_location(button, file$U, 31, 4, 816);
-    			attr_dev(div, "class", "s s--inner svelte-ao2ii4");
+    			attr_dev(div, "class", "s s--inner svelte-cukkt5");
     			add_location(div, file$U, 29, 0, 734);
     		},
     		m: function mount(target, anchor) {
@@ -10575,11 +10581,11 @@ var app = (function (jquery) {
     			attr_dev(input, "id", input_id_value = `${/*option*/ ctx[12]}-${/*uniqueID*/ ctx[6]}`);
     			input.__value = input_value_value = /*option*/ ctx[12];
     			input.value = input.__value;
-    			attr_dev(input, "class", "svelte-ao2ii4");
+    			attr_dev(input, "class", "svelte-cukkt5");
     			/*$$binding_groups*/ ctx[10][0].push(input);
     			add_location(input, file$U, 59, 12, 1674);
     			attr_dev(label_1, "for", label_1_for_value = `${/*option*/ ctx[12]}-${/*uniqueID*/ ctx[6]}`);
-    			attr_dev(label_1, "class", "svelte-ao2ii4");
+    			attr_dev(label_1, "class", "svelte-cukkt5");
     			add_location(label_1, file$U, 60, 12, 1771);
     		},
     		m: function mount(target, anchor) {
@@ -14221,14 +14227,14 @@ var app = (function (jquery) {
 
     function get_each_context$3(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[11] = list[i];
+    	child_ctx[12] = list[i];
     	return child_ctx;
     }
 
-    // (149:4) {#each snowflakes as flake}
+    // (151:4) {#each snowflakes as flake}
     function create_each_block$3(ctx) {
     	let div;
-    	let t0_value = /*flake*/ ctx[11].snowIcon + "";
+    	let t0_value = /*flake*/ ctx[12].snowIcon + "";
     	let t0;
     	let t1;
     	let div_style_value;
@@ -14239,8 +14245,8 @@ var app = (function (jquery) {
     			t0 = text(t0_value);
     			t1 = space();
     			attr_dev(div, "class", "snowflake svelte-1d2e7rn");
-    			attr_dev(div, "style", div_style_value = `opacity: ${/*flake*/ ctx[11].opacity}; transform: scale(${/*flake*/ ctx[11].scale}) rotate(${/*flake*/ ctx[11].rotation}deg); left: ${/*flake*/ ctx[11].x}%; top: calc(${/*flake*/ ctx[11].y}% - ${/*flake*/ ctx[11].scale}rem)`);
-    			add_location(div, file$R, 149, 6, 5243);
+    			attr_dev(div, "style", div_style_value = `opacity: ${/*flake*/ ctx[12].opacity}; transform: scale(${/*flake*/ ctx[12].scale}) rotate(${/*flake*/ ctx[12].rotation}deg); left: ${/*flake*/ ctx[12].x}%; top: calc(${/*flake*/ ctx[12].y}% - ${/*flake*/ ctx[12].scale}rem)`);
+    			add_location(div, file$R, 151, 6, 5293);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -14248,9 +14254,9 @@ var app = (function (jquery) {
     			append_dev(div, t1);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*snowflakes*/ 1 && t0_value !== (t0_value = /*flake*/ ctx[11].snowIcon + "")) set_data_dev(t0, t0_value);
+    			if (dirty & /*snowflakes*/ 1 && t0_value !== (t0_value = /*flake*/ ctx[12].snowIcon + "")) set_data_dev(t0, t0_value);
 
-    			if (dirty & /*snowflakes*/ 1 && div_style_value !== (div_style_value = `opacity: ${/*flake*/ ctx[11].opacity}; transform: scale(${/*flake*/ ctx[11].scale}) rotate(${/*flake*/ ctx[11].rotation}deg); left: ${/*flake*/ ctx[11].x}%; top: calc(${/*flake*/ ctx[11].y}% - ${/*flake*/ ctx[11].scale}rem)`)) {
+    			if (dirty & /*snowflakes*/ 1 && div_style_value !== (div_style_value = `opacity: ${/*flake*/ ctx[12].opacity}; transform: scale(${/*flake*/ ctx[12].scale}) rotate(${/*flake*/ ctx[12].rotation}deg); left: ${/*flake*/ ctx[12].x}%; top: calc(${/*flake*/ ctx[12].y}% - ${/*flake*/ ctx[12].scale}rem)`)) {
     				attr_dev(div, "style", div_style_value);
     			}
     		},
@@ -14263,7 +14269,7 @@ var app = (function (jquery) {
     		block,
     		id: create_each_block$3.name,
     		type: "each",
-    		source: "(149:4) {#each snowflakes as flake}",
+    		source: "(151:4) {#each snowflakes as flake}",
     		ctx
     	});
 
@@ -14292,7 +14298,7 @@ var app = (function (jquery) {
 
     			attr_dev(div, "class", "snowframe");
     			attr_dev(div, "aria-hidden", "true");
-    			add_location(div, file$R, 147, 0, 5160);
+    			add_location(div, file$R, 149, 0, 5210);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -14375,8 +14381,11 @@ var app = (function (jquery) {
 
     function instance$R($$self, $$props, $$invalidate) {
     	let $season;
+    	let $Device;
     	validate_store(season, 'season');
     	component_subscribe($$self, season, $$value => $$invalidate(7, $season = $$value));
+    	validate_store(Device, 'Device');
+    	component_subscribe($$self, Device, $$value => $$invalidate(8, $Device = $$value));
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('Snowflakes', slots, []);
     	const SNOW_ICONS = ['❆', '❅', '❄'];
@@ -14388,20 +14397,22 @@ var app = (function (jquery) {
     	let timer;
 
     	function handleMouseMove({ clientX, clientY }) {
-    		clearTimeout(timer);
+    		if (!$Device["isMobile"]) {
+    			clearTimeout(timer);
 
-    		timer = setTimeout(
-    			() => {
-    				dx = 0;
-    				dy = 0;
-    			},
-    			50
-    		);
+    			timer = setTimeout(
+    				() => {
+    					dx = 0;
+    					dy = 0;
+    				},
+    				50
+    			);
 
-    		dx = mx - clientX;
-    		dy = my - clientY;
-    		mx = clientX;
-    		my = clientY;
+    			dx = mx - clientX;
+    			dy = my - clientY;
+    			mx = clientX;
+    			my = clientY;
+    		}
     	}
 
     	// this function generates the random configuration with all necessary values
@@ -14496,6 +14507,7 @@ var app = (function (jquery) {
     	});
 
     	$$self.$capture_state = () => ({
+    		Device,
     		season,
     		onMount,
     		SNOWFLAKES_COUNT,
@@ -14518,7 +14530,8 @@ var app = (function (jquery) {
     		getDir: getDir$1,
     		randomSnowflakeConfig,
     		snowflakes,
-    		$season
+    		$season,
+    		$Device
     	});
 
     	$$self.$inject_state = $$props => {
@@ -16606,19 +16619,19 @@ var app = (function (jquery) {
 
     function get_each_context(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[25] = list[i];
-    	child_ctx[27] = i;
+    	child_ctx[20] = list[i];
+    	child_ctx[22] = i;
     	return child_ctx;
     }
 
     function get_each_context_1(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[25] = list[i];
-    	child_ctx[29] = i;
+    	child_ctx[20] = list[i];
+    	child_ctx[24] = i;
     	return child_ctx;
     }
 
-    // (115:12) {#if id === cur}
+    // (117:12) {#if id === cur}
     function create_if_block$1(ctx) {
     	let div;
     	let switch_instance;
@@ -16626,11 +16639,11 @@ var app = (function (jquery) {
     	let div_intro;
     	let div_outro;
     	let current;
-    	var switch_value = /*slide*/ ctx[25].childComponent;
+    	var switch_value = /*slide*/ ctx[20].childComponent;
 
     	function switch_props(ctx) {
     		return {
-    			props: { color: /*slide*/ ctx[25].color },
+    			props: { color: /*slide*/ ctx[20].color },
     			$$inline: true
     		};
     	}
@@ -16644,9 +16657,9 @@ var app = (function (jquery) {
     			div = element("div");
     			if (switch_instance) create_component(switch_instance.$$.fragment);
     			t_1 = space();
-    			set_style(div, "background", /*slide*/ ctx[25].bg);
+    			set_style(div, "background", /*slide*/ ctx[20].bg);
     			attr_dev(div, "class", "slide svelte-1s4xugr");
-    			add_location(div, file$K, 115, 12, 3281);
+    			add_location(div, file$K, 117, 12, 3336);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -16657,9 +16670,9 @@ var app = (function (jquery) {
     		p: function update(new_ctx, dirty) {
     			ctx = new_ctx;
     			const switch_instance_changes = {};
-    			if (dirty & /*slides*/ 1) switch_instance_changes.color = /*slide*/ ctx[25].color;
+    			if (dirty & /*slides*/ 1) switch_instance_changes.color = /*slide*/ ctx[20].color;
 
-    			if (switch_value !== (switch_value = /*slide*/ ctx[25].childComponent)) {
+    			if (switch_value !== (switch_value = /*slide*/ ctx[20].childComponent)) {
     				if (switch_instance) {
     					group_outros();
     					const old_component = switch_instance;
@@ -16684,7 +16697,7 @@ var app = (function (jquery) {
     			}
 
     			if (!current || dirty & /*slides*/ 1) {
-    				set_style(div, "background", /*slide*/ ctx[25].bg);
+    				set_style(div, "background", /*slide*/ ctx[20].bg);
     			}
     		},
     		i: function intro(local) {
@@ -16693,7 +16706,7 @@ var app = (function (jquery) {
 
     			add_render_callback(() => {
     				if (div_outro) div_outro.end(1);
-    				div_intro = create_in_transition(div, hslide, /*transition_args*/ ctx[6]);
+    				div_intro = create_in_transition(div, hslide, /*transition_args*/ ctx[5]);
     				div_intro.start();
     			});
 
@@ -16702,7 +16715,7 @@ var app = (function (jquery) {
     		o: function outro(local) {
     			if (switch_instance) transition_out(switch_instance.$$.fragment, local);
     			if (div_intro) div_intro.invalidate();
-    			div_outro = create_out_transition(div, hslide, /*transition_args*/ ctx[6]);
+    			div_outro = create_out_transition(div, hslide, /*transition_args*/ ctx[5]);
     			current = false;
     		},
     		d: function destroy(detaching) {
@@ -16716,18 +16729,18 @@ var app = (function (jquery) {
     		block,
     		id: create_if_block$1.name,
     		type: "if",
-    		source: "(115:12) {#if id === cur}",
+    		source: "(117:12) {#if id === cur}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (114:8) {#each slides as slide, id}
+    // (116:8) {#each slides as slide, id}
     function create_each_block_1(ctx) {
     	let if_block_anchor;
     	let current;
-    	let if_block = /*id*/ ctx[29] === /*cur*/ ctx[3] && create_if_block$1(ctx);
+    	let if_block = /*id*/ ctx[24] === /*cur*/ ctx[2] && create_if_block$1(ctx);
 
     	const block = {
     		c: function create() {
@@ -16740,11 +16753,11 @@ var app = (function (jquery) {
     			current = true;
     		},
     		p: function update(ctx, dirty) {
-    			if (/*id*/ ctx[29] === /*cur*/ ctx[3]) {
+    			if (/*id*/ ctx[24] === /*cur*/ ctx[2]) {
     				if (if_block) {
     					if_block.p(ctx, dirty);
 
-    					if (dirty & /*cur*/ 8) {
+    					if (dirty & /*cur*/ 4) {
     						transition_in(if_block, 1);
     					}
     				} else {
@@ -16782,23 +16795,23 @@ var app = (function (jquery) {
     		block,
     		id: create_each_block_1.name,
     		type: "each",
-    		source: "(114:8) {#each slides as slide, id}",
+    		source: "(116:8) {#each slides as slide, id}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (129:12) {#each slides as slide, i}
+    // (131:12) {#each slides as slide, i}
     function create_each_block(ctx) {
     	let button;
-    	let t_1_value = /*i*/ ctx[27] + 1 + "";
+    	let t_1_value = /*i*/ ctx[22] + 1 + "";
     	let t_1;
     	let mounted;
     	let dispose;
 
     	function click_handler() {
-    		return /*click_handler*/ ctx[11](/*i*/ ctx[27]);
+    		return /*click_handler*/ ctx[10](/*i*/ ctx[22]);
     	}
 
     	const block = {
@@ -16807,13 +16820,13 @@ var app = (function (jquery) {
     			t_1 = text(t_1_value);
     			attr_dev(button, "class", "dot svelte-1s4xugr");
 
-    			set_style(button, "background", /*cur*/ ctx[3] == /*i*/ ctx[27]
-    			? /*slide*/ ctx[25].buttonSelectedColor
-    			: /*slide*/ ctx[25].buttonBackColor);
+    			set_style(button, "background", /*cur*/ ctx[2] == /*i*/ ctx[22]
+    			? /*slide*/ ctx[20].buttonSelectedColor
+    			: /*slide*/ ctx[20].buttonBackColor);
 
-    			set_style(button, "border", "1px solid " + /*slide*/ ctx[25].buttonBorderColor);
-    			toggle_class(button, "selected", /*cur*/ ctx[3] == /*i*/ ctx[27]);
-    			add_location(button, file$K, 129, 16, 3756);
+    			set_style(button, "border", "1px solid " + /*slide*/ ctx[20].buttonBorderColor);
+    			toggle_class(button, "selected", /*cur*/ ctx[2] == /*i*/ ctx[22]);
+    			add_location(button, file$K, 131, 16, 3811);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, button, anchor);
@@ -16827,18 +16840,18 @@ var app = (function (jquery) {
     		p: function update(new_ctx, dirty) {
     			ctx = new_ctx;
 
-    			if (dirty & /*cur, slides*/ 9) {
-    				set_style(button, "background", /*cur*/ ctx[3] == /*i*/ ctx[27]
-    				? /*slide*/ ctx[25].buttonSelectedColor
-    				: /*slide*/ ctx[25].buttonBackColor);
+    			if (dirty & /*cur, slides*/ 5) {
+    				set_style(button, "background", /*cur*/ ctx[2] == /*i*/ ctx[22]
+    				? /*slide*/ ctx[20].buttonSelectedColor
+    				: /*slide*/ ctx[20].buttonBackColor);
     			}
 
     			if (dirty & /*slides*/ 1) {
-    				set_style(button, "border", "1px solid " + /*slide*/ ctx[25].buttonBorderColor);
+    				set_style(button, "border", "1px solid " + /*slide*/ ctx[20].buttonBorderColor);
     			}
 
-    			if (dirty & /*cur*/ 8) {
-    				toggle_class(button, "selected", /*cur*/ ctx[3] == /*i*/ ctx[27]);
+    			if (dirty & /*cur*/ 4) {
+    				toggle_class(button, "selected", /*cur*/ ctx[2] == /*i*/ ctx[22]);
     			}
     		},
     		d: function destroy(detaching) {
@@ -16852,7 +16865,7 @@ var app = (function (jquery) {
     		block,
     		id: create_each_block.name,
     		type: "each",
-    		source: "(129:12) {#each slides as slide, i}",
+    		source: "(131:12) {#each slides as slide, i}",
     		ctx
     	});
 
@@ -16906,14 +16919,14 @@ var app = (function (jquery) {
     			}
 
     			attr_dev(div0, "class", "inner-wrapper svelte-1s4xugr");
-    			add_location(div0, file$K, 112, 4, 3130);
+    			add_location(div0, file$K, 114, 4, 3204);
     			attr_dev(div1, "class", "dots svelte-1s4xugr");
-    			add_location(div1, file$K, 127, 8, 3680);
+    			add_location(div1, file$K, 129, 8, 3735);
     			attr_dev(div2, "class", "footer svelte-1s4xugr");
-    			add_location(div2, file$K, 126, 4, 3650);
+    			add_location(div2, file$K, 128, 4, 3705);
     			attr_dev(div3, "class", "Page svelte-1s4xugr");
-    			set_style(div3, "background", /*background*/ ctx[1][/*$season*/ ctx[4]]);
-    			add_location(div3, file$K, 111, 0, 3060);
+    			set_style(div3, "background", /*background*/ ctx[1][/*$season*/ ctx[3]]);
+    			add_location(div3, file$K, 113, 0, 3134);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -16926,7 +16939,6 @@ var app = (function (jquery) {
     				each_blocks_1[i].m(div0, null);
     			}
 
-    			/*div0_binding*/ ctx[10](div0);
     			append_dev(div3, t_1);
     			append_dev(div3, div2);
     			append_dev(div2, div1);
@@ -16939,13 +16951,13 @@ var app = (function (jquery) {
 
     			if (!mounted) {
     				dispose = [
-    					listen_dev(window, "touchstart", /*touchStart*/ ctx[7], false, false, false),
+    					listen_dev(window, "touchstart", /*touchStart*/ ctx[6], false, false, false),
     					listen_dev(window, "touchend", /*touchEnd*/ ctx[8], false, false, false),
-    					listen_dev(window, "touchmove", touchMove, false, false, false),
-    					listen_dev(window, "mousedown", /*touchStart*/ ctx[7], false, false, false),
+    					listen_dev(window, "touchmove", /*touchMove*/ ctx[7], false, false, false),
+    					listen_dev(window, "mousedown", /*touchStart*/ ctx[6], false, false, false),
     					listen_dev(window, "mouseup", /*touchEnd*/ ctx[8], false, false, false),
     					listen_dev(window, "mouseleave", /*touchEnd*/ ctx[8], false, false, false),
-    					listen_dev(window, "mousemove", touchMove, false, false, false),
+    					listen_dev(window, "mousemove", /*touchMove*/ ctx[7], false, false, false),
     					listen_dev(div0, "mousewheel", /*onWheel*/ ctx[9], false, false, false)
     				];
 
@@ -16953,7 +16965,7 @@ var app = (function (jquery) {
     			}
     		},
     		p: function update(ctx, [dirty]) {
-    			if (dirty & /*slides, transition_args, cur*/ 73) {
+    			if (dirty & /*slides, transition_args, cur*/ 37) {
     				each_value_1 = /*slides*/ ctx[0];
     				validate_each_argument(each_value_1);
     				let i;
@@ -16981,7 +16993,7 @@ var app = (function (jquery) {
     				check_outros();
     			}
 
-    			if (dirty & /*cur, slides, changeSlide*/ 41) {
+    			if (dirty & /*cur, slides, changeSlide*/ 21) {
     				each_value = /*slides*/ ctx[0];
     				validate_each_argument(each_value);
     				let i;
@@ -17005,8 +17017,8 @@ var app = (function (jquery) {
     				each_blocks.length = each_value.length;
     			}
 
-    			if (!current || dirty & /*background, $season*/ 18) {
-    				set_style(div3, "background", /*background*/ ctx[1][/*$season*/ ctx[4]]);
+    			if (!current || dirty & /*background, $season*/ 10) {
+    				set_style(div3, "background", /*background*/ ctx[1][/*$season*/ ctx[3]]);
     			}
     		},
     		i: function intro(local) {
@@ -17030,7 +17042,6 @@ var app = (function (jquery) {
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(div3);
     			destroy_each(each_blocks_1, detaching);
-    			/*div0_binding*/ ctx[10](null);
     			destroy_each(each_blocks, detaching);
     			mounted = false;
     			run_all(dispose);
@@ -17048,11 +17059,6 @@ var app = (function (jquery) {
     	return block;
     }
 
-    function touchMove(event) {
-    	
-    }
-
-    // Helper functions
     function getPositionX(event) {
     	return event.type.includes('mouse')
     	? event.pageX
@@ -17060,21 +17066,19 @@ var app = (function (jquery) {
     }
 
     function instance$K($$self, $$props, $$invalidate) {
+    	let $LastPage;
     	let $season;
+    	validate_store(LastPage, 'LastPage');
+    	component_subscribe($$self, LastPage, $$value => $$invalidate(16, $LastPage = $$value));
     	validate_store(season, 'season');
-    	component_subscribe($$self, season, $$value => $$invalidate(4, $season = $$value));
+    	component_subscribe($$self, season, $$value => $$invalidate(3, $season = $$value));
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('DefaultPage', slots, []);
     	let background = [];
 
-    	// DOM Elements
-    	let slider, slideImage;
-
     	// State
-    	let isDragging = false, startPos = 0, currentTranslate = 0, prevTranslate = 0;
-
     	function changeSlide(slide) {
-    		$$invalidate(3, cur = slide);
+    		$$invalidate(2, cur = slide);
     	}
 
     	let { slides = [
@@ -17112,37 +17116,48 @@ var app = (function (jquery) {
     		}
     	] } = $$props;
 
-    	console.log(slides[0].buttonBackColor);
-    	let cur = 0;
+    	let cur = $LastPage["WindowResized"] == true
+    	? $LastPage["Index"]
+    	: 0;
+
     	let t;
     	let enbleToMove = true;
     	let drawComponent = true;
-    	let mouseDownLocation = [0, 0];
-    	let isMouseDown = false;
+    	let isDragging = false;
+    	let mouseDownLocation = 0;
+    	let mouseLocation = 0;
+    	set_store_value(LastPage, $LastPage["WindowResized"] = false, $LastPage);
     	const transition_args = { duration: 200 };
 
     	function prev(e) {
-    		$$invalidate(3, cur = $$invalidate(3, --cur) >= 0 ? cur : slides.length - 1);
+    		$$invalidate(2, cur = $$invalidate(2, --cur) >= 0 ? cur : slides.length - 1);
+    		set_store_value(LastPage, $LastPage["Index"] = cur, $LastPage);
     	}
 
     	function next(e) {
-    		$$invalidate(3, cur = $$invalidate(3, ++cur) % slides.length);
+    		$$invalidate(2, cur = $$invalidate(2, ++cur) % slides.length);
+    		set_store_value(LastPage, $LastPage["Index"] = cur, $LastPage);
     	}
 
     	function touchStart(e) {
-    		startPos = getPositionX(e);
+    		mouseLocation = mouseDownLocation = getPositionX(e);
     		isDragging = true;
     	}
 
-    	function touchEnd(e) {
-    		isDragging = false;
-    		const currentPosition = getPositionX(e);
-    		const movedBy = currentPosition - startPos;
-    		if (movedBy < -100) next(); else if (movedBy > 100) prev();
+    	function touchMove(e) {
+    		if (isDragging) {
+    			mouseLocation = getPositionX(e);
+    		}
     	}
 
-    	function setSliderPosition() {
-    		$$invalidate(2, slider.style.transform = `translateX(${currentTranslate}px)`, slider);
+    	function touchEnd(e) {
+    		if (isDragging) {
+    			isDragging = false;
+    			const movedBy = mouseLocation - mouseDownLocation;
+    			console.log(mouseLocation);
+    			console.log(mouseDownLocation);
+    			if (movedBy < -100) next(); else if (movedBy > 100) prev();
+    		}
     	}
 
     	onMount(() => {
@@ -17183,13 +17198,6 @@ var app = (function (jquery) {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console_1.warn(`<DefaultPage> was created with unknown prop '${key}'`);
     	});
 
-    	function div0_binding($$value) {
-    		binding_callbacks[$$value ? 'unshift' : 'push'](() => {
-    			slider = $$value;
-    			$$invalidate(2, slider);
-    		});
-    	}
-
     	const click_handler = i => changeSlide(i);
 
     	$$self.$$set = $$props => {
@@ -17199,23 +17207,20 @@ var app = (function (jquery) {
     	$$self.$capture_state = () => ({
     		DefaultSlide,
     		hslide,
+    		LastPage,
     		season,
     		onMount,
+    		mdiRayEndArrow,
     		background,
-    		slider,
-    		slideImage,
-    		isDragging,
-    		startPos,
-    		currentTranslate,
-    		prevTranslate,
     		changeSlide,
     		slides,
     		cur,
     		t,
     		enbleToMove,
     		drawComponent,
+    		isDragging,
     		mouseDownLocation,
-    		isMouseDown,
+    		mouseLocation,
     		transition_args,
     		prev,
     		next,
@@ -17223,26 +17228,21 @@ var app = (function (jquery) {
     		touchMove,
     		touchEnd,
     		getPositionX,
-    		setSliderPosition,
     		onWheel,
+    		$LastPage,
     		$season
     	});
 
     	$$self.$inject_state = $$props => {
     		if ('background' in $$props) $$invalidate(1, background = $$props.background);
-    		if ('slider' in $$props) $$invalidate(2, slider = $$props.slider);
-    		if ('slideImage' in $$props) slideImage = $$props.slideImage;
-    		if ('isDragging' in $$props) isDragging = $$props.isDragging;
-    		if ('startPos' in $$props) startPos = $$props.startPos;
-    		if ('currentTranslate' in $$props) currentTranslate = $$props.currentTranslate;
-    		if ('prevTranslate' in $$props) prevTranslate = $$props.prevTranslate;
     		if ('slides' in $$props) $$invalidate(0, slides = $$props.slides);
-    		if ('cur' in $$props) $$invalidate(3, cur = $$props.cur);
+    		if ('cur' in $$props) $$invalidate(2, cur = $$props.cur);
     		if ('t' in $$props) t = $$props.t;
     		if ('enbleToMove' in $$props) enbleToMove = $$props.enbleToMove;
     		if ('drawComponent' in $$props) drawComponent = $$props.drawComponent;
+    		if ('isDragging' in $$props) isDragging = $$props.isDragging;
     		if ('mouseDownLocation' in $$props) mouseDownLocation = $$props.mouseDownLocation;
-    		if ('isMouseDown' in $$props) isMouseDown = $$props.isMouseDown;
+    		if ('mouseLocation' in $$props) mouseLocation = $$props.mouseLocation;
     	};
 
     	if ($$props && "$$inject" in $$props) {
@@ -17252,15 +17252,14 @@ var app = (function (jquery) {
     	return [
     		slides,
     		background,
-    		slider,
     		cur,
     		$season,
     		changeSlide,
     		transition_args,
     		touchStart,
+    		touchMove,
     		touchEnd,
     		onWheel,
-    		div0_binding,
     		click_handler
     	];
     }
@@ -21526,7 +21525,7 @@ var app = (function (jquery) {
     			p = element("p");
     			p.textContent = "2022 Projects Slide 01";
     			add_location(p, file$k, 7, 8, 178);
-    			attr_dev(div, "class", "context");
+    			attr_dev(div, "class", "context svelte-hqtqk1");
     			set_style(div, "color", /*color*/ ctx[0]);
     			add_location(div, file$k, 6, 4, 124);
     		},
@@ -21682,7 +21681,7 @@ var app = (function (jquery) {
     			p = element("p");
     			p.textContent = "2022 Projects Slide 02";
     			add_location(p, file$j, 7, 8, 178);
-    			attr_dev(div, "class", "context");
+    			attr_dev(div, "class", "context svelte-hqtqk1");
     			set_style(div, "color", /*color*/ ctx[0]);
     			add_location(div, file$j, 6, 4, 124);
     		},
@@ -21838,7 +21837,7 @@ var app = (function (jquery) {
     			p = element("p");
     			p.textContent = "2022 Projects Slide 03";
     			add_location(p, file$i, 7, 8, 178);
-    			attr_dev(div, "class", "context");
+    			attr_dev(div, "class", "context svelte-hqtqk1");
     			set_style(div, "color", /*color*/ ctx[0]);
     			add_location(div, file$i, 6, 4, 124);
     		},
@@ -21994,7 +21993,7 @@ var app = (function (jquery) {
     			p = element("p");
     			p.textContent = "2022 Projects Slide 04";
     			add_location(p, file$h, 7, 8, 178);
-    			attr_dev(div, "class", "context");
+    			attr_dev(div, "class", "context svelte-hqtqk1");
     			set_style(div, "color", /*color*/ ctx[0]);
     			add_location(div, file$h, 6, 4, 124);
     		},
@@ -22371,7 +22370,7 @@ var app = (function (jquery) {
     			p = element("p");
     			p.textContent = "2023 Projects Slide 01";
     			add_location(p, file$f, 7, 8, 178);
-    			attr_dev(div, "class", "context");
+    			attr_dev(div, "class", "context svelte-hqtqk1");
     			set_style(div, "color", /*color*/ ctx[0]);
     			add_location(div, file$f, 6, 4, 124);
     		},
@@ -22527,7 +22526,7 @@ var app = (function (jquery) {
     			p = element("p");
     			p.textContent = "2023 Projects Slide 02";
     			add_location(p, file$e, 7, 8, 178);
-    			attr_dev(div, "class", "context");
+    			attr_dev(div, "class", "context svelte-hqtqk1");
     			set_style(div, "color", /*color*/ ctx[0]);
     			add_location(div, file$e, 6, 4, 124);
     		},
@@ -22683,7 +22682,7 @@ var app = (function (jquery) {
     			p = element("p");
     			p.textContent = "2023 Projects Slide 03";
     			add_location(p, file$d, 7, 8, 178);
-    			attr_dev(div, "class", "context");
+    			attr_dev(div, "class", "context svelte-hqtqk1");
     			set_style(div, "color", /*color*/ ctx[0]);
     			add_location(div, file$d, 6, 4, 124);
     		},
@@ -22839,7 +22838,7 @@ var app = (function (jquery) {
     			p = element("p");
     			p.textContent = "2023 Projects Slide 04";
     			add_location(p, file$c, 7, 8, 178);
-    			attr_dev(div, "class", "context");
+    			attr_dev(div, "class", "context svelte-hqtqk1");
     			set_style(div, "color", /*color*/ ctx[0]);
     			add_location(div, file$c, 6, 4, 124);
     		},
@@ -24895,7 +24894,7 @@ var app = (function (jquery) {
     /* src\App.svelte generated by Svelte v3.55.1 */
     const file = "src\\App.svelte";
 
-    // (151:2) {:else}
+    // (154:2) {:else}
     function create_else_block(ctx) {
     	let snowflakes;
     	let current;
@@ -24928,14 +24927,14 @@ var app = (function (jquery) {
     		block,
     		id: create_else_block.name,
     		type: "else",
-    		source: "(151:2) {:else}",
+    		source: "(154:2) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (147:30) 
+    // (150:30) 
     function create_if_block_3(ctx) {
     	let if_block_anchor;
     	let current;
@@ -24992,14 +24991,14 @@ var app = (function (jquery) {
     		block,
     		id: create_if_block_3.name,
     		type: "if",
-    		source: "(147:30) ",
+    		source: "(150:30) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (145:32) 
+    // (148:32) 
     function create_if_block_2(ctx) {
     	let lake;
     	let current;
@@ -25032,14 +25031,14 @@ var app = (function (jquery) {
     		block,
     		id: create_if_block_2.name,
     		type: "if",
-    		source: "(145:32) ",
+    		source: "(148:32) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (143:2) {#if $season == "Spring"}
+    // (146:2) {#if $season == "Spring"}
     function create_if_block_1(ctx) {
     	let sakuraflakes;
     	let current;
@@ -25072,14 +25071,14 @@ var app = (function (jquery) {
     		block,
     		id: create_if_block_1.name,
     		type: "if",
-    		source: "(143:2) {#if $season == \\\"Spring\\\"}",
+    		source: "(146:2) {#if $season == \\\"Spring\\\"}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (148:3) {#if drawComponent}
+    // (151:3) {#if drawComponent}
     function create_if_block_4(ctx) {
     	let park;
     	let current;
@@ -25111,14 +25110,14 @@ var app = (function (jquery) {
     		block,
     		id: create_if_block_4.name,
     		type: "if",
-    		source: "(148:3) {#if drawComponent}",
+    		source: "(151:3) {#if drawComponent}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (154:2) {#if $ContextVisible}
+    // (157:2) {#if $ContextVisible && drawComponent}
     function create_if_block(ctx) {
     	let div;
     	let router;
@@ -25137,7 +25136,7 @@ var app = (function (jquery) {
     			set_style(div, "top", /*NavbarComponent*/ ctx[1] + "px");
     			set_style(div, "height", document.body.clientHeight - /*NavbarComponent*/ ctx[1] + "px");
     			attr_dev(div, "class", "svelte-17a7r7l");
-    			add_location(div, file, 154, 2, 4592);
+    			add_location(div, file, 157, 2, 4724);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -25172,7 +25171,7 @@ var app = (function (jquery) {
     		block,
     		id: create_if_block.name,
     		type: "if",
-    		source: "(154:2) {#if $ContextVisible}",
+    		source: "(157:2) {#if $ContextVisible && drawComponent}",
     		ctx
     	});
 
@@ -25216,7 +25215,7 @@ var app = (function (jquery) {
 
     	current_block_type_index = select_block_type(ctx);
     	if_block0 = if_blocks[current_block_type_index] = if_block_creators[current_block_type_index](ctx);
-    	let if_block1 = /*$ContextVisible*/ ctx[3] && create_if_block(ctx);
+    	let if_block1 = /*$ContextVisible*/ ctx[3] && /*drawComponent*/ ctx[2] && create_if_block(ctx);
 
     	const block = {
     		c: function create() {
@@ -25228,10 +25227,10 @@ var app = (function (jquery) {
     			t1 = space();
     			if (if_block1) if_block1.c();
     			attr_dev(div, "class", "full-landing-image svelte-17a7r7l");
-    			add_location(div, file, 141, 1, 4316);
+    			add_location(div, file, 144, 1, 4431);
     			set_style(main, "background", /*background*/ ctx[0][/*$season*/ ctx[4]]);
     			attr_dev(main, "class", "svelte-17a7r7l");
-    			add_location(main, file, 139, 0, 4220);
+    			add_location(main, file, 142, 0, 4335);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -25287,11 +25286,11 @@ var app = (function (jquery) {
     				if_block0.m(div, t1);
     			}
 
-    			if (/*$ContextVisible*/ ctx[3]) {
+    			if (/*$ContextVisible*/ ctx[3] && /*drawComponent*/ ctx[2]) {
     				if (if_block1) {
     					if_block1.p(ctx, dirty);
 
-    					if (dirty & /*$ContextVisible*/ 8) {
+    					if (dirty & /*$ContextVisible, drawComponent*/ 12) {
     						transition_in(if_block1, 1);
     					}
     				} else {
@@ -25349,6 +25348,7 @@ var app = (function (jquery) {
     }
 
     function instance($$self, $$props, $$invalidate) {
+    	let $LastPage;
     	let $ContextVisible;
     	let $Device;
     	let $bench;
@@ -25365,36 +25365,38 @@ var app = (function (jquery) {
     	let $fish_02;
     	let $fish_01;
     	let $season;
+    	validate_store(LastPage, 'LastPage');
+    	component_subscribe($$self, LastPage, $$value => $$invalidate(9, $LastPage = $$value));
     	validate_store(ContextVisible, 'ContextVisible');
     	component_subscribe($$self, ContextVisible, $$value => $$invalidate(3, $ContextVisible = $$value));
     	validate_store(Device, 'Device');
-    	component_subscribe($$self, Device, $$value => $$invalidate(9, $Device = $$value));
+    	component_subscribe($$self, Device, $$value => $$invalidate(10, $Device = $$value));
     	validate_store(bench, 'bench');
-    	component_subscribe($$self, bench, $$value => $$invalidate(10, $bench = $$value));
+    	component_subscribe($$self, bench, $$value => $$invalidate(11, $bench = $$value));
     	validate_store(fish_12, 'fish_12');
-    	component_subscribe($$self, fish_12, $$value => $$invalidate(11, $fish_12 = $$value));
+    	component_subscribe($$self, fish_12, $$value => $$invalidate(12, $fish_12 = $$value));
     	validate_store(fish_11, 'fish_11');
-    	component_subscribe($$self, fish_11, $$value => $$invalidate(12, $fish_11 = $$value));
+    	component_subscribe($$self, fish_11, $$value => $$invalidate(13, $fish_11 = $$value));
     	validate_store(fish_10, 'fish_10');
-    	component_subscribe($$self, fish_10, $$value => $$invalidate(13, $fish_10 = $$value));
+    	component_subscribe($$self, fish_10, $$value => $$invalidate(14, $fish_10 = $$value));
     	validate_store(fish_09, 'fish_09');
-    	component_subscribe($$self, fish_09, $$value => $$invalidate(14, $fish_09 = $$value));
+    	component_subscribe($$self, fish_09, $$value => $$invalidate(15, $fish_09 = $$value));
     	validate_store(fish_08, 'fish_08');
-    	component_subscribe($$self, fish_08, $$value => $$invalidate(15, $fish_08 = $$value));
+    	component_subscribe($$self, fish_08, $$value => $$invalidate(16, $fish_08 = $$value));
     	validate_store(fish_07, 'fish_07');
-    	component_subscribe($$self, fish_07, $$value => $$invalidate(16, $fish_07 = $$value));
+    	component_subscribe($$self, fish_07, $$value => $$invalidate(17, $fish_07 = $$value));
     	validate_store(fish_06, 'fish_06');
-    	component_subscribe($$self, fish_06, $$value => $$invalidate(17, $fish_06 = $$value));
+    	component_subscribe($$self, fish_06, $$value => $$invalidate(18, $fish_06 = $$value));
     	validate_store(fish_05, 'fish_05');
-    	component_subscribe($$self, fish_05, $$value => $$invalidate(18, $fish_05 = $$value));
+    	component_subscribe($$self, fish_05, $$value => $$invalidate(19, $fish_05 = $$value));
     	validate_store(fish_04, 'fish_04');
-    	component_subscribe($$self, fish_04, $$value => $$invalidate(19, $fish_04 = $$value));
+    	component_subscribe($$self, fish_04, $$value => $$invalidate(20, $fish_04 = $$value));
     	validate_store(fish_03, 'fish_03');
-    	component_subscribe($$self, fish_03, $$value => $$invalidate(20, $fish_03 = $$value));
+    	component_subscribe($$self, fish_03, $$value => $$invalidate(21, $fish_03 = $$value));
     	validate_store(fish_02, 'fish_02');
-    	component_subscribe($$self, fish_02, $$value => $$invalidate(21, $fish_02 = $$value));
+    	component_subscribe($$self, fish_02, $$value => $$invalidate(22, $fish_02 = $$value));
     	validate_store(fish_01, 'fish_01');
-    	component_subscribe($$self, fish_01, $$value => $$invalidate(22, $fish_01 = $$value));
+    	component_subscribe($$self, fish_01, $$value => $$invalidate(23, $fish_01 = $$value));
     	validate_store(season, 'season');
     	component_subscribe($$self, season, $$value => $$invalidate(4, $season = $$value));
     	let { $$slots: slots = {}, $$scope } = $$props;
@@ -25487,6 +25489,8 @@ var app = (function (jquery) {
 
     	onMount(() => {
     		set_store_value(Device, $Device["isMobile"] = false, $Device);
+    		set_store_value(LastPage, $LastPage["WindowResized"] = false, $LastPage);
+    		set_store_value(LastPage, $LastPage["Index"] = 0, $LastPage);
 
     		for (var i in mobile_keys) {
     			if ($Device["agent"].match(mobile_keys[i])) {
@@ -25504,13 +25508,14 @@ var app = (function (jquery) {
 
     	function windowResize() {
     		$$invalidate(2, drawComponent = false);
+    		set_store_value(LastPage, $LastPage["WindowResized"] = true, $LastPage);
     		clearTimeout(t);
 
     		t = setTimeout(
     			() => {
     				$$invalidate(2, drawComponent = true);
     			},
-    			50
+    			300
     		);
     	}
 
@@ -25527,6 +25532,7 @@ var app = (function (jquery) {
 
     	$$self.$capture_state = () => ({
     		onMount,
+    		LastPage,
     		Device,
     		ContextVisible,
     		season,
@@ -25569,6 +25575,7 @@ var app = (function (jquery) {
     		month,
     		mobile_keys,
     		windowResize,
+    		$LastPage,
     		$ContextVisible,
     		$Device,
     		$bench,
