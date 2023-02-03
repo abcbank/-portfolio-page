@@ -58,6 +58,8 @@
 		if(!$Device["isMobile"]){
 			isDragging = false;
 			const movedBy = mouseLocation - mouseDownLocation;
+			console.log(mouseLocation);
+			console.log(mouseDownLocation);
 			if (movedBy < -100) next();
 			else if (movedBy > 100) prev();
 		}
@@ -78,6 +80,8 @@
     function touchEnd(e) {
       isDragging = false;
       const movedBy = mouseLocation - mouseDownLocation;
+			console.log(mouseLocation);
+			console.log(mouseDownLocation);
       if (movedBy < -100) next();
       else if (movedBy > 100) prev();
     }
