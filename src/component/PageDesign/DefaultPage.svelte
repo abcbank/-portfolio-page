@@ -56,6 +56,7 @@
 
     function touchEnd(e) {
       isDragging = false;
+	  console.log(e);
 	  const currentPosition = getPositionX(e);
       const movedBy = currentPosition - startPos;
       if (movedBy < -100) next();
@@ -64,8 +65,6 @@
 
     // Helper functions
     function getPositionX(event) {
-		console.log(event.touches[0]);
-		console.log(event.touches[0].clientX);
       return event.type.includes('mouse')
         ? event.pageX
         : event.touches[0].clientX;
