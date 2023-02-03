@@ -12,7 +12,7 @@
     import { CardBody } from 'sveltestrap';
 
     let SwitchStatus = $ContextVisible;
-    let location;
+    let location = "center";
 
     let UIStatus = {}
     function SetUIStatus(UIType){
@@ -26,10 +26,10 @@
         if($Device["isMobile"])
             location = "center";
         else
-            location = "flex-left";
+            location = "flex-end";
     })
 </script>
-<div class = "UISelector"  style="justify-content: {location};" in:fade={{ delay: 500 }}>
+<div class = "UISelector" style="display: flex; justify-content:{location};" in:fade={{ delay: 500 }}>
 <NavItem isMobile={ $Device["isMobile"] }>
     <span slot="trigger">
         <IconButton path={mdiCodeBrackets }/>
@@ -77,11 +77,11 @@
 		padding: 0 1rem;
 		border-bottom: var(--border);
 		list-style: none;
-        float:center;
 		margin: 0;
 		padding: 0;
+        width:100%;
 		max-width: 100%;
 		display: flex;
-		justify-content: center;
+		justify-content: flex-end;
     }
 </style>

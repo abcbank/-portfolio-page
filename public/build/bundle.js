@@ -11440,7 +11440,7 @@ var app = (function (jquery) {
     			span = element("span");
     			create_component(iconbutton.$$.fragment);
     			attr_dev(span, "slot", "trigger");
-    			add_location(span, file$T, 33, 4, 1221);
+    			add_location(span, file$T, 33, 4, 1244);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, span, anchor);
@@ -11496,9 +11496,10 @@ var app = (function (jquery) {
     		c: function create() {
     			div = element("div");
     			create_component(navitem.$$.fragment);
-    			attr_dev(div, "class", "UISelector svelte-1fu5uap");
+    			attr_dev(div, "class", "UISelector svelte-1fk414k");
+    			set_style(div, "display", "flex");
     			set_style(div, "justify-content", /*location*/ ctx[0]);
-    			add_location(div, file$T, 31, 0, 1082);
+    			add_location(div, file$T, 31, 0, 1092);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -11569,7 +11570,7 @@ var app = (function (jquery) {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('NavUISelector', slots, []);
     	let SwitchStatus = $ContextVisible;
-    	let location;
+    	let location = "center";
     	let UIStatus = {};
 
     	function SetUIStatus(UIType) {
@@ -11582,7 +11583,7 @@ var app = (function (jquery) {
 
     	onMount(() => {
     		$$invalidate(1, UIStatus[$season] = mdiCheckBold, UIStatus);
-    		if ($Device["isMobile"]) $$invalidate(0, location = "center"); else $$invalidate(0, location = "flex-left");
+    		if ($Device["isMobile"]) $$invalidate(0, location = "center"); else $$invalidate(0, location = "flex-end");
     	});
 
     	const writable_props = [];
