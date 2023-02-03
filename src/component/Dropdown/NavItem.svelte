@@ -21,7 +21,7 @@
         open_pre = false;
         clearTimeout(t)
         t = setTimeout(() => {
-            open = open_pre;
+            open = open_pre; 
         }, 300)
     }}>
       <div>

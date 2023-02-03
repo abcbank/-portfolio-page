@@ -1,7 +1,7 @@
 
 <script>
     import { onMount } from "svelte";
-	import { ContextVisible, season } from "./global"
+	import { Device, ContextVisible, season } from "./global"
 	import { bench, fish_01, fish_02, fish_03, fish_04, fish_05, fish_06, fish_07, fish_08, fish_09, fish_10, fish_11, fish_12 } from "./asciiArts"
     import Navbar from "./component/Navbar.svelte";
 	import Snowflakes from "./component/Snowflakes.svelte";
@@ -106,7 +106,20 @@
         $bench = data;
     });
 
+	var mobile_keys = new Array('iphone','ipad','android','blackberry','windows phone',
+            'windows ce','lg','mot','samsung','sonyericsson','nokia');
+
+
 	onMount(() => {		
+		$Device["agent"] = navigator.userAgent.toLowerCase;
+		$Device["isMobile"] = false;
+		
+		for(var i in mobile_keys){
+			if(navigator.userAgent.match(mobile_keys[i])){ 
+				$Device["isMobile"] = true;
+				break;
+			}
+		}
 		$ContextVisible = true;
 		background['Spring'] = "linear-gradient(to bottom, #089acf 0%, #a1c4fd 60%,#c2e9fb 90%,#8A3B12 100%)";
 		background['Summer'] = "linear-gradient(-45deg, #089acf, #0bcea0)";

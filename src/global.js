@@ -11,3 +11,8 @@ export const ContextVisible = writable("", () => {
     return () => {
     }
 });
+export const Device = writable({}, () => {
+  
+    return () => {
+    }
+});

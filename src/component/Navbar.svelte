@@ -13,6 +13,7 @@
   import NavLogo from "./Navlogo.svelte"
   import NavUISelector from "./NavUISelector.svelte"  
   import { push } from "svelte-spa-router";
+  import { Device } from '../global'
   
   export let height;
 
@@ -73,12 +74,16 @@
         isOpen = isOpen_pre;
     }, 300)
   }
+  function pushRouter(link){
+    isOpen = false; 
+    push(link);
+  }
 </script>
 
 <div class="NavBar"
 bind:clientHeight={height}
-on:mouseenter|preventDefault={() => {openCollapse()}} 
-on:mouseleave|preventDefault={() => {closeCollapse()}}>
+on:mouseenter|preventDefault={() => {if(!$Device["isMobile"]) openCollapse()}} 
+on:mouseleave|preventDefault={() => {if(!$Device["isMobile"]) closeCollapse()}}>
   <Navbar color="dark" dark expand="md">
     <div on:click={()=> {isOpen = false;}} on:keydown={() => {}}>
       <NavLogo />
@@ -87,18 +92,24 @@ on:mouseleave|preventDefault={() => {closeCollapse()}}>
       <Nav class="ms-auto" navbar>
         <div class="Items">
           <NavItem>
-            <NavLink on:click={()=> {isOpen = false; push("/Profile");}}>Profile</NavLink>
+            <NavLink 
+              on:click={()=> 
+              {
+                pushRouter('/Profile');
+              }}>Profile</NavLink>
           </NavItem>
         </div>
         <div class="Items" on:mouseenter={ProjectOpenMouseUp} on:mouseleave={ProjectOpenMouseOut}>
           <Dropdown isOpen={ ProjectOpen } nav inNavbar>
-            <DropdownToggle nav class="nav-link" caret on:click={() => {isOpen = false; push("/Projects");}}>Projects</DropdownToggle>
+            <DropdownToggle nav class="nav-link" caret 
+              on:click={() => { if(!$Device["isMobile"]) pushRouter('/Projects'); }}
+              on:doubleclick={() => {if($Device["isMobile"]) pushRouter('/Projects');}}>Projects</DropdownToggle>
             <DropdownMenu>
-              <DropdownItem on:click={()=> {isOpen = false; push("/2021/Projects");}}>2021</DropdownItem>
+              <DropdownItem on:click={()=> {  pushRouter('/2021/Projects'); }}>2021</DropdownItem>
               <DropdownItem divider />
-              <DropdownItem  on:click={()=> {isOpen = false; push("/2022/Projects");}}>2022</DropdownItem>
+              <DropdownItem  on:click={()=> { pushRouter("/2022/Projects")}}>2022</DropdownItem>
               <DropdownItem divider />
-              <DropdownItem  on:click={()=> {isOpen = false; push("/2023/Projects");}}>2023</DropdownItem>
+              <DropdownItem  on:click={()=> { pushRouter("/2023/Projects")}}>2023</DropdownItem>
               <!-- <DropdownItem divider />
               <DropdownItem>Reset</DropdownItem> -->
             </DropdownMenu>
@@ -106,11 +117,13 @@ on:mouseleave|preventDefault={() => {closeCollapse()}}>
         </div>
         <div class="Items" on:mouseenter={OutsourcingOpenMouseUp} on:mouseleave={OutsourcingOpenMouseOut}>
           <Dropdown isOpen={ OutsourcingOpen } nav inNavbar>
-            <DropdownToggle nav class="nav-link" caret on:click={() => {isOpen = false; push("/Outsourcing");}}>Outsourcing</DropdownToggle>
+            <DropdownToggle nav class="nav-link" caret 
+            on:click={() => { if(!$Device["isMobile"]) pushRouter('/Outsourcing'); }}
+            on:doubleclick={() => { if($Device["isMobile"]) pushRouter('/Outsourcing'); }}>Outsourcing</DropdownToggle>
             <DropdownMenu>
-              <DropdownItem  on:click={()=> {isOpen = false; push("/2022/Outsourcing");}}>2022</DropdownItem>
+              <DropdownItem  on:click={()=> { pushRouter("/2022/Outsourcing")}}>2022</DropdownItem>
               <DropdownItem divider />
-              <DropdownItem on:click={()=> {isOpen = false; push("/2023/Outsourcing");}}>2023</DropdownItem>
+              <DropdownItem on:click={()=> { pushRouter("/2023/Outsourcing")}}>2023</DropdownItem>
               <!-- <DropdownItem divider />
               <DropdownItem>Reset</DropdownItem> -->
             </DropdownMenu>

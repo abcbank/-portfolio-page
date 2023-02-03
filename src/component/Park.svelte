@@ -27,17 +27,9 @@
     onMount(()=> {
         BenchRect = document.getElementsByClassName('Bench')[0].getBoundingClientRect();
     })
-    function windowResize(){
-        drawComponent = false;
-        clearTimeout(t)
-        t = setTimeout(() => {
-            drawComponent = true;
-        }, 50)
-    }
 </script>
 
 <svelte:window 
-    on:resize={windowResize}
     on:mousedown={handleMouseDown}
     on:mousemove={handleMouseMove}/>
 
