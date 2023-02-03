@@ -5,6 +5,15 @@
     import { onMount } from "svelte";
     let background = [];
 
+  // DOM Elements
+	let slider, slideImage;
+
+	// State
+	let isDragging = false,
+		startPos = 0,
+		currentTranslate = 0,
+		prevTranslate = 0;
+
 	function changeSlide(slide) {
 		cur = slide;
 	}
@@ -37,23 +46,32 @@
 		cur = ++cur % slides.length
 	}
 	
-	function handleMouseDown({clientX, clientY}){
-		mouseDownLocation = [clientX, clientY];
-		isMouseDown = true;
-		console.log(mouseDownLocation)
-	}
-	function handleMouseUp({clientX, clientY}){
-		if(isMouseDown){
-			if(mouseDownLocation[0] - clientX > 0){
-				next();
-			}
-			else{
-				prev();
-			}
-			isMouseDown = false;
-			console.log([clientX, clientY])
-		}
-	}
+    function touchStart(e) {
+        startPos = getPositionX(e);
+        isDragging = true;
+    }
+
+    function touchMove(event) {
+    }
+
+    function touchEnd(e) {
+      isDragging = false;
+	  const currentPosition = getPositionX(e);
+      const movedBy = currentPosition - startPos;
+      if (movedBy < -100) next();
+      else if (movedBy > 100) prev();
+    }
+
+    // Helper functions
+    function getPositionX(event) {
+      return event.type.includes('mouse')
+        ? event.pageX
+        : event.touches[0].clientX;
+    }
+
+    function setSliderPosition() {
+      slider.style.transform = `translateX(${currentTranslate}px)`;
+    }
 
 	onMount(() => {		
 		// background['Spring'] = "#fff";
@@ -82,10 +100,17 @@
     }
 </script>
 
-<svelte:window on:mousedown={handleMouseDown} on:mouseup={handleMouseUp}/>
+<svelte:window 
+ on:touchstart={touchStart}
+ on:touchend={touchEnd}
+ on:touchmove={touchMove}
+ on:mousedown={touchStart}
+ on:mouseup={touchEnd}
+ on:mouseleave={touchEnd}
+ on:mousemove={touchMove} />
 
 <div class = "Page" style="background:{ background[$season] };">
-    <div class="inner-wrapper" on:mousewheel={onWheel}>
+    <div class="inner-wrapper" on:mousewheel={onWheel} bind:this={slider}>
         {#each slides as slide, id}
             {#if id === cur}
             <div
