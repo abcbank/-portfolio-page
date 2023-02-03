@@ -12,7 +12,8 @@
     import { CardBody } from 'sveltestrap';
 
     let SwitchStatus = $ContextVisible;
-    let location = "center";
+    let width = 0;
+    let location = 0;
 
     let UIStatus = {}
     function SetUIStatus(UIType){
@@ -21,15 +22,21 @@
         }
         UIStatus[UIType] = mdiCheckBold;
     }
-    onMount(()=>{
-        UIStatus[$season] = mdiCheckBold;
-        if($Device["isMobile"])
+
+    function calcLeft(){
+        if(document.body.clientWidth <= 767)
             location = "center";
         else
             location = "flex-end";
+    }
+
+    onMount(()=>{
+        UIStatus[$season] = mdiCheckBold;
+        calcLeft();
     })
 </script>
-<div class = "UISelector" style="display: flex; justify-content:{location};" in:fade={{ delay: 500 }}>
+<svelte:window on:resize={calcLeft} />
+<div class = "UISelector" bind:clientWidth={width} style="justify-content:{location};" in:fade={{ delay: 500 }}>
 <NavItem isMobile={ $Device["isMobile"] }>
     <span slot="trigger">
         <IconButton path={mdiCodeBrackets }/>
@@ -70,17 +77,16 @@
 <style>
     .UISelector{
         position:absolute;
-        top:11px;
-        right:11px;
+        left:0px;
+        top:0px;
+        width:100%;
+        height:100%;
+        padding:11px;
 		height: var(--nav-size);
 		background-color: var(--bg);
-		padding: 0 1rem;
 		border-bottom: var(--border);
 		list-style: none;
-		margin: 0;
-		padding: 0;
-        width:100%;
-		max-width: 100%;
+        float: left;
 		display: flex;
 		justify-content: flex-end;
     }
