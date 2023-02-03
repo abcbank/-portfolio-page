@@ -5,14 +5,7 @@
     import { onMount } from "svelte";
     let background = [];
 
-  // DOM Elements
-	let slider, slideImage;
-
 	// State
-	let isDragging = false,
-		startPos = 0,
-		currentTranslate = 0,
-		prevTranslate = 0;
 
 	function changeSlide(slide) {
 		cur = slide;
@@ -31,8 +24,9 @@
     let enbleToMove = true;
     let drawComponent = true;
 
-	let mouseDownLocation = [0,0]
-	let isMouseDown = false;
+	let isDragging = false;
+	let mouseDownLocation = 0;
+	let mouseLocation = 0;
 
 	const transition_args = {
 		duration: 200,
@@ -47,18 +41,20 @@
 	}
 	
     function touchStart(e) {
-        startPos = getPositionX(e);
+        mouseDownLocation = getPositionX(e);
         isDragging = true;
     }
 
-    function touchMove(event) {
+    function touchMove(e) {
+		if(isDragging){
+			console.log(e);
+			mouseLocation = getPositionX(e);
+		}
     }
 
     function touchEnd(e) {
       isDragging = false;
-	  console.log(e);
-	  const currentPosition = getPositionX(e);
-      const movedBy = currentPosition - startPos;
+      const movedBy = mouseLocation - mouseDownLocation;
       if (movedBy < -100) next();
       else if (movedBy > 100) prev();
     }
