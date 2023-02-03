@@ -144,8 +144,7 @@
     })
   </script>
 
-<svelte:window 
-    on:mousemove={handleMouseMove}/>
+<svelte:window on:mousemove={handleMouseMove}/>
 <div class="snowframe" aria-hidden="true">
     {#each snowflakes as flake}
       <div

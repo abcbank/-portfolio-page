@@ -22,6 +22,9 @@
     let enbleToMove = true;
     let drawComponent = true;
 
+	let mouseDownLocation = [0,0]
+	let isMouseDown = false;
+
 	const transition_args = {
 		duration: 200,
 	}
@@ -32,6 +35,22 @@
 	
 	function next(e) {
 		cur = ++cur % slides.length
+	}
+	
+	function handleMouseDown({clientX, clientY}){
+		mouseDownLocation = [clientX, clientY];
+		isMouseDown = true;
+	}
+	function handleMouseUp({clientX, clientY}){
+		if(isMouseDown){
+			if(mouseDownLocation[0] - clientX > 0){
+				next();
+			}
+			else{
+				prev();
+			}
+			isMouseDown = false;
+		}
 	}
 
 	onMount(() => {		
@@ -60,6 +79,8 @@
         }
     }
 </script>
+
+<svelte:window on:mousedown={handleMouseDown} on:mouseup={handleMouseUp}/>
 
 <div class = "Page" style="background:{ background[$season] };">
     <div class="inner-wrapper" on:mousewheel={onWheel}>

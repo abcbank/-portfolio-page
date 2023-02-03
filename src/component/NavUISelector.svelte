@@ -9,11 +9,10 @@
     import jquery from 'jquery'
     import { onMount } from 'svelte'
     import ToggleSwitch from './Switch/ToggleSwitch.svelte'
-    import { CardBody } from 'sveltestrap';
 
     let SwitchStatus = $ContextVisible;
     let width = 0;
-    let location = 0;
+    export let top = 0;
 
     let UIStatus = {}
     function SetUIStatus(UIType){
@@ -23,20 +22,11 @@
         UIStatus[UIType] = mdiCheckBold;
     }
 
-    function calcLeft(){
-        if(document.body.clientWidth <= 767)
-            location = document.body.clientWidth / 2 - width / 2;
-        else
-            location = 11;
-    }
-
     onMount(()=>{
         UIStatus[$season] = mdiCheckBold;
-        calcLeft();
     })
 </script>
-<svelte:window on:resize={calcLeft} />
-<div class = "UISelector" bind:clientWidth={width} style="right:{location}px;" in:fade={{ delay: 500 }}>
+<div class = "UISelector" style="top:{top}px;" in:fade={{ delay: 100 }}>
 <NavItem isMobile={ $Device["isMobile"] }>
     <span slot="trigger">
         <IconButton path={mdiCodeBrackets }/>

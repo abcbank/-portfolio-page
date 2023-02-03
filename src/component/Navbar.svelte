@@ -15,11 +15,14 @@
   import NavUISelector from "./NavUISelector.svelte"  
   import { push } from "svelte-spa-router";
   import { Device } from '../global'
+  import { onMount } from 'svelte'
   
   export let height;
 
   let isOpen = false;
   let isOpen_pre = false;
+
+  let uiSelectorLocation = 11;
 
   let t;
   let t_1;
@@ -84,8 +87,21 @@
     ProjectOpen = false; 
     push(link);
   }
+
+function calcLeft(){
+    if(document.body.clientWidth <= 767)
+    {
+      uiSelectorLocation = 60;
+    }
+    else
+      uiSelectorLocation = 11;
+}
+  onMount(()=>{
+    calcLeft();
+  })
 </script>
 
+<svelte:window on:resize={calcLeft} />
 <div class="NavBar"
 bind:clientHeight={height}
 on:mouseenter|preventDefault={() => {if(!$Device["isMobile"]) openCollapse()}} 
@@ -94,11 +110,9 @@ on:mouseleave|preventDefault={() => {if(!$Device["isMobile"]) closeCollapse()}}>
     <div on:click={()=> {isOpen = false;}} on:keydown={() => {}}>
       <NavLogo />
     </div>
-    <!-- {#if $Device["isMobile"]} -->
     <div style="text-align:center;">
-      <NavbarToggler  on:click={() => { toggleCollapse()}} class="me-2" />
+      <NavbarToggler  on:click={() => {if ($Device["isMobile"]) toggleCollapse()}} class="me-2" />
     </div>
-    <!-- {/if} -->
     <Collapse { isOpen } navbar expand="md" on:update={handleUpdate}>
       <Nav class="ms-auto" navbar>
         <div class="Items">
@@ -148,7 +162,9 @@ on:mouseleave|preventDefault={() => {if(!$Device["isMobile"]) closeCollapse()}}>
         
       </Nav>
     </Collapse>
-    <NavUISelector />
+    {#if isOpen || document.body.clientWidth > 767}
+      <NavUISelector bind:top={uiSelectorLocation}/>
+    {/if}
   </Navbar>
 </div>
 
