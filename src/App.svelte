@@ -109,9 +109,10 @@
 	var mobile_keys = new Array('iphone','ipad','android','blackberry','windows phone',
             'windows ce','lg','mot','samsung','sonyericsson','nokia');
 
+	$Device["agent"] = navigator.userAgent.toLowerCase;
+	console.log($Device["isMobile"])
 
 	onMount(() => {		
-		$Device["agent"] = navigator.userAgent.toLowerCase;
 		$Device["isMobile"] = false;
 		
 		for(var i in mobile_keys){
@@ -120,7 +121,6 @@
 				break;
 			}
 		}
-		console.log($Device["isMobile"])
 		$ContextVisible = true;
 		background['Spring'] = "linear-gradient(to bottom, #089acf 0%, #a1c4fd 60%,#c2e9fb 90%,#8A3B12 100%)";
 		background['Summer'] = "linear-gradient(-45deg, #089acf, #0bcea0)";
