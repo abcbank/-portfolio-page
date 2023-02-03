@@ -39,30 +39,6 @@
 	function next(e) {
 		cur = ++cur % slides.length
 	}
-
-    function mouseDown(e) {
-		if(!$Device["isMobile"]){
-			mouseDownLocation = getPositionX(e);
-			isDragging = true;
-		}
-    }
-    function mouseMove(e) {
-		if(!$Device["isMobile"]){
-			if(isDragging){
-				mouseLocation = getPositionX(e);
-			}
-		}
-    }
-    function mouseUp(e) {
-		if(!$Device["isMobile"]){
-			isDragging = false;
-			const movedBy = mouseLocation - mouseDownLocation;
-			console.log(mouseLocation);
-			console.log(mouseDownLocation);
-			if (movedBy < -100) next();
-			else if (movedBy > 100) prev();
-		}
-    }
 	
     function touchStart(e) {
         mouseDownLocation = getPositionX(e);
@@ -125,10 +101,10 @@
  on:touchstart={touchStart}
  on:touchend={touchEnd}
  on:touchmove={touchMove}
- on:mousedown={mouseDown}
- on:mouseup={mouseUp}
- on:mouseleave={mouseUp}
- on:mousemove={mouseMove} />
+ on:mousedown={touchStart}
+ on:mouseup={touchEnd}
+ on:mouseleave={touchEnd}
+ on:mousemove={touchMove} />
 
 <div class = "Page" style="background:{ background[$season] };">
     <div class="inner-wrapper" on:mousewheel={onWheel}>
