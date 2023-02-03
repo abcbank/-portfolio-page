@@ -38,13 +38,14 @@
 	}
 	
 	function handleMouseDown({clientX, clientY}){
-		if(!$Device["isMobile"]){
+		// if(!$Device["isMobile"]){
 			mouseDownLocation = [clientX, clientY];
+			console.log(mouseDownLocation);
 			isMouseDown = true;
-		}
+		//}
 	}
 	function handleMouseUp({clientX, clientY}){
-		if(!$Device["isMobile"]){
+		// if(!$Device["isMobile"]){
 			if(isMouseDown){
 				let distance = Math.abs(mouseDownLocation[0] - clientX);
 				if(distance > document.body.clientWidth / 10){
@@ -56,8 +57,9 @@
 					}
 				}
 				isMouseDown = false;
+				console.log([clientX, clientY]);
 			}
-		}
+		//}
 	}
 	function handleTouchStart({clientX, clientY}){
 		if($Device["isMobile"]){
