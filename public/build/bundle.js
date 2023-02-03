@@ -11440,7 +11440,7 @@ var app = (function (jquery) {
     			span = element("span");
     			create_component(iconbutton.$$.fragment);
     			attr_dev(span, "slot", "trigger");
-    			add_location(span, file$T, 40, 4, 1378);
+    			add_location(span, file$T, 40, 4, 1395);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, span, anchor);
@@ -11499,10 +11499,10 @@ var app = (function (jquery) {
     		c: function create() {
     			div = element("div");
     			create_component(navitem.$$.fragment);
-    			attr_dev(div, "class", "UISelector svelte-1m4g8r1");
-    			set_style(div, "justify-content", /*location*/ ctx[1]);
+    			attr_dev(div, "class", "UISelector svelte-vmgkxx");
+    			set_style(div, "right", /*location*/ ctx[1] + "px");
     			add_render_callback(() => /*div_elementresize_handler*/ ctx[14].call(div));
-    			add_location(div, file$T, 38, 0, 1216);
+    			add_location(div, file$T, 38, 0, 1241);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -11529,7 +11529,7 @@ var app = (function (jquery) {
     			navitem.$set(navitem_changes);
 
     			if (!current || dirty & /*location*/ 2) {
-    				set_style(div, "justify-content", /*location*/ ctx[1]);
+    				set_style(div, "right", /*location*/ ctx[1] + "px");
     			}
     		},
     		i: function intro(local) {
@@ -11595,7 +11595,7 @@ var app = (function (jquery) {
     	}
 
     	function calcLeft() {
-    		if (document.body.clientWidth <= 767) $$invalidate(1, location = "center"); else $$invalidate(1, location = "flex-end");
+    		if (document.body.clientWidth <= 767) $$invalidate(1, location = document.body.clientWidth / 2 - width / 2); else $$invalidate(1, location = 11);
     	}
 
     	onMount(() => {

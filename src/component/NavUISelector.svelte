@@ -25,9 +25,9 @@
 
     function calcLeft(){
         if(document.body.clientWidth <= 767)
-            location = "center";
+            location = document.body.clientWidth / 2 - width / 2;
         else
-            location = "flex-end";
+            location = 11;
     }
 
     onMount(()=>{
@@ -36,7 +36,7 @@
     })
 </script>
 <svelte:window on:resize={calcLeft} />
-<div class = "UISelector" bind:clientWidth={width} style="justify-content:{location};" in:fade={{ delay: 500 }}>
+<div class = "UISelector" bind:clientWidth={width} style="right:{location}px;" in:fade={{ delay: 500 }}>
 <NavItem isMobile={ $Device["isMobile"] }>
     <span slot="trigger">
         <IconButton path={mdiCodeBrackets }/>
@@ -77,17 +77,16 @@
 <style>
     .UISelector{
         position:absolute;
-        left:0px;
-        top:0px;
-        width:100%;
-        height:100%;
-        padding:11px;
-		height: var(--nav-size);
+        right:11px;
+        top:11px;
+        width:calc(var(--nav-size) * 0.8);
+        height:calc(var(--nav-size) * 0.8);
 		background-color: var(--bg);
 		border-bottom: var(--border);
 		list-style: none;
         float: left;
 		display: flex;
 		justify-content: flex-end;
+        z-index: 1;;
     }
 </style>
