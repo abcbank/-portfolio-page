@@ -22,9 +22,9 @@
             UIStatus[key] = "";
         }
         UIStatus[UIType] = mdiCheckBold;
-        if( $Device["isMobile"] ){
-            isOpen = false;
-        }
+        // if( $Device["isMobile"] ){
+        //     isOpen = false;
+        // }
     }
 
     onMount(()=>{
