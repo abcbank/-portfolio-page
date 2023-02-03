@@ -2,11 +2,13 @@
     import { onMount } from 'svelte'
 	import Tree from "./Tree.svelte"
     import { bench } from "../asciiArts"
+    import { Device } from '../global'
 
     let mouse = [0,0]
     let pmouse = [0,0]
     let BenchRect;
     let config = []
+    let Max = $Device["isMobile"] ? 2 : 10;
     function createConfig(){
         return {
             location: [mouse[0] / document.body.clientWidth * 100 , 98]
@@ -15,7 +17,7 @@
 
     function handleMouseDown(){
 
-        if(config.length < 10 && !(BenchRect.left - 50 <= mouse[0] && mouse[0] <= BenchRect.right + 50)){
+        if(config.length < Max && !(BenchRect.left - 50 <= mouse[0] && mouse[0] <= BenchRect.right + 50)){
             config.push(createConfig());
             config = config
         }
