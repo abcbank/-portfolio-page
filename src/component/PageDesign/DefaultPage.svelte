@@ -49,7 +49,6 @@
     function mouseMove(e) {
 		if(!$Device["isMobile"]){
 			if(isDragging){
-				console.log(e);
 				mouseLocation = getPositionX(e);
 			}
 		}
@@ -78,12 +77,14 @@
     }
 
     function touchEnd(e) {
-      isDragging = false;
-      const movedBy = mouseLocation - mouseDownLocation;
+		if(isDragging){
+			isDragging = false;
+			const movedBy = mouseLocation - mouseDownLocation;
 			console.log(mouseLocation);
-			console.log(mouseDownLocation);
-      if (movedBy < -100) next();
-      else if (movedBy > 100) prev();
+			console.log(mouseDownLocation);	
+			if (movedBy < -100) next();
+			else if (movedBy > 100) prev();
+		}
     }
 
     // Helper functions
