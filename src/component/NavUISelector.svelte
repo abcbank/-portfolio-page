@@ -1,6 +1,6 @@
 <script>
 	import { fade } from 'svelte/transition';
-    import { ContextVisible, season } from '../global'
+    import { Device, ContextVisible, season } from '../global'
     import { mdiSprout , mdiWaves , mdiSnowflake, mdiLeafMaple,mdiCheckBold,mdiCodeBrackets   } from '@mdi/js';
 	import NavItem from './Dropdown/NavItem.svelte';
 	import DropdownMenu from './Dropdown/DropdownMenu.svelte';
@@ -25,7 +25,7 @@
     })
 </script>
 <div class = "UISelector" in:fade={{ delay: 500 }}>
-<NavItem>
+<NavItem isMobile={ $Device["isMobile"] }>
     <span slot="trigger">
         <IconButton path={mdiCodeBrackets }/>
     </span>
@@ -71,7 +71,7 @@
 		background-color: var(--bg);
 		padding: 0 1rem;
 		border-bottom: var(--border);
-        float:left;
+        float:center;
 		list-style: none;
 		margin: 0;
 		padding: 0;
