@@ -107,7 +107,7 @@
  on:mousemove={touchMove} />
 
 <div class = "Page" style="background:{ background[$season] };">
-    <div class="inner-wrapper" on:mousewheel={onWheel} bind:this={slider}>
+    <div class="inner-wrapper" on:mousewheel={onWheel}>
         {#each slides as slide, id}
             {#if id === cur}
             <div
