@@ -22,6 +22,8 @@
     let dy = 0;
     let timer;
 
+    const MousePowerOffet = $Device["isMobile"] ? 10 : 5
+
     function getPower(a, b, time){
         return a + b / (time * 0.5)
         //Math.abs(a + b / (time * 0.5)) 
@@ -43,6 +45,20 @@
         dy = my - clientY;
         mx = clientX
         my = clientY
+      }
+    }
+    function handleTouchMove(e){
+      if($Device["isMobile"]){
+        clearTimeout(timer)
+        timer = setTimeout(() => {
+          dx = 0;
+          dy = 0;
+        }, 50)
+        
+        dx = mx - e.touches[0].clientX;
+        dy = my - e.touches[0].clientY;
+        mx = e.touches[0].clientX
+        my = e.touches[0].clientY
       }
     }
 
@@ -108,7 +124,7 @@
             mx - boundary/2 <= p_flake_x && p_flake_x <= mx + boundary / 2 && 
             my - boundary/2 <= p_flake_y && p_flake_y <= my + boundary / 2 ){
                 let distance = Math.sqrt(Math.pow(p_flake_x - mx, 2) + Math.pow(p_flake_y - my,2)) / 1000
-                flake.MouseForce = [-1/distance * 5 * dx / document.body.clientWidth, -1/distance * 5 * dy / document.body.clientHeight];
+                flake.MouseForce = [-1/distance * MousePowerOffet * dx / document.body.clientWidth, -1/distance * MousePowerOffet * dy / document.body.clientHeight];
                 flake.MouseTouchedTime = 1;
                 flake.EnableMouseForce = false;
             }
@@ -150,7 +166,9 @@
   </script>
 
 <svelte:window 
-    on:mousemove={handleMouseMove}/>
+  on:touchmove={handleTouchMove}
+  on:mousemove={handleMouseMove}/>
+
 <div class="sakuraframe" aria-hidden="true">
     {#each sakuraflakes as flake}
       <div
