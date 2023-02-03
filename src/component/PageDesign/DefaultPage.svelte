@@ -1,7 +1,7 @@
 <script>
     import DefaultSlide from './Slide/defaultSlide.svelte';
     import { hslide } from './hslide.js';
-	import { season } from "../../global"
+	import { Device, season } from "../../global"
     import { onMount } from "svelte";
     let background = [];
 
@@ -39,6 +39,29 @@
 	function next(e) {
 		cur = ++cur % slides.length
 	}
+
+    function mouseDown(e) {
+		if(!$Device["isMobile"]){
+			mouseDownLocation = getPositionX(e);
+			isDragging = true;
+		}
+    }
+    function mouseMove(e) {
+		if(!$Device["isMobile"]){
+			if(isDragging){
+				console.log(e);
+				mouseLocation = getPositionX(e);
+			}
+		}
+    }
+    function mouseUp(e) {
+		if(!$Device["isMobile"]){
+			isDragging = false;
+			const movedBy = mouseLocation - mouseDownLocation;
+			if (movedBy < -100) next();
+			else if (movedBy > 100) prev();
+		}
+    }
 	
     function touchStart(e) {
         mouseDownLocation = getPositionX(e);
@@ -64,10 +87,6 @@
       return event.type.includes('mouse')
         ? event.pageX
         : event.touches[0].clientX;
-    }
-
-    function setSliderPosition() {
-      slider.style.transform = `translateX(${currentTranslate}px)`;
     }
 
 	onMount(() => {		
@@ -101,10 +120,10 @@
  on:touchstart={touchStart}
  on:touchend={touchEnd}
  on:touchmove={touchMove}
- on:mousedown={touchStart}
- on:mouseup={touchEnd}
- on:mouseleave={touchEnd}
- on:mousemove={touchMove} />
+ on:mousedown={mouseDown}
+ on:mouseup={mouseUp}
+ on:mouseleave={mouseUp}
+ on:mousemove={mouseMove} />
 
 <div class = "Page" style="background:{ background[$season] };">
     <div class="inner-wrapper" on:mousewheel={onWheel}>
