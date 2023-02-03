@@ -113,10 +113,9 @@
 
 	onMount(() => {		
 		$Device["isMobile"] = false;
-		console.log($Device["agent"])
 		
 		for(var i in mobile_keys){
-			if(navigator.userAgent.match(mobile_keys[i])){ 
+			if($Device["agent"].match(mobile_keys[i])){ 
 				$Device["isMobile"] = true;
 				break;
 			}
