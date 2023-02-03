@@ -94,7 +94,11 @@ on:mouseleave|preventDefault={() => {if(!$Device["isMobile"]) closeCollapse()}}>
     <div on:click={()=> {isOpen = false;}} on:keydown={() => {}}>
       <NavLogo />
     </div>
-    <NavbarToggler on:click={() => {if($Device["isMobile"]) toggleCollapse()}} class="me-2" />
+    <!-- {#if $Device["isMobile"]} -->
+    <div style="text-align:center;">
+      <NavbarToggler  on:click={() => { toggleCollapse()}} class="me-2" />
+    </div>
+    <!-- {/if} -->
     <Collapse { isOpen } navbar expand="md" on:update={handleUpdate}>
       <Nav class="ms-auto" navbar>
         <div class="Items">
@@ -110,7 +114,7 @@ on:mouseleave|preventDefault={() => {if(!$Device["isMobile"]) closeCollapse()}}>
           <Dropdown isOpen={ ProjectOpen } nav inNavbar>
             <DropdownToggle nav class="nav-link" caret 
               on:click={() => { if(!$Device["isMobile"]) pushRouter('/Projects'); }}
-              on:doubleclick={() => {if($Device["isMobile"]) pushRouter('/Projects');}}>Projects</DropdownToggle>
+              on:dblclick={() => {if($Device["isMobile"]) pushRouter('/Projects');}}>Projects</DropdownToggle>
             <DropdownMenu>
               <DropdownItem on:click={()=> {  pushRouter('/2021/Projects'); }}>2021</DropdownItem>
               <DropdownItem divider />
@@ -126,7 +130,7 @@ on:mouseleave|preventDefault={() => {if(!$Device["isMobile"]) closeCollapse()}}>
           <Dropdown isOpen={ OutsourcingOpen } nav inNavbar>
             <DropdownToggle nav class="nav-link" caret 
             on:click={() => { if(!$Device["isMobile"]) pushRouter('/Outsourcing'); }}
-            on:doubleclick={() => { if($Device["isMobile"]) pushRouter('/Outsourcing'); }}>Outsourcing</DropdownToggle>
+            on:dblclick={() => { if($Device["isMobile"]) pushRouter('/Outsourcing'); }}>Outsourcing</DropdownToggle>
             <DropdownMenu>
               <DropdownItem  on:click={()=> { pushRouter("/2022/Outsourcing")}}>2022</DropdownItem>
               <DropdownItem divider />
