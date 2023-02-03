@@ -5,6 +5,7 @@
     Nav,
     NavItem,
     NavLink,
+    NavbarToggler,
     Dropdown,
     DropdownToggle,
     DropdownMenu,
@@ -74,6 +75,9 @@
         isOpen = isOpen_pre;
     }, 300)
   }
+  function toggleCollapse(){
+    isOpen = !isOpen;
+  }
   function pushRouter(link){
     isOpen = false;
     OutsourcingOpen = false;
@@ -90,6 +94,7 @@ on:mouseleave|preventDefault={() => {if(!$Device["isMobile"]) closeCollapse()}}>
     <div on:click={()=> {isOpen = false;}} on:keydown={() => {}}>
       <NavLogo />
     </div>
+    <NavbarToggler on:click={() => {if(!$Device["isMobile"]) toggleCollapse()}} class="me-2" />
     <Collapse { isOpen } navbar expand="md" on:update={handleUpdate}>
       <Nav class="ms-auto" navbar>
         <div class="Items">
