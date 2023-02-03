@@ -75,7 +75,9 @@
     }, 300)
   }
   function pushRouter(link){
-    isOpen = false; 
+    isOpen = false;
+    OutsourcingOpen = false;
+    ProjectOpen = false; 
     push(link);
   }
 </script>
