@@ -1,7 +1,7 @@
 
 <script>
     import { onMount } from "svelte";
-	import { LastPage, Device, ContextVisible, season } from "./global"
+	import { Color, LastPage, Device, ContextVisible, season } from "./global"
 	import { bench, fish_01, fish_02, fish_03, fish_04, fish_05, fish_06, fish_07, fish_08, fish_09, fish_10, fish_11, fish_12 } from "./asciiArts"
     import Navbar from "./component/Navbar.svelte";
 	import Snowflakes from "./component/Snowflakes.svelte";
@@ -40,6 +40,38 @@
 	let NavbarComponent = 0;
 	let drawComponent = true;
 	let t;
+
+
+    $Color["foreColor"] = {
+        "Spring": "#000",
+        "Summer": "#000",
+        "Fall": "#fff",
+        "Winter": "#fff"
+    }
+    $Color["backColor"]  = {
+        "Summer": "transparent",
+        "Spring": "transparent",
+        "Fall": "transparent",
+        "Winter": "transparent"
+    }
+    $Color["btnBackColor"] = {
+        "Spring": "#000",
+        "Summer": "#000",
+        "Fall": "#fff",
+        "Winter": "#fff"
+    }
+    $Color["btnBdrColor"] = {
+        "Spring": "#fff",
+        "Summer": "#fff",
+        "Fall": "#000",
+        "Winter": "#000"
+    }
+    $Color["btnSelectedColor"]  = {
+        "Spring": "#000",
+        "Summer": "#000",
+        "Fall": "#fff",
+        "Winter": "#fff"
+    }
 
 	let month = new Date().getMonth() + 1;
 	if(3 <= month && month <= 5){

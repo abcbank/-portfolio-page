@@ -1,5 +1,5 @@
 <script>
-	import Icon from './Icon.svelte';
+	import Icon from '../Icon/Icon.svelte';
 	
 	export let path = '';
     function empty(){

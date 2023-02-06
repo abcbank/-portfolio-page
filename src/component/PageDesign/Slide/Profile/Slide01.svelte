@@ -1,5 +1,6 @@
 <script>
     import DefaultSlide from '../defaultSlide.svelte'
+    import { Device } from '../../../../global.js'
     export let color;
 </script>
 

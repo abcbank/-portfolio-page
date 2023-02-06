@@ -1,12 +1,11 @@
 <script>
     import DefaultSlide from './Slide/defaultSlide.svelte';
     import { hslide } from './hslide.js';
-	import { LastPage, season } from "../../global"
+	import { Device, LastPage, season } from "../../global"
     import { onMount } from "svelte";
     import { mdiRayEndArrow } from '@mdi/js';
     let background = [];
 
-	// State
 
 	function changeSlide(slide) {
 		cur = slide;

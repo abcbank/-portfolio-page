@@ -1,6 +1,5 @@
 <script>
     import Icon from "../../../Icon/Icon.svelte"
-    import { fade } from "svelte/transition"
     import { Color, season } from "../../../../global"
     import DefaultSlide from '../defaultSlide.svelte'
     import { mdiArrowDownBoldOutline } from '@mdi/js';
@@ -10,10 +9,9 @@
 <DefaultSlide>
     <div class="context" style="color:{color};">
         <div class="header" style="width:100%; height:100%;">
-            당연히, 아래 버튼을 통해서도 가능하구요.
-        </div>
-        <div class="footer" style="width:100%; height:70px;" in:fade={{delay:200, duration:200,}}>
-        <Icon size="60px" color={$Color["foreColor"][$season]} path={mdiArrowDownBoldOutline} />
+            다만 일부 배경의 경우, 컴퓨터 사양에 따라
+            <br/>
+            렉이 걸릴 수 있으니 유의해주세요.
         </div>
     </div>
 </DefaultSlide>

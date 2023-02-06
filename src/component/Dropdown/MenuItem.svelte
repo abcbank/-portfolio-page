@@ -1,5 +1,5 @@
 <script>
-	import Icon from './Icon.svelte';
+	import Icon from '../Icon/Icon.svelte';
 	import IconButton from './IconButton.svelte';
 	
 	export let leftIcon = null;

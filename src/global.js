@@ -21,3 +21,8 @@ export const LastPage = writable({}, () => {
     return () => {
     }
 });
+export const Color = writable({}, () => {
+  
+    return () => {
+    }
+});

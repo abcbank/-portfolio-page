@@ -31,8 +31,8 @@
   function handleUpdate(event) {
     isOpen = event.detail.isOpen;
   }
-  let ProjectOpen;
-  let OutsourcingOpen;
+  let ProjectOpen = false;
+  let OutsourcingOpen = false;
   let ProjectOpen_pre;
   let OutsourcingOpen_pre;
 
@@ -83,8 +83,11 @@
   }
   function pushRouter(link){
     isOpen = false;
+    isOpen_pre = false;
     OutsourcingOpen = false;
-    ProjectOpen = false; 
+    OutsourcingOpen_pre = false;
+    ProjectOpen = false;
+    ProjectOpen_pre = false; 
     push(link);
   }
 
