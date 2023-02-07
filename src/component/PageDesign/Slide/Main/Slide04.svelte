@@ -11,6 +11,7 @@
     let visibility = true;
     let t;
 
+    const calcMainFontSize = () => !$Device["isMobile"] ? 2 : 2;
     const calcSubFontSize = () => !$Device["isMobile"] ? 2 : 1;
 
     function startAnimationTimer(){
@@ -46,10 +47,10 @@
             <div class="header" style="height:20%;">
                 물론, 이전 페이지도 볼 수 있겠죠?
             </div>
-            <div class="howToMove" sytle="margin-left:-1.5rem;">
+            <div class="howToMove" style="left: {-calcMainFontSize()/2}rem;">
                 {#if visibility}
                 <div class='animation' style="left: {!animationStart ? 25 : 75}%;"  in:fade={{duration:200}} out:fade={{duration:200}}>
-                    <Icon size="3rem" color={$Color["foreColor"][$season]} path={mdiCursorDefaultClick} />
+                    <Icon size={calcMainFontSize().toString() + "rem"} color={$Color["foreColor"][$season]} path={mdiCursorDefaultClick} />
                 </div>
                 {/if}
             </div>
