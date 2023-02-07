@@ -17,8 +17,8 @@
     let isOpen = true;
     let t;
 
-    const calcMainFontSize = () => !$Device["isMobile"] ? "2rem" : "9px";
-    const calcSubFontSize = () => !$Device["isMobile"] ? "2rem" : "9px";
+    const calcMainFontSize = () => !$Device["isMobile"] ? "2rem" : "25px";
+    const calcSubFontSize = () => !$Device["isMobile"] ? "1rem" : "18px";
 
     function startSlideChangeTimer(){
         clearTimeout(t);
@@ -72,7 +72,7 @@
                 <div class="howToMove">
                     {#if visibility}
                     <div class='animation' style="left: {!animationStart ? 75 : 25}%;"  in:fade={{duration:200}} out:fade={{duration:200}}>
-                        <Icon size="3rem" color={$Color["foreColor"][$season]} path={mdiCursorDefaultClick} />
+                        <Icon size={calcSubFontSize()} color={$Color["foreColor"][$season]} path={mdiCursorDefaultClick} />
                     </div>
                     {/if}
                 </div>
