@@ -1,6 +1,6 @@
 <script>
     import { Tooltip } from 'sveltestrap'
-    import { Color, season } from "../../../../global"
+    import { Device, Color, season } from "../../../../global"
     import DefaultSlide from '../defaultSlide.svelte'
     import Icon from "../../../Icon/Icon.svelte"
     import { onMount } from 'svelte'
@@ -16,6 +16,9 @@
     let visibility = true;
     let isOpen = true;
     let t;
+
+    const calcMainFontSize = () => !$Device["isMobile"] ? "2rem" : "9px";
+    const calcSubFontSize = () => !$Device["isMobile"] ? "2rem" : "9px";
 
     function startSlideChangeTimer(){
         clearTimeout(t);
@@ -58,15 +61,15 @@
 </script>
 
 <DefaultSlide>
-    <div class="context" style="color:{color};">
+    <div class="context" style="color:{color}; font-size:{calcMainFontSize()};">
         {#if Slide_01}
             <p out:fade={{duration:200,}}>Welcome to abcBank</p>
         {:else if Slide_02}
-            <div class="Section" style="height:100%; width:100%;" in:fade={{delay:300, duration:200}}>
+            <div class="Section" style="height:100%; width:100%; font-size:{calcMainFontSize()};" in:fade={{delay:300, duration:200}}>
                 <div class="header" style="height:20%;">
                     드래그를 통해 슬라이드를 이동해 보세요.
                 </div>
-                <div class="howToMove" sytle="margin-left:-1.5rem;">
+                <div class="howToMove">
                     {#if visibility}
                     <div class='animation' style="left: {!animationStart ? 75 : 25}%;"  in:fade={{duration:200}} out:fade={{duration:200}}>
                         <Icon size="3rem" color={$Color["foreColor"][$season]} path={mdiCursorDefaultClick} />
@@ -147,15 +150,6 @@
 		justify-content: center;
         flex-direction:column;
     }
-    .Section .Left{
-        font-size:1.5rem;
-		display: flex;
-        text-align:center;
-	    align-items: center;
-		justify-content: center;
-        flex-direction:row;
-        justify-content:space-between;
-    }
     .header{
 		display: flex;
         text-align:center;
@@ -178,5 +172,7 @@
         top:20%;
         position:relative;
         transition: all ease 2s;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
     }
 </style>

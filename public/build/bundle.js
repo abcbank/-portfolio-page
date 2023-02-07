@@ -1463,7 +1463,7 @@ var app = (function (jquery) {
     			div = element("div");
     			if (default_slot) default_slot.c();
     			set_attributes(div, div_data);
-    			add_location(div, file$1i, 61, 2, 1612);
+    			add_location(div, file$1i, 61, 2, 1551);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -2028,7 +2028,7 @@ var app = (function (jquery) {
     			button = element("button");
     			if (default_slot_or_fallback) default_slot_or_fallback.c();
     			set_attributes(button, button_data);
-    			add_location(button, file$1h, 54, 2, 1178);
+    			add_location(button, file$1h, 54, 2, 1124);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, button, anchor);
@@ -2146,7 +2146,7 @@ var app = (function (jquery) {
     			a = element("a");
     			if_block.c();
     			set_attributes(a, a_data);
-    			add_location(a, file$1h, 37, 2, 903);
+    			add_location(a, file$1h, 37, 2, 866);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, a, anchor);
@@ -2314,7 +2314,7 @@ var app = (function (jquery) {
     	return block_1;
     }
 
-    // (65:10)         
+    // (65:10)        
     function fallback_block$2(ctx) {
     	let current_block_type_index;
     	let if_block;
@@ -2387,7 +2387,7 @@ var app = (function (jquery) {
     		block: block_1,
     		id: fallback_block$2.name,
     		type: "fallback",
-    		source: "(65:10)         ",
+    		source: "(65:10)        ",
     		ctx
     	});
 
@@ -4745,7 +4745,7 @@ var app = (function (jquery) {
     			div = element("div");
     			if (default_slot) default_slot.c();
     			set_attributes(div, div_data);
-    			add_location(div, file$1g, 127, 2, 3450);
+    			add_location(div, file$1g, 127, 2, 3323);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -4823,7 +4823,7 @@ var app = (function (jquery) {
     			li = element("li");
     			if (default_slot) default_slot.c();
     			set_attributes(li, li_data);
-    			add_location(li, file$1g, 123, 2, 3355);
+    			add_location(li, file$1g, 123, 2, 3232);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, li, anchor);
@@ -5335,7 +5335,7 @@ var app = (function (jquery) {
     			div = element("div");
     			if (default_slot) default_slot.c();
     			set_attributes(div, div_data);
-    			add_location(div, file$1f, 23, 0, 565);
+    			add_location(div, file$1f, 23, 0, 542);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -5569,7 +5569,7 @@ var app = (function (jquery) {
     			button = element("button");
     			if (default_slot) default_slot.c();
     			set_attributes(button, button_data);
-    			add_location(button, file$1e, 49, 2, 1204);
+    			add_location(button, file$1e, 49, 2, 1155);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, button, anchor);
@@ -5667,7 +5667,7 @@ var app = (function (jquery) {
     			a = element("a");
     			if (default_slot) default_slot.c();
     			set_attributes(a, a_data);
-    			add_location(a, file$1e, 45, 2, 1093);
+    			add_location(a, file$1e, 45, 2, 1048);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, a, anchor);
@@ -5754,7 +5754,7 @@ var app = (function (jquery) {
     			div = element("div");
     			if (default_slot) default_slot.c();
     			set_attributes(div, div_data);
-    			add_location(div, file$1e, 41, 2, 974);
+    			add_location(div, file$1e, 41, 2, 933);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -5843,7 +5843,7 @@ var app = (function (jquery) {
     			h6 = element("h6");
     			if (default_slot) default_slot.c();
     			set_attributes(h6, h6_data);
-    			add_location(h6, file$1e, 37, 2, 854);
+    			add_location(h6, file$1e, 37, 2, 817);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, h6, anchor);
@@ -6224,7 +6224,7 @@ var app = (function (jquery) {
     			div = element("div");
     			if (default_slot) default_slot.c();
     			set_attributes(div, div_data);
-    			add_location(div, file$1d, 41, 0, 974);
+    			add_location(div, file$1d, 41, 0, 933);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -6475,7 +6475,7 @@ var app = (function (jquery) {
     			button = element("button");
     			if (default_slot_or_fallback) default_slot_or_fallback.c();
     			set_attributes(button, button_data);
-    			add_location(button, file$1c, 94, 2, 2042);
+    			add_location(button, file$1c, 94, 2, 1948);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, button, anchor);
@@ -6586,7 +6586,7 @@ var app = (function (jquery) {
     			span = element("span");
     			if (default_slot_or_fallback) default_slot_or_fallback.c();
     			set_attributes(span, span_data);
-    			add_location(span, file$1c, 80, 2, 1753);
+    			add_location(span, file$1c, 80, 2, 1673);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, span, anchor);
@@ -6695,7 +6695,7 @@ var app = (function (jquery) {
     			div = element("div");
     			if (default_slot_or_fallback) default_slot_or_fallback.c();
     			set_attributes(div, div_data);
-    			add_location(div, file$1c, 66, 2, 1448);
+    			add_location(div, file$1c, 66, 2, 1382);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -6803,7 +6803,7 @@ var app = (function (jquery) {
     			a = element("a");
     			if (default_slot_or_fallback) default_slot_or_fallback.c();
     			set_attributes(a, a_data);
-    			add_location(a, file$1c, 51, 2, 1131);
+    			add_location(a, file$1c, 51, 2, 1080);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, a, anchor);
@@ -6881,7 +6881,7 @@ var app = (function (jquery) {
     	return block_1;
     }
 
-    // (105:10)         
+    // (105:10)        
     function fallback_block_3(ctx) {
     	let span;
     	let t;
@@ -6891,7 +6891,7 @@ var app = (function (jquery) {
     			span = element("span");
     			t = text(/*ariaLabel*/ ctx[1]);
     			attr_dev(span, "class", "visually-hidden");
-    			add_location(span, file$1c, 105, 6, 2270);
+    			add_location(span, file$1c, 105, 6, 2165);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, span, anchor);
@@ -6909,14 +6909,14 @@ var app = (function (jquery) {
     		block: block_1,
     		id: fallback_block_3.name,
     		type: "fallback",
-    		source: "(105:10)         ",
+    		source: "(105:10)        ",
     		ctx
     	});
 
     	return block_1;
     }
 
-    // (90:10)         
+    // (90:10)        
     function fallback_block_2(ctx) {
     	let span;
     	let t;
@@ -6926,7 +6926,7 @@ var app = (function (jquery) {
     			span = element("span");
     			t = text(/*ariaLabel*/ ctx[1]);
     			attr_dev(span, "class", "visually-hidden");
-    			add_location(span, file$1c, 90, 6, 1957);
+    			add_location(span, file$1c, 90, 6, 1867);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, span, anchor);
@@ -6944,14 +6944,14 @@ var app = (function (jquery) {
     		block: block_1,
     		id: fallback_block_2.name,
     		type: "fallback",
-    		source: "(90:10)         ",
+    		source: "(90:10)        ",
     		ctx
     	});
 
     	return block_1;
     }
 
-    // (76:10)         
+    // (76:10)        
     function fallback_block_1(ctx) {
     	let span;
     	let t;
@@ -6961,7 +6961,7 @@ var app = (function (jquery) {
     			span = element("span");
     			t = text(/*ariaLabel*/ ctx[1]);
     			attr_dev(span, "class", "visually-hidden");
-    			add_location(span, file$1c, 76, 6, 1651);
+    			add_location(span, file$1c, 76, 6, 1575);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, span, anchor);
@@ -6979,14 +6979,14 @@ var app = (function (jquery) {
     		block: block_1,
     		id: fallback_block_1.name,
     		type: "fallback",
-    		source: "(76:10)         ",
+    		source: "(76:10)        ",
     		ctx
     	});
 
     	return block_1;
     }
 
-    // (62:10)         
+    // (62:10)        
     function fallback_block$1(ctx) {
     	let span;
     	let t;
@@ -6996,7 +6996,7 @@ var app = (function (jquery) {
     			span = element("span");
     			t = text(/*ariaLabel*/ ctx[1]);
     			attr_dev(span, "class", "visually-hidden");
-    			add_location(span, file$1c, 62, 6, 1349);
+    			add_location(span, file$1c, 62, 6, 1287);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, span, anchor);
@@ -7014,7 +7014,7 @@ var app = (function (jquery) {
     		block: block_1,
     		id: fallback_block$1.name,
     		type: "fallback",
-    		source: "(62:10)         ",
+    		source: "(62:10)        ",
     		ctx
     	});
 
@@ -7449,7 +7449,7 @@ var app = (function (jquery) {
     		c: function create() {
     			div = element("div");
     			if (default_slot) default_slot.c();
-    			add_location(div, file$1b, 3, 0, 70);
+    			add_location(div, file$1b, 3, 0, 67);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -7566,7 +7566,7 @@ var app = (function (jquery) {
     			div = element("div");
     			if (default_slot) default_slot.c();
     			set_attributes(div, div_data);
-    			add_location(div, file$1a, 18, 0, 364);
+    			add_location(div, file$1a, 18, 0, 346);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -7707,7 +7707,7 @@ var app = (function (jquery) {
     			ul = element("ul");
     			if (default_slot) default_slot.c();
     			set_attributes(ul, ul_data);
-    			add_location(ul, file$19, 39, 0, 980);
+    			add_location(ul, file$19, 39, 0, 941);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -8175,7 +8175,7 @@ var app = (function (jquery) {
     			nav = element("nav");
     			if_block.c();
     			set_attributes(nav, nav_data);
-    			add_location(nav, file$18, 38, 0, 927);
+    			add_location(nav, file$18, 38, 0, 889);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -8451,7 +8451,7 @@ var app = (function (jquery) {
     			li = element("li");
     			if (default_slot) default_slot.c();
     			set_attributes(li, li_data);
-    			add_location(li, file$17, 10, 0, 229);
+    			add_location(li, file$17, 10, 0, 219);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -8608,7 +8608,7 @@ var app = (function (jquery) {
     			a = element("a");
     			if (default_slot) default_slot.c();
     			set_attributes(a, a_data);
-    			add_location(a, file$16, 27, 0, 499);
+    			add_location(a, file$16, 27, 0, 472);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -8840,7 +8840,7 @@ var app = (function (jquery) {
     			a = element("a");
     			if (default_slot) default_slot.c();
     			set_attributes(a, a_data);
-    			add_location(a, file$15, 10, 0, 202);
+    			add_location(a, file$15, 10, 0, 192);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -8984,7 +8984,7 @@ var app = (function (jquery) {
     /* node_modules\sveltestrap\src\NavbarToggler.svelte generated by Svelte v3.55.1 */
     const file$14 = "node_modules\\sveltestrap\\src\\NavbarToggler.svelte";
 
-    // (13:8)       
+    // (13:8)      
     function fallback_block(ctx) {
     	let span;
 
@@ -8992,7 +8992,7 @@ var app = (function (jquery) {
     		c: function create() {
     			span = element("span");
     			attr_dev(span, "class", "navbar-toggler-icon");
-    			add_location(span, file$14, 13, 4, 287);
+    			add_location(span, file$14, 13, 4, 274);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, span, anchor);
@@ -9007,7 +9007,7 @@ var app = (function (jquery) {
     		block,
     		id: fallback_block.name,
     		type: "fallback",
-    		source: "(13:8)       ",
+    		source: "(13:8)      ",
     		ctx
     	});
 
@@ -9427,11 +9427,11 @@ var app = (function (jquery) {
     			if_block.c();
     			attr_dev(div0, "class", "tooltip-arrow");
     			attr_dev(div0, "data-popper-arrow", "");
-    			add_location(div0, file$13, 132, 6, 3451);
+    			add_location(div0, file$13, 132, 6, 3319);
     			attr_dev(div1, "class", "tooltip-inner");
-    			add_location(div1, file$13, 133, 6, 3506);
+    			add_location(div1, file$13, 133, 6, 3373);
     			set_attributes(div2, div2_data);
-    			add_location(div2, file$13, 124, 4, 3285);
+    			add_location(div2, file$13, 124, 4, 3161);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div2, anchor);
@@ -18341,7 +18341,7 @@ var app = (function (jquery) {
     /* src\component\PageDesign\Slide\Main\Slide01.svelte generated by Svelte v3.55.1 */
     const file$N = "src\\component\\PageDesign\\Slide\\Main\\Slide01.svelte";
 
-    // (64:27) 
+    // (67:27) 
     function create_if_block_1$2(ctx) {
     	let div2;
     	let div0;
@@ -18359,16 +18359,16 @@ var app = (function (jquery) {
     			t1 = space();
     			div1 = element("div");
     			if (if_block) if_block.c();
-    			attr_dev(div0, "class", "header svelte-1t6wt2e");
+    			attr_dev(div0, "class", "header svelte-1b1z2ee");
     			set_style(div0, "height", "20%");
-    			add_location(div0, file$N, 65, 16, 1948);
-    			attr_dev(div1, "class", "howToMove svelte-1t6wt2e");
-    			attr_dev(div1, "sytle", "margin-left:-1.5rem;");
-    			add_location(div1, file$N, 68, 16, 2074);
-    			attr_dev(div2, "class", "Section svelte-1t6wt2e");
+    			add_location(div0, file$N, 68, 16, 2171);
+    			attr_dev(div1, "class", "howToMove svelte-1b1z2ee");
+    			add_location(div1, file$N, 71, 16, 2297);
+    			attr_dev(div2, "class", "Section svelte-1b1z2ee");
     			set_style(div2, "height", "100%");
     			set_style(div2, "width", "100%");
-    			add_location(div2, file$N, 64, 12, 1840);
+    			set_style(div2, "font-size", /*calcMainFontSize*/ ctx[7]());
+    			add_location(div2, file$N, 67, 12, 2031);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div2, anchor);
@@ -18429,14 +18429,14 @@ var app = (function (jquery) {
     		block,
     		id: create_if_block_1$2.name,
     		type: "if",
-    		source: "(64:27) ",
+    		source: "(67:27) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (62:8) {#if Slide_01}
+    // (65:8) {#if Slide_01}
     function create_if_block$3(ctx) {
     	let p;
     	let p_outro;
@@ -18446,7 +18446,7 @@ var app = (function (jquery) {
     		c: function create() {
     			p = element("p");
     			p.textContent = "Welcome to abcBank";
-    			add_location(p, file$N, 62, 12, 1745);
+    			add_location(p, file$N, 65, 12, 1936);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -18472,14 +18472,14 @@ var app = (function (jquery) {
     		block,
     		id: create_if_block$3.name,
     		type: "if",
-    		source: "(62:8) {#if Slide_01}",
+    		source: "(65:8) {#if Slide_01}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (70:20) {#if visibility}
+    // (73:20) {#if visibility}
     function create_if_block_2$1(ctx) {
     	let div;
     	let icon;
@@ -18500,9 +18500,9 @@ var app = (function (jquery) {
     		c: function create() {
     			div = element("div");
     			create_component(icon.$$.fragment);
-    			attr_dev(div, "class", "animation svelte-1t6wt2e");
+    			attr_dev(div, "class", "animation svelte-1b1z2ee");
     			set_style(div, "left", (!/*animationStart*/ ctx[3] ? 75 : 25) + "%");
-    			add_location(div, file$N, 70, 20, 2186);
+    			add_location(div, file$N, 73, 20, 2380);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -18547,14 +18547,14 @@ var app = (function (jquery) {
     		block,
     		id: create_if_block_2$1.name,
     		type: "if",
-    		source: "(70:20) {#if visibility}",
+    		source: "(73:20) {#if visibility}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (60:0) <DefaultSlide>
+    // (63:0) <DefaultSlide>
     function create_default_slot$D(ctx) {
     	let div;
     	let current_block_type_index;
@@ -18577,9 +18577,10 @@ var app = (function (jquery) {
     		c: function create() {
     			div = element("div");
     			if (if_block) if_block.c();
-    			attr_dev(div, "class", "context svelte-1t6wt2e");
+    			attr_dev(div, "class", "context svelte-1b1z2ee");
     			set_style(div, "color", /*color*/ ctx[0]);
-    			add_location(div, file$N, 60, 4, 1663);
+    			set_style(div, "font-size", /*calcMainFontSize*/ ctx[7]());
+    			add_location(div, file$N, 63, 4, 1822);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -18652,7 +18653,7 @@ var app = (function (jquery) {
     		block,
     		id: create_default_slot$D.name,
     		type: "slot",
-    		source: "(60:0) <DefaultSlide>",
+    		source: "(63:0) <DefaultSlide>",
     		ctx
     	});
 
@@ -18685,7 +18686,7 @@ var app = (function (jquery) {
     		p: function update(ctx, [dirty]) {
     			const defaultslide_changes = {};
 
-    			if (dirty & /*$$scope, color, Slide_01, animationStart, $Color, $season, visibility, Slide_02*/ 16511) {
+    			if (dirty & /*$$scope, color, Slide_01, animationStart, $Color, $season, visibility, Slide_02*/ 131199) {
     				defaultslide_changes.$$scope = { dirty, ctx };
     			}
 
@@ -18717,8 +18718,11 @@ var app = (function (jquery) {
     }
 
     function instance$N($$self, $$props, $$invalidate) {
+    	let $Device;
     	let $Color;
     	let $season;
+    	validate_store(Device, 'Device');
+    	component_subscribe($$self, Device, $$value => $$invalidate(9, $Device = $$value));
     	validate_store(Color, 'Color');
     	component_subscribe($$self, Color, $$value => $$invalidate(5, $Color = $$value));
     	validate_store(season, 'season');
@@ -18733,6 +18737,8 @@ var app = (function (jquery) {
     	let visibility = true;
     	let isOpen = true;
     	let t;
+    	const calcMainFontSize = () => !$Device["isMobile"] ? "2rem" : "9px";
+    	const calcSubFontSize = () => !$Device["isMobile"] ? "2rem" : "9px";
 
     	function startSlideChangeTimer() {
     		clearTimeout(t);
@@ -18815,6 +18821,7 @@ var app = (function (jquery) {
 
     	$$self.$capture_state = () => ({
     		Tooltip,
+    		Device,
     		Color,
     		season,
     		DefaultSlide,
@@ -18831,10 +18838,13 @@ var app = (function (jquery) {
     		visibility,
     		isOpen,
     		t,
+    		calcMainFontSize,
+    		calcSubFontSize,
     		startSlideChangeTimer,
     		startAnimationTimer,
     		animationFinished,
     		restartAnimation,
+    		$Device,
     		$Color,
     		$season
     	});
@@ -18854,7 +18864,16 @@ var app = (function (jquery) {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [color, Slide_01, Slide_02, animationStart, visibility, $Color, $season];
+    	return [
+    		color,
+    		Slide_01,
+    		Slide_02,
+    		animationStart,
+    		visibility,
+    		$Color,
+    		$season,
+    		calcMainFontSize
+    	];
     }
 
     class Slide01$8 extends SvelteComponentDev {
