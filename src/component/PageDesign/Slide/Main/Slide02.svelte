@@ -18,7 +18,7 @@
     let t;
 
     const calcMainFontSize = () => !$Device["isMobile"] ? 2 : 2;
-    const calcSubFontSize = () => !$Device["isMobile"] ? 2 : 1;
+    const calcSubFontSize = () => !$Device["isMobile"] ? 2 : 0.8;
 
     function startSlideChangeTimer(){
         clearTimeout(t);
