@@ -45,31 +45,31 @@
     $Color["foreColor"] = {
         "Spring": "#000",
         "Summer": "#000",
-        "Fall": "#fff",
+        "Fall": "#000",
         "Winter": "#fff"
     }
     $Color["backColor"]  = {
         "Summer": "transparent",
         "Spring": "transparent",
-        "Fall": "transparent",
+        "Fall": "#fff",
         "Winter": "transparent"
     }
     $Color["btnBackColor"] = {
         "Spring": "#000",
         "Summer": "#000",
-        "Fall": "#fff",
+        "Fall": "#000",
         "Winter": "#fff"
     }
     $Color["btnBdrColor"] = {
         "Spring": "#fff",
         "Summer": "#fff",
-        "Fall": "#000",
+        "Fall": "#fff",
         "Winter": "#000"
     }
     $Color["btnSelectedColor"]  = {
         "Spring": "#000",
         "Summer": "#000",
-        "Fall": "#fff",
+        "Fall": "#000",
         "Winter": "#fff"
     }
 
