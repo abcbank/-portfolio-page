@@ -1,13 +1,12 @@
 <script>
-    import Icon from "../../../Icon/Icon.svelte"
-    import { Color, season } from "../../../../global"
+    import { Device } from "../../../../global"
     import DefaultSlide from '../defaultSlide.svelte'
-    import { mdiArrowDownBoldOutline } from '@mdi/js';
     export let color;
+    const calcSubFontSize = () => !$Device["isMobile"] ? 2 : 1;
 </script>
 
 <DefaultSlide>
-    <div class="context" style="color:{color};">
+    <div class="context" style="color:{color}; font-size:{calcSubFontSize()}rem;">
         <div class="header" style="width:100%; height:100%;">
             다만 일부 배경의 경우, 컴퓨터 사양에 따라
             <br/>
