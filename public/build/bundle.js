@@ -11295,12 +11295,12 @@ var app = (function (jquery) {
     			attr_dev(div0, "id", `label-${/*uniqueID*/ ctx[6]}`);
     			add_location(div0, file$Y, 57, 4, 1567);
     			attr_dev(div1, "role", "radiogroup");
-    			attr_dev(div1, "class", "group-container svelte-cukkt5");
+    			attr_dev(div1, "class", "group-container svelte-16iwb3c");
     			attr_dev(div1, "aria-labelledby", `label-${/*uniqueID*/ ctx[6]}`);
     			set_style(div1, "font-size", /*fontSize*/ ctx[5] + "px");
     			attr_dev(div1, "id", `group-${/*uniqueID*/ ctx[6]}`);
     			add_location(div1, file$Y, 52, 4, 1395);
-    			attr_dev(div2, "class", "s s--multi svelte-cukkt5");
+    			attr_dev(div2, "class", "s s--multi svelte-16iwb3c");
     			add_location(div2, file$Y, 51, 0, 1365);
     		},
     		m: function mount(target, anchor) {
@@ -11384,9 +11384,9 @@ var app = (function (jquery) {
     			attr_dev(button, "role", "switch");
     			attr_dev(button, "aria-checked", /*checked*/ ctx[1]);
     			attr_dev(button, "aria-labelledby", `switch-${/*uniqueID*/ ctx[6]}`);
-    			attr_dev(button, "class", "svelte-cukkt5");
+    			attr_dev(button, "class", "svelte-16iwb3c");
     			add_location(button, file$Y, 43, 4, 1188);
-    			attr_dev(div, "class", "s s--slider svelte-cukkt5");
+    			attr_dev(div, "class", "s s--slider svelte-16iwb3c");
     			set_style(div, "font-size", /*fontSize*/ ctx[5] + "px");
     			add_location(div, file$Y, 41, 0, 1074);
     		},
@@ -11457,18 +11457,18 @@ var app = (function (jquery) {
     			span2 = element("span");
     			span2.textContent = "off";
     			attr_dev(span0, "id", `switch-${/*uniqueID*/ ctx[6]}`);
-    			attr_dev(span0, "class", "svelte-cukkt5");
+    			attr_dev(span0, "class", "svelte-16iwb3c");
     			add_location(span0, file$Y, 30, 4, 764);
-    			attr_dev(span1, "class", "svelte-cukkt5");
+    			attr_dev(span1, "class", "svelte-16iwb3c");
     			add_location(span1, file$Y, 36, 12, 973);
-    			attr_dev(span2, "class", "svelte-cukkt5");
+    			attr_dev(span2, "class", "svelte-16iwb3c");
     			add_location(span2, file$Y, 37, 12, 1002);
     			attr_dev(button, "role", "switch");
     			attr_dev(button, "aria-checked", /*checked*/ ctx[1]);
     			attr_dev(button, "aria-labelledby", `switch-${/*uniqueID*/ ctx[6]}`);
-    			attr_dev(button, "class", "svelte-cukkt5");
+    			attr_dev(button, "class", "svelte-16iwb3c");
     			add_location(button, file$Y, 31, 4, 816);
-    			attr_dev(div, "class", "s s--inner svelte-cukkt5");
+    			attr_dev(div, "class", "s s--inner svelte-16iwb3c");
     			add_location(div, file$Y, 29, 0, 734);
     		},
     		m: function mount(target, anchor) {
@@ -11536,11 +11536,11 @@ var app = (function (jquery) {
     			attr_dev(input, "id", input_id_value = `${/*option*/ ctx[12]}-${/*uniqueID*/ ctx[6]}`);
     			input.__value = input_value_value = /*option*/ ctx[12];
     			input.value = input.__value;
-    			attr_dev(input, "class", "svelte-cukkt5");
+    			attr_dev(input, "class", "svelte-16iwb3c");
     			/*$$binding_groups*/ ctx[10][0].push(input);
     			add_location(input, file$Y, 59, 12, 1674);
     			attr_dev(label_1, "for", label_1_for_value = `${/*option*/ ctx[12]}-${/*uniqueID*/ ctx[6]}`);
-    			attr_dev(label_1, "class", "svelte-cukkt5");
+    			attr_dev(label_1, "class", "svelte-16iwb3c");
     			add_location(label_1, file$Y, 60, 12, 1771);
     		},
     		m: function mount(target, anchor) {
@@ -18359,16 +18359,17 @@ var app = (function (jquery) {
     			t1 = space();
     			div1 = element("div");
     			if (if_block) if_block.c();
-    			attr_dev(div0, "class", "header svelte-1b1z2ee");
+    			attr_dev(div0, "class", "header svelte-ltys30");
     			set_style(div0, "height", "20%");
-    			add_location(div0, file$N, 68, 16, 2171);
-    			attr_dev(div1, "class", "howToMove svelte-1b1z2ee");
-    			add_location(div1, file$N, 71, 16, 2297);
-    			attr_dev(div2, "class", "Section svelte-1b1z2ee");
+    			add_location(div0, file$N, 68, 16, 2158);
+    			attr_dev(div1, "class", "howToMove svelte-ltys30");
+    			set_style(div1, "left", -/*calcSubFontSize*/ ctx[8]() / 2 + "rem");
+    			add_location(div1, file$N, 71, 16, 2284);
+    			attr_dev(div2, "class", "Section svelte-ltys30");
     			set_style(div2, "height", "100%");
     			set_style(div2, "width", "100%");
-    			set_style(div2, "font-size", /*calcMainFontSize*/ ctx[7]());
-    			add_location(div2, file$N, 67, 12, 2031);
+    			set_style(div2, "font-size", /*calcSubFontSize*/ ctx[8]() + "rem");
+    			add_location(div2, file$N, 67, 12, 2016);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div2, anchor);
@@ -18446,7 +18447,7 @@ var app = (function (jquery) {
     		c: function create() {
     			p = element("p");
     			p.textContent = "Welcome to abcBank";
-    			add_location(p, file$N, 65, 12, 1936);
+    			add_location(p, file$N, 65, 12, 1921);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -18489,7 +18490,7 @@ var app = (function (jquery) {
 
     	icon = new Icon({
     			props: {
-    				size: "3rem",
+    				size: /*calcSubFontSize*/ ctx[8]().toString() + "rem",
     				color: /*$Color*/ ctx[5]["foreColor"][/*$season*/ ctx[6]],
     				path: mdiCursorDefaultClick
     			},
@@ -18500,9 +18501,9 @@ var app = (function (jquery) {
     		c: function create() {
     			div = element("div");
     			create_component(icon.$$.fragment);
-    			attr_dev(div, "class", "animation svelte-1b1z2ee");
+    			attr_dev(div, "class", "animation svelte-ltys30");
     			set_style(div, "left", (!/*animationStart*/ ctx[3] ? 75 : 25) + "%");
-    			add_location(div, file$N, 73, 20, 2380);
+    			add_location(div, file$N, 73, 20, 2408);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -18577,10 +18578,10 @@ var app = (function (jquery) {
     		c: function create() {
     			div = element("div");
     			if (if_block) if_block.c();
-    			attr_dev(div, "class", "context svelte-1b1z2ee");
+    			attr_dev(div, "class", "context svelte-ltys30");
     			set_style(div, "color", /*color*/ ctx[0]);
-    			set_style(div, "font-size", /*calcMainFontSize*/ ctx[7]());
-    			add_location(div, file$N, 63, 4, 1822);
+    			set_style(div, "font-size", /*calcMainFontSize*/ ctx[7]() + "rem");
+    			add_location(div, file$N, 63, 4, 1804);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -18722,7 +18723,7 @@ var app = (function (jquery) {
     	let $Color;
     	let $season;
     	validate_store(Device, 'Device');
-    	component_subscribe($$self, Device, $$value => $$invalidate(9, $Device = $$value));
+    	component_subscribe($$self, Device, $$value => $$invalidate(10, $Device = $$value));
     	validate_store(Color, 'Color');
     	component_subscribe($$self, Color, $$value => $$invalidate(5, $Color = $$value));
     	validate_store(season, 'season');
@@ -18737,8 +18738,8 @@ var app = (function (jquery) {
     	let visibility = true;
     	let isOpen = true;
     	let t;
-    	const calcMainFontSize = () => !$Device["isMobile"] ? "2rem" : "9px";
-    	const calcSubFontSize = () => !$Device["isMobile"] ? "2rem" : "9px";
+    	const calcMainFontSize = () => !$Device["isMobile"] ? 2 : 2;
+    	const calcSubFontSize = () => !$Device["isMobile"] ? 2 : 2;
 
     	function startSlideChangeTimer() {
     		clearTimeout(t);
@@ -18872,7 +18873,8 @@ var app = (function (jquery) {
     		visibility,
     		$Color,
     		$season,
-    		calcMainFontSize
+    		calcMainFontSize,
+    		calcSubFontSize
     	];
     }
 

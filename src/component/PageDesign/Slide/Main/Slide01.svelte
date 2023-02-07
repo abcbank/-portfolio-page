@@ -17,8 +17,8 @@
     let isOpen = true;
     let t;
 
-    const calcMainFontSize = () => !$Device["isMobile"] ? "2rem" : "2rem";
-    const calcSubFontSize = () => !$Device["isMobile"] ? "1rem" : "1rem";
+    const calcMainFontSize = () => !$Device["isMobile"] ? 2 : 2;
+    const calcSubFontSize = () => !$Device["isMobile"] ? 2 : 2;
 
     function startSlideChangeTimer(){
         clearTimeout(t);
@@ -61,18 +61,18 @@
 </script>
 
 <DefaultSlide>
-    <div class="context" style="color:{color}; font-size:{calcMainFontSize()};">
+    <div class="context" style="color:{color}; font-size:{calcMainFontSize()}rem;">
         {#if Slide_01}
             <p out:fade={{duration:200,}}>Welcome to abcBank</p>
         {:else if Slide_02}
-            <div class="Section" style="height:100%; width:100%; font-size:{calcSubFontSize()};" in:fade={{delay:300, duration:200}}>
+            <div class="Section" style="height:100%; width:100%; font-size:{calcSubFontSize()}rem;" in:fade={{delay:300, duration:200}}>
                 <div class="header" style="height:20%;">
                     드래그를 통해 슬라이드를 이동해 보세요.
                 </div>
-                <div class="howToMove">
+                <div class="howToMove" style="left: {-calcSubFontSize()/2}rem;">
                     {#if visibility}
                     <div class='animation' style="left: {!animationStart ? 75 : 25}%;"  in:fade={{duration:200}} out:fade={{duration:200}}>
-                        <Icon size={calcSubFontSize()} color={$Color["foreColor"][$season]} path={mdiCursorDefaultClick} />
+                        <Icon size={calcSubFontSize().toString() + "rem"} color={$Color["foreColor"][$season]} path={mdiCursorDefaultClick} />
                     </div>
                     {/if}
                 </div>
@@ -167,12 +167,10 @@
     .animation{
         font-size:1rem;
         text-align:center;
-        width:1.5em;
-        height:1.5em;
+        width:1.5rem;
+        height:1.5rem;
         top:20%;
         position:relative;
         transition: all ease 2s;
-        -ms-transform: translate(-50%, -50%);
-        transform: translate(-50%, -50%);
     }
 </style>

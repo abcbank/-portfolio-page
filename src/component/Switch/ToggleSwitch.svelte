@@ -68,7 +68,7 @@
 {/if}
 
 <style>
-			:root {
+    :root {
 		--accent-color: rgb(57, 3, 128);
 		--gray: #ccc;
 	}
