@@ -17,8 +17,8 @@
     let isOpen = true;
     let t;
 
-    const calcMainFontSize = () => !$Device["isMobile"] ? "2rem" : "25px";
-    const calcSubFontSize = () => !$Device["isMobile"] ? "1rem" : "18px";
+    const calcMainFontSize = () => !$Device["isMobile"] ? "2rem" : "2rem";
+    const calcSubFontSize = () => !$Device["isMobile"] ? "1rem" : "1rem";
 
     function startSlideChangeTimer(){
         clearTimeout(t);
@@ -65,7 +65,7 @@
         {#if Slide_01}
             <p out:fade={{duration:200,}}>Welcome to abcBank</p>
         {:else if Slide_02}
-            <div class="Section" style="height:100%; width:100%; font-size:{calcMainFontSize()};" in:fade={{delay:300, duration:200}}>
+            <div class="Section" style="height:100%; width:100%; font-size:{calcSubFontSize()};" in:fade={{delay:300, duration:200}}>
                 <div class="header" style="height:20%;">
                     드래그를 통해 슬라이드를 이동해 보세요.
                 </div>
