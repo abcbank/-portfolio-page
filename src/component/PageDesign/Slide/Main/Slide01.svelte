@@ -18,7 +18,7 @@
     let t;
 
     const calcMainFontSize = () => !$Device["isMobile"] ? 2 : 2;
-    const calcSubFontSize = () => !$Device["isMobile"] ? 2 : 2;
+    const calcSubFontSize = () => !$Device["isMobile"] ? 2 : 1;
 
     function startSlideChangeTimer(){
         clearTimeout(t);
@@ -69,10 +69,10 @@
                 <div class="header" style="height:20%;">
                     드래그를 통해 슬라이드를 이동해 보세요.
                 </div>
-                <div class="howToMove" style="left: {-calcSubFontSize()/2}rem;">
+                <div class="howToMove" style="left: {-calcMainFontSize()/2}rem;">
                     {#if visibility}
                     <div class='animation' style="left: {!animationStart ? 75 : 25}%;"  in:fade={{duration:200}} out:fade={{duration:200}}>
-                        <Icon size={calcSubFontSize().toString() + "rem"} color={$Color["foreColor"][$season]} path={mdiCursorDefaultClick} />
+                        <Icon size={calcMainFontSize().toString() + "rem"} color={$Color["foreColor"][$season]} path={mdiCursorDefaultClick} />
                     </div>
                     {/if}
                 </div>
