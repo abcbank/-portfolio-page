@@ -1,6 +1,6 @@
 <script>
     import { Tooltip } from 'sveltestrap'
-    import { Color, season } from "../../../../global"
+    import { Device, Color, season } from "../../../../global"
     import DefaultSlide from '../defaultSlide.svelte'
     import Icon from "../../../Icon/Icon.svelte"
     import { onMount } from 'svelte'
@@ -12,6 +12,9 @@
     let animationStart = false;
     let visibility = true;
     let t;
+
+    const calcMainFontSize = () => !$Device["isMobile"] ? 2 : 2;
+    const calcSubFontSize = () => !$Device["isMobile"] ? 2 : 1;
 
     function startAnimationTimer(){
         clearTimeout(t);
@@ -41,7 +44,7 @@
 </script>
 
 <DefaultSlide>
-    <div class="context" style="color:{color};">
+    <div class="context" style="color:{color}; font-size:{calcSubFontSize()}rem;">
         <div class="Section" style="height:100%; width:100%;">
             <div class="header" style="height:20%;">
                 물론, 이전 페이지도 볼 수 있겠죠?

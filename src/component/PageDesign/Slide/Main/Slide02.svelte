@@ -1,6 +1,6 @@
 <script>
     import { Tooltip } from 'sveltestrap'
-    import { Color, season } from "../../../../global"
+    import { Device } from "../../../../global"
     import DefaultSlide from '../defaultSlide.svelte'
     import Icon from "../../../Icon/Icon.svelte"
     import { onMount } from 'svelte'
@@ -16,6 +16,9 @@
     let visibility = true;
     let isOpen = true;
     let t;
+
+    const calcMainFontSize = () => !$Device["isMobile"] ? 2 : 2;
+    const calcSubFontSize = () => !$Device["isMobile"] ? 2 : 1;
 
     function startSlideChangeTimer(){
         clearTimeout(t);
@@ -58,12 +61,12 @@
 </script>
 
 <DefaultSlide>
-    <div class="context" style="color:{color};">
+    <div class="context" style="color:{color}; font-size:{calcMainFontSize()}rem;">
         {#if Slide_01}
             <p out:fade={{duration:200,}}>잘 하셨습니다!</p>
         {:else if Slide_02}
             <div class="Section" style="height:100%; width:100%;" in:fade={{delay:300, duration:200}}>
-                <div class="header" style="height:20%;">
+                <div class="header" style="height:20%; font-size:{calcSubFontSize()}rem;">
                     마우스를 쓸 경우, 휠을 통해서도 이동이 가능하답니다.
                 </div>
             </div>
