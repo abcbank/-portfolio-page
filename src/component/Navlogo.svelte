@@ -1,8 +1,5 @@
 <script>
     import { spring } from 'svelte/motion';
-
-    export let pushFunc;
-
     let LogoHover = false;
     let LogoRotation = 10;
     let LogoRotateTiming = 150;
