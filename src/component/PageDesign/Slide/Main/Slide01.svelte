@@ -1,12 +1,10 @@
 <script>
-    import { Tooltip } from 'sveltestrap'
     import { Device, Color, season } from "../../../../global"
     import DefaultSlide from '../defaultSlide.svelte'
     import Icon from "../../../Icon/Icon.svelte"
     import { onMount } from 'svelte'
     import { fade } from "svelte/transition"
     import { mdiCursorDefaultClick } from '@mdi/js';
-    import IconButton from "../../../Dropdown/IconButton.svelte"
     export let color;
 
     let Cur = false;

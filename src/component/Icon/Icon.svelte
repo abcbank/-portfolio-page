@@ -5,6 +5,7 @@
     export let color = 'currentColor';
     export let viewBox = '0 0 24 24';
     export let path = '';
+    export let str=''
   </script>
   
   <svg
@@ -14,7 +15,11 @@
     class={$$props.class}
     style={$$props.style}
   >
+    {#if str == ''}
     <path d={path} fill={color} />
+    {:else}
+    {str}
+    {/if}
   </svg>
   
   <style>

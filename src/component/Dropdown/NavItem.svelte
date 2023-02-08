@@ -48,9 +48,16 @@
   
   <style>
       .nav-item {
-          width: calc(var(--nav-size) * 0.8);
+          width:8vw;
+          min-width: 110px;
           display: flex;
           align-items: center;
           justify-content: center;
+          
+        -ms-user-select: none; 
+        -moz-user-select: -moz-none;
+        -khtml-user-select: none;
+        -webkit-user-select: none;
+        user-select: none;
       }
   </style>

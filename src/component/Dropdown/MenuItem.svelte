@@ -1,12 +1,11 @@
 <script>
 	import Icon from '../Icon/Icon.svelte';
 	import IconButton from './IconButton.svelte';
-	
+	import {mdiCheckBold} from "@mdi/js"
 	export let leftIcon = null;
-	export let rightIcon = null;
-    function empty(){
-
-    }
+	export let rightIcon = "";
+	export let isChecked;
+	function empty(){}
 </script>
 
 <div class="menu-item" on:click|preventDefault on:keydown={empty} on:keyup={empty}>
@@ -14,10 +13,14 @@
 	
 	<slot />
 	
-	{#if rightIcon}
+	{#if isChecked}
 		<span class="icon-right">
-			<Icon path={rightIcon ?? ''} />
+			<Icon path={ mdiCheckBold } />
 		</span>
+	{:else}
+	<span class="icon-right">
+		<Icon path={ rightIcon } />
+	</span>
 	{/if}
 </div>
 

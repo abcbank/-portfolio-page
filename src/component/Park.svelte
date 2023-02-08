@@ -11,7 +11,7 @@
     let pmouse = [0,0]
     let BenchRect;
     let config = []
-    let Max = $Device["isMobile"] ? 2 : 10;
+    let Max = $Device["isMobile"] ? 5 : 20;
 
 
     var canvasWidth = document.body.clientWidth;

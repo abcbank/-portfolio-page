@@ -1,17 +1,19 @@
 <script>
 	import { fly } from 'svelte/transition';
+	import DefaultMenu from './DefaultMenu.svelte';
 	
-	let activeMenu = 'main';
+	export let Menu = [{Name: 'main', Component: DefaultMenu},];
+	export let activeMenu = 'main';
 	let menuHeight = 0;
 	let menuEl = null;
-	
-	$: menuHeight = menuEl?.offsetHeight ?? 0;
 </script>
 
 <div class="dropdown stack" style="height: {menuHeight}px">
-    <div class="menu" in:fly={{ x: -300 }} out:fly={{ x: -300 }} bind:this={menuEl}>
-        <slot />
-    </div>
+	{#each Menu as Config}
+		{#if activeMenu == Config.Name}
+			<svelte:component this={Config.Component} bind:height={menuHeight} bind:activeMenu={activeMenu} />
+		{/if}
+	{/each}
 	<!-- {#if activeMenu === 'main'}
 		<div class="menu" in:fly={{ x: -300 }} out:fly={{ x: -300 }} bind:this={menuEl}>
 			<MenuItem on:click={() => activeMenu = "profile"} leftIcon={mdiAccount} rightIcon={mdiChevronRight}>My Profile</MenuItem>
@@ -53,6 +55,7 @@
 		position: absolute;
 		top: 58px;
 		width: 300px;
+		height:500px;
 		transform: translateX(-45%);
 		background-color: var(--bg);
 		border: var(--border);
@@ -69,11 +72,4 @@
 	.stack > :global(*) {
 		grid-area: 1 / 1;
     }
-	
-	.menu {
-		width: 100%;
-        opacity: 1;
-        background-color: #242526;
-        color:#fff;
-	}
 </style>

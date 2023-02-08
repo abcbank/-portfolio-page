@@ -15,23 +15,32 @@
 	import Profile from './component/routes/Profile.svelte'
 	import Projects from './component/routes/Projects.svelte'
 	import Outsourcing from './component/routes/Outsourcing.svelte'
-	import Projects_2021 from './component/routes/2021/Projects.svelte'
-	import Projects_2022 from './component/routes/2022/Projects.svelte'
-	import Projects_2023 from './component/routes/2023/Projects.svelte'
 
-	import Outsourcing_2022 from './component/routes/2022/Outsourcing.svelte'
-	import Outsourcing_2023 from './component/routes/2023/Outsourcing.svelte'
+	import BarcodeReader from "./component/routes/2021/Projects/BarcodeReader.svelte";
+	import Cafe24Renewal from "./component/routes/2021/Projects/Cafe24_Renewal.svelte";
+	import ConvyerVision from "./component/routes/2021/Projects/ConvyerVision.svelte";
+	import Downloader from "./component/routes/2021/Projects/Downloader.svelte";
+	import RobotPiano from "./component/routes/2021/Projects/RobotPiano.svelte";
+
+	import Picam from "./component/routes/2022/Outsourcing/PicameraServer.svelte"
+	import Calculator from "./component/routes/2022/Outsourcing/Calculator.svelte"
+	import Navigation from "./component/routes/2022/Outsourcing/Navigation.svelte"
 
 	const routes = {
 		'/': Main,
-		'/Profile': Profile,
-		'/2021/Projects':Projects_2021,
-		'/2022/Projects':Projects_2022,
-		'/2023/Projects':Projects_2023,
-		'/Projects':Projects,
-		'/2022/Outsourcing':Outsourcing_2022,
-		'/2023/Outsourcing':Outsourcing_2023,
-		'/Outsourcing':Outsourcing
+		'/profile': Profile,
+		'/projects':Projects,
+		'/outsourcing':Outsourcing,
+		
+		'/project/2021/barcode':BarcodeReader,
+		'/project/2021/cafe24':Cafe24Renewal,
+		'/project/2021/convyervision': ConvyerVision,
+		'/project/2021/downloader':Downloader,
+		'/project/2021/robotpiano':RobotPiano,
+
+		'/outsourcing/2022/picam': Picam ,
+		'/outsourcing/2022/calculator': Calculator ,
+		'/outsourcing/2022/navigation': Navigation 
 	}
 
 	let premx = 0;
@@ -146,6 +155,9 @@
 	onMount(() => {		
 		$Device["isMobile"] = false;
 		$LastPage["WindowResized"] = false;
+		$LastPage["Layer1"] = "Main";
+		$LastPage["Layer2"] = 0;
+		$LastPage["Layer3"] = ""
 		$LastPage["Index"] = 0;
 		
 		for(var i in mobile_keys){
