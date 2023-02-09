@@ -16,15 +16,25 @@
 	import Projects from './component/routes/Projects.svelte'
 	import Outsourcing from './component/routes/Outsourcing.svelte'
 
-	import BarcodeReader from "./component/routes/2021/Projects/BarcodeReader.svelte";
-	import Cafe24Renewal from "./component/routes/2021/Projects/Cafe24_Renewal.svelte";
-	import ConvyerVision from "./component/routes/2021/Projects/ConvyerVision.svelte";
-	import Downloader from "./component/routes/2021/Projects/Downloader.svelte";
-	import RobotPiano from "./component/routes/2021/Projects/RobotPiano.svelte";
+	import BarcodeReader_2021 from "./component/routes/2021/Projects/BarcodeReader.svelte";
+	import Cafe24Renewal_2021 from "./component/routes/2021/Projects/Cafe24_Renewal.svelte";
+	import ConvyerVision_2021 from "./component/routes/2021/Projects/ConvyerVision.svelte";
+	import Downloader_2021 from "./component/routes/2021/Projects/Downloader.svelte";
+	import RobotPiano_2021 from "./component/routes/2021/Projects/RobotPiano.svelte";
 
 	import Picam from "./component/routes/2022/Outsourcing/PicameraServer.svelte"
 	import Calculator from "./component/routes/2022/Outsourcing/Calculator.svelte"
 	import Navigation from "./component/routes/2022/Outsourcing/Navigation.svelte"
+	
+	import AnalogueCalibration_2022 from "./component/routes/2022/Projects/AnalogueCalibration.svelte";
+	import ConvyerBoxing_2022 from "./component/routes/2022/Projects/ConvyerBoxing.svelte";
+	import DownloaderVer2_2022 from "./component/routes/2022/Projects/DownloaderVer2.svelte";
+	import RobotPiano_2022 from "./component/routes/2022/Projects/RobotPiano.svelte";
+	import VisionPickup_2022 from "./component/routes/2022/Projects/VisionPickup.svelte";
+
+	import CutletFryer_2023 from "./component/routes/2023/Projects/CutletFryer.svelte"
+	import DigitalCalibration_2023 from "./component/routes/2023/Projects/DigitalCalibration.svelte"
+	import PortfolioPage_2023 from "./component/routes/2023/Projects/PortfolioPage.svelte"
 
 	const routes = {
 		'/': Main,
@@ -32,15 +42,25 @@
 		'/projects':Projects,
 		'/outsourcing':Outsourcing,
 		
-		'/project/2021/barcode':BarcodeReader,
-		'/project/2021/cafe24':Cafe24Renewal,
-		'/project/2021/convyervision': ConvyerVision,
-		'/project/2021/downloader':Downloader,
-		'/project/2021/robotpiano':RobotPiano,
+		'/project/2021/barcode':BarcodeReader_2021,
+		'/project/2021/cafe24':Cafe24Renewal_2021,
+		'/project/2021/convyervision': ConvyerVision_2021,
+		'/project/2021/downloader':Downloader_2021,
+		'/project/2021/robotpiano':RobotPiano_2021,
+
+		'/project/2022/analoguecalibration':AnalogueCalibration_2022,
+		'/project/2022/visionpickup':VisionPickup_2022,
+		'/project/2022/robotpiano': RobotPiano_2022,
+		'/project/2022/downloader':DownloaderVer2_2022,
+		'/project/2022/convyerboxing':ConvyerBoxing_2022,
 
 		'/outsourcing/2022/picam': Picam ,
 		'/outsourcing/2022/calculator': Calculator ,
-		'/outsourcing/2022/navigation': Navigation 
+		'/outsourcing/2022/navigation': Navigation ,
+		
+		'/project/2023/cutlet': CutletFryer_2023,
+		'/project/2023/digitalcalibration':DigitalCalibration_2023,
+		'/project/2023/portfoliopage':PortfolioPage_2023
 	}
 
 	let premx = 0;

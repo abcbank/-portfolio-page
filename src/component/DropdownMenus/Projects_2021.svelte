@@ -1,6 +1,6 @@
 <script>
     import { LastPage,season } from '../../global'
-    import { mdiArrowLeft, mdiCalendarMonthOutline } from '@mdi/js';
+    import { mdiArrowLeft, mdiCalendarMonthOutline, mdiChevronRight   } from '@mdi/js';
     import MenuItem from '../Dropdown/MenuItem.svelte'
 	import MenuFrame from '../Dropdown/DefaultMenu.svelte';
     import { push } from "svelte-spa-router";
@@ -37,7 +37,7 @@
     <MenuItem on:click={() => {
         pushRouter("/project/2021/downloader")
         rerandering();
-    }}  leftIcon={mdiCalendarMonthOutline} bind:isChecked={isChecked["downloader"]} >다운로더 / 인스펙터</MenuItem>
+    }}  leftIcon={mdiCalendarMonthOutline} bind:isChecked={isChecked["downloader"]} >PCB 다운로더</MenuItem>
     <MenuItem on:click={() => {
         pushRouter("/project/2021/cafe24")
         rerandering();
@@ -45,11 +45,11 @@
     <MenuItem on:click={() => {
         pushRouter("/project/2021/convyervision")
         rerandering();
-    }}   leftIcon={mdiCalendarMonthOutline} bind:isChecked={isChecked["convyervision"]}>Convyer Vision</MenuItem>
+    }}   leftIcon={mdiCalendarMonthOutline} bind:isChecked={isChecked["convyervision"]}>컨베이어 비전</MenuItem>
     <MenuItem on:click={() => {
         pushRouter("/project/2021/robotpiano")
         rerandering();
-    }}   leftIcon={mdiCalendarMonthOutline} bind:isChecked={isChecked["robotpiano"]}>Robot Piano</MenuItem>
+    }}   leftIcon={mdiCalendarMonthOutline} bind:isChecked={isChecked["robotpiano"]}>로봇 피아노</MenuItem>
     <MenuItem on:click={() => {
         pushRouter("/project/2021/barcode")
         rerandering();
