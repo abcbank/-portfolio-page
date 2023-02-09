@@ -26,6 +26,9 @@
 	let isDragging = false;
 	let mouseDownLocation = 0;
 	let mouseLocation = 0;
+
+	let curPage = 1;
+	let maxPage = 0;
 	
 	$LastPage["WindowResized"] = false;
 
@@ -120,7 +123,12 @@
                      in:hslide={transition_args}
                      out:hslide={transition_args}
             >
-                <svelte:component this={slide.childComponent} color={slide.color} />
+                <svelte:component this={slide.childComponent} color={slide.color} bind:curPage={curPage} bind:maxPage={maxPage} />
+				
+				<div
+				class="footer" style="font-size: 1rem; bottom:20px; text-align:center; color:{slide.color};">
+					{curPage} / {maxPage}
+				</div>
             </div>
             {/if}
         {/each}
@@ -172,6 +180,8 @@
         width:100%;
         position:absolute;
         bottom:0;
+        overflow: hidden; 
+        white-space: nowrap;
     }
 
 	.dots {

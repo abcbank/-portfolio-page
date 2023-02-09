@@ -1,6 +1,6 @@
 <script>
     import { LastPage,season } from '../../global'
-    import { mdiArrowLeft, mdiCalendarMonthOutline, mdiChevronRight   } from '@mdi/js';
+    import { mdiPackageVariantClosed , mdiDownloadOutline, mdiPackage , mdiPiano, mdiArrowLeft, mdiCircleOutline,mdiCircleSlice1,mdiCircleSlice2,mdiCircleSlice3,mdiCircleSlice4,mdiCircleSlice5,mdiCircleSlice6,mdiCircleSlice7,mdiCircleSlice8    } from '@mdi/js';
     import MenuItem from '../Dropdown/MenuItem.svelte'
 	import MenuFrame from '../Dropdown/DefaultMenu.svelte';
     import { push } from "svelte-spa-router";
@@ -10,6 +10,26 @@
     export let activeMenu;
 
     let isChecked = {};
+    let config = [
+        {path: mdiCircleOutline, color: "currentcolor"},
+        {path: mdiCircleSlice1 , color: "currentcolor"},
+        {path: mdiCircleSlice2 , color: "currentcolor"},
+        {path: mdiCircleSlice3 , color: "currentcolor"},
+        {path: mdiCircleSlice4 , color: "currentcolor"},
+        {path: mdiCircleSlice5 , color: "currentcolor"},
+        {path: mdiCircleSlice6 , color: "currentcolor"},
+        {path: mdiCircleSlice7 , color: "currentcolor"},
+        {path: mdiCircleSlice8 , color: "currentcolor"},
+        {path: mdiCircleSlice7 , color: "currentcolor"},
+        {path: mdiCircleSlice6 , color: "currentcolor"},
+        {path: mdiCircleSlice5 , color: "currentcolor"},
+        {path: mdiCircleSlice4 , color: "currentcolor"},
+        {path: mdiCircleSlice3 , color: "currentcolor"},
+        {path: mdiCircleSlice2 , color: "currentcolor"},
+        {path: mdiCircleSlice1 , color: "currentcolor"}
+    ]
+    let idx = 0;
+    let t;
     
     function rerandering(){
         for(var i in isChecked)
@@ -25,8 +45,17 @@
         push(link);
     }
 
+    function moveNext(){
+        clearTimeout(t);
+        t = setTimeout(() => {
+            idx = (idx + 1) % config.length;
+            moveNext();
+        }, 200)
+    }
+
   onMount(() => {
     rerandering();
+    moveNext();
   })
 </script>
 
@@ -37,21 +66,21 @@
     <MenuItem on:click={() => {
         pushRouter("/project/2022/analoguecalibration")
         rerandering();
-    }}  leftIcon={mdiCalendarMonthOutline} bind:isChecked={isChecked["analoguecalibration"]} >아날로그 캘리브레이션</MenuItem>
+    }}  bind:leftIcon={config[idx].path} bind:leftIconColor={config[idx].color} bind:isChecked={isChecked["analoguecalibration"]} >아날로그 캘리브레이션</MenuItem>
     <MenuItem on:click={() => {
         pushRouter("/project/2022/robotpiano")
         rerandering();
-    }}   leftIcon={mdiCalendarMonthOutline} bind:isChecked={isChecked["robotpiano"]}>로봇 피아노</MenuItem>
+    }}   leftIcon={mdiPiano} bind:isChecked={isChecked["robotpiano"]}>로봇 피아노</MenuItem>
     <MenuItem on:click={() => {
         pushRouter("/project/2022/visionpickup")
         rerandering();
-    }}   leftIcon={mdiCalendarMonthOutline} bind:isChecked={isChecked["visionpickup"]}>상자 픽업</MenuItem>
+    }}   leftIcon={mdiPackage } bind:isChecked={isChecked["visionpickup"]}>상자 픽업</MenuItem>
     <MenuItem on:click={() => {
         pushRouter("/project/2022/downloader")
         rerandering();
-    }}   leftIcon={mdiCalendarMonthOutline} bind:isChecked={isChecked["downloader"]}>PCB 다운로더 리뉴얼</MenuItem>
+    }}   leftIcon={mdiDownloadOutline} bind:isChecked={isChecked["downloader"]}>PCB 다운로더 리뉴얼</MenuItem>
     <MenuItem on:click={() => {
         pushRouter("/project/2022/convyerboxing")
         rerandering();
-    }}   leftIcon={mdiCalendarMonthOutline} bind:isChecked={isChecked["convyerboxing"]}>박스 포장</MenuItem>
+    }}   leftIcon={mdiPackageVariantClosed } bind:isChecked={isChecked["convyerboxing"]}>박스 포장</MenuItem>
 </MenuFrame>

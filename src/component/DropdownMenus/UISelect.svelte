@@ -8,7 +8,6 @@
     import { onMount } from 'svelte'
     
     export let height;
-    export let activeMenu = 'main';
 
     let isChecked = {
         "Spring" :false,

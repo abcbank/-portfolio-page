@@ -1,6 +1,6 @@
 <script>
     import { LastPage,season } from '../../global'
-    import { mdiArrowLeft, mdiCalendarMonthOutline, mdiChevronRight   } from '@mdi/js';
+    import { mdiApplicationOutline, mdiPoll, mdiBarrelOutline , mdiArrowLeft, mdiCalendarMonthOutline, mdiChevronRight   } from '@mdi/js';
     import MenuItem from '../Dropdown/MenuItem.svelte'
 	import MenuFrame from '../Dropdown/DefaultMenu.svelte';
     import { push } from "svelte-spa-router";
@@ -37,13 +37,13 @@
     <MenuItem on:click={() => {
         pushRouter("/project/2023/cutlet")
         rerandering();
-    }}  leftIcon={mdiCalendarMonthOutline} bind:isChecked={isChecked["cutlet"]} >돈가스 튀김</MenuItem>
+    }}  leftIcon={mdiBarrelOutline } bind:isChecked={isChecked["cutlet"]} >돈가스 튀김</MenuItem>
     <MenuItem on:click={() => {
         pushRouter("/project/2023/digitalcalibration")
         rerandering();
-    }}   leftIcon={mdiCalendarMonthOutline} bind:isChecked={isChecked["digitalcalibration"]}>디지털 캘리브레이션 정비</MenuItem>
+    }}   leftIcon={mdiPoll} bind:isChecked={isChecked["digitalcalibration"]}>디지털 캘리브레이션 정비</MenuItem>
     <MenuItem on:click={() => {
         pushRouter("/project/2023/portfoliopage")
         rerandering();
-    }}   leftIcon={mdiCalendarMonthOutline} bind:isChecked={isChecked["portfoliopage"]}>포트폴리오 페이지</MenuItem>
+    }}   leftIcon={mdiApplicationOutline } bind:isChecked={isChecked["portfoliopage"]}>포트폴리오 페이지</MenuItem>
 </MenuFrame>

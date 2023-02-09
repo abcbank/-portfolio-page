@@ -5,21 +5,23 @@
 	export let leftIcon = null;
 	export let rightIcon = "";
 	export let isChecked;
+	export let leftIconColor = "currentcolor"
+	export let rightIconColor = "currentcolor"
 	function empty(){}
 </script>
 
 <div class="menu-item" on:click|preventDefault on:keydown={empty} on:keyup={empty}>
-	<IconButton path={leftIcon ?? ''} />
+	<IconButton iconColor={leftIconColor} path={leftIcon ?? ''} />
 	
 	<slot />
 	
 	{#if isChecked}
 		<span class="icon-right">
-			<Icon path={ mdiCheckBold } />
+			<Icon color={rightIconColor} path={ mdiCheckBold } />
 		</span>
 	{:else}
 	<span class="icon-right">
-		<Icon path={ rightIcon } />
+		<Icon  color={rightIconColor} path={ rightIcon } />
 	</span>
 	{/if}
 </div>

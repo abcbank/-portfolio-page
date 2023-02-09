@@ -1,37 +1,13 @@
 <script>
-    import { Device } from "../../../../global"
-    import DefaultSlide from '../defaultSlide.svelte'
-    export let color;
+    import Page01 from "./Slide06/Page01.svelte";
+    import Page02 from "./Slide06/Page02.svelte";
+    import DefaultSlide from "../defaultSlide.svelte";
 
-    const calcSubFontSize = () => !$Device["isMobile"] ? 2 : 1;
+    export let color;
+    export let curPage;
+    export let maxPage;
+
+    let Pages =[{ index: 1, component:Page01 },{ index: 2, component:Page02 }]
 </script>
 
-<DefaultSlide>
-    <div class="context" style="color:{color}; font-size:{calcSubFontSize()}rem;">
-        <div class="header" style="width:100%; height:100%;">
-            제 주력 분야가 웹과 디자인이 아니지만...
-        </div>
-    </div>
-</DefaultSlide>
-
-<style>
-    .context{
-        width:100%;
-        height:100%;
-        overflow: hidden; 
-        white-space: nowrap;
-    }
-    .header{
-		display: flex;
-        text-align:center;
-	    align-items: center;
-		justify-content: center;
-        width:100%;
-        height:15%;
-    }
-    .footer{
-        width:100%;
-        position:absolute;
-        bottom:0;
-    }
-</style>
+<DefaultSlide Pages={Pages} bind:curPage={curPage} bind:maxPage={maxPage} bind:color={color} />

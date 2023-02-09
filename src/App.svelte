@@ -167,6 +167,8 @@
         $bench = data;
     });
 
+	document.addEventListener('contextmenu', event => event.preventDefault());
+
 	var mobile_keys = new Array('iphone','ipad','android','blackberry','windows phone',
             'windows ce','lg','mot','samsung','sonyericsson','nokia');
 

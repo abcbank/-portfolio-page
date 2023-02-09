@@ -6,6 +6,7 @@
 	export let RightComment = "";
 	export let Comment = "";
 	export let showComment = false;
+	export let iconColor = "currentColor"
     function empty(){
 
     }
@@ -13,9 +14,9 @@
 
 <div class="icon-button" on:click|preventDefault on:keydown={empty} on:keyup={empty} style="border-radius:{showComment=='' ? '5px' : '5px'};">
 	{#if RightComment == "" }
-	<Icon path={path} />
+	<Icon color={iconColor} path={path} />
 	{:else}
-	<Icon str={path} />
+	<Icon color={iconColor} str={path} />
 	{/if}
 	{#if showComment}
 	<div class='comment' in:blur={{duration:200, }}>
