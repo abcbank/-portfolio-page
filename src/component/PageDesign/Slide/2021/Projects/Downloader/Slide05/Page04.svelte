@@ -1,23 +1,25 @@
 <script>
-    import { Device } from "../../../../../../../global"
+    import { Device, Color, season } from "../../../../../../../global"
     import DefaultPage from '../../../../defaultPage.svelte'
 
     export let color = "transparent";
-    export let fontSize = 2
+    export let fontSize = 2;
+
+    let CurPage = "main"
+
+    console.log($Color["btnBackColor"][$season]);
 
     const calcSubFontSize = () => !$Device["isMobile"] ? fontSize : fontSize/2;
 </script>
 
 <DefaultPage color={color} fontSize={fontSize}>
-    <p>프로젝트 목적</p>
+    <p>펄스 측정</p>
     <div style="font-size:{calcSubFontSize()}rem; text-align:left; margin-top:20px;">
         <p>
-            - PCB에 펌웨어를 넣는 작업을 자동화<br/>
-            - PCB에 대해 지정된 검사를 진행해 PCB의 불량 여부를 사전 파악
+            - USBScope 102는 최대 10V까지 측정 가능<br/>
+            - IR 동작 검사에서 측정해야하는 전압은 50V
         </p>
     </div>
 </DefaultPage>
-
 <style>
-    
 </style>

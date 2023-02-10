@@ -13,13 +13,12 @@
 </script>
 
 <DefaultPage color={color} fontSize={fontSize}>
-    <p>IO</p>
+    <p>전류계 통신</p>
     <div style="font-size:{calcSubFontSize()}rem; text-align:left; margin-top:20px;">
         <p>
-            - PCB를 직접 떠서 사용<br/>
-            - 실린더와 릴레이 등, 물리적인 움직임을 제어(Output)<br/>
-            - 적외선 센서와 스위치 등, 입력값을 전달(Input)<br/>
-            - PC와 시리얼 통신을 통해 명령을 전달받고, 입력값들을 전달
+            - 전류계가 가끔 값을 요청해도 응답하지 않는 경우가 발생<br/>
+            - 요청 주기가 빠를수록 더 빈번하게 발생<br/>
+            - 전류계 내부 기판의 성능의 문제로 판단
         </p>
     </div>
 </DefaultPage>

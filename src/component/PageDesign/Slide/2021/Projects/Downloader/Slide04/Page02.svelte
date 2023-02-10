@@ -1,21 +1,63 @@
 <script>
-    import { Device } from "../../../../../../../global"
+    import { Device, Color, season } from "../../../../../../../global"
     import DefaultPage from '../../../../defaultPage.svelte'
 
     export let color = "transparent";
-    export let fontSize = 2
+    export let fontSize = 2;
+    export let curPage
+
+    let CurPage = "main"
+
+    console.log($Color["btnBackColor"][$season]);
 
     const calcSubFontSize = () => !$Device["isMobile"] ? fontSize : fontSize/2;
 </script>
 
-<DefaultPage color={color} fontSize={fontSize}>
-    <p>펌웨어 업로딩</p>
-    <div style="width: 100%; font-size:{calcSubFontSize()}rem; text-align:left; margin-top:20px;">
-        <p>
-            - 아쎄이의 각 PCB에 펌웨어를 업로드<br/>
-            - Cheetah SPI 모듈을 사용해 업로딩 진행<br/>
-            - 모듈의 통신선과 PCB의 통신핀을 리노핀을 통해 쇼트<br/>
-            - 지정된 외부 프로그램을 실행
-        </p>
+<DefaultPage color={color} fontSize={fontSize} bind:curPage={curPage}>
+    <div style="position:absolute; top:5%; width:100%;">
+        <p>구성 요소</p>
+    </div>
+    <div class="borderBox" 
+        on:click={()=> {curPage = 3}} on:keydown={()=>{}}
+        style="border: solid {$Color["btnBdrColor"][$season]} 1px; background-color:{$Color["btnBackColor"][$season]}; color:{$Color["btnBdrColor"][$season]}; top: 35%; left: 30%;">
+        SPI
+    </div>
+    <div class="borderBox" 
+        style="border: solid {$Color["btnBdrColor"][$season]} 1px; background-color:{$Color["btnBackColor"][$season]}; color:{$Color["btnBdrColor"][$season]}; top: 35%; left: 50%;">
+        PC
+    </div>
+    <div class="borderBox" 
+        style="border: solid {$Color["btnBdrColor"][$season]} 1px; background-color:{$Color["btnBackColor"][$season]}; color:{$Color["btnBdrColor"][$season]}; top: 35%; left: 70%;">
+        IO
+    </div>
+    <div class="borderBox" 
+        style="border: solid {$Color["btnBdrColor"][$season]} 1px; background-color:{$Color["btnBackColor"][$season]}; color:{$Color["btnBdrColor"][$season]}; top: 65%; left: 40%;">
+        전류계
+    </div>
+    <div class="borderBox" 
+        style="border: solid {$Color["btnBdrColor"][$season]} 1px; background-color:{$Color["btnBackColor"][$season]}; color:{$Color["btnBdrColor"][$season]}; top: 65%; left: 60%;">
+        Oscillo
     </div>
 </DefaultPage>
+<style>
+    .borderBox{
+        border-radius: 5px;
+        border: solid red 1px;
+        position: absolute;
+        top:50%;
+        left:50%;
+        min-width: 120px;
+        min-height: 120px;
+        width:5vw;
+        height:5vw;
+		display: flex;
+        text-align:center;
+	    align-items: center;
+		justify-content: center;
+        overflow: hidden; 
+        white-space: nowrap;
+        flex-direction:column;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+</style>

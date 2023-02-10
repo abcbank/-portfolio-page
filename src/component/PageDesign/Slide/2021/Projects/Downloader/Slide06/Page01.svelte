@@ -6,5 +6,5 @@
 </script>
 
 <DefaultPage color={color} fontSize={fontSize}>
-    <p>Architecture</p>
+    <p>Finale</p>
 </DefaultPage>

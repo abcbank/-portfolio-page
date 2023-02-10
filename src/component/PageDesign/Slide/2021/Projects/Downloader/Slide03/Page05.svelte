@@ -4,20 +4,18 @@
 
     export let color = "transparent";
     export let fontSize = 2
-
+    
     const calcSubFontSize = () => !$Device["isMobile"] ? fontSize : fontSize/2;
 </script>
 
 <DefaultPage color={color} fontSize={fontSize}>
-    <p>프로젝트 목적</p>
+    <p>IR 동작 검사</p>
     <div style="font-size:{calcSubFontSize()}rem; text-align:left; margin-top:20px;">
         <p>
-            - PCB에 펌웨어를 넣는 작업을 자동화<br/>
-            - PCB에 대해 지정된 검사를 진행해 PCB의 불량 여부를 사전 파악
+            - 인스펙터에서만 수행<br/>
+            - PCB에 IR LED를 켜 PCB의 동작을 검사<br/>
+            - IR을 인식한 직후 매우 큰 전압 펄스가 1회 발생<br/>
+            - 전압 펄스 발생 후 전압은 구형파를 형성
         </p>
     </div>
 </DefaultPage>
-
-<style>
-    
-</style>

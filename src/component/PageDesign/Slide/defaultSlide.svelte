@@ -53,7 +53,7 @@
 <div>
 	{#each Pages as Page}
 		{#if curPage == Page.index}
-			<svelte:component this={Page.component} bind:color={color} bind:fontSize={fontSize}/>
+			<svelte:component this={Page.component} bind:color={color} bind:fontSize={fontSize} bind:curPage={curPage} />
 		{/if}
 	{/each}
     <slot></slot>

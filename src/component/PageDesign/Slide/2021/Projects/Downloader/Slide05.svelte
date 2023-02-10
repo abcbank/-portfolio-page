@@ -1,37 +1,21 @@
 <script>
-    import { Device, Color, season } from "../../../../../../global"
-    import DefaultSlide from '../../../defaultSlide.svelte'
-    export let color;
+    import Page01 from "./Slide05/Page01.svelte";
+    import Page02 from "./Slide05/Page02.svelte";
+    import Page03 from "./Slide05/Page03.svelte";
+    import Page04 from "./Slide05/Page04.svelte";
+    import Page05 from "./Slide05/Page05.svelte";
 
-    const calcMainFontSize = () => !$Device["isMobile"] ? 2 : 2;
-    const calcSubFontSize = () => !$Device["isMobile"] ? 1.5 : 1;
+    import DefaultSlide from "../../../defaultSlide.svelte";
+    export let color;
+    export let curPage;
+    export let maxPage;
+
+    let Pages =[
+        { index: 1, component:Page01 }, 
+        { index: 2, component:Page02 }, 
+        { index: 3, component:Page03 }, 
+        { index: 4, component:Page04 }, 
+        { index: 5, component:Page05 }]
 </script>
 
-<DefaultSlide>
-    <div class="context" style="color:{color}; font-size:{calcMainFontSize()}rem;">
-        <p>동작 검사 종류</p>
-        <div style="font-size:{calcSubFontSize()}rem; text-align:left; margin-top:20px;">
-            <p>
-                - 잔류 전류 검사<br/>
-                - 대기 전류 검사<br/>
-                - 전압 검사<br/>
-                - IR 동작 검사(Inspector Only)<br/>
-                - LED 동작 검사(Inspector Only)
-            </p>
-        </div>
-    </div>
-</DefaultSlide>
-
-<style>
-    .context{
-		display: flex;
-        text-align:center;
-	    align-items: center;
-		justify-content: center;
-        width:100%;
-        height:100%;
-        overflow: hidden; 
-        white-space: nowrap;
-        flex-direction:column;
-    }
-</style>
+<DefaultSlide Pages={Pages} bind:curPage={curPage} bind:maxPage={maxPage} bind:color={color} />

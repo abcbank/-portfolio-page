@@ -13,13 +13,13 @@
 </script>
 
 <DefaultPage color={color} fontSize={fontSize}>
-    <p>IO</p>
+    <p>프로젝트를 마치며</p>
     <div style="font-size:{calcSubFontSize()}rem; text-align:left; margin-top:20px;">
         <p>
-            - PCB를 직접 떠서 사용<br/>
-            - 실린더와 릴레이 등, 물리적인 움직임을 제어(Output)<br/>
-            - 적외선 센서와 스위치 등, 입력값을 전달(Input)<br/>
-            - PC와 시리얼 통신을 통해 명령을 전달받고, 입력값들을 전달
+            - 첫 프로젝트이자, 가장 아쉬움이 많았던 프로젝트라 생각함<br/>
+            - 이후에도 항상 한번쯤 리뉴얼하고싶다,라는 생각을 많이 했었음<br/>
+            - 운좋게도, 나중에 동일한 기능의 장비를 한번 더 만들 기회가 있었음<br/>
+            - 리뉴얼 버전은 2022년 프로젝트를 살펴보면 됨
         </p>
     </div>
 </DefaultPage>

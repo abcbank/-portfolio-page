@@ -10,7 +10,7 @@
 
 <DefaultPage color={color} fontSize={fontSize}>
     <p>PCB 다운로더</p>
-    <div style="width: 100%;font-size:{calcSubFontSize()}rem; text-align:left; margin-top:20px;">
+    <div style="font-size:{calcSubFontSize()}rem; text-align:left; margin-top:20px;">
         <p>
             1. 네 개의 PCB가 아쎄이 형태로 로딩<br/>
             2. 각 PCB에 펌웨어를 업로드<br/>

@@ -13,13 +13,12 @@
 </script>
 
 <DefaultPage color={color} fontSize={fontSize}>
-    <p>IO</p>
+    <p>펌웨어 업로드</p>
     <div style="font-size:{calcSubFontSize()}rem; text-align:left; margin-top:20px;">
         <p>
-            - PCB를 직접 떠서 사용<br/>
-            - 실린더와 릴레이 등, 물리적인 움직임을 제어(Output)<br/>
-            - 적외선 센서와 스위치 등, 입력값을 전달(Input)<br/>
-            - PC와 시리얼 통신을 통해 명령을 전달받고, 입력값들을 전달
+            - 원래는 Cheetah SPI SDK를 통해 업로드용 라이브러리를 만들 생각이었음.<br/>
+            - 다만, 업로드 후 정상적으로 동작하는지 확인할 방법이 없었음<br/>
+            - 따라서 정상 동작에 대한 확신이 없어 라이브러리화는 취소
         </p>
     </div>
 </DefaultPage>

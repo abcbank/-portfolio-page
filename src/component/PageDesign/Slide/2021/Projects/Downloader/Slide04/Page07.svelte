@@ -13,13 +13,13 @@
 </script>
 
 <DefaultPage color={color} fontSize={fontSize}>
-    <p>IO</p>
+    <p>Oscilloscope</p>
     <div style="font-size:{calcSubFontSize()}rem; text-align:left; margin-top:20px;">
         <p>
-            - PCB를 직접 떠서 사용<br/>
-            - 실린더와 릴레이 등, 물리적인 움직임을 제어(Output)<br/>
-            - 적외선 센서와 스위치 등, 입력값을 전달(Input)<br/>
-            - PC와 시리얼 통신을 통해 명령을 전달받고, 입력값들을 전달
+            - 전압 검사용 오실로스코프<br/>
+            - C# SDK를 지원하는 모델로 구매<br/>
+            - 지정된 시간동안 전압을 측정해, 데이터를 넘겨줌<br/>
+            - 사용 모델: USBScope 102
         </p>
     </div>
 </DefaultPage>

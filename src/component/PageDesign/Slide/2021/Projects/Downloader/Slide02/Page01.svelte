@@ -6,5 +6,5 @@
 </script>
 
 <DefaultPage color={color} fontSize={fontSize}>
-    <p>프로젝트 개요</p>
+    <p>Outline</p>
 </DefaultPage>

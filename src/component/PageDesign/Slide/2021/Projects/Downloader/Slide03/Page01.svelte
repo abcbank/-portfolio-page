@@ -6,5 +6,5 @@
 </script>
 
 <DefaultPage color={color} fontSize={fontSize}>
-    <p>주요 검사</p>
+    <p>Main Function</p>
 </DefaultPage>

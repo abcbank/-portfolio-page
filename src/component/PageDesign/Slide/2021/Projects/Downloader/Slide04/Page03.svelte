@@ -1,23 +1,26 @@
 <script>
-    import { Device } from "../../../../../../../global"
+    import { Device, Color, season } from "../../../../../../../global"
     import DefaultPage from '../../../../defaultPage.svelte'
 
     export let color = "transparent";
-    export let fontSize = 2
+    export let fontSize = 2;
+
+    let CurPage = "main"
+
+    console.log($Color["btnBackColor"][$season]);
 
     const calcSubFontSize = () => !$Device["isMobile"] ? fontSize : fontSize/2;
 </script>
 
 <DefaultPage color={color} fontSize={fontSize}>
-    <p>시퀀스</p>
-    <div style="width: 100%; font-size:{calcSubFontSize()}rem; text-align:left; margin-top:20px;">
+    <p>SPI</p>
+    <div style="font-size:{calcSubFontSize()}rem; text-align:left; margin-top:20px;">
         <p>
-            - 다양한 다운로드와 검사를 유동적으로 수행해야 함<br/>
-            - 따라서 전체 시퀀스를 표 형식으로 저장<br/>
-        </p>
-        <p style="font-size:{calcSubFontSize() * 0.8 }rem;">
-            &nbsp; &nbsp; &nbsp; &nbsp;- 행: 수행 파라미터<br/>
-            &nbsp; &nbsp; &nbsp; &nbsp;- 열: 수행 순서
+            - 펌웨어 업로드용 통신 모듈<br/>
+            - 기존 업로드에 사용하던 프로그램을 그대로 실행<br/>
+            - 사용  모델: Cheetah SPI
         </p>
     </div>
 </DefaultPage>
+<style>
+</style>
