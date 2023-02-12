@@ -13,13 +13,12 @@
 </script>
 
 <DefaultPage color={color} fontSize={fontSize}>
-    <p>프로젝트를 마치며</p>
+    <p>전류계 통신</p>
     <div style="font-size:{calcSubFontSize()}rem; text-align:left; margin-top:20px;">
         <p>
-            - 첫 프로젝트이자, 가장 아쉬움이 많았던 프로젝트라 생각함<br/>
-            - 이후에도 항상 한번쯤 리뉴얼하고싶다,라는 생각을 많이 했었음<br/>
-            - 운좋게도, 나중에 동일한 기능의 장비를 한번 더 만들 기회가 있었음<br/>
-            - 리뉴얼 버전은 2022년 프로젝트를 살펴보면 됨
+            - 전류계가 가끔 값을 요청해도 응답하지 않는 경우가 발생<br/>
+            - 요청 주기가 빠를수록 더 빈번하게 발생<br/>
+            - 전류계 내부 기판의 성능의 문제로 판단
         </p>
     </div>
 </DefaultPage>

@@ -21,7 +21,9 @@
   import { LastPage } from '../global'
   import { onMount } from 'svelte'
 	import IconButton from './Dropdown/IconButton.svelte';
-  
+  import Toggler from "./Sidebar/Toggler.svelte"
+  import Sidebar from './Sidebar/Sidebar.svelte'
+
   export let height;
 
   let isOpen = false;
@@ -34,6 +36,8 @@
   let Outsourcing_isOpen = false;
   let Git_isOpen = false;
   let NavUISelector_isOpen = false;
+
+  let width;
 
   function pushRouter(link){
         link = link.toLowerCase();
@@ -53,23 +57,27 @@ function calcLeft(){
     else
       uiSelectorLocation = 11;
 }
+let sidebarIsOpen = false;
   onMount(()=>{
     calcLeft();
   })
 </script>
 
-
 <div class="NavBar"
-bind:clientHeight={height}>
+bind:clientHeight={height} bind:clientWidth={width}>
   <div style="left:11px;" on:click={() => {pushRouter("/")}} on:keypress={()=>{}}>
     <NavLogo pushFunc={pushRouter} />
   </div>
   <div style="float:right;">
+    {#if width <= 720}
+    <Sidebar bind:open={sidebarIsOpen}/>
+    {:else}
     <Profile height = { height - 22} bind:isOpen={Profile_isOpen} pushFunc={pushRouter} />
     <Project height = { height - 22} bind:isOpen={Project_isOpen} pushFunc={pushRouter} />
     <Outsourcing height = { height - 22} bind:isOpen={Outsourcing_isOpen} pushFunc={pushRouter}  />
     <Git height = { height - 22}  bind:isOpen={Git_isOpen}/>
     <NavUISelector height= { height - 22} bind:isOpen={NavUISelector_isOpen}/>
+    {/if}
   </div>
 </div>
 
