@@ -12,7 +12,7 @@
 </script>
 
 <div class="side-item"
-	style="color:{textColor}; font-size:1rem;">
+	style="color:{textColor}; font-size:0.8rem;">
 	<IconButton iconColor={leftIconColor} path={leftIcon ?? ''} />
 	
 	<slot />
