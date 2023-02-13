@@ -1,4 +1,6 @@
 <script>
+    import { Device } from '../../../global'
+
     export let color;
     export let Pages;
     export let curPage;
@@ -18,32 +20,50 @@
             curPage = curPage - 1;
     }
     function setButtonType(e){
-        if(e.button == 0){
-            if(ButtonType == 0){
+        if($Device["isMobile"]){
+            if(ButtonType == 3){
                 ButtonType = -1
-                moveNext();
-                console.log("moveNext");
+                if(e.clientX < document.body.clientWidth / 2){
+                    movePrev();
+                }
+                else{
+                    moveNext();
+                }
             }
             else{
-                ButtonType = 0;
+                ButtonType = 3;
                 clearTimeout(doubleClickTimer);
                 doubleClickTimer = setTimeout(() => {
                     ButtonType = -1
                 }, 400)
             }
         }
-        else if(e.button == 2){
-            if(ButtonType == 2){
-                ButtonType = -1
-                movePrev();
-                console.log("movePrev");
-            }
-            else{
-                ButtonType = 2;
-                clearTimeout(doubleClickTimer);
-                doubleClickTimer = setTimeout(() => {
+        else{
+            if(e.button == 0){
+                if(ButtonType == 0){
                     ButtonType = -1
-                }, 400)
+                    moveNext();
+                }
+                else{
+                    ButtonType = 0;
+                    clearTimeout(doubleClickTimer);
+                    doubleClickTimer = setTimeout(() => {
+                        ButtonType = -1
+                    }, 400)
+                }
+            }
+            else if(e.button == 2){
+                if(ButtonType == 2){
+                    ButtonType = -1
+                    movePrev();
+                }
+                else{
+                    ButtonType = 2;
+                    clearTimeout(doubleClickTimer);
+                    doubleClickTimer = setTimeout(() => {
+                        ButtonType = -1
+                    }, 400)
+                }
             }
         }
     }
