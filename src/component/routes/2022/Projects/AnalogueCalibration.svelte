@@ -1,6 +1,6 @@
 <script>
-	import { Color, season } from "../../global"
-    import DefaultPage from "../PageDesign/DefaultPage.svelte"
+	import { Color, season } from "../../../../global"
+    import DefaultPage from "../../../PageDesign/DefaultPage.svelte"
     import Slide01 from '../../../PageDesign/Slide/2022/Projects/AnalogueCalibration/Slide01.svelte'
     import Slide02 from '../../../PageDesign/Slide/2022/Projects/AnalogueCalibration/Slide02.svelte'
     import Slide03 from '../../../PageDesign/Slide/2022/Projects/AnalogueCalibration/Slide03.svelte'

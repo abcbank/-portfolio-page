@@ -1,7 +1,7 @@
 <script>
 	import { Color, season } from "../../../../global"
-    import { fade } from "svelte/transition"
     import DefaultPage from "../../../PageDesign/DefaultPage.svelte"
+    import { fade } from "svelte/transition"
     import Slide01 from "../../../PageDesign/Slide/2021/Projects/RobotPiano/Slide01.svelte"
     import Slide02 from "../../../PageDesign/Slide/2021/Projects/RobotPiano/Slide02.svelte"
     import Slide03 from "../../../PageDesign/Slide/2021/Projects/RobotPiano/Slide03.svelte"
