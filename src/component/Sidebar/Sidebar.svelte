@@ -30,9 +30,9 @@
         background-color:#282a35;
         top:60px;
         width:40%;
-        min-width: 160px;
+        min-width: 130px;
         height:100%;
-		right: -40%;
+		right: -100%;
 		transition: right 0.3s ease-in-out
 	}
 	
