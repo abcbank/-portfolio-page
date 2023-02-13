@@ -36,8 +36,4 @@
 		padding: 0.5rem;
 		color: var(--text-color);
 	}
-	
-	.side-item:hover {
-		background-color: #525357;
-	}
 </style>
