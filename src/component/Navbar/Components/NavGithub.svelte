@@ -17,7 +17,6 @@
     export let isSide = false;
     export let onOpen;
     export let isOpen = false;
-    export let dropDownWidth = 300;
 
     let UIStatus = {}
     function SetUIStatus(UIType){
@@ -58,7 +57,7 @@
         float: left;
 		display: flex;
 		justify-content: flex-end;
-        z-index: 1;;
+        z-index: 1;
     }
     .side{
         width:100%;

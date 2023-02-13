@@ -5,7 +5,11 @@
     import Slide02 from '../PageDesign/Slide/Outsourcing/Slide02.svelte'
     import Slide03 from '../PageDesign/Slide/Outsourcing/Slide03.svelte'
     import Slide04 from '../PageDesign/Slide/Outsourcing/Slide04.svelte'
+    import Slide05 from '../PageDesign/Slide/Outsourcing/Slide05.svelte'
+    import Slide06 from '../PageDesign/Slide/Outsourcing/Slide06.svelte'
+    import Slide07 from '../PageDesign/Slide/Outsourcing/Slide07.svelte'
     import { fade } from "svelte/transition"
+	
 </script>
 <div
     in:fade={{delay:200, duration: 200,}} 
@@ -15,7 +19,10 @@
             { childComponent:Slide01, bg: $Color["backColor"][$season], color: $Color["foreColor"][$season], buttonBackColor: $Color["btnBackColor"][$season], buttonBorderColor: $Color["btnBdrColor"][$season], buttonSelectedColor: $Color["btnSelectedColor"][$season]},
             { childComponent:Slide02, bg: $Color["backColor"][$season], color: $Color["foreColor"][$season], buttonBackColor: $Color["btnBackColor"][$season], buttonBorderColor: $Color["btnBdrColor"][$season], buttonSelectedColor: $Color["btnSelectedColor"][$season]},
             { childComponent:Slide03, bg: $Color["backColor"][$season], color: $Color["foreColor"][$season], buttonBackColor: $Color["btnBackColor"][$season], buttonBorderColor: $Color["btnBdrColor"][$season], buttonSelectedColor: $Color["btnSelectedColor"][$season]},
-            { childComponent:Slide04, bg: $Color["backColor"][$season], color: $Color["foreColor"][$season], buttonBackColor: $Color["btnBackColor"][$season], buttonBorderColor: $Color["btnBdrColor"][$season], buttonSelectedColor: $Color["btnSelectedColor"][$season]}
+            { childComponent:Slide04, bg: $Color["backColor"][$season], color: $Color["foreColor"][$season], buttonBackColor: $Color["btnBackColor"][$season], buttonBorderColor: $Color["btnBdrColor"][$season], buttonSelectedColor: $Color["btnSelectedColor"][$season]},
+            { childComponent:Slide05, bg: $Color["backColor"][$season], color: $Color["foreColor"][$season], buttonBackColor: $Color["btnBackColor"][$season], buttonBorderColor: $Color["btnBdrColor"][$season], buttonSelectedColor: $Color["btnSelectedColor"][$season]},
+            { childComponent:Slide06, bg: $Color["backColor"][$season], color: $Color["foreColor"][$season], buttonBackColor: $Color["btnBackColor"][$season], buttonBorderColor: $Color["btnBdrColor"][$season], buttonSelectedColor: $Color["btnSelectedColor"][$season]},
+            { childComponent:Slide07, bg: $Color["backColor"][$season], color: $Color["foreColor"][$season], buttonBackColor: $Color["btnBackColor"][$season], buttonBorderColor: $Color["btnBdrColor"][$season], buttonSelectedColor: $Color["btnSelectedColor"][$season]}
         ]}>
     </DefaultPage>
 </div>
