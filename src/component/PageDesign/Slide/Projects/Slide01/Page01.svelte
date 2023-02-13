@@ -1,5 +1,5 @@
 <script>
-    import DefaultPage from '../../../../defaultPage.svelte'
+    import DefaultPage from '../../defaultPage.svelte'
 
     export let color = "transparent";
     export let fontSize = 2
