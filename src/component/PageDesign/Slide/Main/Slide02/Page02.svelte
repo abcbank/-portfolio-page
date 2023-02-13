@@ -5,7 +5,7 @@
     import { fade } from "svelte/transition"
 
     export let color = "transparent";
-    export let fontSize = 2
+    export let fontSize = 1
 </script>
 
 <DefaultPage color={color} fontSize={fontSize}>
