@@ -63,7 +63,7 @@
         <div class="Section" style="height:100%; width:100%;" in:fade={{delay:300, duration:200}}>
             <div class="header" style="height:20%; font-size:{calcSubFontSize()}rem;">
                 {#if $Device["isMobile"]}
-                    오른쪽 화면을 두번 터치해 다음 페이지로 이동해보세요.
+                    회면의 오른쪽을 두번 터치해<br/>다음 페이지로 이동해보세요.
                 {:else}
                     왼쪽 마우스 더블 클릭을 통해 다음 페이지로 이동해보세요.
                 {/if}

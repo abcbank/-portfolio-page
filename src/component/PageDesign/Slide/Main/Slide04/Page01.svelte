@@ -45,10 +45,10 @@
 
 <DefaultPage color={color} fontSize={fontSize}>
     <div class="Section" style="height:100%; width:100%;">
-        <div class="header" style="height:20%;">
+        <div class="header" style="font-size:{calcSubFontSize()}; height:20%;">
             물론, 이전 슬라이드도 볼 수 있겠죠?
         </div>
-        <div class="howToMove" style="left: {-calcMainFontSize()/2}rem;">
+        <div class="howToMove" style="font-size:{calcSubFontSize()}rem; left: {-calcMainFontSize() / 2}rem;">
             {#if visibility}
             <div class='animation' style="left: {!animationStart ? 25 : 75}%;"  in:fade={{duration:200}} out:fade={{duration:200}}>
                 <Icon size={calcMainFontSize().toString() + "rem"} color={$Color["foreColor"][$season]} path={mdiCursorDefaultClick} />
