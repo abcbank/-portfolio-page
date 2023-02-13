@@ -7,7 +7,7 @@
     export let color = "transparent";
     export let fontSize = 2
 
-    const calcMainFontSize = () => !$Device["isMobile"] ? fontSize : fontSize;
+    const calcMainFontSize = () => !$Device["isMobile"] ? fontSize : fontSize/2;
     const calcSubFontSize = () => !$Device["isMobile"] ? fontSize : fontSize/4;
 
     let Slide_01 = true;
