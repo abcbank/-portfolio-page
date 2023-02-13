@@ -7,10 +7,12 @@
 	export let isChecked;
 	export let leftIconColor = "currentcolor"
 	export let rightIconColor = "currentcolor"
+	export let textColor = "var(--text-color)"
 	function empty(){}
 </script>
 
-<div class="menu-item" on:click|preventDefault on:keydown={empty} on:keyup={empty}>
+<div class="menu-item" on:click|preventDefault on:keydown={empty} on:keyup={empty}
+	style="color:{textColor};">
 	<IconButton iconColor={leftIconColor} path={leftIcon ?? ''} />
 	
 	<slot />
@@ -20,9 +22,9 @@
 			<Icon color={rightIconColor} path={ mdiCheckBold } />
 		</span>
 	{:else}
-	<span class="icon-right">
-		<Icon  color={rightIconColor} path={ rightIcon } />
-	</span>
+		<span class="icon-right">
+			<Icon  color={rightIconColor} path={ rightIcon } />
+		</span>
 	{/if}
 </div>
 

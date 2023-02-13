@@ -7,9 +7,10 @@
     
     export let height;
     export let activeMenu;
+    export let Side;
 </script>
 
-<MenuFrame bind:height={height}>
+<MenuFrame bind:height={height}  in_x={Side ? 300 : -300} out_x={Side ? 300 : -300}>
     <MenuItem on:click={() => {
         activeMenu = "2021"
     }}  leftIcon={mdiCalendarMonthOutline} rightIcon={mdiChevronRight } isChecked={false} >2021</MenuItem>

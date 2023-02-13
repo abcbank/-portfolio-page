@@ -11,25 +11,25 @@
     DropdownMenu,
     DropdownItem
   } from 'sveltestrap';
-  import NavLogo from "./Navlogo.svelte"
-  import Profile from "./NavProfile.svelte"
-  import Git from "./NavGithub.svelte"  
-  import Outsourcing from "./NavOutsourcingSelector.svelte"
-  import Project from "./NavProjectSelector.svelte"
-  import NavUISelector from "./NavUISelector.svelte"  
+  import NavLogo from "./Components/Navlogo.svelte"
+  import Profile from "./Components/NavProfile.svelte"
+  import Git from "./Components/NavGithub.svelte"  
+  import Outsourcing from "./Components/NavOutsourcingSelector.svelte"
+  import Project from "./Components/NavProjectSelector.svelte"
+  import NavUISelector from "./Components/NavUISelector.svelte"  
+
   import { push } from "svelte-spa-router";
-  import { LastPage } from '../global'
+  import { LastPage } from '../../global'
   import { onMount } from 'svelte'
-	import IconButton from './Dropdown/IconButton.svelte';
-  import Toggler from "./Sidebar/Toggler.svelte"
-  import Sidebar from './Sidebar/Sidebar.svelte'
+	import IconButton from '../Dropdown/IconButton.svelte';
+  import Toggler from "../Sidebar/Toggler.svelte"
+  import Sidebar from '../Sidebar/Sidebar.svelte'
 
   export let height;
 
   let isOpen = false;
   let isOpen_pre = false;
 
-  let uiSelectorLocation = 11;
 
   let Profile_isOpen = false;
   let Project_isOpen = false;
@@ -49,34 +49,46 @@
     push(link);
   }
 
-function calcLeft(){
-    if(document.body.clientWidth <= 767)
-    {
-      uiSelectorLocation = 60;
-    }
-    else
-      uiSelectorLocation = 11;
-}
+  function onClose(){
+    Profile_isOpen = false;
+    Project_isOpen = false;
+    Outsourcing_isOpen = false;
+    Git_isOpen = false;
+    NavUISelector_isOpen = false;
+  }
+  function onOpen(){
+    Profile_isOpen = false;
+    Project_isOpen = false;
+    Outsourcing_isOpen = false;
+    Git_isOpen = false;
+    NavUISelector_isOpen = false;
+  }
+
 let sidebarIsOpen = false;
   onMount(()=>{
-    calcLeft();
   })
 </script>
 
 <div class="NavBar"
 bind:clientHeight={height} bind:clientWidth={width}>
   <div style="left:11px;" on:click={() => {pushRouter("/")}} on:keypress={()=>{}}>
-    <NavLogo pushFunc={pushRouter} />
+    <NavLogo />
   </div>
   <div style="float:right;">
     {#if width <= 720}
-    <Sidebar bind:open={sidebarIsOpen}/>
+    <Sidebar bind:open={sidebarIsOpen} onClose={onClose}>
+      <Profile height = { height } isSide={true} onOpen={onOpen} pushFunc={pushRouter} bind:isOpen={Profile_isOpen}  />
+      <Project height = { height } isSide={true} onOpen={onOpen} pushFunc={pushRouter} bind:isOpen={Project_isOpen}  />
+      <Outsourcing height = { height } isSide={true} onOpen={onOpen} pushFunc={pushRouter}  bind:isOpen={Outsourcing_isOpen}  />
+      <Git height = { height } isSide={true} onOpen={onOpen} bind:isOpen={Git_isOpen} />
+      <NavUISelector height= { height } isSide={true} onOpen={onOpen} bind:isOpen={NavUISelector_isOpen} />
+    </Sidebar>
     {:else}
-    <Profile height = { height - 22} bind:isOpen={Profile_isOpen} pushFunc={pushRouter} />
-    <Project height = { height - 22} bind:isOpen={Project_isOpen} pushFunc={pushRouter} />
-    <Outsourcing height = { height - 22} bind:isOpen={Outsourcing_isOpen} pushFunc={pushRouter}  />
-    <Git height = { height - 22}  bind:isOpen={Git_isOpen}/>
-    <NavUISelector height= { height - 22} bind:isOpen={NavUISelector_isOpen}/>
+    <Profile height = { height - 22} onOpen={onOpen} pushFunc={pushRouter}  bind:isOpen={Profile_isOpen}/>
+    <Project height = { height - 22} onOpen={onOpen} pushFunc={pushRouter} bind:isOpen={Project_isOpen}  />
+    <Outsourcing height = { height - 22} onOpen={onOpen} pushFunc={pushRouter} bind:isOpen={Outsourcing_isOpen}   />
+    <Git height = { height - 22} onOpen={onOpen} bind:isOpen={Git_isOpen}/>
+    <NavUISelector height= { height - 22} onOpen={onOpen} bind:isOpen={NavUISelector_isOpen}/>
     {/if}
   </div>
 </div>

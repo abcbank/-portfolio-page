@@ -1,8 +1,8 @@
 <script>
     import { mdiConsoleNetwork, mdiSourceBranchCheck } from '@mdi/js';
     import { onMount } from 'svelte'
-    import { bench } from "../asciiArts"
-    import { Device, season } from '../global'
+    import { bench } from "../../asciiArts"
+    import { Device, season } from '../../global'
 
     const defaultThickness = 20;
     var smallest_mag = 10;

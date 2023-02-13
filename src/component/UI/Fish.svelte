@@ -1,7 +1,7 @@
 <script>
-    import { season } from "../global"
+    import { season } from "../../global"
     import { onMount } from 'svelte'
-	import { fish, fish_01, fish_02, fish_03, fish_04, fish_05, fish_06, fish_07, fish_08, fish_09, fish_10, fish_11, fish_12 } from "../asciiArts"
+	import { fish, fish_01, fish_02, fish_03, fish_04, fish_05, fish_06, fish_07, fish_08, fish_09, fish_10, fish_11, fish_12 } from "../../asciiArts"
     import { linear, circInOut,  cubicInOut, expoInOut } from 'svelte/easing';
 
     // a bunch of variables defining the snow and how it falls

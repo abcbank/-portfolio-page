@@ -4,14 +4,17 @@
 	
 	export let Menu = [{Name: 'main', Component: DefaultMenu},];
 	export let activeMenu = 'main';
+	export let Side = false;
+
+
 	let menuHeight = 0;
 	let menuEl = null;
 </script>
 
-<div class="dropdown stack" style="height: {menuHeight}px">
+<div class="dropdown stack" class:side={Side} style="height: {menuHeight}px;">
 	{#each Menu as Config}
 		{#if activeMenu == Config.Name}
-			<svelte:component this={Config.Component} bind:height={menuHeight} bind:activeMenu={activeMenu} />
+			<svelte:component this={Config.Component} Side={Side} bind:height={menuHeight} bind:activeMenu={activeMenu} />
 		{/if}
 	{/each}
 	<!-- {#if activeMenu === 'main'}
@@ -53,7 +56,7 @@
 <style>
 	.dropdown {
 		position: absolute;
-		top: 58px;
+		top:58px;
 		width: 300px;
 		height:500px;
 		transform: translateX(-45%);
@@ -72,4 +75,10 @@
 	.stack > :global(*) {
 		grid-area: 1 / 1;
     }
+
+	.side{
+		transform: translateX(-100%);
+		left: -10px;
+		top: 10px;
+	}
 </style>

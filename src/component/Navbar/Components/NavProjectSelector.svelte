@@ -1,28 +1,35 @@
 <script>
 	import { fade } from 'svelte/transition';
-    import { Device } from '../global'
-    import { mdiCodeGreaterThanOrEqual  } from '@mdi/js';
-	import NavItem from './Dropdown/NavItem.svelte';
-	import DropdownMenu from './Dropdown/DropdownMenu.svelte';
-	import IconButton from './Dropdown/IconButton.svelte';
+    import { Device } from '../../../global'
+    import { mdiCodeGreaterThanOrEqual,mdiChevronDown  } from '@mdi/js';
+	import NavItem from '../../Dropdown/NavItem.svelte';
+	import DropdownMenu from '../../Dropdown/DropdownMenu.svelte';
+	import IconButton from '../../Dropdown/IconButton.svelte';
     import ProjectsMain from '../../DropdownMenus/Projects_Main.svelte';
     import Projects_2021 from '../../DropdownMenus/Projects_2021.svelte';
     import Projects_2022 from '../../DropdownMenus/Projects_2022.svelte';
     import Projects_2023 from '../../DropdownMenus/Projects_2023.svelte';
+    import SideTrigger from '../../Dropdown/SideTrigger.svelte';
     
     export let height = 0;
-    export let isOpen = false;
+    export let isSide = false;
+    export let onOpen;
     export let pushFunc;
+    export let isOpen = false;
 
     function empty(){}
 
 </script>
-<div class = "Project" style="height:{height}px;" in:fade={{ delay: 100 }}>
-<NavItem bind:open={isOpen} isMobile={ $Device["isMobile"] }>
-    <span slot="trigger" on:click={(event) => pushFunc("/projects")} on:keypress={empty}>
+<div class = "Project"class:side={isSide} style="height:{height}px;" in:fade={{ delay: 100 }}>
+<NavItem bind:open={isOpen} Side={ isSide }  preOpen={onOpen}>
+    <span slot="trigger" on:click={(event) => {if(!isSide)pushFunc("/projects")}} on:keypress={empty}>
+        {#if !isSide}
         <IconButton path={mdiCodeGreaterThanOrEqual} Comment="Project" bind:showComment={isOpen} />
+        {:else}
+        <SideTrigger leftIcon={mdiCodeGreaterThanOrEqual} bind:isOpen={isOpen} isDropdown={true} rightIconColor="#fff" textColor="#fff" >Project</SideTrigger>
+        {/if}
     </span>
-    <DropdownMenu Menu={
+    <DropdownMenu Side={isSide} Menu={
     [
         {Name: 'main', Component: ProjectsMain}, 
         {Name: '2021', Component: Projects_2021},
@@ -41,5 +48,8 @@
 		display: flex;
 		justify-content: flex-end;
         z-index: 1;;
+    }
+    .side{
+        width:100%;
     }
 </style>

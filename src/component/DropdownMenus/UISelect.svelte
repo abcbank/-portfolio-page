@@ -8,6 +8,7 @@
     import { onMount } from 'svelte'
     
     export let height;
+    export let Side;
 
     let isChecked = {
         "Spring" :false,
@@ -32,7 +33,7 @@
     })
 </script>
 
-<MenuFrame bind:height={height}>
+<MenuFrame bind:height={height}  in_x={Side ? 300 : -300} out_x={Side ? 300 : -300}>
     <MenuItem on:click={() => {
         $ContextVisible = !$ContextVisible;
     }} leftIcon={mdiTextBoxRemoveOutline } isChecked={false} >Context

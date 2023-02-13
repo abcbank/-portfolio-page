@@ -1,33 +1,30 @@
 <script>
 	import Icon from '../Icon/Icon.svelte';
 	import IconButton from './IconButton.svelte';
-	import {mdiCheckBold} from "@mdi/js"
+	import {mdiChevronLeft,mdiChevronRight} from "@mdi/js"
 	export let leftIcon = null;
-	export let rightIcon = "";
-	export let isChecked;
+	export let isOpen;
+	export let isDropdown;
 	export let leftIconColor = "currentcolor"
 	export let rightIconColor = "currentcolor"
+	export let textColor = "var(--text-color)"
 	function empty(){}
 </script>
 
-<div class="menu-item" on:click|preventDefault on:keydown={empty} on:keyup={empty}>
+<div class="side-item"
+	style="color:{textColor};">
 	<IconButton iconColor={leftIconColor} path={leftIcon ?? ''} />
 	
 	<slot />
-	
-	{#if isChecked}
-		<span class="icon-right">
-			<Icon color={rightIconColor} path={ mdiCheckBold } />
-		</span>
-	{:else}
-	<span class="icon-right">
-		<Icon  color={rightIconColor} path={ rightIcon } />
-	</span>
-	{/if}
+	{#if isDropdown}
+        <span class="icon-right">
+            <Icon  color={ rightIconColor } path={ !isOpen ? mdiChevronLeft : mdiChevronRight } />
+        </span>
+    {/if}
 </div>
 
 <style>
-	.menu-item {
+	.side-item {
 		height: 50px;
 		display: grid;
 		grid-template-columns: auto 1fr auto;

@@ -1,5 +1,5 @@
 <script>
-  import { Device, season } from "../global"
+  import { Device, season } from "../../global"
     import { onMount } from 'svelte'
   
     // a bunch of variables defining the snow and how it falls

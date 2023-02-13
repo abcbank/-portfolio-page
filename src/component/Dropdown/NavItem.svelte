@@ -7,12 +7,17 @@
     let openTimerRunning = false;
     let closeTimerRunning = false;
 
-    export let isMobile = false;
+    export let Side = false;
+    export let preOpen = isEmpty;
+
+    function isEmpty(){
+
+    }
   </script>
   
-  <li class="nav-item" 
+  <li class="nav-item" class:isSide = {Side}
     on:mouseenter|preventDefault={() => {
-        if(!isMobile){
+        if(!Side){
             open_pre = true;
             clearTimeout(t)
             t = setTimeout(() => {
@@ -21,7 +26,7 @@
         }
     }} 
     on:mouseleave|preventDefault={() => {
-        if(!isMobile){
+        if(!Side){
             open_pre = false;
             clearTimeout(t)
             t = setTimeout(() => {
@@ -29,15 +34,24 @@
             }, 300)
         }
     }}
-    on:click|preventDefault={
-        () => {
-            if(isMobile)
-                open = !open;
-        }
-    }
     on:keypress={empty}
     >
-      <div>
+      <div class:isSide={Side} 
+      on:click|preventDefault={
+          () => {
+              if(Side){
+                  console.log("aaa");
+                  if(!open){
+                      preOpen();
+                      open = true;
+                  }
+                  else{
+                      open = false;
+                  }
+              }
+          }
+      } 
+    on:keypress={empty}>
           <slot name="trigger" />
       </div>
   
@@ -48,16 +62,19 @@
   
   <style>
       .nav-item {
-          width:8vw;
-          min-width: 110px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
+        width:8vw;
+        min-width: 110px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
           
         -ms-user-select: none; 
         -moz-user-select: -moz-none;
         -khtml-user-select: none;
         -webkit-user-select: none;
         user-select: none;
+      }
+      .isSide{
+        width:100%;
       }
   </style>

@@ -1,22 +1,25 @@
 <script>
 	import { fade } from 'svelte/transition';
-    import { Device, ContextVisible, LastPage } from '../global'
-    import { mdiCurrencyKrw,mdiCalendarMonthOutline } from '@mdi/js';
-	import NavItem from './Dropdown/NavItem.svelte';
-	import DropdownMenu from './Dropdown/DropdownMenu.svelte';
-	import IconButton from './Dropdown/IconButton.svelte';
-    import MenuItem from './Dropdown/MenuItem.svelte'
+    import { Device, ContextVisible, LastPage } from '../../../global'
+    import { mdiCurrencyKrw,  } from '@mdi/js';
+	import NavItem from '../../Dropdown/NavItem.svelte';
+	import DropdownMenu from '../../Dropdown/DropdownMenu.svelte';
+	import IconButton from '../../Dropdown/IconButton.svelte';
+    import SideTrigger from '../../Dropdown/SideTrigger.svelte';
     import { onMount } from 'svelte'
-    import OutsourcingMain from './DropdownMenus/Outsourcing_Main.svelte';
-    import Outsourcing_2022 from './DropdownMenus/Outsourcing_2022.svelte';
-    import Outsourcing_2023 from './DropdownMenus/Outsourcing_2023.svelte';
+    import OutsourcingMain from '../../DropdownMenus/Outsourcing_Main.svelte';
+    import Outsourcing_2022 from '../../DropdownMenus/Outsourcing_2022.svelte';
+    import Outsourcing_2023 from '../..//DropdownMenus/Outsourcing_2023.svelte';
 
     let SwitchStatus = $ContextVisible;
     let width = 0;
+
     
     export let height = 0;
-    export let isOpen = false;
+    export let isSide = false;
+    export let onOpen;
     export let pushFunc;
+    export let isOpen = false;
 
     
 
@@ -30,12 +33,16 @@
         
     })
 </script>
-<div class = "OutsourcingSelector" style="height:{height}px;" in:fade={{ delay: 100 }}>
-<NavItem bind:open={isOpen} isMobile={ $Device["isMobile"] }>
-    <span slot="trigger" on:click={(event) => pushFunc("/outsourcing")} on:keypress={empty}>
+<div class = "OutsourcingSelector"class:side={isSide} style="height:{height}px;" in:fade={{ delay: 100 }}>
+<NavItem bind:open={isOpen} Side={ isSide } preOpen={onOpen}>
+    <span slot="trigger" on:click={(event) => {if(!isSide) pushFunc("/outsourcing")}} on:keypress={empty}>
+        {#if !isSide}
         <IconButton path={mdiCurrencyKrw} Comment="Outsourcing" bind:showComment={isOpen} />
+        {:else}
+        <SideTrigger leftIcon={mdiCurrencyKrw} bind:isOpen={isOpen} isDropdown={true} rightIconColor="#fff" textColor="#fff" >Outsourcing</SideTrigger>
+        {/if}
     </span>
-    <DropdownMenu Menu={
+    <DropdownMenu Side={isSide} Menu={
     [
         {Name: 'main', Component: OutsourcingMain}, 
         {Name: '2022', Component: Outsourcing_2022},
@@ -53,5 +60,8 @@
 		display: flex;
 		justify-content: flex-end;
         z-index: 1;;
+    }
+    .side{
+        width:100%;
     }
 </style>

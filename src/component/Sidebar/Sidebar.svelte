@@ -3,21 +3,20 @@
 	import {clickOutside} from './clickOutside.js';
 
 	export let open = false
+    export let onClose;
 
     let documentSize = [document.body.clientWidth, document.body.clientHeight]
 
     function handleClickOutside(){
+        onClose();
         open = false;
     }
 </script>
 
 <div use:clickOutside on:click_outside={handleClickOutside}>
-    <Toggler bind:open />
-    <aside style="width:{document.body.clientWidth / 2}px; height:{document.body.clientHeight  - 60}px;" class:open>
-        <nav>
-            <a class="block" href="#about">About</a>
-            <a class="block" href="#contact">Contact</a>
-        </nav>
+    <Toggler bind:open onClose={onClose} />
+    <aside style="height:{document.body.clientHeight  - 60}px;" class:open>
+        <slot/>
     </aside>
 </div>
 
@@ -26,18 +25,19 @@
         display:inline-block;
     }
 	aside {
+        padding:10px;
         position:absolute;
         background-color:#282a35;
         top:60px;
-        width:33%;
+        width:40%;
         height:100%;
-		left: 100%;
-		transition: left 0.3s ease-in-out
+		right: -40%;
+		transition: right 0.3s ease-in-out
 	}
 	
 	.open {
         z-index:20;
         opacity:1;
-		left: 67%;
+		right: 0%;
 	}
 </style>

@@ -8,6 +8,7 @@
     
     export let height;
     export let activeMenu;
+    export let Side;
 
     let isChecked = {};
     
@@ -30,7 +31,7 @@
   })
 </script>
 
-<MenuFrame bind:height={height} in_x={300} out_x={300}>
+<MenuFrame bind:height={height} in_x={Side ? -300 : 300} out_x={Side ? -300 : 300}>
     <MenuItem on:click={() => {
         activeMenu = "main"
     }}  leftIcon={mdiArrowLeft} isChecked={false} >Back</MenuItem>

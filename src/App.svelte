@@ -3,11 +3,11 @@
     import { onMount } from "svelte";
 	import { Color, LastPage, Device, ContextVisible, season } from "./global"
 	import { bench, fish_01, fish_02, fish_03, fish_04, fish_05, fish_06, fish_07, fish_08, fish_09, fish_10, fish_11, fish_12 } from "./asciiArts"
-    import Navbar from "./component/Navbar.svelte";
-	import Snowflakes from "./component/Snowflakes.svelte";
-	import Sakuraflakes from "./component/Sakura.svelte"
-	import Lake from "./component/Lake.svelte"
-	import Park from "./component/Park.svelte"
+    import Navbar from "./component/Navbar/Navbar.svelte";
+	import Snowflakes from "./component/UI/Snowflakes.svelte";
+	import Sakuraflakes from "./component/UI/Sakura.svelte"
+	import Lake from "./component/UI/Lake.svelte"
+	import Park from "./component/UI/Park.svelte"
 	import jquery from "jquery"
 	import Router from 'svelte-spa-router'
 
