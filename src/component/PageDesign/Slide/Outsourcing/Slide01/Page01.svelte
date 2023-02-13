@@ -8,3 +8,6 @@
 <DefaultPage color={color} fontSize={fontSize}>
     <p>Outsourcing</p>
 </DefaultPage>
+
+<style>    
+</style>

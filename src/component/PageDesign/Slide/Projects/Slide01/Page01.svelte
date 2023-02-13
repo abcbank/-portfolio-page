@@ -8,3 +8,6 @@
 <DefaultPage color={color} fontSize={fontSize}>
     <p>Projects</p>
 </DefaultPage>
+
+<style>    
+</style>

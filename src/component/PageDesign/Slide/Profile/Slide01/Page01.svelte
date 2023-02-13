@@ -8,3 +8,6 @@
 <DefaultPage color={color} fontSize={fontSize}>
     <p>Profile</p>
 </DefaultPage>
+
+<style>    
+</style>
