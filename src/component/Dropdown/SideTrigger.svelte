@@ -12,7 +12,7 @@
 </script>
 
 <div class="side-item"
-	style="color:{textColor}; font-size:0.75rem;">
+	style="color:{textColor};">
 	<IconButton iconColor={leftIconColor} path={leftIcon ?? ''} />
 	
 	<slot />
@@ -25,6 +25,7 @@
 
 <style>
 	.side-item {
+		font-size:2vw;
 		height: 50px;
 		display: grid;
 		grid-template-columns: auto 1fr auto;

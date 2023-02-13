@@ -32,6 +32,7 @@
         top:60px;
         width:40%;
         min-width: 150px;
+        max-width: 300px;
         height:100%;
 		right: -100%;
 		transition: right 0.3s ease-in-out
