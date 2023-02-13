@@ -20567,10 +20567,10 @@ var app = (function (jquery) {
     			aside = element("aside");
     			if (default_slot) default_slot.c();
     			set_style(aside, "height", document.body.clientHeight - 60 + "px");
-    			attr_dev(aside, "class", "svelte-mz164g");
+    			attr_dev(aside, "class", "svelte-i6c0df");
     			toggle_class(aside, "open", /*open*/ ctx[0]);
     			add_location(aside, file$1j, 17, 4, 451);
-    			attr_dev(div, "class", "svelte-mz164g");
+    			attr_dev(div, "class", "svelte-i6c0df");
     			add_location(div, file$1j, 15, 0, 340);
     		},
     		l: function claim(nodes) {
