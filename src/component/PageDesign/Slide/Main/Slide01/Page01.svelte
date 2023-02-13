@@ -62,7 +62,7 @@
     {#if Slide_01}
         <p out:fade={{duration:200,}}>Welcome to abcBank</p>
     {:else if Slide_02}
-        <div class="Section" style="height:100%; width:100%; font-size:{calcMainFontSize()}rem;" in:fade={{delay:300, duration:200}}>
+        <div class="Section" style="height:100%; width:100%; font-size:{calcSubFontSize()}rem;" in:fade={{delay:300, duration:200}}>
             <div class="header" style="height:20%;">
                 드래그를 통해 슬라이드를 이동해 보세요.
             </div>

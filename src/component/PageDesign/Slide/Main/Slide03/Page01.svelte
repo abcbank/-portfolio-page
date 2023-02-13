@@ -18,7 +18,11 @@
 <DefaultPage color={color} fontSize={fontSize}>
     <div class="context" style="color:{color};">
         <div class="header" style="width:100%; height:100%; font-size:{calcSubFontSize()}rem;">
-            아래에서 현재 슬라이드와 페이지를 확인할 수 있고,
+            {#if $Device["isMobile"]}
+                아래에서 현재 슬라이드와<br/>페이지를 확인할 수 있고,
+            {:else}
+                아래에서 현재 슬라이드와 페이지를 확인할 수 있고,
+            {/if}
         </div>
         <div class="footer" style="width:100%; height:100px;" in:fade={{delay:200, duration:200,}}>
         <Icon size="60px" color={$Color["foreColor"][$season]} path={mdiArrowDownBoldOutline} />
