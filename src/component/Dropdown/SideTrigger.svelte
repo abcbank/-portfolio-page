@@ -34,7 +34,7 @@
 		transition: background var(--speed);
 		padding: 0.5rem;
 		color: var(--text-color);
-	} 
+	}
 	
 	.menu-item:hover {
 		background-color: #525357;
