@@ -25,7 +25,7 @@
         display:inline-block;
     }
 	aside {
-        padding:10px;
+        padding:2px;
         position:absolute;
         background-color:#282a35;
         top:60px;
