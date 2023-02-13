@@ -45,7 +45,7 @@
 
 <DefaultPage color={color} fontSize={fontSize}>
     <div class="Section" style="height:100%; width:100%;">
-        <div class="header" style="font-size:{calcSubFontSize()}; height:20%;">
+        <div class="header" style="font-size:{calcSubFontSize()}rem; height:20%;">
             물론, 이전 슬라이드도 볼 수 있겠죠?
         </div>
         <div class="howToMove" style="font-size:{calcSubFontSize()}rem; left: {-calcMainFontSize() / 2}rem;">

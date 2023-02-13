@@ -5,9 +5,9 @@
     export let color = "transparent";
     export let fontSize = 2
 
-    const calcSubFontSize = () => !$Device["isMobile"] ? 2 : 1;
+    const calcSubFontSize = () => !$Device["isMobile"] ? fontSize : fontSize/2;
 </script>
 
-<DefaultPage color={color} fontSize={fontSize}>
-    <p>나름 이것저것 넣어 꾸며봤답니다</p>
+<DefaultPage color={color}>
+    <p style="font-size: {calcSubFontSize()}rem;">나름 이것저것 넣어 꾸며봤답니다</p>
 </DefaultPage>

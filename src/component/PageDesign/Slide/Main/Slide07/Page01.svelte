@@ -8,8 +8,8 @@
     const calcSubFontSize = () => !$Device["isMobile"] ? fontSize : fontSize/2;
 </script>
 
-<DefaultPage color={color} fontSize={calcSubFontSize()}>
-    <p>
+<DefaultPage color={color} >
+    <p fontSize={calcSubFontSize()}>
         다만 일부 배경의 경우, 사양에 따라
         <br/>
         렉이 걸릴 수 있습니다</p>
