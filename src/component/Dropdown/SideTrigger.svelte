@@ -37,7 +37,7 @@
 		color: var(--text-color);
 	}
 	
-	.menu-item:hover {
+	.side-item:hover {
 		background-color: #525357;
 	}
 </style>
