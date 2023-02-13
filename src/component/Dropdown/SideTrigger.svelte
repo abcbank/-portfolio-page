@@ -25,7 +25,7 @@
 
 <style>
 	.side-item {
-		font-size:min(2vw, 0.75rem);
+		font-size:max(2vw, 0.75rem);
 		height: 50px;
 		display: grid;
 		grid-template-columns: auto 1fr auto;
