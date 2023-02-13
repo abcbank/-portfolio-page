@@ -86,7 +86,7 @@
     <MenuItem on:click={() => {
         pushRouter("/project/2022/downloader")
         rerandering();
-    }}   leftIcon={mdiDownloadOutline} bind:isChecked={isChecked["downloader"]}>PCB 다운로더 리뉴얼</MenuItem>
+    }}   leftIcon={mdiDownloadOutline} bind:isChecked={isChecked["downloader"]}>PCB 다운로더</MenuItem>
     <MenuItem on:click={() => {
         pushRouter("/project/2022/convyerboxing")
         rerandering();
