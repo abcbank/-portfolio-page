@@ -9,5 +9,12 @@
 </script>
 
 <DefaultPage color={color} fontSize={fontSize}>
-    <p>이전 페이지를 보고 싶으실 경우,<br/>마우스 왼쪽을 더블 클릭해주세요</p>
+    <p>
+        이전 페이지를 보고 싶으실 경우,<br/>
+        {#if $Device["isMobile"]}
+            왼쪽 화면을 두번 터치해주세요
+        {:else}
+            오른쪽 마우스를 더블클릭해주세요
+        {/if}
+    </p>
 </DefaultPage>
