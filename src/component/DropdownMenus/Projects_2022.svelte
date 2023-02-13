@@ -7,6 +7,7 @@
     import { onMount } from 'svelte'
     
     export let height;
+    export let width;
     export let activeMenu;
     export let Side;
 
@@ -60,14 +61,20 @@
   })
 </script>
 
-<MenuFrame bind:height={height} in_x={Side ? -300 : 300} out_x={Side ? -300 : 300}>
+<MenuFrame bind:height={height} bind:width={width} in_x={Side ? -300 : 300} out_x={Side ? -300 : 300}>
     <MenuItem on:click={() => {
         activeMenu = "main"
     }}  leftIcon={mdiArrowLeft} isChecked={false} >Back</MenuItem>
     <MenuItem on:click={() => {
         pushRouter("/project/2022/analoguecalibration")
         rerandering();
-    }}  bind:leftIcon={config[idx].path} bind:leftIconColor={config[idx].color} bind:isChecked={isChecked["analoguecalibration"]} >아날로그 캘리브레이션</MenuItem>
+    }}  bind:leftIcon={config[idx].path} bind:leftIconColor={config[idx].color} bind:isChecked={isChecked["analoguecalibration"]} >
+        {#if width < 200}
+        아날로그<br/>캘리브레이션
+        {:else}
+        아날로그 캘리브레이션
+        {/if}
+    </MenuItem>
     <MenuItem on:click={() => {
         pushRouter("/project/2022/robotpiano")
         rerandering();

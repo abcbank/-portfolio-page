@@ -7,6 +7,7 @@
     import { onMount } from 'svelte'
     
     export let height;
+    export let width;
     export let activeMenu;
     export let Side;
 
@@ -31,7 +32,7 @@
   })
 </script>
 
-<MenuFrame bind:height={height} in_x={Side ? -300 : 300} out_x={Side ? -300 : 300}>
+<MenuFrame bind:height={height} bind:width={width} in_x={Side ? -300 : 300} out_x={Side ? -300 : 300}>
     <MenuItem on:click={() => {
         activeMenu = "main"
     }}  leftIcon={mdiArrowLeft} isChecked={false} >Back</MenuItem>
@@ -42,7 +43,13 @@
     <MenuItem on:click={() => {
         pushRouter("/project/2023/digitalcalibration")
         rerandering();
-    }}   leftIcon={mdiPoll} bind:isChecked={isChecked["digitalcalibration"]}>디지털 캘리브레이션 정비</MenuItem>
+    }}   leftIcon={mdiPoll} bind:isChecked={isChecked["digitalcalibration"]}>
+        {#if width < 200}
+        디지털<br/>캘리브레이션
+        {:else}
+        디지털 캘리브레이션
+        {/if}
+</MenuItem>
     <MenuItem on:click={() => {
         pushRouter("/project/2023/portfoliopage")
         rerandering();
