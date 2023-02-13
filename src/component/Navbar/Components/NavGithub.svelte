@@ -17,6 +17,7 @@
     export let isSide = false;
     export let onOpen;
     export let isOpen = false;
+    export let dropDownWidth = 300;
 
     let UIStatus = {}
     function SetUIStatus(UIType){

@@ -10768,7 +10768,7 @@ var app = (function (jquery) {
 
     function get_each_context$5(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[7] = list[i];
+    	child_ctx[8] = list[i];
     	return child_ctx;
     }
 
@@ -10781,20 +10781,20 @@ var app = (function (jquery) {
     	let current;
 
     	function switch_instance_height_binding(value) {
-    		/*switch_instance_height_binding*/ ctx[4](value);
+    		/*switch_instance_height_binding*/ ctx[5](value);
     	}
 
     	function switch_instance_activeMenu_binding(value) {
-    		/*switch_instance_activeMenu_binding*/ ctx[5](value);
+    		/*switch_instance_activeMenu_binding*/ ctx[6](value);
     	}
 
-    	var switch_value = /*Config*/ ctx[7].Component;
+    	var switch_value = /*Config*/ ctx[8].Component;
 
     	function switch_props(ctx) {
     		let switch_instance_props = { Side: /*Side*/ ctx[2] };
 
-    		if (/*menuHeight*/ ctx[3] !== void 0) {
-    			switch_instance_props.height = /*menuHeight*/ ctx[3];
+    		if (/*menuHeight*/ ctx[4] !== void 0) {
+    			switch_instance_props.height = /*menuHeight*/ ctx[4];
     		}
 
     		if (/*activeMenu*/ ctx[0] !== void 0) {
@@ -10827,9 +10827,9 @@ var app = (function (jquery) {
     			const switch_instance_changes = {};
     			if (dirty & /*Side*/ 4) switch_instance_changes.Side = /*Side*/ ctx[2];
 
-    			if (!updating_height && dirty & /*menuHeight*/ 8) {
+    			if (!updating_height && dirty & /*menuHeight*/ 16) {
     				updating_height = true;
-    				switch_instance_changes.height = /*menuHeight*/ ctx[3];
+    				switch_instance_changes.height = /*menuHeight*/ ctx[4];
     				add_flush_callback(() => updating_height = false);
     			}
 
@@ -10839,7 +10839,7 @@ var app = (function (jquery) {
     				add_flush_callback(() => updating_activeMenu = false);
     			}
 
-    			if (switch_value !== (switch_value = /*Config*/ ctx[7].Component)) {
+    			if (switch_value !== (switch_value = /*Config*/ ctx[8].Component)) {
     				if (switch_instance) {
     					group_outros();
     					const old_component = switch_instance;
@@ -10895,7 +10895,7 @@ var app = (function (jquery) {
     function create_each_block$5(ctx) {
     	let if_block_anchor;
     	let current;
-    	let if_block = /*activeMenu*/ ctx[0] == /*Config*/ ctx[7].Name && create_if_block$j(ctx);
+    	let if_block = /*activeMenu*/ ctx[0] == /*Config*/ ctx[8].Name && create_if_block$j(ctx);
 
     	const block = {
     		c: function create() {
@@ -10908,7 +10908,7 @@ var app = (function (jquery) {
     			current = true;
     		},
     		p: function update(ctx, dirty) {
-    			if (/*activeMenu*/ ctx[0] == /*Config*/ ctx[7].Name) {
+    			if (/*activeMenu*/ ctx[0] == /*Config*/ ctx[8].Name) {
     				if (if_block) {
     					if_block.p(ctx, dirty);
 
@@ -10980,10 +10980,15 @@ var app = (function (jquery) {
     				each_blocks[i].c();
     			}
 
-    			attr_dev(div, "class", "dropdown stack svelte-fkhegy");
-    			set_style(div, "height", /*menuHeight*/ ctx[3] + "px");
+    			attr_dev(div, "class", "dropdown stack svelte-1v2gyff");
+
+    			set_style(div, "width", (/*Side*/ ctx[2]
+    			? document.body.clientWidth - /*sideWidth*/ ctx[3] - 20
+    			: 300) + "px");
+
+    			set_style(div, "height", /*menuHeight*/ ctx[4] + "px");
     			toggle_class(div, "side", /*Side*/ ctx[2]);
-    			add_location(div, file$1s, 13, 0, 290);
+    			add_location(div, file$1s, 13, 0, 318);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -10998,7 +11003,7 @@ var app = (function (jquery) {
     			current = true;
     		},
     		p: function update(ctx, [dirty]) {
-    			if (dirty & /*Menu, Side, menuHeight, activeMenu*/ 15) {
+    			if (dirty & /*Menu, Side, menuHeight, activeMenu*/ 23) {
     				each_value = /*Menu*/ ctx[1];
     				validate_each_argument(each_value);
     				let i;
@@ -11026,8 +11031,14 @@ var app = (function (jquery) {
     				check_outros();
     			}
 
-    			if (!current || dirty & /*menuHeight*/ 8) {
-    				set_style(div, "height", /*menuHeight*/ ctx[3] + "px");
+    			if (!current || dirty & /*Side, sideWidth*/ 12) {
+    				set_style(div, "width", (/*Side*/ ctx[2]
+    				? document.body.clientWidth - /*sideWidth*/ ctx[3] - 20
+    				: 300) + "px");
+    			}
+
+    			if (!current || dirty & /*menuHeight*/ 16) {
+    				set_style(div, "height", /*menuHeight*/ ctx[4] + "px");
     			}
 
     			if (!current || dirty & /*Side*/ 4) {
@@ -11075,9 +11086,10 @@ var app = (function (jquery) {
     	let { Menu = [{ Name: 'main', Component: DefaultMenu }] } = $$props;
     	let { activeMenu = 'main' } = $$props;
     	let { Side = false } = $$props;
+    	let { sideWidth = 300 } = $$props;
     	let menuHeight = 0;
     	let menuEl = null;
-    	const writable_props = ['Menu', 'activeMenu', 'Side'];
+    	const writable_props = ['Menu', 'activeMenu', 'Side', 'sideWidth'];
 
     	Object.keys($$props).forEach(key => {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<DropdownMenu> was created with unknown prop '${key}'`);
@@ -11085,7 +11097,7 @@ var app = (function (jquery) {
 
     	function switch_instance_height_binding(value) {
     		menuHeight = value;
-    		$$invalidate(3, menuHeight);
+    		$$invalidate(4, menuHeight);
     	}
 
     	function switch_instance_activeMenu_binding(value) {
@@ -11097,6 +11109,7 @@ var app = (function (jquery) {
     		if ('Menu' in $$props) $$invalidate(1, Menu = $$props.Menu);
     		if ('activeMenu' in $$props) $$invalidate(0, activeMenu = $$props.activeMenu);
     		if ('Side' in $$props) $$invalidate(2, Side = $$props.Side);
+    		if ('sideWidth' in $$props) $$invalidate(3, sideWidth = $$props.sideWidth);
     	};
 
     	$$self.$capture_state = () => ({
@@ -11105,6 +11118,7 @@ var app = (function (jquery) {
     		Menu,
     		activeMenu,
     		Side,
+    		sideWidth,
     		menuHeight,
     		menuEl
     	});
@@ -11113,7 +11127,8 @@ var app = (function (jquery) {
     		if ('Menu' in $$props) $$invalidate(1, Menu = $$props.Menu);
     		if ('activeMenu' in $$props) $$invalidate(0, activeMenu = $$props.activeMenu);
     		if ('Side' in $$props) $$invalidate(2, Side = $$props.Side);
-    		if ('menuHeight' in $$props) $$invalidate(3, menuHeight = $$props.menuHeight);
+    		if ('sideWidth' in $$props) $$invalidate(3, sideWidth = $$props.sideWidth);
+    		if ('menuHeight' in $$props) $$invalidate(4, menuHeight = $$props.menuHeight);
     		if ('menuEl' in $$props) menuEl = $$props.menuEl;
     	};
 
@@ -11125,6 +11140,7 @@ var app = (function (jquery) {
     		activeMenu,
     		Menu,
     		Side,
+    		sideWidth,
     		menuHeight,
     		switch_instance_height_binding,
     		switch_instance_activeMenu_binding
@@ -11134,7 +11150,13 @@ var app = (function (jquery) {
     class DropdownMenu extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$2l, create_fragment$2l, safe_not_equal, { Menu: 1, activeMenu: 0, Side: 2 });
+
+    		init(this, options, instance$2l, create_fragment$2l, safe_not_equal, {
+    			Menu: 1,
+    			activeMenu: 0,
+    			Side: 2,
+    			sideWidth: 3
+    		});
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
@@ -11167,6 +11189,14 @@ var app = (function (jquery) {
     	set Side(value) {
     		throw new Error("<DropdownMenu>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
+
+    	get sideWidth() {
+    		throw new Error("<DropdownMenu>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set sideWidth(value) {
+    		throw new Error("<DropdownMenu>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
     }
 
     /* src\component\Dropdown\SideTrigger.svelte generated by Svelte v3.55.1 */
@@ -11191,7 +11221,7 @@ var app = (function (jquery) {
     			span = element("span");
     			create_component(icon.$$.fragment);
     			attr_dev(span, "class", "icon-right");
-    			add_location(span, file$1r, 19, 8, 561);
+    			add_location(span, file$1r, 19, 8, 580);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, span, anchor);
@@ -11259,6 +11289,7 @@ var app = (function (jquery) {
     			if (if_block) if_block.c();
     			attr_dev(div, "class", "side-item svelte-fqigsp");
     			set_style(div, "color", /*textColor*/ ctx[5]);
+    			set_style(div, "font-size", "0.75rem");
     			add_location(div, file$1r, 13, 0, 401);
     		},
     		l: function claim(nodes) {
@@ -12088,14 +12119,14 @@ var app = (function (jquery) {
     /* src\component\Navbar\Components\NavProfile.svelte generated by Svelte v3.55.1 */
     const file$1p = "src\\component\\Navbar\\Components\\NavProfile.svelte";
 
-    // (43:8) {:else}
+    // (44:8) {:else}
     function create_else_block$b(ctx) {
     	let sidetrigger;
     	let updating_isOpen;
     	let current;
 
     	function sidetrigger_isOpen_binding(value) {
-    		/*sidetrigger_isOpen_binding*/ ctx[6](value);
+    		/*sidetrigger_isOpen_binding*/ ctx[7](value);
     	}
 
     	let sidetrigger_props = {
@@ -12125,7 +12156,7 @@ var app = (function (jquery) {
     		p: function update(ctx, dirty) {
     			const sidetrigger_changes = {};
 
-    			if (dirty & /*$$scope*/ 16384) {
+    			if (dirty & /*$$scope*/ 32768) {
     				sidetrigger_changes.$$scope = { dirty, ctx };
     			}
 
@@ -12155,21 +12186,21 @@ var app = (function (jquery) {
     		block,
     		id: create_else_block$b.name,
     		type: "else",
-    		source: "(43:8) {:else}",
+    		source: "(44:8) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (41:8) {#if !isSide}
+    // (42:8) {#if !isSide}
     function create_if_block$g(ctx) {
     	let iconbutton;
     	let updating_showComment;
     	let current;
 
     	function iconbutton_showComment_binding(value) {
-    		/*iconbutton_showComment_binding*/ ctx[5](value);
+    		/*iconbutton_showComment_binding*/ ctx[6](value);
     	}
 
     	let iconbutton_props = { path: mdiAccountBox, Comment: "Profile" };
@@ -12218,14 +12249,14 @@ var app = (function (jquery) {
     		block,
     		id: create_if_block$g.name,
     		type: "if",
-    		source: "(41:8) {#if !isSide}",
+    		source: "(42:8) {#if !isSide}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (44:8) <SideTrigger leftIcon={mdiAccountBox} bind:isOpen={isOpen} isDropdown={false} rightIconColor="#fff" textColor="#fff" >
+    // (45:8) <SideTrigger leftIcon={mdiAccountBox} bind:isOpen={isOpen} isDropdown={false} rightIconColor="#fff" textColor="#fff" >
     function create_default_slot$1a(ctx) {
     	let t;
 
@@ -12245,14 +12276,14 @@ var app = (function (jquery) {
     		block,
     		id: create_default_slot$1a.name,
     		type: "slot",
-    		source: "(44:8) <SideTrigger leftIcon={mdiAccountBox} bind:isOpen={isOpen} isDropdown={false} rightIconColor=\\\"#fff\\\" textColor=\\\"#fff\\\" >",
+    		source: "(45:8) <SideTrigger leftIcon={mdiAccountBox} bind:isOpen={isOpen} isDropdown={false} rightIconColor=\\\"#fff\\\" textColor=\\\"#fff\\\" >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (40:4) 
+    // (41:4) 
     function create_trigger_slot$4(ctx) {
     	let span;
     	let current_block_type_index;
@@ -12276,7 +12307,7 @@ var app = (function (jquery) {
     			span = element("span");
     			if_block.c();
     			attr_dev(span, "slot", "trigger");
-    			add_location(span, file$1p, 39, 4, 1267);
+    			add_location(span, file$1p, 40, 4, 1304);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, span, anchor);
@@ -12285,7 +12316,7 @@ var app = (function (jquery) {
 
     			if (!mounted) {
     				dispose = [
-    					listen_dev(span, "click", /*click_handler*/ ctx[7], false, false, false),
+    					listen_dev(span, "click", /*click_handler*/ ctx[8], false, false, false),
     					listen_dev(span, "keypress", empty$2, false, false, false)
     				];
 
@@ -12340,7 +12371,7 @@ var app = (function (jquery) {
     		block,
     		id: create_trigger_slot$4.name,
     		type: "slot",
-    		source: "(40:4) ",
+    		source: "(41:4) ",
     		ctx
     	});
 
@@ -12355,7 +12386,7 @@ var app = (function (jquery) {
     	let current;
 
     	function navitem_open_binding(value) {
-    		/*navitem_open_binding*/ ctx[8](value);
+    		/*navitem_open_binding*/ ctx[9](value);
     	}
 
     	let navitem_props = {
@@ -12379,7 +12410,7 @@ var app = (function (jquery) {
     			attr_dev(div, "class", "Profile svelte-aho2ki");
     			set_style(div, "height", /*height*/ ctx[1] + "px");
     			toggle_class(div, "side", /*isSide*/ ctx[2]);
-    			add_location(div, file$1p, 37, 0, 1104);
+    			add_location(div, file$1p, 38, 0, 1141);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -12394,7 +12425,7 @@ var app = (function (jquery) {
     			if (dirty & /*isSide*/ 4) navitem_changes.Side = /*isSide*/ ctx[2];
     			if (dirty & /*onOpen*/ 8) navitem_changes.preOpen = /*onOpen*/ ctx[3];
 
-    			if (dirty & /*$$scope, isSide, pushFunc, isOpen*/ 16405) {
+    			if (dirty & /*$$scope, isSide, pushFunc, isOpen*/ 32789) {
     				navitem_changes.$$scope = { dirty, ctx };
     			}
 
@@ -12455,7 +12486,7 @@ var app = (function (jquery) {
     function instance$2i($$self, $$props, $$invalidate) {
     	let $ContextVisible;
     	validate_store(ContextVisible, 'ContextVisible');
-    	component_subscribe($$self, ContextVisible, $$value => $$invalidate(10, $ContextVisible = $$value));
+    	component_subscribe($$self, ContextVisible, $$value => $$invalidate(11, $ContextVisible = $$value));
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('NavProfile', slots, []);
     	let SwitchStatus = $ContextVisible;
@@ -12465,6 +12496,7 @@ var app = (function (jquery) {
     	let { onOpen } = $$props;
     	let { pushFunc } = $$props;
     	let { isOpen = false } = $$props;
+    	let { dropDownWidth = 300 } = $$props;
     	let UIStatus = {};
 
     	function SetUIStatus(UIType) {
@@ -12490,7 +12522,7 @@ var app = (function (jquery) {
     		}
     	});
 
-    	const writable_props = ['height', 'isSide', 'onOpen', 'pushFunc', 'isOpen'];
+    	const writable_props = ['height', 'isSide', 'onOpen', 'pushFunc', 'isOpen', 'dropDownWidth'];
 
     	Object.keys($$props).forEach(key => {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<NavProfile> was created with unknown prop '${key}'`);
@@ -12521,6 +12553,7 @@ var app = (function (jquery) {
     		if ('onOpen' in $$props) $$invalidate(3, onOpen = $$props.onOpen);
     		if ('pushFunc' in $$props) $$invalidate(4, pushFunc = $$props.pushFunc);
     		if ('isOpen' in $$props) $$invalidate(0, isOpen = $$props.isOpen);
+    		if ('dropDownWidth' in $$props) $$invalidate(5, dropDownWidth = $$props.dropDownWidth);
     	};
 
     	$$self.$capture_state = () => ({
@@ -12543,6 +12576,7 @@ var app = (function (jquery) {
     		onOpen,
     		pushFunc,
     		isOpen,
+    		dropDownWidth,
     		UIStatus,
     		SetUIStatus,
     		empty: empty$2,
@@ -12557,6 +12591,7 @@ var app = (function (jquery) {
     		if ('onOpen' in $$props) $$invalidate(3, onOpen = $$props.onOpen);
     		if ('pushFunc' in $$props) $$invalidate(4, pushFunc = $$props.pushFunc);
     		if ('isOpen' in $$props) $$invalidate(0, isOpen = $$props.isOpen);
+    		if ('dropDownWidth' in $$props) $$invalidate(5, dropDownWidth = $$props.dropDownWidth);
     		if ('UIStatus' in $$props) UIStatus = $$props.UIStatus;
     	};
 
@@ -12570,6 +12605,7 @@ var app = (function (jquery) {
     		isSide,
     		onOpen,
     		pushFunc,
+    		dropDownWidth,
     		iconbutton_showComment_binding,
     		sidetrigger_isOpen_binding,
     		click_handler,
@@ -12586,7 +12622,8 @@ var app = (function (jquery) {
     			isSide: 2,
     			onOpen: 3,
     			pushFunc: 4,
-    			isOpen: 0
+    			isOpen: 0,
+    			dropDownWidth: 5
     		});
 
     		dispatch_dev("SvelteRegisterComponent", {
@@ -12636,19 +12673,27 @@ var app = (function (jquery) {
     	set isOpen(value) {
     		throw new Error("<NavProfile>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
+
+    	get dropDownWidth() {
+    		throw new Error("<NavProfile>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set dropDownWidth(value) {
+    		throw new Error("<NavProfile>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
     }
 
     /* src\component\Navbar\Components\NavGithub.svelte generated by Svelte v3.55.1 */
     const file$1o = "src\\component\\Navbar\\Components\\NavGithub.svelte";
 
-    // (44:8) {:else}
+    // (45:8) {:else}
     function create_else_block$a(ctx) {
     	let sidetrigger;
     	let updating_isOpen;
     	let current;
 
     	function sidetrigger_isOpen_binding(value) {
-    		/*sidetrigger_isOpen_binding*/ ctx[5](value);
+    		/*sidetrigger_isOpen_binding*/ ctx[6](value);
     	}
 
     	let sidetrigger_props = {
@@ -12678,7 +12723,7 @@ var app = (function (jquery) {
     		p: function update(ctx, dirty) {
     			const sidetrigger_changes = {};
 
-    			if (dirty & /*$$scope*/ 8192) {
+    			if (dirty & /*$$scope*/ 16384) {
     				sidetrigger_changes.$$scope = { dirty, ctx };
     			}
 
@@ -12708,21 +12753,21 @@ var app = (function (jquery) {
     		block,
     		id: create_else_block$a.name,
     		type: "else",
-    		source: "(44:8) {:else}",
+    		source: "(45:8) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (42:8) {#if !isSide}
+    // (43:8) {#if !isSide}
     function create_if_block$f(ctx) {
     	let iconbutton;
     	let updating_showComment;
     	let current;
 
     	function iconbutton_showComment_binding(value) {
-    		/*iconbutton_showComment_binding*/ ctx[4](value);
+    		/*iconbutton_showComment_binding*/ ctx[5](value);
     	}
 
     	let iconbutton_props = { path: mdiGithub, Comment: "Github" };
@@ -12771,14 +12816,14 @@ var app = (function (jquery) {
     		block,
     		id: create_if_block$f.name,
     		type: "if",
-    		source: "(42:8) {#if !isSide}",
+    		source: "(43:8) {#if !isSide}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (45:12) <SideTrigger leftIcon={mdiGithub} bind:isOpen={isOpen} isDropdown={false} rightIconColor="#fff" textColor="#fff" >
+    // (46:12) <SideTrigger leftIcon={mdiGithub} bind:isOpen={isOpen} isDropdown={false} rightIconColor="#fff" textColor="#fff" >
     function create_default_slot$19(ctx) {
     	let t;
 
@@ -12798,14 +12843,14 @@ var app = (function (jquery) {
     		block,
     		id: create_default_slot$19.name,
     		type: "slot",
-    		source: "(45:12) <SideTrigger leftIcon={mdiGithub} bind:isOpen={isOpen} isDropdown={false} rightIconColor=\\\"#fff\\\" textColor=\\\"#fff\\\" >",
+    		source: "(46:12) <SideTrigger leftIcon={mdiGithub} bind:isOpen={isOpen} isDropdown={false} rightIconColor=\\\"#fff\\\" textColor=\\\"#fff\\\" >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (41:4) 
+    // (42:4) 
     function create_trigger_slot$3(ctx) {
     	let span;
     	let current_block_type_index;
@@ -12827,7 +12872,7 @@ var app = (function (jquery) {
     			span = element("span");
     			if_block.c();
     			attr_dev(span, "slot", "trigger");
-    			add_location(span, file$1o, 40, 4, 1280);
+    			add_location(span, file$1o, 41, 4, 1317);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, span, anchor);
@@ -12880,7 +12925,7 @@ var app = (function (jquery) {
     		block,
     		id: create_trigger_slot$3.name,
     		type: "slot",
-    		source: "(41:4) ",
+    		source: "(42:4) ",
     		ctx
     	});
 
@@ -12895,7 +12940,7 @@ var app = (function (jquery) {
     	let current;
 
     	function navitem_open_binding(value) {
-    		/*navitem_open_binding*/ ctx[6](value);
+    		/*navitem_open_binding*/ ctx[7](value);
     	}
 
     	let navitem_props = {
@@ -12919,7 +12964,7 @@ var app = (function (jquery) {
     			attr_dev(div, "class", "Git svelte-1mq68z0");
     			set_style(div, "height", /*height*/ ctx[1] + "px");
     			toggle_class(div, "side", /*isSide*/ ctx[2]);
-    			add_location(div, file$1o, 38, 0, 1120);
+    			add_location(div, file$1o, 39, 0, 1157);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -12934,7 +12979,7 @@ var app = (function (jquery) {
     			if (dirty & /*isSide*/ 4) navitem_changes.Side = /*isSide*/ ctx[2];
     			if (dirty & /*onOpen*/ 8) navitem_changes.preOpen = /*onOpen*/ ctx[3];
 
-    			if (dirty & /*$$scope, isOpen, isSide*/ 8197) {
+    			if (dirty & /*$$scope, isOpen, isSide*/ 16389) {
     				navitem_changes.$$scope = { dirty, ctx };
     			}
 
@@ -12991,7 +13036,7 @@ var app = (function (jquery) {
     function instance$2h($$self, $$props, $$invalidate) {
     	let $ContextVisible;
     	validate_store(ContextVisible, 'ContextVisible');
-    	component_subscribe($$self, ContextVisible, $$value => $$invalidate(8, $ContextVisible = $$value));
+    	component_subscribe($$self, ContextVisible, $$value => $$invalidate(9, $ContextVisible = $$value));
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('NavGithub', slots, []);
     	let SwitchStatus = $ContextVisible;
@@ -13000,6 +13045,7 @@ var app = (function (jquery) {
     	let { isSide = false } = $$props;
     	let { onOpen } = $$props;
     	let { isOpen = false } = $$props;
+    	let { dropDownWidth = 300 } = $$props;
     	let UIStatus = {};
 
     	function SetUIStatus(UIType) {
@@ -13026,7 +13072,7 @@ var app = (function (jquery) {
     		}
     	});
 
-    	const writable_props = ['height', 'isSide', 'onOpen', 'isOpen'];
+    	const writable_props = ['height', 'isSide', 'onOpen', 'isOpen', 'dropDownWidth'];
 
     	Object.keys($$props).forEach(key => {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<NavGithub> was created with unknown prop '${key}'`);
@@ -13052,6 +13098,7 @@ var app = (function (jquery) {
     		if ('isSide' in $$props) $$invalidate(2, isSide = $$props.isSide);
     		if ('onOpen' in $$props) $$invalidate(3, onOpen = $$props.onOpen);
     		if ('isOpen' in $$props) $$invalidate(0, isOpen = $$props.isOpen);
+    		if ('dropDownWidth' in $$props) $$invalidate(4, dropDownWidth = $$props.dropDownWidth);
     	};
 
     	$$self.$capture_state = () => ({
@@ -13073,6 +13120,7 @@ var app = (function (jquery) {
     		isSide,
     		onOpen,
     		isOpen,
+    		dropDownWidth,
     		UIStatus,
     		SetUIStatus,
     		test,
@@ -13086,6 +13134,7 @@ var app = (function (jquery) {
     		if ('isSide' in $$props) $$invalidate(2, isSide = $$props.isSide);
     		if ('onOpen' in $$props) $$invalidate(3, onOpen = $$props.onOpen);
     		if ('isOpen' in $$props) $$invalidate(0, isOpen = $$props.isOpen);
+    		if ('dropDownWidth' in $$props) $$invalidate(4, dropDownWidth = $$props.dropDownWidth);
     		if ('UIStatus' in $$props) UIStatus = $$props.UIStatus;
     	};
 
@@ -13098,6 +13147,7 @@ var app = (function (jquery) {
     		height,
     		isSide,
     		onOpen,
+    		dropDownWidth,
     		iconbutton_showComment_binding,
     		sidetrigger_isOpen_binding,
     		navitem_open_binding
@@ -13112,7 +13162,8 @@ var app = (function (jquery) {
     			height: 1,
     			isSide: 2,
     			onOpen: 3,
-    			isOpen: 0
+    			isOpen: 0,
+    			dropDownWidth: 4
     		});
 
     		dispatch_dev("SvelteRegisterComponent", {
@@ -13152,6 +13203,14 @@ var app = (function (jquery) {
     	}
 
     	set isOpen(value) {
+    		throw new Error("<NavGithub>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get dropDownWidth() {
+    		throw new Error("<NavGithub>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set dropDownWidth(value) {
     		throw new Error("<NavGithub>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
     }
@@ -15395,28 +15454,41 @@ var app = (function (jquery) {
     /* src\component\Navbar\Components\NavOutsourcingSelector.svelte generated by Svelte v3.55.1 */
     const file$1n = "src\\component\\Navbar\\Components\\NavOutsourcingSelector.svelte";
 
-    // (37:0) <NavItem bind:open={isOpen} Side={ isSide } preOpen={onOpen}>
+    // (38:0) <NavItem bind:open={isOpen} Side={ isSide } preOpen={onOpen}>
     function create_default_slot_1$7(ctx) {
     	let dropdownmenu;
+    	let updating_sideWidth;
     	let current;
 
-    	dropdownmenu = new DropdownMenu({
-    			props: {
-    				Side: /*isSide*/ ctx[2],
-    				Menu: [
-    					{ Name: 'main', Component: Outsourcing_Main },
-    					{
-    						Name: '2022',
-    						Component: Outsourcing_2022
-    					},
-    					{
-    						Name: '2023',
-    						Component: Outsourcing_2023
-    					}
-    				]
+    	function dropdownmenu_sideWidth_binding(value) {
+    		/*dropdownmenu_sideWidth_binding*/ ctx[9](value);
+    	}
+
+    	let dropdownmenu_props = {
+    		Side: /*isSide*/ ctx[3],
+    		Menu: [
+    			{ Name: 'main', Component: Outsourcing_Main },
+    			{
+    				Name: '2022',
+    				Component: Outsourcing_2022
     			},
+    			{
+    				Name: '2023',
+    				Component: Outsourcing_2023
+    			}
+    		]
+    	};
+
+    	if (/*sideWidth*/ ctx[1] !== void 0) {
+    		dropdownmenu_props.sideWidth = /*sideWidth*/ ctx[1];
+    	}
+
+    	dropdownmenu = new DropdownMenu({
+    			props: dropdownmenu_props,
     			$$inline: true
     		});
+
+    	binding_callbacks.push(() => bind(dropdownmenu, 'sideWidth', dropdownmenu_sideWidth_binding));
 
     	const block = {
     		c: function create() {
@@ -15428,7 +15500,14 @@ var app = (function (jquery) {
     		},
     		p: function update(ctx, dirty) {
     			const dropdownmenu_changes = {};
-    			if (dirty & /*isSide*/ 4) dropdownmenu_changes.Side = /*isSide*/ ctx[2];
+    			if (dirty & /*isSide*/ 8) dropdownmenu_changes.Side = /*isSide*/ ctx[3];
+
+    			if (!updating_sideWidth && dirty & /*sideWidth*/ 2) {
+    				updating_sideWidth = true;
+    				dropdownmenu_changes.sideWidth = /*sideWidth*/ ctx[1];
+    				add_flush_callback(() => updating_sideWidth = false);
+    			}
+
     			dropdownmenu.$set(dropdownmenu_changes);
     		},
     		i: function intro(local) {
@@ -15449,21 +15528,21 @@ var app = (function (jquery) {
     		block,
     		id: create_default_slot_1$7.name,
     		type: "slot",
-    		source: "(37:0) <NavItem bind:open={isOpen} Side={ isSide } preOpen={onOpen}>",
+    		source: "(38:0) <NavItem bind:open={isOpen} Side={ isSide } preOpen={onOpen}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (41:8) {:else}
+    // (42:8) {:else}
     function create_else_block$8(ctx) {
     	let sidetrigger;
     	let updating_isOpen;
     	let current;
 
     	function sidetrigger_isOpen_binding(value) {
-    		/*sidetrigger_isOpen_binding*/ ctx[6](value);
+    		/*sidetrigger_isOpen_binding*/ ctx[7](value);
     	}
 
     	let sidetrigger_props = {
@@ -15493,7 +15572,7 @@ var app = (function (jquery) {
     		p: function update(ctx, dirty) {
     			const sidetrigger_changes = {};
 
-    			if (dirty & /*$$scope*/ 8192) {
+    			if (dirty & /*$$scope*/ 32768) {
     				sidetrigger_changes.$$scope = { dirty, ctx };
     			}
 
@@ -15523,21 +15602,21 @@ var app = (function (jquery) {
     		block,
     		id: create_else_block$8.name,
     		type: "else",
-    		source: "(41:8) {:else}",
+    		source: "(42:8) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (39:8) {#if !isSide}
+    // (40:8) {#if !isSide}
     function create_if_block$d(ctx) {
     	let iconbutton;
     	let updating_showComment;
     	let current;
 
     	function iconbutton_showComment_binding(value) {
-    		/*iconbutton_showComment_binding*/ ctx[5](value);
+    		/*iconbutton_showComment_binding*/ ctx[6](value);
     	}
 
     	let iconbutton_props = {
@@ -15589,14 +15668,14 @@ var app = (function (jquery) {
     		block,
     		id: create_if_block$d.name,
     		type: "if",
-    		source: "(39:8) {#if !isSide}",
+    		source: "(40:8) {#if !isSide}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (42:8) <SideTrigger leftIcon={mdiCurrencyKrw} bind:isOpen={isOpen} isDropdown={true} rightIconColor="#fff" textColor="#fff" >
+    // (43:8) <SideTrigger leftIcon={mdiCurrencyKrw} bind:isOpen={isOpen} isDropdown={true} rightIconColor="#fff" textColor="#fff" >
     function create_default_slot$15(ctx) {
     	let t;
 
@@ -15616,14 +15695,14 @@ var app = (function (jquery) {
     		block,
     		id: create_default_slot$15.name,
     		type: "slot",
-    		source: "(42:8) <SideTrigger leftIcon={mdiCurrencyKrw} bind:isOpen={isOpen} isDropdown={true} rightIconColor=\\\"#fff\\\" textColor=\\\"#fff\\\" >",
+    		source: "(43:8) <SideTrigger leftIcon={mdiCurrencyKrw} bind:isOpen={isOpen} isDropdown={true} rightIconColor=\\\"#fff\\\" textColor=\\\"#fff\\\" >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (38:4) 
+    // (39:4) 
     function create_trigger_slot$2(ctx) {
     	let span;
     	let current_block_type_index;
@@ -15635,7 +15714,7 @@ var app = (function (jquery) {
     	const if_blocks = [];
 
     	function select_block_type(ctx, dirty) {
-    		if (!/*isSide*/ ctx[2]) return 0;
+    		if (!/*isSide*/ ctx[3]) return 0;
     		return 1;
     	}
 
@@ -15647,7 +15726,7 @@ var app = (function (jquery) {
     			span = element("span");
     			if_block.c();
     			attr_dev(span, "slot", "trigger");
-    			add_location(span, file$1n, 37, 4, 1249);
+    			add_location(span, file$1n, 38, 4, 1282);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, span, anchor);
@@ -15656,7 +15735,7 @@ var app = (function (jquery) {
 
     			if (!mounted) {
     				dispose = [
-    					listen_dev(span, "click", /*click_handler*/ ctx[7], false, false, false),
+    					listen_dev(span, "click", /*click_handler*/ ctx[8], false, false, false),
     					listen_dev(span, "keypress", empty$1, false, false, false)
     				];
 
@@ -15711,7 +15790,7 @@ var app = (function (jquery) {
     		block,
     		id: create_trigger_slot$2.name,
     		type: "slot",
-    		source: "(38:4) ",
+    		source: "(39:4) ",
     		ctx
     	});
 
@@ -15726,12 +15805,12 @@ var app = (function (jquery) {
     	let current;
 
     	function navitem_open_binding(value) {
-    		/*navitem_open_binding*/ ctx[8](value);
+    		/*navitem_open_binding*/ ctx[10](value);
     	}
 
     	let navitem_props = {
-    		Side: /*isSide*/ ctx[2],
-    		preOpen: /*onOpen*/ ctx[3],
+    		Side: /*isSide*/ ctx[3],
+    		preOpen: /*onOpen*/ ctx[4],
     		$$slots: {
     			trigger: [create_trigger_slot$2],
     			default: [create_default_slot_1$7]
@@ -15751,9 +15830,9 @@ var app = (function (jquery) {
     			div = element("div");
     			create_component(navitem.$$.fragment);
     			attr_dev(div, "class", "OutsourcingSelector svelte-1bshae9");
-    			set_style(div, "height", /*height*/ ctx[1] + "px");
-    			toggle_class(div, "side", /*isSide*/ ctx[2]);
-    			add_location(div, file$1n, 35, 0, 1074);
+    			set_style(div, "height", /*height*/ ctx[2] + "px");
+    			toggle_class(div, "side", /*isSide*/ ctx[3]);
+    			add_location(div, file$1n, 36, 0, 1107);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -15765,10 +15844,10 @@ var app = (function (jquery) {
     		},
     		p: function update(ctx, [dirty]) {
     			const navitem_changes = {};
-    			if (dirty & /*isSide*/ 4) navitem_changes.Side = /*isSide*/ ctx[2];
-    			if (dirty & /*onOpen*/ 8) navitem_changes.preOpen = /*onOpen*/ ctx[3];
+    			if (dirty & /*isSide*/ 8) navitem_changes.Side = /*isSide*/ ctx[3];
+    			if (dirty & /*onOpen*/ 16) navitem_changes.preOpen = /*onOpen*/ ctx[4];
 
-    			if (dirty & /*$$scope, isSide, pushFunc, isOpen*/ 8213) {
+    			if (dirty & /*$$scope, isSide, pushFunc, isOpen, sideWidth*/ 32811) {
     				navitem_changes.$$scope = { dirty, ctx };
     			}
 
@@ -15780,12 +15859,12 @@ var app = (function (jquery) {
 
     			navitem.$set(navitem_changes);
 
-    			if (!current || dirty & /*height*/ 2) {
-    				set_style(div, "height", /*height*/ ctx[1] + "px");
+    			if (!current || dirty & /*height*/ 4) {
+    				set_style(div, "height", /*height*/ ctx[2] + "px");
     			}
 
-    			if (!current || dirty & /*isSide*/ 4) {
-    				toggle_class(div, "side", /*isSide*/ ctx[2]);
+    			if (!current || dirty & /*isSide*/ 8) {
+    				toggle_class(div, "side", /*isSide*/ ctx[3]);
     			}
     		},
     		i: function intro(local) {
@@ -15830,9 +15909,9 @@ var app = (function (jquery) {
     	let $LastPage;
     	let $ContextVisible;
     	validate_store(LastPage, 'LastPage');
-    	component_subscribe($$self, LastPage, $$value => $$invalidate(9, $LastPage = $$value));
+    	component_subscribe($$self, LastPage, $$value => $$invalidate(11, $LastPage = $$value));
     	validate_store(ContextVisible, 'ContextVisible');
-    	component_subscribe($$self, ContextVisible, $$value => $$invalidate(10, $ContextVisible = $$value));
+    	component_subscribe($$self, ContextVisible, $$value => $$invalidate(12, $ContextVisible = $$value));
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('NavOutsourcingSelector', slots, []);
     	let SwitchStatus = $ContextVisible;
@@ -15842,6 +15921,7 @@ var app = (function (jquery) {
     	let { onOpen } = $$props;
     	let { pushFunc } = $$props;
     	let { isOpen = false } = $$props;
+    	let { sideWidth = 300 } = $$props;
 
     	onMount(() => {
     		if ($LastPage["Layer1"] == 'outsourcing') ;
@@ -15857,7 +15937,7 @@ var app = (function (jquery) {
     		}
     	});
 
-    	const writable_props = ['height', 'isSide', 'onOpen', 'pushFunc', 'isOpen'];
+    	const writable_props = ['height', 'isSide', 'onOpen', 'pushFunc', 'isOpen', 'sideWidth'];
 
     	Object.keys($$props).forEach(key => {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<NavOutsourcingSelector> was created with unknown prop '${key}'`);
@@ -15877,17 +15957,23 @@ var app = (function (jquery) {
     		if (!isSide) pushFunc("/outsourcing");
     	};
 
+    	function dropdownmenu_sideWidth_binding(value) {
+    		sideWidth = value;
+    		$$invalidate(1, sideWidth);
+    	}
+
     	function navitem_open_binding(value) {
     		isOpen = value;
     		$$invalidate(0, isOpen);
     	}
 
     	$$self.$$set = $$props => {
-    		if ('height' in $$props) $$invalidate(1, height = $$props.height);
-    		if ('isSide' in $$props) $$invalidate(2, isSide = $$props.isSide);
-    		if ('onOpen' in $$props) $$invalidate(3, onOpen = $$props.onOpen);
-    		if ('pushFunc' in $$props) $$invalidate(4, pushFunc = $$props.pushFunc);
+    		if ('height' in $$props) $$invalidate(2, height = $$props.height);
+    		if ('isSide' in $$props) $$invalidate(3, isSide = $$props.isSide);
+    		if ('onOpen' in $$props) $$invalidate(4, onOpen = $$props.onOpen);
+    		if ('pushFunc' in $$props) $$invalidate(5, pushFunc = $$props.pushFunc);
     		if ('isOpen' in $$props) $$invalidate(0, isOpen = $$props.isOpen);
+    		if ('sideWidth' in $$props) $$invalidate(1, sideWidth = $$props.sideWidth);
     	};
 
     	$$self.$capture_state = () => ({
@@ -15911,6 +15997,7 @@ var app = (function (jquery) {
     		onOpen,
     		pushFunc,
     		isOpen,
+    		sideWidth,
     		empty: empty$1,
     		$LastPage,
     		$ContextVisible
@@ -15919,11 +16006,12 @@ var app = (function (jquery) {
     	$$self.$inject_state = $$props => {
     		if ('SwitchStatus' in $$props) SwitchStatus = $$props.SwitchStatus;
     		if ('width' in $$props) width = $$props.width;
-    		if ('height' in $$props) $$invalidate(1, height = $$props.height);
-    		if ('isSide' in $$props) $$invalidate(2, isSide = $$props.isSide);
-    		if ('onOpen' in $$props) $$invalidate(3, onOpen = $$props.onOpen);
-    		if ('pushFunc' in $$props) $$invalidate(4, pushFunc = $$props.pushFunc);
+    		if ('height' in $$props) $$invalidate(2, height = $$props.height);
+    		if ('isSide' in $$props) $$invalidate(3, isSide = $$props.isSide);
+    		if ('onOpen' in $$props) $$invalidate(4, onOpen = $$props.onOpen);
+    		if ('pushFunc' in $$props) $$invalidate(5, pushFunc = $$props.pushFunc);
     		if ('isOpen' in $$props) $$invalidate(0, isOpen = $$props.isOpen);
+    		if ('sideWidth' in $$props) $$invalidate(1, sideWidth = $$props.sideWidth);
     	};
 
     	if ($$props && "$$inject" in $$props) {
@@ -15932,6 +16020,7 @@ var app = (function (jquery) {
 
     	return [
     		isOpen,
+    		sideWidth,
     		height,
     		isSide,
     		onOpen,
@@ -15939,6 +16028,7 @@ var app = (function (jquery) {
     		iconbutton_showComment_binding,
     		sidetrigger_isOpen_binding,
     		click_handler,
+    		dropdownmenu_sideWidth_binding,
     		navitem_open_binding
     	];
     }
@@ -15948,11 +16038,12 @@ var app = (function (jquery) {
     		super(options);
 
     		init(this, options, instance$2c, create_fragment$2c, safe_not_equal, {
-    			height: 1,
-    			isSide: 2,
-    			onOpen: 3,
-    			pushFunc: 4,
-    			isOpen: 0
+    			height: 2,
+    			isSide: 3,
+    			onOpen: 4,
+    			pushFunc: 5,
+    			isOpen: 0,
+    			sideWidth: 1
     		});
 
     		dispatch_dev("SvelteRegisterComponent", {
@@ -16000,6 +16091,14 @@ var app = (function (jquery) {
     	}
 
     	set isOpen(value) {
+    		throw new Error("<NavOutsourcingSelector>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get sideWidth() {
+    		throw new Error("<NavOutsourcingSelector>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set sideWidth(value) {
     		throw new Error("<NavOutsourcingSelector>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
     }
@@ -18572,23 +18671,36 @@ var app = (function (jquery) {
     /* src\component\Navbar\Components\NavProjectSelector.svelte generated by Svelte v3.55.1 */
     const file$1m = "src\\component\\Navbar\\Components\\NavProjectSelector.svelte";
 
-    // (24:0) <NavItem bind:open={isOpen} Side={ isSide }  preOpen={onOpen}>
+    // (25:0) <NavItem bind:open={isOpen} Side={ isSide }  preOpen={onOpen}>
     function create_default_slot_1$2(ctx) {
     	let dropdownmenu;
+    	let updating_sideWidth;
     	let current;
 
+    	function dropdownmenu_sideWidth_binding(value) {
+    		/*dropdownmenu_sideWidth_binding*/ ctx[9](value);
+    	}
+
+    	let dropdownmenu_props = {
+    		Side: /*isSide*/ ctx[3],
+    		Menu: [
+    			{ Name: 'main', Component: Projects_Main },
+    			{ Name: '2021', Component: Projects_2021 },
+    			{ Name: '2022', Component: Projects_2022 },
+    			{ Name: '2023', Component: Projects_2023 }
+    		]
+    	};
+
+    	if (/*sideWidth*/ ctx[1] !== void 0) {
+    		dropdownmenu_props.sideWidth = /*sideWidth*/ ctx[1];
+    	}
+
     	dropdownmenu = new DropdownMenu({
-    			props: {
-    				Side: /*isSide*/ ctx[2],
-    				Menu: [
-    					{ Name: 'main', Component: Projects_Main },
-    					{ Name: '2021', Component: Projects_2021 },
-    					{ Name: '2022', Component: Projects_2022 },
-    					{ Name: '2023', Component: Projects_2023 }
-    				]
-    			},
+    			props: dropdownmenu_props,
     			$$inline: true
     		});
+
+    	binding_callbacks.push(() => bind(dropdownmenu, 'sideWidth', dropdownmenu_sideWidth_binding));
 
     	const block = {
     		c: function create() {
@@ -18600,7 +18712,14 @@ var app = (function (jquery) {
     		},
     		p: function update(ctx, dirty) {
     			const dropdownmenu_changes = {};
-    			if (dirty & /*isSide*/ 4) dropdownmenu_changes.Side = /*isSide*/ ctx[2];
+    			if (dirty & /*isSide*/ 8) dropdownmenu_changes.Side = /*isSide*/ ctx[3];
+
+    			if (!updating_sideWidth && dirty & /*sideWidth*/ 2) {
+    				updating_sideWidth = true;
+    				dropdownmenu_changes.sideWidth = /*sideWidth*/ ctx[1];
+    				add_flush_callback(() => updating_sideWidth = false);
+    			}
+
     			dropdownmenu.$set(dropdownmenu_changes);
     		},
     		i: function intro(local) {
@@ -18621,21 +18740,21 @@ var app = (function (jquery) {
     		block,
     		id: create_default_slot_1$2.name,
     		type: "slot",
-    		source: "(24:0) <NavItem bind:open={isOpen} Side={ isSide }  preOpen={onOpen}>",
+    		source: "(25:0) <NavItem bind:open={isOpen} Side={ isSide }  preOpen={onOpen}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (28:8) {:else}
+    // (29:8) {:else}
     function create_else_block$7(ctx) {
     	let sidetrigger;
     	let updating_isOpen;
     	let current;
 
     	function sidetrigger_isOpen_binding(value) {
-    		/*sidetrigger_isOpen_binding*/ ctx[6](value);
+    		/*sidetrigger_isOpen_binding*/ ctx[7](value);
     	}
 
     	let sidetrigger_props = {
@@ -18665,7 +18784,7 @@ var app = (function (jquery) {
     		p: function update(ctx, dirty) {
     			const sidetrigger_changes = {};
 
-    			if (dirty & /*$$scope*/ 512) {
+    			if (dirty & /*$$scope*/ 2048) {
     				sidetrigger_changes.$$scope = { dirty, ctx };
     			}
 
@@ -18695,21 +18814,21 @@ var app = (function (jquery) {
     		block,
     		id: create_else_block$7.name,
     		type: "else",
-    		source: "(28:8) {:else}",
+    		source: "(29:8) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (26:8) {#if !isSide}
+    // (27:8) {#if !isSide}
     function create_if_block$c(ctx) {
     	let iconbutton;
     	let updating_showComment;
     	let current;
 
     	function iconbutton_showComment_binding(value) {
-    		/*iconbutton_showComment_binding*/ ctx[5](value);
+    		/*iconbutton_showComment_binding*/ ctx[6](value);
     	}
 
     	let iconbutton_props = {
@@ -18761,14 +18880,14 @@ var app = (function (jquery) {
     		block,
     		id: create_if_block$c.name,
     		type: "if",
-    		source: "(26:8) {#if !isSide}",
+    		source: "(27:8) {#if !isSide}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (29:8) <SideTrigger leftIcon={mdiCodeGreaterThanOrEqual} bind:isOpen={isOpen} isDropdown={true} rightIconColor="#fff" textColor="#fff" >
+    // (30:8) <SideTrigger leftIcon={mdiCodeGreaterThanOrEqual} bind:isOpen={isOpen} isDropdown={true} rightIconColor="#fff" textColor="#fff" >
     function create_default_slot$10(ctx) {
     	let t;
 
@@ -18788,14 +18907,14 @@ var app = (function (jquery) {
     		block,
     		id: create_default_slot$10.name,
     		type: "slot",
-    		source: "(29:8) <SideTrigger leftIcon={mdiCodeGreaterThanOrEqual} bind:isOpen={isOpen} isDropdown={true} rightIconColor=\\\"#fff\\\" textColor=\\\"#fff\\\" >",
+    		source: "(30:8) <SideTrigger leftIcon={mdiCodeGreaterThanOrEqual} bind:isOpen={isOpen} isDropdown={true} rightIconColor=\\\"#fff\\\" textColor=\\\"#fff\\\" >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (25:4) 
+    // (26:4) 
     function create_trigger_slot$1(ctx) {
     	let span;
     	let current_block_type_index;
@@ -18807,7 +18926,7 @@ var app = (function (jquery) {
     	const if_blocks = [];
 
     	function select_block_type(ctx, dirty) {
-    		if (!/*isSide*/ ctx[2]) return 0;
+    		if (!/*isSide*/ ctx[3]) return 0;
     		return 1;
     	}
 
@@ -18819,7 +18938,7 @@ var app = (function (jquery) {
     			span = element("span");
     			if_block.c();
     			attr_dev(span, "slot", "trigger");
-    			add_location(span, file$1m, 24, 4, 1071);
+    			add_location(span, file$1m, 25, 4, 1104);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, span, anchor);
@@ -18828,7 +18947,7 @@ var app = (function (jquery) {
 
     			if (!mounted) {
     				dispose = [
-    					listen_dev(span, "click", /*click_handler*/ ctx[7], false, false, false),
+    					listen_dev(span, "click", /*click_handler*/ ctx[8], false, false, false),
     					listen_dev(span, "keypress", empty, false, false, false)
     				];
 
@@ -18883,7 +19002,7 @@ var app = (function (jquery) {
     		block,
     		id: create_trigger_slot$1.name,
     		type: "slot",
-    		source: "(25:4) ",
+    		source: "(26:4) ",
     		ctx
     	});
 
@@ -18898,12 +19017,12 @@ var app = (function (jquery) {
     	let current;
 
     	function navitem_open_binding(value) {
-    		/*navitem_open_binding*/ ctx[8](value);
+    		/*navitem_open_binding*/ ctx[10](value);
     	}
 
     	let navitem_props = {
-    		Side: /*isSide*/ ctx[2],
-    		preOpen: /*onOpen*/ ctx[3],
+    		Side: /*isSide*/ ctx[3],
+    		preOpen: /*onOpen*/ ctx[4],
     		$$slots: {
     			trigger: [create_trigger_slot$1],
     			default: [create_default_slot_1$2]
@@ -18923,9 +19042,9 @@ var app = (function (jquery) {
     			div = element("div");
     			create_component(navitem.$$.fragment);
     			attr_dev(div, "class", "Project svelte-8iz6w3");
-    			set_style(div, "height", /*height*/ ctx[1] + "px");
-    			toggle_class(div, "side", /*isSide*/ ctx[2]);
-    			add_location(div, file$1m, 22, 0, 907);
+    			set_style(div, "height", /*height*/ ctx[2] + "px");
+    			toggle_class(div, "side", /*isSide*/ ctx[3]);
+    			add_location(div, file$1m, 23, 0, 940);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -18937,10 +19056,10 @@ var app = (function (jquery) {
     		},
     		p: function update(ctx, [dirty]) {
     			const navitem_changes = {};
-    			if (dirty & /*isSide*/ 4) navitem_changes.Side = /*isSide*/ ctx[2];
-    			if (dirty & /*onOpen*/ 8) navitem_changes.preOpen = /*onOpen*/ ctx[3];
+    			if (dirty & /*isSide*/ 8) navitem_changes.Side = /*isSide*/ ctx[3];
+    			if (dirty & /*onOpen*/ 16) navitem_changes.preOpen = /*onOpen*/ ctx[4];
 
-    			if (dirty & /*$$scope, isSide, pushFunc, isOpen*/ 533) {
+    			if (dirty & /*$$scope, isSide, pushFunc, isOpen, sideWidth*/ 2091) {
     				navitem_changes.$$scope = { dirty, ctx };
     			}
 
@@ -18952,12 +19071,12 @@ var app = (function (jquery) {
 
     			navitem.$set(navitem_changes);
 
-    			if (!current || dirty & /*height*/ 2) {
-    				set_style(div, "height", /*height*/ ctx[1] + "px");
+    			if (!current || dirty & /*height*/ 4) {
+    				set_style(div, "height", /*height*/ ctx[2] + "px");
     			}
 
-    			if (!current || dirty & /*isSide*/ 4) {
-    				toggle_class(div, "side", /*isSide*/ ctx[2]);
+    			if (!current || dirty & /*isSide*/ 8) {
+    				toggle_class(div, "side", /*isSide*/ ctx[3]);
     			}
     		},
     		i: function intro(local) {
@@ -19006,6 +19125,7 @@ var app = (function (jquery) {
     	let { onOpen } = $$props;
     	let { pushFunc } = $$props;
     	let { isOpen = false } = $$props;
+    	let { sideWidth = 300 } = $$props;
 
     	$$self.$$.on_mount.push(function () {
     		if (onOpen === undefined && !('onOpen' in $$props || $$self.$$.bound[$$self.$$.props['onOpen']])) {
@@ -19017,7 +19137,7 @@ var app = (function (jquery) {
     		}
     	});
 
-    	const writable_props = ['height', 'isSide', 'onOpen', 'pushFunc', 'isOpen'];
+    	const writable_props = ['height', 'isSide', 'onOpen', 'pushFunc', 'isOpen', 'sideWidth'];
 
     	Object.keys($$props).forEach(key => {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<NavProjectSelector> was created with unknown prop '${key}'`);
@@ -19037,17 +19157,23 @@ var app = (function (jquery) {
     		if (!isSide) pushFunc("/projects");
     	};
 
+    	function dropdownmenu_sideWidth_binding(value) {
+    		sideWidth = value;
+    		$$invalidate(1, sideWidth);
+    	}
+
     	function navitem_open_binding(value) {
     		isOpen = value;
     		$$invalidate(0, isOpen);
     	}
 
     	$$self.$$set = $$props => {
-    		if ('height' in $$props) $$invalidate(1, height = $$props.height);
-    		if ('isSide' in $$props) $$invalidate(2, isSide = $$props.isSide);
-    		if ('onOpen' in $$props) $$invalidate(3, onOpen = $$props.onOpen);
-    		if ('pushFunc' in $$props) $$invalidate(4, pushFunc = $$props.pushFunc);
+    		if ('height' in $$props) $$invalidate(2, height = $$props.height);
+    		if ('isSide' in $$props) $$invalidate(3, isSide = $$props.isSide);
+    		if ('onOpen' in $$props) $$invalidate(4, onOpen = $$props.onOpen);
+    		if ('pushFunc' in $$props) $$invalidate(5, pushFunc = $$props.pushFunc);
     		if ('isOpen' in $$props) $$invalidate(0, isOpen = $$props.isOpen);
+    		if ('sideWidth' in $$props) $$invalidate(1, sideWidth = $$props.sideWidth);
     	};
 
     	$$self.$capture_state = () => ({
@@ -19068,15 +19194,17 @@ var app = (function (jquery) {
     		onOpen,
     		pushFunc,
     		isOpen,
+    		sideWidth,
     		empty
     	});
 
     	$$self.$inject_state = $$props => {
-    		if ('height' in $$props) $$invalidate(1, height = $$props.height);
-    		if ('isSide' in $$props) $$invalidate(2, isSide = $$props.isSide);
-    		if ('onOpen' in $$props) $$invalidate(3, onOpen = $$props.onOpen);
-    		if ('pushFunc' in $$props) $$invalidate(4, pushFunc = $$props.pushFunc);
+    		if ('height' in $$props) $$invalidate(2, height = $$props.height);
+    		if ('isSide' in $$props) $$invalidate(3, isSide = $$props.isSide);
+    		if ('onOpen' in $$props) $$invalidate(4, onOpen = $$props.onOpen);
+    		if ('pushFunc' in $$props) $$invalidate(5, pushFunc = $$props.pushFunc);
     		if ('isOpen' in $$props) $$invalidate(0, isOpen = $$props.isOpen);
+    		if ('sideWidth' in $$props) $$invalidate(1, sideWidth = $$props.sideWidth);
     	};
 
     	if ($$props && "$$inject" in $$props) {
@@ -19085,6 +19213,7 @@ var app = (function (jquery) {
 
     	return [
     		isOpen,
+    		sideWidth,
     		height,
     		isSide,
     		onOpen,
@@ -19092,6 +19221,7 @@ var app = (function (jquery) {
     		iconbutton_showComment_binding,
     		sidetrigger_isOpen_binding,
     		click_handler,
+    		dropdownmenu_sideWidth_binding,
     		navitem_open_binding
     	];
     }
@@ -19101,11 +19231,12 @@ var app = (function (jquery) {
     		super(options);
 
     		init(this, options, instance$27, create_fragment$27, safe_not_equal, {
-    			height: 1,
-    			isSide: 2,
-    			onOpen: 3,
-    			pushFunc: 4,
-    			isOpen: 0
+    			height: 2,
+    			isSide: 3,
+    			onOpen: 4,
+    			pushFunc: 5,
+    			isOpen: 0,
+    			sideWidth: 1
     		});
 
     		dispatch_dev("SvelteRegisterComponent", {
@@ -19153,6 +19284,14 @@ var app = (function (jquery) {
     	}
 
     	set isOpen(value) {
+    		throw new Error("<NavProjectSelector>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get sideWidth() {
+    		throw new Error("<NavProjectSelector>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set sideWidth(value) {
     		throw new Error("<NavProjectSelector>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
     }
@@ -19778,18 +19917,31 @@ var app = (function (jquery) {
     const { console: console_1$u } = globals;
     const file$1l = "src\\component\\Navbar\\Components\\NavUISelector.svelte";
 
-    // (40:4) <NavItem bind:open={isOpen} Side={ isSide }  preOpen={onOpen}>
+    // (41:4) <NavItem bind:open={isOpen} Side={ isSide }  preOpen={onOpen}>
     function create_default_slot_1(ctx) {
     	let dropdownmenu;
+    	let updating_sideWidth;
     	let current;
 
+    	function dropdownmenu_sideWidth_binding(value) {
+    		/*dropdownmenu_sideWidth_binding*/ ctx[7](value);
+    	}
+
+    	let dropdownmenu_props = {
+    		Side: /*isSide*/ ctx[4],
+    		Menu: [{ Name: 'main', Component: UISelect }]
+    	};
+
+    	if (/*sideWidth*/ ctx[1] !== void 0) {
+    		dropdownmenu_props.sideWidth = /*sideWidth*/ ctx[1];
+    	}
+
     	dropdownmenu = new DropdownMenu({
-    			props: {
-    				Side: /*isSide*/ ctx[3],
-    				Menu: [{ Name: 'main', Component: UISelect }]
-    			},
+    			props: dropdownmenu_props,
     			$$inline: true
     		});
+
+    	binding_callbacks.push(() => bind(dropdownmenu, 'sideWidth', dropdownmenu_sideWidth_binding));
 
     	const block = {
     		c: function create() {
@@ -19801,7 +19953,14 @@ var app = (function (jquery) {
     		},
     		p: function update(ctx, dirty) {
     			const dropdownmenu_changes = {};
-    			if (dirty & /*isSide*/ 8) dropdownmenu_changes.Side = /*isSide*/ ctx[3];
+    			if (dirty & /*isSide*/ 16) dropdownmenu_changes.Side = /*isSide*/ ctx[4];
+
+    			if (!updating_sideWidth && dirty & /*sideWidth*/ 2) {
+    				updating_sideWidth = true;
+    				dropdownmenu_changes.sideWidth = /*sideWidth*/ ctx[1];
+    				add_flush_callback(() => updating_sideWidth = false);
+    			}
+
     			dropdownmenu.$set(dropdownmenu_changes);
     		},
     		i: function intro(local) {
@@ -19822,21 +19981,21 @@ var app = (function (jquery) {
     		block,
     		id: create_default_slot_1.name,
     		type: "slot",
-    		source: "(40:4) <NavItem bind:open={isOpen} Side={ isSide }  preOpen={onOpen}>",
+    		source: "(41:4) <NavItem bind:open={isOpen} Side={ isSide }  preOpen={onOpen}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (44:12) {:else}
+    // (45:12) {:else}
     function create_else_block$6(ctx) {
     	let sidetrigger;
     	let updating_isOpen;
     	let current;
 
     	function sidetrigger_isOpen_binding(value) {
-    		/*sidetrigger_isOpen_binding*/ ctx[5](value);
+    		/*sidetrigger_isOpen_binding*/ ctx[6](value);
     	}
 
     	let sidetrigger_props = {
@@ -19866,7 +20025,7 @@ var app = (function (jquery) {
     		p: function update(ctx, dirty) {
     			const sidetrigger_changes = {};
 
-    			if (dirty & /*$$scope*/ 8192) {
+    			if (dirty & /*$$scope*/ 32768) {
     				sidetrigger_changes.$$scope = { dirty, ctx };
     			}
 
@@ -19896,21 +20055,21 @@ var app = (function (jquery) {
     		block,
     		id: create_else_block$6.name,
     		type: "else",
-    		source: "(44:12) {:else}",
+    		source: "(45:12) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (42:12) {#if !isSide}
+    // (43:12) {#if !isSide}
     function create_if_block$b(ctx) {
     	let iconbutton;
     	let updating_showComment;
     	let current;
 
     	function iconbutton_showComment_binding(value) {
-    		/*iconbutton_showComment_binding*/ ctx[4](value);
+    		/*iconbutton_showComment_binding*/ ctx[5](value);
     	}
 
     	let iconbutton_props = {
@@ -19962,14 +20121,14 @@ var app = (function (jquery) {
     		block,
     		id: create_if_block$b.name,
     		type: "if",
-    		source: "(42:12) {#if !isSide}",
+    		source: "(43:12) {#if !isSide}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (45:12) <SideTrigger leftIcon={mdiCodeBrackets} bind:isOpen={isOpen} isDropdown={true} rightIconColor="#fff" textColor="#fff" >
+    // (46:12) <SideTrigger leftIcon={mdiCodeBrackets} bind:isOpen={isOpen} isDropdown={true} rightIconColor="#fff" textColor="#fff" >
     function create_default_slot$_(ctx) {
     	let t;
 
@@ -19989,14 +20148,14 @@ var app = (function (jquery) {
     		block,
     		id: create_default_slot$_.name,
     		type: "slot",
-    		source: "(45:12) <SideTrigger leftIcon={mdiCodeBrackets} bind:isOpen={isOpen} isDropdown={true} rightIconColor=\\\"#fff\\\" textColor=\\\"#fff\\\" >",
+    		source: "(46:12) <SideTrigger leftIcon={mdiCodeBrackets} bind:isOpen={isOpen} isDropdown={true} rightIconColor=\\\"#fff\\\" textColor=\\\"#fff\\\" >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (41:8) 
+    // (42:8) 
     function create_trigger_slot(ctx) {
     	let span;
     	let current_block_type_index;
@@ -20006,7 +20165,7 @@ var app = (function (jquery) {
     	const if_blocks = [];
 
     	function select_block_type(ctx, dirty) {
-    		if (!/*isSide*/ ctx[3]) return 0;
+    		if (!/*isSide*/ ctx[4]) return 0;
     		return 1;
     	}
 
@@ -20018,7 +20177,7 @@ var app = (function (jquery) {
     			span = element("span");
     			if_block.c();
     			attr_dev(span, "slot", "trigger");
-    			add_location(span, file$1l, 40, 8, 1317);
+    			add_location(span, file$1l, 41, 8, 1350);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, span, anchor);
@@ -20071,7 +20230,7 @@ var app = (function (jquery) {
     		block,
     		id: create_trigger_slot.name,
     		type: "slot",
-    		source: "(41:8) ",
+    		source: "(42:8) ",
     		ctx
     	});
 
@@ -20086,12 +20245,12 @@ var app = (function (jquery) {
     	let current;
 
     	function navitem_open_binding(value) {
-    		/*navitem_open_binding*/ ctx[6](value);
+    		/*navitem_open_binding*/ ctx[8](value);
     	}
 
     	let navitem_props = {
-    		Side: /*isSide*/ ctx[3],
-    		preOpen: /*onOpen*/ ctx[2],
+    		Side: /*isSide*/ ctx[4],
+    		preOpen: /*onOpen*/ ctx[3],
     		$$slots: {
     			trigger: [create_trigger_slot],
     			default: [create_default_slot_1]
@@ -20111,9 +20270,9 @@ var app = (function (jquery) {
     			div = element("div");
     			create_component(navitem.$$.fragment);
     			attr_dev(div, "class", "UISelector svelte-tf3xnn");
-    			set_style(div, "height", /*height*/ ctx[1] + "px");
-    			toggle_class(div, "side", /*isSide*/ ctx[3]);
-    			add_location(div, file$1l, 38, 0, 1142);
+    			set_style(div, "height", /*height*/ ctx[2] + "px");
+    			toggle_class(div, "side", /*isSide*/ ctx[4]);
+    			add_location(div, file$1l, 39, 0, 1175);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -20125,10 +20284,10 @@ var app = (function (jquery) {
     		},
     		p: function update(ctx, [dirty]) {
     			const navitem_changes = {};
-    			if (dirty & /*isSide*/ 8) navitem_changes.Side = /*isSide*/ ctx[3];
-    			if (dirty & /*onOpen*/ 4) navitem_changes.preOpen = /*onOpen*/ ctx[2];
+    			if (dirty & /*isSide*/ 16) navitem_changes.Side = /*isSide*/ ctx[4];
+    			if (dirty & /*onOpen*/ 8) navitem_changes.preOpen = /*onOpen*/ ctx[3];
 
-    			if (dirty & /*$$scope, isOpen, isSide*/ 8201) {
+    			if (dirty & /*$$scope, isOpen, isSide, sideWidth*/ 32787) {
     				navitem_changes.$$scope = { dirty, ctx };
     			}
 
@@ -20140,12 +20299,12 @@ var app = (function (jquery) {
 
     			navitem.$set(navitem_changes);
 
-    			if (!current || dirty & /*height*/ 2) {
-    				set_style(div, "height", /*height*/ ctx[1] + "px");
+    			if (!current || dirty & /*height*/ 4) {
+    				set_style(div, "height", /*height*/ ctx[2] + "px");
     			}
 
-    			if (!current || dirty & /*isSide*/ 8) {
-    				toggle_class(div, "side", /*isSide*/ ctx[3]);
+    			if (!current || dirty & /*isSide*/ 16) {
+    				toggle_class(div, "side", /*isSide*/ ctx[4]);
     			}
     		},
     		i: function intro(local) {
@@ -20186,9 +20345,9 @@ var app = (function (jquery) {
     	let $season;
     	let $ContextVisible;
     	validate_store(season, 'season');
-    	component_subscribe($$self, season, $$value => $$invalidate(8, $season = $$value));
+    	component_subscribe($$self, season, $$value => $$invalidate(10, $season = $$value));
     	validate_store(ContextVisible, 'ContextVisible');
-    	component_subscribe($$self, ContextVisible, $$value => $$invalidate(9, $ContextVisible = $$value));
+    	component_subscribe($$self, ContextVisible, $$value => $$invalidate(11, $ContextVisible = $$value));
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('NavUISelector', slots, []);
     	let SwitchStatus = $ContextVisible;
@@ -20205,6 +20364,7 @@ var app = (function (jquery) {
     	let { onOpen } = $$props;
     	let { isSide = false } = $$props;
     	let { isOpen = false } = $$props;
+    	let { sideWidth = 300 } = $$props;
 
     	function rerandering() {
     		for (let i in isChecked) {
@@ -20221,7 +20381,7 @@ var app = (function (jquery) {
     		}
     	});
 
-    	const writable_props = ['height', 'onOpen', 'isSide', 'isOpen'];
+    	const writable_props = ['height', 'onOpen', 'isSide', 'isOpen', 'sideWidth'];
 
     	Object.keys($$props).forEach(key => {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console_1$u.warn(`<NavUISelector> was created with unknown prop '${key}'`);
@@ -20237,16 +20397,22 @@ var app = (function (jquery) {
     		$$invalidate(0, isOpen);
     	}
 
+    	function dropdownmenu_sideWidth_binding(value) {
+    		sideWidth = value;
+    		$$invalidate(1, sideWidth);
+    	}
+
     	function navitem_open_binding(value) {
     		isOpen = value;
     		$$invalidate(0, isOpen);
     	}
 
     	$$self.$$set = $$props => {
-    		if ('height' in $$props) $$invalidate(1, height = $$props.height);
-    		if ('onOpen' in $$props) $$invalidate(2, onOpen = $$props.onOpen);
-    		if ('isSide' in $$props) $$invalidate(3, isSide = $$props.isSide);
+    		if ('height' in $$props) $$invalidate(2, height = $$props.height);
+    		if ('onOpen' in $$props) $$invalidate(3, onOpen = $$props.onOpen);
+    		if ('isSide' in $$props) $$invalidate(4, isSide = $$props.isSide);
     		if ('isOpen' in $$props) $$invalidate(0, isOpen = $$props.isOpen);
+    		if ('sideWidth' in $$props) $$invalidate(1, sideWidth = $$props.sideWidth);
     	};
 
     	$$self.$capture_state = () => ({
@@ -20268,6 +20434,7 @@ var app = (function (jquery) {
     		onOpen,
     		isSide,
     		isOpen,
+    		sideWidth,
     		rerandering,
     		$season,
     		$ContextVisible
@@ -20277,10 +20444,11 @@ var app = (function (jquery) {
     		if ('SwitchStatus' in $$props) SwitchStatus = $$props.SwitchStatus;
     		if ('width' in $$props) width = $$props.width;
     		if ('isChecked' in $$props) isChecked = $$props.isChecked;
-    		if ('height' in $$props) $$invalidate(1, height = $$props.height);
-    		if ('onOpen' in $$props) $$invalidate(2, onOpen = $$props.onOpen);
-    		if ('isSide' in $$props) $$invalidate(3, isSide = $$props.isSide);
+    		if ('height' in $$props) $$invalidate(2, height = $$props.height);
+    		if ('onOpen' in $$props) $$invalidate(3, onOpen = $$props.onOpen);
+    		if ('isSide' in $$props) $$invalidate(4, isSide = $$props.isSide);
     		if ('isOpen' in $$props) $$invalidate(0, isOpen = $$props.isOpen);
+    		if ('sideWidth' in $$props) $$invalidate(1, sideWidth = $$props.sideWidth);
     	};
 
     	if ($$props && "$$inject" in $$props) {
@@ -20289,11 +20457,13 @@ var app = (function (jquery) {
 
     	return [
     		isOpen,
+    		sideWidth,
     		height,
     		onOpen,
     		isSide,
     		iconbutton_showComment_binding,
     		sidetrigger_isOpen_binding,
+    		dropdownmenu_sideWidth_binding,
     		navitem_open_binding
     	];
     }
@@ -20303,10 +20473,11 @@ var app = (function (jquery) {
     		super(options);
 
     		init(this, options, instance$25, create_fragment$25, safe_not_equal, {
-    			height: 1,
-    			onOpen: 2,
-    			isSide: 3,
-    			isOpen: 0
+    			height: 2,
+    			onOpen: 3,
+    			isSide: 4,
+    			isOpen: 0,
+    			sideWidth: 1
     		});
 
     		dispatch_dev("SvelteRegisterComponent", {
@@ -20346,6 +20517,14 @@ var app = (function (jquery) {
     	}
 
     	set isOpen(value) {
+    		throw new Error("<NavUISelector>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get sideWidth() {
+    		throw new Error("<NavUISelector>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set sideWidth(value) {
     		throw new Error("<NavUISelector>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
     }
@@ -20540,15 +20719,16 @@ var app = (function (jquery) {
     	let updating_open;
     	let t;
     	let aside;
+    	let aside_resize_listener;
     	let current;
     	let mounted;
     	let dispose;
 
     	function toggler_open_binding(value) {
-    		/*toggler_open_binding*/ ctx[5](value);
+    		/*toggler_open_binding*/ ctx[6](value);
     	}
 
-    	let toggler_props = { onClose: /*onClose*/ ctx[1] };
+    	let toggler_props = { onClose: /*onClose*/ ctx[2] };
 
     	if (/*open*/ ctx[0] !== void 0) {
     		toggler_props.open = /*open*/ ctx[0];
@@ -20556,8 +20736,8 @@ var app = (function (jquery) {
 
     	toggler = new Toggler({ props: toggler_props, $$inline: true });
     	binding_callbacks.push(() => bind(toggler, 'open', toggler_open_binding));
-    	const default_slot_template = /*#slots*/ ctx[4].default;
-    	const default_slot = create_slot(default_slot_template, ctx, /*$$scope*/ ctx[3], null);
+    	const default_slot_template = /*#slots*/ ctx[5].default;
+    	const default_slot = create_slot(default_slot_template, ctx, /*$$scope*/ ctx[4], null);
 
     	const block = {
     		c: function create() {
@@ -20567,11 +20747,12 @@ var app = (function (jquery) {
     			aside = element("aside");
     			if (default_slot) default_slot.c();
     			set_style(aside, "height", document.body.clientHeight - 60 + "px");
-    			attr_dev(aside, "class", "svelte-i6c0df");
+    			attr_dev(aside, "class", "svelte-1x0rm48");
+    			add_render_callback(() => /*aside_elementresize_handler*/ ctx[7].call(aside));
     			toggle_class(aside, "open", /*open*/ ctx[0]);
-    			add_location(aside, file$1j, 17, 4, 451);
-    			attr_dev(div, "class", "svelte-i6c0df");
-    			add_location(div, file$1j, 15, 0, 340);
+    			add_location(aside, file$1j, 18, 4, 479);
+    			attr_dev(div, "class", "svelte-1x0rm48");
+    			add_location(div, file$1j, 16, 0, 368);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -20586,12 +20767,13 @@ var app = (function (jquery) {
     				default_slot.m(aside, null);
     			}
 
+    			aside_resize_listener = add_resize_listener(aside, /*aside_elementresize_handler*/ ctx[7].bind(aside));
     			current = true;
 
     			if (!mounted) {
     				dispose = [
     					action_destroyer(clickOutside.call(null, div)),
-    					listen_dev(div, "click_outside", /*handleClickOutside*/ ctx[2], false, false, false)
+    					listen_dev(div, "click_outside", /*handleClickOutside*/ ctx[3], false, false, false)
     				];
 
     				mounted = true;
@@ -20599,7 +20781,7 @@ var app = (function (jquery) {
     		},
     		p: function update(ctx, [dirty]) {
     			const toggler_changes = {};
-    			if (dirty & /*onClose*/ 2) toggler_changes.onClose = /*onClose*/ ctx[1];
+    			if (dirty & /*onClose*/ 4) toggler_changes.onClose = /*onClose*/ ctx[2];
 
     			if (!updating_open && dirty & /*open*/ 1) {
     				updating_open = true;
@@ -20610,15 +20792,15 @@ var app = (function (jquery) {
     			toggler.$set(toggler_changes);
 
     			if (default_slot) {
-    				if (default_slot.p && (!current || dirty & /*$$scope*/ 8)) {
+    				if (default_slot.p && (!current || dirty & /*$$scope*/ 16)) {
     					update_slot_base(
     						default_slot,
     						default_slot_template,
     						ctx,
-    						/*$$scope*/ ctx[3],
+    						/*$$scope*/ ctx[4],
     						!current
-    						? get_all_dirty_from_scope(/*$$scope*/ ctx[3])
-    						: get_slot_changes(default_slot_template, /*$$scope*/ ctx[3], dirty, null),
+    						? get_all_dirty_from_scope(/*$$scope*/ ctx[4])
+    						: get_slot_changes(default_slot_template, /*$$scope*/ ctx[4], dirty, null),
     						null
     					);
     				}
@@ -20643,6 +20825,7 @@ var app = (function (jquery) {
     			if (detaching) detach_dev(div);
     			destroy_component(toggler);
     			if (default_slot) default_slot.d(detaching);
+    			aside_resize_listener();
     			mounted = false;
     			run_all(dispose);
     		}
@@ -20663,6 +20846,7 @@ var app = (function (jquery) {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('Sidebar', slots, ['default']);
     	let { open = false } = $$props;
+    	let { asideWidth } = $$props;
     	let { onClose } = $$props;
     	let documentSize = [document.body.clientWidth, document.body.clientHeight];
 
@@ -20672,12 +20856,16 @@ var app = (function (jquery) {
     	}
 
     	$$self.$$.on_mount.push(function () {
+    		if (asideWidth === undefined && !('asideWidth' in $$props || $$self.$$.bound[$$self.$$.props['asideWidth']])) {
+    			console.warn("<Sidebar> was created without expected prop 'asideWidth'");
+    		}
+
     		if (onClose === undefined && !('onClose' in $$props || $$self.$$.bound[$$self.$$.props['onClose']])) {
     			console.warn("<Sidebar> was created without expected prop 'onClose'");
     		}
     	});
 
-    	const writable_props = ['open', 'onClose'];
+    	const writable_props = ['open', 'asideWidth', 'onClose'];
 
     	Object.keys($$props).forEach(key => {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<Sidebar> was created with unknown prop '${key}'`);
@@ -20688,16 +20876,23 @@ var app = (function (jquery) {
     		$$invalidate(0, open);
     	}
 
+    	function aside_elementresize_handler() {
+    		asideWidth = this.clientWidth;
+    		$$invalidate(1, asideWidth);
+    	}
+
     	$$self.$$set = $$props => {
     		if ('open' in $$props) $$invalidate(0, open = $$props.open);
-    		if ('onClose' in $$props) $$invalidate(1, onClose = $$props.onClose);
-    		if ('$$scope' in $$props) $$invalidate(3, $$scope = $$props.$$scope);
+    		if ('asideWidth' in $$props) $$invalidate(1, asideWidth = $$props.asideWidth);
+    		if ('onClose' in $$props) $$invalidate(2, onClose = $$props.onClose);
+    		if ('$$scope' in $$props) $$invalidate(4, $$scope = $$props.$$scope);
     	};
 
     	$$self.$capture_state = () => ({
     		Toggler,
     		clickOutside,
     		open,
+    		asideWidth,
     		onClose,
     		documentSize,
     		handleClickOutside
@@ -20705,7 +20900,8 @@ var app = (function (jquery) {
 
     	$$self.$inject_state = $$props => {
     		if ('open' in $$props) $$invalidate(0, open = $$props.open);
-    		if ('onClose' in $$props) $$invalidate(1, onClose = $$props.onClose);
+    		if ('asideWidth' in $$props) $$invalidate(1, asideWidth = $$props.asideWidth);
+    		if ('onClose' in $$props) $$invalidate(2, onClose = $$props.onClose);
     		if ('documentSize' in $$props) documentSize = $$props.documentSize;
     	};
 
@@ -20713,13 +20909,22 @@ var app = (function (jquery) {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [open, onClose, handleClickOutside, $$scope, slots, toggler_open_binding];
+    	return [
+    		open,
+    		asideWidth,
+    		onClose,
+    		handleClickOutside,
+    		$$scope,
+    		slots,
+    		toggler_open_binding,
+    		aside_elementresize_handler
+    	];
     }
 
     class Sidebar extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$23, create_fragment$23, safe_not_equal, { open: 0, onClose: 1 });
+    		init(this, options, instance$23, create_fragment$23, safe_not_equal, { open: 0, asideWidth: 1, onClose: 2 });
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
@@ -20737,6 +20942,14 @@ var app = (function (jquery) {
     		throw new Error("<Sidebar>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
 
+    	get asideWidth() {
+    		throw new Error("<Sidebar>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set asideWidth(value) {
+    		throw new Error("<Sidebar>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
     	get onClose() {
     		throw new Error("<Sidebar>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
@@ -20749,7 +20962,7 @@ var app = (function (jquery) {
     /* src\component\Navbar\Navbar.svelte generated by Svelte v3.55.1 */
     const file$1i = "src\\component\\Navbar\\Navbar.svelte";
 
-    // (86:4) {:else}
+    // (88:4) {:else}
     function create_else_block$5(ctx) {
     	let profile;
     	let updating_isOpen;
@@ -20768,13 +20981,13 @@ var app = (function (jquery) {
     	let current;
 
     	function profile_isOpen_binding_1(value) {
-    		/*profile_isOpen_binding_1*/ ctx[18](value);
+    		/*profile_isOpen_binding_1*/ ctx[23](value);
     	}
 
     	let profile_props = {
     		height: /*height*/ ctx[0] - 22,
-    		onOpen: /*onOpen*/ ctx[10],
-    		pushFunc: /*pushRouter*/ ctx[8]
+    		onOpen: /*onOpen*/ ctx[11],
+    		pushFunc: /*pushRouter*/ ctx[9]
     	};
 
     	if (/*Profile_isOpen*/ ctx[1] !== void 0) {
@@ -20785,13 +20998,13 @@ var app = (function (jquery) {
     	binding_callbacks.push(() => bind(profile, 'isOpen', profile_isOpen_binding_1));
 
     	function project_isOpen_binding_1(value) {
-    		/*project_isOpen_binding_1*/ ctx[19](value);
+    		/*project_isOpen_binding_1*/ ctx[24](value);
     	}
 
     	let project_props = {
     		height: /*height*/ ctx[0] - 22,
-    		onOpen: /*onOpen*/ ctx[10],
-    		pushFunc: /*pushRouter*/ ctx[8]
+    		onOpen: /*onOpen*/ ctx[11],
+    		pushFunc: /*pushRouter*/ ctx[9]
     	};
 
     	if (/*Project_isOpen*/ ctx[2] !== void 0) {
@@ -20802,13 +21015,13 @@ var app = (function (jquery) {
     	binding_callbacks.push(() => bind(project, 'isOpen', project_isOpen_binding_1));
 
     	function outsourcing_isOpen_binding_1(value) {
-    		/*outsourcing_isOpen_binding_1*/ ctx[20](value);
+    		/*outsourcing_isOpen_binding_1*/ ctx[25](value);
     	}
 
     	let outsourcing_props = {
     		height: /*height*/ ctx[0] - 22,
-    		onOpen: /*onOpen*/ ctx[10],
-    		pushFunc: /*pushRouter*/ ctx[8]
+    		onOpen: /*onOpen*/ ctx[11],
+    		pushFunc: /*pushRouter*/ ctx[9]
     	};
 
     	if (/*Outsourcing_isOpen*/ ctx[3] !== void 0) {
@@ -20819,12 +21032,12 @@ var app = (function (jquery) {
     	binding_callbacks.push(() => bind(outsourcing, 'isOpen', outsourcing_isOpen_binding_1));
 
     	function git_isOpen_binding_1(value) {
-    		/*git_isOpen_binding_1*/ ctx[21](value);
+    		/*git_isOpen_binding_1*/ ctx[26](value);
     	}
 
     	let git_props = {
     		height: /*height*/ ctx[0] - 22,
-    		onOpen: /*onOpen*/ ctx[10]
+    		onOpen: /*onOpen*/ ctx[11]
     	};
 
     	if (/*Git_isOpen*/ ctx[4] !== void 0) {
@@ -20835,12 +21048,12 @@ var app = (function (jquery) {
     	binding_callbacks.push(() => bind(git, 'isOpen', git_isOpen_binding_1));
 
     	function navuiselector_isOpen_binding_1(value) {
-    		/*navuiselector_isOpen_binding_1*/ ctx[22](value);
+    		/*navuiselector_isOpen_binding_1*/ ctx[27](value);
     	}
 
     	let navuiselector_props = {
     		height: /*height*/ ctx[0] - 22,
-    		onOpen: /*onOpen*/ ctx[10]
+    		onOpen: /*onOpen*/ ctx[11]
     	};
 
     	if (/*NavUISelector_isOpen*/ ctx[5] !== void 0) {
@@ -20880,9 +21093,9 @@ var app = (function (jquery) {
     		},
     		p: function update(ctx, dirty) {
     			const profile_changes = {};
-    			if (dirty & /*height*/ 1) profile_changes.height = /*height*/ ctx[0] - 22;
+    			if (dirty[0] & /*height*/ 1) profile_changes.height = /*height*/ ctx[0] - 22;
 
-    			if (!updating_isOpen && dirty & /*Profile_isOpen*/ 2) {
+    			if (!updating_isOpen && dirty[0] & /*Profile_isOpen*/ 2) {
     				updating_isOpen = true;
     				profile_changes.isOpen = /*Profile_isOpen*/ ctx[1];
     				add_flush_callback(() => updating_isOpen = false);
@@ -20890,9 +21103,9 @@ var app = (function (jquery) {
 
     			profile.$set(profile_changes);
     			const project_changes = {};
-    			if (dirty & /*height*/ 1) project_changes.height = /*height*/ ctx[0] - 22;
+    			if (dirty[0] & /*height*/ 1) project_changes.height = /*height*/ ctx[0] - 22;
 
-    			if (!updating_isOpen_1 && dirty & /*Project_isOpen*/ 4) {
+    			if (!updating_isOpen_1 && dirty[0] & /*Project_isOpen*/ 4) {
     				updating_isOpen_1 = true;
     				project_changes.isOpen = /*Project_isOpen*/ ctx[2];
     				add_flush_callback(() => updating_isOpen_1 = false);
@@ -20900,9 +21113,9 @@ var app = (function (jquery) {
 
     			project.$set(project_changes);
     			const outsourcing_changes = {};
-    			if (dirty & /*height*/ 1) outsourcing_changes.height = /*height*/ ctx[0] - 22;
+    			if (dirty[0] & /*height*/ 1) outsourcing_changes.height = /*height*/ ctx[0] - 22;
 
-    			if (!updating_isOpen_2 && dirty & /*Outsourcing_isOpen*/ 8) {
+    			if (!updating_isOpen_2 && dirty[0] & /*Outsourcing_isOpen*/ 8) {
     				updating_isOpen_2 = true;
     				outsourcing_changes.isOpen = /*Outsourcing_isOpen*/ ctx[3];
     				add_flush_callback(() => updating_isOpen_2 = false);
@@ -20910,9 +21123,9 @@ var app = (function (jquery) {
 
     			outsourcing.$set(outsourcing_changes);
     			const git_changes = {};
-    			if (dirty & /*height*/ 1) git_changes.height = /*height*/ ctx[0] - 22;
+    			if (dirty[0] & /*height*/ 1) git_changes.height = /*height*/ ctx[0] - 22;
 
-    			if (!updating_isOpen_3 && dirty & /*Git_isOpen*/ 16) {
+    			if (!updating_isOpen_3 && dirty[0] & /*Git_isOpen*/ 16) {
     				updating_isOpen_3 = true;
     				git_changes.isOpen = /*Git_isOpen*/ ctx[4];
     				add_flush_callback(() => updating_isOpen_3 = false);
@@ -20920,9 +21133,9 @@ var app = (function (jquery) {
 
     			git.$set(git_changes);
     			const navuiselector_changes = {};
-    			if (dirty & /*height*/ 1) navuiselector_changes.height = /*height*/ ctx[0] - 22;
+    			if (dirty[0] & /*height*/ 1) navuiselector_changes.height = /*height*/ ctx[0] - 22;
 
-    			if (!updating_isOpen_4 && dirty & /*NavUISelector_isOpen*/ 32) {
+    			if (!updating_isOpen_4 && dirty[0] & /*NavUISelector_isOpen*/ 32) {
     				updating_isOpen_4 = true;
     				navuiselector_changes.isOpen = /*NavUISelector_isOpen*/ ctx[5];
     				add_flush_callback(() => updating_isOpen_4 = false);
@@ -20964,35 +21177,45 @@ var app = (function (jquery) {
     		block,
     		id: create_else_block$5.name,
     		type: "else",
-    		source: "(86:4) {:else}",
+    		source: "(88:4) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (78:4) {#if width <= 720}
+    // (80:4) {#if width <= 720}
     function create_if_block$a(ctx) {
     	let sidebar;
     	let updating_open;
+    	let updating_asideWidth;
     	let current;
 
     	function sidebar_open_binding(value) {
-    		/*sidebar_open_binding*/ ctx[17](value);
+    		/*sidebar_open_binding*/ ctx[21](value);
+    	}
+
+    	function sidebar_asideWidth_binding(value) {
+    		/*sidebar_asideWidth_binding*/ ctx[22](value);
     	}
 
     	let sidebar_props = {
-    		onClose: /*onClose*/ ctx[9],
+    		onClose: /*onClose*/ ctx[10],
     		$$slots: { default: [create_default_slot$Z] },
     		$$scope: { ctx }
     	};
 
-    	if (/*sidebarIsOpen*/ ctx[7] !== void 0) {
-    		sidebar_props.open = /*sidebarIsOpen*/ ctx[7];
+    	if (/*sidebarIsOpen*/ ctx[8] !== void 0) {
+    		sidebar_props.open = /*sidebarIsOpen*/ ctx[8];
+    	}
+
+    	if (/*asideWidth*/ ctx[7] !== void 0) {
+    		sidebar_props.asideWidth = /*asideWidth*/ ctx[7];
     	}
 
     	sidebar = new Sidebar({ props: sidebar_props, $$inline: true });
     	binding_callbacks.push(() => bind(sidebar, 'open', sidebar_open_binding));
+    	binding_callbacks.push(() => bind(sidebar, 'asideWidth', sidebar_asideWidth_binding));
 
     	const block = {
     		c: function create() {
@@ -21005,14 +21228,20 @@ var app = (function (jquery) {
     		p: function update(ctx, dirty) {
     			const sidebar_changes = {};
 
-    			if (dirty & /*$$scope, height, NavUISelector_isOpen, Git_isOpen, Outsourcing_isOpen, Project_isOpen, Profile_isOpen*/ 134217791) {
+    			if (dirty[0] & /*height, asideWidth, NavUISelector_isOpen, Git_isOpen, Outsourcing_isOpen, Project_isOpen, Profile_isOpen*/ 191 | dirty[1] & /*$$scope*/ 4) {
     				sidebar_changes.$$scope = { dirty, ctx };
     			}
 
-    			if (!updating_open && dirty & /*sidebarIsOpen*/ 128) {
+    			if (!updating_open && dirty[0] & /*sidebarIsOpen*/ 256) {
     				updating_open = true;
-    				sidebar_changes.open = /*sidebarIsOpen*/ ctx[7];
+    				sidebar_changes.open = /*sidebarIsOpen*/ ctx[8];
     				add_flush_callback(() => updating_open = false);
+    			}
+
+    			if (!updating_asideWidth && dirty[0] & /*asideWidth*/ 128) {
+    				updating_asideWidth = true;
+    				sidebar_changes.asideWidth = /*asideWidth*/ ctx[7];
+    				add_flush_callback(() => updating_asideWidth = false);
     			}
 
     			sidebar.$set(sidebar_changes);
@@ -21035,40 +21264,43 @@ var app = (function (jquery) {
     		block,
     		id: create_if_block$a.name,
     		type: "if",
-    		source: "(78:4) {#if width <= 720}",
+    		source: "(80:4) {#if width <= 720}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (79:4) <Sidebar bind:open={sidebarIsOpen} onClose={onClose}>
+    // (81:4) <Sidebar bind:open={sidebarIsOpen} onClose={onClose} bind:asideWidth={asideWidth} >
     function create_default_slot$Z(ctx) {
     	let profile;
     	let updating_isOpen;
     	let t0;
     	let project;
+    	let updating_sideWidth;
     	let updating_isOpen_1;
     	let t1;
     	let outsourcing;
+    	let updating_sideWidth_1;
     	let updating_isOpen_2;
     	let t2;
     	let git;
     	let updating_isOpen_3;
     	let t3;
     	let navuiselector;
+    	let updating_sideWidth_2;
     	let updating_isOpen_4;
     	let current;
 
     	function profile_isOpen_binding(value) {
-    		/*profile_isOpen_binding*/ ctx[12](value);
+    		/*profile_isOpen_binding*/ ctx[13](value);
     	}
 
     	let profile_props = {
     		height: /*height*/ ctx[0],
     		isSide: true,
-    		onOpen: /*onOpen*/ ctx[10],
-    		pushFunc: /*pushRouter*/ ctx[8]
+    		onOpen: /*onOpen*/ ctx[11],
+    		pushFunc: /*pushRouter*/ ctx[9]
     	};
 
     	if (/*Profile_isOpen*/ ctx[1] !== void 0) {
@@ -21078,50 +21310,68 @@ var app = (function (jquery) {
     	profile = new NavProfile({ props: profile_props, $$inline: true });
     	binding_callbacks.push(() => bind(profile, 'isOpen', profile_isOpen_binding));
 
+    	function project_sideWidth_binding(value) {
+    		/*project_sideWidth_binding*/ ctx[14](value);
+    	}
+
     	function project_isOpen_binding(value) {
-    		/*project_isOpen_binding*/ ctx[13](value);
+    		/*project_isOpen_binding*/ ctx[15](value);
     	}
 
     	let project_props = {
     		height: /*height*/ ctx[0],
     		isSide: true,
-    		onOpen: /*onOpen*/ ctx[10],
-    		pushFunc: /*pushRouter*/ ctx[8]
+    		onOpen: /*onOpen*/ ctx[11],
+    		pushFunc: /*pushRouter*/ ctx[9]
     	};
+
+    	if (/*asideWidth*/ ctx[7] !== void 0) {
+    		project_props.sideWidth = /*asideWidth*/ ctx[7];
+    	}
 
     	if (/*Project_isOpen*/ ctx[2] !== void 0) {
     		project_props.isOpen = /*Project_isOpen*/ ctx[2];
     	}
 
     	project = new NavProjectSelector({ props: project_props, $$inline: true });
+    	binding_callbacks.push(() => bind(project, 'sideWidth', project_sideWidth_binding));
     	binding_callbacks.push(() => bind(project, 'isOpen', project_isOpen_binding));
 
+    	function outsourcing_sideWidth_binding(value) {
+    		/*outsourcing_sideWidth_binding*/ ctx[16](value);
+    	}
+
     	function outsourcing_isOpen_binding(value) {
-    		/*outsourcing_isOpen_binding*/ ctx[14](value);
+    		/*outsourcing_isOpen_binding*/ ctx[17](value);
     	}
 
     	let outsourcing_props = {
     		height: /*height*/ ctx[0],
     		isSide: true,
-    		onOpen: /*onOpen*/ ctx[10],
-    		pushFunc: /*pushRouter*/ ctx[8]
+    		onOpen: /*onOpen*/ ctx[11],
+    		pushFunc: /*pushRouter*/ ctx[9]
     	};
+
+    	if (/*asideWidth*/ ctx[7] !== void 0) {
+    		outsourcing_props.sideWidth = /*asideWidth*/ ctx[7];
+    	}
 
     	if (/*Outsourcing_isOpen*/ ctx[3] !== void 0) {
     		outsourcing_props.isOpen = /*Outsourcing_isOpen*/ ctx[3];
     	}
 
     	outsourcing = new NavOutsourcingSelector({ props: outsourcing_props, $$inline: true });
+    	binding_callbacks.push(() => bind(outsourcing, 'sideWidth', outsourcing_sideWidth_binding));
     	binding_callbacks.push(() => bind(outsourcing, 'isOpen', outsourcing_isOpen_binding));
 
     	function git_isOpen_binding(value) {
-    		/*git_isOpen_binding*/ ctx[15](value);
+    		/*git_isOpen_binding*/ ctx[18](value);
     	}
 
     	let git_props = {
     		height: /*height*/ ctx[0],
     		isSide: true,
-    		onOpen: /*onOpen*/ ctx[10]
+    		onOpen: /*onOpen*/ ctx[11]
     	};
 
     	if (/*Git_isOpen*/ ctx[4] !== void 0) {
@@ -21131,15 +21381,23 @@ var app = (function (jquery) {
     	git = new NavGithub({ props: git_props, $$inline: true });
     	binding_callbacks.push(() => bind(git, 'isOpen', git_isOpen_binding));
 
+    	function navuiselector_sideWidth_binding(value) {
+    		/*navuiselector_sideWidth_binding*/ ctx[19](value);
+    	}
+
     	function navuiselector_isOpen_binding(value) {
-    		/*navuiselector_isOpen_binding*/ ctx[16](value);
+    		/*navuiselector_isOpen_binding*/ ctx[20](value);
     	}
 
     	let navuiselector_props = {
     		height: /*height*/ ctx[0],
     		isSide: true,
-    		onOpen: /*onOpen*/ ctx[10]
+    		onOpen: /*onOpen*/ ctx[11]
     	};
+
+    	if (/*asideWidth*/ ctx[7] !== void 0) {
+    		navuiselector_props.sideWidth = /*asideWidth*/ ctx[7];
+    	}
 
     	if (/*NavUISelector_isOpen*/ ctx[5] !== void 0) {
     		navuiselector_props.isOpen = /*NavUISelector_isOpen*/ ctx[5];
@@ -21150,6 +21408,7 @@ var app = (function (jquery) {
     			$$inline: true
     		});
 
+    	binding_callbacks.push(() => bind(navuiselector, 'sideWidth', navuiselector_sideWidth_binding));
     	binding_callbacks.push(() => bind(navuiselector, 'isOpen', navuiselector_isOpen_binding));
 
     	const block = {
@@ -21178,9 +21437,9 @@ var app = (function (jquery) {
     		},
     		p: function update(ctx, dirty) {
     			const profile_changes = {};
-    			if (dirty & /*height*/ 1) profile_changes.height = /*height*/ ctx[0];
+    			if (dirty[0] & /*height*/ 1) profile_changes.height = /*height*/ ctx[0];
 
-    			if (!updating_isOpen && dirty & /*Profile_isOpen*/ 2) {
+    			if (!updating_isOpen && dirty[0] & /*Profile_isOpen*/ 2) {
     				updating_isOpen = true;
     				profile_changes.isOpen = /*Profile_isOpen*/ ctx[1];
     				add_flush_callback(() => updating_isOpen = false);
@@ -21188,9 +21447,15 @@ var app = (function (jquery) {
 
     			profile.$set(profile_changes);
     			const project_changes = {};
-    			if (dirty & /*height*/ 1) project_changes.height = /*height*/ ctx[0];
+    			if (dirty[0] & /*height*/ 1) project_changes.height = /*height*/ ctx[0];
 
-    			if (!updating_isOpen_1 && dirty & /*Project_isOpen*/ 4) {
+    			if (!updating_sideWidth && dirty[0] & /*asideWidth*/ 128) {
+    				updating_sideWidth = true;
+    				project_changes.sideWidth = /*asideWidth*/ ctx[7];
+    				add_flush_callback(() => updating_sideWidth = false);
+    			}
+
+    			if (!updating_isOpen_1 && dirty[0] & /*Project_isOpen*/ 4) {
     				updating_isOpen_1 = true;
     				project_changes.isOpen = /*Project_isOpen*/ ctx[2];
     				add_flush_callback(() => updating_isOpen_1 = false);
@@ -21198,9 +21463,15 @@ var app = (function (jquery) {
 
     			project.$set(project_changes);
     			const outsourcing_changes = {};
-    			if (dirty & /*height*/ 1) outsourcing_changes.height = /*height*/ ctx[0];
+    			if (dirty[0] & /*height*/ 1) outsourcing_changes.height = /*height*/ ctx[0];
 
-    			if (!updating_isOpen_2 && dirty & /*Outsourcing_isOpen*/ 8) {
+    			if (!updating_sideWidth_1 && dirty[0] & /*asideWidth*/ 128) {
+    				updating_sideWidth_1 = true;
+    				outsourcing_changes.sideWidth = /*asideWidth*/ ctx[7];
+    				add_flush_callback(() => updating_sideWidth_1 = false);
+    			}
+
+    			if (!updating_isOpen_2 && dirty[0] & /*Outsourcing_isOpen*/ 8) {
     				updating_isOpen_2 = true;
     				outsourcing_changes.isOpen = /*Outsourcing_isOpen*/ ctx[3];
     				add_flush_callback(() => updating_isOpen_2 = false);
@@ -21208,9 +21479,9 @@ var app = (function (jquery) {
 
     			outsourcing.$set(outsourcing_changes);
     			const git_changes = {};
-    			if (dirty & /*height*/ 1) git_changes.height = /*height*/ ctx[0];
+    			if (dirty[0] & /*height*/ 1) git_changes.height = /*height*/ ctx[0];
 
-    			if (!updating_isOpen_3 && dirty & /*Git_isOpen*/ 16) {
+    			if (!updating_isOpen_3 && dirty[0] & /*Git_isOpen*/ 16) {
     				updating_isOpen_3 = true;
     				git_changes.isOpen = /*Git_isOpen*/ ctx[4];
     				add_flush_callback(() => updating_isOpen_3 = false);
@@ -21218,9 +21489,15 @@ var app = (function (jquery) {
 
     			git.$set(git_changes);
     			const navuiselector_changes = {};
-    			if (dirty & /*height*/ 1) navuiselector_changes.height = /*height*/ ctx[0];
+    			if (dirty[0] & /*height*/ 1) navuiselector_changes.height = /*height*/ ctx[0];
 
-    			if (!updating_isOpen_4 && dirty & /*NavUISelector_isOpen*/ 32) {
+    			if (!updating_sideWidth_2 && dirty[0] & /*asideWidth*/ 128) {
+    				updating_sideWidth_2 = true;
+    				navuiselector_changes.sideWidth = /*asideWidth*/ ctx[7];
+    				add_flush_callback(() => updating_sideWidth_2 = false);
+    			}
+
+    			if (!updating_isOpen_4 && dirty[0] & /*NavUISelector_isOpen*/ 32) {
     				updating_isOpen_4 = true;
     				navuiselector_changes.isOpen = /*NavUISelector_isOpen*/ ctx[5];
     				add_flush_callback(() => updating_isOpen_4 = false);
@@ -21262,7 +21539,7 @@ var app = (function (jquery) {
     		block,
     		id: create_default_slot$Z.name,
     		type: "slot",
-    		source: "(79:4) <Sidebar bind:open={sidebarIsOpen} onClose={onClose}>",
+    		source: "(81:4) <Sidebar bind:open={sidebarIsOpen} onClose={onClose} bind:asideWidth={asideWidth} >",
     		ctx
     	});
 
@@ -21302,12 +21579,12 @@ var app = (function (jquery) {
     			div1 = element("div");
     			if_block.c();
     			set_style(div0, "left", "11px");
-    			add_location(div0, file$1i, 73, 2, 1852);
+    			add_location(div0, file$1i, 75, 2, 2017);
     			set_style(div1, "float", "right");
-    			add_location(div1, file$1i, 76, 2, 1963);
+    			add_location(div1, file$1i, 78, 2, 2128);
     			attr_dev(div2, "class", "NavBar svelte-45ui97");
-    			add_render_callback(() => /*div2_elementresize_handler*/ ctx[23].call(div2));
-    			add_location(div2, file$1i, 71, 0, 1775);
+    			add_render_callback(() => /*div2_elementresize_handler*/ ctx[28].call(div2));
+    			add_location(div2, file$1i, 73, 0, 1940);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -21319,19 +21596,19 @@ var app = (function (jquery) {
     			append_dev(div2, t);
     			append_dev(div2, div1);
     			if_blocks[current_block_type_index].m(div1, null);
-    			div2_resize_listener = add_resize_listener(div2, /*div2_elementresize_handler*/ ctx[23].bind(div2));
+    			div2_resize_listener = add_resize_listener(div2, /*div2_elementresize_handler*/ ctx[28].bind(div2));
     			current = true;
 
     			if (!mounted) {
     				dispose = [
-    					listen_dev(div0, "click", /*click_handler*/ ctx[11], false, false, false),
+    					listen_dev(div0, "click", /*click_handler*/ ctx[12], false, false, false),
     					listen_dev(div0, "keypress", keypress_handler, false, false, false)
     				];
 
     				mounted = true;
     			}
     		},
-    		p: function update(ctx, [dirty]) {
+    		p: function update(ctx, dirty) {
     			let previous_block_index = current_block_type_index;
     			current_block_type_index = select_block_type(ctx);
 
@@ -21397,7 +21674,7 @@ var app = (function (jquery) {
     function instance$22($$self, $$props, $$invalidate) {
     	let $LastPage;
     	validate_store(LastPage, 'LastPage');
-    	component_subscribe($$self, LastPage, $$value => $$invalidate(24, $LastPage = $$value));
+    	component_subscribe($$self, LastPage, $$value => $$invalidate(29, $LastPage = $$value));
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('Navbar', slots, []);
     	let { height } = $$props;
@@ -21409,6 +21686,7 @@ var app = (function (jquery) {
     	let Git_isOpen = false;
     	let NavUISelector_isOpen = false;
     	let width;
+    	let asideWidth;
 
     	function pushRouter(link) {
     		link = link.toLowerCase();
@@ -21419,6 +21697,12 @@ var app = (function (jquery) {
     		}
 
     		push(link);
+    	}
+
+    	function calcMenuWidth() {
+    		return 300 > document.body.clientWidth - asideWidth - 20
+    		? document.body.clientWidth - asideWidth - 20
+    		: 300;
     	}
 
     	function onClose() {
@@ -21464,9 +21748,19 @@ var app = (function (jquery) {
     		$$invalidate(1, Profile_isOpen);
     	}
 
+    	function project_sideWidth_binding(value) {
+    		asideWidth = value;
+    		$$invalidate(7, asideWidth);
+    	}
+
     	function project_isOpen_binding(value) {
     		Project_isOpen = value;
     		$$invalidate(2, Project_isOpen);
+    	}
+
+    	function outsourcing_sideWidth_binding(value) {
+    		asideWidth = value;
+    		$$invalidate(7, asideWidth);
     	}
 
     	function outsourcing_isOpen_binding(value) {
@@ -21479,6 +21773,11 @@ var app = (function (jquery) {
     		$$invalidate(4, Git_isOpen);
     	}
 
+    	function navuiselector_sideWidth_binding(value) {
+    		asideWidth = value;
+    		$$invalidate(7, asideWidth);
+    	}
+
     	function navuiselector_isOpen_binding(value) {
     		NavUISelector_isOpen = value;
     		$$invalidate(5, NavUISelector_isOpen);
@@ -21486,7 +21785,12 @@ var app = (function (jquery) {
 
     	function sidebar_open_binding(value) {
     		sidebarIsOpen = value;
-    		$$invalidate(7, sidebarIsOpen);
+    		$$invalidate(8, sidebarIsOpen);
+    	}
+
+    	function sidebar_asideWidth_binding(value) {
+    		asideWidth = value;
+    		$$invalidate(7, asideWidth);
     	}
 
     	function profile_isOpen_binding_1(value) {
@@ -21557,7 +21861,9 @@ var app = (function (jquery) {
     		Git_isOpen,
     		NavUISelector_isOpen,
     		width,
+    		asideWidth,
     		pushRouter,
+    		calcMenuWidth,
     		onClose,
     		onOpen,
     		sidebarIsOpen,
@@ -21574,7 +21880,8 @@ var app = (function (jquery) {
     		if ('Git_isOpen' in $$props) $$invalidate(4, Git_isOpen = $$props.Git_isOpen);
     		if ('NavUISelector_isOpen' in $$props) $$invalidate(5, NavUISelector_isOpen = $$props.NavUISelector_isOpen);
     		if ('width' in $$props) $$invalidate(6, width = $$props.width);
-    		if ('sidebarIsOpen' in $$props) $$invalidate(7, sidebarIsOpen = $$props.sidebarIsOpen);
+    		if ('asideWidth' in $$props) $$invalidate(7, asideWidth = $$props.asideWidth);
+    		if ('sidebarIsOpen' in $$props) $$invalidate(8, sidebarIsOpen = $$props.sidebarIsOpen);
     	};
 
     	if ($$props && "$$inject" in $$props) {
@@ -21589,17 +21896,22 @@ var app = (function (jquery) {
     		Git_isOpen,
     		NavUISelector_isOpen,
     		width,
+    		asideWidth,
     		sidebarIsOpen,
     		pushRouter,
     		onClose,
     		onOpen,
     		click_handler,
     		profile_isOpen_binding,
+    		project_sideWidth_binding,
     		project_isOpen_binding,
+    		outsourcing_sideWidth_binding,
     		outsourcing_isOpen_binding,
     		git_isOpen_binding,
+    		navuiselector_sideWidth_binding,
     		navuiselector_isOpen_binding,
     		sidebar_open_binding,
+    		sidebar_asideWidth_binding,
     		profile_isOpen_binding_1,
     		project_isOpen_binding_1,
     		outsourcing_isOpen_binding_1,
@@ -21612,7 +21924,7 @@ var app = (function (jquery) {
     class Navbar_1 extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$22, create_fragment$22, safe_not_equal, { height: 0 });
+    		init(this, options, instance$22, create_fragment$22, safe_not_equal, { height: 0 }, null, [-1, -1]);
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,

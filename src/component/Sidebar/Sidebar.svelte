@@ -3,6 +3,7 @@
 	import {clickOutside} from './clickOutside.js';
 
 	export let open = false
+    export let asideWidth;
     export let onClose;
 
     let documentSize = [document.body.clientWidth, document.body.clientHeight]
@@ -15,7 +16,7 @@
 
 <div use:clickOutside on:click_outside={handleClickOutside}>
     <Toggler bind:open onClose={onClose} />
-    <aside style="height:{document.body.clientHeight  - 60}px;" class:open>
+    <aside bind:clientWidth={asideWidth} style="height:{document.body.clientHeight  - 60}px;" class:open>
         <slot/>
     </aside>
 </div>

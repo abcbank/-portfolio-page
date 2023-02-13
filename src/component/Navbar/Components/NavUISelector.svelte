@@ -21,6 +21,7 @@
     export let onOpen;
     export let isSide = false;
     export let isOpen = false;
+    export let sideWidth = 300;
     
 
     function rerandering(){
@@ -45,7 +46,7 @@
             <SideTrigger leftIcon={mdiCodeBrackets} bind:isOpen={isOpen} isDropdown={true} rightIconColor="#fff" textColor="#fff" >Select UI</SideTrigger>
             {/if}
         </span>
-        <DropdownMenu Side={isSide} Menu={[{Name: 'main', Component: UiSelect}]}/>
+        <DropdownMenu Side={isSide} bind:sideWidth={sideWidth} Menu={[{Name: 'main', Component: UiSelect}]}/>
     </NavItem>
 </div>
 <style>

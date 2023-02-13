@@ -16,6 +16,7 @@
     export let onOpen;
     export let pushFunc;
     export let isOpen = false;
+    export let sideWidth = 300;
 
     function empty(){}
 
@@ -29,7 +30,7 @@
         <SideTrigger leftIcon={mdiCodeGreaterThanOrEqual} bind:isOpen={isOpen} isDropdown={true} rightIconColor="#fff" textColor="#fff" >Project</SideTrigger>
         {/if}
     </span>
-    <DropdownMenu Side={isSide} Menu={
+    <DropdownMenu Side={isSide} bind:sideWidth={sideWidth} Menu={
     [
         {Name: 'main', Component: ProjectsMain}, 
         {Name: '2021', Component: Projects_2021},

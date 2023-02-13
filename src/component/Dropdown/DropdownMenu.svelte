@@ -5,13 +5,13 @@
 	export let Menu = [{Name: 'main', Component: DefaultMenu},];
 	export let activeMenu = 'main';
 	export let Side = false;
-
+	export let sideWidth = 300;
 
 	let menuHeight = 0;
 	let menuEl = null;
 </script>
 
-<div class="dropdown stack" class:side={Side} style="height: {menuHeight}px;">
+<div class="dropdown stack" class:side={Side} style="width: {Side ? document.body.clientWidth - sideWidth - 20 : 300}px; height: {menuHeight}px;">
 	{#each Menu as Config}
 		{#if activeMenu == Config.Name}
 			<svelte:component this={Config.Component} Side={Side} bind:height={menuHeight} bind:activeMenu={activeMenu} />
@@ -58,6 +58,7 @@
 		position: absolute;
 		top:58px;
 		width: 300px;
+		max-width: 300px;
 		height:500px;
 		transform: translateX(-45%);
 		background-color: var(--bg);

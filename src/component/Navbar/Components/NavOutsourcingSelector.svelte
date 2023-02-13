@@ -20,6 +20,7 @@
     export let onOpen;
     export let pushFunc;
     export let isOpen = false;
+    export let sideWidth = 300;
 
     
 
@@ -42,7 +43,7 @@
         <SideTrigger leftIcon={mdiCurrencyKrw} bind:isOpen={isOpen} isDropdown={true} rightIconColor="#fff" textColor="#fff" >Outsourcing</SideTrigger>
         {/if}
     </span>
-    <DropdownMenu Side={isSide} Menu={
+    <DropdownMenu Side={isSide} bind:sideWidth={sideWidth} Menu={
     [
         {Name: 'main', Component: OutsourcingMain}, 
         {Name: '2022', Component: Outsourcing_2022},

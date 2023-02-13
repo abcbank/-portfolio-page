@@ -38,6 +38,7 @@
   let NavUISelector_isOpen = false;
 
   let width;
+  let asideWidth;
 
   function pushRouter(link){
         link = link.toLowerCase();
@@ -48,7 +49,9 @@
 
     push(link);
   }
-
+  function  calcMenuWidth(){
+    return 300 > document.body.clientWidth - asideWidth - 20 ? document.body.clientWidth - asideWidth - 20 : 300;
+  }
   function onClose(){
     Profile_isOpen = false;
     Project_isOpen = false;
@@ -68,7 +71,6 @@ let sidebarIsOpen = false;
   onMount(()=>{
   })
 </script>
-
 <div class="NavBar"
 bind:clientHeight={height} bind:clientWidth={width}>
   <div style="left:11px;" on:click={() => {pushRouter("/")}} on:keypress={()=>{}}>
@@ -76,12 +78,12 @@ bind:clientHeight={height} bind:clientWidth={width}>
   </div>
   <div style="float:right;">
     {#if width <= 720}
-    <Sidebar bind:open={sidebarIsOpen} onClose={onClose}>
+    <Sidebar bind:open={sidebarIsOpen} onClose={onClose} bind:asideWidth={asideWidth} >
       <Profile height = { height } isSide={true} onOpen={onOpen} pushFunc={pushRouter} bind:isOpen={Profile_isOpen}  />
-      <Project height = { height } isSide={true} onOpen={onOpen} pushFunc={pushRouter} bind:isOpen={Project_isOpen}  />
-      <Outsourcing height = { height } isSide={true} onOpen={onOpen} pushFunc={pushRouter}  bind:isOpen={Outsourcing_isOpen}  />
+      <Project height = { height } bind:sideWidth = {asideWidth} isSide={true} onOpen={onOpen} pushFunc={pushRouter} bind:isOpen={Project_isOpen}  />
+      <Outsourcing height = { height } bind:sideWidth = {asideWidth}  isSide={true} onOpen={onOpen} pushFunc={pushRouter}  bind:isOpen={Outsourcing_isOpen}  />
       <Git height = { height } isSide={true} onOpen={onOpen} bind:isOpen={Git_isOpen} />
-      <NavUISelector height= { height } isSide={true} onOpen={onOpen} bind:isOpen={NavUISelector_isOpen} />
+      <NavUISelector height= { height } bind:sideWidth = {asideWidth}  isSide={true} onOpen={onOpen} bind:isOpen={NavUISelector_isOpen} />
     </Sidebar>
     {:else}
     <Profile height = { height - 22} onOpen={onOpen} pushFunc={pushRouter}  bind:isOpen={Profile_isOpen}/>

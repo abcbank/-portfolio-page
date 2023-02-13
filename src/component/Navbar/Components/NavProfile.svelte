@@ -18,6 +18,7 @@
     export let onOpen;
     export let pushFunc;
     export let isOpen = false;
+    export let dropDownWidth = 300;
 
     let UIStatus = {}
 
