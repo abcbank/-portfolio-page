@@ -4,6 +4,8 @@
     import Page03 from "./Slide05/Page03.svelte";
     import Page04 from "./Slide05/Page04.svelte";
     import Page05 from "./Slide05/Page05.svelte";
+    import Page06 from "./Slide05/Page06.svelte";
+    import Page07 from "./Slide05/Page07.svelte";
 
     import DefaultSlide from "../../../defaultSlide.svelte";
     export let color;
@@ -15,7 +17,9 @@
         { index: 2, component:Page02 }, 
         { index: 3, component:Page03 }, 
         { index: 4, component:Page04 }, 
-        { index: 5, component:Page05 }]
+        { index: 5, component:Page05 }, 
+        { index: 6, component:Page06 }, 
+        { index: 7, component:Page07 }]
 </script>
 
 <DefaultSlide Pages={Pages} bind:curPage={curPage} bind:maxPage={maxPage} bind:color={color} />
