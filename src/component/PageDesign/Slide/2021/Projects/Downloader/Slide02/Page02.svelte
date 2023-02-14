@@ -3,7 +3,7 @@
     import DefaultPage from '../../../../defaultPage.svelte'
 
     export let color = "transparent";
-    export let fontSize = 2;
+    export let fontSize = $Device["isMobile"] ? 0.5 : 2;
 
     const calcSubFontSize = () => !$Device["isMobile"] ? fontSize : fontSize/2;
 </script>

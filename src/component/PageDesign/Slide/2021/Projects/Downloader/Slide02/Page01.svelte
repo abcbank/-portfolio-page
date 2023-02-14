@@ -2,9 +2,9 @@
     import DefaultPage from '../../../../defaultPage.svelte'
 
     export let color = "transparent";
-    export let fontSize = 2
+    export let fontSize = $Device["isMobile"] ? 1 : 2;
 </script>
 
 <DefaultPage color={color} fontSize={fontSize}>
-    <p>Outline</p>
+    <p style="font-size:{fontSize}rem;">Outline</p>
 </DefaultPage>
