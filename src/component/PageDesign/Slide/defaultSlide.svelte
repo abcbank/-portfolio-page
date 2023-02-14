@@ -5,7 +5,9 @@
     export let Pages;
     export let curPage;
     export let maxPage;
-    let fontSize = $Device["isMobile"] ? 1.2 : 2;
+    let head = $Device["isMobile"] ? 1.5 : 2;
+    let subhead = 0.8 * head;
+    let context = 0.8 * subhead;
     let ButtonType = -1
     let doubleClickTimer;
     curPage = 1;
@@ -73,7 +75,7 @@
 <div>
 	{#each Pages as Page}
 		{#if curPage == Page.index}
-			<svelte:component this={Page.component} bind:color={color} bind:fontSize={fontSize} bind:curPage={curPage} />
+			<svelte:component this={Page.component} bind:color={color} bind:head={head} bind:subhead={subhead} bind:context={context} bind:curPage={curPage} />
 		{/if}
 	{/each}
     <slot></slot>
