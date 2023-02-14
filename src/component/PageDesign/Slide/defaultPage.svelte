@@ -3,7 +3,7 @@
     import { Device } from '../../../global'
     
     export let color = "transparent";
-    export let fontSize = $Device["isMobile"] ? 0.8 : 2;
+    export let fontSize = $Device["isMobile"] ? 1 : 2;
 </script>
 
 <div class="context" style="color:{color}; font-size:{fontSize}rem;" in:fade={{delay:300, duration:300,}} out:fade={{duration:300,}}>
