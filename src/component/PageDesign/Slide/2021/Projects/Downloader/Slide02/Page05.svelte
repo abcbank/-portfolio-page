@@ -14,7 +14,7 @@
         <p>
             - C# 기반 PC 프로그램<br/>
             - C 기반 IO 펌웨어 프로그램<br/>
-            - IO - PC 통신 프로토콜 설정
+            - IO-PC 통신 프로토콜 설정
         </p>
     </div>
 </DefaultPage>

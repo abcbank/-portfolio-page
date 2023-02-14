@@ -13,7 +13,8 @@
     <div style="font-size:{calcSubFontSize()}rem; text-align:left; margin-top:20px;">
         <p>
             - 다운로더 / 인스펙터에서 모두 수행<br/>
-            - PCB에 전원을 인가한 후, 일정 시간이 지나고 전류값을 측정
+            - PCB에 전원을 인가한 후, 일정 시간이<br/>
+            &nbsp;&nbsp;지나고 전류값을 측정
         </p>
     </div>
 </DefaultPage>
