@@ -4,6 +4,7 @@
 
     export let color = "transparent";
     export let fontSize = $Device["isMobile"] ? 1 : 2;
+    fontSize = 1.25 * fontSize;
 </script>
 
 <DefaultPage color={color} fontSize={fontSize}>

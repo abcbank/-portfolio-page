@@ -5,7 +5,7 @@
     export let Pages;
     export let curPage;
     export let maxPage;
-    let fontSize = 2
+    let fontSize = $Device["isMobile"] ? 1.2 : 2;
     let ButtonType = -1
     let doubleClickTimer;
     curPage = 1;
