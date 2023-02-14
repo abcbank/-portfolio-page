@@ -3,18 +3,16 @@
     import DefaultPage from '../../../../defaultPage.svelte'
 
     export let color = "transparent";
-    export let fontSize = 2;
+    export let head = 2;
+    export let subhead = 1.5;
+    export let context = 1;
 
     let CurPage = "main"
-
-    console.log($Color["btnBackColor"][$season]);
-
-    const calcSubFontSize = () => !$Device["isMobile"] ? fontSize : fontSize/2;
 </script>
 
-<DefaultPage color={color} fontSize={fontSize}>
+<DefaultPage color={color} fontSize={subhead}>
     <p>Oscilloscope</p>
-    <div style="font-size:{calcSubFontSize()}rem; text-align:left; margin-top:20px;">
+    <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
             - 전압 검사용 오실로스코프<br/>
             - C# SDK를 지원하는 모델로 구매<br/>

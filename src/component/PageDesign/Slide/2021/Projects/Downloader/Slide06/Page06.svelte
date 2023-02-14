@@ -3,18 +3,14 @@
     import DefaultPage from '../../../../defaultPage.svelte'
 
     export let color = "transparent";
-    export let fontSize = 2;
-
-    let CurPage = "main"
-
-    console.log($Color["btnBackColor"][$season]);
-
-    const calcSubFontSize = () => !$Device["isMobile"] ? fontSize : fontSize/2;
+    export let head = 2;
+    export let subhead = 1.5;
+    export let context = 1;
 </script>
 
-<DefaultPage color={color} fontSize={fontSize}>
+<DefaultPage color={color} fontSize={subhead}>
     <p>펌웨어 업로드</p>
-    <div style="font-size:{calcSubFontSize()}rem; text-align:left; margin-top:20px;">
+    <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
             - 원래는 Cheetah SPI SDK를 통해 업로드용 라이브러리를 만들 생각이었음.<br/>
             - 다만, 업로드 후 정상적으로 동작하는지 확인할 방법이 없었음<br/>

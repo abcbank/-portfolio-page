@@ -1425,7 +1425,7 @@ var app = (function (jquery) {
     const file$5n = "node_modules\\sveltestrap\\src\\Collapse.svelte";
 
     // (61:0) {#if isOpen}
-    function create_if_block$M(ctx) {
+    function create_if_block$N(ctx) {
     	let div;
     	let div_style_value;
     	let div_intro;
@@ -1574,7 +1574,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$M.name,
+    		id: create_if_block$N.name,
     		type: "if",
     		source: "(61:0) {#if isOpen}",
     		ctx
@@ -1589,7 +1589,7 @@ var app = (function (jquery) {
     	let mounted;
     	let dispose;
     	add_render_callback(/*onwindowresize*/ ctx[21]);
-    	let if_block = /*isOpen*/ ctx[0] && create_if_block$M(ctx);
+    	let if_block = /*isOpen*/ ctx[0] && create_if_block$N(ctx);
 
     	const block = {
     		c: function create() {
@@ -1618,7 +1618,7 @@ var app = (function (jquery) {
     						transition_in(if_block, 1);
     					}
     				} else {
-    					if_block = create_if_block$M(ctx);
+    					if_block = create_if_block$N(ctx);
     					if_block.c();
     					transition_in(if_block, 1);
     					if_block.m(if_block_anchor.parentNode, if_block_anchor);
@@ -2109,7 +2109,7 @@ var app = (function (jquery) {
     }
 
     // (37:0) {#if href}
-    function create_if_block$L(ctx) {
+    function create_if_block$M(ctx) {
     	let a;
     	let current_block_type_index;
     	let if_block;
@@ -2117,7 +2117,7 @@ var app = (function (jquery) {
     	let current;
     	let mounted;
     	let dispose;
-    	const if_block_creators = [create_if_block_1$b, create_else_block$A];
+    	const if_block_creators = [create_if_block_1$b, create_else_block$B];
     	const if_blocks = [];
 
     	function select_block_type_1(ctx, dirty) {
@@ -2219,7 +2219,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block: block_1,
-    		id: create_if_block$L.name,
+    		id: create_if_block$M.name,
     		type: "if",
     		source: "(37:0) {#if href}",
     		ctx
@@ -2399,7 +2399,7 @@ var app = (function (jquery) {
     }
 
     // (50:4) {:else}
-    function create_else_block$A(ctx) {
+    function create_else_block$B(ctx) {
     	let current;
     	const default_slot_template = /*#slots*/ ctx[19].default;
     	const default_slot = create_slot(default_slot_template, ctx, /*$$scope*/ ctx[18], null);
@@ -2447,7 +2447,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block: block_1,
-    		id: create_else_block$A.name,
+    		id: create_else_block$B.name,
     		type: "else",
     		source: "(50:4) {:else}",
     		ctx
@@ -2493,7 +2493,7 @@ var app = (function (jquery) {
     	let if_block;
     	let if_block_anchor;
     	let current;
-    	const if_block_creators = [create_if_block$L, create_else_block_1];
+    	const if_block_creators = [create_if_block$M, create_else_block_1];
     	const if_blocks = [];
 
     	function select_block_type(ctx, dirty) {
@@ -4732,7 +4732,7 @@ var app = (function (jquery) {
     const file$5l = "node_modules\\sveltestrap\\src\\Dropdown.svelte";
 
     // (127:0) {:else}
-    function create_else_block$z(ctx) {
+    function create_else_block$A(ctx) {
     	let div;
     	let current;
     	const default_slot_template = /*#slots*/ ctx[19].default;
@@ -4800,7 +4800,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_else_block$z.name,
+    		id: create_else_block$A.name,
     		type: "else",
     		source: "(127:0) {:else}",
     		ctx
@@ -4810,7 +4810,7 @@ var app = (function (jquery) {
     }
 
     // (123:0) {#if nav}
-    function create_if_block$K(ctx) {
+    function create_if_block$L(ctx) {
     	let li;
     	let current;
     	const default_slot_template = /*#slots*/ ctx[19].default;
@@ -4878,7 +4878,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$K.name,
+    		id: create_if_block$L.name,
     		type: "if",
     		source: "(123:0) {#if nav}",
     		ctx
@@ -4892,7 +4892,7 @@ var app = (function (jquery) {
     	let if_block;
     	let if_block_anchor;
     	let current;
-    	const if_block_creators = [create_if_block$K, create_else_block$z];
+    	const if_block_creators = [create_if_block$L, create_else_block$A];
     	const if_blocks = [];
 
     	function select_block_type(ctx, dirty) {
@@ -5554,7 +5554,7 @@ var app = (function (jquery) {
     const file$5j = "node_modules\\sveltestrap\\src\\DropdownItem.svelte";
 
     // (49:0) {:else}
-    function create_else_block$y(ctx) {
+    function create_else_block$z(ctx) {
     	let button;
     	let current;
     	let mounted;
@@ -5635,7 +5635,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_else_block$y.name,
+    		id: create_else_block$z.name,
     		type: "else",
     		source: "(49:0) {:else}",
     		ctx
@@ -5828,7 +5828,7 @@ var app = (function (jquery) {
     }
 
     // (37:0) {#if header}
-    function create_if_block$J(ctx) {
+    function create_if_block$K(ctx) {
     	let h6;
     	let current;
     	let mounted;
@@ -5907,7 +5907,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$J.name,
+    		id: create_if_block$K.name,
     		type: "if",
     		source: "(37:0) {#if header}",
     		ctx
@@ -5921,7 +5921,7 @@ var app = (function (jquery) {
     	let if_block;
     	let if_block_anchor;
     	let current;
-    	const if_block_creators = [create_if_block$J, create_if_block_1$a, create_if_block_2$8, create_else_block$y];
+    	const if_block_creators = [create_if_block$K, create_if_block_1$a, create_if_block_2$8, create_else_block$z];
     	const if_blocks = [];
 
     	function select_block_type(ctx, dirty) {
@@ -6449,7 +6449,7 @@ var app = (function (jquery) {
     const file$5h = "node_modules\\sveltestrap\\src\\DropdownToggle.svelte";
 
     // (94:0) {:else}
-    function create_else_block$x(ctx) {
+    function create_else_block$y(ctx) {
     	let button;
     	let button_aria_expanded_value;
     	let current;
@@ -6551,7 +6551,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block: block_1,
-    		id: create_else_block$x.name,
+    		id: create_else_block$y.name,
     		type: "else",
     		source: "(94:0) {:else}",
     		ctx
@@ -6777,7 +6777,7 @@ var app = (function (jquery) {
     }
 
     // (51:0) {#if nav}
-    function create_if_block$I(ctx) {
+    function create_if_block$J(ctx) {
     	let a;
     	let a_aria_expanded_value;
     	let current;
@@ -6876,7 +6876,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block: block_1,
-    		id: create_if_block$I.name,
+    		id: create_if_block$J.name,
     		type: "if",
     		source: "(51:0) {#if nav}",
     		ctx
@@ -7030,7 +7030,7 @@ var app = (function (jquery) {
     	let if_block;
     	let if_block_anchor;
     	let current;
-    	const if_block_creators = [create_if_block$I, create_if_block_1$9, create_if_block_2$7, create_else_block$x];
+    	const if_block_creators = [create_if_block$J, create_if_block_1$9, create_if_block_2$7, create_else_block$y];
     	const if_blocks = [];
 
     	function select_block_type(ctx, dirty) {
@@ -7728,7 +7728,7 @@ var app = (function (jquery) {
     const file$5f = "node_modules\\sveltestrap\\src\\Navbar.svelte";
 
     // (44:2) {:else}
-    function create_else_block$w(ctx) {
+    function create_else_block$x(ctx) {
     	let current;
     	const default_slot_template = /*#slots*/ ctx[10].default;
     	const default_slot = create_slot(default_slot_template, ctx, /*$$scope*/ ctx[11], null);
@@ -7776,7 +7776,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_else_block$w.name,
+    		id: create_else_block$x.name,
     		type: "else",
     		source: "(44:2) {:else}",
     		ctx
@@ -7786,7 +7786,7 @@ var app = (function (jquery) {
     }
 
     // (40:2) {#if container}
-    function create_if_block$H(ctx) {
+    function create_if_block$I(ctx) {
     	let container_1;
     	let current;
 
@@ -7833,7 +7833,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$H.name,
+    		id: create_if_block$I.name,
     		type: "if",
     		source: "(40:2) {#if container}",
     		ctx
@@ -7905,7 +7905,7 @@ var app = (function (jquery) {
     	let current_block_type_index;
     	let if_block;
     	let current;
-    	const if_block_creators = [create_if_block$H, create_else_block$w];
+    	const if_block_creators = [create_if_block$I, create_else_block$x];
     	const if_blocks = [];
 
     	function select_block_type(ctx, dirty) {
@@ -9092,13 +9092,13 @@ var app = (function (jquery) {
 
     /* src\component\Dropdown\NavItem.svelte generated by Svelte v3.55.1 */
 
-    const { console: console_1$1R } = globals;
+    const { console: console_1$1C } = globals;
     const file$5a = "src\\component\\Dropdown\\NavItem.svelte";
     const get_trigger_slot_changes = dirty => ({});
     const get_trigger_slot_context = ctx => ({});
 
     // (58:6) {#if open}
-    function create_if_block$G(ctx) {
+    function create_if_block$H(ctx) {
     	let current;
     	const default_slot_template = /*#slots*/ ctx[6].default;
     	const default_slot = create_slot(default_slot_template, ctx, /*$$scope*/ ctx[5], null);
@@ -9146,7 +9146,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$G.name,
+    		id: create_if_block$H.name,
     		type: "if",
     		source: "(58:6) {#if open}",
     		ctx
@@ -9164,7 +9164,7 @@ var app = (function (jquery) {
     	let dispose;
     	const trigger_slot_template = /*#slots*/ ctx[6].trigger;
     	const trigger_slot = create_slot(trigger_slot_template, ctx, /*$$scope*/ ctx[5], get_trigger_slot_context);
-    	let if_block = /*open*/ ctx[0] && create_if_block$G(ctx);
+    	let if_block = /*open*/ ctx[0] && create_if_block$H(ctx);
 
     	const block = {
     		c: function create() {
@@ -9235,7 +9235,7 @@ var app = (function (jquery) {
     						transition_in(if_block, 1);
     					}
     				} else {
-    					if_block = create_if_block$G(ctx);
+    					if_block = create_if_block$H(ctx);
     					if_block.c();
     					transition_in(if_block, 1);
     					if_block.m(li, null);
@@ -9302,7 +9302,7 @@ var app = (function (jquery) {
     	const writable_props = ['open', 'Side', 'preOpen'];
 
     	Object.keys($$props).forEach(key => {
-    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console_1$1R.warn(`<NavItem> was created with unknown prop '${key}'`);
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console_1$1C.warn(`<NavItem> was created with unknown prop '${key}'`);
     	});
 
     	const click_handler = () => {
@@ -9436,7 +9436,7 @@ var app = (function (jquery) {
     const file$59 = "src\\component\\Icon\\Icon.svelte";
 
     // (20:4) {:else}
-    function create_else_block$v(ctx) {
+    function create_else_block$w(ctx) {
     	let t;
 
     	const block = {
@@ -9456,7 +9456,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_else_block$v.name,
+    		id: create_else_block$w.name,
     		type: "else",
     		source: "(20:4) {:else}",
     		ctx
@@ -9466,7 +9466,7 @@ var app = (function (jquery) {
     }
 
     // (18:4) {#if str == ''}
-    function create_if_block$F(ctx) {
+    function create_if_block$G(ctx) {
     	let path_1;
 
     	const block = {
@@ -9495,7 +9495,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$F.name,
+    		id: create_if_block$G.name,
     		type: "if",
     		source: "(18:4) {#if str == ''}",
     		ctx
@@ -9510,8 +9510,8 @@ var app = (function (jquery) {
     	let svg_style_value;
 
     	function select_block_type(ctx, dirty) {
-    		if (/*str*/ ctx[5] == '') return create_if_block$F;
-    		return create_else_block$v;
+    		if (/*str*/ ctx[5] == '') return create_if_block$G;
+    		return create_else_block$w;
     	}
 
     	let current_block_type = select_block_type(ctx);
@@ -9721,7 +9721,7 @@ var app = (function (jquery) {
     const file$58 = "src\\component\\Dropdown\\IconButton.svelte";
 
     // (18:1) {:else}
-    function create_else_block$u(ctx) {
+    function create_else_block$v(ctx) {
     	let icon;
     	let current;
 
@@ -9763,7 +9763,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_else_block$u.name,
+    		id: create_else_block$v.name,
     		type: "else",
     		source: "(18:1) {:else}",
     		ctx
@@ -9825,7 +9825,7 @@ var app = (function (jquery) {
     }
 
     // (21:1) {#if showComment}
-    function create_if_block$E(ctx) {
+    function create_if_block$F(ctx) {
     	let div;
     	let t;
     	let div_intro;
@@ -9860,7 +9860,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$E.name,
+    		id: create_if_block$F.name,
     		type: "if",
     		source: "(21:1) {#if showComment}",
     		ctx
@@ -9877,7 +9877,7 @@ var app = (function (jquery) {
     	let current;
     	let mounted;
     	let dispose;
-    	const if_block_creators = [create_if_block_1$8, create_else_block$u];
+    	const if_block_creators = [create_if_block_1$8, create_else_block$v];
     	const if_blocks = [];
 
     	function select_block_type(ctx, dirty) {
@@ -9887,7 +9887,7 @@ var app = (function (jquery) {
 
     	current_block_type_index = select_block_type(ctx);
     	if_block0 = if_blocks[current_block_type_index] = if_block_creators[current_block_type_index](ctx);
-    	let if_block1 = /*showComment*/ ctx[3] && create_if_block$E(ctx);
+    	let if_block1 = /*showComment*/ ctx[3] && create_if_block$F(ctx);
 
     	const block = {
     		c: function create() {
@@ -9954,7 +9954,7 @@ var app = (function (jquery) {
     						transition_in(if_block1, 1);
     					}
     				} else {
-    					if_block1 = create_if_block$E(ctx);
+    					if_block1 = create_if_block$F(ctx);
     					if_block1.c();
     					transition_in(if_block1, 1);
     					if_block1.m(div, null);
@@ -10119,7 +10119,7 @@ var app = (function (jquery) {
     const file$57 = "src\\component\\Dropdown\\MenuItem.svelte";
 
     // (24:1) {:else}
-    function create_else_block$t(ctx) {
+    function create_else_block$u(ctx) {
     	let span;
     	let icon;
     	let current;
@@ -10167,7 +10167,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_else_block$t.name,
+    		id: create_else_block$u.name,
     		type: "else",
     		source: "(24:1) {:else}",
     		ctx
@@ -10177,7 +10177,7 @@ var app = (function (jquery) {
     }
 
     // (20:1) {#if isChecked}
-    function create_if_block$D(ctx) {
+    function create_if_block$E(ctx) {
     	let span;
     	let icon;
     	let current;
@@ -10224,7 +10224,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$D.name,
+    		id: create_if_block$E.name,
     		type: "if",
     		source: "(20:1) {#if isChecked}",
     		ctx
@@ -10254,7 +10254,7 @@ var app = (function (jquery) {
 
     	const default_slot_template = /*#slots*/ ctx[7].default;
     	const default_slot = create_slot(default_slot_template, ctx, /*$$scope*/ ctx[6], null);
-    	const if_block_creators = [create_if_block$D, create_else_block$t];
+    	const if_block_creators = [create_if_block$E, create_else_block$u];
     	const if_blocks = [];
 
     	function select_block_type(ctx, dirty) {
@@ -10800,7 +10800,7 @@ var app = (function (jquery) {
     }
 
     // (16:2) {#if activeMenu == Config.Name}
-    function create_if_block$C(ctx) {
+    function create_if_block$D(ctx) {
     	let switch_instance;
     	let updating_height;
     	let updating_activeMenu;
@@ -10909,7 +10909,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$C.name,
+    		id: create_if_block$D.name,
     		type: "if",
     		source: "(16:2) {#if activeMenu == Config.Name}",
     		ctx
@@ -10922,7 +10922,7 @@ var app = (function (jquery) {
     function create_each_block$5(ctx) {
     	let if_block_anchor;
     	let current;
-    	let if_block = /*activeMenu*/ ctx[0] == /*Config*/ ctx[8].Name && create_if_block$C(ctx);
+    	let if_block = /*activeMenu*/ ctx[0] == /*Config*/ ctx[8].Name && create_if_block$D(ctx);
 
     	const block = {
     		c: function create() {
@@ -10943,7 +10943,7 @@ var app = (function (jquery) {
     						transition_in(if_block, 1);
     					}
     				} else {
-    					if_block = create_if_block$C(ctx);
+    					if_block = create_if_block$D(ctx);
     					if_block.c();
     					transition_in(if_block, 1);
     					if_block.m(if_block_anchor.parentNode, if_block_anchor);
@@ -11230,7 +11230,7 @@ var app = (function (jquery) {
     const file$54 = "src\\component\\Dropdown\\SideTrigger.svelte";
 
     // (19:1) {#if isDropdown}
-    function create_if_block$B(ctx) {
+    function create_if_block$C(ctx) {
     	let span;
     	let icon;
     	let current;
@@ -11278,7 +11278,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$B.name,
+    		id: create_if_block$C.name,
     		type: "if",
     		source: "(19:1) {#if isDropdown}",
     		ctx
@@ -11304,7 +11304,7 @@ var app = (function (jquery) {
 
     	const default_slot_template = /*#slots*/ ctx[7].default;
     	const default_slot = create_slot(default_slot_template, ctx, /*$$scope*/ ctx[6], null);
-    	let if_block = /*isDropdown*/ ctx[2] && create_if_block$B(ctx);
+    	let if_block = /*isDropdown*/ ctx[2] && create_if_block$C(ctx);
 
     	const block = {
     		c: function create() {
@@ -11363,7 +11363,7 @@ var app = (function (jquery) {
     						transition_in(if_block, 1);
     					}
     				} else {
-    					if_block = create_if_block$B(ctx);
+    					if_block = create_if_block$C(ctx);
     					if_block.c();
     					transition_in(if_block, 1);
     					if_block.m(div, null);
@@ -11581,7 +11581,7 @@ var app = (function (jquery) {
     }
 
     // (51:0) {:else}
-    function create_else_block$s(ctx) {
+    function create_else_block$t(ctx) {
     	let div2;
     	let div1;
     	let div0;
@@ -11669,7 +11669,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_else_block$s.name,
+    		id: create_else_block$t.name,
     		type: "else",
     		source: "(51:0) {:else}",
     		ctx
@@ -11748,7 +11748,7 @@ var app = (function (jquery) {
     }
 
     // (29:0) {#if design == 'inner'}
-    function create_if_block$A(ctx) {
+    function create_if_block$B(ctx) {
     	let div;
     	let span0;
     	let t0;
@@ -11818,7 +11818,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$A.name,
+    		id: create_if_block$B.name,
     		type: "if",
     		source: "(29:0) {#if design == 'inner'}",
     		ctx
@@ -11917,9 +11917,9 @@ var app = (function (jquery) {
     	let if_block_anchor;
 
     	function select_block_type(ctx, dirty) {
-    		if (/*design*/ ctx[3] == 'inner') return create_if_block$A;
+    		if (/*design*/ ctx[3] == 'inner') return create_if_block$B;
     		if (/*design*/ ctx[3] == 'slider') return create_if_block_1$7;
-    		return create_else_block$s;
+    		return create_else_block$t;
     	}
 
     	let current_block_type = select_block_type(ctx);
@@ -12146,7 +12146,7 @@ var app = (function (jquery) {
     const file$52 = "src\\component\\Navbar\\Components\\NavProfile.svelte";
 
     // (44:8) {:else}
-    function create_else_block$r(ctx) {
+    function create_else_block$s(ctx) {
     	let sidetrigger;
     	let updating_isOpen;
     	let current;
@@ -12210,7 +12210,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_else_block$r.name,
+    		id: create_else_block$s.name,
     		type: "else",
     		source: "(44:8) {:else}",
     		ctx
@@ -12220,7 +12220,7 @@ var app = (function (jquery) {
     }
 
     // (42:8) {#if !isSide}
-    function create_if_block$z(ctx) {
+    function create_if_block$A(ctx) {
     	let iconbutton;
     	let updating_showComment;
     	let current;
@@ -12273,7 +12273,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$z.name,
+    		id: create_if_block$A.name,
     		type: "if",
     		source: "(42:8) {#if !isSide}",
     		ctx
@@ -12317,7 +12317,7 @@ var app = (function (jquery) {
     	let current;
     	let mounted;
     	let dispose;
-    	const if_block_creators = [create_if_block$z, create_else_block$r];
+    	const if_block_creators = [create_if_block$A, create_else_block$s];
     	const if_blocks = [];
 
     	function select_block_type(ctx, dirty) {
@@ -12713,7 +12713,7 @@ var app = (function (jquery) {
     const file$51 = "src\\component\\Navbar\\Components\\NavGithub.svelte";
 
     // (44:8) {:else}
-    function create_else_block$q(ctx) {
+    function create_else_block$r(ctx) {
     	let sidetrigger;
     	let updating_isOpen;
     	let current;
@@ -12777,7 +12777,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_else_block$q.name,
+    		id: create_else_block$r.name,
     		type: "else",
     		source: "(44:8) {:else}",
     		ctx
@@ -12787,7 +12787,7 @@ var app = (function (jquery) {
     }
 
     // (42:8) {#if !isSide}
-    function create_if_block$y(ctx) {
+    function create_if_block$z(ctx) {
     	let iconbutton;
     	let updating_showComment;
     	let current;
@@ -12840,7 +12840,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$y.name,
+    		id: create_if_block$z.name,
     		type: "if",
     		source: "(42:8) {#if !isSide}",
     		ctx
@@ -12882,7 +12882,7 @@ var app = (function (jquery) {
     	let current_block_type_index;
     	let if_block;
     	let current;
-    	const if_block_creators = [create_if_block$y, create_else_block$q];
+    	const if_block_creators = [create_if_block$z, create_else_block$r];
     	const if_blocks = [];
 
     	function select_block_type(ctx, dirty) {
@@ -13686,10 +13686,10 @@ var app = (function (jquery) {
 
     /* node_modules\svelte-spa-router\Router.svelte generated by Svelte v3.55.1 */
 
-    const { Error: Error_1, Object: Object_1, console: console_1$1Q } = globals;
+    const { Error: Error_1, Object: Object_1, console: console_1$1B } = globals;
 
     // (267:0) {:else}
-    function create_else_block$p(ctx) {
+    function create_else_block$q(ctx) {
     	let switch_instance;
     	let switch_instance_anchor;
     	let current;
@@ -13771,7 +13771,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_else_block$p.name,
+    		id: create_else_block$q.name,
     		type: "else",
     		source: "(267:0) {:else}",
     		ctx
@@ -13781,7 +13781,7 @@ var app = (function (jquery) {
     }
 
     // (260:0) {#if componentParams}
-    function create_if_block$x(ctx) {
+    function create_if_block$y(ctx) {
     	let switch_instance;
     	let switch_instance_anchor;
     	let current;
@@ -13866,7 +13866,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$x.name,
+    		id: create_if_block$y.name,
     		type: "if",
     		source: "(260:0) {#if componentParams}",
     		ctx
@@ -13880,7 +13880,7 @@ var app = (function (jquery) {
     	let if_block;
     	let if_block_anchor;
     	let current;
-    	const if_block_creators = [create_if_block$x, create_else_block$p];
+    	const if_block_creators = [create_if_block$y, create_else_block$q];
     	const if_blocks = [];
 
     	function select_block_type(ctx, dirty) {
@@ -14466,7 +14466,7 @@ var app = (function (jquery) {
     	const writable_props = ['routes', 'prefix', 'restoreScrollState'];
 
     	Object_1.keys($$props).forEach(key => {
-    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console_1$1Q.warn(`<Router> was created with unknown prop '${key}'`);
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console_1$1B.warn(`<Router> was created with unknown prop '${key}'`);
     	});
 
     	function routeEvent_handler(event) {
@@ -15548,7 +15548,7 @@ var app = (function (jquery) {
     }
 
     // (42:8) {:else}
-    function create_else_block$o(ctx) {
+    function create_else_block$p(ctx) {
     	let sidetrigger;
     	let updating_isOpen;
     	let current;
@@ -15612,7 +15612,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_else_block$o.name,
+    		id: create_else_block$p.name,
     		type: "else",
     		source: "(42:8) {:else}",
     		ctx
@@ -15622,7 +15622,7 @@ var app = (function (jquery) {
     }
 
     // (40:8) {#if !isSide}
-    function create_if_block$w(ctx) {
+    function create_if_block$x(ctx) {
     	let iconbutton;
     	let updating_showComment;
     	let current;
@@ -15678,7 +15678,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$w.name,
+    		id: create_if_block$x.name,
     		type: "if",
     		source: "(40:8) {#if !isSide}",
     		ctx
@@ -15722,7 +15722,7 @@ var app = (function (jquery) {
     	let current;
     	let mounted;
     	let dispose;
-    	const if_block_creators = [create_if_block$w, create_else_block$o];
+    	const if_block_creators = [create_if_block$x, create_else_block$p];
     	const if_blocks = [];
 
     	function select_block_type(ctx, dirty) {
@@ -17274,7 +17274,7 @@ var app = (function (jquery) {
     }
 
     // (74:8) {:else}
-    function create_else_block$n(ctx) {
+    function create_else_block$o(ctx) {
     	let t_1;
 
     	const block = {
@@ -17291,7 +17291,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_else_block$n.name,
+    		id: create_else_block$o.name,
     		type: "else",
     		source: "(74:8) {:else}",
     		ctx
@@ -17301,7 +17301,7 @@ var app = (function (jquery) {
     }
 
     // (72:8) {#if width < 200}
-    function create_if_block$v(ctx) {
+    function create_if_block$w(ctx) {
     	let t0;
     	let br;
     	let t1;
@@ -17327,7 +17327,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$v.name,
+    		id: create_if_block$w.name,
     		type: "if",
     		source: "(72:8) {#if width < 200}",
     		ctx
@@ -17341,8 +17341,8 @@ var app = (function (jquery) {
     	let if_block_anchor;
 
     	function select_block_type(ctx, dirty) {
-    		if (/*width*/ ctx[1] < 200) return create_if_block$v;
-    		return create_else_block$n;
+    		if (/*width*/ ctx[1] < 200) return create_if_block$w;
+    		return create_else_block$o;
     	}
 
     	let current_block_type = select_block_type(ctx);
@@ -18307,7 +18307,7 @@ var app = (function (jquery) {
     }
 
     // (49:8) {:else}
-    function create_else_block$m(ctx) {
+    function create_else_block$n(ctx) {
     	let t;
 
     	const block = {
@@ -18324,7 +18324,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_else_block$m.name,
+    		id: create_else_block$n.name,
     		type: "else",
     		source: "(49:8) {:else}",
     		ctx
@@ -18334,7 +18334,7 @@ var app = (function (jquery) {
     }
 
     // (47:8) {#if width < 200}
-    function create_if_block$u(ctx) {
+    function create_if_block$v(ctx) {
     	let t0;
     	let br;
     	let t1;
@@ -18360,7 +18360,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$u.name,
+    		id: create_if_block$v.name,
     		type: "if",
     		source: "(47:8) {#if width < 200}",
     		ctx
@@ -18374,8 +18374,8 @@ var app = (function (jquery) {
     	let if_block_anchor;
 
     	function select_block_type(ctx, dirty) {
-    		if (/*width*/ ctx[1] < 200) return create_if_block$u;
-    		return create_else_block$m;
+    		if (/*width*/ ctx[1] < 200) return create_if_block$v;
+    		return create_else_block$n;
     	}
 
     	let current_block_type = select_block_type(ctx);
@@ -19022,7 +19022,7 @@ var app = (function (jquery) {
     }
 
     // (29:8) {:else}
-    function create_else_block$l(ctx) {
+    function create_else_block$m(ctx) {
     	let sidetrigger;
     	let updating_isOpen;
     	let current;
@@ -19086,7 +19086,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_else_block$l.name,
+    		id: create_else_block$m.name,
     		type: "else",
     		source: "(29:8) {:else}",
     		ctx
@@ -19096,7 +19096,7 @@ var app = (function (jquery) {
     }
 
     // (27:8) {#if !isSide}
-    function create_if_block$t(ctx) {
+    function create_if_block$u(ctx) {
     	let iconbutton;
     	let updating_showComment;
     	let current;
@@ -19152,7 +19152,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$t.name,
+    		id: create_if_block$u.name,
     		type: "if",
     		source: "(27:8) {#if !isSide}",
     		ctx
@@ -19196,7 +19196,7 @@ var app = (function (jquery) {
     	let current;
     	let mounted;
     	let dispose;
-    	const if_block_creators = [create_if_block$t, create_else_block$l];
+    	const if_block_creators = [create_if_block$u, create_else_block$m];
     	const if_blocks = [];
 
     	function select_block_type(ctx, dirty) {
@@ -19572,7 +19572,7 @@ var app = (function (jquery) {
 
     /* src\component\DropdownMenus\UISelect.svelte generated by Svelte v3.55.1 */
 
-    const { console: console_1$1P } = globals;
+    const { console: console_1$1A } = globals;
 
     // (37:4) <MenuItem on:click={() => {          $ContextVisible = !$ContextVisible;      }} leftIcon={mdiTextBoxRemoveOutline } isChecked={false} >
     function create_default_slot_5(ctx) {
@@ -20047,18 +20047,18 @@ var app = (function (jquery) {
 
     	$$self.$$.on_mount.push(function () {
     		if (height === undefined && !('height' in $$props || $$self.$$.bound[$$self.$$.props['height']])) {
-    			console_1$1P.warn("<UISelect> was created without expected prop 'height'");
+    			console_1$1A.warn("<UISelect> was created without expected prop 'height'");
     		}
 
     		if (Side === undefined && !('Side' in $$props || $$self.$$.bound[$$self.$$.props['Side']])) {
-    			console_1$1P.warn("<UISelect> was created without expected prop 'Side'");
+    			console_1$1A.warn("<UISelect> was created without expected prop 'Side'");
     		}
     	});
 
     	const writable_props = ['height', 'Side'];
 
     	Object.keys($$props).forEach(key => {
-    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console_1$1P.warn(`<UISelect> was created with unknown prop '${key}'`);
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console_1$1A.warn(`<UISelect> was created with unknown prop '${key}'`);
     	});
 
     	function toggleswitch_checked_binding(value) {
@@ -20188,7 +20188,7 @@ var app = (function (jquery) {
 
     /* src\component\Navbar\Components\NavUISelector.svelte generated by Svelte v3.55.1 */
 
-    const { console: console_1$1O } = globals;
+    const { console: console_1$1z } = globals;
     const file$4Y = "src\\component\\Navbar\\Components\\NavUISelector.svelte";
 
     // (41:4) <NavItem bind:open={isOpen} Side={ isSide }  preOpen={onOpen}>
@@ -20263,7 +20263,7 @@ var app = (function (jquery) {
     }
 
     // (45:12) {:else}
-    function create_else_block$k(ctx) {
+    function create_else_block$l(ctx) {
     	let sidetrigger;
     	let updating_isOpen;
     	let current;
@@ -20327,7 +20327,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_else_block$k.name,
+    		id: create_else_block$l.name,
     		type: "else",
     		source: "(45:12) {:else}",
     		ctx
@@ -20337,7 +20337,7 @@ var app = (function (jquery) {
     }
 
     // (43:12) {#if !isSide}
-    function create_if_block$s(ctx) {
+    function create_if_block$t(ctx) {
     	let iconbutton;
     	let updating_showComment;
     	let current;
@@ -20393,7 +20393,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$s.name,
+    		id: create_if_block$t.name,
     		type: "if",
     		source: "(43:12) {#if !isSide}",
     		ctx
@@ -20435,7 +20435,7 @@ var app = (function (jquery) {
     	let current_block_type_index;
     	let if_block;
     	let current;
-    	const if_block_creators = [create_if_block$s, create_else_block$k];
+    	const if_block_creators = [create_if_block$t, create_else_block$l];
     	const if_blocks = [];
 
     	function select_block_type(ctx, dirty) {
@@ -20651,14 +20651,14 @@ var app = (function (jquery) {
 
     	$$self.$$.on_mount.push(function () {
     		if (onOpen === undefined && !('onOpen' in $$props || $$self.$$.bound[$$self.$$.props['onOpen']])) {
-    			console_1$1O.warn("<NavUISelector> was created without expected prop 'onOpen'");
+    			console_1$1z.warn("<NavUISelector> was created without expected prop 'onOpen'");
     		}
     	});
 
     	const writable_props = ['height', 'onOpen', 'isSide', 'isOpen', 'sideWidth'];
 
     	Object.keys($$props).forEach(key => {
-    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console_1$1O.warn(`<NavUISelector> was created with unknown prop '${key}'`);
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console_1$1z.warn(`<NavUISelector> was created with unknown prop '${key}'`);
     	});
 
     	function iconbutton_showComment_binding(value) {
@@ -21237,7 +21237,7 @@ var app = (function (jquery) {
     const file$4V = "src\\component\\Navbar\\Navbar.svelte";
 
     // (88:4) {:else}
-    function create_else_block$j(ctx) {
+    function create_else_block$k(ctx) {
     	let profile;
     	let updating_isOpen;
     	let t0;
@@ -21449,7 +21449,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_else_block$j.name,
+    		id: create_else_block$k.name,
     		type: "else",
     		source: "(88:4) {:else}",
     		ctx
@@ -21459,7 +21459,7 @@ var app = (function (jquery) {
     }
 
     // (80:4) {#if width <= 720}
-    function create_if_block$r(ctx) {
+    function create_if_block$s(ctx) {
     	let sidebar;
     	let updating_open;
     	let updating_asideWidth;
@@ -21536,7 +21536,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$r.name,
+    		id: create_if_block$s.name,
     		type: "if",
     		source: "(80:4) {#if width <= 720}",
     		ctx
@@ -21833,7 +21833,7 @@ var app = (function (jquery) {
     	let mounted;
     	let dispose;
     	navlogo = new Navlogo({ $$inline: true });
-    	const if_block_creators = [create_if_block$r, create_else_block$j];
+    	const if_block_creators = [create_if_block$s, create_else_block$k];
     	const if_blocks = [];
 
     	function select_block_type(ctx, dirty) {
@@ -23290,7 +23290,7 @@ var app = (function (jquery) {
     }
 
     // (172:8) {#if idx == 0}
-    function create_if_block$q(ctx) {
+    function create_if_block$r(ctx) {
     	let t;
 
     	const block = {
@@ -23310,7 +23310,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$q.name,
+    		id: create_if_block$r.name,
     		type: "if",
     		source: "(172:8) {#if idx == 0}",
     		ctx
@@ -23333,7 +23333,7 @@ var app = (function (jquery) {
     	let dispose;
 
     	function select_block_type(ctx, dirty) {
-    		if (/*idx*/ ctx[1] == 0) return create_if_block$q;
+    		if (/*idx*/ ctx[1] == 0) return create_if_block$r;
     		if (/*idx*/ ctx[1] == 1) return create_if_block_1$6;
     		if (/*idx*/ ctx[1] == 2) return create_if_block_2$6;
     		if (/*idx*/ ctx[1] == 3) return create_if_block_3$1;
@@ -24342,32 +24342,42 @@ var app = (function (jquery) {
 
     function get_each_context$1(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[16] = list[i];
+    	child_ctx[20] = list[i];
     	return child_ctx;
     }
 
-    // (75:2) {#if curPage == Page.index}
-    function create_if_block$p(ctx) {
+    // (77:2) {#if curPage == Page.index}
+    function create_if_block$q(ctx) {
     	let switch_instance;
     	let updating_color;
-    	let updating_fontSize;
+    	let updating_head;
+    	let updating_subhead;
+    	let updating_context;
     	let updating_curPage;
     	let switch_instance_anchor;
     	let current;
 
     	function switch_instance_color_binding(value) {
-    		/*switch_instance_color_binding*/ ctx[8](value);
+    		/*switch_instance_color_binding*/ ctx[10](value);
     	}
 
-    	function switch_instance_fontSize_binding(value) {
-    		/*switch_instance_fontSize_binding*/ ctx[9](value);
+    	function switch_instance_head_binding(value) {
+    		/*switch_instance_head_binding*/ ctx[11](value);
+    	}
+
+    	function switch_instance_subhead_binding(value) {
+    		/*switch_instance_subhead_binding*/ ctx[12](value);
+    	}
+
+    	function switch_instance_context_binding(value) {
+    		/*switch_instance_context_binding*/ ctx[13](value);
     	}
 
     	function switch_instance_curPage_binding(value) {
-    		/*switch_instance_curPage_binding*/ ctx[10](value);
+    		/*switch_instance_curPage_binding*/ ctx[14](value);
     	}
 
-    	var switch_value = /*Page*/ ctx[16].component;
+    	var switch_value = /*Page*/ ctx[20].component;
 
     	function switch_props(ctx) {
     		let switch_instance_props = {};
@@ -24376,8 +24386,16 @@ var app = (function (jquery) {
     			switch_instance_props.color = /*color*/ ctx[0];
     		}
 
-    		if (/*fontSize*/ ctx[3] !== void 0) {
-    			switch_instance_props.fontSize = /*fontSize*/ ctx[3];
+    		if (/*head*/ ctx[3] !== void 0) {
+    			switch_instance_props.head = /*head*/ ctx[3];
+    		}
+
+    		if (/*subhead*/ ctx[4] !== void 0) {
+    			switch_instance_props.subhead = /*subhead*/ ctx[4];
+    		}
+
+    		if (/*context*/ ctx[5] !== void 0) {
+    			switch_instance_props.context = /*context*/ ctx[5];
     		}
 
     		if (/*curPage*/ ctx[1] !== void 0) {
@@ -24393,7 +24411,9 @@ var app = (function (jquery) {
     	if (switch_value) {
     		switch_instance = construct_svelte_component_dev(switch_value, switch_props(ctx));
     		binding_callbacks.push(() => bind(switch_instance, 'color', switch_instance_color_binding));
-    		binding_callbacks.push(() => bind(switch_instance, 'fontSize', switch_instance_fontSize_binding));
+    		binding_callbacks.push(() => bind(switch_instance, 'head', switch_instance_head_binding));
+    		binding_callbacks.push(() => bind(switch_instance, 'subhead', switch_instance_subhead_binding));
+    		binding_callbacks.push(() => bind(switch_instance, 'context', switch_instance_context_binding));
     		binding_callbacks.push(() => bind(switch_instance, 'curPage', switch_instance_curPage_binding));
     	}
 
@@ -24416,10 +24436,22 @@ var app = (function (jquery) {
     				add_flush_callback(() => updating_color = false);
     			}
 
-    			if (!updating_fontSize && dirty & /*fontSize*/ 8) {
-    				updating_fontSize = true;
-    				switch_instance_changes.fontSize = /*fontSize*/ ctx[3];
-    				add_flush_callback(() => updating_fontSize = false);
+    			if (!updating_head && dirty & /*head*/ 8) {
+    				updating_head = true;
+    				switch_instance_changes.head = /*head*/ ctx[3];
+    				add_flush_callback(() => updating_head = false);
+    			}
+
+    			if (!updating_subhead && dirty & /*subhead*/ 16) {
+    				updating_subhead = true;
+    				switch_instance_changes.subhead = /*subhead*/ ctx[4];
+    				add_flush_callback(() => updating_subhead = false);
+    			}
+
+    			if (!updating_context && dirty & /*context*/ 32) {
+    				updating_context = true;
+    				switch_instance_changes.context = /*context*/ ctx[5];
+    				add_flush_callback(() => updating_context = false);
     			}
 
     			if (!updating_curPage && dirty & /*curPage*/ 2) {
@@ -24428,7 +24460,7 @@ var app = (function (jquery) {
     				add_flush_callback(() => updating_curPage = false);
     			}
 
-    			if (switch_value !== (switch_value = /*Page*/ ctx[16].component)) {
+    			if (switch_value !== (switch_value = /*Page*/ ctx[20].component)) {
     				if (switch_instance) {
     					group_outros();
     					const old_component = switch_instance;
@@ -24443,7 +24475,9 @@ var app = (function (jquery) {
     				if (switch_value) {
     					switch_instance = construct_svelte_component_dev(switch_value, switch_props(ctx));
     					binding_callbacks.push(() => bind(switch_instance, 'color', switch_instance_color_binding));
-    					binding_callbacks.push(() => bind(switch_instance, 'fontSize', switch_instance_fontSize_binding));
+    					binding_callbacks.push(() => bind(switch_instance, 'head', switch_instance_head_binding));
+    					binding_callbacks.push(() => bind(switch_instance, 'subhead', switch_instance_subhead_binding));
+    					binding_callbacks.push(() => bind(switch_instance, 'context', switch_instance_context_binding));
     					binding_callbacks.push(() => bind(switch_instance, 'curPage', switch_instance_curPage_binding));
     					create_component(switch_instance.$$.fragment);
     					transition_in(switch_instance.$$.fragment, 1);
@@ -24472,20 +24506,20 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$p.name,
+    		id: create_if_block$q.name,
     		type: "if",
-    		source: "(75:2) {#if curPage == Page.index}",
+    		source: "(77:2) {#if curPage == Page.index}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (74:1) {#each Pages as Page}
+    // (76:1) {#each Pages as Page}
     function create_each_block$1(ctx) {
     	let if_block_anchor;
     	let current;
-    	let if_block = /*curPage*/ ctx[1] == /*Page*/ ctx[16].index && create_if_block$p(ctx);
+    	let if_block = /*curPage*/ ctx[1] == /*Page*/ ctx[20].index && create_if_block$q(ctx);
 
     	const block = {
     		c: function create() {
@@ -24498,7 +24532,7 @@ var app = (function (jquery) {
     			current = true;
     		},
     		p: function update(ctx, dirty) {
-    			if (/*curPage*/ ctx[1] == /*Page*/ ctx[16].index) {
+    			if (/*curPage*/ ctx[1] == /*Page*/ ctx[20].index) {
     				if (if_block) {
     					if_block.p(ctx, dirty);
 
@@ -24506,7 +24540,7 @@ var app = (function (jquery) {
     						transition_in(if_block, 1);
     					}
     				} else {
-    					if_block = create_if_block$p(ctx);
+    					if_block = create_if_block$q(ctx);
     					if_block.c();
     					transition_in(if_block, 1);
     					if_block.m(if_block_anchor.parentNode, if_block_anchor);
@@ -24540,7 +24574,7 @@ var app = (function (jquery) {
     		block,
     		id: create_each_block$1.name,
     		type: "each",
-    		source: "(74:1) {#each Pages as Page}",
+    		source: "(76:1) {#each Pages as Page}",
     		ctx
     	});
 
@@ -24565,8 +24599,8 @@ var app = (function (jquery) {
     		each_blocks[i] = null;
     	});
 
-    	const default_slot_template = /*#slots*/ ctx[7].default;
-    	const default_slot = create_slot(default_slot_template, ctx, /*$$scope*/ ctx[6], null);
+    	const default_slot_template = /*#slots*/ ctx[9].default;
+    	const default_slot = create_slot(default_slot_template, ctx, /*$$scope*/ ctx[8], null);
 
     	const block = {
     		c: function create() {
@@ -24579,7 +24613,7 @@ var app = (function (jquery) {
     			t = space();
     			if (default_slot) default_slot.c();
     			attr_dev(div, "class", "svelte-1yq7emk");
-    			add_location(div, file$4P, 72, 0, 2024);
+    			add_location(div, file$4P, 74, 0, 2114);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -24600,12 +24634,12 @@ var app = (function (jquery) {
     			current = true;
 
     			if (!mounted) {
-    				dispose = listen_dev(window, "mousedown", /*setButtonType*/ ctx[4], false, false, false);
+    				dispose = listen_dev(window, "mousedown", /*setButtonType*/ ctx[6], false, false, false);
     				mounted = true;
     			}
     		},
     		p: function update(ctx, [dirty]) {
-    			if (dirty & /*Pages, color, fontSize, curPage*/ 15) {
+    			if (dirty & /*Pages, color, head, subhead, context, curPage*/ 63) {
     				each_value = /*Pages*/ ctx[2];
     				validate_each_argument(each_value);
     				let i;
@@ -24634,15 +24668,15 @@ var app = (function (jquery) {
     			}
 
     			if (default_slot) {
-    				if (default_slot.p && (!current || dirty & /*$$scope*/ 64)) {
+    				if (default_slot.p && (!current || dirty & /*$$scope*/ 256)) {
     					update_slot_base(
     						default_slot,
     						default_slot_template,
     						ctx,
-    						/*$$scope*/ ctx[6],
+    						/*$$scope*/ ctx[8],
     						!current
-    						? get_all_dirty_from_scope(/*$$scope*/ ctx[6])
-    						: get_slot_changes(default_slot_template, /*$$scope*/ ctx[6], dirty, null),
+    						? get_all_dirty_from_scope(/*$$scope*/ ctx[8])
+    						: get_slot_changes(default_slot_template, /*$$scope*/ ctx[8], dirty, null),
     						null
     					);
     				}
@@ -24691,14 +24725,16 @@ var app = (function (jquery) {
     function instance$7h($$self, $$props, $$invalidate) {
     	let $Device;
     	validate_store(Device, 'Device');
-    	component_subscribe($$self, Device, $$value => $$invalidate(13, $Device = $$value));
+    	component_subscribe($$self, Device, $$value => $$invalidate(17, $Device = $$value));
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('DefaultSlide', slots, ['default']);
     	let { color } = $$props;
     	let { Pages } = $$props;
     	let { curPage } = $$props;
     	let { maxPage } = $$props;
-    	let fontSize = 2;
+    	let head = $Device["isMobile"] ? 1.5 : 2;
+    	let subhead = 0.8 * head;
+    	let context = 0.8 * subhead;
     	let ButtonType = -1;
     	let doubleClickTimer;
     	curPage = 1;
@@ -24797,9 +24833,19 @@ var app = (function (jquery) {
     		$$invalidate(0, color);
     	}
 
-    	function switch_instance_fontSize_binding(value) {
-    		fontSize = value;
-    		$$invalidate(3, fontSize);
+    	function switch_instance_head_binding(value) {
+    		head = value;
+    		$$invalidate(3, head);
+    	}
+
+    	function switch_instance_subhead_binding(value) {
+    		subhead = value;
+    		$$invalidate(4, subhead);
+    	}
+
+    	function switch_instance_context_binding(value) {
+    		context = value;
+    		$$invalidate(5, context);
     	}
 
     	function switch_instance_curPage_binding(value) {
@@ -24811,8 +24857,8 @@ var app = (function (jquery) {
     		if ('color' in $$props) $$invalidate(0, color = $$props.color);
     		if ('Pages' in $$props) $$invalidate(2, Pages = $$props.Pages);
     		if ('curPage' in $$props) $$invalidate(1, curPage = $$props.curPage);
-    		if ('maxPage' in $$props) $$invalidate(5, maxPage = $$props.maxPage);
-    		if ('$$scope' in $$props) $$invalidate(6, $$scope = $$props.$$scope);
+    		if ('maxPage' in $$props) $$invalidate(7, maxPage = $$props.maxPage);
+    		if ('$$scope' in $$props) $$invalidate(8, $$scope = $$props.$$scope);
     	};
 
     	$$self.$capture_state = () => ({
@@ -24821,7 +24867,9 @@ var app = (function (jquery) {
     		Pages,
     		curPage,
     		maxPage,
-    		fontSize,
+    		head,
+    		subhead,
+    		context,
     		ButtonType,
     		doubleClickTimer,
     		moveNext,
@@ -24834,8 +24882,10 @@ var app = (function (jquery) {
     		if ('color' in $$props) $$invalidate(0, color = $$props.color);
     		if ('Pages' in $$props) $$invalidate(2, Pages = $$props.Pages);
     		if ('curPage' in $$props) $$invalidate(1, curPage = $$props.curPage);
-    		if ('maxPage' in $$props) $$invalidate(5, maxPage = $$props.maxPage);
-    		if ('fontSize' in $$props) $$invalidate(3, fontSize = $$props.fontSize);
+    		if ('maxPage' in $$props) $$invalidate(7, maxPage = $$props.maxPage);
+    		if ('head' in $$props) $$invalidate(3, head = $$props.head);
+    		if ('subhead' in $$props) $$invalidate(4, subhead = $$props.subhead);
+    		if ('context' in $$props) $$invalidate(5, context = $$props.context);
     		if ('ButtonType' in $$props) ButtonType = $$props.ButtonType;
     		if ('doubleClickTimer' in $$props) doubleClickTimer = $$props.doubleClickTimer;
     	};
@@ -24848,13 +24898,17 @@ var app = (function (jquery) {
     		color,
     		curPage,
     		Pages,
-    		fontSize,
+    		head,
+    		subhead,
+    		context,
     		setButtonType,
     		maxPage,
     		$$scope,
     		slots,
     		switch_instance_color_binding,
-    		switch_instance_fontSize_binding,
+    		switch_instance_head_binding,
+    		switch_instance_subhead_binding,
+    		switch_instance_context_binding,
     		switch_instance_curPage_binding
     	];
     }
@@ -24867,7 +24921,7 @@ var app = (function (jquery) {
     			color: 0,
     			Pages: 2,
     			curPage: 1,
-    			maxPage: 5
+    			maxPage: 7
     		});
 
     		dispatch_dev("SvelteRegisterComponent", {
@@ -24945,7 +24999,7 @@ var app = (function (jquery) {
 
     /* src\component\PageDesign\DefaultPage.svelte generated by Svelte v3.55.1 */
 
-    const { console: console_1$1N } = globals;
+    const { console: console_1$1y } = globals;
     const file$4O = "src\\component\\PageDesign\\DefaultPage.svelte";
 
     function get_each_context(ctx, list, i) {
@@ -24963,7 +25017,7 @@ var app = (function (jquery) {
     }
 
     // (119:12) {#if id === cur}
-    function create_if_block$o(ctx) {
+    function create_if_block$p(ctx) {
     	let div1;
     	let switch_instance;
     	let updating_curPage;
@@ -25123,7 +25177,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$o.name,
+    		id: create_if_block$p.name,
     		type: "if",
     		source: "(119:12) {#if id === cur}",
     		ctx
@@ -25136,7 +25190,7 @@ var app = (function (jquery) {
     function create_each_block_1(ctx) {
     	let if_block_anchor;
     	let current;
-    	let if_block = /*id*/ ctx[28] === /*cur*/ ctx[2] && create_if_block$o(ctx);
+    	let if_block = /*id*/ ctx[28] === /*cur*/ ctx[2] && create_if_block$p(ctx);
 
     	const block = {
     		c: function create() {
@@ -25157,7 +25211,7 @@ var app = (function (jquery) {
     						transition_in(if_block, 1);
     					}
     				} else {
-    					if_block = create_if_block$o(ctx);
+    					if_block = create_if_block$p(ctx);
     					if_block.c();
     					transition_in(if_block, 1);
     					if_block.m(if_block_anchor.parentNode, if_block_anchor);
@@ -25592,7 +25646,7 @@ var app = (function (jquery) {
     	const writable_props = ['slides'];
 
     	Object.keys($$props).forEach(key => {
-    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console_1$1N.warn(`<DefaultPage> was created with unknown prop '${key}'`);
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console_1$1y.warn(`<DefaultPage> was created with unknown prop '${key}'`);
     	});
 
     	function switch_instance_curPage_binding(value) {
@@ -25959,7 +26013,7 @@ var app = (function (jquery) {
     }
 
     // (62:4) {#if Slide_01}
-    function create_if_block$n(ctx) {
+    function create_if_block$o(ctx) {
     	let p;
     	let p_outro;
     	let current;
@@ -25992,7 +26046,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$n.name,
+    		id: create_if_block$o.name,
     		type: "if",
     		source: "(62:4) {#if Slide_01}",
     		ctx
@@ -26082,7 +26136,7 @@ var app = (function (jquery) {
     	let if_block;
     	let if_block_anchor;
     	let current;
-    	const if_block_creators = [create_if_block$n, create_if_block_1$5];
+    	const if_block_creators = [create_if_block$o, create_if_block_1$5];
     	const if_blocks = [];
 
     	function select_block_type(ctx, dirty) {
@@ -26647,7 +26701,7 @@ var app = (function (jquery) {
 
     	function select_block_type_1(ctx, dirty) {
     		if (/*$Device*/ ctx[4]["isMobile"]) return create_if_block_2$4;
-    		return create_else_block$i;
+    		return create_else_block$j;
     	}
 
     	let current_block_type = select_block_type_1(ctx);
@@ -26710,7 +26764,7 @@ var app = (function (jquery) {
     }
 
     // (60:4) {#if Slide_01}
-    function create_if_block$m(ctx) {
+    function create_if_block$n(ctx) {
     	let p;
     	let p_outro;
     	let current;
@@ -26743,7 +26797,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$m.name,
+    		id: create_if_block$n.name,
     		type: "if",
     		source: "(60:4) {#if Slide_01}",
     		ctx
@@ -26753,7 +26807,7 @@ var app = (function (jquery) {
     }
 
     // (67:16) {:else}
-    function create_else_block$i(ctx) {
+    function create_else_block$j(ctx) {
     	let t_1;
 
     	const block = {
@@ -26770,7 +26824,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_else_block$i.name,
+    		id: create_else_block$j.name,
     		type: "else",
     		source: "(67:16) {:else}",
     		ctx
@@ -26821,7 +26875,7 @@ var app = (function (jquery) {
     	let if_block;
     	let if_block_anchor;
     	let current;
-    	const if_block_creators = [create_if_block$m, create_if_block_1$4];
+    	const if_block_creators = [create_if_block$n, create_if_block_1$4];
     	const if_blocks = [];
 
     	function select_block_type(ctx, dirty) {
@@ -27536,7 +27590,7 @@ var app = (function (jquery) {
     const file$4J = "src\\component\\PageDesign\\Slide\\Main\\Slide03\\Page01.svelte";
 
     // (23:12) {:else}
-    function create_else_block$h(ctx) {
+    function create_else_block$i(ctx) {
     	let t;
 
     	const block = {
@@ -27553,7 +27607,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_else_block$h.name,
+    		id: create_else_block$i.name,
     		type: "else",
     		source: "(23:12) {:else}",
     		ctx
@@ -27563,7 +27617,7 @@ var app = (function (jquery) {
     }
 
     // (21:12) {#if $Device["isMobile"]}
-    function create_if_block$l(ctx) {
+    function create_if_block$m(ctx) {
     	let t0;
     	let br;
     	let t1;
@@ -27589,7 +27643,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$l.name,
+    		id: create_if_block$m.name,
     		type: "if",
     		source: "(21:12) {#if $Device[\\\"isMobile\\\"]}",
     		ctx
@@ -27609,8 +27663,8 @@ var app = (function (jquery) {
     	let current;
 
     	function select_block_type(ctx, dirty) {
-    		if (/*$Device*/ ctx[2]["isMobile"]) return create_if_block$l;
-    		return create_else_block$h;
+    		if (/*$Device*/ ctx[2]["isMobile"]) return create_if_block$m;
+    		return create_else_block$i;
     	}
 
     	let current_block_type = select_block_type(ctx);
@@ -28082,7 +28136,7 @@ var app = (function (jquery) {
     const file$4I = "src\\component\\PageDesign\\Slide\\Main\\Slide04\\Page01.svelte";
 
     // (52:12) {#if visibility}
-    function create_if_block$k(ctx) {
+    function create_if_block$l(ctx) {
     	let div;
     	let icon;
     	let div_intro;
@@ -28147,7 +28201,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$k.name,
+    		id: create_if_block$l.name,
     		type: "if",
     		source: "(52:12) {#if visibility}",
     		ctx
@@ -28164,7 +28218,7 @@ var app = (function (jquery) {
     	let t1;
     	let div1;
     	let current;
-    	let if_block = /*visibility*/ ctx[3] && create_if_block$k(ctx);
+    	let if_block = /*visibility*/ ctx[3] && create_if_block$l(ctx);
 
     	const block = {
     		c: function create() {
@@ -28205,7 +28259,7 @@ var app = (function (jquery) {
     						transition_in(if_block, 1);
     					}
     				} else {
-    					if_block = create_if_block$k(ctx);
+    					if_block = create_if_block$l(ctx);
     					if_block.c();
     					transition_in(if_block, 1);
     					if_block.m(div1, null);
@@ -28461,7 +28515,7 @@ var app = (function (jquery) {
     const file$4H = "src\\component\\PageDesign\\Slide\\Main\\Slide04\\Page02.svelte";
 
     // (15:8) {:else}
-    function create_else_block$g(ctx) {
+    function create_else_block$h(ctx) {
     	let p;
 
     	const block = {
@@ -28480,7 +28534,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_else_block$g.name,
+    		id: create_else_block$h.name,
     		type: "else",
     		source: "(15:8) {:else}",
     		ctx
@@ -28490,7 +28544,7 @@ var app = (function (jquery) {
     }
 
     // (13:8) {#if $Device["isMobile"]}
-    function create_if_block$j(ctx) {
+    function create_if_block$k(ctx) {
     	let t0;
     	let br;
     	let t1;
@@ -28516,7 +28570,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$j.name,
+    		id: create_if_block$k.name,
     		type: "if",
     		source: "(13:8) {#if $Device[\\\"isMobile\\\"]}",
     		ctx
@@ -28530,8 +28584,8 @@ var app = (function (jquery) {
     	let p;
 
     	function select_block_type(ctx, dirty) {
-    		if (/*$Device*/ ctx[1]["isMobile"]) return create_if_block$j;
-    		return create_else_block$g;
+    		if (/*$Device*/ ctx[1]["isMobile"]) return create_if_block$k;
+    		return create_else_block$h;
     	}
 
     	let current_block_type = select_block_type(ctx);
@@ -28932,7 +28986,7 @@ var app = (function (jquery) {
     const file$4G = "src\\component\\PageDesign\\Slide\\Main\\Slide05\\Page01.svelte";
 
     // (16:8) {:else}
-    function create_else_block$f(ctx) {
+    function create_else_block$g(ctx) {
     	let t;
 
     	const block = {
@@ -28949,7 +29003,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_else_block$f.name,
+    		id: create_else_block$g.name,
     		type: "else",
     		source: "(16:8) {:else}",
     		ctx
@@ -28959,7 +29013,7 @@ var app = (function (jquery) {
     }
 
     // (14:8) {#if $Device["isMobile"]}
-    function create_if_block$i(ctx) {
+    function create_if_block$j(ctx) {
     	let t;
 
     	const block = {
@@ -28976,7 +29030,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$i.name,
+    		id: create_if_block$j.name,
     		type: "if",
     		source: "(14:8) {#if $Device[\\\"isMobile\\\"]}",
     		ctx
@@ -28993,8 +29047,8 @@ var app = (function (jquery) {
     	let t1;
 
     	function select_block_type(ctx, dirty) {
-    		if (/*$Device*/ ctx[1]["isMobile"]) return create_if_block$i;
-    		return create_else_block$f;
+    		if (/*$Device*/ ctx[1]["isMobile"]) return create_if_block$j;
+    		return create_else_block$g;
     	}
 
     	let current_block_type = select_block_type(ctx);
@@ -31132,7 +31186,7 @@ var app = (function (jquery) {
 
     	function select_block_type_1(ctx, dirty) {
     		if (/*$Device*/ ctx[4]["isMobile"]) return create_if_block_2$3;
-    		return create_else_block$e;
+    		return create_else_block$f;
     	}
 
     	let current_block_type = select_block_type_1(ctx);
@@ -31195,7 +31249,7 @@ var app = (function (jquery) {
     }
 
     // (60:4) {#if Slide_01}
-    function create_if_block$h(ctx) {
+    function create_if_block$i(ctx) {
     	let p;
     	let p_outro;
     	let current;
@@ -31228,7 +31282,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$h.name,
+    		id: create_if_block$i.name,
     		type: "if",
     		source: "(60:4) {#if Slide_01}",
     		ctx
@@ -31238,7 +31292,7 @@ var app = (function (jquery) {
     }
 
     // (67:16) {:else}
-    function create_else_block$e(ctx) {
+    function create_else_block$f(ctx) {
     	let t_1;
 
     	const block = {
@@ -31255,7 +31309,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_else_block$e.name,
+    		id: create_else_block$f.name,
     		type: "else",
     		source: "(67:16) {:else}",
     		ctx
@@ -31306,7 +31360,7 @@ var app = (function (jquery) {
     	let if_block;
     	let if_block_anchor;
     	let current;
-    	const if_block_creators = [create_if_block$h, create_if_block_1$3];
+    	const if_block_creators = [create_if_block$i, create_if_block_1$3];
     	const if_blocks = [];
 
     	function select_block_type(ctx, dirty) {
@@ -32021,7 +32075,7 @@ var app = (function (jquery) {
     const file$4x = "src\\component\\PageDesign\\Slide\\Profile\\Slide03\\Page01.svelte";
 
     // (23:12) {:else}
-    function create_else_block$d(ctx) {
+    function create_else_block$e(ctx) {
     	let t;
 
     	const block = {
@@ -32038,7 +32092,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_else_block$d.name,
+    		id: create_else_block$e.name,
     		type: "else",
     		source: "(23:12) {:else}",
     		ctx
@@ -32048,7 +32102,7 @@ var app = (function (jquery) {
     }
 
     // (21:12) {#if $Device["isMobile"]}
-    function create_if_block$g(ctx) {
+    function create_if_block$h(ctx) {
     	let t0;
     	let br;
     	let t1;
@@ -32074,7 +32128,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$g.name,
+    		id: create_if_block$h.name,
     		type: "if",
     		source: "(21:12) {#if $Device[\\\"isMobile\\\"]}",
     		ctx
@@ -32094,8 +32148,8 @@ var app = (function (jquery) {
     	let current;
 
     	function select_block_type(ctx, dirty) {
-    		if (/*$Device*/ ctx[2]["isMobile"]) return create_if_block$g;
-    		return create_else_block$d;
+    		if (/*$Device*/ ctx[2]["isMobile"]) return create_if_block$h;
+    		return create_else_block$e;
     	}
 
     	let current_block_type = select_block_type(ctx);
@@ -32567,7 +32621,7 @@ var app = (function (jquery) {
     const file$4w = "src\\component\\PageDesign\\Slide\\Profile\\Slide04\\Page01.svelte";
 
     // (52:12) {#if visibility}
-    function create_if_block$f(ctx) {
+    function create_if_block$g(ctx) {
     	let div;
     	let icon;
     	let div_intro;
@@ -32632,7 +32686,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$f.name,
+    		id: create_if_block$g.name,
     		type: "if",
     		source: "(52:12) {#if visibility}",
     		ctx
@@ -32649,7 +32703,7 @@ var app = (function (jquery) {
     	let t1;
     	let div1;
     	let current;
-    	let if_block = /*visibility*/ ctx[3] && create_if_block$f(ctx);
+    	let if_block = /*visibility*/ ctx[3] && create_if_block$g(ctx);
 
     	const block = {
     		c: function create() {
@@ -32690,7 +32744,7 @@ var app = (function (jquery) {
     						transition_in(if_block, 1);
     					}
     				} else {
-    					if_block = create_if_block$f(ctx);
+    					if_block = create_if_block$g(ctx);
     					if_block.c();
     					transition_in(if_block, 1);
     					if_block.m(div1, null);
@@ -32946,7 +33000,7 @@ var app = (function (jquery) {
     const file$4v = "src\\component\\PageDesign\\Slide\\Profile\\Slide04\\Page02.svelte";
 
     // (15:8) {:else}
-    function create_else_block$c(ctx) {
+    function create_else_block$d(ctx) {
     	let p;
 
     	const block = {
@@ -32965,7 +33019,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_else_block$c.name,
+    		id: create_else_block$d.name,
     		type: "else",
     		source: "(15:8) {:else}",
     		ctx
@@ -32975,7 +33029,7 @@ var app = (function (jquery) {
     }
 
     // (13:8) {#if $Device["isMobile"]}
-    function create_if_block$e(ctx) {
+    function create_if_block$f(ctx) {
     	let t0;
     	let br;
     	let t1;
@@ -33001,7 +33055,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$e.name,
+    		id: create_if_block$f.name,
     		type: "if",
     		source: "(13:8) {#if $Device[\\\"isMobile\\\"]}",
     		ctx
@@ -33015,8 +33069,8 @@ var app = (function (jquery) {
     	let p;
 
     	function select_block_type(ctx, dirty) {
-    		if (/*$Device*/ ctx[1]["isMobile"]) return create_if_block$e;
-    		return create_else_block$c;
+    		if (/*$Device*/ ctx[1]["isMobile"]) return create_if_block$f;
+    		return create_else_block$d;
     	}
 
     	let current_block_type = select_block_type(ctx);
@@ -33417,7 +33471,7 @@ var app = (function (jquery) {
     const file$4u = "src\\component\\PageDesign\\Slide\\Profile\\Slide05\\Page01.svelte";
 
     // (16:8) {:else}
-    function create_else_block$b(ctx) {
+    function create_else_block$c(ctx) {
     	let t;
 
     	const block = {
@@ -33434,7 +33488,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_else_block$b.name,
+    		id: create_else_block$c.name,
     		type: "else",
     		source: "(16:8) {:else}",
     		ctx
@@ -33444,7 +33498,7 @@ var app = (function (jquery) {
     }
 
     // (14:8) {#if $Device["isMobile"]}
-    function create_if_block$d(ctx) {
+    function create_if_block$e(ctx) {
     	let t;
 
     	const block = {
@@ -33461,7 +33515,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$d.name,
+    		id: create_if_block$e.name,
     		type: "if",
     		source: "(14:8) {#if $Device[\\\"isMobile\\\"]}",
     		ctx
@@ -33478,8 +33532,8 @@ var app = (function (jquery) {
     	let t1;
 
     	function select_block_type(ctx, dirty) {
-    		if (/*$Device*/ ctx[1]["isMobile"]) return create_if_block$d;
-    		return create_else_block$b;
+    		if (/*$Device*/ ctx[1]["isMobile"]) return create_if_block$e;
+    		return create_else_block$c;
     	}
 
     	let current_block_type = select_block_type(ctx);
@@ -35617,7 +35671,7 @@ var app = (function (jquery) {
 
     	function select_block_type_1(ctx, dirty) {
     		if (/*$Device*/ ctx[4]["isMobile"]) return create_if_block_2$2;
-    		return create_else_block$a;
+    		return create_else_block$b;
     	}
 
     	let current_block_type = select_block_type_1(ctx);
@@ -35680,7 +35734,7 @@ var app = (function (jquery) {
     }
 
     // (60:4) {#if Slide_01}
-    function create_if_block$c(ctx) {
+    function create_if_block$d(ctx) {
     	let p;
     	let p_outro;
     	let current;
@@ -35713,7 +35767,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$c.name,
+    		id: create_if_block$d.name,
     		type: "if",
     		source: "(60:4) {#if Slide_01}",
     		ctx
@@ -35723,7 +35777,7 @@ var app = (function (jquery) {
     }
 
     // (67:16) {:else}
-    function create_else_block$a(ctx) {
+    function create_else_block$b(ctx) {
     	let t_1;
 
     	const block = {
@@ -35740,7 +35794,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_else_block$a.name,
+    		id: create_else_block$b.name,
     		type: "else",
     		source: "(67:16) {:else}",
     		ctx
@@ -35791,7 +35845,7 @@ var app = (function (jquery) {
     	let if_block;
     	let if_block_anchor;
     	let current;
-    	const if_block_creators = [create_if_block$c, create_if_block_1$2];
+    	const if_block_creators = [create_if_block$d, create_if_block_1$2];
     	const if_blocks = [];
 
     	function select_block_type(ctx, dirty) {
@@ -36506,7 +36560,7 @@ var app = (function (jquery) {
     const file$4l = "src\\component\\PageDesign\\Slide\\Projects\\Slide03\\Page01.svelte";
 
     // (23:12) {:else}
-    function create_else_block$9(ctx) {
+    function create_else_block$a(ctx) {
     	let t;
 
     	const block = {
@@ -36523,7 +36577,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_else_block$9.name,
+    		id: create_else_block$a.name,
     		type: "else",
     		source: "(23:12) {:else}",
     		ctx
@@ -36533,7 +36587,7 @@ var app = (function (jquery) {
     }
 
     // (21:12) {#if $Device["isMobile"]}
-    function create_if_block$b(ctx) {
+    function create_if_block$c(ctx) {
     	let t0;
     	let br;
     	let t1;
@@ -36559,7 +36613,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$b.name,
+    		id: create_if_block$c.name,
     		type: "if",
     		source: "(21:12) {#if $Device[\\\"isMobile\\\"]}",
     		ctx
@@ -36579,8 +36633,8 @@ var app = (function (jquery) {
     	let current;
 
     	function select_block_type(ctx, dirty) {
-    		if (/*$Device*/ ctx[2]["isMobile"]) return create_if_block$b;
-    		return create_else_block$9;
+    		if (/*$Device*/ ctx[2]["isMobile"]) return create_if_block$c;
+    		return create_else_block$a;
     	}
 
     	let current_block_type = select_block_type(ctx);
@@ -37052,7 +37106,7 @@ var app = (function (jquery) {
     const file$4k = "src\\component\\PageDesign\\Slide\\Projects\\Slide04\\Page01.svelte";
 
     // (52:12) {#if visibility}
-    function create_if_block$a(ctx) {
+    function create_if_block$b(ctx) {
     	let div;
     	let icon;
     	let div_intro;
@@ -37117,7 +37171,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$a.name,
+    		id: create_if_block$b.name,
     		type: "if",
     		source: "(52:12) {#if visibility}",
     		ctx
@@ -37134,7 +37188,7 @@ var app = (function (jquery) {
     	let t1;
     	let div1;
     	let current;
-    	let if_block = /*visibility*/ ctx[3] && create_if_block$a(ctx);
+    	let if_block = /*visibility*/ ctx[3] && create_if_block$b(ctx);
 
     	const block = {
     		c: function create() {
@@ -37175,7 +37229,7 @@ var app = (function (jquery) {
     						transition_in(if_block, 1);
     					}
     				} else {
-    					if_block = create_if_block$a(ctx);
+    					if_block = create_if_block$b(ctx);
     					if_block.c();
     					transition_in(if_block, 1);
     					if_block.m(div1, null);
@@ -37431,7 +37485,7 @@ var app = (function (jquery) {
     const file$4j = "src\\component\\PageDesign\\Slide\\Projects\\Slide04\\Page02.svelte";
 
     // (15:8) {:else}
-    function create_else_block$8(ctx) {
+    function create_else_block$9(ctx) {
     	let p;
 
     	const block = {
@@ -37450,7 +37504,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_else_block$8.name,
+    		id: create_else_block$9.name,
     		type: "else",
     		source: "(15:8) {:else}",
     		ctx
@@ -37460,7 +37514,7 @@ var app = (function (jquery) {
     }
 
     // (13:8) {#if $Device["isMobile"]}
-    function create_if_block$9(ctx) {
+    function create_if_block$a(ctx) {
     	let t0;
     	let br;
     	let t1;
@@ -37486,7 +37540,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$9.name,
+    		id: create_if_block$a.name,
     		type: "if",
     		source: "(13:8) {#if $Device[\\\"isMobile\\\"]}",
     		ctx
@@ -37500,8 +37554,8 @@ var app = (function (jquery) {
     	let p;
 
     	function select_block_type(ctx, dirty) {
-    		if (/*$Device*/ ctx[1]["isMobile"]) return create_if_block$9;
-    		return create_else_block$8;
+    		if (/*$Device*/ ctx[1]["isMobile"]) return create_if_block$a;
+    		return create_else_block$9;
     	}
 
     	let current_block_type = select_block_type(ctx);
@@ -37902,7 +37956,7 @@ var app = (function (jquery) {
     const file$4i = "src\\component\\PageDesign\\Slide\\Projects\\Slide05\\Page01.svelte";
 
     // (16:8) {:else}
-    function create_else_block$7(ctx) {
+    function create_else_block$8(ctx) {
     	let t;
 
     	const block = {
@@ -37919,7 +37973,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_else_block$7.name,
+    		id: create_else_block$8.name,
     		type: "else",
     		source: "(16:8) {:else}",
     		ctx
@@ -37929,7 +37983,7 @@ var app = (function (jquery) {
     }
 
     // (14:8) {#if $Device["isMobile"]}
-    function create_if_block$8(ctx) {
+    function create_if_block$9(ctx) {
     	let t;
 
     	const block = {
@@ -37946,7 +38000,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$8.name,
+    		id: create_if_block$9.name,
     		type: "if",
     		source: "(14:8) {#if $Device[\\\"isMobile\\\"]}",
     		ctx
@@ -37963,8 +38017,8 @@ var app = (function (jquery) {
     	let t1;
 
     	function select_block_type(ctx, dirty) {
-    		if (/*$Device*/ ctx[1]["isMobile"]) return create_if_block$8;
-    		return create_else_block$7;
+    		if (/*$Device*/ ctx[1]["isMobile"]) return create_if_block$9;
+    		return create_else_block$8;
     	}
 
     	let current_block_type = select_block_type(ctx);
@@ -40102,7 +40156,7 @@ var app = (function (jquery) {
 
     	function select_block_type_1(ctx, dirty) {
     		if (/*$Device*/ ctx[4]["isMobile"]) return create_if_block_2$1;
-    		return create_else_block$6;
+    		return create_else_block$7;
     	}
 
     	let current_block_type = select_block_type_1(ctx);
@@ -40165,7 +40219,7 @@ var app = (function (jquery) {
     }
 
     // (60:4) {#if Slide_01}
-    function create_if_block$7(ctx) {
+    function create_if_block$8(ctx) {
     	let p;
     	let p_outro;
     	let current;
@@ -40198,7 +40252,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$7.name,
+    		id: create_if_block$8.name,
     		type: "if",
     		source: "(60:4) {#if Slide_01}",
     		ctx
@@ -40208,7 +40262,7 @@ var app = (function (jquery) {
     }
 
     // (67:16) {:else}
-    function create_else_block$6(ctx) {
+    function create_else_block$7(ctx) {
     	let t_1;
 
     	const block = {
@@ -40225,7 +40279,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_else_block$6.name,
+    		id: create_else_block$7.name,
     		type: "else",
     		source: "(67:16) {:else}",
     		ctx
@@ -40276,7 +40330,7 @@ var app = (function (jquery) {
     	let if_block;
     	let if_block_anchor;
     	let current;
-    	const if_block_creators = [create_if_block$7, create_if_block_1$1];
+    	const if_block_creators = [create_if_block$8, create_if_block_1$1];
     	const if_blocks = [];
 
     	function select_block_type(ctx, dirty) {
@@ -40991,7 +41045,7 @@ var app = (function (jquery) {
     const file$49 = "src\\component\\PageDesign\\Slide\\Outsourcing\\Slide03\\Page01.svelte";
 
     // (23:12) {:else}
-    function create_else_block$5(ctx) {
+    function create_else_block$6(ctx) {
     	let t;
 
     	const block = {
@@ -41008,7 +41062,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_else_block$5.name,
+    		id: create_else_block$6.name,
     		type: "else",
     		source: "(23:12) {:else}",
     		ctx
@@ -41018,7 +41072,7 @@ var app = (function (jquery) {
     }
 
     // (21:12) {#if $Device["isMobile"]}
-    function create_if_block$6(ctx) {
+    function create_if_block$7(ctx) {
     	let t0;
     	let br;
     	let t1;
@@ -41044,7 +41098,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$6.name,
+    		id: create_if_block$7.name,
     		type: "if",
     		source: "(21:12) {#if $Device[\\\"isMobile\\\"]}",
     		ctx
@@ -41064,8 +41118,8 @@ var app = (function (jquery) {
     	let current;
 
     	function select_block_type(ctx, dirty) {
-    		if (/*$Device*/ ctx[2]["isMobile"]) return create_if_block$6;
-    		return create_else_block$5;
+    		if (/*$Device*/ ctx[2]["isMobile"]) return create_if_block$7;
+    		return create_else_block$6;
     	}
 
     	let current_block_type = select_block_type(ctx);
@@ -41537,7 +41591,7 @@ var app = (function (jquery) {
     const file$48 = "src\\component\\PageDesign\\Slide\\Outsourcing\\Slide04\\Page01.svelte";
 
     // (52:12) {#if visibility}
-    function create_if_block$5(ctx) {
+    function create_if_block$6(ctx) {
     	let div;
     	let icon;
     	let div_intro;
@@ -41602,7 +41656,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$5.name,
+    		id: create_if_block$6.name,
     		type: "if",
     		source: "(52:12) {#if visibility}",
     		ctx
@@ -41619,7 +41673,7 @@ var app = (function (jquery) {
     	let t1;
     	let div1;
     	let current;
-    	let if_block = /*visibility*/ ctx[3] && create_if_block$5(ctx);
+    	let if_block = /*visibility*/ ctx[3] && create_if_block$6(ctx);
 
     	const block = {
     		c: function create() {
@@ -41660,7 +41714,7 @@ var app = (function (jquery) {
     						transition_in(if_block, 1);
     					}
     				} else {
-    					if_block = create_if_block$5(ctx);
+    					if_block = create_if_block$6(ctx);
     					if_block.c();
     					transition_in(if_block, 1);
     					if_block.m(div1, null);
@@ -41916,7 +41970,7 @@ var app = (function (jquery) {
     const file$47 = "src\\component\\PageDesign\\Slide\\Outsourcing\\Slide04\\Page02.svelte";
 
     // (15:8) {:else}
-    function create_else_block$4(ctx) {
+    function create_else_block$5(ctx) {
     	let p;
 
     	const block = {
@@ -41935,7 +41989,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_else_block$4.name,
+    		id: create_else_block$5.name,
     		type: "else",
     		source: "(15:8) {:else}",
     		ctx
@@ -41945,7 +41999,7 @@ var app = (function (jquery) {
     }
 
     // (13:8) {#if $Device["isMobile"]}
-    function create_if_block$4(ctx) {
+    function create_if_block$5(ctx) {
     	let t0;
     	let br;
     	let t1;
@@ -41971,7 +42025,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$4.name,
+    		id: create_if_block$5.name,
     		type: "if",
     		source: "(13:8) {#if $Device[\\\"isMobile\\\"]}",
     		ctx
@@ -41985,8 +42039,8 @@ var app = (function (jquery) {
     	let p;
 
     	function select_block_type(ctx, dirty) {
-    		if (/*$Device*/ ctx[1]["isMobile"]) return create_if_block$4;
-    		return create_else_block$4;
+    		if (/*$Device*/ ctx[1]["isMobile"]) return create_if_block$5;
+    		return create_else_block$5;
     	}
 
     	let current_block_type = select_block_type(ctx);
@@ -42387,7 +42441,7 @@ var app = (function (jquery) {
     const file$46 = "src\\component\\PageDesign\\Slide\\Outsourcing\\Slide05\\Page01.svelte";
 
     // (16:8) {:else}
-    function create_else_block$3(ctx) {
+    function create_else_block$4(ctx) {
     	let t;
 
     	const block = {
@@ -42404,7 +42458,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_else_block$3.name,
+    		id: create_else_block$4.name,
     		type: "else",
     		source: "(16:8) {:else}",
     		ctx
@@ -42414,7 +42468,7 @@ var app = (function (jquery) {
     }
 
     // (14:8) {#if $Device["isMobile"]}
-    function create_if_block$3(ctx) {
+    function create_if_block$4(ctx) {
     	let t;
 
     	const block = {
@@ -42431,7 +42485,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$3.name,
+    		id: create_if_block$4.name,
     		type: "if",
     		source: "(14:8) {#if $Device[\\\"isMobile\\\"]}",
     		ctx
@@ -42448,8 +42502,8 @@ var app = (function (jquery) {
     	let t1;
 
     	function select_block_type(ctx, dirty) {
-    		if (/*$Device*/ ctx[1]["isMobile"]) return create_if_block$3;
-    		return create_else_block$3;
+    		if (/*$Device*/ ctx[1]["isMobile"]) return create_if_block$4;
+    		return create_else_block$4;
     	}
 
     	let current_block_type = select_block_type(ctx);
@@ -45851,7 +45905,7 @@ var app = (function (jquery) {
 
     /* src\component\PageDesign\Slide\2021\Projects\BarcodeReader\Slide04\Page02.svelte generated by Svelte v3.55.1 */
 
-    const { console: console_1$1M } = globals;
+    const { console: console_1$1x } = globals;
     const file$3W = "src\\component\\PageDesign\\Slide\\2021\\Projects\\BarcodeReader\\Slide04\\Page02.svelte";
 
     // (16:0) <DefaultPage color={color} fontSize={fontSize} bind:curPage={curPage}>
@@ -46145,14 +46199,14 @@ var app = (function (jquery) {
 
     	$$self.$$.on_mount.push(function () {
     		if (curPage === undefined && !('curPage' in $$props || $$self.$$.bound[$$self.$$.props['curPage']])) {
-    			console_1$1M.warn("<Page02> was created without expected prop 'curPage'");
+    			console_1$1x.warn("<Page02> was created without expected prop 'curPage'");
     		}
     	});
 
     	const writable_props = ['color', 'fontSize', 'curPage'];
 
     	Object.keys($$props).forEach(key => {
-    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console_1$1M.warn(`<Page02> was created with unknown prop '${key}'`);
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console_1$1x.warn(`<Page02> was created with unknown prop '${key}'`);
     	});
 
     	const click_handler = () => {
@@ -46248,7 +46302,7 @@ var app = (function (jquery) {
 
     /* src\component\PageDesign\Slide\2021\Projects\BarcodeReader\Slide04\Page03.svelte generated by Svelte v3.55.1 */
 
-    const { console: console_1$1L } = globals;
+    const { console: console_1$1w } = globals;
     const file$3V = "src\\component\\PageDesign\\Slide\\2021\\Projects\\BarcodeReader\\Slide04\\Page03.svelte";
 
     // (15:0) <DefaultPage color={color} fontSize={fontSize}>
@@ -46377,7 +46431,7 @@ var app = (function (jquery) {
     	const writable_props = ['color', 'fontSize'];
 
     	Object.keys($$props).forEach(key => {
-    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console_1$1L.warn(`<Page03> was created with unknown prop '${key}'`);
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console_1$1w.warn(`<Page03> was created with unknown prop '${key}'`);
     	});
 
     	$$self.$$set = $$props => {
@@ -46826,7 +46880,7 @@ var app = (function (jquery) {
 
     /* src\component\PageDesign\Slide\2021\Projects\BarcodeReader\Slide05\Page02.svelte generated by Svelte v3.55.1 */
 
-    const { console: console_1$1K } = globals;
+    const { console: console_1$1v } = globals;
 
     function create_fragment$5R(ctx) {
     	let defaultpage;
@@ -46902,7 +46956,7 @@ var app = (function (jquery) {
     	const writable_props = ['color', 'fontSize'];
 
     	Object.keys($$props).forEach(key => {
-    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console_1$1K.warn(`<Page02> was created with unknown prop '${key}'`);
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console_1$1v.warn(`<Page02> was created with unknown prop '${key}'`);
     	});
 
     	$$self.$$set = $$props => {
@@ -47345,7 +47399,7 @@ var app = (function (jquery) {
 
     /* src\component\PageDesign\Slide\2021\Projects\BarcodeReader\Slide06\Page02.svelte generated by Svelte v3.55.1 */
 
-    const { console: console_1$1J } = globals;
+    const { console: console_1$1u } = globals;
     const file$3S = "src\\component\\PageDesign\\Slide\\2021\\Projects\\BarcodeReader\\Slide06\\Page02.svelte";
 
     // (15:0) <DefaultPage color={color} fontSize={fontSize}>
@@ -47474,7 +47528,7 @@ var app = (function (jquery) {
     	const writable_props = ['color', 'fontSize'];
 
     	Object.keys($$props).forEach(key => {
-    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console_1$1J.warn(`<Page02> was created with unknown prop '${key}'`);
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console_1$1u.warn(`<Page02> was created with unknown prop '${key}'`);
     	});
 
     	$$self.$$set = $$props => {
@@ -47541,7 +47595,7 @@ var app = (function (jquery) {
 
     /* src\component\PageDesign\Slide\2021\Projects\BarcodeReader\Slide06\Page03.svelte generated by Svelte v3.55.1 */
 
-    const { console: console_1$1I } = globals;
+    const { console: console_1$1t } = globals;
     const file$3R = "src\\component\\PageDesign\\Slide\\2021\\Projects\\BarcodeReader\\Slide06\\Page03.svelte";
 
     // (15:0) <DefaultPage color={color} fontSize={fontSize}>
@@ -47671,7 +47725,7 @@ var app = (function (jquery) {
     	const writable_props = ['color', 'fontSize'];
 
     	Object.keys($$props).forEach(key => {
-    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console_1$1I.warn(`<Page03> was created with unknown prop '${key}'`);
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console_1$1t.warn(`<Page03> was created with unknown prop '${key}'`);
     	});
 
     	$$self.$$set = $$props => {
@@ -48120,7 +48174,7 @@ var app = (function (jquery) {
 
     /* src\component\PageDesign\Slide\2021\Projects\BarcodeReader\Slide07\Page02.svelte generated by Svelte v3.55.1 */
 
-    const { console: console_1$1H } = globals;
+    const { console: console_1$1s } = globals;
     const file$3P = "src\\component\\PageDesign\\Slide\\2021\\Projects\\BarcodeReader\\Slide07\\Page02.svelte";
 
     // (15:0) <DefaultPage color={color} fontSize={fontSize}>
@@ -48250,7 +48304,7 @@ var app = (function (jquery) {
     	const writable_props = ['color', 'fontSize'];
 
     	Object.keys($$props).forEach(key => {
-    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console_1$1H.warn(`<Page02> was created with unknown prop '${key}'`);
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console_1$1s.warn(`<Page02> was created with unknown prop '${key}'`);
     	});
 
     	$$self.$$set = $$props => {
@@ -50423,7 +50477,7 @@ var app = (function (jquery) {
 
     /* src\component\PageDesign\Slide\2021\Projects\Cafe24\Slide04\Page02.svelte generated by Svelte v3.55.1 */
 
-    const { console: console_1$1G } = globals;
+    const { console: console_1$1r } = globals;
     const file$3H = "src\\component\\PageDesign\\Slide\\2021\\Projects\\Cafe24\\Slide04\\Page02.svelte";
 
     // (16:0) <DefaultPage color={color} fontSize={fontSize} bind:curPage={curPage}>
@@ -50717,14 +50771,14 @@ var app = (function (jquery) {
 
     	$$self.$$.on_mount.push(function () {
     		if (curPage === undefined && !('curPage' in $$props || $$self.$$.bound[$$self.$$.props['curPage']])) {
-    			console_1$1G.warn("<Page02> was created without expected prop 'curPage'");
+    			console_1$1r.warn("<Page02> was created without expected prop 'curPage'");
     		}
     	});
 
     	const writable_props = ['color', 'fontSize', 'curPage'];
 
     	Object.keys($$props).forEach(key => {
-    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console_1$1G.warn(`<Page02> was created with unknown prop '${key}'`);
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console_1$1r.warn(`<Page02> was created with unknown prop '${key}'`);
     	});
 
     	const click_handler = () => {
@@ -50820,7 +50874,7 @@ var app = (function (jquery) {
 
     /* src\component\PageDesign\Slide\2021\Projects\Cafe24\Slide04\Page03.svelte generated by Svelte v3.55.1 */
 
-    const { console: console_1$1F } = globals;
+    const { console: console_1$1q } = globals;
     const file$3G = "src\\component\\PageDesign\\Slide\\2021\\Projects\\Cafe24\\Slide04\\Page03.svelte";
 
     // (15:0) <DefaultPage color={color} fontSize={fontSize}>
@@ -50949,7 +51003,7 @@ var app = (function (jquery) {
     	const writable_props = ['color', 'fontSize'];
 
     	Object.keys($$props).forEach(key => {
-    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console_1$1F.warn(`<Page03> was created with unknown prop '${key}'`);
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console_1$1q.warn(`<Page03> was created with unknown prop '${key}'`);
     	});
 
     	$$self.$$set = $$props => {
@@ -51398,7 +51452,7 @@ var app = (function (jquery) {
 
     /* src\component\PageDesign\Slide\2021\Projects\Cafe24\Slide05\Page02.svelte generated by Svelte v3.55.1 */
 
-    const { console: console_1$1E } = globals;
+    const { console: console_1$1p } = globals;
 
     function create_fragment$5u(ctx) {
     	let defaultpage;
@@ -51474,7 +51528,7 @@ var app = (function (jquery) {
     	const writable_props = ['color', 'fontSize'];
 
     	Object.keys($$props).forEach(key => {
-    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console_1$1E.warn(`<Page02> was created with unknown prop '${key}'`);
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console_1$1p.warn(`<Page02> was created with unknown prop '${key}'`);
     	});
 
     	$$self.$$set = $$props => {
@@ -51917,7 +51971,7 @@ var app = (function (jquery) {
 
     /* src\component\PageDesign\Slide\2021\Projects\Cafe24\Slide06\Page02.svelte generated by Svelte v3.55.1 */
 
-    const { console: console_1$1D } = globals;
+    const { console: console_1$1o } = globals;
     const file$3D = "src\\component\\PageDesign\\Slide\\2021\\Projects\\Cafe24\\Slide06\\Page02.svelte";
 
     // (15:0) <DefaultPage color={color} fontSize={fontSize}>
@@ -52046,7 +52100,7 @@ var app = (function (jquery) {
     	const writable_props = ['color', 'fontSize'];
 
     	Object.keys($$props).forEach(key => {
-    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console_1$1D.warn(`<Page02> was created with unknown prop '${key}'`);
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console_1$1o.warn(`<Page02> was created with unknown prop '${key}'`);
     	});
 
     	$$self.$$set = $$props => {
@@ -52113,7 +52167,7 @@ var app = (function (jquery) {
 
     /* src\component\PageDesign\Slide\2021\Projects\Cafe24\Slide06\Page03.svelte generated by Svelte v3.55.1 */
 
-    const { console: console_1$1C } = globals;
+    const { console: console_1$1n } = globals;
     const file$3C = "src\\component\\PageDesign\\Slide\\2021\\Projects\\Cafe24\\Slide06\\Page03.svelte";
 
     // (15:0) <DefaultPage color={color} fontSize={fontSize}>
@@ -52243,7 +52297,7 @@ var app = (function (jquery) {
     	const writable_props = ['color', 'fontSize'];
 
     	Object.keys($$props).forEach(key => {
-    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console_1$1C.warn(`<Page03> was created with unknown prop '${key}'`);
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console_1$1n.warn(`<Page03> was created with unknown prop '${key}'`);
     	});
 
     	$$self.$$set = $$props => {
@@ -52692,7 +52746,7 @@ var app = (function (jquery) {
 
     /* src\component\PageDesign\Slide\2021\Projects\Cafe24\Slide07\Page02.svelte generated by Svelte v3.55.1 */
 
-    const { console: console_1$1B } = globals;
+    const { console: console_1$1m } = globals;
     const file$3A = "src\\component\\PageDesign\\Slide\\2021\\Projects\\Cafe24\\Slide07\\Page02.svelte";
 
     // (15:0) <DefaultPage color={color} fontSize={fontSize}>
@@ -52822,7 +52876,7 @@ var app = (function (jquery) {
     	const writable_props = ['color', 'fontSize'];
 
     	Object.keys($$props).forEach(key => {
-    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console_1$1B.warn(`<Page02> was created with unknown prop '${key}'`);
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console_1$1m.warn(`<Page02> was created with unknown prop '${key}'`);
     	});
 
     	$$self.$$set = $$props => {
@@ -54995,7 +55049,7 @@ var app = (function (jquery) {
 
     /* src\component\PageDesign\Slide\2021\Projects\ConvyerVision\Slide04\Page02.svelte generated by Svelte v3.55.1 */
 
-    const { console: console_1$1A } = globals;
+    const { console: console_1$1l } = globals;
     const file$3s = "src\\component\\PageDesign\\Slide\\2021\\Projects\\ConvyerVision\\Slide04\\Page02.svelte";
 
     // (16:0) <DefaultPage color={color} fontSize={fontSize} bind:curPage={curPage}>
@@ -55289,14 +55343,14 @@ var app = (function (jquery) {
 
     	$$self.$$.on_mount.push(function () {
     		if (curPage === undefined && !('curPage' in $$props || $$self.$$.bound[$$self.$$.props['curPage']])) {
-    			console_1$1A.warn("<Page02> was created without expected prop 'curPage'");
+    			console_1$1l.warn("<Page02> was created without expected prop 'curPage'");
     		}
     	});
 
     	const writable_props = ['color', 'fontSize', 'curPage'];
 
     	Object.keys($$props).forEach(key => {
-    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console_1$1A.warn(`<Page02> was created with unknown prop '${key}'`);
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console_1$1l.warn(`<Page02> was created with unknown prop '${key}'`);
     	});
 
     	const click_handler = () => {
@@ -55392,7 +55446,7 @@ var app = (function (jquery) {
 
     /* src\component\PageDesign\Slide\2021\Projects\ConvyerVision\Slide04\Page03.svelte generated by Svelte v3.55.1 */
 
-    const { console: console_1$1z } = globals;
+    const { console: console_1$1k } = globals;
     const file$3r = "src\\component\\PageDesign\\Slide\\2021\\Projects\\ConvyerVision\\Slide04\\Page03.svelte";
 
     // (15:0) <DefaultPage color={color} fontSize={fontSize}>
@@ -55521,7 +55575,7 @@ var app = (function (jquery) {
     	const writable_props = ['color', 'fontSize'];
 
     	Object.keys($$props).forEach(key => {
-    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console_1$1z.warn(`<Page03> was created with unknown prop '${key}'`);
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console_1$1k.warn(`<Page03> was created with unknown prop '${key}'`);
     	});
 
     	$$self.$$set = $$props => {
@@ -55970,7 +56024,7 @@ var app = (function (jquery) {
 
     /* src\component\PageDesign\Slide\2021\Projects\ConvyerVision\Slide05\Page02.svelte generated by Svelte v3.55.1 */
 
-    const { console: console_1$1y } = globals;
+    const { console: console_1$1j } = globals;
 
     function create_fragment$57(ctx) {
     	let defaultpage;
@@ -56046,7 +56100,7 @@ var app = (function (jquery) {
     	const writable_props = ['color', 'fontSize'];
 
     	Object.keys($$props).forEach(key => {
-    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console_1$1y.warn(`<Page02> was created with unknown prop '${key}'`);
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console_1$1j.warn(`<Page02> was created with unknown prop '${key}'`);
     	});
 
     	$$self.$$set = $$props => {
@@ -56489,7 +56543,7 @@ var app = (function (jquery) {
 
     /* src\component\PageDesign\Slide\2021\Projects\ConvyerVision\Slide06\Page02.svelte generated by Svelte v3.55.1 */
 
-    const { console: console_1$1x } = globals;
+    const { console: console_1$1i } = globals;
     const file$3o = "src\\component\\PageDesign\\Slide\\2021\\Projects\\ConvyerVision\\Slide06\\Page02.svelte";
 
     // (15:0) <DefaultPage color={color} fontSize={fontSize}>
@@ -56618,7 +56672,7 @@ var app = (function (jquery) {
     	const writable_props = ['color', 'fontSize'];
 
     	Object.keys($$props).forEach(key => {
-    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console_1$1x.warn(`<Page02> was created with unknown prop '${key}'`);
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console_1$1i.warn(`<Page02> was created with unknown prop '${key}'`);
     	});
 
     	$$self.$$set = $$props => {
@@ -56685,7 +56739,7 @@ var app = (function (jquery) {
 
     /* src\component\PageDesign\Slide\2021\Projects\ConvyerVision\Slide06\Page03.svelte generated by Svelte v3.55.1 */
 
-    const { console: console_1$1w } = globals;
+    const { console: console_1$1h } = globals;
     const file$3n = "src\\component\\PageDesign\\Slide\\2021\\Projects\\ConvyerVision\\Slide06\\Page03.svelte";
 
     // (15:0) <DefaultPage color={color} fontSize={fontSize}>
@@ -56815,7 +56869,7 @@ var app = (function (jquery) {
     	const writable_props = ['color', 'fontSize'];
 
     	Object.keys($$props).forEach(key => {
-    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console_1$1w.warn(`<Page03> was created with unknown prop '${key}'`);
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console_1$1h.warn(`<Page03> was created with unknown prop '${key}'`);
     	});
 
     	$$self.$$set = $$props => {
@@ -57264,7 +57318,7 @@ var app = (function (jquery) {
 
     /* src\component\PageDesign\Slide\2021\Projects\ConvyerVision\Slide07\Page02.svelte generated by Svelte v3.55.1 */
 
-    const { console: console_1$1v } = globals;
+    const { console: console_1$1g } = globals;
     const file$3l = "src\\component\\PageDesign\\Slide\\2021\\Projects\\ConvyerVision\\Slide07\\Page02.svelte";
 
     // (15:0) <DefaultPage color={color} fontSize={fontSize}>
@@ -57394,7 +57448,7 @@ var app = (function (jquery) {
     	const writable_props = ['color', 'fontSize'];
 
     	Object.keys($$props).forEach(key => {
-    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console_1$1v.warn(`<Page02> was created with unknown prop '${key}'`);
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console_1$1g.warn(`<Page02> was created with unknown prop '${key}'`);
     	});
 
     	$$self.$$set = $$props => {
@@ -57936,9 +57990,9 @@ var app = (function (jquery) {
     			p1 = element("p");
     			t2 = text("PCB Inspector");
     			set_style(p0, "font-size", /*fontSize*/ ctx[1] + "rem");
-    			add_location(p0, file$3j, 9, 4, 293);
+    			add_location(p0, file$3j, 9, 4, 267);
     			set_style(p1, "font-size", /*fontSize*/ ctx[1] + "rem");
-    			add_location(p1, file$3j, 10, 4, 353);
+    			add_location(p1, file$3j, 10, 4, 327);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p0, anchor);
@@ -58004,7 +58058,7 @@ var app = (function (jquery) {
     			if (dirty & /*color*/ 1) defaultpage_changes.color = /*color*/ ctx[0];
     			if (dirty & /*fontSize*/ 2) defaultpage_changes.fontSize = /*fontSize*/ ctx[1];
 
-    			if (dirty & /*$$scope, fontSize*/ 10) {
+    			if (dirty & /*$$scope, fontSize*/ 6) {
     				defaultpage_changes.$$scope = { dirty, ctx };
     			}
 
@@ -58036,13 +58090,10 @@ var app = (function (jquery) {
     }
 
     function instance$4Z($$self, $$props, $$invalidate) {
-    	let $Device;
-    	validate_store(Device, 'Device');
-    	component_subscribe($$self, Device, $$value => $$invalidate(2, $Device = $$value));
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('Page01', slots, []);
     	let { color = "transparent" } = $$props;
-    	let { fontSize = $Device["isMobile"] ? 1 : 2 } = $$props;
+    	let { fontSize = 2 } = $$props;
     	const writable_props = ['color', 'fontSize'];
 
     	Object.keys($$props).forEach(key => {
@@ -58054,13 +58105,7 @@ var app = (function (jquery) {
     		if ('fontSize' in $$props) $$invalidate(1, fontSize = $$props.fontSize);
     	};
 
-    	$$self.$capture_state = () => ({
-    		Device,
-    		DefaultPage,
-    		color,
-    		fontSize,
-    		$Device
-    	});
+    	$$self.$capture_state = () => ({ Device, DefaultPage, color, fontSize });
 
     	$$self.$inject_state = $$props => {
     		if ('color' in $$props) $$invalidate(0, color = $$props.color);
@@ -58328,7 +58373,7 @@ var app = (function (jquery) {
     /* src\component\PageDesign\Slide\2021\Projects\Downloader\Slide02\Page01.svelte generated by Svelte v3.55.1 */
     const file$3i = "src\\component\\PageDesign\\Slide\\2021\\Projects\\Downloader\\Slide02\\Page01.svelte";
 
-    // (9:0) <DefaultPage color={color} fontSize={fontSize}>
+    // (11:0) <DefaultPage color={color} fontSize={context}>
     function create_default_slot$34(ctx) {
     	let p;
     	let t;
@@ -58337,16 +58382,16 @@ var app = (function (jquery) {
     		c: function create() {
     			p = element("p");
     			t = text("Outline");
-    			set_style(p, "font-size", /*fontSize*/ ctx[1] + "rem");
-    			add_location(p, file$3i, 9, 4, 293);
+    			set_style(p, "font-size", /*head*/ ctx[1] + "rem");
+    			add_location(p, file$3i, 11, 4, 322);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
     			append_dev(p, t);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*fontSize*/ 2) {
-    				set_style(p, "font-size", /*fontSize*/ ctx[1] + "rem");
+    			if (dirty & /*head*/ 2) {
+    				set_style(p, "font-size", /*head*/ ctx[1] + "rem");
     			}
     		},
     		d: function destroy(detaching) {
@@ -58358,7 +58403,7 @@ var app = (function (jquery) {
     		block,
     		id: create_default_slot$34.name,
     		type: "slot",
-    		source: "(9:0) <DefaultPage color={color} fontSize={fontSize}>",
+    		source: "(11:0) <DefaultPage color={color} fontSize={context}>",
     		ctx
     	});
 
@@ -58372,7 +58417,7 @@ var app = (function (jquery) {
     	defaultpage = new DefaultPage({
     			props: {
     				color: /*color*/ ctx[0],
-    				fontSize: /*fontSize*/ ctx[1],
+    				fontSize: /*context*/ ctx[2],
     				$$slots: { default: [create_default_slot$34] },
     				$$scope: { ctx }
     			},
@@ -58393,9 +58438,9 @@ var app = (function (jquery) {
     		p: function update(ctx, [dirty]) {
     			const defaultpage_changes = {};
     			if (dirty & /*color*/ 1) defaultpage_changes.color = /*color*/ ctx[0];
-    			if (dirty & /*fontSize*/ 2) defaultpage_changes.fontSize = /*fontSize*/ ctx[1];
+    			if (dirty & /*context*/ 4) defaultpage_changes.fontSize = /*context*/ ctx[2];
 
-    			if (dirty & /*$$scope, fontSize*/ 10) {
+    			if (dirty & /*$$scope, head*/ 18) {
     				defaultpage_changes.$$scope = { dirty, ctx };
     			}
 
@@ -58427,14 +58472,13 @@ var app = (function (jquery) {
     }
 
     function instance$4X($$self, $$props, $$invalidate) {
-    	let $Device;
-    	validate_store(Device, 'Device');
-    	component_subscribe($$self, Device, $$value => $$invalidate(2, $Device = $$value));
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('Page01', slots, []);
     	let { color = "transparent" } = $$props;
-    	let { fontSize = $Device["isMobile"] ? 1 : 2 } = $$props;
-    	const writable_props = ['color', 'fontSize'];
+    	let { head = 2 } = $$props;
+    	let { subhead = 1.5 } = $$props;
+    	let { context = 1 } = $$props;
+    	const writable_props = ['color', 'head', 'subhead', 'context'];
 
     	Object.keys($$props).forEach(key => {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<Page01> was created with unknown prop '${key}'`);
@@ -58442,33 +58486,44 @@ var app = (function (jquery) {
 
     	$$self.$$set = $$props => {
     		if ('color' in $$props) $$invalidate(0, color = $$props.color);
-    		if ('fontSize' in $$props) $$invalidate(1, fontSize = $$props.fontSize);
+    		if ('head' in $$props) $$invalidate(1, head = $$props.head);
+    		if ('subhead' in $$props) $$invalidate(3, subhead = $$props.subhead);
+    		if ('context' in $$props) $$invalidate(2, context = $$props.context);
     	};
 
     	$$self.$capture_state = () => ({
     		Device,
     		DefaultPage,
     		color,
-    		fontSize,
-    		$Device
+    		head,
+    		subhead,
+    		context
     	});
 
     	$$self.$inject_state = $$props => {
     		if ('color' in $$props) $$invalidate(0, color = $$props.color);
-    		if ('fontSize' in $$props) $$invalidate(1, fontSize = $$props.fontSize);
+    		if ('head' in $$props) $$invalidate(1, head = $$props.head);
+    		if ('subhead' in $$props) $$invalidate(3, subhead = $$props.subhead);
+    		if ('context' in $$props) $$invalidate(2, context = $$props.context);
     	};
 
     	if ($$props && "$$inject" in $$props) {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [color, fontSize];
+    	return [color, head, context, subhead];
     }
 
     class Page01$1m extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$4X, create_fragment$4X, safe_not_equal, { color: 0, fontSize: 1 });
+
+    		init(this, options, instance$4X, create_fragment$4X, safe_not_equal, {
+    			color: 0,
+    			head: 1,
+    			subhead: 3,
+    			context: 2
+    		});
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
@@ -58486,11 +58541,27 @@ var app = (function (jquery) {
     		throw new Error("<Page01>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
 
-    	get fontSize() {
+    	get head() {
     		throw new Error("<Page01>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
 
-    	set fontSize(value) {
+    	set head(value) {
+    		throw new Error("<Page01>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get subhead() {
+    		throw new Error("<Page01>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set subhead(value) {
+    		throw new Error("<Page01>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get context() {
+    		throw new Error("<Page01>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set context(value) {
     		throw new Error("<Page01>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
     }
@@ -58499,7 +58570,7 @@ var app = (function (jquery) {
     const file$3h = "src\\component\\PageDesign\\Slide\\2021\\Projects\\Downloader\\Slide02\\Page02.svelte";
 
     // (19:12) {:else}
-    function create_else_block$2(ctx) {
+    function create_else_block$3(ctx) {
     	let t0;
     	let br;
     	let t1;
@@ -58509,7 +58580,7 @@ var app = (function (jquery) {
     			t0 = text("- PCB에 펌웨어를 넣는 작업을 자동화");
     			br = element("br");
     			t1 = text("\r\n            - PCB에 대해 지정된 검사를 진행해 PCB의 불량 여부를 사전 파악");
-    			add_location(br, file$3h, 19, 34, 745);
+    			add_location(br, file$3h, 19, 34, 646);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, t0, anchor);
@@ -58525,7 +58596,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_else_block$2.name,
+    		id: create_else_block$3.name,
     		type: "else",
     		source: "(19:12) {:else}",
     		ctx
@@ -58535,7 +58606,7 @@ var app = (function (jquery) {
     }
 
     // (15:12) {#if $Device["isMobile"]}
-    function create_if_block$2(ctx) {
+    function create_if_block$3(ctx) {
     	let t0;
     	let br0;
     	let t1;
@@ -58549,8 +58620,8 @@ var app = (function (jquery) {
     			t1 = text("\r\n            - PCB에 대해 지정된 검사를 진행해 PCB의");
     			br1 = element("br");
     			t2 = text("\r\n              불량 여부를 사전 파악");
-    			add_location(br0, file$3h, 15, 34, 600);
-    			add_location(br1, file$3h, 16, 38, 645);
+    			add_location(br0, file$3h, 15, 34, 501);
+    			add_location(br1, file$3h, 16, 38, 546);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, t0, anchor);
@@ -58570,7 +58641,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$2.name,
+    		id: create_if_block$3.name,
     		type: "if",
     		source: "(15:12) {#if $Device[\\\"isMobile\\\"]}",
     		ctx
@@ -58579,17 +58650,16 @@ var app = (function (jquery) {
     	return block;
     }
 
-    // (11:0) <DefaultPage color={color} fontSize={fontSize}>
+    // (11:0) <DefaultPage color={color} fontSize={subhead}>
     function create_default_slot$33(ctx) {
     	let p0;
-    	let t0;
     	let t1;
     	let div;
     	let p1;
 
     	function select_block_type(ctx, dirty) {
-    		if (/*$Device*/ ctx[2]["isMobile"]) return create_if_block$2;
-    		return create_else_block$2;
+    		if (/*$Device*/ ctx[3]["isMobile"]) return create_if_block$3;
+    		return create_else_block$3;
     	}
 
     	let current_block_type = select_block_type(ctx);
@@ -58598,32 +58668,26 @@ var app = (function (jquery) {
     	const block = {
     		c: function create() {
     			p0 = element("p");
-    			t0 = text("프로젝트 목적");
+    			p0.textContent = "프로젝트 목적";
     			t1 = space();
     			div = element("div");
     			p1 = element("p");
     			if_block.c();
-    			set_style(p0, "font-size", /*fontSize*/ ctx[1] + "rem");
-    			add_location(p0, file$3h, 11, 4, 378);
-    			add_location(p1, file$3h, 13, 8, 522);
-    			set_style(div, "font-size", /*calcSubFontSize*/ ctx[3]() + "rem");
+    			add_location(p0, file$3h, 11, 4, 322);
+    			add_location(p1, file$3h, 13, 8, 423);
+    			set_style(div, "font-size", /*context*/ ctx[2] + "rem");
     			set_style(div, "text-align", "left");
     			set_style(div, "margin-top", "20px");
-    			add_location(div, file$3h, 12, 4, 431);
+    			add_location(div, file$3h, 12, 4, 342);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p0, anchor);
-    			append_dev(p0, t0);
     			insert_dev(target, t1, anchor);
     			insert_dev(target, div, anchor);
     			append_dev(div, p1);
     			if_block.m(p1, null);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*fontSize*/ 2) {
-    				set_style(p0, "font-size", /*fontSize*/ ctx[1] + "rem");
-    			}
-
     			if (current_block_type !== (current_block_type = select_block_type(ctx))) {
     				if_block.d(1);
     				if_block = current_block_type(ctx);
@@ -58632,6 +58696,10 @@ var app = (function (jquery) {
     					if_block.c();
     					if_block.m(p1, null);
     				}
+    			}
+
+    			if (dirty & /*context*/ 4) {
+    				set_style(div, "font-size", /*context*/ ctx[2] + "rem");
     			}
     		},
     		d: function destroy(detaching) {
@@ -58646,7 +58714,7 @@ var app = (function (jquery) {
     		block,
     		id: create_default_slot$33.name,
     		type: "slot",
-    		source: "(11:0) <DefaultPage color={color} fontSize={fontSize}>",
+    		source: "(11:0) <DefaultPage color={color} fontSize={subhead}>",
     		ctx
     	});
 
@@ -58660,7 +58728,7 @@ var app = (function (jquery) {
     	defaultpage = new DefaultPage({
     			props: {
     				color: /*color*/ ctx[0],
-    				fontSize: /*fontSize*/ ctx[1],
+    				fontSize: /*subhead*/ ctx[1],
     				$$slots: { default: [create_default_slot$33] },
     				$$scope: { ctx }
     			},
@@ -58681,9 +58749,9 @@ var app = (function (jquery) {
     		p: function update(ctx, [dirty]) {
     			const defaultpage_changes = {};
     			if (dirty & /*color*/ 1) defaultpage_changes.color = /*color*/ ctx[0];
-    			if (dirty & /*fontSize*/ 2) defaultpage_changes.fontSize = /*fontSize*/ ctx[1];
+    			if (dirty & /*subhead*/ 2) defaultpage_changes.fontSize = /*subhead*/ ctx[1];
 
-    			if (dirty & /*$$scope, $Device, fontSize*/ 22) {
+    			if (dirty & /*$$scope, context, $Device*/ 44) {
     				defaultpage_changes.$$scope = { dirty, ctx };
     			}
 
@@ -58717,13 +58785,14 @@ var app = (function (jquery) {
     function instance$4W($$self, $$props, $$invalidate) {
     	let $Device;
     	validate_store(Device, 'Device');
-    	component_subscribe($$self, Device, $$value => $$invalidate(2, $Device = $$value));
+    	component_subscribe($$self, Device, $$value => $$invalidate(3, $Device = $$value));
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('Page02', slots, []);
     	let { color = "transparent" } = $$props;
-    	let { fontSize = $Device["isMobile"] ? 0.5 : 2 } = $$props;
-    	const calcSubFontSize = () => !$Device["isMobile"] ? fontSize : fontSize / 2;
-    	const writable_props = ['color', 'fontSize'];
+    	let { head = 2 } = $$props;
+    	let { subhead = 1.5 } = $$props;
+    	let { context = 1 } = $$props;
+    	const writable_props = ['color', 'head', 'subhead', 'context'];
 
     	Object.keys($$props).forEach(key => {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<Page02> was created with unknown prop '${key}'`);
@@ -58731,34 +58800,45 @@ var app = (function (jquery) {
 
     	$$self.$$set = $$props => {
     		if ('color' in $$props) $$invalidate(0, color = $$props.color);
-    		if ('fontSize' in $$props) $$invalidate(1, fontSize = $$props.fontSize);
+    		if ('head' in $$props) $$invalidate(4, head = $$props.head);
+    		if ('subhead' in $$props) $$invalidate(1, subhead = $$props.subhead);
+    		if ('context' in $$props) $$invalidate(2, context = $$props.context);
     	};
 
     	$$self.$capture_state = () => ({
     		Device,
     		DefaultPage,
     		color,
-    		fontSize,
-    		calcSubFontSize,
+    		head,
+    		subhead,
+    		context,
     		$Device
     	});
 
     	$$self.$inject_state = $$props => {
     		if ('color' in $$props) $$invalidate(0, color = $$props.color);
-    		if ('fontSize' in $$props) $$invalidate(1, fontSize = $$props.fontSize);
+    		if ('head' in $$props) $$invalidate(4, head = $$props.head);
+    		if ('subhead' in $$props) $$invalidate(1, subhead = $$props.subhead);
+    		if ('context' in $$props) $$invalidate(2, context = $$props.context);
     	};
 
     	if ($$props && "$$inject" in $$props) {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [color, fontSize, $Device, calcSubFontSize];
+    	return [color, subhead, context, $Device, head];
     }
 
     class Page02$1a extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$4W, create_fragment$4W, safe_not_equal, { color: 0, fontSize: 1 });
+
+    		init(this, options, instance$4W, create_fragment$4W, safe_not_equal, {
+    			color: 0,
+    			head: 4,
+    			subhead: 1,
+    			context: 2
+    		});
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
@@ -58776,11 +58856,27 @@ var app = (function (jquery) {
     		throw new Error("<Page02>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
 
-    	get fontSize() {
+    	get head() {
     		throw new Error("<Page02>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
 
-    	set fontSize(value) {
+    	set head(value) {
+    		throw new Error("<Page02>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get subhead() {
+    		throw new Error("<Page02>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set subhead(value) {
+    		throw new Error("<Page02>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get context() {
+    		throw new Error("<Page02>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set context(value) {
     		throw new Error("<Page02>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
     }
@@ -58789,7 +58885,7 @@ var app = (function (jquery) {
     const file$3g = "src\\component\\PageDesign\\Slide\\2021\\Projects\\Downloader\\Slide02\\Page03.svelte";
 
     // (20:12) {:else}
-    function create_else_block$1(ctx) {
+    function create_else_block$2(ctx) {
     	let t0;
     	let br0;
     	let t1;
@@ -58803,8 +58899,8 @@ var app = (function (jquery) {
     			t1 = text("\r\n            2. 각 PCB에 펌웨어를 업로드");
     			br1 = element("br");
     			t2 = text("\r\n            3. 지정된 검사를 수행해 업로드 직후 PCB의 불량 여부 파악");
-    			add_location(br0, file$3g, 20, 35, 791);
-    			add_location(br1, file$3g, 21, 30, 828);
+    			add_location(br0, file$3g, 20, 35, 694);
+    			add_location(br1, file$3g, 21, 30, 731);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, t0, anchor);
@@ -58824,7 +58920,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_else_block$1.name,
+    		id: create_else_block$2.name,
     		type: "else",
     		source: "(20:12) {:else}",
     		ctx
@@ -58834,7 +58930,7 @@ var app = (function (jquery) {
     }
 
     // (15:12) {#if $Device["isMobile"]}
-    function create_if_block$1(ctx) {
+    function create_if_block$2(ctx) {
     	let t0;
     	let br0;
     	let t1;
@@ -58852,9 +58948,9 @@ var app = (function (jquery) {
     			t2 = text("\r\n            3. 지정된 검사를 수행해 업로드 직후");
     			br2 = element("br");
     			t3 = text("\r\n                PCB의 불량 여부 파악");
-    			add_location(br0, file$3g, 15, 35, 600);
-    			add_location(br1, file$3g, 16, 30, 637);
-    			add_location(br2, file$3g, 17, 33, 677);
+    			add_location(br0, file$3g, 15, 35, 503);
+    			add_location(br1, file$3g, 16, 30, 540);
+    			add_location(br2, file$3g, 17, 33, 580);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, t0, anchor);
@@ -58878,7 +58974,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$1.name,
+    		id: create_if_block$2.name,
     		type: "if",
     		source: "(15:12) {#if $Device[\\\"isMobile\\\"]}",
     		ctx
@@ -58887,17 +58983,16 @@ var app = (function (jquery) {
     	return block;
     }
 
-    // (11:0) <DefaultPage color={color} fontSize={fontSize}>
+    // (11:0) <DefaultPage color={color} fontSize={subhead}>
     function create_default_slot$32(ctx) {
     	let p0;
-    	let t0;
     	let t1;
     	let div;
     	let p1;
 
     	function select_block_type(ctx, dirty) {
-    		if (/*$Device*/ ctx[2]["isMobile"]) return create_if_block$1;
-    		return create_else_block$1;
+    		if (/*$Device*/ ctx[3]["isMobile"]) return create_if_block$2;
+    		return create_else_block$2;
     	}
 
     	let current_block_type = select_block_type(ctx);
@@ -58906,32 +59001,26 @@ var app = (function (jquery) {
     	const block = {
     		c: function create() {
     			p0 = element("p");
-    			t0 = text("PCB 다운로더");
+    			p0.textContent = "PCB 다운로더";
     			t1 = space();
     			div = element("div");
     			p1 = element("p");
     			if_block.c();
-    			set_style(p0, "font-size", /*fontSize*/ ctx[1] + "rem");
-    			add_location(p0, file$3g, 11, 4, 376);
-    			add_location(p1, file$3g, 13, 8, 521);
-    			set_style(div, "font-size", /*calcSubFontSize*/ ctx[3]() + "rem");
+    			add_location(p0, file$3g, 11, 4, 322);
+    			add_location(p1, file$3g, 13, 8, 424);
+    			set_style(div, "font-size", /*context*/ ctx[2] + "rem");
     			set_style(div, "text-align", "left");
     			set_style(div, "margin-top", "20px");
-    			add_location(div, file$3g, 12, 4, 430);
+    			add_location(div, file$3g, 12, 4, 343);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p0, anchor);
-    			append_dev(p0, t0);
     			insert_dev(target, t1, anchor);
     			insert_dev(target, div, anchor);
     			append_dev(div, p1);
     			if_block.m(p1, null);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*fontSize*/ 2) {
-    				set_style(p0, "font-size", /*fontSize*/ ctx[1] + "rem");
-    			}
-
     			if (current_block_type !== (current_block_type = select_block_type(ctx))) {
     				if_block.d(1);
     				if_block = current_block_type(ctx);
@@ -58940,6 +59029,10 @@ var app = (function (jquery) {
     					if_block.c();
     					if_block.m(p1, null);
     				}
+    			}
+
+    			if (dirty & /*context*/ 4) {
+    				set_style(div, "font-size", /*context*/ ctx[2] + "rem");
     			}
     		},
     		d: function destroy(detaching) {
@@ -58954,7 +59047,7 @@ var app = (function (jquery) {
     		block,
     		id: create_default_slot$32.name,
     		type: "slot",
-    		source: "(11:0) <DefaultPage color={color} fontSize={fontSize}>",
+    		source: "(11:0) <DefaultPage color={color} fontSize={subhead}>",
     		ctx
     	});
 
@@ -58968,7 +59061,7 @@ var app = (function (jquery) {
     	defaultpage = new DefaultPage({
     			props: {
     				color: /*color*/ ctx[0],
-    				fontSize: /*fontSize*/ ctx[1],
+    				fontSize: /*subhead*/ ctx[1],
     				$$slots: { default: [create_default_slot$32] },
     				$$scope: { ctx }
     			},
@@ -58989,9 +59082,9 @@ var app = (function (jquery) {
     		p: function update(ctx, [dirty]) {
     			const defaultpage_changes = {};
     			if (dirty & /*color*/ 1) defaultpage_changes.color = /*color*/ ctx[0];
-    			if (dirty & /*fontSize*/ 2) defaultpage_changes.fontSize = /*fontSize*/ ctx[1];
+    			if (dirty & /*subhead*/ 2) defaultpage_changes.fontSize = /*subhead*/ ctx[1];
 
-    			if (dirty & /*$$scope, $Device, fontSize*/ 22) {
+    			if (dirty & /*$$scope, context, $Device*/ 44) {
     				defaultpage_changes.$$scope = { dirty, ctx };
     			}
 
@@ -59025,13 +59118,14 @@ var app = (function (jquery) {
     function instance$4V($$self, $$props, $$invalidate) {
     	let $Device;
     	validate_store(Device, 'Device');
-    	component_subscribe($$self, Device, $$value => $$invalidate(2, $Device = $$value));
+    	component_subscribe($$self, Device, $$value => $$invalidate(3, $Device = $$value));
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('Page03', slots, []);
     	let { color = "transparent" } = $$props;
-    	let { fontSize = $Device['isMobile'] ? 1 : 2 } = $$props;
-    	const calcSubFontSize = () => !$Device["isMobile"] ? fontSize : fontSize / 2;
-    	const writable_props = ['color', 'fontSize'];
+    	let { head = 2 } = $$props;
+    	let { subhead = 1.5 } = $$props;
+    	let { context = 1 } = $$props;
+    	const writable_props = ['color', 'head', 'subhead', 'context'];
 
     	Object.keys($$props).forEach(key => {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<Page03> was created with unknown prop '${key}'`);
@@ -59039,34 +59133,45 @@ var app = (function (jquery) {
 
     	$$self.$$set = $$props => {
     		if ('color' in $$props) $$invalidate(0, color = $$props.color);
-    		if ('fontSize' in $$props) $$invalidate(1, fontSize = $$props.fontSize);
+    		if ('head' in $$props) $$invalidate(4, head = $$props.head);
+    		if ('subhead' in $$props) $$invalidate(1, subhead = $$props.subhead);
+    		if ('context' in $$props) $$invalidate(2, context = $$props.context);
     	};
 
     	$$self.$capture_state = () => ({
     		Device,
     		DefaultPage,
     		color,
-    		fontSize,
-    		calcSubFontSize,
+    		head,
+    		subhead,
+    		context,
     		$Device
     	});
 
     	$$self.$inject_state = $$props => {
     		if ('color' in $$props) $$invalidate(0, color = $$props.color);
-    		if ('fontSize' in $$props) $$invalidate(1, fontSize = $$props.fontSize);
+    		if ('head' in $$props) $$invalidate(4, head = $$props.head);
+    		if ('subhead' in $$props) $$invalidate(1, subhead = $$props.subhead);
+    		if ('context' in $$props) $$invalidate(2, context = $$props.context);
     	};
 
     	if ($$props && "$$inject" in $$props) {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [color, fontSize, $Device, calcSubFontSize];
+    	return [color, subhead, context, $Device, head];
     }
 
     class Page03$v extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$4V, create_fragment$4V, safe_not_equal, { color: 0, fontSize: 1 });
+
+    		init(this, options, instance$4V, create_fragment$4V, safe_not_equal, {
+    			color: 0,
+    			head: 4,
+    			subhead: 1,
+    			context: 2
+    		});
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
@@ -59084,11 +59189,27 @@ var app = (function (jquery) {
     		throw new Error("<Page03>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
 
-    	get fontSize() {
+    	get head() {
     		throw new Error("<Page03>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
 
-    	set fontSize(value) {
+    	set head(value) {
+    		throw new Error("<Page03>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get subhead() {
+    		throw new Error("<Page03>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set subhead(value) {
+    		throw new Error("<Page03>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get context() {
+    		throw new Error("<Page03>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set context(value) {
     		throw new Error("<Page03>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
     }
@@ -59096,17 +59217,101 @@ var app = (function (jquery) {
     /* src\component\PageDesign\Slide\2021\Projects\Downloader\Slide02\Page04.svelte generated by Svelte v3.55.1 */
     const file$3f = "src\\component\\PageDesign\\Slide\\2021\\Projects\\Downloader\\Slide02\\Page04.svelte";
 
-    // (11:0) <DefaultPage color={color} fontSize={fontSize}>
+    // (19:12) {:else}
+    function create_else_block$1(ctx) {
+    	let t0;
+    	let br;
+    	let t1;
+
+    	const block = {
+    		c: function create() {
+    			t0 = text("1. 하나의 가공된 PCB가 로딩");
+    			br = element("br");
+    			t1 = text("\r\n            2. 지정된 검사를 수행해 업로드 직후 PCB의 불량 여부 파악");
+    			add_location(br, file$3f, 19, 30, 647);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, t0, anchor);
+    			insert_dev(target, br, anchor);
+    			insert_dev(target, t1, anchor);
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(t0);
+    			if (detaching) detach_dev(br);
+    			if (detaching) detach_dev(t1);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_else_block$1.name,
+    		type: "else",
+    		source: "(19:12) {:else}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (15:12) {#if $Device["isMobile"]}
+    function create_if_block$1(ctx) {
+    	let t0;
+    	let br0;
+    	let t1;
+    	let br1;
+    	let t2;
+
+    	const block = {
+    		c: function create() {
+    			t0 = text("1. 하나의 가공된 PCB가 로딩");
+    			br0 = element("br");
+    			t1 = text("\r\n            2. 지정된 검사를 수행해 업로드 직후");
+    			br1 = element("br");
+    			t2 = text("\r\n                PCB의 불량 여부 파악");
+    			add_location(br0, file$3f, 15, 30, 498);
+    			add_location(br1, file$3f, 16, 33, 538);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, t0, anchor);
+    			insert_dev(target, br0, anchor);
+    			insert_dev(target, t1, anchor);
+    			insert_dev(target, br1, anchor);
+    			insert_dev(target, t2, anchor);
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(t0);
+    			if (detaching) detach_dev(br0);
+    			if (detaching) detach_dev(t1);
+    			if (detaching) detach_dev(br1);
+    			if (detaching) detach_dev(t2);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_if_block$1.name,
+    		type: "if",
+    		source: "(15:12) {#if $Device[\\\"isMobile\\\"]}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (11:0) <DefaultPage color={color} fontSize={subhead}>
     function create_default_slot$31(ctx) {
     	let p0;
     	let t1;
     	let div;
     	let p1;
-    	let t2;
-    	let br0;
-    	let t3;
-    	let br1;
-    	let t4;
+
+    	function select_block_type(ctx, dirty) {
+    		if (/*$Device*/ ctx[3]["isMobile"]) return create_if_block$1;
+    		return create_else_block$1;
+    	}
+
+    	let current_block_type = select_block_type(ctx);
+    	let if_block = current_block_type(ctx);
 
     	const block = {
     		c: function create() {
@@ -59115,36 +59320,41 @@ var app = (function (jquery) {
     			t1 = space();
     			div = element("div");
     			p1 = element("p");
-    			t2 = text("1. 하나의 가공된 PCB가 로딩");
-    			br0 = element("br");
-    			t3 = text("\r\n            2. 지정된 검사를 수행해 업로드 직후");
-    			br1 = element("br");
-    			t4 = text("\r\n                PCB의 불량 여부 파악");
-    			add_location(p0, file$3f, 11, 4, 349);
-    			add_location(br0, file$3f, 14, 30, 496);
-    			add_location(br1, file$3f, 15, 33, 536);
-    			add_location(p1, file$3f, 13, 8, 461);
-    			set_style(div, "font-size", /*calcSubFontSize*/ ctx[2]() + "rem");
+    			if_block.c();
+    			add_location(p0, file$3f, 11, 4, 322);
+    			add_location(p1, file$3f, 13, 8, 424);
+    			set_style(div, "font-size", /*context*/ ctx[2] + "rem");
     			set_style(div, "text-align", "left");
     			set_style(div, "margin-top", "20px");
-    			add_location(div, file$3f, 12, 4, 370);
+    			add_location(div, file$3f, 12, 4, 343);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p0, anchor);
     			insert_dev(target, t1, anchor);
     			insert_dev(target, div, anchor);
     			append_dev(div, p1);
-    			append_dev(p1, t2);
-    			append_dev(p1, br0);
-    			append_dev(p1, t3);
-    			append_dev(p1, br1);
-    			append_dev(p1, t4);
+    			if_block.m(p1, null);
     		},
-    		p: noop,
+    		p: function update(ctx, dirty) {
+    			if (current_block_type !== (current_block_type = select_block_type(ctx))) {
+    				if_block.d(1);
+    				if_block = current_block_type(ctx);
+
+    				if (if_block) {
+    					if_block.c();
+    					if_block.m(p1, null);
+    				}
+    			}
+
+    			if (dirty & /*context*/ 4) {
+    				set_style(div, "font-size", /*context*/ ctx[2] + "rem");
+    			}
+    		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(p0);
     			if (detaching) detach_dev(t1);
     			if (detaching) detach_dev(div);
+    			if_block.d();
     		}
     	};
 
@@ -59152,7 +59362,7 @@ var app = (function (jquery) {
     		block,
     		id: create_default_slot$31.name,
     		type: "slot",
-    		source: "(11:0) <DefaultPage color={color} fontSize={fontSize}>",
+    		source: "(11:0) <DefaultPage color={color} fontSize={subhead}>",
     		ctx
     	});
 
@@ -59166,7 +59376,7 @@ var app = (function (jquery) {
     	defaultpage = new DefaultPage({
     			props: {
     				color: /*color*/ ctx[0],
-    				fontSize: /*fontSize*/ ctx[1],
+    				fontSize: /*subhead*/ ctx[1],
     				$$slots: { default: [create_default_slot$31] },
     				$$scope: { ctx }
     			},
@@ -59187,9 +59397,9 @@ var app = (function (jquery) {
     		p: function update(ctx, [dirty]) {
     			const defaultpage_changes = {};
     			if (dirty & /*color*/ 1) defaultpage_changes.color = /*color*/ ctx[0];
-    			if (dirty & /*fontSize*/ 2) defaultpage_changes.fontSize = /*fontSize*/ ctx[1];
+    			if (dirty & /*subhead*/ 2) defaultpage_changes.fontSize = /*subhead*/ ctx[1];
 
-    			if (dirty & /*$$scope*/ 16) {
+    			if (dirty & /*$$scope, context, $Device*/ 44) {
     				defaultpage_changes.$$scope = { dirty, ctx };
     			}
 
@@ -59227,9 +59437,10 @@ var app = (function (jquery) {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('Page04', slots, []);
     	let { color = "transparent" } = $$props;
-    	let { fontSize = 2 } = $$props;
-    	const calcSubFontSize = () => !$Device["isMobile"] ? fontSize : fontSize / 2;
-    	const writable_props = ['color', 'fontSize'];
+    	let { head = 2 } = $$props;
+    	let { subhead = 1.5 } = $$props;
+    	let { context = 1 } = $$props;
+    	const writable_props = ['color', 'head', 'subhead', 'context'];
 
     	Object.keys($$props).forEach(key => {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<Page04> was created with unknown prop '${key}'`);
@@ -59237,34 +59448,45 @@ var app = (function (jquery) {
 
     	$$self.$$set = $$props => {
     		if ('color' in $$props) $$invalidate(0, color = $$props.color);
-    		if ('fontSize' in $$props) $$invalidate(1, fontSize = $$props.fontSize);
+    		if ('head' in $$props) $$invalidate(4, head = $$props.head);
+    		if ('subhead' in $$props) $$invalidate(1, subhead = $$props.subhead);
+    		if ('context' in $$props) $$invalidate(2, context = $$props.context);
     	};
 
     	$$self.$capture_state = () => ({
     		Device,
     		DefaultPage,
     		color,
-    		fontSize,
-    		calcSubFontSize,
+    		head,
+    		subhead,
+    		context,
     		$Device
     	});
 
     	$$self.$inject_state = $$props => {
     		if ('color' in $$props) $$invalidate(0, color = $$props.color);
-    		if ('fontSize' in $$props) $$invalidate(1, fontSize = $$props.fontSize);
+    		if ('head' in $$props) $$invalidate(4, head = $$props.head);
+    		if ('subhead' in $$props) $$invalidate(1, subhead = $$props.subhead);
+    		if ('context' in $$props) $$invalidate(2, context = $$props.context);
     	};
 
     	if ($$props && "$$inject" in $$props) {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [color, fontSize, calcSubFontSize];
+    	return [color, subhead, context, $Device, head];
     }
 
     class Page04$8 extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$4U, create_fragment$4U, safe_not_equal, { color: 0, fontSize: 1 });
+
+    		init(this, options, instance$4U, create_fragment$4U, safe_not_equal, {
+    			color: 0,
+    			head: 4,
+    			subhead: 1,
+    			context: 2
+    		});
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
@@ -59282,11 +59504,27 @@ var app = (function (jquery) {
     		throw new Error("<Page04>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
 
-    	get fontSize() {
+    	get head() {
     		throw new Error("<Page04>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
 
-    	set fontSize(value) {
+    	set head(value) {
+    		throw new Error("<Page04>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get subhead() {
+    		throw new Error("<Page04>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set subhead(value) {
+    		throw new Error("<Page04>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get context() {
+    		throw new Error("<Page04>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set context(value) {
     		throw new Error("<Page04>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
     }
@@ -59294,7 +59532,7 @@ var app = (function (jquery) {
     /* src\component\PageDesign\Slide\2021\Projects\Downloader\Slide02\Page05.svelte generated by Svelte v3.55.1 */
     const file$3e = "src\\component\\PageDesign\\Slide\\2021\\Projects\\Downloader\\Slide02\\Page05.svelte";
 
-    // (11:0) <DefaultPage color={color} fontSize={fontSize}>
+    // (11:0) <DefaultPage color={color} fontSize={subhead}>
     function create_default_slot$30(ctx) {
     	let p0;
     	let t1;
@@ -59318,14 +59556,14 @@ var app = (function (jquery) {
     			t3 = text("\r\n            - C 기반 IO 펌웨어 프로그램");
     			br1 = element("br");
     			t4 = text("\r\n            - IO-PC 통신 프로토콜 설정");
-    			add_location(p0, file$3e, 11, 4, 349);
-    			add_location(br0, file$3e, 14, 27, 490);
-    			add_location(br1, file$3e, 15, 30, 527);
-    			add_location(p1, file$3e, 13, 8, 458);
-    			set_style(div, "font-size", /*calcSubFontSize*/ ctx[2]() + "rem");
+    			add_location(p0, file$3e, 11, 4, 322);
+    			add_location(br0, file$3e, 14, 27, 453);
+    			add_location(br1, file$3e, 15, 30, 490);
+    			add_location(p1, file$3e, 13, 8, 421);
+    			set_style(div, "font-size", /*context*/ ctx[2] + "rem");
     			set_style(div, "text-align", "left");
     			set_style(div, "margin-top", "20px");
-    			add_location(div, file$3e, 12, 4, 367);
+    			add_location(div, file$3e, 12, 4, 340);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p0, anchor);
@@ -59338,7 +59576,11 @@ var app = (function (jquery) {
     			append_dev(p1, br1);
     			append_dev(p1, t4);
     		},
-    		p: noop,
+    		p: function update(ctx, dirty) {
+    			if (dirty & /*context*/ 4) {
+    				set_style(div, "font-size", /*context*/ ctx[2] + "rem");
+    			}
+    		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(p0);
     			if (detaching) detach_dev(t1);
@@ -59350,7 +59592,7 @@ var app = (function (jquery) {
     		block,
     		id: create_default_slot$30.name,
     		type: "slot",
-    		source: "(11:0) <DefaultPage color={color} fontSize={fontSize}>",
+    		source: "(11:0) <DefaultPage color={color} fontSize={subhead}>",
     		ctx
     	});
 
@@ -59364,7 +59606,7 @@ var app = (function (jquery) {
     	defaultpage = new DefaultPage({
     			props: {
     				color: /*color*/ ctx[0],
-    				fontSize: /*fontSize*/ ctx[1],
+    				fontSize: /*subhead*/ ctx[1],
     				$$slots: { default: [create_default_slot$30] },
     				$$scope: { ctx }
     			},
@@ -59385,9 +59627,9 @@ var app = (function (jquery) {
     		p: function update(ctx, [dirty]) {
     			const defaultpage_changes = {};
     			if (dirty & /*color*/ 1) defaultpage_changes.color = /*color*/ ctx[0];
-    			if (dirty & /*fontSize*/ 2) defaultpage_changes.fontSize = /*fontSize*/ ctx[1];
+    			if (dirty & /*subhead*/ 2) defaultpage_changes.fontSize = /*subhead*/ ctx[1];
 
-    			if (dirty & /*$$scope*/ 16) {
+    			if (dirty & /*$$scope, context*/ 20) {
     				defaultpage_changes.$$scope = { dirty, ctx };
     			}
 
@@ -59419,15 +59661,13 @@ var app = (function (jquery) {
     }
 
     function instance$4T($$self, $$props, $$invalidate) {
-    	let $Device;
-    	validate_store(Device, 'Device');
-    	component_subscribe($$self, Device, $$value => $$invalidate(3, $Device = $$value));
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('Page05', slots, []);
     	let { color = "transparent" } = $$props;
-    	let { fontSize = 2 } = $$props;
-    	const calcSubFontSize = () => !$Device["isMobile"] ? fontSize : fontSize / 2;
-    	const writable_props = ['color', 'fontSize'];
+    	let { head = 2 } = $$props;
+    	let { subhead = 1.5 } = $$props;
+    	let { context = 1 } = $$props;
+    	const writable_props = ['color', 'head', 'subhead', 'context'];
 
     	Object.keys($$props).forEach(key => {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<Page05> was created with unknown prop '${key}'`);
@@ -59435,34 +59675,44 @@ var app = (function (jquery) {
 
     	$$self.$$set = $$props => {
     		if ('color' in $$props) $$invalidate(0, color = $$props.color);
-    		if ('fontSize' in $$props) $$invalidate(1, fontSize = $$props.fontSize);
+    		if ('head' in $$props) $$invalidate(3, head = $$props.head);
+    		if ('subhead' in $$props) $$invalidate(1, subhead = $$props.subhead);
+    		if ('context' in $$props) $$invalidate(2, context = $$props.context);
     	};
 
     	$$self.$capture_state = () => ({
     		Device,
     		DefaultPage,
     		color,
-    		fontSize,
-    		calcSubFontSize,
-    		$Device
+    		head,
+    		subhead,
+    		context
     	});
 
     	$$self.$inject_state = $$props => {
     		if ('color' in $$props) $$invalidate(0, color = $$props.color);
-    		if ('fontSize' in $$props) $$invalidate(1, fontSize = $$props.fontSize);
+    		if ('head' in $$props) $$invalidate(3, head = $$props.head);
+    		if ('subhead' in $$props) $$invalidate(1, subhead = $$props.subhead);
+    		if ('context' in $$props) $$invalidate(2, context = $$props.context);
     	};
 
     	if ($$props && "$$inject" in $$props) {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [color, fontSize, calcSubFontSize];
+    	return [color, subhead, context, head];
     }
 
     class Page05$7 extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$4T, create_fragment$4T, safe_not_equal, { color: 0, fontSize: 1 });
+
+    		init(this, options, instance$4T, create_fragment$4T, safe_not_equal, {
+    			color: 0,
+    			head: 3,
+    			subhead: 1,
+    			context: 2
+    		});
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
@@ -59480,11 +59730,27 @@ var app = (function (jquery) {
     		throw new Error("<Page05>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
 
-    	get fontSize() {
+    	get head() {
     		throw new Error("<Page05>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
 
-    	set fontSize(value) {
+    	set head(value) {
+    		throw new Error("<Page05>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get subhead() {
+    		throw new Error("<Page05>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set subhead(value) {
+    		throw new Error("<Page05>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get context() {
+    		throw new Error("<Page05>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set context(value) {
     		throw new Error("<Page05>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
     }
@@ -59724,7 +59990,7 @@ var app = (function (jquery) {
     /* src\component\PageDesign\Slide\2021\Projects\Downloader\Slide03\Page01.svelte generated by Svelte v3.55.1 */
     const file$3d = "src\\component\\PageDesign\\Slide\\2021\\Projects\\Downloader\\Slide03\\Page01.svelte";
 
-    // (8:0) <DefaultPage color={color} fontSize={fontSize}>
+    // (10:0) <DefaultPage color={color} fontSize={head}>
     function create_default_slot$2$(ctx) {
     	let p;
 
@@ -59732,7 +59998,7 @@ var app = (function (jquery) {
     		c: function create() {
     			p = element("p");
     			p.textContent = "Main Function";
-    			add_location(p, file$3d, 8, 4, 208);
+    			add_location(p, file$3d, 10, 4, 261);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -59747,7 +60013,7 @@ var app = (function (jquery) {
     		block,
     		id: create_default_slot$2$.name,
     		type: "slot",
-    		source: "(8:0) <DefaultPage color={color} fontSize={fontSize}>",
+    		source: "(10:0) <DefaultPage color={color} fontSize={head}>",
     		ctx
     	});
 
@@ -59761,7 +60027,7 @@ var app = (function (jquery) {
     	defaultpage = new DefaultPage({
     			props: {
     				color: /*color*/ ctx[0],
-    				fontSize: /*fontSize*/ ctx[1],
+    				fontSize: /*head*/ ctx[1],
     				$$slots: { default: [create_default_slot$2$] },
     				$$scope: { ctx }
     			},
@@ -59782,9 +60048,9 @@ var app = (function (jquery) {
     		p: function update(ctx, [dirty]) {
     			const defaultpage_changes = {};
     			if (dirty & /*color*/ 1) defaultpage_changes.color = /*color*/ ctx[0];
-    			if (dirty & /*fontSize*/ 2) defaultpage_changes.fontSize = /*fontSize*/ ctx[1];
+    			if (dirty & /*head*/ 2) defaultpage_changes.fontSize = /*head*/ ctx[1];
 
-    			if (dirty & /*$$scope*/ 4) {
+    			if (dirty & /*$$scope*/ 16) {
     				defaultpage_changes.$$scope = { dirty, ctx };
     			}
 
@@ -59819,8 +60085,10 @@ var app = (function (jquery) {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('Page01', slots, []);
     	let { color = "transparent" } = $$props;
-    	let { fontSize = 2 } = $$props;
-    	const writable_props = ['color', 'fontSize'];
+    	let { head = 2 } = $$props;
+    	let { subhead = 1.5 } = $$props;
+    	let { context = 1 } = $$props;
+    	const writable_props = ['color', 'head', 'subhead', 'context'];
 
     	Object.keys($$props).forEach(key => {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<Page01> was created with unknown prop '${key}'`);
@@ -59828,27 +60096,43 @@ var app = (function (jquery) {
 
     	$$self.$$set = $$props => {
     		if ('color' in $$props) $$invalidate(0, color = $$props.color);
-    		if ('fontSize' in $$props) $$invalidate(1, fontSize = $$props.fontSize);
+    		if ('head' in $$props) $$invalidate(1, head = $$props.head);
+    		if ('subhead' in $$props) $$invalidate(2, subhead = $$props.subhead);
+    		if ('context' in $$props) $$invalidate(3, context = $$props.context);
     	};
 
-    	$$self.$capture_state = () => ({ DefaultPage, color, fontSize });
+    	$$self.$capture_state = () => ({
+    		DefaultPage,
+    		color,
+    		head,
+    		subhead,
+    		context
+    	});
 
     	$$self.$inject_state = $$props => {
     		if ('color' in $$props) $$invalidate(0, color = $$props.color);
-    		if ('fontSize' in $$props) $$invalidate(1, fontSize = $$props.fontSize);
+    		if ('head' in $$props) $$invalidate(1, head = $$props.head);
+    		if ('subhead' in $$props) $$invalidate(2, subhead = $$props.subhead);
+    		if ('context' in $$props) $$invalidate(3, context = $$props.context);
     	};
 
     	if ($$props && "$$inject" in $$props) {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [color, fontSize];
+    	return [color, head, subhead, context];
     }
 
     class Page01$1l extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$4R, create_fragment$4R, safe_not_equal, { color: 0, fontSize: 1 });
+
+    		init(this, options, instance$4R, create_fragment$4R, safe_not_equal, {
+    			color: 0,
+    			head: 1,
+    			subhead: 2,
+    			context: 3
+    		});
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
@@ -59866,11 +60150,27 @@ var app = (function (jquery) {
     		throw new Error("<Page01>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
 
-    	get fontSize() {
+    	get head() {
     		throw new Error("<Page01>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
 
-    	set fontSize(value) {
+    	set head(value) {
+    		throw new Error("<Page01>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get subhead() {
+    		throw new Error("<Page01>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set subhead(value) {
+    		throw new Error("<Page01>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get context() {
+    		throw new Error("<Page01>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set context(value) {
     		throw new Error("<Page01>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
     }
@@ -59878,7 +60178,7 @@ var app = (function (jquery) {
     /* src\component\PageDesign\Slide\2021\Projects\Downloader\Slide03\Page02.svelte generated by Svelte v3.55.1 */
     const file$3c = "src\\component\\PageDesign\\Slide\\2021\\Projects\\Downloader\\Slide03\\Page02.svelte";
 
-    // (11:0) <DefaultPage color={color} fontSize={fontSize}>
+    // (11:0) <DefaultPage color={color} fontSize={subhead}>
     function create_default_slot$2_(ctx) {
     	let p0;
     	let t1;
@@ -59898,13 +60198,13 @@ var app = (function (jquery) {
     			t2 = text("- 다운로더 / 인스펙터에서 모두 수행");
     			br = element("br");
     			t3 = text("\r\n            - 지정된 핀의 전압을 검사");
-    			add_location(p0, file$3c, 11, 4, 349);
-    			add_location(br, file$3c, 14, 33, 496);
-    			add_location(p1, file$3c, 13, 8, 458);
-    			set_style(div, "font-size", /*calcSubFontSize*/ ctx[2]() + "rem");
+    			add_location(p0, file$3c, 11, 4, 322);
+    			add_location(br, file$3c, 14, 33, 459);
+    			add_location(p1, file$3c, 13, 8, 421);
+    			set_style(div, "font-size", /*context*/ ctx[2] + "rem");
     			set_style(div, "text-align", "left");
     			set_style(div, "margin-top", "20px");
-    			add_location(div, file$3c, 12, 4, 367);
+    			add_location(div, file$3c, 12, 4, 340);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p0, anchor);
@@ -59915,7 +60215,11 @@ var app = (function (jquery) {
     			append_dev(p1, br);
     			append_dev(p1, t3);
     		},
-    		p: noop,
+    		p: function update(ctx, dirty) {
+    			if (dirty & /*context*/ 4) {
+    				set_style(div, "font-size", /*context*/ ctx[2] + "rem");
+    			}
+    		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(p0);
     			if (detaching) detach_dev(t1);
@@ -59927,7 +60231,7 @@ var app = (function (jquery) {
     		block,
     		id: create_default_slot$2_.name,
     		type: "slot",
-    		source: "(11:0) <DefaultPage color={color} fontSize={fontSize}>",
+    		source: "(11:0) <DefaultPage color={color} fontSize={subhead}>",
     		ctx
     	});
 
@@ -59941,7 +60245,7 @@ var app = (function (jquery) {
     	defaultpage = new DefaultPage({
     			props: {
     				color: /*color*/ ctx[0],
-    				fontSize: /*fontSize*/ ctx[1],
+    				fontSize: /*subhead*/ ctx[1],
     				$$slots: { default: [create_default_slot$2_] },
     				$$scope: { ctx }
     			},
@@ -59962,9 +60266,9 @@ var app = (function (jquery) {
     		p: function update(ctx, [dirty]) {
     			const defaultpage_changes = {};
     			if (dirty & /*color*/ 1) defaultpage_changes.color = /*color*/ ctx[0];
-    			if (dirty & /*fontSize*/ 2) defaultpage_changes.fontSize = /*fontSize*/ ctx[1];
+    			if (dirty & /*subhead*/ 2) defaultpage_changes.fontSize = /*subhead*/ ctx[1];
 
-    			if (dirty & /*$$scope*/ 16) {
+    			if (dirty & /*$$scope, context*/ 20) {
     				defaultpage_changes.$$scope = { dirty, ctx };
     			}
 
@@ -59996,15 +60300,13 @@ var app = (function (jquery) {
     }
 
     function instance$4Q($$self, $$props, $$invalidate) {
-    	let $Device;
-    	validate_store(Device, 'Device');
-    	component_subscribe($$self, Device, $$value => $$invalidate(3, $Device = $$value));
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('Page02', slots, []);
     	let { color = "transparent" } = $$props;
-    	let { fontSize = 2 } = $$props;
-    	const calcSubFontSize = () => !$Device["isMobile"] ? fontSize : fontSize / 2;
-    	const writable_props = ['color', 'fontSize'];
+    	let { head = 2 } = $$props;
+    	let { subhead = 1.5 } = $$props;
+    	let { context = 1 } = $$props;
+    	const writable_props = ['color', 'head', 'subhead', 'context'];
 
     	Object.keys($$props).forEach(key => {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<Page02> was created with unknown prop '${key}'`);
@@ -60012,34 +60314,44 @@ var app = (function (jquery) {
 
     	$$self.$$set = $$props => {
     		if ('color' in $$props) $$invalidate(0, color = $$props.color);
-    		if ('fontSize' in $$props) $$invalidate(1, fontSize = $$props.fontSize);
+    		if ('head' in $$props) $$invalidate(3, head = $$props.head);
+    		if ('subhead' in $$props) $$invalidate(1, subhead = $$props.subhead);
+    		if ('context' in $$props) $$invalidate(2, context = $$props.context);
     	};
 
     	$$self.$capture_state = () => ({
     		Device,
     		DefaultPage,
     		color,
-    		fontSize,
-    		calcSubFontSize,
-    		$Device
+    		head,
+    		subhead,
+    		context
     	});
 
     	$$self.$inject_state = $$props => {
     		if ('color' in $$props) $$invalidate(0, color = $$props.color);
-    		if ('fontSize' in $$props) $$invalidate(1, fontSize = $$props.fontSize);
+    		if ('head' in $$props) $$invalidate(3, head = $$props.head);
+    		if ('subhead' in $$props) $$invalidate(1, subhead = $$props.subhead);
+    		if ('context' in $$props) $$invalidate(2, context = $$props.context);
     	};
 
     	if ($$props && "$$inject" in $$props) {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [color, fontSize, calcSubFontSize];
+    	return [color, subhead, context, head];
     }
 
     class Page02$19 extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$4Q, create_fragment$4Q, safe_not_equal, { color: 0, fontSize: 1 });
+
+    		init(this, options, instance$4Q, create_fragment$4Q, safe_not_equal, {
+    			color: 0,
+    			head: 3,
+    			subhead: 1,
+    			context: 2
+    		});
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
@@ -60057,11 +60369,27 @@ var app = (function (jquery) {
     		throw new Error("<Page02>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
 
-    	get fontSize() {
+    	get head() {
     		throw new Error("<Page02>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
 
-    	set fontSize(value) {
+    	set head(value) {
+    		throw new Error("<Page02>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get subhead() {
+    		throw new Error("<Page02>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set subhead(value) {
+    		throw new Error("<Page02>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get context() {
+    		throw new Error("<Page02>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set context(value) {
     		throw new Error("<Page02>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
     }
@@ -60069,7 +60397,7 @@ var app = (function (jquery) {
     /* src\component\PageDesign\Slide\2021\Projects\Downloader\Slide03\Page03.svelte generated by Svelte v3.55.1 */
     const file$3b = "src\\component\\PageDesign\\Slide\\2021\\Projects\\Downloader\\Slide03\\Page03.svelte";
 
-    // (11:0) <DefaultPage color={color} fontSize={fontSize}>
+    // (11:0) <DefaultPage color={color} fontSize={subhead}>
     function create_default_slot$2Z(ctx) {
     	let p0;
     	let t1;
@@ -60093,14 +60421,14 @@ var app = (function (jquery) {
     			t3 = text("\r\n            - PCB에 전원을 인가한 후, 일정 시간이");
     			br1 = element("br");
     			t4 = text("\r\n              지나고 전류값을 측정");
-    			add_location(p0, file$3b, 11, 4, 353);
-    			add_location(br0, file$3b, 14, 33, 503);
-    			add_location(br1, file$3b, 15, 36, 546);
-    			add_location(p1, file$3b, 13, 8, 465);
-    			set_style(div, "font-size", /*calcSubFontSize*/ ctx[2]() + "rem");
+    			add_location(p0, file$3b, 11, 4, 322);
+    			add_location(br0, file$3b, 14, 33, 462);
+    			add_location(br1, file$3b, 15, 36, 505);
+    			add_location(p1, file$3b, 13, 8, 424);
+    			set_style(div, "font-size", /*context*/ ctx[2] + "rem");
     			set_style(div, "text-align", "left");
     			set_style(div, "margin-top", "20px");
-    			add_location(div, file$3b, 12, 4, 374);
+    			add_location(div, file$3b, 12, 4, 343);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p0, anchor);
@@ -60113,7 +60441,11 @@ var app = (function (jquery) {
     			append_dev(p1, br1);
     			append_dev(p1, t4);
     		},
-    		p: noop,
+    		p: function update(ctx, dirty) {
+    			if (dirty & /*context*/ 4) {
+    				set_style(div, "font-size", /*context*/ ctx[2] + "rem");
+    			}
+    		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(p0);
     			if (detaching) detach_dev(t1);
@@ -60125,7 +60457,7 @@ var app = (function (jquery) {
     		block,
     		id: create_default_slot$2Z.name,
     		type: "slot",
-    		source: "(11:0) <DefaultPage color={color} fontSize={fontSize}>",
+    		source: "(11:0) <DefaultPage color={color} fontSize={subhead}>",
     		ctx
     	});
 
@@ -60139,7 +60471,7 @@ var app = (function (jquery) {
     	defaultpage = new DefaultPage({
     			props: {
     				color: /*color*/ ctx[0],
-    				fontSize: /*fontSize*/ ctx[1],
+    				fontSize: /*subhead*/ ctx[1],
     				$$slots: { default: [create_default_slot$2Z] },
     				$$scope: { ctx }
     			},
@@ -60160,9 +60492,9 @@ var app = (function (jquery) {
     		p: function update(ctx, [dirty]) {
     			const defaultpage_changes = {};
     			if (dirty & /*color*/ 1) defaultpage_changes.color = /*color*/ ctx[0];
-    			if (dirty & /*fontSize*/ 2) defaultpage_changes.fontSize = /*fontSize*/ ctx[1];
+    			if (dirty & /*subhead*/ 2) defaultpage_changes.fontSize = /*subhead*/ ctx[1];
 
-    			if (dirty & /*$$scope*/ 16) {
+    			if (dirty & /*$$scope, context*/ 20) {
     				defaultpage_changes.$$scope = { dirty, ctx };
     			}
 
@@ -60194,15 +60526,13 @@ var app = (function (jquery) {
     }
 
     function instance$4P($$self, $$props, $$invalidate) {
-    	let $Device;
-    	validate_store(Device, 'Device');
-    	component_subscribe($$self, Device, $$value => $$invalidate(3, $Device = $$value));
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('Page03', slots, []);
     	let { color = "transparent" } = $$props;
-    	let { fontSize = 2 } = $$props;
-    	const calcSubFontSize = () => !$Device["isMobile"] ? fontSize : fontSize / 2;
-    	const writable_props = ['color', 'fontSize'];
+    	let { head = 2 } = $$props;
+    	let { subhead = 1.5 } = $$props;
+    	let { context = 1 } = $$props;
+    	const writable_props = ['color', 'head', 'subhead', 'context'];
 
     	Object.keys($$props).forEach(key => {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<Page03> was created with unknown prop '${key}'`);
@@ -60210,34 +60540,44 @@ var app = (function (jquery) {
 
     	$$self.$$set = $$props => {
     		if ('color' in $$props) $$invalidate(0, color = $$props.color);
-    		if ('fontSize' in $$props) $$invalidate(1, fontSize = $$props.fontSize);
+    		if ('head' in $$props) $$invalidate(3, head = $$props.head);
+    		if ('subhead' in $$props) $$invalidate(1, subhead = $$props.subhead);
+    		if ('context' in $$props) $$invalidate(2, context = $$props.context);
     	};
 
     	$$self.$capture_state = () => ({
     		Device,
     		DefaultPage,
     		color,
-    		fontSize,
-    		calcSubFontSize,
-    		$Device
+    		head,
+    		subhead,
+    		context
     	});
 
     	$$self.$inject_state = $$props => {
     		if ('color' in $$props) $$invalidate(0, color = $$props.color);
-    		if ('fontSize' in $$props) $$invalidate(1, fontSize = $$props.fontSize);
+    		if ('head' in $$props) $$invalidate(3, head = $$props.head);
+    		if ('subhead' in $$props) $$invalidate(1, subhead = $$props.subhead);
+    		if ('context' in $$props) $$invalidate(2, context = $$props.context);
     	};
 
     	if ($$props && "$$inject" in $$props) {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [color, fontSize, calcSubFontSize];
+    	return [color, subhead, context, head];
     }
 
     class Page03$u extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$4P, create_fragment$4P, safe_not_equal, { color: 0, fontSize: 1 });
+
+    		init(this, options, instance$4P, create_fragment$4P, safe_not_equal, {
+    			color: 0,
+    			head: 3,
+    			subhead: 1,
+    			context: 2
+    		});
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
@@ -60255,11 +60595,27 @@ var app = (function (jquery) {
     		throw new Error("<Page03>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
 
-    	get fontSize() {
+    	get head() {
     		throw new Error("<Page03>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
 
-    	set fontSize(value) {
+    	set head(value) {
+    		throw new Error("<Page03>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get subhead() {
+    		throw new Error("<Page03>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set subhead(value) {
+    		throw new Error("<Page03>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get context() {
+    		throw new Error("<Page03>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set context(value) {
     		throw new Error("<Page03>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
     }
@@ -60267,7 +60623,7 @@ var app = (function (jquery) {
     /* src\component\PageDesign\Slide\2021\Projects\Downloader\Slide03\Page04.svelte generated by Svelte v3.55.1 */
     const file$3a = "src\\component\\PageDesign\\Slide\\2021\\Projects\\Downloader\\Slide03\\Page04.svelte";
 
-    // (11:0) <DefaultPage color={color} fontSize={fontSize}>
+    // (11:0) <DefaultPage color={color} fontSize={subhead}>
     function create_default_slot$2Y(ctx) {
     	let p0;
     	let t1;
@@ -60287,13 +60643,13 @@ var app = (function (jquery) {
     			t2 = text("- 다운로더 / 인스펙터에서 모두 수행");
     			br = element("br");
     			t3 = text("\r\n            - PCB에 전원을 끈 직후 전류값을 측정");
-    			add_location(p0, file$3a, 11, 4, 353);
-    			add_location(br, file$3a, 14, 33, 503);
-    			add_location(p1, file$3a, 13, 8, 465);
-    			set_style(div, "font-size", /*calcSubFontSize*/ ctx[2]() + "rem");
+    			add_location(p0, file$3a, 11, 4, 322);
+    			add_location(br, file$3a, 14, 33, 462);
+    			add_location(p1, file$3a, 13, 8, 424);
+    			set_style(div, "font-size", /*context*/ ctx[2] + "rem");
     			set_style(div, "text-align", "left");
     			set_style(div, "margin-top", "20px");
-    			add_location(div, file$3a, 12, 4, 374);
+    			add_location(div, file$3a, 12, 4, 343);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p0, anchor);
@@ -60304,7 +60660,11 @@ var app = (function (jquery) {
     			append_dev(p1, br);
     			append_dev(p1, t3);
     		},
-    		p: noop,
+    		p: function update(ctx, dirty) {
+    			if (dirty & /*context*/ 4) {
+    				set_style(div, "font-size", /*context*/ ctx[2] + "rem");
+    			}
+    		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(p0);
     			if (detaching) detach_dev(t1);
@@ -60316,7 +60676,7 @@ var app = (function (jquery) {
     		block,
     		id: create_default_slot$2Y.name,
     		type: "slot",
-    		source: "(11:0) <DefaultPage color={color} fontSize={fontSize}>",
+    		source: "(11:0) <DefaultPage color={color} fontSize={subhead}>",
     		ctx
     	});
 
@@ -60330,7 +60690,7 @@ var app = (function (jquery) {
     	defaultpage = new DefaultPage({
     			props: {
     				color: /*color*/ ctx[0],
-    				fontSize: /*fontSize*/ ctx[1],
+    				fontSize: /*subhead*/ ctx[1],
     				$$slots: { default: [create_default_slot$2Y] },
     				$$scope: { ctx }
     			},
@@ -60351,9 +60711,9 @@ var app = (function (jquery) {
     		p: function update(ctx, [dirty]) {
     			const defaultpage_changes = {};
     			if (dirty & /*color*/ 1) defaultpage_changes.color = /*color*/ ctx[0];
-    			if (dirty & /*fontSize*/ 2) defaultpage_changes.fontSize = /*fontSize*/ ctx[1];
+    			if (dirty & /*subhead*/ 2) defaultpage_changes.fontSize = /*subhead*/ ctx[1];
 
-    			if (dirty & /*$$scope*/ 16) {
+    			if (dirty & /*$$scope, context*/ 20) {
     				defaultpage_changes.$$scope = { dirty, ctx };
     			}
 
@@ -60385,15 +60745,13 @@ var app = (function (jquery) {
     }
 
     function instance$4O($$self, $$props, $$invalidate) {
-    	let $Device;
-    	validate_store(Device, 'Device');
-    	component_subscribe($$self, Device, $$value => $$invalidate(3, $Device = $$value));
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('Page04', slots, []);
     	let { color = "transparent" } = $$props;
-    	let { fontSize = 2 } = $$props;
-    	const calcSubFontSize = () => !$Device["isMobile"] ? fontSize : fontSize / 2;
-    	const writable_props = ['color', 'fontSize'];
+    	let { head = 2 } = $$props;
+    	let { subhead = 1.5 } = $$props;
+    	let { context = 1 } = $$props;
+    	const writable_props = ['color', 'head', 'subhead', 'context'];
 
     	Object.keys($$props).forEach(key => {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<Page04> was created with unknown prop '${key}'`);
@@ -60401,34 +60759,44 @@ var app = (function (jquery) {
 
     	$$self.$$set = $$props => {
     		if ('color' in $$props) $$invalidate(0, color = $$props.color);
-    		if ('fontSize' in $$props) $$invalidate(1, fontSize = $$props.fontSize);
+    		if ('head' in $$props) $$invalidate(3, head = $$props.head);
+    		if ('subhead' in $$props) $$invalidate(1, subhead = $$props.subhead);
+    		if ('context' in $$props) $$invalidate(2, context = $$props.context);
     	};
 
     	$$self.$capture_state = () => ({
     		Device,
     		DefaultPage,
     		color,
-    		fontSize,
-    		calcSubFontSize,
-    		$Device
+    		head,
+    		subhead,
+    		context
     	});
 
     	$$self.$inject_state = $$props => {
     		if ('color' in $$props) $$invalidate(0, color = $$props.color);
-    		if ('fontSize' in $$props) $$invalidate(1, fontSize = $$props.fontSize);
+    		if ('head' in $$props) $$invalidate(3, head = $$props.head);
+    		if ('subhead' in $$props) $$invalidate(1, subhead = $$props.subhead);
+    		if ('context' in $$props) $$invalidate(2, context = $$props.context);
     	};
 
     	if ($$props && "$$inject" in $$props) {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [color, fontSize, calcSubFontSize];
+    	return [color, subhead, context, head];
     }
 
     class Page04$7 extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$4O, create_fragment$4O, safe_not_equal, { color: 0, fontSize: 1 });
+
+    		init(this, options, instance$4O, create_fragment$4O, safe_not_equal, {
+    			color: 0,
+    			head: 3,
+    			subhead: 1,
+    			context: 2
+    		});
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
@@ -60446,11 +60814,27 @@ var app = (function (jquery) {
     		throw new Error("<Page04>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
 
-    	get fontSize() {
+    	get head() {
     		throw new Error("<Page04>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
 
-    	set fontSize(value) {
+    	set head(value) {
+    		throw new Error("<Page04>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get subhead() {
+    		throw new Error("<Page04>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set subhead(value) {
+    		throw new Error("<Page04>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get context() {
+    		throw new Error("<Page04>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set context(value) {
     		throw new Error("<Page04>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
     }
@@ -60458,7 +60842,7 @@ var app = (function (jquery) {
     /* src\component\PageDesign\Slide\2021\Projects\Downloader\Slide03\Page05.svelte generated by Svelte v3.55.1 */
     const file$39 = "src\\component\\PageDesign\\Slide\\2021\\Projects\\Downloader\\Slide03\\Page05.svelte";
 
-    // (11:0) <DefaultPage color={color} fontSize={fontSize}>
+    // (11:0) <DefaultPage color={color} fontSize={subhead}>
     function create_default_slot$2X(ctx) {
     	let p0;
     	let t1;
@@ -60486,15 +60870,15 @@ var app = (function (jquery) {
     			t4 = text("\r\n            - IR을 인식한 직후 매우 큰 전압 펄스가 1회 발생");
     			br2 = element("br");
     			t5 = text("\r\n            - 전압 펄스 발생 후 전압은 구형파를 형성");
-    			add_location(p0, file$39, 11, 4, 353);
-    			add_location(br0, file$39, 14, 24, 494);
-    			add_location(br1, file$39, 15, 40, 541);
-    			add_location(br2, file$39, 16, 42, 590);
-    			add_location(p1, file$39, 13, 8, 465);
-    			set_style(div, "font-size", /*calcSubFontSize*/ ctx[2]() + "rem");
+    			add_location(p0, file$39, 11, 4, 322);
+    			add_location(br0, file$39, 14, 24, 453);
+    			add_location(br1, file$39, 15, 40, 500);
+    			add_location(br2, file$39, 16, 42, 549);
+    			add_location(p1, file$39, 13, 8, 424);
+    			set_style(div, "font-size", /*context*/ ctx[2] + "rem");
     			set_style(div, "text-align", "left");
     			set_style(div, "margin-top", "20px");
-    			add_location(div, file$39, 12, 4, 374);
+    			add_location(div, file$39, 12, 4, 343);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p0, anchor);
@@ -60509,7 +60893,11 @@ var app = (function (jquery) {
     			append_dev(p1, br2);
     			append_dev(p1, t5);
     		},
-    		p: noop,
+    		p: function update(ctx, dirty) {
+    			if (dirty & /*context*/ 4) {
+    				set_style(div, "font-size", /*context*/ ctx[2] + "rem");
+    			}
+    		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(p0);
     			if (detaching) detach_dev(t1);
@@ -60521,7 +60909,7 @@ var app = (function (jquery) {
     		block,
     		id: create_default_slot$2X.name,
     		type: "slot",
-    		source: "(11:0) <DefaultPage color={color} fontSize={fontSize}>",
+    		source: "(11:0) <DefaultPage color={color} fontSize={subhead}>",
     		ctx
     	});
 
@@ -60535,7 +60923,7 @@ var app = (function (jquery) {
     	defaultpage = new DefaultPage({
     			props: {
     				color: /*color*/ ctx[0],
-    				fontSize: /*fontSize*/ ctx[1],
+    				fontSize: /*subhead*/ ctx[1],
     				$$slots: { default: [create_default_slot$2X] },
     				$$scope: { ctx }
     			},
@@ -60556,9 +60944,9 @@ var app = (function (jquery) {
     		p: function update(ctx, [dirty]) {
     			const defaultpage_changes = {};
     			if (dirty & /*color*/ 1) defaultpage_changes.color = /*color*/ ctx[0];
-    			if (dirty & /*fontSize*/ 2) defaultpage_changes.fontSize = /*fontSize*/ ctx[1];
+    			if (dirty & /*subhead*/ 2) defaultpage_changes.fontSize = /*subhead*/ ctx[1];
 
-    			if (dirty & /*$$scope*/ 16) {
+    			if (dirty & /*$$scope, context*/ 20) {
     				defaultpage_changes.$$scope = { dirty, ctx };
     			}
 
@@ -60590,15 +60978,13 @@ var app = (function (jquery) {
     }
 
     function instance$4N($$self, $$props, $$invalidate) {
-    	let $Device;
-    	validate_store(Device, 'Device');
-    	component_subscribe($$self, Device, $$value => $$invalidate(3, $Device = $$value));
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('Page05', slots, []);
     	let { color = "transparent" } = $$props;
-    	let { fontSize = 2 } = $$props;
-    	const calcSubFontSize = () => !$Device["isMobile"] ? fontSize : fontSize / 2;
-    	const writable_props = ['color', 'fontSize'];
+    	let { head = 2 } = $$props;
+    	let { subhead = 1.5 } = $$props;
+    	let { context = 1 } = $$props;
+    	const writable_props = ['color', 'head', 'subhead', 'context'];
 
     	Object.keys($$props).forEach(key => {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<Page05> was created with unknown prop '${key}'`);
@@ -60606,34 +60992,44 @@ var app = (function (jquery) {
 
     	$$self.$$set = $$props => {
     		if ('color' in $$props) $$invalidate(0, color = $$props.color);
-    		if ('fontSize' in $$props) $$invalidate(1, fontSize = $$props.fontSize);
+    		if ('head' in $$props) $$invalidate(3, head = $$props.head);
+    		if ('subhead' in $$props) $$invalidate(1, subhead = $$props.subhead);
+    		if ('context' in $$props) $$invalidate(2, context = $$props.context);
     	};
 
     	$$self.$capture_state = () => ({
     		Device,
     		DefaultPage,
     		color,
-    		fontSize,
-    		calcSubFontSize,
-    		$Device
+    		head,
+    		subhead,
+    		context
     	});
 
     	$$self.$inject_state = $$props => {
     		if ('color' in $$props) $$invalidate(0, color = $$props.color);
-    		if ('fontSize' in $$props) $$invalidate(1, fontSize = $$props.fontSize);
+    		if ('head' in $$props) $$invalidate(3, head = $$props.head);
+    		if ('subhead' in $$props) $$invalidate(1, subhead = $$props.subhead);
+    		if ('context' in $$props) $$invalidate(2, context = $$props.context);
     	};
 
     	if ($$props && "$$inject" in $$props) {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [color, fontSize, calcSubFontSize];
+    	return [color, subhead, context, head];
     }
 
     class Page05$6 extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$4N, create_fragment$4N, safe_not_equal, { color: 0, fontSize: 1 });
+
+    		init(this, options, instance$4N, create_fragment$4N, safe_not_equal, {
+    			color: 0,
+    			head: 3,
+    			subhead: 1,
+    			context: 2
+    		});
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
@@ -60651,11 +61047,27 @@ var app = (function (jquery) {
     		throw new Error("<Page05>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
 
-    	get fontSize() {
+    	get head() {
     		throw new Error("<Page05>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
 
-    	set fontSize(value) {
+    	set head(value) {
+    		throw new Error("<Page05>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get subhead() {
+    		throw new Error("<Page05>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set subhead(value) {
+    		throw new Error("<Page05>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get context() {
+    		throw new Error("<Page05>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set context(value) {
     		throw new Error("<Page05>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
     }
@@ -60663,7 +61075,7 @@ var app = (function (jquery) {
     /* src\component\PageDesign\Slide\2021\Projects\Downloader\Slide03\Page06.svelte generated by Svelte v3.55.1 */
     const file$38 = "src\\component\\PageDesign\\Slide\\2021\\Projects\\Downloader\\Slide03\\Page06.svelte";
 
-    // (11:0) <DefaultPage color={color} fontSize={fontSize}>
+    // (11:0) <DefaultPage color={color} fontSize={subhead}>
     function create_default_slot$2W(ctx) {
     	let p0;
     	let t1;
@@ -60683,13 +61095,13 @@ var app = (function (jquery) {
     			t2 = text("- 다운로더에서만 수행");
     			br = element("br");
     			t3 = text("\r\n            - PCB에 지정된 펌웨어를 업로드");
-    			add_location(p0, file$38, 11, 4, 353);
-    			add_location(br, file$38, 14, 24, 493);
-    			add_location(p1, file$38, 13, 8, 464);
-    			set_style(div, "font-size", /*calcSubFontSize*/ ctx[2]() + "rem");
+    			add_location(p0, file$38, 11, 4, 322);
+    			add_location(br, file$38, 14, 24, 452);
+    			add_location(p1, file$38, 13, 8, 423);
+    			set_style(div, "font-size", /*context*/ ctx[2] + "rem");
     			set_style(div, "text-align", "left");
     			set_style(div, "margin-top", "20px");
-    			add_location(div, file$38, 12, 4, 373);
+    			add_location(div, file$38, 12, 4, 342);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p0, anchor);
@@ -60700,7 +61112,11 @@ var app = (function (jquery) {
     			append_dev(p1, br);
     			append_dev(p1, t3);
     		},
-    		p: noop,
+    		p: function update(ctx, dirty) {
+    			if (dirty & /*context*/ 4) {
+    				set_style(div, "font-size", /*context*/ ctx[2] + "rem");
+    			}
+    		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(p0);
     			if (detaching) detach_dev(t1);
@@ -60712,7 +61128,7 @@ var app = (function (jquery) {
     		block,
     		id: create_default_slot$2W.name,
     		type: "slot",
-    		source: "(11:0) <DefaultPage color={color} fontSize={fontSize}>",
+    		source: "(11:0) <DefaultPage color={color} fontSize={subhead}>",
     		ctx
     	});
 
@@ -60726,7 +61142,7 @@ var app = (function (jquery) {
     	defaultpage = new DefaultPage({
     			props: {
     				color: /*color*/ ctx[0],
-    				fontSize: /*fontSize*/ ctx[1],
+    				fontSize: /*subhead*/ ctx[1],
     				$$slots: { default: [create_default_slot$2W] },
     				$$scope: { ctx }
     			},
@@ -60747,9 +61163,9 @@ var app = (function (jquery) {
     		p: function update(ctx, [dirty]) {
     			const defaultpage_changes = {};
     			if (dirty & /*color*/ 1) defaultpage_changes.color = /*color*/ ctx[0];
-    			if (dirty & /*fontSize*/ 2) defaultpage_changes.fontSize = /*fontSize*/ ctx[1];
+    			if (dirty & /*subhead*/ 2) defaultpage_changes.fontSize = /*subhead*/ ctx[1];
 
-    			if (dirty & /*$$scope*/ 16) {
+    			if (dirty & /*$$scope, context*/ 20) {
     				defaultpage_changes.$$scope = { dirty, ctx };
     			}
 
@@ -60781,15 +61197,13 @@ var app = (function (jquery) {
     }
 
     function instance$4M($$self, $$props, $$invalidate) {
-    	let $Device;
-    	validate_store(Device, 'Device');
-    	component_subscribe($$self, Device, $$value => $$invalidate(3, $Device = $$value));
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('Page06', slots, []);
     	let { color = "transparent" } = $$props;
-    	let { fontSize = 2 } = $$props;
-    	const calcSubFontSize = () => !$Device["isMobile"] ? fontSize : fontSize / 2;
-    	const writable_props = ['color', 'fontSize'];
+    	let { head = 2 } = $$props;
+    	let { subhead = 1.5 } = $$props;
+    	let { context = 1 } = $$props;
+    	const writable_props = ['color', 'head', 'subhead', 'context'];
 
     	Object.keys($$props).forEach(key => {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<Page06> was created with unknown prop '${key}'`);
@@ -60797,34 +61211,44 @@ var app = (function (jquery) {
 
     	$$self.$$set = $$props => {
     		if ('color' in $$props) $$invalidate(0, color = $$props.color);
-    		if ('fontSize' in $$props) $$invalidate(1, fontSize = $$props.fontSize);
+    		if ('head' in $$props) $$invalidate(3, head = $$props.head);
+    		if ('subhead' in $$props) $$invalidate(1, subhead = $$props.subhead);
+    		if ('context' in $$props) $$invalidate(2, context = $$props.context);
     	};
 
     	$$self.$capture_state = () => ({
     		Device,
     		DefaultPage,
     		color,
-    		fontSize,
-    		calcSubFontSize,
-    		$Device
+    		head,
+    		subhead,
+    		context
     	});
 
     	$$self.$inject_state = $$props => {
     		if ('color' in $$props) $$invalidate(0, color = $$props.color);
-    		if ('fontSize' in $$props) $$invalidate(1, fontSize = $$props.fontSize);
+    		if ('head' in $$props) $$invalidate(3, head = $$props.head);
+    		if ('subhead' in $$props) $$invalidate(1, subhead = $$props.subhead);
+    		if ('context' in $$props) $$invalidate(2, context = $$props.context);
     	};
 
     	if ($$props && "$$inject" in $$props) {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [color, fontSize, calcSubFontSize];
+    	return [color, subhead, context, head];
     }
 
     class Page06$2 extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$4M, create_fragment$4M, safe_not_equal, { color: 0, fontSize: 1 });
+
+    		init(this, options, instance$4M, create_fragment$4M, safe_not_equal, {
+    			color: 0,
+    			head: 3,
+    			subhead: 1,
+    			context: 2
+    		});
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
@@ -60842,11 +61266,27 @@ var app = (function (jquery) {
     		throw new Error("<Page06>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
 
-    	get fontSize() {
+    	get head() {
     		throw new Error("<Page06>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
 
-    	set fontSize(value) {
+    	set head(value) {
+    		throw new Error("<Page06>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get subhead() {
+    		throw new Error("<Page06>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set subhead(value) {
+    		throw new Error("<Page06>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get context() {
+    		throw new Error("<Page06>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set context(value) {
     		throw new Error("<Page06>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
     }
@@ -61088,7 +61528,7 @@ var app = (function (jquery) {
     /* src\component\PageDesign\Slide\2021\Projects\Downloader\Slide04\Page01.svelte generated by Svelte v3.55.1 */
     const file$37 = "src\\component\\PageDesign\\Slide\\2021\\Projects\\Downloader\\Slide04\\Page01.svelte";
 
-    // (8:0) <DefaultPage color={color} fontSize={fontSize}>
+    // (10:0) <DefaultPage color={color} fontSize={head}>
     function create_default_slot$2V(ctx) {
     	let p;
 
@@ -61096,7 +61536,7 @@ var app = (function (jquery) {
     		c: function create() {
     			p = element("p");
     			p.textContent = "Architecture";
-    			add_location(p, file$37, 8, 4, 208);
+    			add_location(p, file$37, 10, 4, 261);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -61111,7 +61551,7 @@ var app = (function (jquery) {
     		block,
     		id: create_default_slot$2V.name,
     		type: "slot",
-    		source: "(8:0) <DefaultPage color={color} fontSize={fontSize}>",
+    		source: "(10:0) <DefaultPage color={color} fontSize={head}>",
     		ctx
     	});
 
@@ -61125,7 +61565,7 @@ var app = (function (jquery) {
     	defaultpage = new DefaultPage({
     			props: {
     				color: /*color*/ ctx[0],
-    				fontSize: /*fontSize*/ ctx[1],
+    				fontSize: /*head*/ ctx[1],
     				$$slots: { default: [create_default_slot$2V] },
     				$$scope: { ctx }
     			},
@@ -61146,9 +61586,9 @@ var app = (function (jquery) {
     		p: function update(ctx, [dirty]) {
     			const defaultpage_changes = {};
     			if (dirty & /*color*/ 1) defaultpage_changes.color = /*color*/ ctx[0];
-    			if (dirty & /*fontSize*/ 2) defaultpage_changes.fontSize = /*fontSize*/ ctx[1];
+    			if (dirty & /*head*/ 2) defaultpage_changes.fontSize = /*head*/ ctx[1];
 
-    			if (dirty & /*$$scope*/ 4) {
+    			if (dirty & /*$$scope*/ 16) {
     				defaultpage_changes.$$scope = { dirty, ctx };
     			}
 
@@ -61183,8 +61623,10 @@ var app = (function (jquery) {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('Page01', slots, []);
     	let { color = "transparent" } = $$props;
-    	let { fontSize = 2 } = $$props;
-    	const writable_props = ['color', 'fontSize'];
+    	let { head = 2 } = $$props;
+    	let { subhead = 1.5 } = $$props;
+    	let { context = 1 } = $$props;
+    	const writable_props = ['color', 'head', 'subhead', 'context'];
 
     	Object.keys($$props).forEach(key => {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<Page01> was created with unknown prop '${key}'`);
@@ -61192,27 +61634,43 @@ var app = (function (jquery) {
 
     	$$self.$$set = $$props => {
     		if ('color' in $$props) $$invalidate(0, color = $$props.color);
-    		if ('fontSize' in $$props) $$invalidate(1, fontSize = $$props.fontSize);
+    		if ('head' in $$props) $$invalidate(1, head = $$props.head);
+    		if ('subhead' in $$props) $$invalidate(2, subhead = $$props.subhead);
+    		if ('context' in $$props) $$invalidate(3, context = $$props.context);
     	};
 
-    	$$self.$capture_state = () => ({ DefaultPage, color, fontSize });
+    	$$self.$capture_state = () => ({
+    		DefaultPage,
+    		color,
+    		head,
+    		subhead,
+    		context
+    	});
 
     	$$self.$inject_state = $$props => {
     		if ('color' in $$props) $$invalidate(0, color = $$props.color);
-    		if ('fontSize' in $$props) $$invalidate(1, fontSize = $$props.fontSize);
+    		if ('head' in $$props) $$invalidate(1, head = $$props.head);
+    		if ('subhead' in $$props) $$invalidate(2, subhead = $$props.subhead);
+    		if ('context' in $$props) $$invalidate(3, context = $$props.context);
     	};
 
     	if ($$props && "$$inject" in $$props) {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [color, fontSize];
+    	return [color, head, subhead, context];
     }
 
     class Page01$1k extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$4K, create_fragment$4K, safe_not_equal, { color: 0, fontSize: 1 });
+
+    		init(this, options, instance$4K, create_fragment$4K, safe_not_equal, {
+    			color: 0,
+    			head: 1,
+    			subhead: 2,
+    			context: 3
+    		});
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
@@ -61230,21 +61688,35 @@ var app = (function (jquery) {
     		throw new Error("<Page01>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
 
-    	get fontSize() {
+    	get head() {
     		throw new Error("<Page01>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
 
-    	set fontSize(value) {
+    	set head(value) {
+    		throw new Error("<Page01>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get subhead() {
+    		throw new Error("<Page01>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set subhead(value) {
+    		throw new Error("<Page01>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get context() {
+    		throw new Error("<Page01>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set context(value) {
     		throw new Error("<Page01>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
     }
 
     /* src\component\PageDesign\Slide\2021\Projects\Downloader\Slide04\Page02.svelte generated by Svelte v3.55.1 */
-
-    const { console: console_1$1u } = globals;
     const file$36 = "src\\component\\PageDesign\\Slide\\2021\\Projects\\Downloader\\Slide04\\Page02.svelte";
 
-    // (16:0) <DefaultPage color={color} fontSize={fontSize} bind:curPage={curPage}>
+    // (14:0) <DefaultPage color={color} fontSize={subhead} bind:curPage={curPage}>
     function create_default_slot$2U(ctx) {
     	let div0;
     	let p;
@@ -61286,51 +61758,51 @@ var app = (function (jquery) {
     			t9 = space();
     			div5 = element("div");
     			t10 = text("Oscillo");
-    			add_location(p, file$36, 17, 8, 555);
+    			add_location(p, file$36, 15, 8, 474);
     			set_style(div0, "position", "absolute");
     			set_style(div0, "top", "5%");
     			set_style(div0, "width", "100%");
-    			add_location(div0, file$36, 16, 4, 493);
+    			add_location(div0, file$36, 14, 4, 412);
     			attr_dev(div1, "class", "borderBox svelte-dkvksn");
-    			set_style(div1, "font-size", /*calcSubFontSize*/ ctx[5]() * 0.8 + "rem");
-    			set_style(div1, "border", "solid " + /*$Color*/ ctx[4]["btnBdrColor"][/*$season*/ ctx[3]] + " 1px");
-    			set_style(div1, "background-color", /*$Color*/ ctx[4]["btnBackColor"][/*$season*/ ctx[3]]);
-    			set_style(div1, "color", /*$Color*/ ctx[4]["btnBdrColor"][/*$season*/ ctx[3]]);
+    			set_style(div1, "font-size", /*context*/ ctx[3] + "rem");
+    			set_style(div1, "border", "solid " + /*$Color*/ ctx[4]["btnBdrColor"][/*$season*/ ctx[5]] + " 1px");
+    			set_style(div1, "background-color", /*$Color*/ ctx[4]["btnBackColor"][/*$season*/ ctx[5]]);
+    			set_style(div1, "color", /*$Color*/ ctx[4]["btnBdrColor"][/*$season*/ ctx[5]]);
     			set_style(div1, "top", "35%");
     			set_style(div1, "left", "30%");
-    			add_location(div1, file$36, 19, 4, 585);
+    			add_location(div1, file$36, 17, 4, 504);
     			attr_dev(div2, "class", "borderBox svelte-dkvksn");
-    			set_style(div2, "font-size", /*calcSubFontSize*/ ctx[5]() * 0.8 + "rem");
-    			set_style(div2, "border", "solid " + /*$Color*/ ctx[4]["btnBdrColor"][/*$season*/ ctx[3]] + " 1px");
-    			set_style(div2, "background-color", /*$Color*/ ctx[4]["btnBackColor"][/*$season*/ ctx[3]]);
-    			set_style(div2, "color", /*$Color*/ ctx[4]["btnBdrColor"][/*$season*/ ctx[3]]);
+    			set_style(div2, "font-size", /*context*/ ctx[3] + "rem");
+    			set_style(div2, "border", "solid " + /*$Color*/ ctx[4]["btnBdrColor"][/*$season*/ ctx[5]] + " 1px");
+    			set_style(div2, "background-color", /*$Color*/ ctx[4]["btnBackColor"][/*$season*/ ctx[5]]);
+    			set_style(div2, "color", /*$Color*/ ctx[4]["btnBdrColor"][/*$season*/ ctx[5]]);
     			set_style(div2, "top", "35%");
     			set_style(div2, "left", "50%");
-    			add_location(div2, file$36, 24, 4, 920);
+    			add_location(div2, file$36, 22, 4, 823);
     			attr_dev(div3, "class", "borderBox svelte-dkvksn");
-    			set_style(div3, "font-size", /*calcSubFontSize*/ ctx[5]() * 0.8 + "rem");
-    			set_style(div3, "border", "solid " + /*$Color*/ ctx[4]["btnBdrColor"][/*$season*/ ctx[3]] + " 1px");
-    			set_style(div3, "background-color", /*$Color*/ ctx[4]["btnBackColor"][/*$season*/ ctx[3]]);
-    			set_style(div3, "color", /*$Color*/ ctx[4]["btnBdrColor"][/*$season*/ ctx[3]]);
+    			set_style(div3, "font-size", /*context*/ ctx[3] + "rem");
+    			set_style(div3, "border", "solid " + /*$Color*/ ctx[4]["btnBdrColor"][/*$season*/ ctx[5]] + " 1px");
+    			set_style(div3, "background-color", /*$Color*/ ctx[4]["btnBackColor"][/*$season*/ ctx[5]]);
+    			set_style(div3, "color", /*$Color*/ ctx[4]["btnBdrColor"][/*$season*/ ctx[5]]);
     			set_style(div3, "top", "35%");
     			set_style(div3, "left", "70%");
-    			add_location(div3, file$36, 28, 4, 1195);
+    			add_location(div3, file$36, 26, 4, 1082);
     			attr_dev(div4, "class", "borderBox svelte-dkvksn");
-    			set_style(div4, "font-size", /*calcSubFontSize*/ ctx[5]() * 0.8 + "rem");
-    			set_style(div4, "border", "solid " + /*$Color*/ ctx[4]["btnBdrColor"][/*$season*/ ctx[3]] + " 1px");
-    			set_style(div4, "background-color", /*$Color*/ ctx[4]["btnBackColor"][/*$season*/ ctx[3]]);
-    			set_style(div4, "color", /*$Color*/ ctx[4]["btnBdrColor"][/*$season*/ ctx[3]]);
+    			set_style(div4, "font-size", /*context*/ ctx[3] + "rem");
+    			set_style(div4, "border", "solid " + /*$Color*/ ctx[4]["btnBdrColor"][/*$season*/ ctx[5]] + " 1px");
+    			set_style(div4, "background-color", /*$Color*/ ctx[4]["btnBackColor"][/*$season*/ ctx[5]]);
+    			set_style(div4, "color", /*$Color*/ ctx[4]["btnBdrColor"][/*$season*/ ctx[5]]);
     			set_style(div4, "top", "65%");
     			set_style(div4, "left", "40%");
-    			add_location(div4, file$36, 32, 4, 1470);
+    			add_location(div4, file$36, 30, 4, 1341);
     			attr_dev(div5, "class", "borderBox svelte-dkvksn");
-    			set_style(div5, "font-size", /*calcSubFontSize*/ ctx[5]() * 0.8 + "rem");
-    			set_style(div5, "border", "solid " + /*$Color*/ ctx[4]["btnBdrColor"][/*$season*/ ctx[3]] + " 1px");
-    			set_style(div5, "background-color", /*$Color*/ ctx[4]["btnBackColor"][/*$season*/ ctx[3]]);
-    			set_style(div5, "color", /*$Color*/ ctx[4]["btnBdrColor"][/*$season*/ ctx[3]]);
+    			set_style(div5, "font-size", /*context*/ ctx[3] + "rem");
+    			set_style(div5, "border", "solid " + /*$Color*/ ctx[4]["btnBdrColor"][/*$season*/ ctx[5]] + " 1px");
+    			set_style(div5, "background-color", /*$Color*/ ctx[4]["btnBackColor"][/*$season*/ ctx[5]]);
+    			set_style(div5, "color", /*$Color*/ ctx[4]["btnBdrColor"][/*$season*/ ctx[5]]);
     			set_style(div5, "top", "65%");
     			set_style(div5, "left", "60%");
-    			add_location(div5, file$36, 36, 4, 1746);
+    			add_location(div5, file$36, 34, 4, 1601);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div0, anchor);
@@ -61353,7 +61825,7 @@ var app = (function (jquery) {
 
     			if (!mounted) {
     				dispose = [
-    					listen_dev(div1, "click", /*click_handler*/ ctx[6], false, false, false),
+    					listen_dev(div1, "click", /*click_handler*/ ctx[7], false, false, false),
     					listen_dev(div1, "keydown", keydown_handler$c, false, false, false)
     				];
 
@@ -61361,64 +61833,84 @@ var app = (function (jquery) {
     			}
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*$Color, $season*/ 24) {
-    				set_style(div1, "border", "solid " + /*$Color*/ ctx[4]["btnBdrColor"][/*$season*/ ctx[3]] + " 1px");
+    			if (dirty & /*context*/ 8) {
+    				set_style(div1, "font-size", /*context*/ ctx[3] + "rem");
     			}
 
-    			if (dirty & /*$Color, $season*/ 24) {
-    				set_style(div1, "background-color", /*$Color*/ ctx[4]["btnBackColor"][/*$season*/ ctx[3]]);
+    			if (dirty & /*$Color, $season*/ 48) {
+    				set_style(div1, "border", "solid " + /*$Color*/ ctx[4]["btnBdrColor"][/*$season*/ ctx[5]] + " 1px");
     			}
 
-    			if (dirty & /*$Color, $season*/ 24) {
-    				set_style(div1, "color", /*$Color*/ ctx[4]["btnBdrColor"][/*$season*/ ctx[3]]);
+    			if (dirty & /*$Color, $season*/ 48) {
+    				set_style(div1, "background-color", /*$Color*/ ctx[4]["btnBackColor"][/*$season*/ ctx[5]]);
     			}
 
-    			if (dirty & /*$Color, $season*/ 24) {
-    				set_style(div2, "border", "solid " + /*$Color*/ ctx[4]["btnBdrColor"][/*$season*/ ctx[3]] + " 1px");
+    			if (dirty & /*$Color, $season*/ 48) {
+    				set_style(div1, "color", /*$Color*/ ctx[4]["btnBdrColor"][/*$season*/ ctx[5]]);
     			}
 
-    			if (dirty & /*$Color, $season*/ 24) {
-    				set_style(div2, "background-color", /*$Color*/ ctx[4]["btnBackColor"][/*$season*/ ctx[3]]);
+    			if (dirty & /*context*/ 8) {
+    				set_style(div2, "font-size", /*context*/ ctx[3] + "rem");
     			}
 
-    			if (dirty & /*$Color, $season*/ 24) {
-    				set_style(div2, "color", /*$Color*/ ctx[4]["btnBdrColor"][/*$season*/ ctx[3]]);
+    			if (dirty & /*$Color, $season*/ 48) {
+    				set_style(div2, "border", "solid " + /*$Color*/ ctx[4]["btnBdrColor"][/*$season*/ ctx[5]] + " 1px");
     			}
 
-    			if (dirty & /*$Color, $season*/ 24) {
-    				set_style(div3, "border", "solid " + /*$Color*/ ctx[4]["btnBdrColor"][/*$season*/ ctx[3]] + " 1px");
+    			if (dirty & /*$Color, $season*/ 48) {
+    				set_style(div2, "background-color", /*$Color*/ ctx[4]["btnBackColor"][/*$season*/ ctx[5]]);
     			}
 
-    			if (dirty & /*$Color, $season*/ 24) {
-    				set_style(div3, "background-color", /*$Color*/ ctx[4]["btnBackColor"][/*$season*/ ctx[3]]);
+    			if (dirty & /*$Color, $season*/ 48) {
+    				set_style(div2, "color", /*$Color*/ ctx[4]["btnBdrColor"][/*$season*/ ctx[5]]);
     			}
 
-    			if (dirty & /*$Color, $season*/ 24) {
-    				set_style(div3, "color", /*$Color*/ ctx[4]["btnBdrColor"][/*$season*/ ctx[3]]);
+    			if (dirty & /*context*/ 8) {
+    				set_style(div3, "font-size", /*context*/ ctx[3] + "rem");
     			}
 
-    			if (dirty & /*$Color, $season*/ 24) {
-    				set_style(div4, "border", "solid " + /*$Color*/ ctx[4]["btnBdrColor"][/*$season*/ ctx[3]] + " 1px");
+    			if (dirty & /*$Color, $season*/ 48) {
+    				set_style(div3, "border", "solid " + /*$Color*/ ctx[4]["btnBdrColor"][/*$season*/ ctx[5]] + " 1px");
     			}
 
-    			if (dirty & /*$Color, $season*/ 24) {
-    				set_style(div4, "background-color", /*$Color*/ ctx[4]["btnBackColor"][/*$season*/ ctx[3]]);
+    			if (dirty & /*$Color, $season*/ 48) {
+    				set_style(div3, "background-color", /*$Color*/ ctx[4]["btnBackColor"][/*$season*/ ctx[5]]);
     			}
 
-    			if (dirty & /*$Color, $season*/ 24) {
-    				set_style(div4, "color", /*$Color*/ ctx[4]["btnBdrColor"][/*$season*/ ctx[3]]);
+    			if (dirty & /*$Color, $season*/ 48) {
+    				set_style(div3, "color", /*$Color*/ ctx[4]["btnBdrColor"][/*$season*/ ctx[5]]);
     			}
 
-    			if (dirty & /*$Color, $season*/ 24) {
-    				set_style(div5, "border", "solid " + /*$Color*/ ctx[4]["btnBdrColor"][/*$season*/ ctx[3]] + " 1px");
+    			if (dirty & /*context*/ 8) {
+    				set_style(div4, "font-size", /*context*/ ctx[3] + "rem");
     			}
 
-    			if (dirty & /*$Color, $season*/ 24) {
-    				set_style(div5, "background-color", /*$Color*/ ctx[4]["btnBackColor"][/*$season*/ ctx[3]]);
+    			if (dirty & /*$Color, $season*/ 48) {
+    				set_style(div4, "border", "solid " + /*$Color*/ ctx[4]["btnBdrColor"][/*$season*/ ctx[5]] + " 1px");
     			}
 
-    			if (dirty & /*$Color, $season*/ 24) {
-    				set_style(div5, "color", /*$Color*/ ctx[4]["btnBdrColor"][/*$season*/ ctx[3]]);
+    			if (dirty & /*$Color, $season*/ 48) {
+    				set_style(div4, "background-color", /*$Color*/ ctx[4]["btnBackColor"][/*$season*/ ctx[5]]);
+    			}
+
+    			if (dirty & /*$Color, $season*/ 48) {
+    				set_style(div4, "color", /*$Color*/ ctx[4]["btnBdrColor"][/*$season*/ ctx[5]]);
+    			}
+
+    			if (dirty & /*context*/ 8) {
+    				set_style(div5, "font-size", /*context*/ ctx[3] + "rem");
+    			}
+
+    			if (dirty & /*$Color, $season*/ 48) {
+    				set_style(div5, "border", "solid " + /*$Color*/ ctx[4]["btnBdrColor"][/*$season*/ ctx[5]] + " 1px");
+    			}
+
+    			if (dirty & /*$Color, $season*/ 48) {
+    				set_style(div5, "background-color", /*$Color*/ ctx[4]["btnBackColor"][/*$season*/ ctx[5]]);
+    			}
+
+    			if (dirty & /*$Color, $season*/ 48) {
+    				set_style(div5, "color", /*$Color*/ ctx[4]["btnBdrColor"][/*$season*/ ctx[5]]);
     			}
     		},
     		d: function destroy(detaching) {
@@ -61442,7 +61934,7 @@ var app = (function (jquery) {
     		block,
     		id: create_default_slot$2U.name,
     		type: "slot",
-    		source: "(16:0) <DefaultPage color={color} fontSize={fontSize} bind:curPage={curPage}>",
+    		source: "(14:0) <DefaultPage color={color} fontSize={subhead} bind:curPage={curPage}>",
     		ctx
     	});
 
@@ -61455,12 +61947,12 @@ var app = (function (jquery) {
     	let current;
 
     	function defaultpage_curPage_binding(value) {
-    		/*defaultpage_curPage_binding*/ ctx[7](value);
+    		/*defaultpage_curPage_binding*/ ctx[8](value);
     	}
 
     	let defaultpage_props = {
     		color: /*color*/ ctx[1],
-    		fontSize: /*fontSize*/ ctx[2],
+    		fontSize: /*subhead*/ ctx[2],
     		$$slots: { default: [create_default_slot$2U] },
     		$$scope: { ctx }
     	};
@@ -61486,9 +61978,9 @@ var app = (function (jquery) {
     		p: function update(ctx, [dirty]) {
     			const defaultpage_changes = {};
     			if (dirty & /*color*/ 2) defaultpage_changes.color = /*color*/ ctx[1];
-    			if (dirty & /*fontSize*/ 4) defaultpage_changes.fontSize = /*fontSize*/ ctx[2];
+    			if (dirty & /*subhead*/ 4) defaultpage_changes.fontSize = /*subhead*/ ctx[2];
 
-    			if (dirty & /*$$scope, $Color, $season, curPage*/ 1049) {
+    			if (dirty & /*$$scope, context, $Color, $season, curPage*/ 1081) {
     				defaultpage_changes.$$scope = { dirty, ctx };
     			}
 
@@ -61530,34 +62022,31 @@ var app = (function (jquery) {
     };
 
     function instance$4J($$self, $$props, $$invalidate) {
-    	let $Device;
-    	let $season;
     	let $Color;
-    	validate_store(Device, 'Device');
-    	component_subscribe($$self, Device, $$value => $$invalidate(8, $Device = $$value));
-    	validate_store(season, 'season');
-    	component_subscribe($$self, season, $$value => $$invalidate(3, $season = $$value));
+    	let $season;
     	validate_store(Color, 'Color');
     	component_subscribe($$self, Color, $$value => $$invalidate(4, $Color = $$value));
+    	validate_store(season, 'season');
+    	component_subscribe($$self, season, $$value => $$invalidate(5, $season = $$value));
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('Page02', slots, []);
     	let { color = "transparent" } = $$props;
-    	let { fontSize = 2 } = $$props;
+    	let { head = 2 } = $$props;
+    	let { subhead = 1.5 } = $$props;
+    	let { context = 1 } = $$props;
     	let { curPage } = $$props;
     	let CurPage = "main";
-    	console.log($Color["btnBackColor"][$season]);
-    	const calcSubFontSize = () => !$Device["isMobile"] ? fontSize : fontSize / 2;
 
     	$$self.$$.on_mount.push(function () {
     		if (curPage === undefined && !('curPage' in $$props || $$self.$$.bound[$$self.$$.props['curPage']])) {
-    			console_1$1u.warn("<Page02> was created without expected prop 'curPage'");
+    			console.warn("<Page02> was created without expected prop 'curPage'");
     		}
     	});
 
-    	const writable_props = ['color', 'fontSize', 'curPage'];
+    	const writable_props = ['color', 'head', 'subhead', 'context', 'curPage'];
 
     	Object.keys($$props).forEach(key => {
-    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console_1$1u.warn(`<Page02> was created with unknown prop '${key}'`);
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<Page02> was created with unknown prop '${key}'`);
     	});
 
     	const click_handler = () => {
@@ -61571,7 +62060,9 @@ var app = (function (jquery) {
 
     	$$self.$$set = $$props => {
     		if ('color' in $$props) $$invalidate(1, color = $$props.color);
-    		if ('fontSize' in $$props) $$invalidate(2, fontSize = $$props.fontSize);
+    		if ('head' in $$props) $$invalidate(6, head = $$props.head);
+    		if ('subhead' in $$props) $$invalidate(2, subhead = $$props.subhead);
+    		if ('context' in $$props) $$invalidate(3, context = $$props.context);
     		if ('curPage' in $$props) $$invalidate(0, curPage = $$props.curPage);
     	};
 
@@ -61581,18 +62072,20 @@ var app = (function (jquery) {
     		season,
     		DefaultPage,
     		color,
-    		fontSize,
+    		head,
+    		subhead,
+    		context,
     		curPage,
     		CurPage,
-    		calcSubFontSize,
-    		$Device,
-    		$season,
-    		$Color
+    		$Color,
+    		$season
     	});
 
     	$$self.$inject_state = $$props => {
     		if ('color' in $$props) $$invalidate(1, color = $$props.color);
-    		if ('fontSize' in $$props) $$invalidate(2, fontSize = $$props.fontSize);
+    		if ('head' in $$props) $$invalidate(6, head = $$props.head);
+    		if ('subhead' in $$props) $$invalidate(2, subhead = $$props.subhead);
+    		if ('context' in $$props) $$invalidate(3, context = $$props.context);
     		if ('curPage' in $$props) $$invalidate(0, curPage = $$props.curPage);
     		if ('CurPage' in $$props) CurPage = $$props.CurPage;
     	};
@@ -61604,10 +62097,11 @@ var app = (function (jquery) {
     	return [
     		curPage,
     		color,
-    		fontSize,
-    		$season,
+    		subhead,
+    		context,
     		$Color,
-    		calcSubFontSize,
+    		$season,
+    		head,
     		click_handler,
     		defaultpage_curPage_binding
     	];
@@ -61616,7 +62110,14 @@ var app = (function (jquery) {
     class Page02$18 extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$4J, create_fragment$4J, safe_not_equal, { color: 1, fontSize: 2, curPage: 0 });
+
+    		init(this, options, instance$4J, create_fragment$4J, safe_not_equal, {
+    			color: 1,
+    			head: 6,
+    			subhead: 2,
+    			context: 3,
+    			curPage: 0
+    		});
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
@@ -61634,11 +62135,27 @@ var app = (function (jquery) {
     		throw new Error("<Page02>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
 
-    	get fontSize() {
+    	get head() {
     		throw new Error("<Page02>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
 
-    	set fontSize(value) {
+    	set head(value) {
+    		throw new Error("<Page02>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get subhead() {
+    		throw new Error("<Page02>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set subhead(value) {
+    		throw new Error("<Page02>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get context() {
+    		throw new Error("<Page02>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set context(value) {
     		throw new Error("<Page02>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
 
@@ -61652,11 +62169,9 @@ var app = (function (jquery) {
     }
 
     /* src\component\PageDesign\Slide\2021\Projects\Downloader\Slide04\Page03.svelte generated by Svelte v3.55.1 */
-
-    const { console: console_1$1t } = globals;
     const file$35 = "src\\component\\PageDesign\\Slide\\2021\\Projects\\Downloader\\Slide04\\Page03.svelte";
 
-    // (15:0) <DefaultPage color={color} fontSize={fontSize}>
+    // (13:0) <DefaultPage color={color} fontSize={subhead}>
     function create_default_slot$2T(ctx) {
     	let p0;
     	let t1;
@@ -61680,14 +62195,14 @@ var app = (function (jquery) {
     			t3 = text("\r\n            - 기존 업로드에 사용하던 프로그램을 그대로 실행");
     			br1 = element("br");
     			t4 = text("\r\n            - 사용  모델: Cheetah SPI");
-    			add_location(p0, file$35, 15, 4, 446);
-    			add_location(br0, file$35, 18, 28, 586);
-    			add_location(br1, file$35, 19, 39, 632);
-    			add_location(p1, file$35, 17, 8, 553);
-    			set_style(div, "font-size", /*calcSubFontSize*/ ctx[2]() + "rem");
+    			add_location(p0, file$35, 13, 4, 365);
+    			add_location(br0, file$35, 16, 28, 495);
+    			add_location(br1, file$35, 17, 39, 541);
+    			add_location(p1, file$35, 15, 8, 462);
+    			set_style(div, "font-size", /*context*/ ctx[2] + "rem");
     			set_style(div, "text-align", "left");
     			set_style(div, "margin-top", "20px");
-    			add_location(div, file$35, 16, 4, 462);
+    			add_location(div, file$35, 14, 4, 381);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p0, anchor);
@@ -61700,7 +62215,11 @@ var app = (function (jquery) {
     			append_dev(p1, br1);
     			append_dev(p1, t4);
     		},
-    		p: noop,
+    		p: function update(ctx, dirty) {
+    			if (dirty & /*context*/ 4) {
+    				set_style(div, "font-size", /*context*/ ctx[2] + "rem");
+    			}
+    		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(p0);
     			if (detaching) detach_dev(t1);
@@ -61712,7 +62231,7 @@ var app = (function (jquery) {
     		block,
     		id: create_default_slot$2T.name,
     		type: "slot",
-    		source: "(15:0) <DefaultPage color={color} fontSize={fontSize}>",
+    		source: "(13:0) <DefaultPage color={color} fontSize={subhead}>",
     		ctx
     	});
 
@@ -61726,7 +62245,7 @@ var app = (function (jquery) {
     	defaultpage = new DefaultPage({
     			props: {
     				color: /*color*/ ctx[0],
-    				fontSize: /*fontSize*/ ctx[1],
+    				fontSize: /*subhead*/ ctx[1],
     				$$slots: { default: [create_default_slot$2T] },
     				$$scope: { ctx }
     			},
@@ -61747,9 +62266,9 @@ var app = (function (jquery) {
     		p: function update(ctx, [dirty]) {
     			const defaultpage_changes = {};
     			if (dirty & /*color*/ 1) defaultpage_changes.color = /*color*/ ctx[0];
-    			if (dirty & /*fontSize*/ 2) defaultpage_changes.fontSize = /*fontSize*/ ctx[1];
+    			if (dirty & /*subhead*/ 2) defaultpage_changes.fontSize = /*subhead*/ ctx[1];
 
-    			if (dirty & /*$$scope*/ 128) {
+    			if (dirty & /*$$scope, context*/ 36) {
     				defaultpage_changes.$$scope = { dirty, ctx };
     			}
 
@@ -61781,31 +62300,24 @@ var app = (function (jquery) {
     }
 
     function instance$4I($$self, $$props, $$invalidate) {
-    	let $Device;
-    	let $season;
-    	let $Color;
-    	validate_store(Device, 'Device');
-    	component_subscribe($$self, Device, $$value => $$invalidate(3, $Device = $$value));
-    	validate_store(season, 'season');
-    	component_subscribe($$self, season, $$value => $$invalidate(4, $season = $$value));
-    	validate_store(Color, 'Color');
-    	component_subscribe($$self, Color, $$value => $$invalidate(5, $Color = $$value));
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('Page03', slots, []);
     	let { color = "transparent" } = $$props;
-    	let { fontSize = 2 } = $$props;
+    	let { head = 2 } = $$props;
+    	let { subhead = 1.5 } = $$props;
+    	let { context = 1 } = $$props;
     	let CurPage = "main";
-    	console.log($Color["btnBackColor"][$season]);
-    	const calcSubFontSize = () => !$Device["isMobile"] ? fontSize : fontSize / 2;
-    	const writable_props = ['color', 'fontSize'];
+    	const writable_props = ['color', 'head', 'subhead', 'context'];
 
     	Object.keys($$props).forEach(key => {
-    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console_1$1t.warn(`<Page03> was created with unknown prop '${key}'`);
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<Page03> was created with unknown prop '${key}'`);
     	});
 
     	$$self.$$set = $$props => {
     		if ('color' in $$props) $$invalidate(0, color = $$props.color);
-    		if ('fontSize' in $$props) $$invalidate(1, fontSize = $$props.fontSize);
+    		if ('head' in $$props) $$invalidate(3, head = $$props.head);
+    		if ('subhead' in $$props) $$invalidate(1, subhead = $$props.subhead);
+    		if ('context' in $$props) $$invalidate(2, context = $$props.context);
     	};
 
     	$$self.$capture_state = () => ({
@@ -61814,17 +62326,17 @@ var app = (function (jquery) {
     		season,
     		DefaultPage,
     		color,
-    		fontSize,
-    		CurPage,
-    		calcSubFontSize,
-    		$Device,
-    		$season,
-    		$Color
+    		head,
+    		subhead,
+    		context,
+    		CurPage
     	});
 
     	$$self.$inject_state = $$props => {
     		if ('color' in $$props) $$invalidate(0, color = $$props.color);
-    		if ('fontSize' in $$props) $$invalidate(1, fontSize = $$props.fontSize);
+    		if ('head' in $$props) $$invalidate(3, head = $$props.head);
+    		if ('subhead' in $$props) $$invalidate(1, subhead = $$props.subhead);
+    		if ('context' in $$props) $$invalidate(2, context = $$props.context);
     		if ('CurPage' in $$props) CurPage = $$props.CurPage;
     	};
 
@@ -61832,13 +62344,19 @@ var app = (function (jquery) {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [color, fontSize, calcSubFontSize];
+    	return [color, subhead, context, head];
     }
 
     class Page03$t extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$4I, create_fragment$4I, safe_not_equal, { color: 0, fontSize: 1 });
+
+    		init(this, options, instance$4I, create_fragment$4I, safe_not_equal, {
+    			color: 0,
+    			head: 3,
+    			subhead: 1,
+    			context: 2
+    		});
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
@@ -61856,21 +62374,35 @@ var app = (function (jquery) {
     		throw new Error("<Page03>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
 
-    	get fontSize() {
+    	get head() {
     		throw new Error("<Page03>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
 
-    	set fontSize(value) {
+    	set head(value) {
+    		throw new Error("<Page03>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get subhead() {
+    		throw new Error("<Page03>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set subhead(value) {
+    		throw new Error("<Page03>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get context() {
+    		throw new Error("<Page03>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set context(value) {
     		throw new Error("<Page03>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
     }
 
     /* src\component\PageDesign\Slide\2021\Projects\Downloader\Slide04\Page04.svelte generated by Svelte v3.55.1 */
-
-    const { console: console_1$1s } = globals;
     const file$34 = "src\\component\\PageDesign\\Slide\\2021\\Projects\\Downloader\\Slide04\\Page04.svelte";
 
-    // (15:0) <DefaultPage color={color} fontSize={fontSize}>
+    // (13:0) <DefaultPage color={color} fontSize={subhead}>
     function create_default_slot$2S(ctx) {
     	let p0;
     	let t1;
@@ -61894,14 +62426,14 @@ var app = (function (jquery) {
     			t3 = text("\r\n            - 다른 모듈과 통신");
     			br1 = element("br");
     			t4 = text("\r\n            - 전반적인 시퀀스 및 동작 제어");
-    			add_location(p0, file$34, 15, 4, 446);
-    			add_location(br0, file$34, 18, 28, 585);
-    			add_location(br1, file$34, 19, 23, 615);
-    			add_location(p1, file$34, 17, 8, 552);
-    			set_style(div, "font-size", /*calcSubFontSize*/ ctx[2]() + "rem");
+    			add_location(p0, file$34, 13, 4, 365);
+    			add_location(br0, file$34, 16, 28, 494);
+    			add_location(br1, file$34, 17, 23, 524);
+    			add_location(p1, file$34, 15, 8, 461);
+    			set_style(div, "font-size", /*context*/ ctx[2] + "rem");
     			set_style(div, "text-align", "left");
     			set_style(div, "margin-top", "20px");
-    			add_location(div, file$34, 16, 4, 461);
+    			add_location(div, file$34, 14, 4, 380);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p0, anchor);
@@ -61914,7 +62446,11 @@ var app = (function (jquery) {
     			append_dev(p1, br1);
     			append_dev(p1, t4);
     		},
-    		p: noop,
+    		p: function update(ctx, dirty) {
+    			if (dirty & /*context*/ 4) {
+    				set_style(div, "font-size", /*context*/ ctx[2] + "rem");
+    			}
+    		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(p0);
     			if (detaching) detach_dev(t1);
@@ -61926,7 +62462,7 @@ var app = (function (jquery) {
     		block,
     		id: create_default_slot$2S.name,
     		type: "slot",
-    		source: "(15:0) <DefaultPage color={color} fontSize={fontSize}>",
+    		source: "(13:0) <DefaultPage color={color} fontSize={subhead}>",
     		ctx
     	});
 
@@ -61940,7 +62476,7 @@ var app = (function (jquery) {
     	defaultpage = new DefaultPage({
     			props: {
     				color: /*color*/ ctx[0],
-    				fontSize: /*fontSize*/ ctx[1],
+    				fontSize: /*subhead*/ ctx[1],
     				$$slots: { default: [create_default_slot$2S] },
     				$$scope: { ctx }
     			},
@@ -61961,9 +62497,9 @@ var app = (function (jquery) {
     		p: function update(ctx, [dirty]) {
     			const defaultpage_changes = {};
     			if (dirty & /*color*/ 1) defaultpage_changes.color = /*color*/ ctx[0];
-    			if (dirty & /*fontSize*/ 2) defaultpage_changes.fontSize = /*fontSize*/ ctx[1];
+    			if (dirty & /*subhead*/ 2) defaultpage_changes.fontSize = /*subhead*/ ctx[1];
 
-    			if (dirty & /*$$scope*/ 128) {
+    			if (dirty & /*$$scope, context*/ 36) {
     				defaultpage_changes.$$scope = { dirty, ctx };
     			}
 
@@ -61995,31 +62531,24 @@ var app = (function (jquery) {
     }
 
     function instance$4H($$self, $$props, $$invalidate) {
-    	let $Device;
-    	let $season;
-    	let $Color;
-    	validate_store(Device, 'Device');
-    	component_subscribe($$self, Device, $$value => $$invalidate(3, $Device = $$value));
-    	validate_store(season, 'season');
-    	component_subscribe($$self, season, $$value => $$invalidate(4, $season = $$value));
-    	validate_store(Color, 'Color');
-    	component_subscribe($$self, Color, $$value => $$invalidate(5, $Color = $$value));
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('Page04', slots, []);
     	let { color = "transparent" } = $$props;
-    	let { fontSize = 2 } = $$props;
+    	let { head = 2 } = $$props;
+    	let { subhead = 1.5 } = $$props;
+    	let { context = 1 } = $$props;
     	let CurPage = "main";
-    	console.log($Color["btnBackColor"][$season]);
-    	const calcSubFontSize = () => !$Device["isMobile"] ? fontSize : fontSize / 2;
-    	const writable_props = ['color', 'fontSize'];
+    	const writable_props = ['color', 'head', 'subhead', 'context'];
 
     	Object.keys($$props).forEach(key => {
-    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console_1$1s.warn(`<Page04> was created with unknown prop '${key}'`);
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<Page04> was created with unknown prop '${key}'`);
     	});
 
     	$$self.$$set = $$props => {
     		if ('color' in $$props) $$invalidate(0, color = $$props.color);
-    		if ('fontSize' in $$props) $$invalidate(1, fontSize = $$props.fontSize);
+    		if ('head' in $$props) $$invalidate(3, head = $$props.head);
+    		if ('subhead' in $$props) $$invalidate(1, subhead = $$props.subhead);
+    		if ('context' in $$props) $$invalidate(2, context = $$props.context);
     	};
 
     	$$self.$capture_state = () => ({
@@ -62028,17 +62557,17 @@ var app = (function (jquery) {
     		season,
     		DefaultPage,
     		color,
-    		fontSize,
-    		CurPage,
-    		calcSubFontSize,
-    		$Device,
-    		$season,
-    		$Color
+    		head,
+    		subhead,
+    		context,
+    		CurPage
     	});
 
     	$$self.$inject_state = $$props => {
     		if ('color' in $$props) $$invalidate(0, color = $$props.color);
-    		if ('fontSize' in $$props) $$invalidate(1, fontSize = $$props.fontSize);
+    		if ('head' in $$props) $$invalidate(3, head = $$props.head);
+    		if ('subhead' in $$props) $$invalidate(1, subhead = $$props.subhead);
+    		if ('context' in $$props) $$invalidate(2, context = $$props.context);
     		if ('CurPage' in $$props) CurPage = $$props.CurPage;
     	};
 
@@ -62046,13 +62575,19 @@ var app = (function (jquery) {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [color, fontSize, calcSubFontSize];
+    	return [color, subhead, context, head];
     }
 
     class Page04$6 extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$4H, create_fragment$4H, safe_not_equal, { color: 0, fontSize: 1 });
+
+    		init(this, options, instance$4H, create_fragment$4H, safe_not_equal, {
+    			color: 0,
+    			head: 3,
+    			subhead: 1,
+    			context: 2
+    		});
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
@@ -62070,21 +62605,35 @@ var app = (function (jquery) {
     		throw new Error("<Page04>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
 
-    	get fontSize() {
+    	get head() {
     		throw new Error("<Page04>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
 
-    	set fontSize(value) {
+    	set head(value) {
+    		throw new Error("<Page04>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get subhead() {
+    		throw new Error("<Page04>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set subhead(value) {
+    		throw new Error("<Page04>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get context() {
+    		throw new Error("<Page04>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set context(value) {
     		throw new Error("<Page04>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
     }
 
     /* src\component\PageDesign\Slide\2021\Projects\Downloader\Slide04\Page05.svelte generated by Svelte v3.55.1 */
-
-    const { console: console_1$1r } = globals;
     const file$33 = "src\\component\\PageDesign\\Slide\\2021\\Projects\\Downloader\\Slide04\\Page05.svelte";
 
-    // (15:0) <DefaultPage color={color} fontSize={fontSize}>
+    // (13:0) <DefaultPage color={color} fontSize={subhead}>
     function create_default_slot$2R(ctx) {
     	let p0;
     	let t1;
@@ -62112,15 +62661,15 @@ var app = (function (jquery) {
     			t4 = text("\r\n            - 적외선 센서와 스위치 등, 입력값을 전달(Input)");
     			br2 = element("br");
     			t5 = text("\r\n            - PC와 시리얼 통신을 통해 명령을 전달받고, 입력값들을 전달");
-    			add_location(p0, file$33, 15, 4, 446);
-    			add_location(br0, file$33, 18, 27, 584);
-    			add_location(br1, file$33, 19, 46, 637);
-    			add_location(br2, file$33, 20, 43, 687);
-    			add_location(p1, file$33, 17, 8, 552);
-    			set_style(div, "font-size", /*calcSubFontSize*/ ctx[2]() + "rem");
+    			add_location(p0, file$33, 13, 4, 365);
+    			add_location(br0, file$33, 16, 27, 493);
+    			add_location(br1, file$33, 17, 46, 546);
+    			add_location(br2, file$33, 18, 43, 596);
+    			add_location(p1, file$33, 15, 8, 461);
+    			set_style(div, "font-size", /*context*/ ctx[2] + "rem");
     			set_style(div, "text-align", "left");
     			set_style(div, "margin-top", "20px");
-    			add_location(div, file$33, 16, 4, 461);
+    			add_location(div, file$33, 14, 4, 380);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p0, anchor);
@@ -62135,7 +62684,11 @@ var app = (function (jquery) {
     			append_dev(p1, br2);
     			append_dev(p1, t5);
     		},
-    		p: noop,
+    		p: function update(ctx, dirty) {
+    			if (dirty & /*context*/ 4) {
+    				set_style(div, "font-size", /*context*/ ctx[2] + "rem");
+    			}
+    		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(p0);
     			if (detaching) detach_dev(t1);
@@ -62147,7 +62700,7 @@ var app = (function (jquery) {
     		block,
     		id: create_default_slot$2R.name,
     		type: "slot",
-    		source: "(15:0) <DefaultPage color={color} fontSize={fontSize}>",
+    		source: "(13:0) <DefaultPage color={color} fontSize={subhead}>",
     		ctx
     	});
 
@@ -62161,7 +62714,7 @@ var app = (function (jquery) {
     	defaultpage = new DefaultPage({
     			props: {
     				color: /*color*/ ctx[0],
-    				fontSize: /*fontSize*/ ctx[1],
+    				fontSize: /*subhead*/ ctx[1],
     				$$slots: { default: [create_default_slot$2R] },
     				$$scope: { ctx }
     			},
@@ -62182,9 +62735,9 @@ var app = (function (jquery) {
     		p: function update(ctx, [dirty]) {
     			const defaultpage_changes = {};
     			if (dirty & /*color*/ 1) defaultpage_changes.color = /*color*/ ctx[0];
-    			if (dirty & /*fontSize*/ 2) defaultpage_changes.fontSize = /*fontSize*/ ctx[1];
+    			if (dirty & /*subhead*/ 2) defaultpage_changes.fontSize = /*subhead*/ ctx[1];
 
-    			if (dirty & /*$$scope*/ 128) {
+    			if (dirty & /*$$scope, context*/ 36) {
     				defaultpage_changes.$$scope = { dirty, ctx };
     			}
 
@@ -62216,31 +62769,24 @@ var app = (function (jquery) {
     }
 
     function instance$4G($$self, $$props, $$invalidate) {
-    	let $Device;
-    	let $season;
-    	let $Color;
-    	validate_store(Device, 'Device');
-    	component_subscribe($$self, Device, $$value => $$invalidate(3, $Device = $$value));
-    	validate_store(season, 'season');
-    	component_subscribe($$self, season, $$value => $$invalidate(4, $season = $$value));
-    	validate_store(Color, 'Color');
-    	component_subscribe($$self, Color, $$value => $$invalidate(5, $Color = $$value));
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('Page05', slots, []);
     	let { color = "transparent" } = $$props;
-    	let { fontSize = 2 } = $$props;
+    	let { head = 2 } = $$props;
+    	let { subhead = 1.5 } = $$props;
+    	let { context = 1 } = $$props;
     	let CurPage = "main";
-    	console.log($Color["btnBackColor"][$season]);
-    	const calcSubFontSize = () => !$Device["isMobile"] ? fontSize : fontSize / 2;
-    	const writable_props = ['color', 'fontSize'];
+    	const writable_props = ['color', 'head', 'subhead', 'context'];
 
     	Object.keys($$props).forEach(key => {
-    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console_1$1r.warn(`<Page05> was created with unknown prop '${key}'`);
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<Page05> was created with unknown prop '${key}'`);
     	});
 
     	$$self.$$set = $$props => {
     		if ('color' in $$props) $$invalidate(0, color = $$props.color);
-    		if ('fontSize' in $$props) $$invalidate(1, fontSize = $$props.fontSize);
+    		if ('head' in $$props) $$invalidate(3, head = $$props.head);
+    		if ('subhead' in $$props) $$invalidate(1, subhead = $$props.subhead);
+    		if ('context' in $$props) $$invalidate(2, context = $$props.context);
     	};
 
     	$$self.$capture_state = () => ({
@@ -62249,17 +62795,17 @@ var app = (function (jquery) {
     		season,
     		DefaultPage,
     		color,
-    		fontSize,
-    		CurPage,
-    		calcSubFontSize,
-    		$Device,
-    		$season,
-    		$Color
+    		head,
+    		subhead,
+    		context,
+    		CurPage
     	});
 
     	$$self.$inject_state = $$props => {
     		if ('color' in $$props) $$invalidate(0, color = $$props.color);
-    		if ('fontSize' in $$props) $$invalidate(1, fontSize = $$props.fontSize);
+    		if ('head' in $$props) $$invalidate(3, head = $$props.head);
+    		if ('subhead' in $$props) $$invalidate(1, subhead = $$props.subhead);
+    		if ('context' in $$props) $$invalidate(2, context = $$props.context);
     		if ('CurPage' in $$props) CurPage = $$props.CurPage;
     	};
 
@@ -62267,13 +62813,19 @@ var app = (function (jquery) {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [color, fontSize, calcSubFontSize];
+    	return [color, subhead, context, head];
     }
 
     class Page05$5 extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$4G, create_fragment$4G, safe_not_equal, { color: 0, fontSize: 1 });
+
+    		init(this, options, instance$4G, create_fragment$4G, safe_not_equal, {
+    			color: 0,
+    			head: 3,
+    			subhead: 1,
+    			context: 2
+    		});
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
@@ -62291,21 +62843,35 @@ var app = (function (jquery) {
     		throw new Error("<Page05>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
 
-    	get fontSize() {
+    	get head() {
     		throw new Error("<Page05>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
 
-    	set fontSize(value) {
+    	set head(value) {
+    		throw new Error("<Page05>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get subhead() {
+    		throw new Error("<Page05>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set subhead(value) {
+    		throw new Error("<Page05>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get context() {
+    		throw new Error("<Page05>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set context(value) {
     		throw new Error("<Page05>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
     }
 
     /* src\component\PageDesign\Slide\2021\Projects\Downloader\Slide04\Page06.svelte generated by Svelte v3.55.1 */
-
-    const { console: console_1$1q } = globals;
     const file$32 = "src\\component\\PageDesign\\Slide\\2021\\Projects\\Downloader\\Slide04\\Page06.svelte";
 
-    // (15:0) <DefaultPage color={color} fontSize={fontSize}>
+    // (13:0) <DefaultPage color={color} fontSize={subhead}>
     function create_default_slot$2Q(ctx) {
     	let p0;
     	let t1;
@@ -62329,14 +62895,14 @@ var app = (function (jquery) {
     			t3 = text("\r\n            - 시리얼 통신을 통해 현재 전류값 전달 가능");
     			br1 = element("br");
     			t4 = text("\r\n            - 사용 모델: P3857");
-    			add_location(p0, file$32, 15, 4, 446);
-    			add_location(br0, file$32, 18, 24, 582);
-    			add_location(br1, file$32, 19, 37, 626);
-    			add_location(p1, file$32, 17, 8, 553);
-    			set_style(div, "font-size", /*calcSubFontSize*/ ctx[2]() + "rem");
+    			add_location(p0, file$32, 13, 4, 365);
+    			add_location(br0, file$32, 16, 24, 491);
+    			add_location(br1, file$32, 17, 37, 535);
+    			add_location(p1, file$32, 15, 8, 462);
+    			set_style(div, "font-size", /*context*/ ctx[2] + "rem");
     			set_style(div, "text-align", "left");
     			set_style(div, "margin-top", "20px");
-    			add_location(div, file$32, 16, 4, 462);
+    			add_location(div, file$32, 14, 4, 381);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p0, anchor);
@@ -62349,7 +62915,11 @@ var app = (function (jquery) {
     			append_dev(p1, br1);
     			append_dev(p1, t4);
     		},
-    		p: noop,
+    		p: function update(ctx, dirty) {
+    			if (dirty & /*context*/ 4) {
+    				set_style(div, "font-size", /*context*/ ctx[2] + "rem");
+    			}
+    		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(p0);
     			if (detaching) detach_dev(t1);
@@ -62361,7 +62931,7 @@ var app = (function (jquery) {
     		block,
     		id: create_default_slot$2Q.name,
     		type: "slot",
-    		source: "(15:0) <DefaultPage color={color} fontSize={fontSize}>",
+    		source: "(13:0) <DefaultPage color={color} fontSize={subhead}>",
     		ctx
     	});
 
@@ -62375,7 +62945,7 @@ var app = (function (jquery) {
     	defaultpage = new DefaultPage({
     			props: {
     				color: /*color*/ ctx[0],
-    				fontSize: /*fontSize*/ ctx[1],
+    				fontSize: /*subhead*/ ctx[1],
     				$$slots: { default: [create_default_slot$2Q] },
     				$$scope: { ctx }
     			},
@@ -62396,9 +62966,9 @@ var app = (function (jquery) {
     		p: function update(ctx, [dirty]) {
     			const defaultpage_changes = {};
     			if (dirty & /*color*/ 1) defaultpage_changes.color = /*color*/ ctx[0];
-    			if (dirty & /*fontSize*/ 2) defaultpage_changes.fontSize = /*fontSize*/ ctx[1];
+    			if (dirty & /*subhead*/ 2) defaultpage_changes.fontSize = /*subhead*/ ctx[1];
 
-    			if (dirty & /*$$scope*/ 128) {
+    			if (dirty & /*$$scope, context*/ 36) {
     				defaultpage_changes.$$scope = { dirty, ctx };
     			}
 
@@ -62430,31 +63000,24 @@ var app = (function (jquery) {
     }
 
     function instance$4F($$self, $$props, $$invalidate) {
-    	let $Device;
-    	let $season;
-    	let $Color;
-    	validate_store(Device, 'Device');
-    	component_subscribe($$self, Device, $$value => $$invalidate(3, $Device = $$value));
-    	validate_store(season, 'season');
-    	component_subscribe($$self, season, $$value => $$invalidate(4, $season = $$value));
-    	validate_store(Color, 'Color');
-    	component_subscribe($$self, Color, $$value => $$invalidate(5, $Color = $$value));
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('Page06', slots, []);
     	let { color = "transparent" } = $$props;
-    	let { fontSize = 2 } = $$props;
+    	let { head = 2 } = $$props;
+    	let { subhead = 1.5 } = $$props;
+    	let { context = 1 } = $$props;
     	let CurPage = "main";
-    	console.log($Color["btnBackColor"][$season]);
-    	const calcSubFontSize = () => !$Device["isMobile"] ? fontSize : fontSize / 2;
-    	const writable_props = ['color', 'fontSize'];
+    	const writable_props = ['color', 'head', 'subhead', 'context'];
 
     	Object.keys($$props).forEach(key => {
-    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console_1$1q.warn(`<Page06> was created with unknown prop '${key}'`);
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<Page06> was created with unknown prop '${key}'`);
     	});
 
     	$$self.$$set = $$props => {
     		if ('color' in $$props) $$invalidate(0, color = $$props.color);
-    		if ('fontSize' in $$props) $$invalidate(1, fontSize = $$props.fontSize);
+    		if ('head' in $$props) $$invalidate(3, head = $$props.head);
+    		if ('subhead' in $$props) $$invalidate(1, subhead = $$props.subhead);
+    		if ('context' in $$props) $$invalidate(2, context = $$props.context);
     	};
 
     	$$self.$capture_state = () => ({
@@ -62463,17 +63026,17 @@ var app = (function (jquery) {
     		season,
     		DefaultPage,
     		color,
-    		fontSize,
-    		CurPage,
-    		calcSubFontSize,
-    		$Device,
-    		$season,
-    		$Color
+    		head,
+    		subhead,
+    		context,
+    		CurPage
     	});
 
     	$$self.$inject_state = $$props => {
     		if ('color' in $$props) $$invalidate(0, color = $$props.color);
-    		if ('fontSize' in $$props) $$invalidate(1, fontSize = $$props.fontSize);
+    		if ('head' in $$props) $$invalidate(3, head = $$props.head);
+    		if ('subhead' in $$props) $$invalidate(1, subhead = $$props.subhead);
+    		if ('context' in $$props) $$invalidate(2, context = $$props.context);
     		if ('CurPage' in $$props) CurPage = $$props.CurPage;
     	};
 
@@ -62481,13 +63044,19 @@ var app = (function (jquery) {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [color, fontSize, calcSubFontSize];
+    	return [color, subhead, context, head];
     }
 
     class Page06$1 extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$4F, create_fragment$4F, safe_not_equal, { color: 0, fontSize: 1 });
+
+    		init(this, options, instance$4F, create_fragment$4F, safe_not_equal, {
+    			color: 0,
+    			head: 3,
+    			subhead: 1,
+    			context: 2
+    		});
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
@@ -62505,21 +63074,35 @@ var app = (function (jquery) {
     		throw new Error("<Page06>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
 
-    	get fontSize() {
+    	get head() {
     		throw new Error("<Page06>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
 
-    	set fontSize(value) {
+    	set head(value) {
+    		throw new Error("<Page06>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get subhead() {
+    		throw new Error("<Page06>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set subhead(value) {
+    		throw new Error("<Page06>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get context() {
+    		throw new Error("<Page06>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set context(value) {
     		throw new Error("<Page06>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
     }
 
     /* src\component\PageDesign\Slide\2021\Projects\Downloader\Slide04\Page07.svelte generated by Svelte v3.55.1 */
-
-    const { console: console_1$1p } = globals;
     const file$31 = "src\\component\\PageDesign\\Slide\\2021\\Projects\\Downloader\\Slide04\\Page07.svelte";
 
-    // (15:0) <DefaultPage color={color} fontSize={fontSize}>
+    // (13:0) <DefaultPage color={color} fontSize={subhead}>
     function create_default_slot$2P(ctx) {
     	let p0;
     	let t1;
@@ -62547,15 +63130,15 @@ var app = (function (jquery) {
     			t4 = text("\r\n            - 지정된 시간동안 전압을 측정해, 데이터를 넘겨줌");
     			br2 = element("br");
     			t5 = text("\r\n            - 사용 모델: USBScope 102");
-    			add_location(p0, file$31, 15, 4, 446);
-    			add_location(br0, file$31, 18, 27, 594);
-    			add_location(br1, file$31, 19, 33, 634);
-    			add_location(br2, file$31, 20, 40, 681);
-    			add_location(p1, file$31, 17, 8, 562);
-    			set_style(div, "font-size", /*calcSubFontSize*/ ctx[2]() + "rem");
+    			add_location(p0, file$31, 13, 4, 365);
+    			add_location(br0, file$31, 16, 27, 503);
+    			add_location(br1, file$31, 17, 33, 543);
+    			add_location(br2, file$31, 18, 40, 590);
+    			add_location(p1, file$31, 15, 8, 471);
+    			set_style(div, "font-size", /*context*/ ctx[2] + "rem");
     			set_style(div, "text-align", "left");
     			set_style(div, "margin-top", "20px");
-    			add_location(div, file$31, 16, 4, 471);
+    			add_location(div, file$31, 14, 4, 390);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p0, anchor);
@@ -62570,7 +63153,11 @@ var app = (function (jquery) {
     			append_dev(p1, br2);
     			append_dev(p1, t5);
     		},
-    		p: noop,
+    		p: function update(ctx, dirty) {
+    			if (dirty & /*context*/ 4) {
+    				set_style(div, "font-size", /*context*/ ctx[2] + "rem");
+    			}
+    		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(p0);
     			if (detaching) detach_dev(t1);
@@ -62582,7 +63169,7 @@ var app = (function (jquery) {
     		block,
     		id: create_default_slot$2P.name,
     		type: "slot",
-    		source: "(15:0) <DefaultPage color={color} fontSize={fontSize}>",
+    		source: "(13:0) <DefaultPage color={color} fontSize={subhead}>",
     		ctx
     	});
 
@@ -62596,7 +63183,7 @@ var app = (function (jquery) {
     	defaultpage = new DefaultPage({
     			props: {
     				color: /*color*/ ctx[0],
-    				fontSize: /*fontSize*/ ctx[1],
+    				fontSize: /*subhead*/ ctx[1],
     				$$slots: { default: [create_default_slot$2P] },
     				$$scope: { ctx }
     			},
@@ -62617,9 +63204,9 @@ var app = (function (jquery) {
     		p: function update(ctx, [dirty]) {
     			const defaultpage_changes = {};
     			if (dirty & /*color*/ 1) defaultpage_changes.color = /*color*/ ctx[0];
-    			if (dirty & /*fontSize*/ 2) defaultpage_changes.fontSize = /*fontSize*/ ctx[1];
+    			if (dirty & /*subhead*/ 2) defaultpage_changes.fontSize = /*subhead*/ ctx[1];
 
-    			if (dirty & /*$$scope*/ 128) {
+    			if (dirty & /*$$scope, context*/ 36) {
     				defaultpage_changes.$$scope = { dirty, ctx };
     			}
 
@@ -62651,31 +63238,24 @@ var app = (function (jquery) {
     }
 
     function instance$4E($$self, $$props, $$invalidate) {
-    	let $Device;
-    	let $season;
-    	let $Color;
-    	validate_store(Device, 'Device');
-    	component_subscribe($$self, Device, $$value => $$invalidate(3, $Device = $$value));
-    	validate_store(season, 'season');
-    	component_subscribe($$self, season, $$value => $$invalidate(4, $season = $$value));
-    	validate_store(Color, 'Color');
-    	component_subscribe($$self, Color, $$value => $$invalidate(5, $Color = $$value));
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('Page07', slots, []);
     	let { color = "transparent" } = $$props;
-    	let { fontSize = 2 } = $$props;
+    	let { head = 2 } = $$props;
+    	let { subhead = 1.5 } = $$props;
+    	let { context = 1 } = $$props;
     	let CurPage = "main";
-    	console.log($Color["btnBackColor"][$season]);
-    	const calcSubFontSize = () => !$Device["isMobile"] ? fontSize : fontSize / 2;
-    	const writable_props = ['color', 'fontSize'];
+    	const writable_props = ['color', 'head', 'subhead', 'context'];
 
     	Object.keys($$props).forEach(key => {
-    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console_1$1p.warn(`<Page07> was created with unknown prop '${key}'`);
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<Page07> was created with unknown prop '${key}'`);
     	});
 
     	$$self.$$set = $$props => {
     		if ('color' in $$props) $$invalidate(0, color = $$props.color);
-    		if ('fontSize' in $$props) $$invalidate(1, fontSize = $$props.fontSize);
+    		if ('head' in $$props) $$invalidate(3, head = $$props.head);
+    		if ('subhead' in $$props) $$invalidate(1, subhead = $$props.subhead);
+    		if ('context' in $$props) $$invalidate(2, context = $$props.context);
     	};
 
     	$$self.$capture_state = () => ({
@@ -62684,17 +63264,17 @@ var app = (function (jquery) {
     		season,
     		DefaultPage,
     		color,
-    		fontSize,
-    		CurPage,
-    		calcSubFontSize,
-    		$Device,
-    		$season,
-    		$Color
+    		head,
+    		subhead,
+    		context,
+    		CurPage
     	});
 
     	$$self.$inject_state = $$props => {
     		if ('color' in $$props) $$invalidate(0, color = $$props.color);
-    		if ('fontSize' in $$props) $$invalidate(1, fontSize = $$props.fontSize);
+    		if ('head' in $$props) $$invalidate(3, head = $$props.head);
+    		if ('subhead' in $$props) $$invalidate(1, subhead = $$props.subhead);
+    		if ('context' in $$props) $$invalidate(2, context = $$props.context);
     		if ('CurPage' in $$props) CurPage = $$props.CurPage;
     	};
 
@@ -62702,13 +63282,19 @@ var app = (function (jquery) {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [color, fontSize, calcSubFontSize];
+    	return [color, subhead, context, head];
     }
 
     class Page07 extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$4E, create_fragment$4E, safe_not_equal, { color: 0, fontSize: 1 });
+
+    		init(this, options, instance$4E, create_fragment$4E, safe_not_equal, {
+    			color: 0,
+    			head: 3,
+    			subhead: 1,
+    			context: 2
+    		});
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
@@ -62726,11 +63312,27 @@ var app = (function (jquery) {
     		throw new Error("<Page07>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
 
-    	get fontSize() {
+    	get head() {
     		throw new Error("<Page07>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
 
-    	set fontSize(value) {
+    	set head(value) {
+    		throw new Error("<Page07>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get subhead() {
+    		throw new Error("<Page07>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set subhead(value) {
+    		throw new Error("<Page07>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get context() {
+    		throw new Error("<Page07>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set context(value) {
     		throw new Error("<Page07>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
     }
@@ -62974,7 +63576,7 @@ var app = (function (jquery) {
     /* src\component\PageDesign\Slide\2021\Projects\Downloader\Slide05\Page01.svelte generated by Svelte v3.55.1 */
     const file$30 = "src\\component\\PageDesign\\Slide\\2021\\Projects\\Downloader\\Slide05\\Page01.svelte";
 
-    // (8:0) <DefaultPage color={color} fontSize={fontSize}>
+    // (10:0) <DefaultPage color={color} fontSize={head}>
     function create_default_slot$2O(ctx) {
     	let p;
 
@@ -62982,7 +63584,7 @@ var app = (function (jquery) {
     		c: function create() {
     			p = element("p");
     			p.textContent = "Program Result";
-    			add_location(p, file$30, 8, 4, 208);
+    			add_location(p, file$30, 10, 4, 261);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -62997,7 +63599,7 @@ var app = (function (jquery) {
     		block,
     		id: create_default_slot$2O.name,
     		type: "slot",
-    		source: "(8:0) <DefaultPage color={color} fontSize={fontSize}>",
+    		source: "(10:0) <DefaultPage color={color} fontSize={head}>",
     		ctx
     	});
 
@@ -63011,7 +63613,7 @@ var app = (function (jquery) {
     	defaultpage = new DefaultPage({
     			props: {
     				color: /*color*/ ctx[0],
-    				fontSize: /*fontSize*/ ctx[1],
+    				fontSize: /*head*/ ctx[1],
     				$$slots: { default: [create_default_slot$2O] },
     				$$scope: { ctx }
     			},
@@ -63032,9 +63634,9 @@ var app = (function (jquery) {
     		p: function update(ctx, [dirty]) {
     			const defaultpage_changes = {};
     			if (dirty & /*color*/ 1) defaultpage_changes.color = /*color*/ ctx[0];
-    			if (dirty & /*fontSize*/ 2) defaultpage_changes.fontSize = /*fontSize*/ ctx[1];
+    			if (dirty & /*head*/ 2) defaultpage_changes.fontSize = /*head*/ ctx[1];
 
-    			if (dirty & /*$$scope*/ 4) {
+    			if (dirty & /*$$scope*/ 16) {
     				defaultpage_changes.$$scope = { dirty, ctx };
     			}
 
@@ -63069,8 +63671,10 @@ var app = (function (jquery) {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('Page01', slots, []);
     	let { color = "transparent" } = $$props;
-    	let { fontSize = 2 } = $$props;
-    	const writable_props = ['color', 'fontSize'];
+    	let { head = 2 } = $$props;
+    	let { subhead = 1.5 } = $$props;
+    	let { context = 1 } = $$props;
+    	const writable_props = ['color', 'head', 'subhead', 'context'];
 
     	Object.keys($$props).forEach(key => {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<Page01> was created with unknown prop '${key}'`);
@@ -63078,27 +63682,43 @@ var app = (function (jquery) {
 
     	$$self.$$set = $$props => {
     		if ('color' in $$props) $$invalidate(0, color = $$props.color);
-    		if ('fontSize' in $$props) $$invalidate(1, fontSize = $$props.fontSize);
+    		if ('head' in $$props) $$invalidate(1, head = $$props.head);
+    		if ('subhead' in $$props) $$invalidate(2, subhead = $$props.subhead);
+    		if ('context' in $$props) $$invalidate(3, context = $$props.context);
     	};
 
-    	$$self.$capture_state = () => ({ DefaultPage, color, fontSize });
+    	$$self.$capture_state = () => ({
+    		DefaultPage,
+    		color,
+    		head,
+    		subhead,
+    		context
+    	});
 
     	$$self.$inject_state = $$props => {
     		if ('color' in $$props) $$invalidate(0, color = $$props.color);
-    		if ('fontSize' in $$props) $$invalidate(1, fontSize = $$props.fontSize);
+    		if ('head' in $$props) $$invalidate(1, head = $$props.head);
+    		if ('subhead' in $$props) $$invalidate(2, subhead = $$props.subhead);
+    		if ('context' in $$props) $$invalidate(3, context = $$props.context);
     	};
 
     	if ($$props && "$$inject" in $$props) {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [color, fontSize];
+    	return [color, head, subhead, context];
     }
 
     class Page01$1j extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$4C, create_fragment$4C, safe_not_equal, { color: 0, fontSize: 1 });
+
+    		init(this, options, instance$4C, create_fragment$4C, safe_not_equal, {
+    			color: 0,
+    			head: 1,
+    			subhead: 2,
+    			context: 3
+    		});
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
@@ -63116,18 +63736,32 @@ var app = (function (jquery) {
     		throw new Error("<Page01>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
 
-    	get fontSize() {
+    	get head() {
     		throw new Error("<Page01>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
 
-    	set fontSize(value) {
+    	set head(value) {
+    		throw new Error("<Page01>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get subhead() {
+    		throw new Error("<Page01>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set subhead(value) {
+    		throw new Error("<Page01>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get context() {
+    		throw new Error("<Page01>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set context(value) {
     		throw new Error("<Page01>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
     }
 
     /* src\component\PageDesign\Slide\2021\Projects\Downloader\Slide05\Page02.svelte generated by Svelte v3.55.1 */
-
-    const { console: console_1$1o } = globals;
 
     function create_fragment$4B(ctx) {
     	let defaultpage;
@@ -63136,7 +63770,7 @@ var app = (function (jquery) {
     	defaultpage = new DefaultPage({
     			props: {
     				color: /*color*/ ctx[0],
-    				fontSize: /*fontSize*/ ctx[1]
+    				fontSize: /*subhead*/ ctx[1]
     			},
     			$$inline: true
     		});
@@ -63155,7 +63789,7 @@ var app = (function (jquery) {
     		p: function update(ctx, [dirty]) {
     			const defaultpage_changes = {};
     			if (dirty & /*color*/ 1) defaultpage_changes.color = /*color*/ ctx[0];
-    			if (dirty & /*fontSize*/ 2) defaultpage_changes.fontSize = /*fontSize*/ ctx[1];
+    			if (dirty & /*subhead*/ 2) defaultpage_changes.fontSize = /*subhead*/ ctx[1];
     			defaultpage.$set(defaultpage_changes);
     		},
     		i: function intro(local) {
@@ -63184,31 +63818,23 @@ var app = (function (jquery) {
     }
 
     function instance$4B($$self, $$props, $$invalidate) {
-    	let $Device;
-    	let $season;
-    	let $Color;
-    	validate_store(Device, 'Device');
-    	component_subscribe($$self, Device, $$value => $$invalidate(2, $Device = $$value));
-    	validate_store(season, 'season');
-    	component_subscribe($$self, season, $$value => $$invalidate(3, $season = $$value));
-    	validate_store(Color, 'Color');
-    	component_subscribe($$self, Color, $$value => $$invalidate(4, $Color = $$value));
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('Page02', slots, []);
     	let { color = "transparent" } = $$props;
-    	let { fontSize = 2 } = $$props;
-    	let CurPage = "main";
-    	console.log($Color["btnBackColor"][$season]);
-    	const calcSubFontSize = () => !$Device["isMobile"] ? fontSize : fontSize / 2;
-    	const writable_props = ['color', 'fontSize'];
+    	let { head = 2 } = $$props;
+    	let { subhead = 1.5 } = $$props;
+    	let { context = 1 } = $$props;
+    	const writable_props = ['color', 'head', 'subhead', 'context'];
 
     	Object.keys($$props).forEach(key => {
-    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console_1$1o.warn(`<Page02> was created with unknown prop '${key}'`);
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<Page02> was created with unknown prop '${key}'`);
     	});
 
     	$$self.$$set = $$props => {
     		if ('color' in $$props) $$invalidate(0, color = $$props.color);
-    		if ('fontSize' in $$props) $$invalidate(1, fontSize = $$props.fontSize);
+    		if ('head' in $$props) $$invalidate(2, head = $$props.head);
+    		if ('subhead' in $$props) $$invalidate(1, subhead = $$props.subhead);
+    		if ('context' in $$props) $$invalidate(3, context = $$props.context);
     	};
 
     	$$self.$capture_state = () => ({
@@ -63217,31 +63843,35 @@ var app = (function (jquery) {
     		season,
     		DefaultPage,
     		color,
-    		fontSize,
-    		CurPage,
-    		calcSubFontSize,
-    		$Device,
-    		$season,
-    		$Color
+    		head,
+    		subhead,
+    		context
     	});
 
     	$$self.$inject_state = $$props => {
     		if ('color' in $$props) $$invalidate(0, color = $$props.color);
-    		if ('fontSize' in $$props) $$invalidate(1, fontSize = $$props.fontSize);
-    		if ('CurPage' in $$props) CurPage = $$props.CurPage;
+    		if ('head' in $$props) $$invalidate(2, head = $$props.head);
+    		if ('subhead' in $$props) $$invalidate(1, subhead = $$props.subhead);
+    		if ('context' in $$props) $$invalidate(3, context = $$props.context);
     	};
 
     	if ($$props && "$$inject" in $$props) {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [color, fontSize];
+    	return [color, subhead, head, context];
     }
 
     class Page02$17 extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$4B, create_fragment$4B, safe_not_equal, { color: 0, fontSize: 1 });
+
+    		init(this, options, instance$4B, create_fragment$4B, safe_not_equal, {
+    			color: 0,
+    			head: 2,
+    			subhead: 1,
+    			context: 3
+    		});
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
@@ -63259,18 +63889,32 @@ var app = (function (jquery) {
     		throw new Error("<Page02>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
 
-    	get fontSize() {
+    	get head() {
     		throw new Error("<Page02>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
 
-    	set fontSize(value) {
+    	set head(value) {
+    		throw new Error("<Page02>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get subhead() {
+    		throw new Error("<Page02>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set subhead(value) {
+    		throw new Error("<Page02>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get context() {
+    		throw new Error("<Page02>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set context(value) {
     		throw new Error("<Page02>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
     }
 
     /* src\component\PageDesign\Slide\2021\Projects\Downloader\Slide05\Page03.svelte generated by Svelte v3.55.1 */
-
-    const { console: console_1$1n } = globals;
 
     function create_fragment$4A(ctx) {
     	let defaultpage;
@@ -63279,7 +63923,7 @@ var app = (function (jquery) {
     	defaultpage = new DefaultPage({
     			props: {
     				color: /*color*/ ctx[0],
-    				fontSize: /*fontSize*/ ctx[1]
+    				fontSize: /*subhead*/ ctx[1]
     			},
     			$$inline: true
     		});
@@ -63298,7 +63942,7 @@ var app = (function (jquery) {
     		p: function update(ctx, [dirty]) {
     			const defaultpage_changes = {};
     			if (dirty & /*color*/ 1) defaultpage_changes.color = /*color*/ ctx[0];
-    			if (dirty & /*fontSize*/ 2) defaultpage_changes.fontSize = /*fontSize*/ ctx[1];
+    			if (dirty & /*subhead*/ 2) defaultpage_changes.fontSize = /*subhead*/ ctx[1];
     			defaultpage.$set(defaultpage_changes);
     		},
     		i: function intro(local) {
@@ -63327,31 +63971,23 @@ var app = (function (jquery) {
     }
 
     function instance$4A($$self, $$props, $$invalidate) {
-    	let $Device;
-    	let $season;
-    	let $Color;
-    	validate_store(Device, 'Device');
-    	component_subscribe($$self, Device, $$value => $$invalidate(2, $Device = $$value));
-    	validate_store(season, 'season');
-    	component_subscribe($$self, season, $$value => $$invalidate(3, $season = $$value));
-    	validate_store(Color, 'Color');
-    	component_subscribe($$self, Color, $$value => $$invalidate(4, $Color = $$value));
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('Page03', slots, []);
     	let { color = "transparent" } = $$props;
-    	let { fontSize = 2 } = $$props;
-    	let CurPage = "main";
-    	console.log($Color["btnBackColor"][$season]);
-    	const calcSubFontSize = () => !$Device["isMobile"] ? fontSize : fontSize / 2;
-    	const writable_props = ['color', 'fontSize'];
+    	let { head = 2 } = $$props;
+    	let { subhead = 1.5 } = $$props;
+    	let { context = 1 } = $$props;
+    	const writable_props = ['color', 'head', 'subhead', 'context'];
 
     	Object.keys($$props).forEach(key => {
-    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console_1$1n.warn(`<Page03> was created with unknown prop '${key}'`);
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<Page03> was created with unknown prop '${key}'`);
     	});
 
     	$$self.$$set = $$props => {
     		if ('color' in $$props) $$invalidate(0, color = $$props.color);
-    		if ('fontSize' in $$props) $$invalidate(1, fontSize = $$props.fontSize);
+    		if ('head' in $$props) $$invalidate(2, head = $$props.head);
+    		if ('subhead' in $$props) $$invalidate(1, subhead = $$props.subhead);
+    		if ('context' in $$props) $$invalidate(3, context = $$props.context);
     	};
 
     	$$self.$capture_state = () => ({
@@ -63360,31 +63996,35 @@ var app = (function (jquery) {
     		season,
     		DefaultPage,
     		color,
-    		fontSize,
-    		CurPage,
-    		calcSubFontSize,
-    		$Device,
-    		$season,
-    		$Color
+    		head,
+    		subhead,
+    		context
     	});
 
     	$$self.$inject_state = $$props => {
     		if ('color' in $$props) $$invalidate(0, color = $$props.color);
-    		if ('fontSize' in $$props) $$invalidate(1, fontSize = $$props.fontSize);
-    		if ('CurPage' in $$props) CurPage = $$props.CurPage;
+    		if ('head' in $$props) $$invalidate(2, head = $$props.head);
+    		if ('subhead' in $$props) $$invalidate(1, subhead = $$props.subhead);
+    		if ('context' in $$props) $$invalidate(3, context = $$props.context);
     	};
 
     	if ($$props && "$$inject" in $$props) {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [color, fontSize];
+    	return [color, subhead, head, context];
     }
 
     class Page03$s extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$4A, create_fragment$4A, safe_not_equal, { color: 0, fontSize: 1 });
+
+    		init(this, options, instance$4A, create_fragment$4A, safe_not_equal, {
+    			color: 0,
+    			head: 2,
+    			subhead: 1,
+    			context: 3
+    		});
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
@@ -63402,18 +64042,32 @@ var app = (function (jquery) {
     		throw new Error("<Page03>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
 
-    	get fontSize() {
+    	get head() {
     		throw new Error("<Page03>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
 
-    	set fontSize(value) {
+    	set head(value) {
+    		throw new Error("<Page03>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get subhead() {
+    		throw new Error("<Page03>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set subhead(value) {
+    		throw new Error("<Page03>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get context() {
+    		throw new Error("<Page03>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set context(value) {
     		throw new Error("<Page03>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
     }
 
     /* src\component\PageDesign\Slide\2021\Projects\Downloader\Slide05\Page04.svelte generated by Svelte v3.55.1 */
-
-    const { console: console_1$1m } = globals;
 
     function create_fragment$4z(ctx) {
     	let defaultpage;
@@ -63422,7 +64076,7 @@ var app = (function (jquery) {
     	defaultpage = new DefaultPage({
     			props: {
     				color: /*color*/ ctx[0],
-    				fontSize: /*fontSize*/ ctx[1]
+    				fontSize: /*subhead*/ ctx[1]
     			},
     			$$inline: true
     		});
@@ -63441,7 +64095,7 @@ var app = (function (jquery) {
     		p: function update(ctx, [dirty]) {
     			const defaultpage_changes = {};
     			if (dirty & /*color*/ 1) defaultpage_changes.color = /*color*/ ctx[0];
-    			if (dirty & /*fontSize*/ 2) defaultpage_changes.fontSize = /*fontSize*/ ctx[1];
+    			if (dirty & /*subhead*/ 2) defaultpage_changes.fontSize = /*subhead*/ ctx[1];
     			defaultpage.$set(defaultpage_changes);
     		},
     		i: function intro(local) {
@@ -63470,31 +64124,23 @@ var app = (function (jquery) {
     }
 
     function instance$4z($$self, $$props, $$invalidate) {
-    	let $Device;
-    	let $season;
-    	let $Color;
-    	validate_store(Device, 'Device');
-    	component_subscribe($$self, Device, $$value => $$invalidate(2, $Device = $$value));
-    	validate_store(season, 'season');
-    	component_subscribe($$self, season, $$value => $$invalidate(3, $season = $$value));
-    	validate_store(Color, 'Color');
-    	component_subscribe($$self, Color, $$value => $$invalidate(4, $Color = $$value));
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('Page04', slots, []);
     	let { color = "transparent" } = $$props;
-    	let { fontSize = 2 } = $$props;
-    	let CurPage = "main";
-    	console.log($Color["btnBackColor"][$season]);
-    	const calcSubFontSize = () => !$Device["isMobile"] ? fontSize : fontSize / 2;
-    	const writable_props = ['color', 'fontSize'];
+    	let { head = 2 } = $$props;
+    	let { subhead = 1.5 } = $$props;
+    	let { context = 1 } = $$props;
+    	const writable_props = ['color', 'head', 'subhead', 'context'];
 
     	Object.keys($$props).forEach(key => {
-    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console_1$1m.warn(`<Page04> was created with unknown prop '${key}'`);
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<Page04> was created with unknown prop '${key}'`);
     	});
 
     	$$self.$$set = $$props => {
     		if ('color' in $$props) $$invalidate(0, color = $$props.color);
-    		if ('fontSize' in $$props) $$invalidate(1, fontSize = $$props.fontSize);
+    		if ('head' in $$props) $$invalidate(2, head = $$props.head);
+    		if ('subhead' in $$props) $$invalidate(1, subhead = $$props.subhead);
+    		if ('context' in $$props) $$invalidate(3, context = $$props.context);
     	};
 
     	$$self.$capture_state = () => ({
@@ -63503,31 +64149,35 @@ var app = (function (jquery) {
     		season,
     		DefaultPage,
     		color,
-    		fontSize,
-    		CurPage,
-    		calcSubFontSize,
-    		$Device,
-    		$season,
-    		$Color
+    		head,
+    		subhead,
+    		context
     	});
 
     	$$self.$inject_state = $$props => {
     		if ('color' in $$props) $$invalidate(0, color = $$props.color);
-    		if ('fontSize' in $$props) $$invalidate(1, fontSize = $$props.fontSize);
-    		if ('CurPage' in $$props) CurPage = $$props.CurPage;
+    		if ('head' in $$props) $$invalidate(2, head = $$props.head);
+    		if ('subhead' in $$props) $$invalidate(1, subhead = $$props.subhead);
+    		if ('context' in $$props) $$invalidate(3, context = $$props.context);
     	};
 
     	if ($$props && "$$inject" in $$props) {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [color, fontSize];
+    	return [color, subhead, head, context];
     }
 
     class Page04$5 extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$4z, create_fragment$4z, safe_not_equal, { color: 0, fontSize: 1 });
+
+    		init(this, options, instance$4z, create_fragment$4z, safe_not_equal, {
+    			color: 0,
+    			head: 2,
+    			subhead: 1,
+    			context: 3
+    		});
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
@@ -63545,18 +64195,32 @@ var app = (function (jquery) {
     		throw new Error("<Page04>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
 
-    	get fontSize() {
+    	get head() {
     		throw new Error("<Page04>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
 
-    	set fontSize(value) {
+    	set head(value) {
+    		throw new Error("<Page04>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get subhead() {
+    		throw new Error("<Page04>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set subhead(value) {
+    		throw new Error("<Page04>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get context() {
+    		throw new Error("<Page04>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set context(value) {
     		throw new Error("<Page04>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
     }
 
     /* src\component\PageDesign\Slide\2021\Projects\Downloader\Slide05\Page05.svelte generated by Svelte v3.55.1 */
-
-    const { console: console_1$1l } = globals;
 
     function create_fragment$4y(ctx) {
     	let defaultpage;
@@ -63565,7 +64229,7 @@ var app = (function (jquery) {
     	defaultpage = new DefaultPage({
     			props: {
     				color: /*color*/ ctx[0],
-    				fontSize: /*fontSize*/ ctx[1]
+    				fontSize: /*subhead*/ ctx[1]
     			},
     			$$inline: true
     		});
@@ -63584,7 +64248,7 @@ var app = (function (jquery) {
     		p: function update(ctx, [dirty]) {
     			const defaultpage_changes = {};
     			if (dirty & /*color*/ 1) defaultpage_changes.color = /*color*/ ctx[0];
-    			if (dirty & /*fontSize*/ 2) defaultpage_changes.fontSize = /*fontSize*/ ctx[1];
+    			if (dirty & /*subhead*/ 2) defaultpage_changes.fontSize = /*subhead*/ ctx[1];
     			defaultpage.$set(defaultpage_changes);
     		},
     		i: function intro(local) {
@@ -63613,31 +64277,23 @@ var app = (function (jquery) {
     }
 
     function instance$4y($$self, $$props, $$invalidate) {
-    	let $Device;
-    	let $season;
-    	let $Color;
-    	validate_store(Device, 'Device');
-    	component_subscribe($$self, Device, $$value => $$invalidate(2, $Device = $$value));
-    	validate_store(season, 'season');
-    	component_subscribe($$self, season, $$value => $$invalidate(3, $season = $$value));
-    	validate_store(Color, 'Color');
-    	component_subscribe($$self, Color, $$value => $$invalidate(4, $Color = $$value));
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('Page05', slots, []);
     	let { color = "transparent" } = $$props;
-    	let { fontSize = 2 } = $$props;
-    	let CurPage = "main";
-    	console.log($Color["btnBackColor"][$season]);
-    	const calcSubFontSize = () => !$Device["isMobile"] ? fontSize : fontSize / 2;
-    	const writable_props = ['color', 'fontSize'];
+    	let { head = 2 } = $$props;
+    	let { subhead = 1.5 } = $$props;
+    	let { context = 1 } = $$props;
+    	const writable_props = ['color', 'head', 'subhead', 'context'];
 
     	Object.keys($$props).forEach(key => {
-    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console_1$1l.warn(`<Page05> was created with unknown prop '${key}'`);
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<Page05> was created with unknown prop '${key}'`);
     	});
 
     	$$self.$$set = $$props => {
     		if ('color' in $$props) $$invalidate(0, color = $$props.color);
-    		if ('fontSize' in $$props) $$invalidate(1, fontSize = $$props.fontSize);
+    		if ('head' in $$props) $$invalidate(2, head = $$props.head);
+    		if ('subhead' in $$props) $$invalidate(1, subhead = $$props.subhead);
+    		if ('context' in $$props) $$invalidate(3, context = $$props.context);
     	};
 
     	$$self.$capture_state = () => ({
@@ -63646,31 +64302,35 @@ var app = (function (jquery) {
     		season,
     		DefaultPage,
     		color,
-    		fontSize,
-    		CurPage,
-    		calcSubFontSize,
-    		$Device,
-    		$season,
-    		$Color
+    		head,
+    		subhead,
+    		context
     	});
 
     	$$self.$inject_state = $$props => {
     		if ('color' in $$props) $$invalidate(0, color = $$props.color);
-    		if ('fontSize' in $$props) $$invalidate(1, fontSize = $$props.fontSize);
-    		if ('CurPage' in $$props) CurPage = $$props.CurPage;
+    		if ('head' in $$props) $$invalidate(2, head = $$props.head);
+    		if ('subhead' in $$props) $$invalidate(1, subhead = $$props.subhead);
+    		if ('context' in $$props) $$invalidate(3, context = $$props.context);
     	};
 
     	if ($$props && "$$inject" in $$props) {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [color, fontSize];
+    	return [color, subhead, head, context];
     }
 
     class Page05$4 extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$4y, create_fragment$4y, safe_not_equal, { color: 0, fontSize: 1 });
+
+    		init(this, options, instance$4y, create_fragment$4y, safe_not_equal, {
+    			color: 0,
+    			head: 2,
+    			subhead: 1,
+    			context: 3
+    		});
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
@@ -63688,11 +64348,27 @@ var app = (function (jquery) {
     		throw new Error("<Page05>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
 
-    	get fontSize() {
+    	get head() {
     		throw new Error("<Page05>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
 
-    	set fontSize(value) {
+    	set head(value) {
+    		throw new Error("<Page05>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get subhead() {
+    		throw new Error("<Page05>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set subhead(value) {
+    		throw new Error("<Page05>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get context() {
+    		throw new Error("<Page05>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set context(value) {
     		throw new Error("<Page05>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
     }
@@ -63932,7 +64608,7 @@ var app = (function (jquery) {
     /* src\component\PageDesign\Slide\2021\Projects\Downloader\Slide06\Page01.svelte generated by Svelte v3.55.1 */
     const file$2$ = "src\\component\\PageDesign\\Slide\\2021\\Projects\\Downloader\\Slide06\\Page01.svelte";
 
-    // (8:0) <DefaultPage color={color} fontSize={fontSize}>
+    // (10:0) <DefaultPage color={color} fontSize={head}>
     function create_default_slot$2N(ctx) {
     	let p;
 
@@ -63940,7 +64616,7 @@ var app = (function (jquery) {
     		c: function create() {
     			p = element("p");
     			p.textContent = "Trouble Shooting";
-    			add_location(p, file$2$, 8, 4, 208);
+    			add_location(p, file$2$, 10, 4, 261);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -63955,7 +64631,7 @@ var app = (function (jquery) {
     		block,
     		id: create_default_slot$2N.name,
     		type: "slot",
-    		source: "(8:0) <DefaultPage color={color} fontSize={fontSize}>",
+    		source: "(10:0) <DefaultPage color={color} fontSize={head}>",
     		ctx
     	});
 
@@ -63969,7 +64645,7 @@ var app = (function (jquery) {
     	defaultpage = new DefaultPage({
     			props: {
     				color: /*color*/ ctx[0],
-    				fontSize: /*fontSize*/ ctx[1],
+    				fontSize: /*head*/ ctx[1],
     				$$slots: { default: [create_default_slot$2N] },
     				$$scope: { ctx }
     			},
@@ -63990,9 +64666,9 @@ var app = (function (jquery) {
     		p: function update(ctx, [dirty]) {
     			const defaultpage_changes = {};
     			if (dirty & /*color*/ 1) defaultpage_changes.color = /*color*/ ctx[0];
-    			if (dirty & /*fontSize*/ 2) defaultpage_changes.fontSize = /*fontSize*/ ctx[1];
+    			if (dirty & /*head*/ 2) defaultpage_changes.fontSize = /*head*/ ctx[1];
 
-    			if (dirty & /*$$scope*/ 4) {
+    			if (dirty & /*$$scope*/ 16) {
     				defaultpage_changes.$$scope = { dirty, ctx };
     			}
 
@@ -64027,8 +64703,10 @@ var app = (function (jquery) {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('Page01', slots, []);
     	let { color = "transparent" } = $$props;
-    	let { fontSize = 2 } = $$props;
-    	const writable_props = ['color', 'fontSize'];
+    	let { head = 2 } = $$props;
+    	let { subhead = 1.5 } = $$props;
+    	let { context = 1 } = $$props;
+    	const writable_props = ['color', 'head', 'subhead', 'context'];
 
     	Object.keys($$props).forEach(key => {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<Page01> was created with unknown prop '${key}'`);
@@ -64036,27 +64714,43 @@ var app = (function (jquery) {
 
     	$$self.$$set = $$props => {
     		if ('color' in $$props) $$invalidate(0, color = $$props.color);
-    		if ('fontSize' in $$props) $$invalidate(1, fontSize = $$props.fontSize);
+    		if ('head' in $$props) $$invalidate(1, head = $$props.head);
+    		if ('subhead' in $$props) $$invalidate(2, subhead = $$props.subhead);
+    		if ('context' in $$props) $$invalidate(3, context = $$props.context);
     	};
 
-    	$$self.$capture_state = () => ({ DefaultPage, color, fontSize });
+    	$$self.$capture_state = () => ({
+    		DefaultPage,
+    		color,
+    		head,
+    		subhead,
+    		context
+    	});
 
     	$$self.$inject_state = $$props => {
     		if ('color' in $$props) $$invalidate(0, color = $$props.color);
-    		if ('fontSize' in $$props) $$invalidate(1, fontSize = $$props.fontSize);
+    		if ('head' in $$props) $$invalidate(1, head = $$props.head);
+    		if ('subhead' in $$props) $$invalidate(2, subhead = $$props.subhead);
+    		if ('context' in $$props) $$invalidate(3, context = $$props.context);
     	};
 
     	if ($$props && "$$inject" in $$props) {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [color, fontSize];
+    	return [color, head, subhead, context];
     }
 
     class Page01$1i extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$4w, create_fragment$4w, safe_not_equal, { color: 0, fontSize: 1 });
+
+    		init(this, options, instance$4w, create_fragment$4w, safe_not_equal, {
+    			color: 0,
+    			head: 1,
+    			subhead: 2,
+    			context: 3
+    		});
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
@@ -64074,21 +64768,35 @@ var app = (function (jquery) {
     		throw new Error("<Page01>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
 
-    	get fontSize() {
+    	get head() {
     		throw new Error("<Page01>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
 
-    	set fontSize(value) {
+    	set head(value) {
+    		throw new Error("<Page01>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get subhead() {
+    		throw new Error("<Page01>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set subhead(value) {
+    		throw new Error("<Page01>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get context() {
+    		throw new Error("<Page01>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set context(value) {
     		throw new Error("<Page01>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
     }
 
     /* src\component\PageDesign\Slide\2021\Projects\Downloader\Slide06\Page02.svelte generated by Svelte v3.55.1 */
-
-    const { console: console_1$1k } = globals;
     const file$2_ = "src\\component\\PageDesign\\Slide\\2021\\Projects\\Downloader\\Slide06\\Page02.svelte";
 
-    // (15:0) <DefaultPage color={color} fontSize={fontSize}>
+    // (11:0) <DefaultPage color={color} fontSize={subhead}>
     function create_default_slot$2M(ctx) {
     	let p0;
     	let t1;
@@ -64112,14 +64820,14 @@ var app = (function (jquery) {
     			t3 = text("\r\n            - 요청 주기가 빠를수록 더 빈번하게 발생");
     			br1 = element("br");
     			t4 = text("\r\n            - 전류계 내부 기판의 성능의 문제로 판단");
-    			add_location(p0, file$2_, 15, 4, 446);
-    			add_location(br0, file$2_, 18, 44, 605);
-    			add_location(br1, file$2_, 19, 35, 647);
-    			add_location(p1, file$2_, 17, 8, 556);
-    			set_style(div, "font-size", /*calcSubFontSize*/ ctx[2]() + "rem");
+    			add_location(p0, file$2_, 11, 4, 337);
+    			add_location(br0, file$2_, 14, 44, 486);
+    			add_location(br1, file$2_, 15, 35, 528);
+    			add_location(p1, file$2_, 13, 8, 437);
+    			set_style(div, "font-size", /*context*/ ctx[2] + "rem");
     			set_style(div, "text-align", "left");
     			set_style(div, "margin-top", "20px");
-    			add_location(div, file$2_, 16, 4, 465);
+    			add_location(div, file$2_, 12, 4, 356);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p0, anchor);
@@ -64132,7 +64840,11 @@ var app = (function (jquery) {
     			append_dev(p1, br1);
     			append_dev(p1, t4);
     		},
-    		p: noop,
+    		p: function update(ctx, dirty) {
+    			if (dirty & /*context*/ 4) {
+    				set_style(div, "font-size", /*context*/ ctx[2] + "rem");
+    			}
+    		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(p0);
     			if (detaching) detach_dev(t1);
@@ -64144,7 +64856,7 @@ var app = (function (jquery) {
     		block,
     		id: create_default_slot$2M.name,
     		type: "slot",
-    		source: "(15:0) <DefaultPage color={color} fontSize={fontSize}>",
+    		source: "(11:0) <DefaultPage color={color} fontSize={subhead}>",
     		ctx
     	});
 
@@ -64158,7 +64870,7 @@ var app = (function (jquery) {
     	defaultpage = new DefaultPage({
     			props: {
     				color: /*color*/ ctx[0],
-    				fontSize: /*fontSize*/ ctx[1],
+    				fontSize: /*subhead*/ ctx[1],
     				$$slots: { default: [create_default_slot$2M] },
     				$$scope: { ctx }
     			},
@@ -64179,9 +64891,9 @@ var app = (function (jquery) {
     		p: function update(ctx, [dirty]) {
     			const defaultpage_changes = {};
     			if (dirty & /*color*/ 1) defaultpage_changes.color = /*color*/ ctx[0];
-    			if (dirty & /*fontSize*/ 2) defaultpage_changes.fontSize = /*fontSize*/ ctx[1];
+    			if (dirty & /*subhead*/ 2) defaultpage_changes.fontSize = /*subhead*/ ctx[1];
 
-    			if (dirty & /*$$scope*/ 128) {
+    			if (dirty & /*$$scope, context*/ 20) {
     				defaultpage_changes.$$scope = { dirty, ctx };
     			}
 
@@ -64213,31 +64925,23 @@ var app = (function (jquery) {
     }
 
     function instance$4v($$self, $$props, $$invalidate) {
-    	let $Device;
-    	let $season;
-    	let $Color;
-    	validate_store(Device, 'Device');
-    	component_subscribe($$self, Device, $$value => $$invalidate(3, $Device = $$value));
-    	validate_store(season, 'season');
-    	component_subscribe($$self, season, $$value => $$invalidate(4, $season = $$value));
-    	validate_store(Color, 'Color');
-    	component_subscribe($$self, Color, $$value => $$invalidate(5, $Color = $$value));
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('Page02', slots, []);
     	let { color = "transparent" } = $$props;
-    	let { fontSize = 2 } = $$props;
-    	let CurPage = "main";
-    	console.log($Color["btnBackColor"][$season]);
-    	const calcSubFontSize = () => !$Device["isMobile"] ? fontSize : fontSize / 2;
-    	const writable_props = ['color', 'fontSize'];
+    	let { head = 2 } = $$props;
+    	let { subhead = 1.5 } = $$props;
+    	let { context = 1 } = $$props;
+    	const writable_props = ['color', 'head', 'subhead', 'context'];
 
     	Object.keys($$props).forEach(key => {
-    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console_1$1k.warn(`<Page02> was created with unknown prop '${key}'`);
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<Page02> was created with unknown prop '${key}'`);
     	});
 
     	$$self.$$set = $$props => {
     		if ('color' in $$props) $$invalidate(0, color = $$props.color);
-    		if ('fontSize' in $$props) $$invalidate(1, fontSize = $$props.fontSize);
+    		if ('head' in $$props) $$invalidate(3, head = $$props.head);
+    		if ('subhead' in $$props) $$invalidate(1, subhead = $$props.subhead);
+    		if ('context' in $$props) $$invalidate(2, context = $$props.context);
     	};
 
     	$$self.$capture_state = () => ({
@@ -64246,31 +64950,35 @@ var app = (function (jquery) {
     		season,
     		DefaultPage,
     		color,
-    		fontSize,
-    		CurPage,
-    		calcSubFontSize,
-    		$Device,
-    		$season,
-    		$Color
+    		head,
+    		subhead,
+    		context
     	});
 
     	$$self.$inject_state = $$props => {
     		if ('color' in $$props) $$invalidate(0, color = $$props.color);
-    		if ('fontSize' in $$props) $$invalidate(1, fontSize = $$props.fontSize);
-    		if ('CurPage' in $$props) CurPage = $$props.CurPage;
+    		if ('head' in $$props) $$invalidate(3, head = $$props.head);
+    		if ('subhead' in $$props) $$invalidate(1, subhead = $$props.subhead);
+    		if ('context' in $$props) $$invalidate(2, context = $$props.context);
     	};
 
     	if ($$props && "$$inject" in $$props) {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [color, fontSize, calcSubFontSize];
+    	return [color, subhead, context, head];
     }
 
     class Page02$16 extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$4v, create_fragment$4v, safe_not_equal, { color: 0, fontSize: 1 });
+
+    		init(this, options, instance$4v, create_fragment$4v, safe_not_equal, {
+    			color: 0,
+    			head: 3,
+    			subhead: 1,
+    			context: 2
+    		});
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
@@ -64288,21 +64996,35 @@ var app = (function (jquery) {
     		throw new Error("<Page02>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
 
-    	get fontSize() {
+    	get head() {
     		throw new Error("<Page02>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
 
-    	set fontSize(value) {
+    	set head(value) {
+    		throw new Error("<Page02>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get subhead() {
+    		throw new Error("<Page02>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set subhead(value) {
+    		throw new Error("<Page02>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get context() {
+    		throw new Error("<Page02>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set context(value) {
     		throw new Error("<Page02>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
     }
 
     /* src\component\PageDesign\Slide\2021\Projects\Downloader\Slide06\Page03.svelte generated by Svelte v3.55.1 */
-
-    const { console: console_1$1j } = globals;
     const file$2Z = "src\\component\\PageDesign\\Slide\\2021\\Projects\\Downloader\\Slide06\\Page03.svelte";
 
-    // (15:0) <DefaultPage color={color} fontSize={fontSize}>
+    // (11:0) <DefaultPage color={color} fontSize={subhead}>
     function create_default_slot$2L(ctx) {
     	let p0;
     	let t1;
@@ -64326,14 +65048,14 @@ var app = (function (jquery) {
     			t3 = text("\r\n            - 따라서 전류계와 통신하는 알고리즘을 수정");
     			br1 = element("br");
     			t4 = text("\r\n            - 전류값을 요청하고 일정 시간동안 응답이 없을 경우, 재요청");
-    			add_location(p0, file$2Z, 15, 4, 446);
-    			add_location(br0, file$2Z, 18, 36, 599);
-    			add_location(br1, file$2Z, 19, 36, 642);
-    			add_location(p1, file$2Z, 17, 8, 558);
-    			set_style(div, "font-size", /*calcSubFontSize*/ ctx[2]() + "rem");
+    			add_location(p0, file$2Z, 11, 4, 337);
+    			add_location(br0, file$2Z, 14, 36, 480);
+    			add_location(br1, file$2Z, 15, 36, 523);
+    			add_location(p1, file$2Z, 13, 8, 439);
+    			set_style(div, "font-size", /*context*/ ctx[2] + "rem");
     			set_style(div, "text-align", "left");
     			set_style(div, "margin-top", "20px");
-    			add_location(div, file$2Z, 16, 4, 467);
+    			add_location(div, file$2Z, 12, 4, 358);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p0, anchor);
@@ -64346,7 +65068,11 @@ var app = (function (jquery) {
     			append_dev(p1, br1);
     			append_dev(p1, t4);
     		},
-    		p: noop,
+    		p: function update(ctx, dirty) {
+    			if (dirty & /*context*/ 4) {
+    				set_style(div, "font-size", /*context*/ ctx[2] + "rem");
+    			}
+    		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(p0);
     			if (detaching) detach_dev(t1);
@@ -64358,7 +65084,7 @@ var app = (function (jquery) {
     		block,
     		id: create_default_slot$2L.name,
     		type: "slot",
-    		source: "(15:0) <DefaultPage color={color} fontSize={fontSize}>",
+    		source: "(11:0) <DefaultPage color={color} fontSize={subhead}>",
     		ctx
     	});
 
@@ -64372,7 +65098,7 @@ var app = (function (jquery) {
     	defaultpage = new DefaultPage({
     			props: {
     				color: /*color*/ ctx[0],
-    				fontSize: /*fontSize*/ ctx[1],
+    				fontSize: /*subhead*/ ctx[1],
     				$$slots: { default: [create_default_slot$2L] },
     				$$scope: { ctx }
     			},
@@ -64393,9 +65119,9 @@ var app = (function (jquery) {
     		p: function update(ctx, [dirty]) {
     			const defaultpage_changes = {};
     			if (dirty & /*color*/ 1) defaultpage_changes.color = /*color*/ ctx[0];
-    			if (dirty & /*fontSize*/ 2) defaultpage_changes.fontSize = /*fontSize*/ ctx[1];
+    			if (dirty & /*subhead*/ 2) defaultpage_changes.fontSize = /*subhead*/ ctx[1];
 
-    			if (dirty & /*$$scope*/ 128) {
+    			if (dirty & /*$$scope, context*/ 20) {
     				defaultpage_changes.$$scope = { dirty, ctx };
     			}
 
@@ -64427,31 +65153,23 @@ var app = (function (jquery) {
     }
 
     function instance$4u($$self, $$props, $$invalidate) {
-    	let $Device;
-    	let $season;
-    	let $Color;
-    	validate_store(Device, 'Device');
-    	component_subscribe($$self, Device, $$value => $$invalidate(3, $Device = $$value));
-    	validate_store(season, 'season');
-    	component_subscribe($$self, season, $$value => $$invalidate(4, $season = $$value));
-    	validate_store(Color, 'Color');
-    	component_subscribe($$self, Color, $$value => $$invalidate(5, $Color = $$value));
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('Page03', slots, []);
     	let { color = "transparent" } = $$props;
-    	let { fontSize = 2 } = $$props;
-    	let CurPage = "main";
-    	console.log($Color["btnBackColor"][$season]);
-    	const calcSubFontSize = () => !$Device["isMobile"] ? fontSize : fontSize / 2;
-    	const writable_props = ['color', 'fontSize'];
+    	let { head = 2 } = $$props;
+    	let { subhead = 1.5 } = $$props;
+    	let { context = 1 } = $$props;
+    	const writable_props = ['color', 'head', 'subhead', 'context'];
 
     	Object.keys($$props).forEach(key => {
-    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console_1$1j.warn(`<Page03> was created with unknown prop '${key}'`);
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<Page03> was created with unknown prop '${key}'`);
     	});
 
     	$$self.$$set = $$props => {
     		if ('color' in $$props) $$invalidate(0, color = $$props.color);
-    		if ('fontSize' in $$props) $$invalidate(1, fontSize = $$props.fontSize);
+    		if ('head' in $$props) $$invalidate(3, head = $$props.head);
+    		if ('subhead' in $$props) $$invalidate(1, subhead = $$props.subhead);
+    		if ('context' in $$props) $$invalidate(2, context = $$props.context);
     	};
 
     	$$self.$capture_state = () => ({
@@ -64460,31 +65178,35 @@ var app = (function (jquery) {
     		season,
     		DefaultPage,
     		color,
-    		fontSize,
-    		CurPage,
-    		calcSubFontSize,
-    		$Device,
-    		$season,
-    		$Color
+    		head,
+    		subhead,
+    		context
     	});
 
     	$$self.$inject_state = $$props => {
     		if ('color' in $$props) $$invalidate(0, color = $$props.color);
-    		if ('fontSize' in $$props) $$invalidate(1, fontSize = $$props.fontSize);
-    		if ('CurPage' in $$props) CurPage = $$props.CurPage;
+    		if ('head' in $$props) $$invalidate(3, head = $$props.head);
+    		if ('subhead' in $$props) $$invalidate(1, subhead = $$props.subhead);
+    		if ('context' in $$props) $$invalidate(2, context = $$props.context);
     	};
 
     	if ($$props && "$$inject" in $$props) {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [color, fontSize, calcSubFontSize];
+    	return [color, subhead, context, head];
     }
 
     class Page03$r extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$4u, create_fragment$4u, safe_not_equal, { color: 0, fontSize: 1 });
+
+    		init(this, options, instance$4u, create_fragment$4u, safe_not_equal, {
+    			color: 0,
+    			head: 3,
+    			subhead: 1,
+    			context: 2
+    		});
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
@@ -64502,21 +65224,35 @@ var app = (function (jquery) {
     		throw new Error("<Page03>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
 
-    	get fontSize() {
+    	get head() {
     		throw new Error("<Page03>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
 
-    	set fontSize(value) {
+    	set head(value) {
+    		throw new Error("<Page03>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get subhead() {
+    		throw new Error("<Page03>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set subhead(value) {
+    		throw new Error("<Page03>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get context() {
+    		throw new Error("<Page03>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set context(value) {
     		throw new Error("<Page03>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
     }
 
     /* src\component\PageDesign\Slide\2021\Projects\Downloader\Slide06\Page04.svelte generated by Svelte v3.55.1 */
-
-    const { console: console_1$1i } = globals;
     const file$2Y = "src\\component\\PageDesign\\Slide\\2021\\Projects\\Downloader\\Slide06\\Page04.svelte";
 
-    // (15:0) <DefaultPage color={color} fontSize={fontSize}>
+    // (11:0) <DefaultPage color={color} fontSize={subhead}>
     function create_default_slot$2K(ctx) {
     	let p0;
     	let t1;
@@ -64536,13 +65272,13 @@ var app = (function (jquery) {
     			t2 = text("- USBScope 102는 최대 10V까지 측정 가능");
     			br = element("br");
     			t3 = text("\r\n            - IR 동작 검사에서 측정해야하는 전압은 50V");
-    			add_location(p0, file$2Y, 15, 4, 446);
-    			add_location(br, file$2Y, 18, 42, 602);
-    			add_location(p1, file$2Y, 17, 8, 555);
-    			set_style(div, "font-size", /*calcSubFontSize*/ ctx[2]() + "rem");
+    			add_location(p0, file$2Y, 11, 4, 337);
+    			add_location(br, file$2Y, 14, 42, 483);
+    			add_location(p1, file$2Y, 13, 8, 436);
+    			set_style(div, "font-size", /*context*/ ctx[2] + "rem");
     			set_style(div, "text-align", "left");
     			set_style(div, "margin-top", "20px");
-    			add_location(div, file$2Y, 16, 4, 464);
+    			add_location(div, file$2Y, 12, 4, 355);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p0, anchor);
@@ -64553,7 +65289,11 @@ var app = (function (jquery) {
     			append_dev(p1, br);
     			append_dev(p1, t3);
     		},
-    		p: noop,
+    		p: function update(ctx, dirty) {
+    			if (dirty & /*context*/ 4) {
+    				set_style(div, "font-size", /*context*/ ctx[2] + "rem");
+    			}
+    		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(p0);
     			if (detaching) detach_dev(t1);
@@ -64565,7 +65305,7 @@ var app = (function (jquery) {
     		block,
     		id: create_default_slot$2K.name,
     		type: "slot",
-    		source: "(15:0) <DefaultPage color={color} fontSize={fontSize}>",
+    		source: "(11:0) <DefaultPage color={color} fontSize={subhead}>",
     		ctx
     	});
 
@@ -64579,7 +65319,7 @@ var app = (function (jquery) {
     	defaultpage = new DefaultPage({
     			props: {
     				color: /*color*/ ctx[0],
-    				fontSize: /*fontSize*/ ctx[1],
+    				fontSize: /*subhead*/ ctx[1],
     				$$slots: { default: [create_default_slot$2K] },
     				$$scope: { ctx }
     			},
@@ -64600,9 +65340,9 @@ var app = (function (jquery) {
     		p: function update(ctx, [dirty]) {
     			const defaultpage_changes = {};
     			if (dirty & /*color*/ 1) defaultpage_changes.color = /*color*/ ctx[0];
-    			if (dirty & /*fontSize*/ 2) defaultpage_changes.fontSize = /*fontSize*/ ctx[1];
+    			if (dirty & /*subhead*/ 2) defaultpage_changes.fontSize = /*subhead*/ ctx[1];
 
-    			if (dirty & /*$$scope*/ 128) {
+    			if (dirty & /*$$scope, context*/ 20) {
     				defaultpage_changes.$$scope = { dirty, ctx };
     			}
 
@@ -64634,31 +65374,23 @@ var app = (function (jquery) {
     }
 
     function instance$4t($$self, $$props, $$invalidate) {
-    	let $Device;
-    	let $season;
-    	let $Color;
-    	validate_store(Device, 'Device');
-    	component_subscribe($$self, Device, $$value => $$invalidate(3, $Device = $$value));
-    	validate_store(season, 'season');
-    	component_subscribe($$self, season, $$value => $$invalidate(4, $season = $$value));
-    	validate_store(Color, 'Color');
-    	component_subscribe($$self, Color, $$value => $$invalidate(5, $Color = $$value));
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('Page04', slots, []);
     	let { color = "transparent" } = $$props;
-    	let { fontSize = 2 } = $$props;
-    	let CurPage = "main";
-    	console.log($Color["btnBackColor"][$season]);
-    	const calcSubFontSize = () => !$Device["isMobile"] ? fontSize : fontSize / 2;
-    	const writable_props = ['color', 'fontSize'];
+    	let { head = 2 } = $$props;
+    	let { subhead = 1.5 } = $$props;
+    	let { context = 1 } = $$props;
+    	const writable_props = ['color', 'head', 'subhead', 'context'];
 
     	Object.keys($$props).forEach(key => {
-    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console_1$1i.warn(`<Page04> was created with unknown prop '${key}'`);
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<Page04> was created with unknown prop '${key}'`);
     	});
 
     	$$self.$$set = $$props => {
     		if ('color' in $$props) $$invalidate(0, color = $$props.color);
-    		if ('fontSize' in $$props) $$invalidate(1, fontSize = $$props.fontSize);
+    		if ('head' in $$props) $$invalidate(3, head = $$props.head);
+    		if ('subhead' in $$props) $$invalidate(1, subhead = $$props.subhead);
+    		if ('context' in $$props) $$invalidate(2, context = $$props.context);
     	};
 
     	$$self.$capture_state = () => ({
@@ -64667,31 +65399,35 @@ var app = (function (jquery) {
     		season,
     		DefaultPage,
     		color,
-    		fontSize,
-    		CurPage,
-    		calcSubFontSize,
-    		$Device,
-    		$season,
-    		$Color
+    		head,
+    		subhead,
+    		context
     	});
 
     	$$self.$inject_state = $$props => {
     		if ('color' in $$props) $$invalidate(0, color = $$props.color);
-    		if ('fontSize' in $$props) $$invalidate(1, fontSize = $$props.fontSize);
-    		if ('CurPage' in $$props) CurPage = $$props.CurPage;
+    		if ('head' in $$props) $$invalidate(3, head = $$props.head);
+    		if ('subhead' in $$props) $$invalidate(1, subhead = $$props.subhead);
+    		if ('context' in $$props) $$invalidate(2, context = $$props.context);
     	};
 
     	if ($$props && "$$inject" in $$props) {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [color, fontSize, calcSubFontSize];
+    	return [color, subhead, context, head];
     }
 
     class Page04$4 extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$4t, create_fragment$4t, safe_not_equal, { color: 0, fontSize: 1 });
+
+    		init(this, options, instance$4t, create_fragment$4t, safe_not_equal, {
+    			color: 0,
+    			head: 3,
+    			subhead: 1,
+    			context: 2
+    		});
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
@@ -64709,21 +65445,35 @@ var app = (function (jquery) {
     		throw new Error("<Page04>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
 
-    	get fontSize() {
+    	get head() {
     		throw new Error("<Page04>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
 
-    	set fontSize(value) {
+    	set head(value) {
+    		throw new Error("<Page04>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get subhead() {
+    		throw new Error("<Page04>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set subhead(value) {
+    		throw new Error("<Page04>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get context() {
+    		throw new Error("<Page04>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set context(value) {
     		throw new Error("<Page04>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
     }
 
     /* src\component\PageDesign\Slide\2021\Projects\Downloader\Slide06\Page05.svelte generated by Svelte v3.55.1 */
-
-    const { console: console_1$1h } = globals;
     const file$2X = "src\\component\\PageDesign\\Slide\\2021\\Projects\\Downloader\\Slide06\\Page05.svelte";
 
-    // (15:0) <DefaultPage color={color} fontSize={fontSize}>
+    // (11:0) <DefaultPage color={color} fontSize={subhead}>
     function create_default_slot$2J(ctx) {
     	let p0;
     	let t1;
@@ -64743,13 +65493,13 @@ var app = (function (jquery) {
     			t2 = text("- USBScope 102에 전압이 들어가기 전, 회로적으로 강하를 수행");
     			br = element("br");
     			t3 = text("\r\n            - 저항을 통해 실제 전압의 10%만 측정되도록 설계");
-    			add_location(p0, file$2X, 15, 4, 446);
-    			add_location(br, file$2X, 18, 52, 615);
-    			add_location(p1, file$2X, 17, 8, 558);
-    			set_style(div, "font-size", /*calcSubFontSize*/ ctx[2]() + "rem");
+    			add_location(p0, file$2X, 11, 4, 337);
+    			add_location(br, file$2X, 14, 52, 496);
+    			add_location(p1, file$2X, 13, 8, 439);
+    			set_style(div, "font-size", /*context*/ ctx[2] + "rem");
     			set_style(div, "text-align", "left");
     			set_style(div, "margin-top", "20px");
-    			add_location(div, file$2X, 16, 4, 467);
+    			add_location(div, file$2X, 12, 4, 358);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p0, anchor);
@@ -64760,7 +65510,11 @@ var app = (function (jquery) {
     			append_dev(p1, br);
     			append_dev(p1, t3);
     		},
-    		p: noop,
+    		p: function update(ctx, dirty) {
+    			if (dirty & /*context*/ 4) {
+    				set_style(div, "font-size", /*context*/ ctx[2] + "rem");
+    			}
+    		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(p0);
     			if (detaching) detach_dev(t1);
@@ -64772,7 +65526,7 @@ var app = (function (jquery) {
     		block,
     		id: create_default_slot$2J.name,
     		type: "slot",
-    		source: "(15:0) <DefaultPage color={color} fontSize={fontSize}>",
+    		source: "(11:0) <DefaultPage color={color} fontSize={subhead}>",
     		ctx
     	});
 
@@ -64786,7 +65540,7 @@ var app = (function (jquery) {
     	defaultpage = new DefaultPage({
     			props: {
     				color: /*color*/ ctx[0],
-    				fontSize: /*fontSize*/ ctx[1],
+    				fontSize: /*subhead*/ ctx[1],
     				$$slots: { default: [create_default_slot$2J] },
     				$$scope: { ctx }
     			},
@@ -64807,9 +65561,9 @@ var app = (function (jquery) {
     		p: function update(ctx, [dirty]) {
     			const defaultpage_changes = {};
     			if (dirty & /*color*/ 1) defaultpage_changes.color = /*color*/ ctx[0];
-    			if (dirty & /*fontSize*/ 2) defaultpage_changes.fontSize = /*fontSize*/ ctx[1];
+    			if (dirty & /*subhead*/ 2) defaultpage_changes.fontSize = /*subhead*/ ctx[1];
 
-    			if (dirty & /*$$scope*/ 128) {
+    			if (dirty & /*$$scope, context*/ 20) {
     				defaultpage_changes.$$scope = { dirty, ctx };
     			}
 
@@ -64841,31 +65595,23 @@ var app = (function (jquery) {
     }
 
     function instance$4s($$self, $$props, $$invalidate) {
-    	let $Device;
-    	let $season;
-    	let $Color;
-    	validate_store(Device, 'Device');
-    	component_subscribe($$self, Device, $$value => $$invalidate(3, $Device = $$value));
-    	validate_store(season, 'season');
-    	component_subscribe($$self, season, $$value => $$invalidate(4, $season = $$value));
-    	validate_store(Color, 'Color');
-    	component_subscribe($$self, Color, $$value => $$invalidate(5, $Color = $$value));
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('Page05', slots, []);
     	let { color = "transparent" } = $$props;
-    	let { fontSize = 2 } = $$props;
-    	let CurPage = "main";
-    	console.log($Color["btnBackColor"][$season]);
-    	const calcSubFontSize = () => !$Device["isMobile"] ? fontSize : fontSize / 2;
-    	const writable_props = ['color', 'fontSize'];
+    	let { head = 2 } = $$props;
+    	let { subhead = 1.5 } = $$props;
+    	let { context = 1 } = $$props;
+    	const writable_props = ['color', 'head', 'subhead', 'context'];
 
     	Object.keys($$props).forEach(key => {
-    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console_1$1h.warn(`<Page05> was created with unknown prop '${key}'`);
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<Page05> was created with unknown prop '${key}'`);
     	});
 
     	$$self.$$set = $$props => {
     		if ('color' in $$props) $$invalidate(0, color = $$props.color);
-    		if ('fontSize' in $$props) $$invalidate(1, fontSize = $$props.fontSize);
+    		if ('head' in $$props) $$invalidate(3, head = $$props.head);
+    		if ('subhead' in $$props) $$invalidate(1, subhead = $$props.subhead);
+    		if ('context' in $$props) $$invalidate(2, context = $$props.context);
     	};
 
     	$$self.$capture_state = () => ({
@@ -64874,31 +65620,35 @@ var app = (function (jquery) {
     		season,
     		DefaultPage,
     		color,
-    		fontSize,
-    		CurPage,
-    		calcSubFontSize,
-    		$Device,
-    		$season,
-    		$Color
+    		head,
+    		subhead,
+    		context
     	});
 
     	$$self.$inject_state = $$props => {
     		if ('color' in $$props) $$invalidate(0, color = $$props.color);
-    		if ('fontSize' in $$props) $$invalidate(1, fontSize = $$props.fontSize);
-    		if ('CurPage' in $$props) CurPage = $$props.CurPage;
+    		if ('head' in $$props) $$invalidate(3, head = $$props.head);
+    		if ('subhead' in $$props) $$invalidate(1, subhead = $$props.subhead);
+    		if ('context' in $$props) $$invalidate(2, context = $$props.context);
     	};
 
     	if ($$props && "$$inject" in $$props) {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [color, fontSize, calcSubFontSize];
+    	return [color, subhead, context, head];
     }
 
     class Page05$3 extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$4s, create_fragment$4s, safe_not_equal, { color: 0, fontSize: 1 });
+
+    		init(this, options, instance$4s, create_fragment$4s, safe_not_equal, {
+    			color: 0,
+    			head: 3,
+    			subhead: 1,
+    			context: 2
+    		});
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
@@ -64916,11 +65666,27 @@ var app = (function (jquery) {
     		throw new Error("<Page05>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
 
-    	get fontSize() {
+    	get head() {
     		throw new Error("<Page05>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
 
-    	set fontSize(value) {
+    	set head(value) {
+    		throw new Error("<Page05>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get subhead() {
+    		throw new Error("<Page05>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set subhead(value) {
+    		throw new Error("<Page05>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get context() {
+    		throw new Error("<Page05>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set context(value) {
     		throw new Error("<Page05>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
     }
@@ -65160,7 +65926,7 @@ var app = (function (jquery) {
     /* src\component\PageDesign\Slide\2021\Projects\Downloader\Slide07\Page01.svelte generated by Svelte v3.55.1 */
     const file$2W = "src\\component\\PageDesign\\Slide\\2021\\Projects\\Downloader\\Slide07\\Page01.svelte";
 
-    // (8:0) <DefaultPage color={color} fontSize={fontSize}>
+    // (10:0) <DefaultPage color={color} fontSize={head}>
     function create_default_slot$2I(ctx) {
     	let p;
 
@@ -65168,7 +65934,7 @@ var app = (function (jquery) {
     		c: function create() {
     			p = element("p");
     			p.textContent = "Finale";
-    			add_location(p, file$2W, 8, 4, 208);
+    			add_location(p, file$2W, 10, 4, 261);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -65183,7 +65949,7 @@ var app = (function (jquery) {
     		block,
     		id: create_default_slot$2I.name,
     		type: "slot",
-    		source: "(8:0) <DefaultPage color={color} fontSize={fontSize}>",
+    		source: "(10:0) <DefaultPage color={color} fontSize={head}>",
     		ctx
     	});
 
@@ -65197,7 +65963,7 @@ var app = (function (jquery) {
     	defaultpage = new DefaultPage({
     			props: {
     				color: /*color*/ ctx[0],
-    				fontSize: /*fontSize*/ ctx[1],
+    				fontSize: /*head*/ ctx[1],
     				$$slots: { default: [create_default_slot$2I] },
     				$$scope: { ctx }
     			},
@@ -65218,9 +65984,9 @@ var app = (function (jquery) {
     		p: function update(ctx, [dirty]) {
     			const defaultpage_changes = {};
     			if (dirty & /*color*/ 1) defaultpage_changes.color = /*color*/ ctx[0];
-    			if (dirty & /*fontSize*/ 2) defaultpage_changes.fontSize = /*fontSize*/ ctx[1];
+    			if (dirty & /*head*/ 2) defaultpage_changes.fontSize = /*head*/ ctx[1];
 
-    			if (dirty & /*$$scope*/ 4) {
+    			if (dirty & /*$$scope*/ 16) {
     				defaultpage_changes.$$scope = { dirty, ctx };
     			}
 
@@ -65255,8 +66021,10 @@ var app = (function (jquery) {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('Page01', slots, []);
     	let { color = "transparent" } = $$props;
-    	let { fontSize = 2 } = $$props;
-    	const writable_props = ['color', 'fontSize'];
+    	let { head = 2 } = $$props;
+    	let { subhead = 1.5 } = $$props;
+    	let { context = 1 } = $$props;
+    	const writable_props = ['color', 'head', 'subhead', 'context'];
 
     	Object.keys($$props).forEach(key => {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<Page01> was created with unknown prop '${key}'`);
@@ -65264,27 +66032,43 @@ var app = (function (jquery) {
 
     	$$self.$$set = $$props => {
     		if ('color' in $$props) $$invalidate(0, color = $$props.color);
-    		if ('fontSize' in $$props) $$invalidate(1, fontSize = $$props.fontSize);
+    		if ('head' in $$props) $$invalidate(1, head = $$props.head);
+    		if ('subhead' in $$props) $$invalidate(2, subhead = $$props.subhead);
+    		if ('context' in $$props) $$invalidate(3, context = $$props.context);
     	};
 
-    	$$self.$capture_state = () => ({ DefaultPage, color, fontSize });
+    	$$self.$capture_state = () => ({
+    		DefaultPage,
+    		color,
+    		head,
+    		subhead,
+    		context
+    	});
 
     	$$self.$inject_state = $$props => {
     		if ('color' in $$props) $$invalidate(0, color = $$props.color);
-    		if ('fontSize' in $$props) $$invalidate(1, fontSize = $$props.fontSize);
+    		if ('head' in $$props) $$invalidate(1, head = $$props.head);
+    		if ('subhead' in $$props) $$invalidate(2, subhead = $$props.subhead);
+    		if ('context' in $$props) $$invalidate(3, context = $$props.context);
     	};
 
     	if ($$props && "$$inject" in $$props) {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [color, fontSize];
+    	return [color, head, subhead, context];
     }
 
     class Page01$1h extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$4q, create_fragment$4q, safe_not_equal, { color: 0, fontSize: 1 });
+
+    		init(this, options, instance$4q, create_fragment$4q, safe_not_equal, {
+    			color: 0,
+    			head: 1,
+    			subhead: 2,
+    			context: 3
+    		});
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
@@ -65302,21 +66086,35 @@ var app = (function (jquery) {
     		throw new Error("<Page01>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
 
-    	get fontSize() {
+    	get head() {
     		throw new Error("<Page01>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
 
-    	set fontSize(value) {
+    	set head(value) {
+    		throw new Error("<Page01>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get subhead() {
+    		throw new Error("<Page01>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set subhead(value) {
+    		throw new Error("<Page01>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get context() {
+    		throw new Error("<Page01>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set context(value) {
     		throw new Error("<Page01>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
     }
 
     /* src\component\PageDesign\Slide\2021\Projects\Downloader\Slide07\Page02.svelte generated by Svelte v3.55.1 */
-
-    const { console: console_1$1g } = globals;
     const file$2V = "src\\component\\PageDesign\\Slide\\2021\\Projects\\Downloader\\Slide07\\Page02.svelte";
 
-    // (15:0) <DefaultPage color={color} fontSize={fontSize}>
+    // (11:0) <DefaultPage color={color} fontSize={subhead}>
     function create_default_slot$2H(ctx) {
     	let p0;
     	let t1;
@@ -65340,14 +66138,14 @@ var app = (function (jquery) {
     			t3 = text("\r\n            - 이후에도 항상 한번쯤 리뉴얼하고싶다,라는 생각을 많이 했었음");
     			br1 = element("br");
     			t4 = text("\r\n            - 운좋게도, 나중에 2022년에 유사한 기능의 장비를 한번 더 만들 기회가 있었음");
-    			add_location(p0, file$2V, 15, 4, 446);
-    			add_location(br0, file$2V, 18, 45, 609);
-    			add_location(br1, file$2V, 19, 47, 663);
-    			add_location(p1, file$2V, 17, 8, 559);
-    			set_style(div, "font-size", /*calcSubFontSize*/ ctx[2]() + "rem");
+    			add_location(p0, file$2V, 11, 4, 337);
+    			add_location(br0, file$2V, 14, 45, 490);
+    			add_location(br1, file$2V, 15, 47, 544);
+    			add_location(p1, file$2V, 13, 8, 440);
+    			set_style(div, "font-size", /*context*/ ctx[2] + "rem");
     			set_style(div, "text-align", "left");
     			set_style(div, "margin-top", "20px");
-    			add_location(div, file$2V, 16, 4, 468);
+    			add_location(div, file$2V, 12, 4, 359);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p0, anchor);
@@ -65360,7 +66158,11 @@ var app = (function (jquery) {
     			append_dev(p1, br1);
     			append_dev(p1, t4);
     		},
-    		p: noop,
+    		p: function update(ctx, dirty) {
+    			if (dirty & /*context*/ 4) {
+    				set_style(div, "font-size", /*context*/ ctx[2] + "rem");
+    			}
+    		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(p0);
     			if (detaching) detach_dev(t1);
@@ -65372,7 +66174,7 @@ var app = (function (jquery) {
     		block,
     		id: create_default_slot$2H.name,
     		type: "slot",
-    		source: "(15:0) <DefaultPage color={color} fontSize={fontSize}>",
+    		source: "(11:0) <DefaultPage color={color} fontSize={subhead}>",
     		ctx
     	});
 
@@ -65386,7 +66188,7 @@ var app = (function (jquery) {
     	defaultpage = new DefaultPage({
     			props: {
     				color: /*color*/ ctx[0],
-    				fontSize: /*fontSize*/ ctx[1],
+    				fontSize: /*subhead*/ ctx[1],
     				$$slots: { default: [create_default_slot$2H] },
     				$$scope: { ctx }
     			},
@@ -65407,9 +66209,9 @@ var app = (function (jquery) {
     		p: function update(ctx, [dirty]) {
     			const defaultpage_changes = {};
     			if (dirty & /*color*/ 1) defaultpage_changes.color = /*color*/ ctx[0];
-    			if (dirty & /*fontSize*/ 2) defaultpage_changes.fontSize = /*fontSize*/ ctx[1];
+    			if (dirty & /*subhead*/ 2) defaultpage_changes.fontSize = /*subhead*/ ctx[1];
 
-    			if (dirty & /*$$scope*/ 128) {
+    			if (dirty & /*$$scope, context*/ 20) {
     				defaultpage_changes.$$scope = { dirty, ctx };
     			}
 
@@ -65441,31 +66243,23 @@ var app = (function (jquery) {
     }
 
     function instance$4p($$self, $$props, $$invalidate) {
-    	let $Device;
-    	let $season;
-    	let $Color;
-    	validate_store(Device, 'Device');
-    	component_subscribe($$self, Device, $$value => $$invalidate(3, $Device = $$value));
-    	validate_store(season, 'season');
-    	component_subscribe($$self, season, $$value => $$invalidate(4, $season = $$value));
-    	validate_store(Color, 'Color');
-    	component_subscribe($$self, Color, $$value => $$invalidate(5, $Color = $$value));
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('Page02', slots, []);
     	let { color = "transparent" } = $$props;
-    	let { fontSize = 2 } = $$props;
-    	let CurPage = "main";
-    	console.log($Color["btnBackColor"][$season]);
-    	const calcSubFontSize = () => !$Device["isMobile"] ? fontSize : fontSize / 2;
-    	const writable_props = ['color', 'fontSize'];
+    	let { head = 2 } = $$props;
+    	let { subhead = 1.5 } = $$props;
+    	let { context = 1 } = $$props;
+    	const writable_props = ['color', 'head', 'subhead', 'context'];
 
     	Object.keys($$props).forEach(key => {
-    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console_1$1g.warn(`<Page02> was created with unknown prop '${key}'`);
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<Page02> was created with unknown prop '${key}'`);
     	});
 
     	$$self.$$set = $$props => {
     		if ('color' in $$props) $$invalidate(0, color = $$props.color);
-    		if ('fontSize' in $$props) $$invalidate(1, fontSize = $$props.fontSize);
+    		if ('head' in $$props) $$invalidate(3, head = $$props.head);
+    		if ('subhead' in $$props) $$invalidate(1, subhead = $$props.subhead);
+    		if ('context' in $$props) $$invalidate(2, context = $$props.context);
     	};
 
     	$$self.$capture_state = () => ({
@@ -65474,31 +66268,35 @@ var app = (function (jquery) {
     		season,
     		DefaultPage,
     		color,
-    		fontSize,
-    		CurPage,
-    		calcSubFontSize,
-    		$Device,
-    		$season,
-    		$Color
+    		head,
+    		subhead,
+    		context
     	});
 
     	$$self.$inject_state = $$props => {
     		if ('color' in $$props) $$invalidate(0, color = $$props.color);
-    		if ('fontSize' in $$props) $$invalidate(1, fontSize = $$props.fontSize);
-    		if ('CurPage' in $$props) CurPage = $$props.CurPage;
+    		if ('head' in $$props) $$invalidate(3, head = $$props.head);
+    		if ('subhead' in $$props) $$invalidate(1, subhead = $$props.subhead);
+    		if ('context' in $$props) $$invalidate(2, context = $$props.context);
     	};
 
     	if ($$props && "$$inject" in $$props) {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [color, fontSize, calcSubFontSize];
+    	return [color, subhead, context, head];
     }
 
     class Page02$15 extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$4p, create_fragment$4p, safe_not_equal, { color: 0, fontSize: 1 });
+
+    		init(this, options, instance$4p, create_fragment$4p, safe_not_equal, {
+    			color: 0,
+    			head: 3,
+    			subhead: 1,
+    			context: 2
+    		});
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
@@ -65516,11 +66314,27 @@ var app = (function (jquery) {
     		throw new Error("<Page02>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
 
-    	get fontSize() {
+    	get head() {
     		throw new Error("<Page02>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
 
-    	set fontSize(value) {
+    	set head(value) {
+    		throw new Error("<Page02>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get subhead() {
+    		throw new Error("<Page02>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set subhead(value) {
+    		throw new Error("<Page02>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get context() {
+    		throw new Error("<Page02>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set context(value) {
     		throw new Error("<Page02>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
     }
