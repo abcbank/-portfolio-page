@@ -8,9 +8,9 @@
     export let context = 1;
 </script>
 
-<DefaultPage color={color} fontSize={fontSize}>
+<DefaultPage color={color} fontSize={subhead}>
     <p>프로젝트 목적</p>
-    <div style="font-size:{calcSubFontSize()}rem; text-align:left; margin-top:20px;">
+    <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
             {#if $Device["isMobile"]}
             - PCB에 펌웨어를 넣는 작업을 자동화<br/>
