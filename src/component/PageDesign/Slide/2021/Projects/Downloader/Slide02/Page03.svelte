@@ -16,7 +16,7 @@
             1. 네 개의 PCB가 아쎄이 형태로 로딩<br/>
             2. 각 PCB에 펌웨어를 업로드<br/>
             3. 지정된 검사를 수행해 업로드 직후<br/>
-            &nbsp;&nbsp;PCB의 불량 여부 파악
+            &nbsp;&nbsp;&nbsp;&nbsp;PCB의 불량 여부 파악
             {:else}
             1. 네 개의 PCB가 아쎄이 형태로 로딩<br/>
             2. 각 PCB에 펌웨어를 업로드<br/>
