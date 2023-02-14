@@ -44,8 +44,8 @@
         position: absolute;
         top:50%;
         left:50%;
-        min-width: 120px;
-        min-height: 120px;
+        min-width: 50px;
+        min-height: 50px;
         width:5vw;
         height:5vw;
 		display: flex;
