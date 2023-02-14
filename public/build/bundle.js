@@ -1425,7 +1425,7 @@ var app = (function (jquery) {
     const file$5n = "node_modules\\sveltestrap\\src\\Collapse.svelte";
 
     // (61:0) {#if isOpen}
-    function create_if_block$K(ctx) {
+    function create_if_block$M(ctx) {
     	let div;
     	let div_style_value;
     	let div_intro;
@@ -1574,7 +1574,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$K.name,
+    		id: create_if_block$M.name,
     		type: "if",
     		source: "(61:0) {#if isOpen}",
     		ctx
@@ -1589,7 +1589,7 @@ var app = (function (jquery) {
     	let mounted;
     	let dispose;
     	add_render_callback(/*onwindowresize*/ ctx[21]);
-    	let if_block = /*isOpen*/ ctx[0] && create_if_block$K(ctx);
+    	let if_block = /*isOpen*/ ctx[0] && create_if_block$M(ctx);
 
     	const block = {
     		c: function create() {
@@ -1618,7 +1618,7 @@ var app = (function (jquery) {
     						transition_in(if_block, 1);
     					}
     				} else {
-    					if_block = create_if_block$K(ctx);
+    					if_block = create_if_block$M(ctx);
     					if_block.c();
     					transition_in(if_block, 1);
     					if_block.m(if_block_anchor.parentNode, if_block_anchor);
@@ -2109,7 +2109,7 @@ var app = (function (jquery) {
     }
 
     // (37:0) {#if href}
-    function create_if_block$J(ctx) {
+    function create_if_block$L(ctx) {
     	let a;
     	let current_block_type_index;
     	let if_block;
@@ -2117,7 +2117,7 @@ var app = (function (jquery) {
     	let current;
     	let mounted;
     	let dispose;
-    	const if_block_creators = [create_if_block_1$b, create_else_block$y];
+    	const if_block_creators = [create_if_block_1$b, create_else_block$A];
     	const if_blocks = [];
 
     	function select_block_type_1(ctx, dirty) {
@@ -2219,7 +2219,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block: block_1,
-    		id: create_if_block$J.name,
+    		id: create_if_block$L.name,
     		type: "if",
     		source: "(37:0) {#if href}",
     		ctx
@@ -2399,7 +2399,7 @@ var app = (function (jquery) {
     }
 
     // (50:4) {:else}
-    function create_else_block$y(ctx) {
+    function create_else_block$A(ctx) {
     	let current;
     	const default_slot_template = /*#slots*/ ctx[19].default;
     	const default_slot = create_slot(default_slot_template, ctx, /*$$scope*/ ctx[18], null);
@@ -2447,7 +2447,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block: block_1,
-    		id: create_else_block$y.name,
+    		id: create_else_block$A.name,
     		type: "else",
     		source: "(50:4) {:else}",
     		ctx
@@ -2493,7 +2493,7 @@ var app = (function (jquery) {
     	let if_block;
     	let if_block_anchor;
     	let current;
-    	const if_block_creators = [create_if_block$J, create_else_block_1];
+    	const if_block_creators = [create_if_block$L, create_else_block_1];
     	const if_blocks = [];
 
     	function select_block_type(ctx, dirty) {
@@ -4732,7 +4732,7 @@ var app = (function (jquery) {
     const file$5l = "node_modules\\sveltestrap\\src\\Dropdown.svelte";
 
     // (127:0) {:else}
-    function create_else_block$x(ctx) {
+    function create_else_block$z(ctx) {
     	let div;
     	let current;
     	const default_slot_template = /*#slots*/ ctx[19].default;
@@ -4800,7 +4800,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_else_block$x.name,
+    		id: create_else_block$z.name,
     		type: "else",
     		source: "(127:0) {:else}",
     		ctx
@@ -4810,7 +4810,7 @@ var app = (function (jquery) {
     }
 
     // (123:0) {#if nav}
-    function create_if_block$I(ctx) {
+    function create_if_block$K(ctx) {
     	let li;
     	let current;
     	const default_slot_template = /*#slots*/ ctx[19].default;
@@ -4878,7 +4878,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$I.name,
+    		id: create_if_block$K.name,
     		type: "if",
     		source: "(123:0) {#if nav}",
     		ctx
@@ -4892,7 +4892,7 @@ var app = (function (jquery) {
     	let if_block;
     	let if_block_anchor;
     	let current;
-    	const if_block_creators = [create_if_block$I, create_else_block$x];
+    	const if_block_creators = [create_if_block$K, create_else_block$z];
     	const if_blocks = [];
 
     	function select_block_type(ctx, dirty) {
@@ -5554,7 +5554,7 @@ var app = (function (jquery) {
     const file$5j = "node_modules\\sveltestrap\\src\\DropdownItem.svelte";
 
     // (49:0) {:else}
-    function create_else_block$w(ctx) {
+    function create_else_block$y(ctx) {
     	let button;
     	let current;
     	let mounted;
@@ -5635,7 +5635,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_else_block$w.name,
+    		id: create_else_block$y.name,
     		type: "else",
     		source: "(49:0) {:else}",
     		ctx
@@ -5828,7 +5828,7 @@ var app = (function (jquery) {
     }
 
     // (37:0) {#if header}
-    function create_if_block$H(ctx) {
+    function create_if_block$J(ctx) {
     	let h6;
     	let current;
     	let mounted;
@@ -5907,7 +5907,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$H.name,
+    		id: create_if_block$J.name,
     		type: "if",
     		source: "(37:0) {#if header}",
     		ctx
@@ -5921,7 +5921,7 @@ var app = (function (jquery) {
     	let if_block;
     	let if_block_anchor;
     	let current;
-    	const if_block_creators = [create_if_block$H, create_if_block_1$a, create_if_block_2$8, create_else_block$w];
+    	const if_block_creators = [create_if_block$J, create_if_block_1$a, create_if_block_2$8, create_else_block$y];
     	const if_blocks = [];
 
     	function select_block_type(ctx, dirty) {
@@ -6449,7 +6449,7 @@ var app = (function (jquery) {
     const file$5h = "node_modules\\sveltestrap\\src\\DropdownToggle.svelte";
 
     // (94:0) {:else}
-    function create_else_block$v(ctx) {
+    function create_else_block$x(ctx) {
     	let button;
     	let button_aria_expanded_value;
     	let current;
@@ -6551,7 +6551,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block: block_1,
-    		id: create_else_block$v.name,
+    		id: create_else_block$x.name,
     		type: "else",
     		source: "(94:0) {:else}",
     		ctx
@@ -6777,7 +6777,7 @@ var app = (function (jquery) {
     }
 
     // (51:0) {#if nav}
-    function create_if_block$G(ctx) {
+    function create_if_block$I(ctx) {
     	let a;
     	let a_aria_expanded_value;
     	let current;
@@ -6876,7 +6876,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block: block_1,
-    		id: create_if_block$G.name,
+    		id: create_if_block$I.name,
     		type: "if",
     		source: "(51:0) {#if nav}",
     		ctx
@@ -7030,7 +7030,7 @@ var app = (function (jquery) {
     	let if_block;
     	let if_block_anchor;
     	let current;
-    	const if_block_creators = [create_if_block$G, create_if_block_1$9, create_if_block_2$7, create_else_block$v];
+    	const if_block_creators = [create_if_block$I, create_if_block_1$9, create_if_block_2$7, create_else_block$x];
     	const if_blocks = [];
 
     	function select_block_type(ctx, dirty) {
@@ -7728,7 +7728,7 @@ var app = (function (jquery) {
     const file$5f = "node_modules\\sveltestrap\\src\\Navbar.svelte";
 
     // (44:2) {:else}
-    function create_else_block$u(ctx) {
+    function create_else_block$w(ctx) {
     	let current;
     	const default_slot_template = /*#slots*/ ctx[10].default;
     	const default_slot = create_slot(default_slot_template, ctx, /*$$scope*/ ctx[11], null);
@@ -7776,7 +7776,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_else_block$u.name,
+    		id: create_else_block$w.name,
     		type: "else",
     		source: "(44:2) {:else}",
     		ctx
@@ -7786,7 +7786,7 @@ var app = (function (jquery) {
     }
 
     // (40:2) {#if container}
-    function create_if_block$F(ctx) {
+    function create_if_block$H(ctx) {
     	let container_1;
     	let current;
 
@@ -7833,7 +7833,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$F.name,
+    		id: create_if_block$H.name,
     		type: "if",
     		source: "(40:2) {#if container}",
     		ctx
@@ -7905,7 +7905,7 @@ var app = (function (jquery) {
     	let current_block_type_index;
     	let if_block;
     	let current;
-    	const if_block_creators = [create_if_block$F, create_else_block$u];
+    	const if_block_creators = [create_if_block$H, create_else_block$w];
     	const if_blocks = [];
 
     	function select_block_type(ctx, dirty) {
@@ -9098,7 +9098,7 @@ var app = (function (jquery) {
     const get_trigger_slot_context = ctx => ({});
 
     // (58:6) {#if open}
-    function create_if_block$E(ctx) {
+    function create_if_block$G(ctx) {
     	let current;
     	const default_slot_template = /*#slots*/ ctx[6].default;
     	const default_slot = create_slot(default_slot_template, ctx, /*$$scope*/ ctx[5], null);
@@ -9146,7 +9146,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$E.name,
+    		id: create_if_block$G.name,
     		type: "if",
     		source: "(58:6) {#if open}",
     		ctx
@@ -9164,7 +9164,7 @@ var app = (function (jquery) {
     	let dispose;
     	const trigger_slot_template = /*#slots*/ ctx[6].trigger;
     	const trigger_slot = create_slot(trigger_slot_template, ctx, /*$$scope*/ ctx[5], get_trigger_slot_context);
-    	let if_block = /*open*/ ctx[0] && create_if_block$E(ctx);
+    	let if_block = /*open*/ ctx[0] && create_if_block$G(ctx);
 
     	const block = {
     		c: function create() {
@@ -9235,7 +9235,7 @@ var app = (function (jquery) {
     						transition_in(if_block, 1);
     					}
     				} else {
-    					if_block = create_if_block$E(ctx);
+    					if_block = create_if_block$G(ctx);
     					if_block.c();
     					transition_in(if_block, 1);
     					if_block.m(li, null);
@@ -9436,7 +9436,7 @@ var app = (function (jquery) {
     const file$59 = "src\\component\\Icon\\Icon.svelte";
 
     // (20:4) {:else}
-    function create_else_block$t(ctx) {
+    function create_else_block$v(ctx) {
     	let t;
 
     	const block = {
@@ -9456,7 +9456,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_else_block$t.name,
+    		id: create_else_block$v.name,
     		type: "else",
     		source: "(20:4) {:else}",
     		ctx
@@ -9466,7 +9466,7 @@ var app = (function (jquery) {
     }
 
     // (18:4) {#if str == ''}
-    function create_if_block$D(ctx) {
+    function create_if_block$F(ctx) {
     	let path_1;
 
     	const block = {
@@ -9495,7 +9495,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$D.name,
+    		id: create_if_block$F.name,
     		type: "if",
     		source: "(18:4) {#if str == ''}",
     		ctx
@@ -9510,8 +9510,8 @@ var app = (function (jquery) {
     	let svg_style_value;
 
     	function select_block_type(ctx, dirty) {
-    		if (/*str*/ ctx[5] == '') return create_if_block$D;
-    		return create_else_block$t;
+    		if (/*str*/ ctx[5] == '') return create_if_block$F;
+    		return create_else_block$v;
     	}
 
     	let current_block_type = select_block_type(ctx);
@@ -9721,7 +9721,7 @@ var app = (function (jquery) {
     const file$58 = "src\\component\\Dropdown\\IconButton.svelte";
 
     // (18:1) {:else}
-    function create_else_block$s(ctx) {
+    function create_else_block$u(ctx) {
     	let icon;
     	let current;
 
@@ -9763,7 +9763,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_else_block$s.name,
+    		id: create_else_block$u.name,
     		type: "else",
     		source: "(18:1) {:else}",
     		ctx
@@ -9825,7 +9825,7 @@ var app = (function (jquery) {
     }
 
     // (21:1) {#if showComment}
-    function create_if_block$C(ctx) {
+    function create_if_block$E(ctx) {
     	let div;
     	let t;
     	let div_intro;
@@ -9860,7 +9860,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$C.name,
+    		id: create_if_block$E.name,
     		type: "if",
     		source: "(21:1) {#if showComment}",
     		ctx
@@ -9877,7 +9877,7 @@ var app = (function (jquery) {
     	let current;
     	let mounted;
     	let dispose;
-    	const if_block_creators = [create_if_block_1$8, create_else_block$s];
+    	const if_block_creators = [create_if_block_1$8, create_else_block$u];
     	const if_blocks = [];
 
     	function select_block_type(ctx, dirty) {
@@ -9887,7 +9887,7 @@ var app = (function (jquery) {
 
     	current_block_type_index = select_block_type(ctx);
     	if_block0 = if_blocks[current_block_type_index] = if_block_creators[current_block_type_index](ctx);
-    	let if_block1 = /*showComment*/ ctx[3] && create_if_block$C(ctx);
+    	let if_block1 = /*showComment*/ ctx[3] && create_if_block$E(ctx);
 
     	const block = {
     		c: function create() {
@@ -9954,7 +9954,7 @@ var app = (function (jquery) {
     						transition_in(if_block1, 1);
     					}
     				} else {
-    					if_block1 = create_if_block$C(ctx);
+    					if_block1 = create_if_block$E(ctx);
     					if_block1.c();
     					transition_in(if_block1, 1);
     					if_block1.m(div, null);
@@ -10119,7 +10119,7 @@ var app = (function (jquery) {
     const file$57 = "src\\component\\Dropdown\\MenuItem.svelte";
 
     // (24:1) {:else}
-    function create_else_block$r(ctx) {
+    function create_else_block$t(ctx) {
     	let span;
     	let icon;
     	let current;
@@ -10167,7 +10167,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_else_block$r.name,
+    		id: create_else_block$t.name,
     		type: "else",
     		source: "(24:1) {:else}",
     		ctx
@@ -10177,7 +10177,7 @@ var app = (function (jquery) {
     }
 
     // (20:1) {#if isChecked}
-    function create_if_block$B(ctx) {
+    function create_if_block$D(ctx) {
     	let span;
     	let icon;
     	let current;
@@ -10224,7 +10224,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$B.name,
+    		id: create_if_block$D.name,
     		type: "if",
     		source: "(20:1) {#if isChecked}",
     		ctx
@@ -10254,7 +10254,7 @@ var app = (function (jquery) {
 
     	const default_slot_template = /*#slots*/ ctx[7].default;
     	const default_slot = create_slot(default_slot_template, ctx, /*$$scope*/ ctx[6], null);
-    	const if_block_creators = [create_if_block$B, create_else_block$r];
+    	const if_block_creators = [create_if_block$D, create_else_block$t];
     	const if_blocks = [];
 
     	function select_block_type(ctx, dirty) {
@@ -10800,7 +10800,7 @@ var app = (function (jquery) {
     }
 
     // (16:2) {#if activeMenu == Config.Name}
-    function create_if_block$A(ctx) {
+    function create_if_block$C(ctx) {
     	let switch_instance;
     	let updating_height;
     	let updating_activeMenu;
@@ -10909,7 +10909,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$A.name,
+    		id: create_if_block$C.name,
     		type: "if",
     		source: "(16:2) {#if activeMenu == Config.Name}",
     		ctx
@@ -10922,7 +10922,7 @@ var app = (function (jquery) {
     function create_each_block$5(ctx) {
     	let if_block_anchor;
     	let current;
-    	let if_block = /*activeMenu*/ ctx[0] == /*Config*/ ctx[8].Name && create_if_block$A(ctx);
+    	let if_block = /*activeMenu*/ ctx[0] == /*Config*/ ctx[8].Name && create_if_block$C(ctx);
 
     	const block = {
     		c: function create() {
@@ -10943,7 +10943,7 @@ var app = (function (jquery) {
     						transition_in(if_block, 1);
     					}
     				} else {
-    					if_block = create_if_block$A(ctx);
+    					if_block = create_if_block$C(ctx);
     					if_block.c();
     					transition_in(if_block, 1);
     					if_block.m(if_block_anchor.parentNode, if_block_anchor);
@@ -11230,7 +11230,7 @@ var app = (function (jquery) {
     const file$54 = "src\\component\\Dropdown\\SideTrigger.svelte";
 
     // (19:1) {#if isDropdown}
-    function create_if_block$z(ctx) {
+    function create_if_block$B(ctx) {
     	let span;
     	let icon;
     	let current;
@@ -11278,7 +11278,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$z.name,
+    		id: create_if_block$B.name,
     		type: "if",
     		source: "(19:1) {#if isDropdown}",
     		ctx
@@ -11304,7 +11304,7 @@ var app = (function (jquery) {
 
     	const default_slot_template = /*#slots*/ ctx[7].default;
     	const default_slot = create_slot(default_slot_template, ctx, /*$$scope*/ ctx[6], null);
-    	let if_block = /*isDropdown*/ ctx[2] && create_if_block$z(ctx);
+    	let if_block = /*isDropdown*/ ctx[2] && create_if_block$B(ctx);
 
     	const block = {
     		c: function create() {
@@ -11363,7 +11363,7 @@ var app = (function (jquery) {
     						transition_in(if_block, 1);
     					}
     				} else {
-    					if_block = create_if_block$z(ctx);
+    					if_block = create_if_block$B(ctx);
     					if_block.c();
     					transition_in(if_block, 1);
     					if_block.m(div, null);
@@ -11581,7 +11581,7 @@ var app = (function (jquery) {
     }
 
     // (51:0) {:else}
-    function create_else_block$q(ctx) {
+    function create_else_block$s(ctx) {
     	let div2;
     	let div1;
     	let div0;
@@ -11669,7 +11669,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_else_block$q.name,
+    		id: create_else_block$s.name,
     		type: "else",
     		source: "(51:0) {:else}",
     		ctx
@@ -11748,7 +11748,7 @@ var app = (function (jquery) {
     }
 
     // (29:0) {#if design == 'inner'}
-    function create_if_block$y(ctx) {
+    function create_if_block$A(ctx) {
     	let div;
     	let span0;
     	let t0;
@@ -11818,7 +11818,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$y.name,
+    		id: create_if_block$A.name,
     		type: "if",
     		source: "(29:0) {#if design == 'inner'}",
     		ctx
@@ -11917,9 +11917,9 @@ var app = (function (jquery) {
     	let if_block_anchor;
 
     	function select_block_type(ctx, dirty) {
-    		if (/*design*/ ctx[3] == 'inner') return create_if_block$y;
+    		if (/*design*/ ctx[3] == 'inner') return create_if_block$A;
     		if (/*design*/ ctx[3] == 'slider') return create_if_block_1$7;
-    		return create_else_block$q;
+    		return create_else_block$s;
     	}
 
     	let current_block_type = select_block_type(ctx);
@@ -12146,7 +12146,7 @@ var app = (function (jquery) {
     const file$52 = "src\\component\\Navbar\\Components\\NavProfile.svelte";
 
     // (44:8) {:else}
-    function create_else_block$p(ctx) {
+    function create_else_block$r(ctx) {
     	let sidetrigger;
     	let updating_isOpen;
     	let current;
@@ -12210,7 +12210,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_else_block$p.name,
+    		id: create_else_block$r.name,
     		type: "else",
     		source: "(44:8) {:else}",
     		ctx
@@ -12220,7 +12220,7 @@ var app = (function (jquery) {
     }
 
     // (42:8) {#if !isSide}
-    function create_if_block$x(ctx) {
+    function create_if_block$z(ctx) {
     	let iconbutton;
     	let updating_showComment;
     	let current;
@@ -12273,7 +12273,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$x.name,
+    		id: create_if_block$z.name,
     		type: "if",
     		source: "(42:8) {#if !isSide}",
     		ctx
@@ -12317,7 +12317,7 @@ var app = (function (jquery) {
     	let current;
     	let mounted;
     	let dispose;
-    	const if_block_creators = [create_if_block$x, create_else_block$p];
+    	const if_block_creators = [create_if_block$z, create_else_block$r];
     	const if_blocks = [];
 
     	function select_block_type(ctx, dirty) {
@@ -12713,7 +12713,7 @@ var app = (function (jquery) {
     const file$51 = "src\\component\\Navbar\\Components\\NavGithub.svelte";
 
     // (44:8) {:else}
-    function create_else_block$o(ctx) {
+    function create_else_block$q(ctx) {
     	let sidetrigger;
     	let updating_isOpen;
     	let current;
@@ -12777,7 +12777,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_else_block$o.name,
+    		id: create_else_block$q.name,
     		type: "else",
     		source: "(44:8) {:else}",
     		ctx
@@ -12787,7 +12787,7 @@ var app = (function (jquery) {
     }
 
     // (42:8) {#if !isSide}
-    function create_if_block$w(ctx) {
+    function create_if_block$y(ctx) {
     	let iconbutton;
     	let updating_showComment;
     	let current;
@@ -12840,7 +12840,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$w.name,
+    		id: create_if_block$y.name,
     		type: "if",
     		source: "(42:8) {#if !isSide}",
     		ctx
@@ -12882,7 +12882,7 @@ var app = (function (jquery) {
     	let current_block_type_index;
     	let if_block;
     	let current;
-    	const if_block_creators = [create_if_block$w, create_else_block$o];
+    	const if_block_creators = [create_if_block$y, create_else_block$q];
     	const if_blocks = [];
 
     	function select_block_type(ctx, dirty) {
@@ -13689,7 +13689,7 @@ var app = (function (jquery) {
     const { Error: Error_1, Object: Object_1, console: console_1$1Q } = globals;
 
     // (267:0) {:else}
-    function create_else_block$n(ctx) {
+    function create_else_block$p(ctx) {
     	let switch_instance;
     	let switch_instance_anchor;
     	let current;
@@ -13771,7 +13771,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_else_block$n.name,
+    		id: create_else_block$p.name,
     		type: "else",
     		source: "(267:0) {:else}",
     		ctx
@@ -13781,7 +13781,7 @@ var app = (function (jquery) {
     }
 
     // (260:0) {#if componentParams}
-    function create_if_block$v(ctx) {
+    function create_if_block$x(ctx) {
     	let switch_instance;
     	let switch_instance_anchor;
     	let current;
@@ -13866,7 +13866,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$v.name,
+    		id: create_if_block$x.name,
     		type: "if",
     		source: "(260:0) {#if componentParams}",
     		ctx
@@ -13880,7 +13880,7 @@ var app = (function (jquery) {
     	let if_block;
     	let if_block_anchor;
     	let current;
-    	const if_block_creators = [create_if_block$v, create_else_block$n];
+    	const if_block_creators = [create_if_block$x, create_else_block$p];
     	const if_blocks = [];
 
     	function select_block_type(ctx, dirty) {
@@ -15548,7 +15548,7 @@ var app = (function (jquery) {
     }
 
     // (42:8) {:else}
-    function create_else_block$m(ctx) {
+    function create_else_block$o(ctx) {
     	let sidetrigger;
     	let updating_isOpen;
     	let current;
@@ -15612,7 +15612,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_else_block$m.name,
+    		id: create_else_block$o.name,
     		type: "else",
     		source: "(42:8) {:else}",
     		ctx
@@ -15622,7 +15622,7 @@ var app = (function (jquery) {
     }
 
     // (40:8) {#if !isSide}
-    function create_if_block$u(ctx) {
+    function create_if_block$w(ctx) {
     	let iconbutton;
     	let updating_showComment;
     	let current;
@@ -15678,7 +15678,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$u.name,
+    		id: create_if_block$w.name,
     		type: "if",
     		source: "(40:8) {#if !isSide}",
     		ctx
@@ -15722,7 +15722,7 @@ var app = (function (jquery) {
     	let current;
     	let mounted;
     	let dispose;
-    	const if_block_creators = [create_if_block$u, create_else_block$m];
+    	const if_block_creators = [create_if_block$w, create_else_block$o];
     	const if_blocks = [];
 
     	function select_block_type(ctx, dirty) {
@@ -17274,7 +17274,7 @@ var app = (function (jquery) {
     }
 
     // (74:8) {:else}
-    function create_else_block$l(ctx) {
+    function create_else_block$n(ctx) {
     	let t_1;
 
     	const block = {
@@ -17291,7 +17291,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_else_block$l.name,
+    		id: create_else_block$n.name,
     		type: "else",
     		source: "(74:8) {:else}",
     		ctx
@@ -17301,7 +17301,7 @@ var app = (function (jquery) {
     }
 
     // (72:8) {#if width < 200}
-    function create_if_block$t(ctx) {
+    function create_if_block$v(ctx) {
     	let t0;
     	let br;
     	let t1;
@@ -17327,7 +17327,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$t.name,
+    		id: create_if_block$v.name,
     		type: "if",
     		source: "(72:8) {#if width < 200}",
     		ctx
@@ -17341,8 +17341,8 @@ var app = (function (jquery) {
     	let if_block_anchor;
 
     	function select_block_type(ctx, dirty) {
-    		if (/*width*/ ctx[1] < 200) return create_if_block$t;
-    		return create_else_block$l;
+    		if (/*width*/ ctx[1] < 200) return create_if_block$v;
+    		return create_else_block$n;
     	}
 
     	let current_block_type = select_block_type(ctx);
@@ -18307,7 +18307,7 @@ var app = (function (jquery) {
     }
 
     // (49:8) {:else}
-    function create_else_block$k(ctx) {
+    function create_else_block$m(ctx) {
     	let t;
 
     	const block = {
@@ -18324,7 +18324,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_else_block$k.name,
+    		id: create_else_block$m.name,
     		type: "else",
     		source: "(49:8) {:else}",
     		ctx
@@ -18334,7 +18334,7 @@ var app = (function (jquery) {
     }
 
     // (47:8) {#if width < 200}
-    function create_if_block$s(ctx) {
+    function create_if_block$u(ctx) {
     	let t0;
     	let br;
     	let t1;
@@ -18360,7 +18360,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$s.name,
+    		id: create_if_block$u.name,
     		type: "if",
     		source: "(47:8) {#if width < 200}",
     		ctx
@@ -18374,8 +18374,8 @@ var app = (function (jquery) {
     	let if_block_anchor;
 
     	function select_block_type(ctx, dirty) {
-    		if (/*width*/ ctx[1] < 200) return create_if_block$s;
-    		return create_else_block$k;
+    		if (/*width*/ ctx[1] < 200) return create_if_block$u;
+    		return create_else_block$m;
     	}
 
     	let current_block_type = select_block_type(ctx);
@@ -19022,7 +19022,7 @@ var app = (function (jquery) {
     }
 
     // (29:8) {:else}
-    function create_else_block$j(ctx) {
+    function create_else_block$l(ctx) {
     	let sidetrigger;
     	let updating_isOpen;
     	let current;
@@ -19086,7 +19086,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_else_block$j.name,
+    		id: create_else_block$l.name,
     		type: "else",
     		source: "(29:8) {:else}",
     		ctx
@@ -19096,7 +19096,7 @@ var app = (function (jquery) {
     }
 
     // (27:8) {#if !isSide}
-    function create_if_block$r(ctx) {
+    function create_if_block$t(ctx) {
     	let iconbutton;
     	let updating_showComment;
     	let current;
@@ -19152,7 +19152,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$r.name,
+    		id: create_if_block$t.name,
     		type: "if",
     		source: "(27:8) {#if !isSide}",
     		ctx
@@ -19196,7 +19196,7 @@ var app = (function (jquery) {
     	let current;
     	let mounted;
     	let dispose;
-    	const if_block_creators = [create_if_block$r, create_else_block$j];
+    	const if_block_creators = [create_if_block$t, create_else_block$l];
     	const if_blocks = [];
 
     	function select_block_type(ctx, dirty) {
@@ -20263,7 +20263,7 @@ var app = (function (jquery) {
     }
 
     // (45:12) {:else}
-    function create_else_block$i(ctx) {
+    function create_else_block$k(ctx) {
     	let sidetrigger;
     	let updating_isOpen;
     	let current;
@@ -20327,7 +20327,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_else_block$i.name,
+    		id: create_else_block$k.name,
     		type: "else",
     		source: "(45:12) {:else}",
     		ctx
@@ -20337,7 +20337,7 @@ var app = (function (jquery) {
     }
 
     // (43:12) {#if !isSide}
-    function create_if_block$q(ctx) {
+    function create_if_block$s(ctx) {
     	let iconbutton;
     	let updating_showComment;
     	let current;
@@ -20393,7 +20393,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$q.name,
+    		id: create_if_block$s.name,
     		type: "if",
     		source: "(43:12) {#if !isSide}",
     		ctx
@@ -20435,7 +20435,7 @@ var app = (function (jquery) {
     	let current_block_type_index;
     	let if_block;
     	let current;
-    	const if_block_creators = [create_if_block$q, create_else_block$i];
+    	const if_block_creators = [create_if_block$s, create_else_block$k];
     	const if_blocks = [];
 
     	function select_block_type(ctx, dirty) {
@@ -21237,7 +21237,7 @@ var app = (function (jquery) {
     const file$4V = "src\\component\\Navbar\\Navbar.svelte";
 
     // (88:4) {:else}
-    function create_else_block$h(ctx) {
+    function create_else_block$j(ctx) {
     	let profile;
     	let updating_isOpen;
     	let t0;
@@ -21449,7 +21449,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_else_block$h.name,
+    		id: create_else_block$j.name,
     		type: "else",
     		source: "(88:4) {:else}",
     		ctx
@@ -21459,7 +21459,7 @@ var app = (function (jquery) {
     }
 
     // (80:4) {#if width <= 720}
-    function create_if_block$p(ctx) {
+    function create_if_block$r(ctx) {
     	let sidebar;
     	let updating_open;
     	let updating_asideWidth;
@@ -21536,7 +21536,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$p.name,
+    		id: create_if_block$r.name,
     		type: "if",
     		source: "(80:4) {#if width <= 720}",
     		ctx
@@ -21833,7 +21833,7 @@ var app = (function (jquery) {
     	let mounted;
     	let dispose;
     	navlogo = new Navlogo({ $$inline: true });
-    	const if_block_creators = [create_if_block$p, create_else_block$h];
+    	const if_block_creators = [create_if_block$r, create_else_block$j];
     	const if_blocks = [];
 
     	function select_block_type(ctx, dirty) {
@@ -23290,7 +23290,7 @@ var app = (function (jquery) {
     }
 
     // (172:8) {#if idx == 0}
-    function create_if_block$o(ctx) {
+    function create_if_block$q(ctx) {
     	let t;
 
     	const block = {
@@ -23310,7 +23310,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$o.name,
+    		id: create_if_block$q.name,
     		type: "if",
     		source: "(172:8) {#if idx == 0}",
     		ctx
@@ -23333,7 +23333,7 @@ var app = (function (jquery) {
     	let dispose;
 
     	function select_block_type(ctx, dirty) {
-    		if (/*idx*/ ctx[1] == 0) return create_if_block$o;
+    		if (/*idx*/ ctx[1] == 0) return create_if_block$q;
     		if (/*idx*/ ctx[1] == 1) return create_if_block_1$6;
     		if (/*idx*/ ctx[1] == 2) return create_if_block_2$6;
     		if (/*idx*/ ctx[1] == 3) return create_if_block_3$1;
@@ -24347,7 +24347,7 @@ var app = (function (jquery) {
     }
 
     // (75:2) {#if curPage == Page.index}
-    function create_if_block$n(ctx) {
+    function create_if_block$p(ctx) {
     	let switch_instance;
     	let updating_color;
     	let updating_fontSize;
@@ -24472,7 +24472,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$n.name,
+    		id: create_if_block$p.name,
     		type: "if",
     		source: "(75:2) {#if curPage == Page.index}",
     		ctx
@@ -24485,7 +24485,7 @@ var app = (function (jquery) {
     function create_each_block$1(ctx) {
     	let if_block_anchor;
     	let current;
-    	let if_block = /*curPage*/ ctx[1] == /*Page*/ ctx[16].index && create_if_block$n(ctx);
+    	let if_block = /*curPage*/ ctx[1] == /*Page*/ ctx[16].index && create_if_block$p(ctx);
 
     	const block = {
     		c: function create() {
@@ -24506,7 +24506,7 @@ var app = (function (jquery) {
     						transition_in(if_block, 1);
     					}
     				} else {
-    					if_block = create_if_block$n(ctx);
+    					if_block = create_if_block$p(ctx);
     					if_block.c();
     					transition_in(if_block, 1);
     					if_block.m(if_block_anchor.parentNode, if_block_anchor);
@@ -24963,7 +24963,7 @@ var app = (function (jquery) {
     }
 
     // (119:12) {#if id === cur}
-    function create_if_block$m(ctx) {
+    function create_if_block$o(ctx) {
     	let div1;
     	let switch_instance;
     	let updating_curPage;
@@ -25123,7 +25123,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$m.name,
+    		id: create_if_block$o.name,
     		type: "if",
     		source: "(119:12) {#if id === cur}",
     		ctx
@@ -25136,7 +25136,7 @@ var app = (function (jquery) {
     function create_each_block_1(ctx) {
     	let if_block_anchor;
     	let current;
-    	let if_block = /*id*/ ctx[28] === /*cur*/ ctx[2] && create_if_block$m(ctx);
+    	let if_block = /*id*/ ctx[28] === /*cur*/ ctx[2] && create_if_block$o(ctx);
 
     	const block = {
     		c: function create() {
@@ -25157,7 +25157,7 @@ var app = (function (jquery) {
     						transition_in(if_block, 1);
     					}
     				} else {
-    					if_block = create_if_block$m(ctx);
+    					if_block = create_if_block$o(ctx);
     					if_block.c();
     					transition_in(if_block, 1);
     					if_block.m(if_block_anchor.parentNode, if_block_anchor);
@@ -25959,7 +25959,7 @@ var app = (function (jquery) {
     }
 
     // (62:4) {#if Slide_01}
-    function create_if_block$l(ctx) {
+    function create_if_block$n(ctx) {
     	let p;
     	let p_outro;
     	let current;
@@ -25992,7 +25992,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$l.name,
+    		id: create_if_block$n.name,
     		type: "if",
     		source: "(62:4) {#if Slide_01}",
     		ctx
@@ -26082,7 +26082,7 @@ var app = (function (jquery) {
     	let if_block;
     	let if_block_anchor;
     	let current;
-    	const if_block_creators = [create_if_block$l, create_if_block_1$5];
+    	const if_block_creators = [create_if_block$n, create_if_block_1$5];
     	const if_blocks = [];
 
     	function select_block_type(ctx, dirty) {
@@ -26647,7 +26647,7 @@ var app = (function (jquery) {
 
     	function select_block_type_1(ctx, dirty) {
     		if (/*$Device*/ ctx[4]["isMobile"]) return create_if_block_2$4;
-    		return create_else_block$g;
+    		return create_else_block$i;
     	}
 
     	let current_block_type = select_block_type_1(ctx);
@@ -26710,7 +26710,7 @@ var app = (function (jquery) {
     }
 
     // (60:4) {#if Slide_01}
-    function create_if_block$k(ctx) {
+    function create_if_block$m(ctx) {
     	let p;
     	let p_outro;
     	let current;
@@ -26743,7 +26743,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$k.name,
+    		id: create_if_block$m.name,
     		type: "if",
     		source: "(60:4) {#if Slide_01}",
     		ctx
@@ -26753,7 +26753,7 @@ var app = (function (jquery) {
     }
 
     // (67:16) {:else}
-    function create_else_block$g(ctx) {
+    function create_else_block$i(ctx) {
     	let t_1;
 
     	const block = {
@@ -26770,7 +26770,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_else_block$g.name,
+    		id: create_else_block$i.name,
     		type: "else",
     		source: "(67:16) {:else}",
     		ctx
@@ -26821,7 +26821,7 @@ var app = (function (jquery) {
     	let if_block;
     	let if_block_anchor;
     	let current;
-    	const if_block_creators = [create_if_block$k, create_if_block_1$4];
+    	const if_block_creators = [create_if_block$m, create_if_block_1$4];
     	const if_blocks = [];
 
     	function select_block_type(ctx, dirty) {
@@ -27536,7 +27536,7 @@ var app = (function (jquery) {
     const file$4J = "src\\component\\PageDesign\\Slide\\Main\\Slide03\\Page01.svelte";
 
     // (23:12) {:else}
-    function create_else_block$f(ctx) {
+    function create_else_block$h(ctx) {
     	let t;
 
     	const block = {
@@ -27553,7 +27553,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_else_block$f.name,
+    		id: create_else_block$h.name,
     		type: "else",
     		source: "(23:12) {:else}",
     		ctx
@@ -27563,7 +27563,7 @@ var app = (function (jquery) {
     }
 
     // (21:12) {#if $Device["isMobile"]}
-    function create_if_block$j(ctx) {
+    function create_if_block$l(ctx) {
     	let t0;
     	let br;
     	let t1;
@@ -27589,7 +27589,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$j.name,
+    		id: create_if_block$l.name,
     		type: "if",
     		source: "(21:12) {#if $Device[\\\"isMobile\\\"]}",
     		ctx
@@ -27609,8 +27609,8 @@ var app = (function (jquery) {
     	let current;
 
     	function select_block_type(ctx, dirty) {
-    		if (/*$Device*/ ctx[2]["isMobile"]) return create_if_block$j;
-    		return create_else_block$f;
+    		if (/*$Device*/ ctx[2]["isMobile"]) return create_if_block$l;
+    		return create_else_block$h;
     	}
 
     	let current_block_type = select_block_type(ctx);
@@ -28082,7 +28082,7 @@ var app = (function (jquery) {
     const file$4I = "src\\component\\PageDesign\\Slide\\Main\\Slide04\\Page01.svelte";
 
     // (52:12) {#if visibility}
-    function create_if_block$i(ctx) {
+    function create_if_block$k(ctx) {
     	let div;
     	let icon;
     	let div_intro;
@@ -28147,7 +28147,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$i.name,
+    		id: create_if_block$k.name,
     		type: "if",
     		source: "(52:12) {#if visibility}",
     		ctx
@@ -28164,7 +28164,7 @@ var app = (function (jquery) {
     	let t1;
     	let div1;
     	let current;
-    	let if_block = /*visibility*/ ctx[3] && create_if_block$i(ctx);
+    	let if_block = /*visibility*/ ctx[3] && create_if_block$k(ctx);
 
     	const block = {
     		c: function create() {
@@ -28205,7 +28205,7 @@ var app = (function (jquery) {
     						transition_in(if_block, 1);
     					}
     				} else {
-    					if_block = create_if_block$i(ctx);
+    					if_block = create_if_block$k(ctx);
     					if_block.c();
     					transition_in(if_block, 1);
     					if_block.m(div1, null);
@@ -28461,7 +28461,7 @@ var app = (function (jquery) {
     const file$4H = "src\\component\\PageDesign\\Slide\\Main\\Slide04\\Page02.svelte";
 
     // (15:8) {:else}
-    function create_else_block$e(ctx) {
+    function create_else_block$g(ctx) {
     	let p;
 
     	const block = {
@@ -28480,7 +28480,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_else_block$e.name,
+    		id: create_else_block$g.name,
     		type: "else",
     		source: "(15:8) {:else}",
     		ctx
@@ -28490,7 +28490,7 @@ var app = (function (jquery) {
     }
 
     // (13:8) {#if $Device["isMobile"]}
-    function create_if_block$h(ctx) {
+    function create_if_block$j(ctx) {
     	let t0;
     	let br;
     	let t1;
@@ -28516,7 +28516,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$h.name,
+    		id: create_if_block$j.name,
     		type: "if",
     		source: "(13:8) {#if $Device[\\\"isMobile\\\"]}",
     		ctx
@@ -28530,8 +28530,8 @@ var app = (function (jquery) {
     	let p;
 
     	function select_block_type(ctx, dirty) {
-    		if (/*$Device*/ ctx[1]["isMobile"]) return create_if_block$h;
-    		return create_else_block$e;
+    		if (/*$Device*/ ctx[1]["isMobile"]) return create_if_block$j;
+    		return create_else_block$g;
     	}
 
     	let current_block_type = select_block_type(ctx);
@@ -28932,7 +28932,7 @@ var app = (function (jquery) {
     const file$4G = "src\\component\\PageDesign\\Slide\\Main\\Slide05\\Page01.svelte";
 
     // (16:8) {:else}
-    function create_else_block$d(ctx) {
+    function create_else_block$f(ctx) {
     	let t;
 
     	const block = {
@@ -28949,7 +28949,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_else_block$d.name,
+    		id: create_else_block$f.name,
     		type: "else",
     		source: "(16:8) {:else}",
     		ctx
@@ -28959,7 +28959,7 @@ var app = (function (jquery) {
     }
 
     // (14:8) {#if $Device["isMobile"]}
-    function create_if_block$g(ctx) {
+    function create_if_block$i(ctx) {
     	let t;
 
     	const block = {
@@ -28976,7 +28976,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$g.name,
+    		id: create_if_block$i.name,
     		type: "if",
     		source: "(14:8) {#if $Device[\\\"isMobile\\\"]}",
     		ctx
@@ -28993,8 +28993,8 @@ var app = (function (jquery) {
     	let t1;
 
     	function select_block_type(ctx, dirty) {
-    		if (/*$Device*/ ctx[1]["isMobile"]) return create_if_block$g;
-    		return create_else_block$d;
+    		if (/*$Device*/ ctx[1]["isMobile"]) return create_if_block$i;
+    		return create_else_block$f;
     	}
 
     	let current_block_type = select_block_type(ctx);
@@ -31132,7 +31132,7 @@ var app = (function (jquery) {
 
     	function select_block_type_1(ctx, dirty) {
     		if (/*$Device*/ ctx[4]["isMobile"]) return create_if_block_2$3;
-    		return create_else_block$c;
+    		return create_else_block$e;
     	}
 
     	let current_block_type = select_block_type_1(ctx);
@@ -31195,7 +31195,7 @@ var app = (function (jquery) {
     }
 
     // (60:4) {#if Slide_01}
-    function create_if_block$f(ctx) {
+    function create_if_block$h(ctx) {
     	let p;
     	let p_outro;
     	let current;
@@ -31228,7 +31228,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$f.name,
+    		id: create_if_block$h.name,
     		type: "if",
     		source: "(60:4) {#if Slide_01}",
     		ctx
@@ -31238,7 +31238,7 @@ var app = (function (jquery) {
     }
 
     // (67:16) {:else}
-    function create_else_block$c(ctx) {
+    function create_else_block$e(ctx) {
     	let t_1;
 
     	const block = {
@@ -31255,7 +31255,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_else_block$c.name,
+    		id: create_else_block$e.name,
     		type: "else",
     		source: "(67:16) {:else}",
     		ctx
@@ -31306,7 +31306,7 @@ var app = (function (jquery) {
     	let if_block;
     	let if_block_anchor;
     	let current;
-    	const if_block_creators = [create_if_block$f, create_if_block_1$3];
+    	const if_block_creators = [create_if_block$h, create_if_block_1$3];
     	const if_blocks = [];
 
     	function select_block_type(ctx, dirty) {
@@ -32021,7 +32021,7 @@ var app = (function (jquery) {
     const file$4x = "src\\component\\PageDesign\\Slide\\Profile\\Slide03\\Page01.svelte";
 
     // (23:12) {:else}
-    function create_else_block$b(ctx) {
+    function create_else_block$d(ctx) {
     	let t;
 
     	const block = {
@@ -32038,7 +32038,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_else_block$b.name,
+    		id: create_else_block$d.name,
     		type: "else",
     		source: "(23:12) {:else}",
     		ctx
@@ -32048,7 +32048,7 @@ var app = (function (jquery) {
     }
 
     // (21:12) {#if $Device["isMobile"]}
-    function create_if_block$e(ctx) {
+    function create_if_block$g(ctx) {
     	let t0;
     	let br;
     	let t1;
@@ -32074,7 +32074,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$e.name,
+    		id: create_if_block$g.name,
     		type: "if",
     		source: "(21:12) {#if $Device[\\\"isMobile\\\"]}",
     		ctx
@@ -32094,8 +32094,8 @@ var app = (function (jquery) {
     	let current;
 
     	function select_block_type(ctx, dirty) {
-    		if (/*$Device*/ ctx[2]["isMobile"]) return create_if_block$e;
-    		return create_else_block$b;
+    		if (/*$Device*/ ctx[2]["isMobile"]) return create_if_block$g;
+    		return create_else_block$d;
     	}
 
     	let current_block_type = select_block_type(ctx);
@@ -32567,7 +32567,7 @@ var app = (function (jquery) {
     const file$4w = "src\\component\\PageDesign\\Slide\\Profile\\Slide04\\Page01.svelte";
 
     // (52:12) {#if visibility}
-    function create_if_block$d(ctx) {
+    function create_if_block$f(ctx) {
     	let div;
     	let icon;
     	let div_intro;
@@ -32632,7 +32632,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$d.name,
+    		id: create_if_block$f.name,
     		type: "if",
     		source: "(52:12) {#if visibility}",
     		ctx
@@ -32649,7 +32649,7 @@ var app = (function (jquery) {
     	let t1;
     	let div1;
     	let current;
-    	let if_block = /*visibility*/ ctx[3] && create_if_block$d(ctx);
+    	let if_block = /*visibility*/ ctx[3] && create_if_block$f(ctx);
 
     	const block = {
     		c: function create() {
@@ -32690,7 +32690,7 @@ var app = (function (jquery) {
     						transition_in(if_block, 1);
     					}
     				} else {
-    					if_block = create_if_block$d(ctx);
+    					if_block = create_if_block$f(ctx);
     					if_block.c();
     					transition_in(if_block, 1);
     					if_block.m(div1, null);
@@ -32946,7 +32946,7 @@ var app = (function (jquery) {
     const file$4v = "src\\component\\PageDesign\\Slide\\Profile\\Slide04\\Page02.svelte";
 
     // (15:8) {:else}
-    function create_else_block$a(ctx) {
+    function create_else_block$c(ctx) {
     	let p;
 
     	const block = {
@@ -32965,7 +32965,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_else_block$a.name,
+    		id: create_else_block$c.name,
     		type: "else",
     		source: "(15:8) {:else}",
     		ctx
@@ -32975,7 +32975,7 @@ var app = (function (jquery) {
     }
 
     // (13:8) {#if $Device["isMobile"]}
-    function create_if_block$c(ctx) {
+    function create_if_block$e(ctx) {
     	let t0;
     	let br;
     	let t1;
@@ -33001,7 +33001,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$c.name,
+    		id: create_if_block$e.name,
     		type: "if",
     		source: "(13:8) {#if $Device[\\\"isMobile\\\"]}",
     		ctx
@@ -33015,8 +33015,8 @@ var app = (function (jquery) {
     	let p;
 
     	function select_block_type(ctx, dirty) {
-    		if (/*$Device*/ ctx[1]["isMobile"]) return create_if_block$c;
-    		return create_else_block$a;
+    		if (/*$Device*/ ctx[1]["isMobile"]) return create_if_block$e;
+    		return create_else_block$c;
     	}
 
     	let current_block_type = select_block_type(ctx);
@@ -33417,7 +33417,7 @@ var app = (function (jquery) {
     const file$4u = "src\\component\\PageDesign\\Slide\\Profile\\Slide05\\Page01.svelte";
 
     // (16:8) {:else}
-    function create_else_block$9(ctx) {
+    function create_else_block$b(ctx) {
     	let t;
 
     	const block = {
@@ -33434,7 +33434,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_else_block$9.name,
+    		id: create_else_block$b.name,
     		type: "else",
     		source: "(16:8) {:else}",
     		ctx
@@ -33444,7 +33444,7 @@ var app = (function (jquery) {
     }
 
     // (14:8) {#if $Device["isMobile"]}
-    function create_if_block$b(ctx) {
+    function create_if_block$d(ctx) {
     	let t;
 
     	const block = {
@@ -33461,7 +33461,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$b.name,
+    		id: create_if_block$d.name,
     		type: "if",
     		source: "(14:8) {#if $Device[\\\"isMobile\\\"]}",
     		ctx
@@ -33478,8 +33478,8 @@ var app = (function (jquery) {
     	let t1;
 
     	function select_block_type(ctx, dirty) {
-    		if (/*$Device*/ ctx[1]["isMobile"]) return create_if_block$b;
-    		return create_else_block$9;
+    		if (/*$Device*/ ctx[1]["isMobile"]) return create_if_block$d;
+    		return create_else_block$b;
     	}
 
     	let current_block_type = select_block_type(ctx);
@@ -35617,7 +35617,7 @@ var app = (function (jquery) {
 
     	function select_block_type_1(ctx, dirty) {
     		if (/*$Device*/ ctx[4]["isMobile"]) return create_if_block_2$2;
-    		return create_else_block$8;
+    		return create_else_block$a;
     	}
 
     	let current_block_type = select_block_type_1(ctx);
@@ -35680,7 +35680,7 @@ var app = (function (jquery) {
     }
 
     // (60:4) {#if Slide_01}
-    function create_if_block$a(ctx) {
+    function create_if_block$c(ctx) {
     	let p;
     	let p_outro;
     	let current;
@@ -35713,7 +35713,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$a.name,
+    		id: create_if_block$c.name,
     		type: "if",
     		source: "(60:4) {#if Slide_01}",
     		ctx
@@ -35723,7 +35723,7 @@ var app = (function (jquery) {
     }
 
     // (67:16) {:else}
-    function create_else_block$8(ctx) {
+    function create_else_block$a(ctx) {
     	let t_1;
 
     	const block = {
@@ -35740,7 +35740,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_else_block$8.name,
+    		id: create_else_block$a.name,
     		type: "else",
     		source: "(67:16) {:else}",
     		ctx
@@ -35791,7 +35791,7 @@ var app = (function (jquery) {
     	let if_block;
     	let if_block_anchor;
     	let current;
-    	const if_block_creators = [create_if_block$a, create_if_block_1$2];
+    	const if_block_creators = [create_if_block$c, create_if_block_1$2];
     	const if_blocks = [];
 
     	function select_block_type(ctx, dirty) {
@@ -36506,7 +36506,7 @@ var app = (function (jquery) {
     const file$4l = "src\\component\\PageDesign\\Slide\\Projects\\Slide03\\Page01.svelte";
 
     // (23:12) {:else}
-    function create_else_block$7(ctx) {
+    function create_else_block$9(ctx) {
     	let t;
 
     	const block = {
@@ -36523,7 +36523,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_else_block$7.name,
+    		id: create_else_block$9.name,
     		type: "else",
     		source: "(23:12) {:else}",
     		ctx
@@ -36533,7 +36533,7 @@ var app = (function (jquery) {
     }
 
     // (21:12) {#if $Device["isMobile"]}
-    function create_if_block$9(ctx) {
+    function create_if_block$b(ctx) {
     	let t0;
     	let br;
     	let t1;
@@ -36559,7 +36559,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$9.name,
+    		id: create_if_block$b.name,
     		type: "if",
     		source: "(21:12) {#if $Device[\\\"isMobile\\\"]}",
     		ctx
@@ -36579,8 +36579,8 @@ var app = (function (jquery) {
     	let current;
 
     	function select_block_type(ctx, dirty) {
-    		if (/*$Device*/ ctx[2]["isMobile"]) return create_if_block$9;
-    		return create_else_block$7;
+    		if (/*$Device*/ ctx[2]["isMobile"]) return create_if_block$b;
+    		return create_else_block$9;
     	}
 
     	let current_block_type = select_block_type(ctx);
@@ -37052,7 +37052,7 @@ var app = (function (jquery) {
     const file$4k = "src\\component\\PageDesign\\Slide\\Projects\\Slide04\\Page01.svelte";
 
     // (52:12) {#if visibility}
-    function create_if_block$8(ctx) {
+    function create_if_block$a(ctx) {
     	let div;
     	let icon;
     	let div_intro;
@@ -37117,7 +37117,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$8.name,
+    		id: create_if_block$a.name,
     		type: "if",
     		source: "(52:12) {#if visibility}",
     		ctx
@@ -37134,7 +37134,7 @@ var app = (function (jquery) {
     	let t1;
     	let div1;
     	let current;
-    	let if_block = /*visibility*/ ctx[3] && create_if_block$8(ctx);
+    	let if_block = /*visibility*/ ctx[3] && create_if_block$a(ctx);
 
     	const block = {
     		c: function create() {
@@ -37175,7 +37175,7 @@ var app = (function (jquery) {
     						transition_in(if_block, 1);
     					}
     				} else {
-    					if_block = create_if_block$8(ctx);
+    					if_block = create_if_block$a(ctx);
     					if_block.c();
     					transition_in(if_block, 1);
     					if_block.m(div1, null);
@@ -37431,7 +37431,7 @@ var app = (function (jquery) {
     const file$4j = "src\\component\\PageDesign\\Slide\\Projects\\Slide04\\Page02.svelte";
 
     // (15:8) {:else}
-    function create_else_block$6(ctx) {
+    function create_else_block$8(ctx) {
     	let p;
 
     	const block = {
@@ -37450,7 +37450,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_else_block$6.name,
+    		id: create_else_block$8.name,
     		type: "else",
     		source: "(15:8) {:else}",
     		ctx
@@ -37460,7 +37460,7 @@ var app = (function (jquery) {
     }
 
     // (13:8) {#if $Device["isMobile"]}
-    function create_if_block$7(ctx) {
+    function create_if_block$9(ctx) {
     	let t0;
     	let br;
     	let t1;
@@ -37486,7 +37486,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$7.name,
+    		id: create_if_block$9.name,
     		type: "if",
     		source: "(13:8) {#if $Device[\\\"isMobile\\\"]}",
     		ctx
@@ -37500,8 +37500,8 @@ var app = (function (jquery) {
     	let p;
 
     	function select_block_type(ctx, dirty) {
-    		if (/*$Device*/ ctx[1]["isMobile"]) return create_if_block$7;
-    		return create_else_block$6;
+    		if (/*$Device*/ ctx[1]["isMobile"]) return create_if_block$9;
+    		return create_else_block$8;
     	}
 
     	let current_block_type = select_block_type(ctx);
@@ -37902,7 +37902,7 @@ var app = (function (jquery) {
     const file$4i = "src\\component\\PageDesign\\Slide\\Projects\\Slide05\\Page01.svelte";
 
     // (16:8) {:else}
-    function create_else_block$5(ctx) {
+    function create_else_block$7(ctx) {
     	let t;
 
     	const block = {
@@ -37919,7 +37919,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_else_block$5.name,
+    		id: create_else_block$7.name,
     		type: "else",
     		source: "(16:8) {:else}",
     		ctx
@@ -37929,7 +37929,7 @@ var app = (function (jquery) {
     }
 
     // (14:8) {#if $Device["isMobile"]}
-    function create_if_block$6(ctx) {
+    function create_if_block$8(ctx) {
     	let t;
 
     	const block = {
@@ -37946,7 +37946,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$6.name,
+    		id: create_if_block$8.name,
     		type: "if",
     		source: "(14:8) {#if $Device[\\\"isMobile\\\"]}",
     		ctx
@@ -37963,8 +37963,8 @@ var app = (function (jquery) {
     	let t1;
 
     	function select_block_type(ctx, dirty) {
-    		if (/*$Device*/ ctx[1]["isMobile"]) return create_if_block$6;
-    		return create_else_block$5;
+    		if (/*$Device*/ ctx[1]["isMobile"]) return create_if_block$8;
+    		return create_else_block$7;
     	}
 
     	let current_block_type = select_block_type(ctx);
@@ -40102,7 +40102,7 @@ var app = (function (jquery) {
 
     	function select_block_type_1(ctx, dirty) {
     		if (/*$Device*/ ctx[4]["isMobile"]) return create_if_block_2$1;
-    		return create_else_block$4;
+    		return create_else_block$6;
     	}
 
     	let current_block_type = select_block_type_1(ctx);
@@ -40165,7 +40165,7 @@ var app = (function (jquery) {
     }
 
     // (60:4) {#if Slide_01}
-    function create_if_block$5(ctx) {
+    function create_if_block$7(ctx) {
     	let p;
     	let p_outro;
     	let current;
@@ -40198,7 +40198,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$5.name,
+    		id: create_if_block$7.name,
     		type: "if",
     		source: "(60:4) {#if Slide_01}",
     		ctx
@@ -40208,7 +40208,7 @@ var app = (function (jquery) {
     }
 
     // (67:16) {:else}
-    function create_else_block$4(ctx) {
+    function create_else_block$6(ctx) {
     	let t_1;
 
     	const block = {
@@ -40225,7 +40225,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_else_block$4.name,
+    		id: create_else_block$6.name,
     		type: "else",
     		source: "(67:16) {:else}",
     		ctx
@@ -40276,7 +40276,7 @@ var app = (function (jquery) {
     	let if_block;
     	let if_block_anchor;
     	let current;
-    	const if_block_creators = [create_if_block$5, create_if_block_1$1];
+    	const if_block_creators = [create_if_block$7, create_if_block_1$1];
     	const if_blocks = [];
 
     	function select_block_type(ctx, dirty) {
@@ -40991,7 +40991,7 @@ var app = (function (jquery) {
     const file$49 = "src\\component\\PageDesign\\Slide\\Outsourcing\\Slide03\\Page01.svelte";
 
     // (23:12) {:else}
-    function create_else_block$3(ctx) {
+    function create_else_block$5(ctx) {
     	let t;
 
     	const block = {
@@ -41008,7 +41008,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_else_block$3.name,
+    		id: create_else_block$5.name,
     		type: "else",
     		source: "(23:12) {:else}",
     		ctx
@@ -41018,7 +41018,7 @@ var app = (function (jquery) {
     }
 
     // (21:12) {#if $Device["isMobile"]}
-    function create_if_block$4(ctx) {
+    function create_if_block$6(ctx) {
     	let t0;
     	let br;
     	let t1;
@@ -41044,7 +41044,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$4.name,
+    		id: create_if_block$6.name,
     		type: "if",
     		source: "(21:12) {#if $Device[\\\"isMobile\\\"]}",
     		ctx
@@ -41064,8 +41064,8 @@ var app = (function (jquery) {
     	let current;
 
     	function select_block_type(ctx, dirty) {
-    		if (/*$Device*/ ctx[2]["isMobile"]) return create_if_block$4;
-    		return create_else_block$3;
+    		if (/*$Device*/ ctx[2]["isMobile"]) return create_if_block$6;
+    		return create_else_block$5;
     	}
 
     	let current_block_type = select_block_type(ctx);
@@ -41537,7 +41537,7 @@ var app = (function (jquery) {
     const file$48 = "src\\component\\PageDesign\\Slide\\Outsourcing\\Slide04\\Page01.svelte";
 
     // (52:12) {#if visibility}
-    function create_if_block$3(ctx) {
+    function create_if_block$5(ctx) {
     	let div;
     	let icon;
     	let div_intro;
@@ -41602,7 +41602,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$3.name,
+    		id: create_if_block$5.name,
     		type: "if",
     		source: "(52:12) {#if visibility}",
     		ctx
@@ -41619,7 +41619,7 @@ var app = (function (jquery) {
     	let t1;
     	let div1;
     	let current;
-    	let if_block = /*visibility*/ ctx[3] && create_if_block$3(ctx);
+    	let if_block = /*visibility*/ ctx[3] && create_if_block$5(ctx);
 
     	const block = {
     		c: function create() {
@@ -41660,7 +41660,7 @@ var app = (function (jquery) {
     						transition_in(if_block, 1);
     					}
     				} else {
-    					if_block = create_if_block$3(ctx);
+    					if_block = create_if_block$5(ctx);
     					if_block.c();
     					transition_in(if_block, 1);
     					if_block.m(div1, null);
@@ -41916,7 +41916,7 @@ var app = (function (jquery) {
     const file$47 = "src\\component\\PageDesign\\Slide\\Outsourcing\\Slide04\\Page02.svelte";
 
     // (15:8) {:else}
-    function create_else_block$2(ctx) {
+    function create_else_block$4(ctx) {
     	let p;
 
     	const block = {
@@ -41935,7 +41935,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_else_block$2.name,
+    		id: create_else_block$4.name,
     		type: "else",
     		source: "(15:8) {:else}",
     		ctx
@@ -41945,7 +41945,7 @@ var app = (function (jquery) {
     }
 
     // (13:8) {#if $Device["isMobile"]}
-    function create_if_block$2(ctx) {
+    function create_if_block$4(ctx) {
     	let t0;
     	let br;
     	let t1;
@@ -41971,7 +41971,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$2.name,
+    		id: create_if_block$4.name,
     		type: "if",
     		source: "(13:8) {#if $Device[\\\"isMobile\\\"]}",
     		ctx
@@ -41985,8 +41985,8 @@ var app = (function (jquery) {
     	let p;
 
     	function select_block_type(ctx, dirty) {
-    		if (/*$Device*/ ctx[1]["isMobile"]) return create_if_block$2;
-    		return create_else_block$2;
+    		if (/*$Device*/ ctx[1]["isMobile"]) return create_if_block$4;
+    		return create_else_block$4;
     	}
 
     	let current_block_type = select_block_type(ctx);
@@ -42387,7 +42387,7 @@ var app = (function (jquery) {
     const file$46 = "src\\component\\PageDesign\\Slide\\Outsourcing\\Slide05\\Page01.svelte";
 
     // (16:8) {:else}
-    function create_else_block$1(ctx) {
+    function create_else_block$3(ctx) {
     	let t;
 
     	const block = {
@@ -42404,7 +42404,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_else_block$1.name,
+    		id: create_else_block$3.name,
     		type: "else",
     		source: "(16:8) {:else}",
     		ctx
@@ -42414,7 +42414,7 @@ var app = (function (jquery) {
     }
 
     // (14:8) {#if $Device["isMobile"]}
-    function create_if_block$1(ctx) {
+    function create_if_block$3(ctx) {
     	let t;
 
     	const block = {
@@ -42431,7 +42431,7 @@ var app = (function (jquery) {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block$1.name,
+    		id: create_if_block$3.name,
     		type: "if",
     		source: "(14:8) {#if $Device[\\\"isMobile\\\"]}",
     		ctx
@@ -42448,8 +42448,8 @@ var app = (function (jquery) {
     	let t1;
 
     	function select_block_type(ctx, dirty) {
-    		if (/*$Device*/ ctx[1]["isMobile"]) return create_if_block$1;
-    		return create_else_block$1;
+    		if (/*$Device*/ ctx[1]["isMobile"]) return create_if_block$3;
+    		return create_else_block$3;
     	}
 
     	let current_block_type = select_block_type(ctx);
@@ -57920,28 +57920,42 @@ var app = (function (jquery) {
     /* src\component\PageDesign\Slide\2021\Projects\Downloader\Slide01\Page01.svelte generated by Svelte v3.55.1 */
     const file$3j = "src\\component\\PageDesign\\Slide\\2021\\Projects\\Downloader\\Slide01\\Page01.svelte";
 
-    // (8:0) <DefaultPage color={color} fontSize={fontSize}>
+    // (9:0) <DefaultPage color={color} fontSize={fontSize}>
     function create_default_slot$35(ctx) {
     	let p0;
+    	let t0;
     	let t1;
     	let p1;
+    	let t2;
 
     	const block = {
     		c: function create() {
     			p0 = element("p");
-    			p0.textContent = "PCB Downloader";
+    			t0 = text("PCB Downloader");
     			t1 = space();
     			p1 = element("p");
-    			p1.textContent = "PCB Inspector";
-    			add_location(p0, file$3j, 8, 4, 208);
-    			add_location(p1, file$3j, 9, 4, 235);
+    			t2 = text("PCB Inspector");
+    			set_style(p0, "font-size", /*fontSize*/ ctx[1] + "rem");
+    			add_location(p0, file$3j, 9, 4, 293);
+    			set_style(p1, "font-size", /*fontSize*/ ctx[1] + "rem");
+    			add_location(p1, file$3j, 10, 4, 353);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p0, anchor);
+    			append_dev(p0, t0);
     			insert_dev(target, t1, anchor);
     			insert_dev(target, p1, anchor);
+    			append_dev(p1, t2);
     		},
-    		p: noop,
+    		p: function update(ctx, dirty) {
+    			if (dirty & /*fontSize*/ 2) {
+    				set_style(p0, "font-size", /*fontSize*/ ctx[1] + "rem");
+    			}
+
+    			if (dirty & /*fontSize*/ 2) {
+    				set_style(p1, "font-size", /*fontSize*/ ctx[1] + "rem");
+    			}
+    		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(p0);
     			if (detaching) detach_dev(t1);
@@ -57953,7 +57967,7 @@ var app = (function (jquery) {
     		block,
     		id: create_default_slot$35.name,
     		type: "slot",
-    		source: "(8:0) <DefaultPage color={color} fontSize={fontSize}>",
+    		source: "(9:0) <DefaultPage color={color} fontSize={fontSize}>",
     		ctx
     	});
 
@@ -57990,7 +58004,7 @@ var app = (function (jquery) {
     			if (dirty & /*color*/ 1) defaultpage_changes.color = /*color*/ ctx[0];
     			if (dirty & /*fontSize*/ 2) defaultpage_changes.fontSize = /*fontSize*/ ctx[1];
 
-    			if (dirty & /*$$scope*/ 4) {
+    			if (dirty & /*$$scope, fontSize*/ 10) {
     				defaultpage_changes.$$scope = { dirty, ctx };
     			}
 
@@ -58022,10 +58036,13 @@ var app = (function (jquery) {
     }
 
     function instance$4Z($$self, $$props, $$invalidate) {
+    	let $Device;
+    	validate_store(Device, 'Device');
+    	component_subscribe($$self, Device, $$value => $$invalidate(2, $Device = $$value));
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('Page01', slots, []);
     	let { color = "transparent" } = $$props;
-    	let { fontSize = 2 } = $$props;
+    	let { fontSize = $Device["isMobile"] ? 1 : 2 } = $$props;
     	const writable_props = ['color', 'fontSize'];
 
     	Object.keys($$props).forEach(key => {
@@ -58037,7 +58054,13 @@ var app = (function (jquery) {
     		if ('fontSize' in $$props) $$invalidate(1, fontSize = $$props.fontSize);
     	};
 
-    	$$self.$capture_state = () => ({ DefaultPage, color, fontSize });
+    	$$self.$capture_state = () => ({
+    		Device,
+    		DefaultPage,
+    		color,
+    		fontSize,
+    		$Device
+    	});
 
     	$$self.$inject_state = $$props => {
     		if ('color' in $$props) $$invalidate(0, color = $$props.color);
@@ -58305,20 +58328,27 @@ var app = (function (jquery) {
     /* src\component\PageDesign\Slide\2021\Projects\Downloader\Slide02\Page01.svelte generated by Svelte v3.55.1 */
     const file$3i = "src\\component\\PageDesign\\Slide\\2021\\Projects\\Downloader\\Slide02\\Page01.svelte";
 
-    // (8:0) <DefaultPage color={color} fontSize={fontSize}>
+    // (9:0) <DefaultPage color={color} fontSize={fontSize}>
     function create_default_slot$34(ctx) {
     	let p;
+    	let t;
 
     	const block = {
     		c: function create() {
     			p = element("p");
-    			p.textContent = "Outline";
-    			add_location(p, file$3i, 8, 4, 208);
+    			t = text("Outline");
+    			set_style(p, "font-size", /*fontSize*/ ctx[1] + "rem");
+    			add_location(p, file$3i, 9, 4, 293);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
+    			append_dev(p, t);
     		},
-    		p: noop,
+    		p: function update(ctx, dirty) {
+    			if (dirty & /*fontSize*/ 2) {
+    				set_style(p, "font-size", /*fontSize*/ ctx[1] + "rem");
+    			}
+    		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(p);
     		}
@@ -58328,7 +58358,7 @@ var app = (function (jquery) {
     		block,
     		id: create_default_slot$34.name,
     		type: "slot",
-    		source: "(8:0) <DefaultPage color={color} fontSize={fontSize}>",
+    		source: "(9:0) <DefaultPage color={color} fontSize={fontSize}>",
     		ctx
     	});
 
@@ -58365,7 +58395,7 @@ var app = (function (jquery) {
     			if (dirty & /*color*/ 1) defaultpage_changes.color = /*color*/ ctx[0];
     			if (dirty & /*fontSize*/ 2) defaultpage_changes.fontSize = /*fontSize*/ ctx[1];
 
-    			if (dirty & /*$$scope*/ 4) {
+    			if (dirty & /*$$scope, fontSize*/ 10) {
     				defaultpage_changes.$$scope = { dirty, ctx };
     			}
 
@@ -58397,10 +58427,13 @@ var app = (function (jquery) {
     }
 
     function instance$4X($$self, $$props, $$invalidate) {
+    	let $Device;
+    	validate_store(Device, 'Device');
+    	component_subscribe($$self, Device, $$value => $$invalidate(2, $Device = $$value));
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('Page01', slots, []);
     	let { color = "transparent" } = $$props;
-    	let { fontSize = 2 } = $$props;
+    	let { fontSize = $Device["isMobile"] ? 1 : 2 } = $$props;
     	const writable_props = ['color', 'fontSize'];
 
     	Object.keys($$props).forEach(key => {
@@ -58412,7 +58445,13 @@ var app = (function (jquery) {
     		if ('fontSize' in $$props) $$invalidate(1, fontSize = $$props.fontSize);
     	};
 
-    	$$self.$capture_state = () => ({ DefaultPage, color, fontSize });
+    	$$self.$capture_state = () => ({
+    		Device,
+    		DefaultPage,
+    		color,
+    		fontSize,
+    		$Device
+    	});
 
     	$$self.$inject_state = $$props => {
     		if ('color' in $$props) $$invalidate(0, color = $$props.color);
@@ -58459,48 +58498,147 @@ var app = (function (jquery) {
     /* src\component\PageDesign\Slide\2021\Projects\Downloader\Slide02\Page02.svelte generated by Svelte v3.55.1 */
     const file$3h = "src\\component\\PageDesign\\Slide\\2021\\Projects\\Downloader\\Slide02\\Page02.svelte";
 
+    // (19:12) {:else}
+    function create_else_block$2(ctx) {
+    	let t0;
+    	let br;
+    	let t1;
+
+    	const block = {
+    		c: function create() {
+    			t0 = text("- PCB에 펌웨어를 넣는 작업을 자동화");
+    			br = element("br");
+    			t1 = text("\r\n            - PCB에 대해 지정된 검사를 진행해 PCB의 불량 여부를 사전 파악");
+    			add_location(br, file$3h, 19, 34, 745);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, t0, anchor);
+    			insert_dev(target, br, anchor);
+    			insert_dev(target, t1, anchor);
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(t0);
+    			if (detaching) detach_dev(br);
+    			if (detaching) detach_dev(t1);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_else_block$2.name,
+    		type: "else",
+    		source: "(19:12) {:else}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (15:12) {#if $Device["isMobile"]}
+    function create_if_block$2(ctx) {
+    	let t0;
+    	let br0;
+    	let t1;
+    	let br1;
+    	let t2;
+
+    	const block = {
+    		c: function create() {
+    			t0 = text("- PCB에 펌웨어를 넣는 작업을 자동화");
+    			br0 = element("br");
+    			t1 = text("\r\n            - PCB에 대해 지정된 검사를 진행해 PCB의");
+    			br1 = element("br");
+    			t2 = text("\r\n              불량 여부를 사전 파악");
+    			add_location(br0, file$3h, 15, 34, 600);
+    			add_location(br1, file$3h, 16, 38, 645);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, t0, anchor);
+    			insert_dev(target, br0, anchor);
+    			insert_dev(target, t1, anchor);
+    			insert_dev(target, br1, anchor);
+    			insert_dev(target, t2, anchor);
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(t0);
+    			if (detaching) detach_dev(br0);
+    			if (detaching) detach_dev(t1);
+    			if (detaching) detach_dev(br1);
+    			if (detaching) detach_dev(t2);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_if_block$2.name,
+    		type: "if",
+    		source: "(15:12) {#if $Device[\\\"isMobile\\\"]}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
     // (11:0) <DefaultPage color={color} fontSize={fontSize}>
     function create_default_slot$33(ctx) {
     	let p0;
+    	let t0;
     	let t1;
     	let div;
     	let p1;
-    	let t2;
-    	let br;
-    	let t3;
+
+    	function select_block_type(ctx, dirty) {
+    		if (/*$Device*/ ctx[2]["isMobile"]) return create_if_block$2;
+    		return create_else_block$2;
+    	}
+
+    	let current_block_type = select_block_type(ctx);
+    	let if_block = current_block_type(ctx);
 
     	const block = {
     		c: function create() {
     			p0 = element("p");
-    			p0.textContent = "프로젝트 목적";
+    			t0 = text("프로젝트 목적");
     			t1 = space();
     			div = element("div");
     			p1 = element("p");
-    			t2 = text("- PCB에 펌웨어를 넣는 작업을 자동화");
-    			br = element("br");
-    			t3 = text("\r\n            - PCB에 대해 지정된 검사를 진행해 PCB의 불량 여부를 사전 파악");
-    			add_location(p0, file$3h, 11, 4, 349);
-    			add_location(br, file$3h, 14, 34, 499);
-    			add_location(p1, file$3h, 13, 8, 460);
-    			set_style(div, "font-size", /*calcSubFontSize*/ ctx[2]() + "rem");
+    			if_block.c();
+    			set_style(p0, "font-size", /*fontSize*/ ctx[1] + "rem");
+    			add_location(p0, file$3h, 11, 4, 378);
+    			add_location(p1, file$3h, 13, 8, 522);
+    			set_style(div, "font-size", /*calcSubFontSize*/ ctx[3]() + "rem");
     			set_style(div, "text-align", "left");
     			set_style(div, "margin-top", "20px");
-    			add_location(div, file$3h, 12, 4, 369);
+    			add_location(div, file$3h, 12, 4, 431);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p0, anchor);
+    			append_dev(p0, t0);
     			insert_dev(target, t1, anchor);
     			insert_dev(target, div, anchor);
     			append_dev(div, p1);
-    			append_dev(p1, t2);
-    			append_dev(p1, br);
-    			append_dev(p1, t3);
+    			if_block.m(p1, null);
     		},
-    		p: noop,
+    		p: function update(ctx, dirty) {
+    			if (dirty & /*fontSize*/ 2) {
+    				set_style(p0, "font-size", /*fontSize*/ ctx[1] + "rem");
+    			}
+
+    			if (current_block_type !== (current_block_type = select_block_type(ctx))) {
+    				if_block.d(1);
+    				if_block = current_block_type(ctx);
+
+    				if (if_block) {
+    					if_block.c();
+    					if_block.m(p1, null);
+    				}
+    			}
+    		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(p0);
     			if (detaching) detach_dev(t1);
     			if (detaching) detach_dev(div);
+    			if_block.d();
     		}
     	};
 
@@ -58545,7 +58683,7 @@ var app = (function (jquery) {
     			if (dirty & /*color*/ 1) defaultpage_changes.color = /*color*/ ctx[0];
     			if (dirty & /*fontSize*/ 2) defaultpage_changes.fontSize = /*fontSize*/ ctx[1];
 
-    			if (dirty & /*$$scope*/ 16) {
+    			if (dirty & /*$$scope, $Device, fontSize*/ 22) {
     				defaultpage_changes.$$scope = { dirty, ctx };
     			}
 
@@ -58579,11 +58717,11 @@ var app = (function (jquery) {
     function instance$4W($$self, $$props, $$invalidate) {
     	let $Device;
     	validate_store(Device, 'Device');
-    	component_subscribe($$self, Device, $$value => $$invalidate(3, $Device = $$value));
+    	component_subscribe($$self, Device, $$value => $$invalidate(2, $Device = $$value));
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('Page02', slots, []);
     	let { color = "transparent" } = $$props;
-    	let { fontSize = 2 } = $$props;
+    	let { fontSize = $Device["isMobile"] ? 0.5 : 2 } = $$props;
     	const calcSubFontSize = () => !$Device["isMobile"] ? fontSize : fontSize / 2;
     	const writable_props = ['color', 'fontSize'];
 
@@ -58614,7 +58752,7 @@ var app = (function (jquery) {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [color, fontSize, calcSubFontSize];
+    	return [color, fontSize, $Device, calcSubFontSize];
     }
 
     class Page02$1a extends SvelteComponentDev {
@@ -58650,55 +58788,165 @@ var app = (function (jquery) {
     /* src\component\PageDesign\Slide\2021\Projects\Downloader\Slide02\Page03.svelte generated by Svelte v3.55.1 */
     const file$3g = "src\\component\\PageDesign\\Slide\\2021\\Projects\\Downloader\\Slide02\\Page03.svelte";
 
+    // (20:12) {:else}
+    function create_else_block$1(ctx) {
+    	let t0;
+    	let br0;
+    	let t1;
+    	let br1;
+    	let t2;
+
+    	const block = {
+    		c: function create() {
+    			t0 = text("1. 네 개의 PCB가 아쎄이 형태로 로딩");
+    			br0 = element("br");
+    			t1 = text("\r\n            2. 각 PCB에 펌웨어를 업로드");
+    			br1 = element("br");
+    			t2 = text("\r\n            3. 지정된 검사를 수행해 업로드 직후 PCB의 불량 여부 파악");
+    			add_location(br0, file$3g, 20, 35, 791);
+    			add_location(br1, file$3g, 21, 30, 828);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, t0, anchor);
+    			insert_dev(target, br0, anchor);
+    			insert_dev(target, t1, anchor);
+    			insert_dev(target, br1, anchor);
+    			insert_dev(target, t2, anchor);
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(t0);
+    			if (detaching) detach_dev(br0);
+    			if (detaching) detach_dev(t1);
+    			if (detaching) detach_dev(br1);
+    			if (detaching) detach_dev(t2);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_else_block$1.name,
+    		type: "else",
+    		source: "(20:12) {:else}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (15:12) {#if $Device["isMobile"]}
+    function create_if_block$1(ctx) {
+    	let t0;
+    	let br0;
+    	let t1;
+    	let br1;
+    	let t2;
+    	let br2;
+    	let t3;
+
+    	const block = {
+    		c: function create() {
+    			t0 = text("1. 네 개의 PCB가 아쎄이 형태로 로딩");
+    			br0 = element("br");
+    			t1 = text("\r\n            2. 각 PCB에 펌웨어를 업로드");
+    			br1 = element("br");
+    			t2 = text("\r\n            3. 지정된 검사를 수행해 업로드 직후");
+    			br2 = element("br");
+    			t3 = text("\r\n                PCB의 불량 여부 파악");
+    			add_location(br0, file$3g, 15, 35, 600);
+    			add_location(br1, file$3g, 16, 30, 637);
+    			add_location(br2, file$3g, 17, 33, 677);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, t0, anchor);
+    			insert_dev(target, br0, anchor);
+    			insert_dev(target, t1, anchor);
+    			insert_dev(target, br1, anchor);
+    			insert_dev(target, t2, anchor);
+    			insert_dev(target, br2, anchor);
+    			insert_dev(target, t3, anchor);
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(t0);
+    			if (detaching) detach_dev(br0);
+    			if (detaching) detach_dev(t1);
+    			if (detaching) detach_dev(br1);
+    			if (detaching) detach_dev(t2);
+    			if (detaching) detach_dev(br2);
+    			if (detaching) detach_dev(t3);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_if_block$1.name,
+    		type: "if",
+    		source: "(15:12) {#if $Device[\\\"isMobile\\\"]}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
     // (11:0) <DefaultPage color={color} fontSize={fontSize}>
     function create_default_slot$32(ctx) {
     	let p0;
+    	let t0;
     	let t1;
     	let div;
     	let p1;
-    	let t2;
-    	let br0;
-    	let t3;
-    	let br1;
-    	let t4;
+
+    	function select_block_type(ctx, dirty) {
+    		if (/*$Device*/ ctx[2]["isMobile"]) return create_if_block$1;
+    		return create_else_block$1;
+    	}
+
+    	let current_block_type = select_block_type(ctx);
+    	let if_block = current_block_type(ctx);
 
     	const block = {
     		c: function create() {
     			p0 = element("p");
-    			p0.textContent = "PCB 다운로더";
+    			t0 = text("PCB 다운로더");
     			t1 = space();
     			div = element("div");
     			p1 = element("p");
-    			t2 = text("1. 네 개의 PCB가 아쎄이 형태로 로딩");
-    			br0 = element("br");
-    			t3 = text("\r\n            2. 각 PCB에 펌웨어를 업로드");
-    			br1 = element("br");
-    			t4 = text("\r\n            3. 지정된 검사를 수행해 업로드 직후 PCB의 불량 여부 파악");
-    			add_location(p0, file$3g, 11, 4, 349);
-    			add_location(br0, file$3g, 14, 35, 501);
-    			add_location(br1, file$3g, 15, 30, 538);
-    			add_location(p1, file$3g, 13, 8, 461);
-    			set_style(div, "font-size", /*calcSubFontSize*/ ctx[2]() + "rem");
+    			if_block.c();
+    			set_style(p0, "font-size", /*fontSize*/ ctx[1] + "rem");
+    			add_location(p0, file$3g, 11, 4, 376);
+    			add_location(p1, file$3g, 13, 8, 521);
+    			set_style(div, "font-size", /*calcSubFontSize*/ ctx[3]() + "rem");
     			set_style(div, "text-align", "left");
     			set_style(div, "margin-top", "20px");
-    			add_location(div, file$3g, 12, 4, 370);
+    			add_location(div, file$3g, 12, 4, 430);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p0, anchor);
+    			append_dev(p0, t0);
     			insert_dev(target, t1, anchor);
     			insert_dev(target, div, anchor);
     			append_dev(div, p1);
-    			append_dev(p1, t2);
-    			append_dev(p1, br0);
-    			append_dev(p1, t3);
-    			append_dev(p1, br1);
-    			append_dev(p1, t4);
+    			if_block.m(p1, null);
     		},
-    		p: noop,
+    		p: function update(ctx, dirty) {
+    			if (dirty & /*fontSize*/ 2) {
+    				set_style(p0, "font-size", /*fontSize*/ ctx[1] + "rem");
+    			}
+
+    			if (current_block_type !== (current_block_type = select_block_type(ctx))) {
+    				if_block.d(1);
+    				if_block = current_block_type(ctx);
+
+    				if (if_block) {
+    					if_block.c();
+    					if_block.m(p1, null);
+    				}
+    			}
+    		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(p0);
     			if (detaching) detach_dev(t1);
     			if (detaching) detach_dev(div);
+    			if_block.d();
     		}
     	};
 
@@ -58743,7 +58991,7 @@ var app = (function (jquery) {
     			if (dirty & /*color*/ 1) defaultpage_changes.color = /*color*/ ctx[0];
     			if (dirty & /*fontSize*/ 2) defaultpage_changes.fontSize = /*fontSize*/ ctx[1];
 
-    			if (dirty & /*$$scope*/ 16) {
+    			if (dirty & /*$$scope, $Device, fontSize*/ 22) {
     				defaultpage_changes.$$scope = { dirty, ctx };
     			}
 
@@ -58777,11 +59025,11 @@ var app = (function (jquery) {
     function instance$4V($$self, $$props, $$invalidate) {
     	let $Device;
     	validate_store(Device, 'Device');
-    	component_subscribe($$self, Device, $$value => $$invalidate(3, $Device = $$value));
+    	component_subscribe($$self, Device, $$value => $$invalidate(2, $Device = $$value));
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('Page03', slots, []);
     	let { color = "transparent" } = $$props;
-    	let { fontSize = 2 } = $$props;
+    	let { fontSize = $Device['isMobile'] ? 1 : 2 } = $$props;
     	const calcSubFontSize = () => !$Device["isMobile"] ? fontSize : fontSize / 2;
     	const writable_props = ['color', 'fontSize'];
 
@@ -58812,7 +59060,7 @@ var app = (function (jquery) {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [color, fontSize, calcSubFontSize];
+    	return [color, fontSize, $Device, calcSubFontSize];
     }
 
     class Page03$v extends SvelteComponentDev {
@@ -58855,8 +59103,10 @@ var app = (function (jquery) {
     	let div;
     	let p1;
     	let t2;
-    	let br;
+    	let br0;
     	let t3;
+    	let br1;
+    	let t4;
 
     	const block = {
     		c: function create() {
@@ -58866,10 +59116,13 @@ var app = (function (jquery) {
     			div = element("div");
     			p1 = element("p");
     			t2 = text("1. 하나의 가공된 PCB가 로딩");
-    			br = element("br");
-    			t3 = text("\r\n            2. 지정된 검사를 수행해 업로드 직후 PCB의 불량 여부 파악");
+    			br0 = element("br");
+    			t3 = text("\r\n            2. 지정된 검사를 수행해 업로드 직후");
+    			br1 = element("br");
+    			t4 = text("\r\n                PCB의 불량 여부 파악");
     			add_location(p0, file$3f, 11, 4, 349);
-    			add_location(br, file$3f, 14, 30, 496);
+    			add_location(br0, file$3f, 14, 30, 496);
+    			add_location(br1, file$3f, 15, 33, 536);
     			add_location(p1, file$3f, 13, 8, 461);
     			set_style(div, "font-size", /*calcSubFontSize*/ ctx[2]() + "rem");
     			set_style(div, "text-align", "left");
@@ -58882,8 +59135,10 @@ var app = (function (jquery) {
     			insert_dev(target, div, anchor);
     			append_dev(div, p1);
     			append_dev(p1, t2);
-    			append_dev(p1, br);
+    			append_dev(p1, br0);
     			append_dev(p1, t3);
+    			append_dev(p1, br1);
+    			append_dev(p1, t4);
     		},
     		p: noop,
     		d: function destroy(detaching) {
@@ -59062,7 +59317,7 @@ var app = (function (jquery) {
     			br0 = element("br");
     			t3 = text("\r\n            - C 기반 IO 펌웨어 프로그램");
     			br1 = element("br");
-    			t4 = text("\r\n            - IO - PC 통신 프로토콜 설정");
+    			t4 = text("\r\n            - IO-PC 통신 프로토콜 설정");
     			add_location(p0, file$3e, 11, 4, 349);
     			add_location(br0, file$3e, 14, 27, 490);
     			add_location(br1, file$3e, 15, 30, 527);
@@ -59821,8 +60076,10 @@ var app = (function (jquery) {
     	let div;
     	let p1;
     	let t2;
-    	let br;
+    	let br0;
     	let t3;
+    	let br1;
+    	let t4;
 
     	const block = {
     		c: function create() {
@@ -59832,10 +60089,13 @@ var app = (function (jquery) {
     			div = element("div");
     			p1 = element("p");
     			t2 = text("- 다운로더 / 인스펙터에서 모두 수행");
-    			br = element("br");
-    			t3 = text("\r\n            - PCB에 전원을 인가한 후, 일정 시간이 지나고 전류값을 측정");
+    			br0 = element("br");
+    			t3 = text("\r\n            - PCB에 전원을 인가한 후, 일정 시간이");
+    			br1 = element("br");
+    			t4 = text("\r\n              지나고 전류값을 측정");
     			add_location(p0, file$3b, 11, 4, 353);
-    			add_location(br, file$3b, 14, 33, 503);
+    			add_location(br0, file$3b, 14, 33, 503);
+    			add_location(br1, file$3b, 15, 36, 546);
     			add_location(p1, file$3b, 13, 8, 465);
     			set_style(div, "font-size", /*calcSubFontSize*/ ctx[2]() + "rem");
     			set_style(div, "text-align", "left");
@@ -59848,8 +60108,10 @@ var app = (function (jquery) {
     			insert_dev(target, div, anchor);
     			append_dev(div, p1);
     			append_dev(p1, t2);
-    			append_dev(p1, br);
+    			append_dev(p1, br0);
     			append_dev(p1, t3);
+    			append_dev(p1, br1);
+    			append_dev(p1, t4);
     		},
     		p: noop,
     		d: function destroy(detaching) {
