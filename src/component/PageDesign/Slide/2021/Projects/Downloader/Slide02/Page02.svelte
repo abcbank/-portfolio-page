@@ -9,7 +9,7 @@
 </script>
 
 <DefaultPage color={color} fontSize={fontSize}>
-    <p style="font-size:{fontSize}rem;">프로젝트 목적</p>
+    <p>프로젝트 목적</p>
     <div style="font-size:{calcSubFontSize()}rem; text-align:left; margin-top:20px;">
         <p>
             {#if $Device["isMobile"]}
