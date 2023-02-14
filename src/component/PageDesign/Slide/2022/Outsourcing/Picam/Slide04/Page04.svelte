@@ -3,18 +3,16 @@
     import DefaultPage from '../../../../defaultPage.svelte'
 
     export let color = "transparent";
-    export let fontSize = 2;
+    export let head = 2;
+    export let subhead = 1.5;
+    export let context = 1;
 
     let CurPage = "main"
-
-    console.log($Color["btnBackColor"][$season]);
-
-    const calcSubFontSize = () => !$Device["isMobile"] ? fontSize : fontSize/2;
 </script>
 
-<DefaultPage color={color} fontSize={fontSize}>
+<DefaultPage color={color} fontSize={subhead}>
     <p>Raspberry PI</p>
-    <div style="font-size:{calcSubFontSize()}rem; text-align:left; margin-top:20px;">
+    <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
             - 파이썬 기반 스트립트를 전원을 켰을때 자동 실행<br/>
             - http 서버를 시연용 동작 구현<br/>

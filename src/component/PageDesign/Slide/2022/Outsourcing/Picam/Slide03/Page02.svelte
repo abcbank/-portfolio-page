@@ -3,14 +3,14 @@
     import DefaultPage from '../../../../defaultPage.svelte'
 
     export let color = "transparent";
-    export let fontSize = 2
-
-    const calcSubFontSize = () => !$Device["isMobile"] ? fontSize : fontSize/2;
+    export let head = 2;
+    export let subhead = 1.5;
+    export let context = 1;
 </script>
 
-<DefaultPage color={color} fontSize={fontSize}>
+<DefaultPage color={color} fontSize={subhead}>
     <p>카메라 촬영</p>
-    <div style="font-size:{calcSubFontSize()}rem; text-align:left; margin-top:20px;">
+    <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
             - 장비에 부착된 파이 카메라를 통해 반려 동물의 상태 확인<br/>
             - 버튼을 통해 카메라의 각도를 좌우로 회전 가능<br/>
