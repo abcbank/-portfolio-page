@@ -14,10 +14,20 @@
     <p>PC</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
-            - 전압 검사용 오실로스코프<br/>
-            - C# SDK를 지원하는 모델로 구매<br/>
-            - 지정된 시간동안 전압을 측정해, 데이터를 넘겨줌<br/>
-            - 사용 모델: USBScope 102
+            {#if $Device["isMobile"]}
+            - 주요 제어기 역할<br/>
+            - 각종 센서를 통해 카메라의 ROI에 물체가<br/>
+            &nbsp;&nbsp;있는지 확인하고, 물체가 있을 경우<br/>
+            &nbsp;&nbsp;촬영 및 검사 진행<br/>
+            - 비전 검사는 Vision Pro를 사용해 진행<br/>
+            - 사용 모델: 사내 컴퓨터
+            {:else}
+            - 주요 제어기 역할<br/>
+            - 각종 센서를 통해 카메라의 ROI에 물체가 있는지 확인하고, 물체가 있을 경우<br/>
+            &nbsp;&nbsp;촬영 및 검사 진행<br/>
+            - 비전 검사는 Vision Pro를 사용해 진행<br/>
+            - 사용 모델: 사내 컴퓨터
+            {/if}
         </p>
     </div>
 </DefaultPage>

@@ -14,9 +14,8 @@
     <p>Convyer</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
-            - 전류 검사용 전류계<br/>
-            - 시리얼 통신을 통해 현재 전류값 전달 가능<br/>
-            - 사용 모델: P3857
+            - 제품 운송용 컨베이어<br/>
+            - 사내 남아있던 재고를 사용
         </p>
     </div>
 </DefaultPage>

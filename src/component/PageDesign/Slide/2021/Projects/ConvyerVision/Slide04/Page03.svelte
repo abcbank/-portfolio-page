@@ -16,17 +16,17 @@
         <p>
             {#if $Device["isMobile"]}
             - 이미지를 가져올 카메라<br/>
-            - 바슬러 카메라를 사용<br/>
+            - 사내에 있던 바슬러 카메라를 사용<br/>
             - PC측에서 이미지를 요청할 경우, GIGE를<br/>
             &nbsp;&nbsp;통해 PC에 이미지를 전달<br/>
-            - 사용 모델: a2A1920-51gmBAS<br/>
+            - 사용 모델: acA2440-20gm<br/>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            (Basler ace 2 Basic)
+            (Basler ace)
             {:else}
             - 이미지를 가져올 카메라<br/>
-            - 바슬러 카메라를 사용<br/>
+            - 사내에 있던 바슬러 카메라를 사용<br/>
             - PC측에서 이미지를 요청할 경우, GIGE를 통해 PC에 이미지를 전달<br/>
-            - 사용  모델: a2A1920-51gmBAS(Basler ace 2 Basic)
+            - 사용 모델: acA2440-20gm(Basler ace)
             {/if}
         </p>
     </div>
