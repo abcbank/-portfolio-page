@@ -18,7 +18,7 @@
     <div class="borderBox" 
         on:click={()=> {curPage = 3}} on:keydown={()=>{}}
         style="font-size:{context}rem;border: solid {$Color["btnBdrColor"][$season]} 1px; background-color:{$Color["btnBackColor"][$season]}; color:{$Color["btnBdrColor"][$season]}; top: 35%; left: 30%;">
-        SPI
+        Camera
     </div>
     <div class="borderBox" 
         style="font-size:{context}rem;border: solid {$Color["btnBdrColor"][$season]} 1px; background-color:{$Color["btnBackColor"][$season]}; color:{$Color["btnBdrColor"][$season]}; top: 35%; left: 50%;">
@@ -30,11 +30,12 @@
     </div>
     <div class="borderBox" 
         style="font-size:{context}rem;border: solid {$Color["btnBdrColor"][$season]} 1px; background-color:{$Color["btnBackColor"][$season]}; color:{$Color["btnBdrColor"][$season]}; top: {$Device['isMobile'] ? "50%" : "65%"}%; left: 40%;">
-        전류계
+        Convyer
     </div>
     <div class="borderBox" 
         style="font-size:{context}rem;border: solid {$Color["btnBdrColor"][$season]} 1px; background-color:{$Color["btnBackColor"][$season]}; color:{$Color["btnBdrColor"][$season]}; top: {$Device['isMobile'] ? "50%" : "65%"}; left: 60%;">
-        Oscillo
+        Vision<br/>
+        Pro
     </div>
 </DefaultPage>
 <style>
