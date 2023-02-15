@@ -20,7 +20,7 @@
             - PC측에서 이미지를 요청할 경우, GIGE를<br/>
             &nbsp;&nbsp;통해 PC에 이미지를 전달<br/>
             - 사용 모델: a2A1920-51gmBAS<br/>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             (Basler ace 2 Basic)
             {:else}
             - 이미지를 가져올 카메라<br/>
