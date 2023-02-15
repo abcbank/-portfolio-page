@@ -21,7 +21,7 @@
             &nbsp;&nbsp;통해 PC에 이미지를 전달<br/>
             - 사용  모델: a2A1920-51gmBAS<br/>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            (Basler ace 2 Basic)
+            (Basler ace 2 Basic)<br/>
 
             - 펌웨어 업로드용 통신 모듈<br/>
             - 기존 업로드에 사용하던 프로그램을 그대로<br/>
