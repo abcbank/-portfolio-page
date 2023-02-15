@@ -22,20 +22,24 @@
     </div>
     <div class="borderBox" 
         style="font-size:{context}rem;border: solid {$Color["btnBdrColor"][$season]} 1px; background-color:{$Color["btnBackColor"][$season]}; color:{$Color["btnBdrColor"][$season]};top: 35%; left: {$Device['isMobile'] ? "50%" : "50%"};">
-        PC
+        Lense
     </div>
     <div class="borderBox" 
         style="font-size:{context}rem;border: solid {$Color["btnBdrColor"][$season]} 1px; background-color:{$Color["btnBackColor"][$season]}; color:{$Color["btnBdrColor"][$season]};top: 35%; left: {$Device['isMobile'] ? "85%" : "70%"};">
-        IO
+        Light<br/>
+        Source
     </div>
     <div class="borderBox" 
-        style="font-size:{context}rem;border: solid {$Color["btnBdrColor"][$season]} 1px; background-color:{$Color["btnBackColor"][$season]}; color:{$Color["btnBdrColor"][$season]};top: {$Device['isMobile'] ? "60%" : "75%"}; left: {$Device['isMobile'] ? "32.5%" : "40%"};">
+        style="font-size:{context}rem;border: solid {$Color["btnBdrColor"][$season]} 1px; background-color:{$Color["btnBackColor"][$season]}; color:{$Color["btnBdrColor"][$season]};top: {$Device['isMobile'] ? "60%" : "75%"};left: {$Device['isMobile'] ? "15%" : "30%"};">
         Convyer
     </div>
     <div class="borderBox" 
-        style="font-size:{context}rem;border: solid {$Color["btnBdrColor"][$season]} 1px; background-color:{$Color["btnBackColor"][$season]}; color:{$Color["btnBdrColor"][$season]};top: {$Device['isMobile'] ? "60%" : "75%"}; left: {$Device['isMobile'] ? "67.5%" : "60%"};">
-        Vision<br/>
-        Pro
+        style="font-size:{context}rem;border: solid {$Color["btnBdrColor"][$season]} 1px; background-color:{$Color["btnBackColor"][$season]}; color:{$Color["btnBdrColor"][$season]};top: {$Device['isMobile'] ? "60%" : "75%"};left: {$Device['isMobile'] ? "50%" : "50%"};">
+        PC
+    </div>
+    <div class="borderBox" 
+        style="font-size:{context}rem;border: solid {$Color["btnBdrColor"][$season]} 1px; background-color:{$Color["btnBackColor"][$season]}; color:{$Color["btnBdrColor"][$season]};top: {$Device['isMobile'] ? "60%" : "75%"};left: {$Device['isMobile'] ? "85%" : "70%"};">
+        IO
     </div>
 </DefaultPage>
 <style>
