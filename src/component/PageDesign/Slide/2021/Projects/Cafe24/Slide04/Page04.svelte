@@ -9,18 +9,14 @@
 </script>
 
 <DefaultPage color={color} fontSize={subhead}>
-    <p>전류계 통신</p>
+    <p>Cafe24 배이스 HTML의 이해</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
             {#if $Device["isMobile"]}
-            - 전류계가 가끔 값을 요청해도 응답하지<br/>
-            &nbsp;&nbsp;않는 경우가 발생<br/>
-            - 요청 주기가 빠를수록 더 빈번하게 발생<br/>
-            - 전류계 내부 기판의 성능의 문제로 판단
+            - 특정 상황에서 제품의 이름 등의 스타일 지정을<br/>
+            &nbsp;&nbsp;못하는 등 시스템에 대한 이해 또한 문제가 됐음.
             {:else}
-            - 전류계가 가끔 값을 요청해도 응답하지 않는 경우가 발생<br/>
-            - 요청 주기가 빠를수록 더 빈번하게 발생<br/>
-            - 전류계 내부 기판의 성능의 문제로 판단
+            - 특정 상황에서 제품의 이름 등의 스타일 지정을 못하는 등 시스템에 대한 이해 또한 문제가 됐음.
             {/if}
         </p>
     </div>

@@ -2,9 +2,11 @@
     import DefaultPage from '../../../../defaultPage.svelte'
 
     export let color = "transparent";
-    export let fontSize = 2
+    export let head = 2;
+    export let subhead = 1.5;
+    export let context = 1;
 </script>
 
-<DefaultPage color={color} fontSize={fontSize}>
-    <p>Main Function</p>
+<DefaultPage color={color} fontSize={head}>
+    <p>Program Result</p>
 </DefaultPage>

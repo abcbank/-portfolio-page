@@ -9,6 +9,12 @@
 </script>
 
 <DefaultPage color={color} fontSize={subhead}>
+    <p>Solution</p>
+    <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
+        <p>
+            - 구글님께선 답을 알고 계신다...★
+        </p>
+    </div>
 </DefaultPage>
 <style>
 </style>

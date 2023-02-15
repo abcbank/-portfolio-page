@@ -8,6 +8,15 @@
     export let context = 1;
 </script>
 
-<DefaultPage color={color} fontSize={head}>
-    <p>Cafe 24 Renewal</p>
+<DefaultPage color={color} fontSize={subhead}>
+    <p>수행 직무</p>
+    <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
+        <p>
+            - HTML 페이지 수정
+        </p>
+    </div>
 </DefaultPage>
+
+<style>
+    
+</style>

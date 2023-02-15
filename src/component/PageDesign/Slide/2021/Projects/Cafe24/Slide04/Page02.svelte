@@ -3,60 +3,29 @@
     import DefaultPage from '../../../../defaultPage.svelte'
 
     export let color = "transparent";
-    export let fontSize = 2;
-    export let curPage
-
-    let CurPage = "main"
-
-    console.log($Color["btnBackColor"][$season]);
-
-    const calcSubFontSize = () => !$Device["isMobile"] ? fontSize : fontSize/2;
+    export let head = 2;
+    export let subhead = 1.5;
+    export let context = 1;
 </script>
 
-<DefaultPage color={color} fontSize={fontSize} bind:curPage={curPage}>
-    <div style="position:absolute; top:5%; width:100%;">
-        <p>구성 요소</p>
-    </div>
-    <div class="borderBox" 
-        on:click={()=> {curPage = 3}} on:keydown={()=>{}}
-        style="font-size:{calcSubFontSize() * 0.8}rem;border: solid {$Color["btnBdrColor"][$season]} 1px; background-color:{$Color["btnBackColor"][$season]}; color:{$Color["btnBdrColor"][$season]}; top: 35%; left: 30%;">
-        
-    </div>
-    <div class="borderBox" 
-        style="font-size:{calcSubFontSize() * 0.8}rem;border: solid {$Color["btnBdrColor"][$season]} 1px; background-color:{$Color["btnBackColor"][$season]}; color:{$Color["btnBdrColor"][$season]}; top: 35%; left: 50%;">
-        
-    </div>
-    <div class="borderBox" 
-        style="font-size:{calcSubFontSize() * 0.8}rem;border: solid {$Color["btnBdrColor"][$season]} 1px; background-color:{$Color["btnBackColor"][$season]}; color:{$Color["btnBdrColor"][$season]}; top: 35%; left: 70%;">
-        
-    </div>
-    <div class="borderBox" 
-        style="font-size:{calcSubFontSize() * 0.8}rem;border: solid {$Color["btnBdrColor"][$season]} 1px; background-color:{$Color["btnBackColor"][$season]}; color:{$Color["btnBdrColor"][$season]}; top: 65%; left: 40%;">
-        
-    </div>
-    <div class="borderBox" 
-        style="font-size:{calcSubFontSize() * 0.8}rem;border: solid {$Color["btnBdrColor"][$season]} 1px; background-color:{$Color["btnBackColor"][$season]}; color:{$Color["btnBdrColor"][$season]}; top: 65%; left: 60%;">
+<DefaultPage color={color} fontSize={subhead}>
+    <p>HTML 수정</p>
+    <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
+        <p>
+            {#if $Device["isMobile"]}
+            - Mark Down을 제외한 마크업 언어를<br/>
+            &nbsp;&nbsp;처음으로 사용<br/>
+            - 일반적인 프로그래밍 언어와 개념이 달라<br/>
+            &nbsp;&nbsp;이해가 안되는 부분이 상당수 존재<br/>
+            - html에 대한 이해도가 낮은 상태에서 작업을<br/>
+            &nbsp;&nbsp;시작해 작업 속도 자체가 더뎠음
+            {:else}
+            - Mark Down을 제외한 마크업 언어를 처음으로 사용<br/>
+            - 일반적인 프로그래밍 언어와 개념이 달라 이해가 안되는 부분이 상당수 존재<br/>
+            - html에 대한 이해도가 낮은 상태에서 작업을 시작해 작업 속도 자체가 더뎠음
+            {/if}
+        </p>
     </div>
 </DefaultPage>
 <style>
-    .borderBox{
-        border-radius: 5px;
-        border: solid red 1px;
-        position: absolute;
-        top:50%;
-        left:50%;
-        min-width: 120px;
-        min-height: 120px;
-        width:5vw;
-        height:5vw;
-		display: flex;
-        text-align:center;
-	    align-items: center;
-		justify-content: center;
-        overflow: hidden; 
-        white-space: nowrap;
-        flex-direction:column;
-        -ms-transform: translate(-50%, -50%);
-        transform: translate(-50%, -50%);
-    }
 </style>
