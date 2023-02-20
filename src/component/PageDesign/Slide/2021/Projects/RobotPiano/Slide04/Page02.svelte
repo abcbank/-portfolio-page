@@ -3,37 +3,35 @@
     import DefaultPage from '../../../../defaultPage.svelte'
 
     export let color = "transparent";
-    export let fontSize = 2;
+    export let head = 2;
+    export let subhead = 1.5;
+    export let context = 1;
     export let curPage
 
     let CurPage = "main"
-
-    console.log($Color["btnBackColor"][$season]);
-
-    const calcSubFontSize = () => !$Device["isMobile"] ? fontSize : fontSize/2;
 </script>
 
-<DefaultPage color={color} fontSize={fontSize} bind:curPage={curPage}>
+<DefaultPage color={color} fontSize={subhead} bind:curPage={curPage}>
     <div style="position:absolute; top:5%; width:100%;">
         <p>구성 요소</p>
     </div>
     <div class="borderBox" 
         on:click={()=> {curPage = 3}} on:keydown={()=>{}}
-        style="font-size:{calcSubFontSize() * 0.8}rem;border: solid {$Color["btnBdrColor"][$season]} 1px; background-color:{$Color["btnBackColor"][$season]}; color:{$Color["btnBdrColor"][$season]}; top: 35%; left: 40%;">
+        style="font-size:{context}rem;border: solid {$Color["btnBdrColor"][$season]} 1px; background-color:{$Color["btnBackColor"][$season]}; color:{$Color["btnBdrColor"][$season]}; top: 35%; left: 40%;">
         Treble<br/>
         Arm
     </div>
     <div class="borderBox" 
-        style="font-size:{calcSubFontSize() * 0.8}rem;border: solid {$Color["btnBdrColor"][$season]} 1px; background-color:{$Color["btnBackColor"][$season]}; color:{$Color["btnBdrColor"][$season]}; top: 35%; left: 60%;">
+        style="font-size:{context}rem;border: solid {$Color["btnBdrColor"][$season]} 1px; background-color:{$Color["btnBackColor"][$season]}; color:{$Color["btnBdrColor"][$season]}; top: 35%; left: 60%;">
         Bass<br/>
         Arm
     </div>
     <div class="borderBox" 
-        style="font-size:{calcSubFontSize() * 0.8}rem;border: solid {$Color["btnBdrColor"][$season]} 1px; background-color:{$Color["btnBackColor"][$season]}; color:{$Color["btnBdrColor"][$season]}; top: {$Device['isMobile'] ? "60%" : "65%"}; left: {$Device['isMobile'] ? "32.5%" : "40%"};">
+        style="font-size:{context}rem;border: solid {$Color["btnBdrColor"][$season]} 1px; background-color:{$Color["btnBackColor"][$season]}; color:{$Color["btnBdrColor"][$season]}; top: {$Device['isMobile'] ? "60%" : "65%"}; left: {$Device['isMobile'] ? "32.5%" : "40%"};">
         PC
     </div>
     <div class="borderBox" 
-        style="font-size:{calcSubFontSize() * 0.8}rem;border: solid {$Color["btnBdrColor"][$season]} 1px; background-color:{$Color["btnBackColor"][$season]}; color:{$Color["btnBdrColor"][$season]}; top: {$Device['isMobile'] ? "60%" : "65%"}; left: {$Device['isMobile'] ? "67.5%" : "60%"};">
+        style="font-size:{context}rem;border: solid {$Color["btnBdrColor"][$season]} 1px; background-color:{$Color["btnBackColor"][$season]}; color:{$Color["btnBdrColor"][$season]}; top: {$Device['isMobile'] ? "60%" : "65%"}; left: {$Device['isMobile'] ? "67.5%" : "60%"};">
         IO
     </div>
 </DefaultPage>

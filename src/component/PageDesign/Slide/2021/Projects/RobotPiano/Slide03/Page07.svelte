@@ -1,12 +1,13 @@
 <script>
     import { Device } from "../../../../../../../global"
     import DefaultPage from '../../../../defaultPage.svelte'
-    import { onMount } from "svelte";
+    import { fade } from "svelte/transition";
+
     export let color = "transparent";
-    import { fade } from "svelte/transition"
-    export let fontSize = 2
-    
-    const calcSubFontSize = () => !$Device["isMobile"] ? fontSize : fontSize/2;
+    export let head = 2;
+    export let subhead = 1.5;
+    export let context = 1;
+
     let img;
 	let loaded = false;
 	let failed = false;
@@ -28,12 +29,11 @@
 			};
     })
 </script>
-
-<DefaultPage color={color} fontSize={fontSize}>
+<DefaultPage color={color} fontSize={subhead}>
     <div style="height:10%;">
         <p>곡의 분석 및 해석</p>
     </div>
-    <div style="height:80%; font-size:{calcSubFontSize()};">
+    <div style="height:80%; font-size:{context};">
         {#if loaded}
             <img in:fade={{delay:300, duration:300,}} {src} width="100%" height="auto" alt="robot-piano-data" />
         {:else if failed}

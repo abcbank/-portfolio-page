@@ -14,9 +14,11 @@
     <p>Treble Arm</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
-            - C# 기반 프로그램을 사용<br/>
-            - 다른 모듈과 통신<br/>
-            - 전반적인 시퀀스 및 동작 제어
+            - 사내 로봇팔 재고 사용<br/>
+            - 높은음자리의 음표들 연주를 담당<br/>
+            - 이더넷을 통해 PC와 통신<br/>
+            - PC의 동작에 따라 위치 이동<br/>
+            - 사용 모델: 
         </p>
     </div>
 </DefaultPage>
