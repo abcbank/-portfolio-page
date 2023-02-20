@@ -14,11 +14,9 @@
     <p>IO</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
-            - 사내 로봇팔 재고 사용<br/>
-            - 낮은음자리의 음표들 연주를 담당<br/>
-            - 이더넷을 통해 PC와 통신<br/>
-            - PC의 동작에 따라 위치 이동<br/>
-            - 사용 모델: P6556 (Denso)
+            - 건반 누르는 용 실린더 및 서스테인 제어<br/>
+            - IO 회로의 경우, 직접 만능기판으로 만들어 사용<br/>
+            - 아두이노를 사용해 펌웨어 작성<br/>
         </p>
     </div>
 </DefaultPage>
