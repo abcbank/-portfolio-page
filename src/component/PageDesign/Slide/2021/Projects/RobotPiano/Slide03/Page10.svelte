@@ -15,7 +15,8 @@
             {#if $Device["isMobile"]}
             - block을 통해 각 로봇팔의 부딛힘 여부 판단<br/>
             &nbsp;&nbsp;1. 각 블럭의 기준 위치(제일 낮은 음) 추출<br/>
-            &nbsp;&nbsp;2. 10ms 단위로 멜로디를 시뮬레이팅하며, 두 로봇팔의 기준 위치 확인<br/>
+            &nbsp;&nbsp;2. 10ms 단위로 멜로디를 시뮬레이팅하며, 두<br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;로봇팔의 기준 위치 확인<br/>
             &nbsp;&nbsp;3. 두 로봇팔의 기준 위치가 1.3옥타브 이하로 차이날 경우,<br/>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;부딛힐 가능성이 있으므로 곡의 연주 제한
             {:else}
