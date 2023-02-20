@@ -20,6 +20,7 @@
 	import Cafe24Renewal_2021 from "./component/routes/2021/Projects/Cafe24_Renewal.svelte";
 	import ConvyerVision_2021 from "./component/routes/2021/Projects/ConvyerVision.svelte";
 	import Downloader_2021 from "./component/routes/2021/Projects/Downloader.svelte";
+	import Sunloop_2021 from "./component/routes/2021/Projects/Sunloop.svelte";
 	import RobotPiano_2021 from "./component/routes/2021/Projects/RobotPiano.svelte";
 
 	import Picam from "./component/routes/2022/Outsourcing/PicameraServer.svelte"
@@ -46,6 +47,7 @@
 		'/project/2021/cafe24':Cafe24Renewal_2021,
 		'/project/2021/convyervision': ConvyerVision_2021,
 		'/project/2021/downloader':Downloader_2021,
+		'/project/2021/sunloop':Sunloop_2021,
 		'/project/2021/robotpiano':RobotPiano_2021,
 
 		'/project/2022/analoguecalibration':AnalogueCalibration_2022,

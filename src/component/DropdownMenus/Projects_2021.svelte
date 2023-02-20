@@ -1,6 +1,6 @@
 <script>
     import { LastPage,season } from '../../global'
-    import { mdiArrowLeft, mdiDownloadOutline, mdiWeb, mdiCctv,mdiPiano,mdiBarcodeScan} from '@mdi/js';
+    import { mdiArrowLeft, mdiDownloadOutline, mdiWeb, mdiCctv,mdiPiano,mdiBarcodeScan, mdiCar } from '@mdi/js';
     import MenuItem from '../Dropdown/MenuItem.svelte'
 	import MenuFrame from '../Dropdown/DefaultMenu.svelte';
     import { push } from "svelte-spa-router";
@@ -51,6 +51,11 @@
         rerandering();
         afterSelect();
     }}   leftIcon={mdiCctv } bind:isChecked={isChecked["convyervision"]}>컨베이어 비전</MenuItem>
+    <MenuItem on:click={() => {
+        pushRouter("/project/2021/sunloop")
+        rerandering();
+        afterSelect();
+    }}   leftIcon={mdiCar } bind:isChecked={isChecked["barcode"]}>썬루프 비전</MenuItem>
     <MenuItem on:click={() => {
         pushRouter("/project/2021/robotpiano")
         rerandering();
