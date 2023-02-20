@@ -46,7 +46,7 @@
             <SideTrigger leftIcon={mdiCodeBrackets} bind:isOpen={isOpen} isDropdown={true} rightIconColor="#fff" textColor="#fff" >Select UI</SideTrigger>
             {/if}
         </span>
-        <DropdownMenu Side={isSide} bind:sideWidth={sideWidth} Menu={[{Name: 'main', Component: UiSelect}]}/>
+        <DropdownMenu Side={isSide} afterSelect={onOpen} bind:sideWidth={sideWidth} Menu={[{Name: 'main', Component: UiSelect}]}/>
     </NavItem>
 </div>
 <style>

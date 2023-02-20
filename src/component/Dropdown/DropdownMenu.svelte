@@ -6,6 +6,7 @@
 	export let activeMenu = 'main';
 	export let Side = false;
 	export let sideWidth = 300;
+	export let afterSelect;
 
 	let menuHeight = 0;
 	let menuEl = null;
@@ -14,7 +15,7 @@
 <div class="dropdown stack" class:side={Side} style="width: {Side ? document.body.clientWidth - sideWidth - 20 : 300}px; height: {menuHeight}px;">
 	{#each Menu as Config}
 		{#if activeMenu == Config.Name}
-			<svelte:component this={Config.Component} Side={Side} bind:height={menuHeight} bind:activeMenu={activeMenu} />
+			<svelte:component this={Config.Component} afterSelect={afterSelect} Side={Side} bind:height={menuHeight} bind:activeMenu={activeMenu} />
 		{/if}
 	{/each}
 	<!-- {#if activeMenu === 'main'}
