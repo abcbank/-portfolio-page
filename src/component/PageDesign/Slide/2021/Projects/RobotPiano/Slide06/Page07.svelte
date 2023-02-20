@@ -12,16 +12,8 @@
     <p>Solution</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
-            {#if $Device["isMobile"]}
-            - 스트로브와 유사하게 동작하도록 프로그램 구성<br/>
-            - 실제 주요 기능을 따라 구현하긴 힘드나, 최소한<br/>
-            &nbsp;&nbsp;스트로브를 수행하는 것처럼 보일 필요가<br/>
-            &nbsp;&nbsp;있었음.
-            {:else}
-            - 스트로브와 유사하게 동작하도록 프로그램 구성<br/>
-            - 실제 주요 기능을 따라 구현하긴 힘드나, 최소한 스트로브를 수행하는 것처럼<br/>
-            &nbsp;&nbsp;보일 필요가 있었음.
-            {/if}
+            - 가장 좋은 방법은 더욱 좋은 IO카드를 사용하는 것<br/>
+            - 다만 비용 문제 등으로 인해 실질적으로 행하진 않음
         </p>
     </div>
 </DefaultPage>
