@@ -31,10 +31,9 @@
 
 <DefaultPage color={color} fontSize={fontSize}>
     <div style="height:20%;">
-
+        <p>곡의 분석 및 해석</p>
     </div>
-    <p>곡의 분석 및 해석</p>
-    <div style="height:60%;">
+    <div style="height:70%; font-size:{calcSubFontSize()};">
         {#if loaded}
             <img in:fade={{delay:300, duration:300,}} {src} width="100%" height="100%" alt="robot-piano-data" />
         {:else if failed}
