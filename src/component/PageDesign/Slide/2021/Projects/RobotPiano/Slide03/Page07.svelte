@@ -33,7 +33,7 @@
     <div style="height:10%;">
         <p>곡의 분석 및 해석</p>
     </div>
-    <div style="height:80%; font-size:{context};">
+    <div style="height:80%; font-size:{context}rem;">
         {#if loaded}
             <img in:fade={{delay:300, duration:300,}} {src} width="100%" height="auto" alt="robot-piano-data" />
         {:else if failed}
