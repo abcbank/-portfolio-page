@@ -9,18 +9,14 @@
 </script>
 
 <DefaultPage color={color} fontSize={subhead}>
-    <p>전류계 통신</p>
+    <p>Image Acquire</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
             {#if $Device["isMobile"]}
-            - 전류계가 가끔 값을 요청해도 응답하지<br/>
-            &nbsp;&nbsp;않는 경우가 발생<br/>
-            - 요청 주기가 빠를수록 더 빈번하게 발생<br/>
-            - 전류계 내부 기판의 성능의 문제로 판단
+            - 이동하는 객체를 사진 촬영할 경우<br/>
+            &nbsp;&nbsp;이미지의 번짐 현상이 발생<br/>
             {:else}
-            - 전류계가 가끔 값을 요청해도 응답하지 않는 경우가 발생<br/>
-            - 요청 주기가 빠를수록 더 빈번하게 발생<br/>
-            - 전류계 내부 기판의 성능의 문제로 판단
+            - 이동하는 객체를 사진 촬영할 경우 이미지의 번짐 현상이 발생<br/>
             {/if}
         </p>
     </div>
