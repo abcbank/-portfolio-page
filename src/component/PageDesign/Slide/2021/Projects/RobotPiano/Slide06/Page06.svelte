@@ -12,14 +12,7 @@
     <p>아두이노의 성능 저하</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
-            {#if $Device["isMobile"]}
-            - 스트로브 기능이 필요한 일부 상황이<br/>
-            &nbsp;&nbsp;있었으나, 스트로브 기능을 지원하지 않는<br/>
-            &nbsp;&nbsp;광원 컨트롤러를 사용
-            {:else}
-            - 스트로브 기능이 필요한 일부 상황이 있었으나, 스트로브 기능을 지원하지<br/>
-            &nbsp;&nbsp;않는 광원 컨트롤러를 사용
-            {/if}
+            - 아두이노의 반응속도로 인해 제때 실린더가 내려가지 않음
         </p>
     </div>
 </DefaultPage>
