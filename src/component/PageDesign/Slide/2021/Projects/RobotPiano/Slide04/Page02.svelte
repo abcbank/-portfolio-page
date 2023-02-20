@@ -17,12 +17,12 @@
     </div>
     <div class="borderBox" 
         on:click={()=> {curPage = 3}} on:keydown={()=>{}}
-        style="font-size:{context}rem;border: solid {$Color["btnBdrColor"][$season]} 1px; background-color:{$Color["btnBackColor"][$season]}; color:{$Color["btnBdrColor"][$season]}; top: 35%; left: 40%;">
+        style="font-size:{context}rem;border: solid {$Color["btnBdrColor"][$season]} 1px; background-color:{$Color["btnBackColor"][$season]}; color:{$Color["btnBdrColor"][$season]}; top: 35%; left: {$Device['isMobile'] ? "32.5%" : "40%"};">
         Treble<br/>
         Arm
     </div>
     <div class="borderBox" 
-        style="font-size:{context}rem;border: solid {$Color["btnBdrColor"][$season]} 1px; background-color:{$Color["btnBackColor"][$season]}; color:{$Color["btnBdrColor"][$season]}; top: 35%; left: 60%;">
+        style="font-size:{context}rem;border: solid {$Color["btnBdrColor"][$season]} 1px; background-color:{$Color["btnBackColor"][$season]}; color:{$Color["btnBdrColor"][$season]}; top: 35%; left: {$Device['isMobile'] ? "67.5%" : "60%"};">
         Bass<br/>
         Arm
     </div>
@@ -42,8 +42,8 @@
         position: absolute;
         top:50%;
         left:50%;
-        min-width: 120px;
-        min-height: 120px;
+        min-width: 70px;
+        min-height: 70px;
         width:5vw;
         height:5vw;
 		display: flex;
