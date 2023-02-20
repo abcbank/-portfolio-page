@@ -30,7 +30,7 @@
         <SideTrigger leftIcon={mdiCodeGreaterThanOrEqual} bind:isOpen={isOpen} isDropdown={true} rightIconColor="#fff" textColor="#fff" >Project</SideTrigger>
         {/if}
     </span>
-    <DropdownMenu Side={isSide} bind:sideWidth={sideWidth} Menu={
+    <DropdownMenu Side={isSide} afterSelect={onOpen} bind:sideWidth={sideWidth} Menu={
     [
         {Name: 'main', Component: ProjectsMain}, 
         {Name: '2021', Component: Projects_2021},

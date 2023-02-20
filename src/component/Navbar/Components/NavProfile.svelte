@@ -38,7 +38,7 @@
 </script>
 <div class = "Profile"class:side={isSide} style="height:{height}px;" in:fade={{ delay: 100 }}>
 <NavItem bind:open={isOpen} Side={ isSide } preOpen={onOpen}>
-    <span slot="trigger" on:click={(event) => {pushFunc("/profile")}} on:keypress={empty}>
+    <span slot="trigger" on:click={(event) => {pushFunc("/profile"); onOpen();}} on:keypress={empty}>
         {#if !isSide}
         <IconButton path={mdiAccountBox} Comment="Profile" bind:showComment={isOpen} />
         {:else}

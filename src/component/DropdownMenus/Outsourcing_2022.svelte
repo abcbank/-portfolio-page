@@ -7,6 +7,7 @@
     import { onMount } from 'svelte'
     
     export let height;
+    export let afterSelect;
     export let activeMenu;
     export let Side;
 
@@ -38,13 +39,16 @@
     <MenuItem on:click={() => {
         pushRouter("/outsourcing/2022/picam")
         rerandering();
+        afterSelect();
     }}  leftIcon={mdiCalendarMonthOutline} bind:isChecked={isChecked["picam"]} >Picamera</MenuItem>
     <MenuItem on:click={() => {
         pushRouter("/outsourcing/2022/calculator")
         rerandering();
+        afterSelect();
     }}   leftIcon={mdiCalendarMonthOutline} bind:isChecked={isChecked["calculator"]}>Calculator</MenuItem>
     <MenuItem on:click={() => {
         pushRouter("/outsourcing/2022/navigation")
         rerandering();
+        afterSelect();
     }}   leftIcon={mdiCalendarMonthOutline} bind:isChecked={isChecked["navigation"]}>Navigation</MenuItem>
 </MenuFrame>

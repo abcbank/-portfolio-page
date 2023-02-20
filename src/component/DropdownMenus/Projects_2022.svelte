@@ -7,6 +7,7 @@
     import { onMount } from 'svelte'
     
     export let height;
+    export let afterSelect;
     export let width;
     export let activeMenu;
     export let Side;
@@ -68,6 +69,7 @@
     <MenuItem on:click={() => {
         pushRouter("/project/2022/analoguecalibration")
         rerandering();
+        afterSelect();
     }}  bind:leftIcon={config[idx].path} bind:leftIconColor={config[idx].color} bind:isChecked={isChecked["analoguecalibration"]} >
         {#if width < 200}
         아날로그<br/>캘리브레이션
@@ -78,17 +80,21 @@
     <MenuItem on:click={() => {
         pushRouter("/project/2022/robotpiano")
         rerandering();
+        afterSelect();
     }}   leftIcon={mdiPiano} bind:isChecked={isChecked["robotpiano"]}>로봇 피아노</MenuItem>
     <MenuItem on:click={() => {
         pushRouter("/project/2022/visionpickup")
         rerandering();
+        afterSelect();
     }}   leftIcon={mdiPackage } bind:isChecked={isChecked["visionpickup"]}>상자 픽업</MenuItem>
     <MenuItem on:click={() => {
         pushRouter("/project/2022/downloader")
         rerandering();
+        afterSelect();
     }}   leftIcon={mdiDownloadOutline} bind:isChecked={isChecked["downloader"]}>PCB 다운로더</MenuItem>
     <MenuItem on:click={() => {
         pushRouter("/project/2022/convyerboxing")
         rerandering();
+        afterSelect();
     }}   leftIcon={mdiPackageVariantClosed } bind:isChecked={isChecked["convyerboxing"]}>박스 포장</MenuItem>
 </MenuFrame>

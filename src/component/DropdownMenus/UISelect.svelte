@@ -8,6 +8,7 @@
     import { onMount } from 'svelte'
     
     export let height;
+    export let afterSelect;
     export let Side;
 
     let isChecked = {
@@ -44,23 +45,27 @@
         rerandering();
         jquery(".full-landing-image").ripples('pause');
         jquery(".full-landing-image").ripples('hide');
+        afterSelect();
     }} leftIcon={mdiSprout} isChecked={isChecked["Spring"]}>Spring</MenuItem>
     <MenuItem on:click={() => {
         $season = "Summer"
         rerandering();
         jquery(".full-landing-image").ripples('play');
         jquery(".full-landing-image").ripples('show');
+        afterSelect();
     }} leftIcon={mdiWaves} isChecked={isChecked["Summer"]}>Summer</MenuItem>
     <MenuItem on:click={() => {
         $season = "Fall"
         rerandering();
         jquery(".full-landing-image").ripples('pause');
         jquery(".full-landing-image").ripples('hide');
+        afterSelect();
     }}   leftIcon={mdiLeafMaple} isChecked={isChecked["Fall"]}>Fall</MenuItem>
     <MenuItem on:click={() => {
         $season = "Winter"
         rerandering();
         jquery(".full-landing-image").ripples('pause');
         jquery(".full-landing-image").ripples('hide');
+        afterSelect();
     }} leftIcon={mdiSnowflake} isChecked={isChecked["Winter"]}>Winter</MenuItem>
 </MenuFrame>

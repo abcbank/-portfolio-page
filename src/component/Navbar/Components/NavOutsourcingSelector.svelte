@@ -43,7 +43,7 @@
         <SideTrigger leftIcon={mdiCurrencyKrw} bind:isOpen={isOpen} isDropdown={true} rightIconColor="#fff" textColor="#fff" >Outsourcing</SideTrigger>
         {/if}
     </span>
-    <DropdownMenu Side={isSide} bind:sideWidth={sideWidth} Menu={
+    <DropdownMenu Side={isSide} afterSelect={onOpen} bind:sideWidth={sideWidth} Menu={
     [
         {Name: 'main', Component: OutsourcingMain}, 
         {Name: '2022', Component: Outsourcing_2022},

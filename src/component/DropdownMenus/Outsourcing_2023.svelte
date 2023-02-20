@@ -7,6 +7,7 @@
     import { onMount } from 'svelte'
     
     export let height;
+    export let afterSelect;
     export let activeMenu;
     export let Side;
 

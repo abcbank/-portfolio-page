@@ -7,6 +7,7 @@
     import { onMount } from 'svelte'
     
     export let height;
+    export let afterSelect;
     export let activeMenu;
     export let Side;
 
@@ -38,21 +39,26 @@
     <MenuItem on:click={() => {
         pushRouter("/project/2021/downloader")
         rerandering();
+        afterSelect();
     }}  leftIcon={mdiDownloadOutline} bind:isChecked={isChecked["downloader"]} >PCB 다운로더</MenuItem>
     <MenuItem on:click={() => {
         pushRouter("/project/2021/cafe24")
         rerandering();
+        afterSelect();
     }}   leftIcon={mdiWeb} bind:isChecked={isChecked["cafe24"]}>Cafe24 리뉴얼</MenuItem>
     <MenuItem on:click={() => {
         pushRouter("/project/2021/convyervision")
         rerandering();
+        afterSelect();
     }}   leftIcon={mdiCctv } bind:isChecked={isChecked["convyervision"]}>컨베이어 비전</MenuItem>
     <MenuItem on:click={() => {
         pushRouter("/project/2021/robotpiano")
         rerandering();
+        afterSelect();
     }}   leftIcon={mdiPiano } bind:isChecked={isChecked["robotpiano"]}>로봇 피아노</MenuItem>
     <MenuItem on:click={() => {
         pushRouter("/project/2021/barcode")
         rerandering();
+        afterSelect();
     }}   leftIcon={mdiBarcodeScan } bind:isChecked={isChecked["barcode"]}>바코드 리더</MenuItem>
 </MenuFrame>
