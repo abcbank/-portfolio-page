@@ -8,7 +8,7 @@
     export let context = 1;
 </script>
 <DefaultPage color={color} fontSize={subhead}>
-    <p>Normal 연주 - 메인 쓰레드</p>
+    <p>Snap 연주 - 메인 쓰레드</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
             {#if $Device["isMobile"]}

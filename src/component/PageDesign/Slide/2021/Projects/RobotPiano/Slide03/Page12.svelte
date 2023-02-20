@@ -11,9 +11,20 @@
     <p>곡의 연주</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
-            - 별도의 두 개의 메인 쓰레드를 운영<br/>
-            &nbsp;&nbsp;1. 높은음자리 연주 쓰레드<br/>
-            &nbsp;&nbsp;2. 낮은음자리 연주 쓰레드
+            {#if $Device["isMobile"]}
+            - 총 두 가지 방식으로 연주 진행<br/>
+            &nbsp;&nbsp;1. Normal 방식<br/>
+            &nbsp;&nbsp;2. Snap 방식
+            - 두 방식은 전체적인 양상은 비슷하나, 건반을<br/>
+            &nbsp;&nbsp;때리는 방식에서 차이가 있음
+            {:else}
+            - 총 두 가지 방식으로 연주 진행<br/>
+            &nbsp;&nbsp;1. Normal 방식<br/>
+            &nbsp;&nbsp;2. Snap 방식
+            - 두 방식은 전체적인 양상은 비슷하나, 건반을 때리는 방식에서 차이가 있음
+            {/if}
+        </p>
+        <p>
         </p>
     </div>
 </DefaultPage>
