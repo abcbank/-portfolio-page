@@ -1,7 +1,7 @@
 <script>
     import Page01 from "./Slide02/Page01.svelte";
     import Page02 from "./Slide02/Page02.svelte";
-    import Page03 from "./Slide02/Page02.svelte";
+    import Page03 from "./Slide02/Page03.svelte";
     import DefaultSlide from "../../../defaultSlide.svelte";
     export let color;
     export let curPage;

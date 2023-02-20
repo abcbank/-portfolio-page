@@ -9,11 +9,16 @@
 </script>
 
 <DefaultPage color={color} fontSize={subhead}>
-    <p>펄스 측정</p>
+    <p>관성에 의한 번짐 발생</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
-            - USBScope 102는 최대 10V까지 측정 가능<br/>
-            - IR 동작 검사에서 측정해야하는 전압은 50V
+            {#if $Device["isMobile"]}
+            - 이동 완료 후 로봇팔에 부착된 카메라가 관성에<br/>
+            &nbsp;&nbsp;의해 흔들리며 이미지 번짐이 발생
+            {:else}
+            - 이동 완료 후 로봇팔에 부착된 카메라가 관성에 의해 흔들리며 이미지<br/>
+            &nbsp;&nbsp;번짐이 발생
+            {/if}
         </p>
     </div>
 </DefaultPage>

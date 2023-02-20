@@ -11,13 +11,26 @@
 </script>
 
 <DefaultPage color={color} fontSize={subhead}>
-    <p>Oscilloscope</p>
+    <p>PC</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
-            - 전압 검사용 오실로스코프<br/>
-            - C# SDK를 지원하는 모델로 구매<br/>
-            - 지정된 시간동안 전압을 측정해, 데이터를 넘겨줌<br/>
-            - 사용 모델: USBScope 102
+            {#if $Device["isMobile"]}
+            - 주요 제어기 역할<br/>
+            - 비전 검사는 Vision Pro를 사용해 진행<br/>
+            - Convyer Vision과 동일한 모델 사용<br/>
+            - 사용 모델: 사내 컴퓨터<br/>
+            &nbsp;&nbsp;- CPU: Ryzen7-5800br/>
+            &nbsp;&nbsp;- GPU: GTX 1050 Ti<br/>
+            &nbsp;&nbsp;- RAM: 16GB
+            {:else}
+            - 주요 제어기 역할<br/>
+            - 비전 검사는 Vision Pro를 사용해 진행<br/>
+            - Convyer Vision과 동일한 모델 사용<br/>
+            - 사용 모델: 사내 컴퓨터<br/>
+            &nbsp;&nbsp;- CPU: Ryzen7-5800br/>
+            &nbsp;&nbsp;- GPU: GTX 1050 Ti<br/>
+            &nbsp;&nbsp;- RAM: 16GB
+            {/if}
         </p>
     </div>
 </DefaultPage>

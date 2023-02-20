@@ -17,28 +17,29 @@
     </div>
     <div class="borderBox" 
         on:click={()=> {curPage = 3}} on:keydown={()=>{}}
-        style="font-size:{context}rem;border: solid {$Color["btnBdrColor"][$season]} 1px; background-color:{$Color["btnBackColor"][$season]}; color:{$Color["btnBdrColor"][$season]}; top: 35%; left: {$Device['isMobile'] ? "15%" : "30%"};">
-        SPI
+        style="font-size:{context}rem;border: solid {$Color["btnBdrColor"][$season]} 1px; background-color:{$Color["btnBackColor"][$season]}; color:{$Color["btnBdrColor"][$season]};top: 35%; left: {$Device['isMobile'] ? "15%" : "30%"};">
+        Camera
     </div>
     <div class="borderBox" 
     on:click={()=> {curPage = 4}} on:keydown={()=>{}}
-        style="font-size:{context}rem;border: solid {$Color["btnBdrColor"][$season]} 1px; background-color:{$Color["btnBackColor"][$season]}; color:{$Color["btnBdrColor"][$season]}; top: 35%; left: {$Device['isMobile'] ? "50%" : "50%"};">
-        PC
+        style="font-size:{context}rem;border: solid {$Color["btnBdrColor"][$season]} 1px; background-color:{$Color["btnBackColor"][$season]}; color:{$Color["btnBdrColor"][$season]};top: 35%; left: {$Device['isMobile'] ? "50%" : "50%"};">
+        Lense
     </div>
     <div class="borderBox" 
     on:click={()=> {curPage = 5}} on:keydown={()=>{}}
-        style="font-size:{context}rem;border: solid {$Color["btnBdrColor"][$season]} 1px; background-color:{$Color["btnBackColor"][$season]}; color:{$Color["btnBdrColor"][$season]}; top: 35%; left: {$Device['isMobile'] ? "85%" : "70%"};">
-        IO
+        style="font-size:{context}rem;border: solid {$Color["btnBdrColor"][$season]} 1px; background-color:{$Color["btnBackColor"][$season]}; color:{$Color["btnBdrColor"][$season]};top: 35%; left: {$Device['isMobile'] ? "85%" : "70%"};">
+        Light<br/>
+        Source
     </div>
     <div class="borderBox" 
     on:click={()=> {curPage = 6}} on:keydown={()=>{}}
-        style="font-size:{context}rem;border: solid {$Color["btnBdrColor"][$season]} 1px; background-color:{$Color["btnBackColor"][$season]}; color:{$Color["btnBdrColor"][$season]}; top: {$Device['isMobile'] ? "60%" : "65%"}; left: {$Device['isMobile'] ? "32.5%" : "40%"};">
-        전류계
+        style="font-size:{context}rem;border: solid {$Color["btnBdrColor"][$season]} 1px; background-color:{$Color["btnBackColor"][$season]}; color:{$Color["btnBdrColor"][$season]};top: {$Device['isMobile'] ? "60%" : "75%"}; left: {$Device['isMobile'] ? "32.5%" : "40%"};">
+        Robot<br/>Arm
     </div>
     <div class="borderBox" 
     on:click={()=> {curPage = 7}} on:keydown={()=>{}}
-        style="font-size:{context}rem;border: solid {$Color["btnBdrColor"][$season]} 1px; background-color:{$Color["btnBackColor"][$season]}; color:{$Color["btnBdrColor"][$season]}; top: {$Device['isMobile'] ? "60%" : "65%"}; left: {$Device['isMobile'] ? "67.5%" : "60%"};">
-        Oscillo
+        style="font-size:{context}rem;border: solid {$Color["btnBdrColor"][$season]} 1px; background-color:{$Color["btnBackColor"][$season]}; color:{$Color["btnBdrColor"][$season]};top: {$Device['isMobile'] ? "60%" : "75%"}; left: {$Device['isMobile'] ? "67.5%" : "60%"};">
+        PC
     </div>
 </DefaultPage>
 <style>

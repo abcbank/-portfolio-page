@@ -30,7 +30,8 @@
 
 <style>
 	.menu-item {
-		font-size:max(2vw, 0.75rem);
+		font-size: min(max(2vw, 0.75rem), 1rem);
+		
 		height: 50px;
 		display: grid;
 		grid-template-columns: auto 1fr auto;

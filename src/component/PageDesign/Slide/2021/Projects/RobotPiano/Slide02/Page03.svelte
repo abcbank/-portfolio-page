@@ -11,8 +11,8 @@
 <DefaultPage color={color} fontSize={fontSize}>
     <p>수행 직무</p>
     <div style="font-size:{calcSubFontSize()}rem; text-align:left; margin-top:20px;">
-        <p>
-        </p>
+        - 전반적인 시스템 설계<br/>
+        - 소프트웨어 설계
     </div>
 </DefaultPage>
 

@@ -11,12 +11,25 @@
 </script>
 
 <DefaultPage color={color} fontSize={subhead}>
-    <p>전류계</p>
+    <p>Robot Arm</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
-            - 전류 검사용 전류계<br/>
-            - 시리얼 통신을 통해 현재 전류값 전달 가능<br/>
-            - 사용 모델: P3857
+            {#if $Device["isMobile"]}
+            - 테스트 진행용 로봇팔<br/>
+            - 원래 프로세스는 선루프를 로봇팔로 이동하는 <br/>
+            &nbsp;&nbsp;방식이었으나, 테스트 단계에선 카메라를 로봇팔에<br/>
+            &nbsp;&nbsp;부착 후 카메라를 이동하는 방식으로 진행
+            - 사내의 남아있는 재고 사용
+            - 사용 모델: VS-6556 / RC-8<br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            (Denso)
+            {:else}
+            - 테스트 진행용 로봇팔<br/>
+            - 원래 프로세스는 선루프를 로봇팔로 이동하는 방식이었으나, 테스트 단계에선 카메라를 로봇팔에<br/>
+            &nbsp;&nbsp;부착 후 카메라를 이동하는 방식으로 진행
+            - 사내의 남아있는 재고 사용
+            - 사용 모델: VS-6556 / RC-8 (Denso)
+            {/if}
         </p>
     </div>
 </DefaultPage>
