@@ -8,6 +8,6 @@
     export let context = 1;
 </script>
 
-<DefaultPage color={color} fontSize={fontSize}>
+<DefaultPage color={color} fontSize={head}>
     <p>Outline</p>
 </DefaultPage>
