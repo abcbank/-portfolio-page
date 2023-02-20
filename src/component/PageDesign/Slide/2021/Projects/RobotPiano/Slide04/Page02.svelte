@@ -19,23 +19,22 @@
     </div>
     <div class="borderBox" 
         on:click={()=> {curPage = 3}} on:keydown={()=>{}}
-        style="font-size:{calcSubFontSize() * 0.8}rem;border: solid {$Color["btnBdrColor"][$season]} 1px; background-color:{$Color["btnBackColor"][$season]}; color:{$Color["btnBdrColor"][$season]}; top: 35%; left: 30%;">
-        
+        style="font-size:{calcSubFontSize() * 0.8}rem;border: solid {$Color["btnBdrColor"][$season]} 1px; background-color:{$Color["btnBackColor"][$season]}; color:{$Color["btnBdrColor"][$season]}; top: 35%; left: 40%;">
+        Treble<br/>
+        Arm
     </div>
     <div class="borderBox" 
-        style="font-size:{calcSubFontSize() * 0.8}rem;border: solid {$Color["btnBdrColor"][$season]} 1px; background-color:{$Color["btnBackColor"][$season]}; color:{$Color["btnBdrColor"][$season]}; top: 35%; left: 50%;">
-        
+        style="font-size:{calcSubFontSize() * 0.8}rem;border: solid {$Color["btnBdrColor"][$season]} 1px; background-color:{$Color["btnBackColor"][$season]}; color:{$Color["btnBdrColor"][$season]}; top: 35%; left: 60%;">
+        Bass<br/>
+        Arm
     </div>
     <div class="borderBox" 
-        style="font-size:{calcSubFontSize() * 0.8}rem;border: solid {$Color["btnBdrColor"][$season]} 1px; background-color:{$Color["btnBackColor"][$season]}; color:{$Color["btnBdrColor"][$season]}; top: 35%; left: 70%;">
-        
+        style="font-size:{calcSubFontSize() * 0.8}rem;border: solid {$Color["btnBdrColor"][$season]} 1px; background-color:{$Color["btnBackColor"][$season]}; color:{$Color["btnBdrColor"][$season]}; top: {$Device['isMobile'] ? "60%" : "65%"}; left: {$Device['isMobile'] ? "32.5%" : "40%"};">
+        PC
     </div>
     <div class="borderBox" 
-        style="font-size:{calcSubFontSize() * 0.8}rem;border: solid {$Color["btnBdrColor"][$season]} 1px; background-color:{$Color["btnBackColor"][$season]}; color:{$Color["btnBdrColor"][$season]}; top: 65%; left: 40%;">
-        
-    </div>
-    <div class="borderBox" 
-        style="font-size:{calcSubFontSize() * 0.8}rem;border: solid {$Color["btnBdrColor"][$season]} 1px; background-color:{$Color["btnBackColor"][$season]}; color:{$Color["btnBdrColor"][$season]}; top: 65%; left: 60%;">
+        style="font-size:{calcSubFontSize() * 0.8}rem;border: solid {$Color["btnBdrColor"][$season]} 1px; background-color:{$Color["btnBackColor"][$season]}; color:{$Color["btnBdrColor"][$season]}; top: {$Device['isMobile'] ? "60%" : "65%"}; left: {$Device['isMobile'] ? "67.5%" : "60%"};">
+        IO
     </div>
 </DefaultPage>
 <style>

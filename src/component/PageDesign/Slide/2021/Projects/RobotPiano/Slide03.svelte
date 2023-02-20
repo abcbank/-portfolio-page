@@ -10,6 +10,9 @@
     import Page09 from "./Slide03/Page09.svelte";
     import Page10 from "./Slide03/Page10.svelte";
     import Page11 from "./Slide03/Page11.svelte";
+    import Page12 from "./Slide03/Page12.svelte";
+    import Page13 from "./Slide03/Page13.svelte";
+    import Page14 from "./Slide03/Page14.svelte";
     import DefaultSlide from "../../../defaultSlide.svelte";
     export let color;
     export let curPage;
@@ -26,7 +29,10 @@
         { index: 8, component:Page08 },
         { index: 9, component:Page09 },
         { index: 10, component:Page10 },
-        { index: 11, component:Page11 }
+        { index: 11, component:Page11 },
+        { index: 12, component:Page12 },
+        { index: 13, component:Page13 },
+        { index: 14, component:Page14 }
     ]
 </script>
 
