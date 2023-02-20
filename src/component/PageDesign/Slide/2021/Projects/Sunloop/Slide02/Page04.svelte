@@ -9,16 +9,15 @@
 </script>
 
 <DefaultPage color={color} fontSize={subhead}>
-    <p>PCB 인스펙터</p>
+    <p>선루프의 이동</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
             {#if $Device["isMobile"]}
-            1. 하나의 가공된 PCB가 로딩<br/>
-            2. 지정된 검사를 수행해 업로드 직후<br/>
-            &nbsp;&nbsp;&nbsp;&nbsp;PCB의 불량 여부 파악
+            - 선루프의 이동은 모두 로봇팔을 사용해 수행<br/>
+            - 여섯 위치 검사 기준 택타임은 약 30초
             {:else}
-            1. 하나의 가공된 PCB가 로딩<br/>
-            2. 지정된 검사를 수행해 업로드 직후 PCB의 불량 여부 파악
+            - 선루프의 이동은 모두 로봇팔을 사용해 수행<br/>
+            - 여섯 위치 검사 기준 택타임은 약 30초
             {/if}
         </p>
     </div>

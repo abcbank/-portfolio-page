@@ -9,12 +9,11 @@
 </script>
 
 <DefaultPage color={color} fontSize={subhead}>
-    <p>수행 직무</p>
+    <p>검사 종류</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
-            - C# 기반 PC 프로그램<br/>
-            - C 기반 IO 펌웨어 프로그램<br/>
-            - IO-PC 통신 프로토콜 설정
+            - 나사 구멍의 유무 검사<br/>
+            - 형상 검사
         </p>
     </div>
 </DefaultPage>

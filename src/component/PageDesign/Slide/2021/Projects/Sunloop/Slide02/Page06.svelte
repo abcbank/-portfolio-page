@@ -9,12 +9,11 @@
 </script>
 
 <DefaultPage color={color} fontSize={subhead}>
-    <p>장비 검사 프로세ㅐ스</p>
+    <p>수행 직무</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
-            1. 로봇팔을 통해 선루프를 검사 위치로 도입<br/>
-            2. 카메라 촬영 후 비전 검사 수행<br/>
-            3. 1~2를 검사 장소의 수만큼 반복
+            - 검사 알고리즘 구상<br/>
+            - C# 기반 검사용 프로그램 작성
         </p>
     </div>
 </DefaultPage>
