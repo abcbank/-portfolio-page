@@ -12,6 +12,7 @@
     import SideTrigger from '../../Dropdown/SideTrigger.svelte';
     
     export let height = 0;
+    export let afterSelect;
     export let isSide = false;
     export let onOpen;
     export let pushFunc;
@@ -30,7 +31,7 @@
         <SideTrigger leftIcon={mdiCodeGreaterThanOrEqual} bind:isOpen={isOpen} isDropdown={true} rightIconColor="#fff" textColor="#fff" >Project</SideTrigger>
         {/if}
     </span>
-    <DropdownMenu Side={isSide} afterSelect={onOpen} bind:sideWidth={sideWidth} Menu={
+    <DropdownMenu Side={isSide} afterSelect={afterSelect} bind:sideWidth={sideWidth} Menu={
     [
         {Name: 'main', Component: ProjectsMain}, 
         {Name: '2021', Component: Projects_2021},

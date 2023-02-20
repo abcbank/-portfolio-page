@@ -14,6 +14,7 @@
     let width = 0;
     
     export let height = 0;
+    export let afterSelect;
     export let isSide = false;
     export let onOpen;
     export let pushFunc;
@@ -38,7 +39,7 @@
 </script>
 <div class = "Profile"class:side={isSide} style="height:{height}px;" in:fade={{ delay: 100 }}>
 <NavItem bind:open={isOpen} Side={ isSide } preOpen={onOpen}>
-    <span slot="trigger" on:click={(event) => {pushFunc("/profile"); onOpen();}} on:keypress={empty}>
+    <span slot="trigger" on:click={(event) => {pushFunc("/profile"); afterSelect();}} on:keypress={empty}>
         {#if !isSide}
         <IconButton path={mdiAccountBox} Comment="Profile" bind:showComment={isOpen} />
         {:else}

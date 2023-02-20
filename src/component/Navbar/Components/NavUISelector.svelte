@@ -18,6 +18,7 @@
     }
 
     export let height = 0;
+    export let afterSelect;
     export let onOpen;
     export let isSide = false;
     export let isOpen = false;
@@ -46,7 +47,7 @@
             <SideTrigger leftIcon={mdiCodeBrackets} bind:isOpen={isOpen} isDropdown={true} rightIconColor="#fff" textColor="#fff" >Select UI</SideTrigger>
             {/if}
         </span>
-        <DropdownMenu Side={isSide} afterSelect={onOpen} bind:sideWidth={sideWidth} Menu={[{Name: 'main', Component: UiSelect}]}/>
+        <DropdownMenu Side={isSide} afterSelect={afterSelect} bind:sideWidth={sideWidth} Menu={[{Name: 'main', Component: UiSelect}]}/>
     </NavItem>
 </div>
 <style>
