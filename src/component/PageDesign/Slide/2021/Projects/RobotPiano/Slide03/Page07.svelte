@@ -30,12 +30,12 @@
 </script>
 
 <DefaultPage color={color} fontSize={fontSize}>
-    <div style="height:20%;">
+    <div style="height:10%;">
         <p>곡의 분석 및 해석</p>
     </div>
-    <div style="height:70%; font-size:{calcSubFontSize()};">
+    <div style="height:80%; font-size:{calcSubFontSize()};">
         {#if loaded}
-            <img in:fade={{delay:300, duration:300,}} {src} width="100%" height="100%" alt="robot-piano-data" />
+            <img in:fade={{delay:300, duration:300,}} {src} width="100%" height="auto" alt="robot-piano-data" />
         {:else if failed}
             <img  width="30%" height="30%" src="https://icon-library.com/images/not-found-icon/not-found-icon-20.jpg" alt="Not Found" />
         {:else if loading}
