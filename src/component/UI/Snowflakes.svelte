@@ -4,7 +4,7 @@
   
     // a bunch of variables defining the snow and how it falls
     const SNOWFLAKES_COUNT = 100
-    const SNOWFLAKE_MIN_SCALE = 1.0
+    const SNOWFLAKE_MIN_SCALE = 0.5
     const MELTING_SPEED = 1.12
     const WIND_FORCE = 0.01
     const FALL_MIN_SPEED = 0.01
