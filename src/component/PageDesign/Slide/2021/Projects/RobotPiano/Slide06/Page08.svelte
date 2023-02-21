@@ -9,18 +9,22 @@
 </script>
 
 <DefaultPage color={color} fontSize={subhead}>
-    <p>강약 조절</p>
+    <p>실린더 소음</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
             {#if $Device["isMobile"]}
-            - 피아노는 눌리는 강약조절을 통해 멜로디에<br/>
-            &nbsp;&nbsp;감정을 넣음<br/>
-            - 다만 실린더를 통해 건반을 때리는 방식으론<br/>
-            &nbsp;&nbsp;강약 조절을 하는 것이 불가능했음
+            - 일반 실린더의 경우, 기압을 세게 넣어 동작할<br/>
+            &nbsp;&nbsp;경우 소음이 크게 발생<br/>
+            - 해당 소음으로 인해 연주 자체가 방해받는 경우가<br/>
+            &nbsp;&nbsp;존재
+            - Program Result 8페이지의 Snap 연주 데모 영상의<br/>
+            &nbsp;&nbsp;경우, 실린더를 교체하기 전 촬영한 영상임
             {:else}
-            - 피아노는 눌리는 강약조절을 통해 멜로디에감정을 넣음<br/>
-            - 다만 실린더를 통해 건반을 때리는 방식으론 강약 조절을 하는<br/>
-            &nbsp;&nbsp;것이 불가능했음
+            - 일반 실린더의 경우, 기압을 세게 넣어 동작할<br/>
+            &nbsp;&nbsp;경우 소음이 크게 발생<br/>
+            - 해당 소음으로 인해 연주 자체가 방해받는 경우가 존재<br/>
+            - Program Result 8페이지의 Snap 연주 데모 영상의 경우, 실린더를<br/>
+            &nbsp;&nbsp;교체하기 전 촬영한 영상임
             {/if}
         </p>
     </div>
