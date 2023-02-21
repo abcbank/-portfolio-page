@@ -3,7 +3,6 @@
     import DefaultPage from '../../../../defaultPage.svelte'
 
     export let color = "transparent";
-    export let head = 2;
     export let subhead = 1.5;
     export let context = 1;
 </script>
@@ -13,14 +12,11 @@
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
             {#if $Device["isMobile"]}
-            - 스트로브와 유사하게 동작하도록 프로그램 구성<br/>
-            - 실제 주요 기능을 따라 구현하긴 힘드나, 최소한<br/>
-            &nbsp;&nbsp;스트로브를 수행하는 것처럼 보일 필요가<br/>
-            &nbsp;&nbsp;있었음.
+            - 이 부분 또한 얘기가 됐다고 전달받음<br/>
+            - 근데 또 얘기가 제대로 안됐었네...?
             {:else}
-            - 스트로브와 유사하게 동작하도록 프로그램 구성<br/>
-            - 실제 주요 기능을 따라 구현하긴 힘드나, 최소한 스트로브를 수행하는 것처럼<br/>
-            &nbsp;&nbsp;보일 필요가 있었음.
+            - 이 부분 또한 얘기가 됐다고 전달받음<br/>
+            - 근데 또 얘기가 제대로 안됐었네...?
             {/if}
         </p>
     </div>

@@ -3,19 +3,17 @@
     import DefaultPage from '../../../../defaultPage.svelte'
 
     export let color = "transparent";
-    export let fontSize = 2;
-
-    let CurPage = "main"
-
-    console.log($Color["btnBackColor"][$season]);
-
-    const calcSubFontSize = () => !$Device["isMobile"] ? fontSize : fontSize/2;
+    export let head = 2;
+    export let subhead = 1.5;
+    export let context = 1;
 </script>
 
-<DefaultPage color={color} fontSize={fontSize}>
-    <p></p>
-    <div style="font-size:{calcSubFontSize()}rem; text-align:left; margin-top:20px;">
+<DefaultPage color={color} fontSize={subhead}>
+    <p>자료형</p>
+    <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
+            - C 계열 위주로 사용해 적응 기간이 필요했음<br/>
+            - 불특정한 자료형을 컨트롤한다는 것이 가장 어색했다
         </p>
     </div>
 </DefaultPage>

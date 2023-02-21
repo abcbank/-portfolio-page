@@ -9,12 +9,20 @@
 </script>
 
 <DefaultPage color={color} fontSize={subhead}>
-    <p>카메라 촬영</p>
+    <p>비전을 통한 검사</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
-            - 장비에 부착된 파이 카메라를 통해 반려 동물의 상태 확인<br/>
-            - 버튼을 통해 카메라의 각도를 좌우로 회전 가능<br/>
-            - AI를 통해 반려 동물의 이동 경로를 따라 카메라의 각도도 회전(미구현)
+            {#if $Device["isMobile"]}
+            - 동일한 제품에 대해 비전을 통한 검사 수행<br/>
+            - 각 제품은 컨베이어를 통해 이동하며, 카메라는<br/>
+            &nbsp;&nbsp;상단에서 이동하는 제품들을 촬영<br/>
+            - PC는 촬영된 이미지를 알고리즘을 통해 정상적인<br/>
+            &nbsp;&nbsp;제품인지 판단
+            {:else}
+            - 동일한 제품에 대해 비전을 통한 검사 수행<br/>
+            - 각 제품은 컨베이어를 통해 이동하며, 카메라는 상단에서 이동하는 제품들을 촬영<br/>
+            - PC는 촬영된 이미지를 알고리즘을 통해 정상적인 제품인지 판단
+            {/if}
         </p>
     </div>
 </DefaultPage>

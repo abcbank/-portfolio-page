@@ -3,19 +3,31 @@
     import DefaultPage from '../../../../defaultPage.svelte'
 
     export let color = "transparent";
-    export let fontSize = 2;
+    export let head = 2;
+    export let subhead = 1.5;
+    export let context = 1;
 
     let CurPage = "main"
-
-    console.log($Color["btnBackColor"][$season]);
-
-    const calcSubFontSize = () => !$Device["isMobile"] ? fontSize : fontSize/2;
 </script>
 
-<DefaultPage color={color} fontSize={fontSize}>
-    <p></p>
-    <div style="font-size:{calcSubFontSize()}rem; text-align:left; margin-top:20px;">
+<DefaultPage color={color} fontSize={subhead}>
+    <p>Camera</p>
+    <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
+            {#if $Device["isMobile"]}
+            - 이미지를 가져올 카메라<br/>
+            - 사내에 있던 바슬러 카메라를 사용<br/>
+            - PC측에서 이미지를 요청할 경우, GIGE를<br/>
+            &nbsp;&nbsp;통해 PC에 이미지를 전달<br/>
+            - 사용 모델: acA2440-20gm<br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            (Basler ace)
+            {:else}
+            - 이미지를 가져올 카메라<br/>
+            - 사내에 있던 바슬러 카메라를 사용<br/>
+            - PC측에서 이미지를 요청할 경우, GIGE를 통해 PC에 이미지를 전달<br/>
+            - 사용 모델: acA2440-20gm(Basler ace)
+            {/if}
         </p>
     </div>
 </DefaultPage>

@@ -9,5 +9,5 @@
 </script>
 
 <DefaultPage color={color} fontSize={head}>
-    <p>Picamera</p>
+    <p>Convyer Vision</p>
 </DefaultPage>

@@ -9,6 +9,9 @@
 </script>
 
 <DefaultPage color={color} fontSize={subhead}>
+    <p fontSize={context}>
+        아쉽게도 본체 사진은 찍어둔 것이 없어<br/>프로그램 화면 영상으로만 대체
+    </p>
 </DefaultPage>
 <style>
 </style>

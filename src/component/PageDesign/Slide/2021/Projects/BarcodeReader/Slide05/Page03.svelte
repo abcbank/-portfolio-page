@@ -5,7 +5,6 @@
     import { onMount } from "svelte";
 
     export let color = "transparent";
-    export let head = 2;
     export let subhead = 1.5;
     export let context = 1;
     let img;
@@ -21,10 +20,10 @@
         {#if $Device["isMobile"]}
         <p>
             영상 재생은 데스크탑에서만 지원됩니다.<br/>
-            확인하시기 위해선 데스크탑으로 접속해주세요.
+            데스크탑으로 접속 후 확인해주세요.
         </p>
         {:else}
-        <iframe width="80%" height="80%" src="https://drive.google.com/file/d/1e3SmJAOYRvqMG4wlBd5KtGB_vw_iUXoX/preview"
+        <iframe width="80%" height="80%" src="https://drive.google.com/file/d/1KxEFyfqFUtRg6SRyI6kZCx5WjrDoCqsI/preview"
         frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
         title="run_1"></iframe>
         {/if}

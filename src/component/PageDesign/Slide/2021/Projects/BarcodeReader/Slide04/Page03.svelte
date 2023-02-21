@@ -3,7 +3,6 @@
     import DefaultPage from '../../../../defaultPage.svelte'
 
     export let color = "transparent";
-    export let head = 2;
     export let subhead = 1.5;
     export let context = 1;
 
@@ -19,7 +18,7 @@
             - Input<br/>
             &nbsp;&nbsp;- Start Switch: 시작 스위치<br/>
             &nbsp;&nbsp;- Box Sensor: 박스 존재 여부 감지 센서<br/>
-            &nbsp;&nbsp;- Hand Sensor: 장비 내부의 손 감지 센서
+            &nbsp;&nbsp;- Hand Sensor: 장비 내부의 손 감지 센서<br/>
             - Output<br/>
             &nbsp;&nbsp;- Cylinder 1: 박스 이동 실린더<br/>
             &nbsp;&nbsp;- Cylinder 2: 카메라 이동 실린더<br/>
@@ -29,7 +28,7 @@
             - Input<br/>
             &nbsp;&nbsp;- Start Switch: 시작 스위치<br/>
             &nbsp;&nbsp;- Box Sensor: 박스 존재 여부 감지 센서<br/>
-            &nbsp;&nbsp;- Hand Sensor: 장비 내부의 손 감지 센서
+            &nbsp;&nbsp;- Hand Sensor: 장비 내부의 손 감지 센서<br/>
             - Output<br/>
             &nbsp;&nbsp;- Cylinder 1: 박스 이동 실린더<br/>
             &nbsp;&nbsp;- Cylinder 2: 카메라 이동 실린더<br/>

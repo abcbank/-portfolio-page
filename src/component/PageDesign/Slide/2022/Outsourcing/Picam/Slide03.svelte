@@ -10,8 +10,8 @@
 
     let Pages =[
         { index: 1, component:Page01 },
-        { index: 2, component:Page02 }, 
-        { index: 3, component:Page03 }, 
+        { index: 2, component:Page02 },
+        { index: 3, component:Page03 },
         { index: 4, component:Page04 }
     ]
 </script>

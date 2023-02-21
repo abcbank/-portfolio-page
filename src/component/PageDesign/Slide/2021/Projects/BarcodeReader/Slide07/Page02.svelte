@@ -3,7 +3,6 @@
     import DefaultPage from '../../../../defaultPage.svelte'
 
     export let color = "transparent";
-    export let head = 2;
     export let subhead = 1.5;
     export let context = 1;
 </script>
@@ -13,22 +12,18 @@
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
             {#if $Device["isMobile"]}
-            - 처음으로 진행한 비전 관련 프로젝트<br/>
-            - 기존엔 비전에 대한 불신이 많았으나, Vision Pro를<br/>
-            &nbsp;&nbsp;직접 사용해보며 비전에 대한 인식이 긍정적인<br/>
-            &nbsp;&nbsp;방향으로 바뀌게 됨<br/>
-            - 첫 프로젝트다 보니, Vision Pro SDK에 대한 이해도가<br/>
-            &nbsp;&nbsp;낮아 모든 파라미터를 C# 코드 상으로 제어하진<br/>
-            &nbsp;&nbsp;못했으나, 점차 퀵빌드를 사용하지 않는 방향으로 나아감<br/>
-            - 나중에 다 끝나고 확인차 여쭤보니, 선루프 관련 비전 과제가<br/>
-            &nbsp;&nbsp;들어와 실력 확인차 시켜보신거라카시더라...
+            - 프로젝트 초기부터 물류 자동화는 예외 처리가 곤란해<br/>
+            &nbsp;&nbsp;힘들겠거니 생각했었음
+            - 전반적으로 내가 만드는 것과 대표님께서 얘기하는 것,<br/>
+            &nbsp;&nbsp;그리고 고객사 측에서 원하는 것이 모두 다르다는 점에서<br/>
+            &nbsp;&nbsp;의사소통에 대해 진지하게 고민하는 계기가 됨
+            - 아쉬움도 많지만, 뭣보다 '소통하는 법'에 대해 진지하게 고민할 수<br/>
+            &nbsp;&nbsp;있었음
             {:else}
-            - 처음으로 진행한 비전 관련 프로젝트<br/>
-            - 기존엔 비전에 대한 불신이 많았으나, Vision Pro를 직접 사용해보며 비전에 대한 인식이 긍정적인<br/>
-            &nbsp;&nbsp;방향으로 바뀌게 됨<br/>
-            - 첫 프로젝트다 보니, Vision Pro SDK에 대한 이해도가 낮아 모든 파라미터를 C# 코드 상으로 제어하진<br/>
-            &nbsp;&nbsp;못했으나, 점차 퀵빌드를 사용하지 않는 방향으로 나아감
-            - 나중에 다 끝나고 확인차 여쭤보니, 선루프 관련 비전 과제가 들어와 실력 확인차 시켜보신거라카시더라...
+            - 프로젝트 초기부터 물류 자동화는 예외 처리가 곤란해 힘들겠거니 생각했었음
+            - 전반적으로 내가 만드는 것과 대표님께서 얘기하는 것, 그리고 고객사 측에서 원하는 것이 모두<br/>
+            &nbsp;&nbsp;다르다는 점에서 의사소통에 대해 진지하게 고민하는 계기가 됨
+            - 아쉬움도 많지만, 뭣보다 '소통하는 법'에 대해 진지하게 고민할 수 있는 계기가 됨
             {/if}
         </p>
     </div>
