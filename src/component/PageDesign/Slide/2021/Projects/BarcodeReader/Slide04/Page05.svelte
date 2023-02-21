@@ -11,12 +11,24 @@
 </script>
 
 <DefaultPage color={color} fontSize={subhead}>
-    <p>Light Source</p>
+    <p>Keyence Camera</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
-            - 촬영 시 빛을 순간적으로 비춰주는 역할<br/>
-            - 엘파인 제어기를 구매 후 사용<br/>
-            - 사용 모델: LCP24-100Q
+            {#if $Device["isMobile"]}
+            - 실질적으로 바코드를 읽고, 탐색하는<br/>
+            &nbsp;&nbsp;디바이스<br/>
+            - PC와 이더넷을 통해 통신하며, 커멘드<br/>
+            &nbsp;&nbsp;제어 방식을 활용<br/>
+            - PC의 제어에 따라 발견된 바코드와<br/>
+            &nbsp;&nbsp;바코드의 좌표 등을 PC에게 제공<br/>
+            - 사용 모델: SR1000
+            {:else}
+            - 실질적으로 바코드를 읽고, 탐색하는 디바이스<br/>
+            - PC와 이더넷을 통해 통신하며, 커멘드 제어 방식을 활용<br/>
+            - PC의 제어에 따라 발견된 바코드와 바코드의 좌표 등을<br/>
+            &nbsp;&nbsp;PC에게 제공<br/>
+            - 사용 모델: SR1000
+            {/if}
         </p>
     </div>
 </DefaultPage>

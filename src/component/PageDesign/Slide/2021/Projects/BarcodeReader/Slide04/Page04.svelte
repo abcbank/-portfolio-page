@@ -11,19 +11,20 @@
 </script>
 
 <DefaultPage color={color} fontSize={subhead}>
-    <p>Lens</p>
+    <p>PC</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
             {#if $Device["isMobile"]}
-            - 카메라에 부착할 렌즈<br/>
-            - 사내에 있던 렌즈를 사용<br/>
-            - 사용 모델: C11-1620-12M-P f16mm<br/>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            (Basler Lens)
+            - 대부분의 연산은 키엔스 카메라측에서 해주므로<br/>
+            &nbsp;&nbsp;고사양의 PC는 필요 없다 판단<br/>
+            - 적당한 조립 PC 사용<br/>
+            - CPU: i5<br/>
+            - RAM: 8GB
             {:else}
-            - 카메라에 부착할 렌즈<br/>
-            - 사내에 있던 렌즈를 사용<br/>
-            - 사용 모델: C11-1620-12M-P f16mm (Basler Lens)
+            - 대부분의 연산은 키엔스 카메라측에서 해주므로 고사양의 PC는 필요 없다 판단<br/>
+            - 적당한 조립 PC 사용<br/>
+            - CPU: i5<br/>
+            - RAM: 8GB
             {/if}
         </p>
     </div>

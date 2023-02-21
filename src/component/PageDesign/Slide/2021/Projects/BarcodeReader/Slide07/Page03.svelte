@@ -9,9 +9,11 @@
 </script>
 
 <DefaultPage color={color} fontSize={subhead}>
-    <p fontSize={context}>
-        아쉽게도 본체 사진은 찍어둔 것이 없어<br/>프로그램 화면 영상으로만 대체
-    </p>
+    <p>프로젝트 한계</p>
+    <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
+        <p>
+        </p>
+    </div>
 </DefaultPage>
 <style>
 </style>

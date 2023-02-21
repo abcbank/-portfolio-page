@@ -6,16 +6,19 @@
     export let head = 2;
     export let subhead = 1.5;
     export let context = 1;
-
-    let CurPage = "main"
 </script>
 
 <DefaultPage color={color} fontSize={subhead}>
-    <p>Convyer</p>
+    <p>프로젝트 한계</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
-            - 제품 운송용 컨베이어<br/>
-            - 사내 남아있던 재고를 사용
+            {#if $Device["isMobile"]}
+            - 아무것도 모르는 상태에서 들이박으니<br/>
+            &nbsp;&nbsp;매우매우 홈페이지 html이 더러워짐....
+            {:else}
+            - 아무것도 모르는 상태에서 들이박으니<br/>
+            &nbsp;&nbsp;매우매우 홈페이지 html이 더러워짐....
+            {/if}
         </p>
     </div>
 </DefaultPage>

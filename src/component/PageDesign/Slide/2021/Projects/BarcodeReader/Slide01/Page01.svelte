@@ -9,5 +9,5 @@
 </script>
 
 <DefaultPage color={color} fontSize={head}>
-    <p>Convyer Vision</p>
+    <p>Barcode Collector</p>
 </DefaultPage>

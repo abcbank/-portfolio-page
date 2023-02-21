@@ -1,5 +1,5 @@
 <script>
-    import { Device } from "../../../../../../../global"
+    import { Device, Color, season } from "../../../../../../../global"
     import DefaultPage from '../../../../defaultPage.svelte'
 
     export let color = "transparent";
@@ -9,14 +9,13 @@
 </script>
 
 <DefaultPage color={color} fontSize={subhead}>
-    <p>수행 직무</p>
+    <p>프로젝트 한계</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
-            - 제품을 검사하기 위한 C# 기반 프로그램 제작
+            - 실질적으로 판매하지 못해 여러모로 아쉬운 프로젝트<br/>
+            - 앞서 말했지만, 강약 조절만 성공하면 가치가 높을듯?
         </p>
     </div>
 </DefaultPage>
-
 <style>
-    
 </style>

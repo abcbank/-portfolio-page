@@ -6,23 +6,19 @@
     export let head = 2;
     export let subhead = 1.5;
     export let context = 1;
-
-    let CurPage = "main"
 </script>
 
 <DefaultPage color={color} fontSize={subhead}>
-    <p>IO</p>
+    <p>프로젝트 한계</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
             {#if $Device["isMobile"]}
-            - IO 제어용 모듈<br/>
-            - PCB를 통해 직접 만든 제품을 사용<br/>
-            - 센서, 스위치 등 각 Input과 Output의<br/>
-            &nbsp;&nbsp;상태를 PC에게 전달
+            - 어느정도 만들고 난 후 보고드렸더니 갑자기<br/>
+            &nbsp;&nbsp;프로젝트가 폭파됐다고 함<br/>
+            - 띠용...
             {:else}
-            - IO 제어용 모듈<br/>
-            - PCB를 통해 직접 만든 제품을 사용<br/>
-            - 센서, 스위치 등 각 Input과 Output의 상태를 PC에게 전달
+            - 어느정도 만들고 난 후 보고드렸더니 갑자기 프로젝트가 폭파됐다고 함<br/>
+            - 띠용...
             {/if}
         </p>
     </div>

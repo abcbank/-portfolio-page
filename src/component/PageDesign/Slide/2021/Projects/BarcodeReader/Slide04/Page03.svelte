@@ -11,22 +11,29 @@
 </script>
 
 <DefaultPage color={color} fontSize={subhead}>
-    <p>Camera</p>
+    <p>IO</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
             {#if $Device["isMobile"]}
-            - 이미지를 가져올 카메라<br/>
-            - 사내에 있던 바슬러 카메라를 사용<br/>
-            - PC측에서 이미지를 요청할 경우, GIGE를<br/>
-            &nbsp;&nbsp;통해 PC에 이미지를 전달<br/>
-            - 사용 모델: acA2440-20gm<br/>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            (Basler ace)
+            - PC와 시리얼로 통신하며 I/O를 제어<br/>
+            - Input<br/>
+            &nbsp;&nbsp;- Start Switch: 시작 스위치<br/>
+            &nbsp;&nbsp;- Box Sensor: 박스 존재 여부 감지 센서<br/>
+            &nbsp;&nbsp;- Hand Sensor: 장비 내부의 손 감지 센서
+            - Output<br/>
+            &nbsp;&nbsp;- Cylinder 1: 박스 이동 실린더<br/>
+            &nbsp;&nbsp;- Cylinder 2: 카메라 이동 실린더<br/>
+            - PCB를 직접 떠서 사용
             {:else}
-            - 이미지를 가져올 카메라<br/>
-            - 사내에 있던 바슬러 카메라를 사용<br/>
-            - PC측에서 이미지를 요청할 경우, GIGE를 통해 PC에 이미지를 전달<br/>
-            - 사용 모델: acA2440-20gm(Basler ace)
+            - PC와 시리얼로 통신하며 I/O를 제어<br/>
+            - Input<br/>
+            &nbsp;&nbsp;- Start Switch: 시작 스위치<br/>
+            &nbsp;&nbsp;- Box Sensor: 박스 존재 여부 감지 센서<br/>
+            &nbsp;&nbsp;- Hand Sensor: 장비 내부의 손 감지 센서
+            - Output<br/>
+            &nbsp;&nbsp;- Cylinder 1: 박스 이동 실린더<br/>
+            &nbsp;&nbsp;- Cylinder 2: 카메라 이동 실린더<br/>
+            - PCB를 직접 떠서 사용
             {/if}
         </p>
     </div>
