@@ -23,7 +23,7 @@
     let timer;
 
     const MousePowerOffet = $Device["isMobile"] ? 10 : 5
-    const scaleOffset = $Device["isMobile"] ? 1 : 3;
+    const scaleOffset = $Device["isMobile"] ? 3 : 2;
         
     function handleMouseMove({clientX, clientY}){
       if(!$Device["isMobile"]){
