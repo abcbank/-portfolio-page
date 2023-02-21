@@ -37,7 +37,7 @@
 <DefaultPage color={color} fontSize={subhead}>
     <div style="font-size:{context}rem;">
     {#if loaded}
-    <img in:fade={{ duration:300,}} {src} width="auto" height="80%" alt="piano_front_2" />
+    <img in:fade={{ duration:300,}} {src} width="80%" height="auto" alt="piano_front_2" />
     {:else if failed}
     <img  width="30%" height="30%" src="https://icon-library.com/images/not-found-icon/not-found-icon-20.jpg" alt="Not Found" />
     {:else if loading}
