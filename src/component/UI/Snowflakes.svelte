@@ -77,9 +77,6 @@
             MouseTouchedTime : 1,
             EnableMouseForce : true
         }
-        if($Device["isMobile"])
-          temp.scale = temp.scale / 3;
-          console.log(temp.scale)
         temp.GravityForce[0] = WIND_FORCE * temp.scale;
         temp.GravityForce[1] = temp.speed * temp.scale;
       return temp;
@@ -94,7 +91,13 @@
     // in onMount we define the loop function and start our animationFrame loop.
     onMount(async () => {
       let frame, lastTime
-  
+      for(let i = 0; i < snowflakes.length; i++){
+        if($Device["isMobile"]){
+          snowflakes[i].scale = snowflakes[i].scale / 3;
+          snowflakes[i].GravityForce[0] = WIND_FORCE * snowflakes[i].scale;
+          snowflakes[i].GravityForce[1] = snowflakes[i].speed * snowflakes[i].scale;
+        }
+      }
       function loop(timestamp) {
         frame = requestAnimationFrame(loop)
   
