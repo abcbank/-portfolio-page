@@ -5,10 +5,10 @@
     import { fade } from "svelte/transition"
 
     export let color = "transparent";
-    export let fontSize = 2
+    export let head = 2;
+    export let subhead = 1.5;
+    export let context = 1;
 
-    const calcMainFontSize = () => !$Device["isMobile"] ? fontSize : fontSize;
-    const calcSubFontSize = () => !$Device["isMobile"] ? fontSize : fontSize/2;
 
     let Slide_01 = true;
     let Slide_02 = false;
@@ -56,12 +56,12 @@
     })
 </script>
 
-<DefaultPage color={color} fontSize={fontSize}>
+<DefaultPage color={color} fontSize={head}>
     {#if Slide_01}
         <p out:fade={{duration:200,}}>잘 하셨습니다!</p>
     {:else if Slide_02}
         <div class="Section" style="height:100%; width:100%;" in:fade={{delay:300, duration:200}}>
-            <div class="header" style="height:20%; font-size:{calcSubFontSize()}rem;">
+            <div class="header" style="height:20%; font-size:{context}rem;">
                 {#if $Device["isMobile"]}
                     회면의 오른쪽을 두번 터치해<br/>다음 페이지로 이동해보세요.
                 {:else}

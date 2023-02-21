@@ -7,16 +7,15 @@
     import { mdiCursorDefaultClick } from '@mdi/js';
 
     export let color = "transparent";
-    export let fontSize = 2
+    export let head = 2;
+    export let subhead = 1.5;
+    export let context = 1;
     
     let Slide_01 = true;
     let Slide_02 = false;
     let animationStart = false;
     let visibility = true;
     let t;
-
-    const calcMainFontSize = () => !$Device["isMobile"] ? fontSize : fontSize;
-    const calcSubFontSize = () => !$Device["isMobile"] ? fontSize : fontSize/2;
     
     function startSlideChangeTimer(){
         clearTimeout(t);
@@ -58,18 +57,18 @@
     })
 </script>
 
-<DefaultPage color={color} fontSize={fontSize}>
+<DefaultPage color={color} fontSize={head}>
     {#if Slide_01}
         <p out:fade={{duration:200,}}>Welcome to abcBank</p>
     {:else if Slide_02}
-        <div class="Section" style="height:100%; width:100%; font-size:{calcSubFontSize()}rem;" in:fade={{delay:300, duration:200}}>
+        <div class="Section" style="height:100%; width:100%; font-size:{context}rem;" in:fade={{delay:300, duration:200}}>
             <div class="header" style="height:20%;">
                 드래그를 통해 슬라이드를 이동해 보세요.
             </div>
-            <div class="howToMove" style="font-size:{calcSubFontSize()}rem; left: {-calcMainFontSize() / 2}rem;">
+            <div class="howToMove" style="font-size:{context}rem; left: {-head / 2}rem;">
                 {#if visibility}
                 <div class='animation' style="left: {!animationStart ? 75 : 25}%;"  in:fade={{duration:200}} out:fade={{duration:200}}>
-                    <Icon size={calcMainFontSize().toString() + "rem"} color={$Color["foreColor"][$season]} path={mdiCursorDefaultClick} />
+                    <Icon size={head.toString() + "rem"} color={$Color["foreColor"][$season]} path={mdiCursorDefaultClick} />
                 </div>
                 {/if}
             </div>

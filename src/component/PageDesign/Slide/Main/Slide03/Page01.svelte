@@ -8,16 +8,14 @@
 
 
     export let color = "transparent";
-    export let fontSize = 2
-
-    const calcMainFontSize = () => !$Device["isMobile"] ? fontSize : fontSize;
-    const calcSubFontSize = () => !$Device["isMobile"] ? fontSize : fontSize/2;
-
+    export let head = 2;
+    export let subhead = 1.5;
+    export let context = 1;
 </script>
 
-<DefaultPage color={color} fontSize={fontSize}>
+<DefaultPage color={color} fontSize={head}>
     <div class="context" style="color:{color};">
-        <div class="header" style="width:100%; height:100%; font-size:{calcSubFontSize()}rem;">
+        <div class="header" style="width:100%; height:100%; font-size:{context}rem;">
             {#if $Device["isMobile"]}
                 아래에서 현재 슬라이드와<br/>페이지를 확인할 수 있고,
             {:else}
