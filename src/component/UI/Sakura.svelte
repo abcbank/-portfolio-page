@@ -13,6 +13,7 @@
     const MAX_SIZE = 14
   
     const MS_BETWEEN_FRAMES = 1000 / TARGET_FPS
+    const scaleOffset = $Device["isMobile"] ? 2 : 1;
   
     const boundary = 100;
 
@@ -65,7 +66,7 @@
     // this function generates the random configuration with all necessary values
     function randomSnowflakeConfig(i) {
         var temp = {
-            scale: 1,
+            scale: (0.8 + Math.random() * (1 - 0.8)) / scaleOffset,
             height: MIN_SIZE + Math.random() * (MAX_SIZE - MIN_SIZE),
             width: 0,
             borderRadius: [0,0],
@@ -177,7 +178,7 @@
       <div
         class="sakuraflake"
         style={`opacity: ${flake.opacity}; height: ${flake.height}; width: ${flake.width}; border-radius: ${flake.borderRadius[0]}px ${flake.borderRadius[1]}px;
-        transform: scale(${flake.scale}}) rotate(${flake.rotation}deg); left: ${flake.x}%; top: calc(${flake.y}% - ${flake.scale}rem)`}>
+        transform: scale(${flake.scale}) rotate(${flake.rotation}deg); left: ${flake.x}%; top: calc(${flake.y}% - ${flake.scale}rem)`}>
       </div>
     {/each}
   </div>
