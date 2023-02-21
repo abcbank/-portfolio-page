@@ -65,6 +65,7 @@
     // this function generates the random configuration with all necessary values
     function randomSnowflakeConfig(i) {
         var temp = {
+            scale: 1,
             height: MIN_SIZE + Math.random() * (MAX_SIZE - MIN_SIZE),
             width: 0,
             borderRadius: [0,0],
@@ -78,6 +79,8 @@
             MouseTouchedTime : 1,
             EnableMouseForce : true
         }
+        if($Device["isMobile"])
+          temp.scale /= 3;
         temp.GravityForce[0] = WIND_FORCE;
         temp.GravityForce[1] = temp.speed;
         temp.width = temp.height - Math.floor(Math.random() * temp.height / 3)
@@ -174,7 +177,7 @@
       <div
         class="sakuraflake"
         style={`opacity: ${flake.opacity}; height: ${flake.height}; width: ${flake.width}; border-radius: ${flake.borderRadius[0]}px ${flake.borderRadius[1]}px;
-        transform: scale(1) rotate(${flake.rotation}deg); left: ${flake.x}%; top: calc(${flake.y}% - 1rem)`}>
+        transform: scale(${flake.scale}}) rotate(${flake.rotation}deg); left: ${flake.x}%; top: calc(${flake.y}% - ${flake.scale}rem)`}>
       </div>
     {/each}
   </div>
