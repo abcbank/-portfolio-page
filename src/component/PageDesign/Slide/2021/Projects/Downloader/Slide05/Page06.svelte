@@ -13,37 +13,13 @@
 	let loaded = false;
 	let failed = false;
 	let loading = false;
-    let src = "http://drive.google.com/uc?export=view&id=1a6fIPrFu7kSj36pkEouYFbF-v0KZdp-n";
+    let src = "";
 
-    onMount(() => {
-			img = new Image();
-			img.src = src;
-			loading = true;
-
-			img.onload = () => {
-                clearTimeout(t);
-                loading = false;
-                t = setTimeout(() => {
-					loaded = true;
-                }, 350)
-			};
-			img.onerror = () => {
-					loading = false;
-                t = setTimeout(() => {
-					failed = true;
-                }, 350)
-			};
-    })
 </script>
 <DefaultPage color={color} fontSize={subhead}>
     <div style="font-size:{context}rem;">
-    {#if loaded}
-    <img in:fade={{ duration:300,}} {src} width="auto" height="80%" alt="downloader_total" />
-    {:else if failed}
-    <img  width="100%" height="30%" src="https://icon-library.com/images/not-found-icon/not-found-icon-20.jpg" alt="Not Found" />
-    {:else if loading}
-    <p out:fade={{duration:300,}}>Loading Image...</p>
-    {/if}
+        <iframe width="80%" height="80%" src="https://drive.google.com/file/d/1JxPYzRioZpXcnBj_IlXmPO0eU1L53yLn/preview" title="run_1"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
 </DefaultPage>
 
@@ -56,5 +32,8 @@
 		justify-content: center;
 		display: flex;
 		text-align: center;
+    }
+    iframe{
+
     }
 </style>

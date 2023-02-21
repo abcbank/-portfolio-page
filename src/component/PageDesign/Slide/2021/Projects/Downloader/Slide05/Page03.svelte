@@ -40,7 +40,7 @@
     {#if loaded}
     <img in:fade={{ duration:300,}} {src} width="auto" height="80%" alt="downloader_inside" />
     {:else if failed}
-    <img  width="100%" height="30%" src="https://icon-library.com/images/not-found-icon/not-found-icon-20.jpg" alt="Not Found" />
+    <img  width="30%" height="30%" src="https://icon-library.com/images/not-found-icon/not-found-icon-20.jpg" alt="Not Found" />
     {:else if loading}
     <p out:fade={{duration:300,}}>Loading Image...</p>
     {/if}
