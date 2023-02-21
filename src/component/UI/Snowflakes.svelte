@@ -79,6 +79,7 @@
         }
         if($Device["isMobile"])
           temp.scale = temp.scale / 3;
+          console.log(temp.scale)
         temp.GravityForce[0] = WIND_FORCE * temp.scale;
         temp.GravityForce[1] = temp.speed * temp.scale;
       return temp;
