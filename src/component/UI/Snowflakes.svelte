@@ -78,7 +78,7 @@
             EnableMouseForce : true
         }
         if($Device["isMobile"])
-          temp.scale /= 3;
+          temp.scale = temp.scale / 3;
         temp.GravityForce[0] = WIND_FORCE * temp.scale;
         temp.GravityForce[1] = temp.speed * temp.scale;
       return temp;
