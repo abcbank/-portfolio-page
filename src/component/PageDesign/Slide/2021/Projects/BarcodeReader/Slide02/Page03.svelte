@@ -12,7 +12,7 @@
     <p>수행 직무</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
-            - 제품을 검사하기 위한 C# 기반 프로그램 제작
+            - 바코드 탐색을 위핸 C# 제어 프로그램 제작
         </p>
     </div>
 </DefaultPage>
