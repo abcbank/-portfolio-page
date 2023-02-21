@@ -18,7 +18,16 @@
 </script>
 <DefaultPage color={color} fontSize={subhead}>
     <div style="font-size:{context}rem;">
-        <iframe width="80%" height="80%" src="https://drive.google.com/file/d/1JxPYzRioZpXcnBj_IlXmPO0eU1L53yLn/preview" title="run_1"></iframe>
+        {#if $Device["isMobile"]}
+        <p>
+            영상 재생은 데스크탑에서만 지원됩니다.<br/>
+            확인하시기 위해선 데스크탑으로 접속해주세요.
+        </p>
+        {:else}
+        <iframe width="80%" height="80%" src="https://drive.google.com/file/d/1JxPYzRioZpXcnBj_IlXmPO0eU1L53yLn/preview"
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
+        title="run_1"></iframe>
+        {/if}
     </div>
 </DefaultPage>
 
