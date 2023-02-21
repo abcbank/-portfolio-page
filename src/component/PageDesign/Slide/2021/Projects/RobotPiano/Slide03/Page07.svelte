@@ -9,7 +9,9 @@
     export let subhead = 1.5;
     export let context = 1;
 
+    
     let img;
+    let t
 	let loaded = false;
 	let failed = false;
 	let loading = false;
@@ -21,12 +23,17 @@
 			loading = true;
 
 			img.onload = () => {
-					loading = false;
+                clearTimeout(t);
+                loading = false;
+                t = setTimeout(() => {
 					loaded = true;
+                }, 350)
 			};
 			img.onerror = () => {
 					loading = false;
+                t = setTimeout(() => {
 					failed = true;
+                }, 350)
 			};
     })
 </script>
@@ -44,3 +51,14 @@
         {/if}
     </div>
 </DefaultPage>
+<style>
+    div{
+        height:100%;
+        width:100%; 
+		flex: 1 0 auto;
+	    align-items: center;
+		justify-content: center;
+		display: flex;
+		text-align: center;
+    }
+</style>

@@ -9,6 +9,7 @@
     export let subhead = 1.5;
     export let context = 1;
     let img;
+    let t
 	let loaded = false;
 	let failed = false;
 	let loading = false;
@@ -20,21 +21,26 @@
 			loading = true;
 
 			img.onload = () => {
-					loading = false;
+                clearTimeout(t);
+                loading = false;
+                t = setTimeout(() => {
 					loaded = true;
+                }, 350)
 			};
 			img.onerror = () => {
 					loading = false;
+                t = setTimeout(() => {
 					failed = true;
+                }, 350)
 			};
     })
 </script>
 <DefaultPage color={color} fontSize={subhead}>
     <div style="font-size:{context}rem;">
     {#if loaded}
-    <img in:fade={{delay:300, duration:300,}} {src} width="auto" height="80%" alt="downloader_total" />
+    <img in:fade={{ duration:300,}} {src} width="auto" height="80%" alt="downloader_total" />
     {:else if failed}
-        <img  width="100%" height="30%" src="https://icon-library.com/images/not-found-icon/not-found-icon-20.jpg" alt="Not Found" />
+    <img  width="100%" height="30%" src="https://icon-library.com/images/not-found-icon/not-found-icon-20.jpg" alt="Not Found" />
     {:else if loading}
     <p out:fade={{duration:300,}}>Loading Image...</p>
     {/if}
@@ -45,7 +51,10 @@
     div{
         height:100%;
         width:100%; 
+		flex: 1 0 auto;
 	    align-items: center;
 		justify-content: center;
+		display: flex;
+		text-align: center;
     }
 </style>

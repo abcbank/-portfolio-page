@@ -30,3 +30,14 @@
         </p>
     </div>
 </DefaultPage>
+<style>
+    div{
+        height:100%;
+        width:100%; 
+		flex: 1 0 auto;
+	    align-items: center;
+		justify-content: center;
+		display: flex;
+		text-align: center;
+    }
+</style>

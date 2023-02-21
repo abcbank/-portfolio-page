@@ -153,10 +153,10 @@
 	}
 
 	.slide {
-		flex: 1 0 auto;
 		width: 100%;
 		height: 100%;
 		background: red;
+		flex: 1 0 auto;
 	    align-items: center;
 		justify-content: center;
 		display: flex;
