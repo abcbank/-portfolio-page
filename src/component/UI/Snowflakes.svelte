@@ -23,6 +23,7 @@
     let timer;
 
     const MousePowerOffet = $Device["isMobile"] ? 10 : 5
+    const scaleOffset = $Device["isMobile"] ? 1 : 3;
         
     function handleMouseMove({clientX, clientY}){
       if(!$Device["isMobile"]){
@@ -65,7 +66,7 @@
     // this function generates the random configuration with all necessary values
     function randomSnowflakeConfig(i) {
         var temp = {
-            scale: SNOWFLAKE_MIN_SCALE + Math.random() * (1 - SNOWFLAKE_MIN_SCALE),
+            scale: (SNOWFLAKE_MIN_SCALE + Math.random() * (1 - SNOWFLAKE_MIN_SCALE)) / scaleOffset,
             x: -20 + Math.random() * 120,
             y: -100 + Math.random() * 200,
             rotation: Math.floor(Math.random() * 360),
@@ -91,13 +92,7 @@
     // in onMount we define the loop function and start our animationFrame loop.
     onMount(async () => {
       let frame, lastTime
-      for(let i = 0; i < snowflakes.length; i++){
-        if($Device["isMobile"]){
-          snowflakes[i].scale = snowflakes[i].scale / 3;
-          snowflakes[i].GravityForce[0] = WIND_FORCE * snowflakes[i].scale;
-          snowflakes[i].GravityForce[1] = snowflakes[i].speed * snowflakes[i].scale;
-        }
-      }
+
       function loop(timestamp) {
         frame = requestAnimationFrame(loop)
   
