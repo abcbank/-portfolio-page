@@ -1,5 +1,6 @@
 <script>
-    import DefaultPage from '../../../../defaultPage.svelte'
+    import { Device } from "../../../../../global"
+    import DefaultPage from '../../defaultPage.svelte'
 
     export let color = "transparent";
     export let head = 2;

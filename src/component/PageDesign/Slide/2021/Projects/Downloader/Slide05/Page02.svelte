@@ -30,7 +30,7 @@
     })
 </script>
 <DefaultPage color={color} fontSize={subhead}>
-    <div style="height:100%; width:100%; font-size:{context}rem;">
+    <div style="font-size:{context}rem;">
     {#if loaded}
     <img in:fade={{delay:300, duration:300,}} {src} width="auto" height="80%" alt="downloader_total" />
     {:else if failed}
@@ -43,6 +43,8 @@
 
 <style>
     div{
+        height:100%;
+        width:100%; 
 	    align-items: center;
 		justify-content: center;
     }

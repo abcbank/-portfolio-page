@@ -2,7 +2,7 @@
     import Page01 from "./Slide07/Page01.svelte";
     import Page02 from "./Slide07/Page02.svelte";
 
-    import DefaultSlide from "../../../defaultSlide.svelte";
+    import DefaultSlide from "../defaultSlide.svelte";
     export let color;
     export let curPage;
     export let maxPage;
