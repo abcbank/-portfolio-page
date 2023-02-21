@@ -1,16 +1,29 @@
 <script>
-    import { Device } from "../../../../../global"
-    import DefaultPage from '../../defaultPage.svelte'
-    import { onMount } from 'svelte'
-    import { fade } from "svelte/transition"
+    import { Device } from "../../../../../../../global"
+    import DefaultPage from '../../../../defaultPage.svelte'
 
     export let color = "transparent";
-    export let fontSize = 2
-
-    const calcMainFontSize = () => !$Device["isMobile"] ? fontSize : fontSize;
-    const calcSubFontSize = () => !$Device["isMobile"] ? fontSize : fontSize/2;
+    export let head = 2;
+    export let subhead = 1.5;
+    export let context = 1;
 </script>
 
-<DefaultPage color={color} fontSize={fontSize}>
-    <p style="font-size:{calcSubFontSize()}rem;">이 홈페이지는 이렇게 슬라이드와 페이지,<br/>두가지 방식으로 구성했답니다.</p>
+<DefaultPage color={color} fontSize={subhead}>
+    <p>프로젝트 목적</p>
+    <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
+        <p>
+            {#if $Device["isMobile"]}
+            - PCB에 펌웨어를 넣는 작업을 자동화<br/>
+            - PCB에 대해 지정된 검사를 진행해 PCB의<br/>
+            &nbsp;&nbsp;불량 여부를 사전 파악
+            {:else}
+            - PCB에 펌웨어를 넣는 작업을 자동화<br/>
+            - PCB에 대해 지정된 검사를 진행해 PCB의 불량 여부를 사전 파악
+            {/if}
+        </p>
+    </div>
 </DefaultPage>
+
+<style>
+    
+</style>
