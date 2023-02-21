@@ -9,16 +9,10 @@
 </script>
 
 <DefaultPage color={color} fontSize={subhead}>
-    <p>프로젝트 목적</p>
+    <p>고속도로 연결 상태 정의 - 예외</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
-            - 고속도로 안내 네비게이션 제작
-            - python의 flask 서버 사용해 로컬 서버로 실행
-            - C언어를 이용한 dijkstra 알고리즘으로 최단 경로 계산
+            - 일부 예외 고속도로의 경우, 시작점을 지정
         </p>
     </div>
 </DefaultPage>
-
-<style>
-    
-</style>

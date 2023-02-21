@@ -9,14 +9,15 @@
 </script>
 
 <DefaultPage color={color} fontSize={subhead}>
-    <p>수행 직무</p>
+    <p>그래프 생성</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
-            - 제품을 검사하기 위한 C# 기반 프로그램 제작
+            {#if $Device["isMobile"]}
+            - JC를 노드, JC 사이의 연결 상태를 간선이라<br/>
+            &nbsp;&nbsp;가정 후 그래프 생성
+            {:else}
+            - JC를 노드, JC 사이의 연결 상태를 간선이라 가정 후 그래프 생성
+            {/if}
         </p>
     </div>
 </DefaultPage>
-
-<style>
-    
-</style>

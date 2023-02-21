@@ -9,20 +9,13 @@
 </script>
 
 <DefaultPage color={color} fontSize={subhead}>
-    <p>비전을 통한 검사</p>
+    <p>JC 정보 수집</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
-            {#if $Device["isMobile"]}
-            - 동일한 제품에 대해 비전을 통한 검사 수행<br/>
-            - 각 제품은 컨베이어를 통해 이동하며, 카메라는<br/>
-            &nbsp;&nbsp;상단에서 이동하는 제품들을 촬영<br/>
-            - PC는 촬영된 이미지를 알고리즘을 통해 정상적인<br/>
-            &nbsp;&nbsp;제품인지 판단
-            {:else}
-            - 동일한 제품에 대해 비전을 통한 검사 수행<br/>
-            - 각 제품은 컨베이어를 통해 이동하며, 카메라는 상단에서 이동하는 제품들을 촬영<br/>
-            - PC는 촬영된 이미지를 알고리즘을 통해 정상적인 제품인지 판단
-            {/if}
+            - 의뢰인의 강력한 주장에 따라 웹크롤링 사용<br/>
+            &nbsp;&nbsp;(필자는 api라면 모를까 웹크롤링을 별로 안좋아함)<br/>
+            - 위키피디아에서 각 JC의 이름과<br/>
+            &nbsp;&nbsp;연결된 고속도로 명을 크롤링
         </p>
     </div>
 </DefaultPage>
