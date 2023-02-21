@@ -13,8 +13,7 @@
 	let loaded = false;
 	let failed = false;
 	let loading = false;
-    let src = "http://drive.google.com/uc?export=view&id=1-4OK1XZ_f19rs7ZiQlVHFHnykJagTSUZ";
-
+    let src = "http://drive.google.com/uc?export=view&id=1-GEJ_J0sG4IHXrBIxwqGO7LK7QQLTbOs";
     onMount(() => {
 			img = new Image();
 			img.src = src;
@@ -38,7 +37,7 @@
 <DefaultPage color={color} fontSize={subhead}>
     <div style="font-size:{context}rem;">
     {#if loaded}
-    <img in:fade={{ duration:300,}} {src} width="auto" height="80%" alt="piano_front_1" />
+    <img in:fade={{ duration:300,}} {src} width="80%" height="auto" alt="piano_handside" />
     {:else if failed}
     <img  width="30%" height="30%" src="https://icon-library.com/images/not-found-icon/not-found-icon-20.jpg" alt="Not Found" />
     {:else if loading}

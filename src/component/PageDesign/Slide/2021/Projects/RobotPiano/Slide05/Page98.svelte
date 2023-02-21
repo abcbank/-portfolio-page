@@ -24,7 +24,7 @@
             확인하시기 위해선 데스크탑으로 접속해주세요.
         </p>
         {:else}
-        <iframe width="80%" height="80%" src="https://drive.google.com/file/d/1e3SmJAOYRvqMG4wlBd5KtGB_vw_iUXoX/preview"
+        <iframe width="80%" height="80%" src="https://drive.google.com/file/d/1JxPYzRioZpXcnBj_IlXmPO0eU1L53yLn/preview"
         frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
         title="run_1"></iframe>
         {/if}

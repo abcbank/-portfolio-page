@@ -17,6 +17,11 @@
     import Page16 from "./Slide03/Page16.svelte";
     import Page17 from "./Slide03/Page17.svelte";
     import Page18 from "./Slide03/Page18.svelte";
+    import Page19 from "./Slide03/Page19.svelte";
+    import Page20 from "./Slide03/Page20.svelte";
+    import Page21 from "./Slide03/Page21.svelte";
+    import Page22 from "./Slide03/Page22.svelte";
+
     import DefaultSlide from "../../../defaultSlide.svelte";
     export let color;
     export let curPage;
@@ -40,7 +45,11 @@
         { index: 15, component:Page15 },
         { index: 16, component:Page16 },
         { index: 17, component:Page17 },
-        { index: 18, component:Page18 }
+        { index: 18, component:Page18 },
+        { index: 19, component:Page19 },
+        { index: 20, component:Page20 },
+        { index: 21, component:Page21 },
+        { index: 22, component:Page22 }
     ]
 </script>
 

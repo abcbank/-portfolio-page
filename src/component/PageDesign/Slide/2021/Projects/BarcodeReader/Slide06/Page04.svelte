@@ -9,14 +9,16 @@
 </script>
 
 <DefaultPage color={color} fontSize={subhead}>
-    <p>Image Acquire</p>
+    <p>스트로브 기능 구현</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
             {#if $Device["isMobile"]}
-            - 이동하는 객체를 사진 촬영할 경우<br/>
-            &nbsp;&nbsp;이미지의 번짐 현상이 발생<br/>
+            - 스트로브 기능이 필요한 일부 상황이<br/>
+            &nbsp;&nbsp;있었으나, 스트로브 기능을 지원하지 않는<br/>
+            &nbsp;&nbsp;광원 컨트롤러를 사용
             {:else}
-            - 이동하는 객체를 사진 촬영할 경우 이미지의 번짐 현상이 발생<br/>
+            - 스트로브 기능이 필요한 일부 상황이 있었으나, 스트로브 기능을 지원하지<br/>
+            &nbsp;&nbsp;않는 광원 컨트롤러를 사용
             {/if}
         </p>
     </div>
