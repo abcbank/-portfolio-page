@@ -18,8 +18,7 @@
 </script>
 <DefaultPage color={color} fontSize={subhead}>
     <div style="font-size:{context}rem;">
-        <iframe width="80%" height="80%" src="https://drive.google.com/file/d/1JxPYzRioZpXcnBj_IlXmPO0eU1L53yLn/preview" title="run_1"
-        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="80%" height="80%" src="https://drive.google.com/file/d/1JxPYzRioZpXcnBj_IlXmPO0eU1L53yLn/preview" title="run_1"></iframe>
     </div>
 </DefaultPage>
 
