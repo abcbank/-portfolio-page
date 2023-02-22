@@ -13,9 +13,9 @@
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
             - 의뢰인의 강력한 주장에 따라 웹크롤링 사용<br/>
-            &nbsp;&nbsp;(필자는 api라면 모를까 웹크롤링을 별로 안좋아함)<br/>
-            - 위키피디아에서 각 JC의 이름과<br/>
-            &nbsp;&nbsp;연결된 고속도로 명을 크롤링
+            &nbsp;&nbsp;(필자는 웹크롤링을 별로 안좋아함)<br/>
+            - 위키피디아에서 각 JC의 이름과 연결된<br/>
+            &nbsp;&nbsp;고속도로 명을 크롤링
         </p>
     </div>
 </DefaultPage>
