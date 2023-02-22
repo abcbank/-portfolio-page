@@ -12,7 +12,7 @@
     <p>비전을 통한 검사</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
-            {#if $Device["isMobile"]}
+            {#if $Device["isSmallScreen"]}
             - 동일한 제품에 대해 비전을 통한 검사 수행<br/>
             - 각 제품은 컨베이어를 통해 이동하며, 카메라는<br/>
             &nbsp;&nbsp;상단에서 이동하는 제품들을 촬영<br/>

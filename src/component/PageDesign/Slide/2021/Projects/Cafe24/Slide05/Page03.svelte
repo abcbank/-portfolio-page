@@ -12,7 +12,7 @@
     <p>프로젝트 한계</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
-            {#if $Device["isMobile"]}
+            {#if $Device["isSmallScreen"]}
             - 아무것도 모르는 상태에서 들이박으니<br/>
             &nbsp;&nbsp;매우매우 홈페이지 html이 더러워짐....
             {:else}

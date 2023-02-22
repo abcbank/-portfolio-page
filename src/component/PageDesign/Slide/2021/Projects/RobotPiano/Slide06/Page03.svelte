@@ -12,7 +12,7 @@
     <p>Solution</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
-            {#if $Device["isMobile"]}
+            {#if $Device["isSmallSreen"]}
             - 하드웨어의 한계에 의한 결점이므로 해당 경우를<br/>
             &nbsp;&nbsp;줄이는게 최선이라 판단.<br/>
             - bpm이 빠른 곡은 아예 연주 대상에서 제외<br/>

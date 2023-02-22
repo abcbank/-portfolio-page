@@ -12,7 +12,7 @@
     <p>프로젝트를 마치며</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
-            {#if $Device["isMobile"]}
+            {#if $Device["isSmallSreen"]}
             - 사실상 2021년의 가장 메인 프로젝트<br/>
             - 사실상 로봇을 처음으로 제어 시도<br/>
             - 결과물도 나쁘지 않게 나왔지만, 백화점 측에서<br/>

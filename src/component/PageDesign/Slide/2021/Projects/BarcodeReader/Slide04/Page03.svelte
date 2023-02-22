@@ -13,7 +13,7 @@
     <p>IO</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
-            {#if $Device["isMobile"]}
+            {#if $Device["isSmallScreen"]}
             - PC와 시리얼로 통신하며 I/O를 제어<br/>
             - Input<br/>
             &nbsp;&nbsp;- Start Switch: 시작 스위치<br/>

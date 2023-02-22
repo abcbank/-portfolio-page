@@ -11,7 +11,7 @@
     <p>바코드 탐색</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
-            {#if $Device["isMobile"]}
+            {#if $Device["isSmallScreen"]}
             - 동일한 바코드가 서로 다른 사진에서 여러번<br/>
             &nbsp;&nbsp;출력될 가능성이 있음<br/>
             - 따라서 동일한 바코드를 배제하는 알고리즘이 필요<br/>

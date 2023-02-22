@@ -14,7 +14,7 @@
     <p>IO</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
-            {#if $Device["isMobile"]}
+            {#if $Device["isSmallSreen"]}
             - PCB를 직접 떠서 사용<br/>
             - 실린더와 릴레이 등, 물리적인<br/>
             &nbsp;&nbsp;움직임을제어(Output)<br/>

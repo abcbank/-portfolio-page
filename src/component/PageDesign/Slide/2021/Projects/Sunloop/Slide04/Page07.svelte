@@ -14,7 +14,7 @@
     <p>PC</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
-            {#if $Device["isMobile"]}
+            {#if $Device["isSmallSreen"]}
             - 주요 제어기 역할<br/>
             - 비전 검사는 Vision Pro를 사용해 진행<br/>
             - Convyer Vision과 동일한 모델 사용<br/>

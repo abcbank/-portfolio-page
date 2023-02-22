@@ -12,7 +12,7 @@
     <p>프로젝트 목적</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
-            {#if $Device["isMobile"]}
+            {#if $Device["isSmallScreen"]}
             - 롯데 백화점과 얘기가 나왔던 프로젝트<br/>
             - 신규 백화점을 오픈하며 4차 산업 혁명을<br/>
             &nbsp;&nbsp;주제로 획기적인 쇼가 필요하단 요구에<br/>

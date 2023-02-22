@@ -14,7 +14,7 @@
     <p>Lens</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
-            {#if $Device["isMobile"]}
+            {#if $Device["isSmallSreen"]}
             - 카메라에 부착할 렌즈<br/>
             - 사내에 있던 렌즈를 사용<br/>
             - Convyer Vision과 동일한 모델 사용<br/>

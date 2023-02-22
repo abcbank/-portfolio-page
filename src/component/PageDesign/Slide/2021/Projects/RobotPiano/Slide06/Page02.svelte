@@ -12,7 +12,7 @@
     <p>실린더 반응 속도</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
-            {#if $Device["isMobile"]}
+            {#if $Device["isSmallSreen"]}
             - 실린더는 기본적으로 기압이 차야 반응하는<br/>
             &nbsp;&nbsp;구조<br/>
             - 따라서 IO의 상태를 변경하자마자 실린더가<br/>

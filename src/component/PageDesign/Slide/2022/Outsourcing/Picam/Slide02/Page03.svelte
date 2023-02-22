@@ -12,7 +12,7 @@
     <p>비전에 대한 이해</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
-            {#if $Device["isMobile"]}
+            {#if $Device["isSmallSreen"]}
             - 카메라 등으로 촬영된 사진을 가공해 원하는<br/>
             &nbsp;&nbsp;데이터를 뽑아내는 작업을 비전이라 함<br/>
             - 단, 렌즈에 의한 굴절과 이미지 센서의 미세한<br/>

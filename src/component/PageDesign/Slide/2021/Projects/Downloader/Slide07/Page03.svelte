@@ -12,7 +12,7 @@
     <p>프로젝트 한계</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
-            {#if $Device["isMobile"]}
+            {#if $Device["isSmallScreen"]}
             - 첫 장비다보니 여러모로 부족한 점이 많음<br/>
             - 설계상 구동부와 컨트롤 박스를 이상하게 분리<br/>
             - 터치 스크린 해상도 등을 고려하면 이제와선<br/>

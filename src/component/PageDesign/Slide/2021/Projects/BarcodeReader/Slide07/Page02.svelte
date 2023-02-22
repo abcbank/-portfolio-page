@@ -11,7 +11,7 @@
     <p>프로젝트를 마치며</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
-            {#if $Device["isMobile"]}
+            {#if $Device["isSmallScreen"]}
             - 프로젝트 초기부터 물류 자동화는 예외 처리가 곤란해<br/>
             &nbsp;&nbsp;힘들겠거니 생각했었음
             - 전반적으로 내가 만드는 것과 대표님께서 얘기하는 것,<br/>

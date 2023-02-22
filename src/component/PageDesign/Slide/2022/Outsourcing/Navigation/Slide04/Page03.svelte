@@ -14,7 +14,7 @@
     <p>Flask</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
-            {#if $Device["isMobile"]}
+            {#if $Device["isSmallSreen"]}
             - HTML 호스팅 서버<br/>
             - 대학 과제 수준이므로 로컬 호스트 사용<br/>
             - JC의 선택 여부 등을 http 통신으로 받아 이에<br/>

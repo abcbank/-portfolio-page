@@ -12,7 +12,7 @@
     <p>펌웨어 업로드</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
-            {#if $Device["isMobile"]}
+            {#if $Device["isSmallSreen"]}
             - 원래는 Cheetah SPI SDK를 통해 업로드용<br/>
             &nbsp;&nbsp;라이브러리를 만들 생각이었음.<br/>
             - 다만, 업로드 후 정상적으로 동작하는지<br/>

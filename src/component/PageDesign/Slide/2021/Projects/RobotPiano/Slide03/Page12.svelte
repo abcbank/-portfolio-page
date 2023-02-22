@@ -11,7 +11,7 @@
     <p>곡의 연주</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
-            {#if $Device["isMobile"]}
+            {#if $Device["isSmallScreen"]}
             - 총 두 가지 방식으로 연주 진행<br/>
             &nbsp;&nbsp;1. Normal 방식<br/>
             &nbsp;&nbsp;2. Snap 방식<br/>

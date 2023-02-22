@@ -14,7 +14,7 @@
     <p>IO</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
-            {#if $Device["isMobile"]}
+            {#if $Device["isSmallScreen"]}
             - IO 제어용 모듈<br/>
             - PCB를 통해 직접 만든 제품을 사용<br/>
             - 센서, 스위치 등 각 Input과 Output의<br/>

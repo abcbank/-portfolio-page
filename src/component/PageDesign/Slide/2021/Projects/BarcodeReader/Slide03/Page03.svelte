@@ -11,7 +11,7 @@
     <p>바코드 탐색</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
-            {#if $Device["isMobile"]}
+            {#if $Device["isSmallScreen"]}
             - 바코드는 임의의 3차원 공간에 위치<br/>
             - 따라서 렌즈의 줌을 조절하며 3차원 공간을<br/>
             &nbsp;&nbsp;모두 탐색할 필요가 있음<br/>

@@ -11,7 +11,7 @@
     <p>곡의 분석 및 해석</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
-            {#if $Device["isMobile"]}
+            {#if $Device["isSmallScreen"]}
             - block을 통해 각 로봇팔의 부딛힘 여부 판단<br/>
             &nbsp;&nbsp;1. 각 블럭의 기준 위치(제일 낮은 음) 추출<br/>
             &nbsp;&nbsp;2. 10ms 단위로 멜로디를 시뮬레이팅하며, 두<br/>

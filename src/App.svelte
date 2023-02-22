@@ -176,7 +176,8 @@
 
 	$Device["agent"] = navigator.userAgent.toLowerCase();
 
-	onMount(() => {		
+	onMount(() => {
+		$Device["isSmallScreen"] = document.body.clientWidth > 720 ? false : true;
 		$Device["isMobile"] = false;
 		$LastPage["WindowResized"] = false;
 		$LastPage["Layer1"] = "Main";
@@ -200,6 +201,7 @@
     function windowResize(){
         drawComponent = false;
 		$LastPage["WindowResized"] = true;
+		$Device["isSmallScreen"] = document.body.clientWidth > 720 ? false : true;
         clearTimeout(t)
         t = setTimeout(() => {
             drawComponent = true;

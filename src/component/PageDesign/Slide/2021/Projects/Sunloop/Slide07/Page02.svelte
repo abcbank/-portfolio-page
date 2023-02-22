@@ -12,7 +12,7 @@
     <p>프로젝트를 마치며</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
-            {#if $Device["isMobile"]}
+            {#if $Device["isSmallSreen"]}
             - 개인적으론 Cognex Vision Pro를 제일<br/>
             &nbsp;&nbsp;많이 배웠던 프로젝트라 생각함<br/>
             - 여유 시간도 있었다보니, 이것저것 파라미터도<br/>

@@ -12,7 +12,7 @@
     <p>연음 처리</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
-            {#if $Device["isMobile"]}
+            {#if $Device["isSmallSreen"]}
             - 위의 알고리즘에서, 연음을 정상적으로 인식하지<br/>
             &nbsp;&nbsp;못하는 경우가 발생<br/>
             - 기존 알고리즘에선 쉼표를 직전 음이 끝나는<br/>

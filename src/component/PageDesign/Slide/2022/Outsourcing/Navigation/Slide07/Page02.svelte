@@ -12,7 +12,7 @@
     <p>프로젝트를 마치며</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
-            {#if $Device["isMobile"]}
+            {#if $Device["isSmallSreen"]}
             - 재미있어보여 하게된 프로젝트<br/>
             - 사실상 헐값에 과제 대행을 하긴 했으나, 만드는<br/>
             &nbsp;&nbsp;재미는 있었으니 만족함<br/>

@@ -12,7 +12,7 @@
     <p>건반 누름</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
-            {#if $Device["isMobile"]}
+            {#if $Device["isSmallScreen"]}
             - 누르기 자체는 난이도가 높지 않음<br/>
             - 각 건반의 위치를 로봇의 좌표로 학습<br/>
             - 특정 건반을 눌러야 할 경우, 로봇 팔의<br/>

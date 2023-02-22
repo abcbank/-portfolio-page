@@ -11,7 +11,7 @@
     <p>프로젝트 목적</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
-            {#if $Device["isMobile"]}
+            {#if $Device["isSmallScreen"]}
             - 물류 업체에서 전달받은 프로젝트<br/>
             - 지정된 범위 내에서 바코드를 관측<br/>
             - 관측된 바코드를 사진 형태로 저장<br/>

@@ -12,7 +12,7 @@
     <p>Solution</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
-            {#if $Device["isMobile"]}
+            {#if $Device["isSmallSreen"]}
             - 기성품을 수정하는 것은 불가능하다고 판단<br/>
             - 따라서 전류계와 통신하는 알고리즘을 수정<br/>
             - 전류값을 요청하고 일정 시간동안 응답이<br/>

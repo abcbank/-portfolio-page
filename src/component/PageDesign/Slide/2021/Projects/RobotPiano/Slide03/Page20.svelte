@@ -11,7 +11,7 @@
     <p>영상 / 음원 재생 기능</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
-            {#if $Device["isMobile"]}
+            {#if $Device["isSmallSreen"]}
             - bpm 등 다양한 제약 사항으로 인해 로봇<br/>
             &nbsp;&nbsp;피아노의 단독 연주는 힘들다 판단<br/>
             - 따라서 배경음악 / 영상을 재생하고, 피아노가<br/>

@@ -11,7 +11,7 @@
     <p>곡선 바코드에 대한 처리</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
-            {#if $Device["isMobile"]}
+            {#if $Device["isSmallScreen"]}
             - 핸드 크림과 같이 바코드가 곡면에 위치한 경우,<br/>
             &nbsp;&nbsp;제대로 읽을 수 없는 문제 발생<br/>
             - 특히, 곡면의 물체는 박스의 이동 과정에서 이동할<br/>

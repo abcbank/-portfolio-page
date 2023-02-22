@@ -12,7 +12,7 @@
     <p>Solution</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
-            {#if $Device["isMobile"]}
+            {#if $Device["isSmallSreen"]}
             - 실제 불량과 번짐으로 인한 오차를 구분할<br/>
             &nbsp;&nbsp;정도만 해결하면 된다고 판단<br/>
             - 노출 시간을 조정해 번짐 현상을 최소화<br/>

@@ -12,7 +12,7 @@
     <p>프로젝트를 마치며</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
-            {#if $Device["isMobile"]}
+            {#if $Device["isSmallScreen"]}
             - 첫 프로젝트이자, 가장 아쉬움이 많았던<br/>
             &nbsp;&nbsp;프로젝트라 생각함<br/>
             - 이후에도 항상 한번쯤 리뉴얼하고싶다,라는<br/>

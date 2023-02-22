@@ -12,7 +12,7 @@
     <p>프로젝트 목적</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
-            {#if $Device["isMobile"]}
+            {#if $Device["isSmallSreen"]}
             - 현대차의 선루프 제조 업체의 외주<br/>
             - 선루프의 플라스틱 프레임을 제작 및검사 장비를 제작 요청<br/>
             - 전체 장비 중 검사 및 카메라 제어 관련 프로세스 담당

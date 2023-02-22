@@ -12,7 +12,7 @@
     <p>프로젝트를 마치며</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
-            {#if $Device["isMobile"]}
+            {#if $Device["isSmallScreen"]}
             - 마크다운만 쓰던 내가 html을 처음으로<br/>
             &nbsp;&nbsp;다뤄본 프로젝트<br/>
             - 뷰, 리엑트, 스벨트 등의 존재를 알게<br/>

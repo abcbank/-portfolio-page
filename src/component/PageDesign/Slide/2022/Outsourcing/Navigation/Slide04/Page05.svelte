@@ -14,7 +14,7 @@
     <p>C dll</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
-            {#if $Device["isMobile"]}
+            {#if $Device["isSmallSreen"]}
             - 서버에서 참조하는 라이브러리 파일<br/>
             - 그래프 및 시작점과 끝점을 전달받고, 다익스트라<br/>
             &nbsp;&nbsp;알고리즘을 통해 최단 경로 및 거리를 찾아 리턴

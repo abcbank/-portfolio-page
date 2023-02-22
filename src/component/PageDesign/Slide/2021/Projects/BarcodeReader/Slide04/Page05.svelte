@@ -13,7 +13,7 @@
     <p>Keyence Camera</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
-            {#if $Device["isMobile"]}
+            {#if $Device["isSmallScreen"]}
             - 실질적으로 바코드를 읽고, 탐색하는<br/>
             &nbsp;&nbsp;디바이스<br/>
             - PC와 이더넷을 통해 통신하며, 커멘드<br/>

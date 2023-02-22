@@ -12,7 +12,7 @@
     <p>데이터 가공</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
-            {#if $Device["isMobile"]}
+            {#if $Device["isSmallSreen"]}
             - 크롤링한 데이터를 고속도로에 대한 데이터로<br/>
             &nbsp;&nbsp;가공<br/>
             - 즉, 어떤 고속도로에 어떤 JC들이 속해있는지 <br/>

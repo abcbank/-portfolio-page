@@ -14,7 +14,7 @@
     <p>main.py</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
-            {#if $Device["isMobile"]}
+            {#if $Device["isSmallSreen"]}
             - exit이 선택되기 전까지 무한루프를 돌며<br/>
             &nbsp;&nbsp;사용자에게 옵션 선택을 유도<br/>
             - 옵션이 선택됐을 경우, 각 옵션에 알맞은<br/>

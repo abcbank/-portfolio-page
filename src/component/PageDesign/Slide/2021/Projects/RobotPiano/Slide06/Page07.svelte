@@ -12,7 +12,7 @@
     <p>Solution</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
-            {#if $Device["isMobile"]}
+            {#if $Device["isSmallSreen"]}
             - 가장 좋은 방법은 더욱 좋은 IO카드를 사용하는<br/>
             &nbsp;&nbsp;것<br/>
             - 다만 비용 문제 등으로 인해 실질적으로 행하진<br/>

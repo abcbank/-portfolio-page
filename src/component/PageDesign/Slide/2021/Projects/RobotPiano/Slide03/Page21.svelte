@@ -11,7 +11,7 @@
     <p>플레이 리스트 기능</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
-            {#if $Device["isMobile"]}
+            {#if $Device["isSmallSreen"]}
             - 여러 곡을 꼬리 물며 재생하는 플레이 리스트<br/>
             &nbsp;&nbsp;기능 추가
             {:else}

@@ -11,7 +11,7 @@
     <p>곡의 분석 및 해석</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
-            {#if $Device["isMobile"]}
+            {#if $Device["isSmallScreen"]}
             - midi 음원에서 음과 쉼표의 시작 시간, 음의<br/>
             &nbsp;&nbsp;길이, 옥타브, 계이름 등 주요 데이터 추출<br/>
             - 추출된 데이터는 배열 형태로 메모리에 저장<br/>

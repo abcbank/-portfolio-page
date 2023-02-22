@@ -11,7 +11,7 @@
     <p>Snap 연주</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
-            {#if $Device["isMobile"]}
+            {#if $Device["isSmallSreen"]}
             - 총 두 개의 메인 쓰레드를 사용<br/>
             &nbsp;&nbsp;1. 높은음 연주 쓰레드<br/>
             &nbsp;&nbsp;2. 낮은음 연주 쓰레드<br/>

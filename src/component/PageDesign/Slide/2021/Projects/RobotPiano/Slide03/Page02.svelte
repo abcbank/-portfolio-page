@@ -12,7 +12,7 @@
     <p>로봇 핸드</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
-            {#if $Device["isMobile"]}
+            {#if $Device["isSmallScreen"]}
             - 핸드는 총 두가지 사항을 결정함<br/>
             &nbsp;&nbsp;1. 건반의 연주 방식<br/>
             &nbsp;&nbsp;2. 한 위치에서 연주할 수 있는 건반의 개수<br/>

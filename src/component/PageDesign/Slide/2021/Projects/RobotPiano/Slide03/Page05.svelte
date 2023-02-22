@@ -11,7 +11,7 @@
     <p>곡의 분석 및 해석</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
-            {#if $Device["isMobile"]}
+            {#if $Device["isSmallScreen"]}
             - 기본 알고리즘<br/>
             &nbsp;&nbsp;- 일정 길이 이상의 쉼표는 이동을 의미함<br/>
             &nbsp;&nbsp;- 하나의 위치에서 연주할 수 있는 건반은 제한됨<br/>

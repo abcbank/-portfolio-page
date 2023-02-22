@@ -12,7 +12,7 @@
     <p>Cafe24 배이스 HTML의 이해</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
-            {#if $Device["isMobile"]}
+            {#if $Device["isSmallScreen"]}
             - 특정 상황에서 제품의 이름 등의 스타일 지정을<br/>
             &nbsp;&nbsp;못하는 등 시스템에 대한 이해 또한 문제가 됐음.
             {:else}

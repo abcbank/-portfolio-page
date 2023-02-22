@@ -12,7 +12,7 @@
     <p>프로젝트 목적</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
-            {#if $Device["isMobile"]}
+            {#if $Device["isSmallScreen"]}
             - 사내 브랜드 홈페이지 중 일부 의도와 다르게<br/>
             &nbsp;&nbsp;완성된 사항 수정
             {:else}

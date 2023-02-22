@@ -5,7 +5,7 @@
     export let Pages;
     export let curPage;
     export let maxPage;
-    let head = $Device["isMobile"] ? 1.5 : 2;
+    let head = $Device["isSmallScreen"] ? 1.5 : 2;
     let subhead = 0.8 * head;
     let context = 0.8 * subhead;
     let ButtonType = -1
@@ -22,7 +22,7 @@
             curPage = curPage - 1;
     }
     function setButtonType(e){
-        if($Device["isMobile"]){
+        if($Device["isSmallScreen"]){
             if(ButtonType == 3){
                 ButtonType = -1
                 if(e.clientX < document.body.clientWidth / 2){

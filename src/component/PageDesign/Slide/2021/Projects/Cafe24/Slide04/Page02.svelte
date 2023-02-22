@@ -12,7 +12,7 @@
     <p>HTML 수정</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
-            {#if $Device["isMobile"]}
+            {#if $Device["isSmallScreen"]}
             - Mark Down을 제외한 마크업 언어를<br/>
             &nbsp;&nbsp;처음으로 사용<br/>
             - 일반적인 프로그래밍 언어와 개념이 달라<br/>

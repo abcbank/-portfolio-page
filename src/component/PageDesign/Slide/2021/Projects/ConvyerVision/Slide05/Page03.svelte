@@ -18,7 +18,7 @@
 </script>
 <DefaultPage color={color} fontSize={subhead}>
     <div style="font-size:{context}rem;">
-        {#if $Device["isMobile"]}
+        {#if $Device["isSmallScreen"]}
         <p>
             영상 재생은 데스크탑에서만 지원됩니다.<br/>
             데스크탑으로 접속 후 확인해주세요.

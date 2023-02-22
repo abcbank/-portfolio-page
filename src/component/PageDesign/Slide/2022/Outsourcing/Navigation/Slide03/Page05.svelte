@@ -12,7 +12,7 @@
     <p>고속도로 연결 상태 정의</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
-            {#if $Device["isMobile"]}
+            {#if $Device["isSmallSreen"]}
             - 고속도로는 1자형으로 생겼다고 가정<br/>
             - 즉, 제일 먼 두 JC는 고속도로의 양 끝점(A,Z)으로<br/>
             &nbsp;&nbsp;가정<br/>

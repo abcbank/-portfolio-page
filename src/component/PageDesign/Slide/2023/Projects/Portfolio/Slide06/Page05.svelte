@@ -12,7 +12,7 @@
     <p>Solution</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
-            {#if $Device["isMobile"]}
+            {#if $Device["isSmallSreen"]}
             - USBScope 102에 전압이 들어가기 전,<br/>
             &nbsp;&nbsp;회로적으로 강하를 수행<br/>
             - 저항을 통해 실제 전압의 10%만<br/>

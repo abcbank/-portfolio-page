@@ -12,7 +12,7 @@
     <p>프로젝트를 마치며</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
-            {#if $Device["isMobile"]}
+            {#if $Device["isSmallSreen"]}
             - 처음으로 진행한 비전 관련 프로젝트<br/>
             - 기존엔 비전에 대한 불신이 많았으나, Vision Pro를<br/>
             &nbsp;&nbsp;직접 사용해보며 비전에 대한 인식이 긍정적인<br/>

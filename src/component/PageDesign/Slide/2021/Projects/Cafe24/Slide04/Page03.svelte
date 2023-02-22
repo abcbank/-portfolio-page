@@ -12,7 +12,7 @@
     <p>Solution</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
-            {#if $Device["isMobile"]}
+            {#if $Device["isSmallScreen"]}
             - 이해도 부족에 의해 발생하는 문제는 이해도가<br/>
             &nbsp;&nbsp;높아지는 수밖에 없다고 판단<br/>
             - 퇴근 후 개인 시간에 추가 작업 진행

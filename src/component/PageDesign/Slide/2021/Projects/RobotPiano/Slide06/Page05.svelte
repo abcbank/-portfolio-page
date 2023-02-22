@@ -12,7 +12,7 @@
     <p>Solution</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
-            {#if $Device["isMobile"]}
+            {#if $Device["isSmallSreen"]}
             - block 분할 전, 연음 체크를 먼저 수행<br/>
             - 확인된 연음은 모두 플래그를 세워둠<br/>
             - block 분할 알고리즘에서, 해당 플래그를 확인해<br/>

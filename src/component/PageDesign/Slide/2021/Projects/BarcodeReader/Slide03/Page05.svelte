@@ -11,7 +11,7 @@
     <p>탐색 프로세스</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
-            {#if $Device["isMobile"]}
+            {#if $Device["isSmallScreen"]}
             1. 사용자가 물건을 담아 박스에 배치<br/>
             2. 시작 버튼을 누름<br/>
             3. 박스가 실린더를 통해 내부로 이동<br/>
