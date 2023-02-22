@@ -5,7 +5,7 @@
     export let Pages;
     export let curPage;
     export let maxPage;
-    let head = $Device["isSmallScreen"] ? 1.5 * 0.8 : 2;
+    let head = $Device["isSmallScreen"] ? 1.5 * 0.8 : 1;
     let subhead = 1.5 * 0.8;
     let context = 0.8 * subhead;
     let ButtonType = -1
@@ -75,7 +75,7 @@
 <div>
 	{#each Pages as Page}
 		{#if curPage == Page.index}
-			<svelte:component this={Page.component} bind:color={color} bind:head={head} bind:subhead={subhead} bind:context={context} bind:curPage={curPage} />
+			<svelte:component this={Page.component} bind:color={color} head={head} subhead={subhead} context={context} bind:curPage={curPage} />
 		{/if}
 	{/each}
     <slot></slot>
