@@ -6,7 +6,7 @@
     export let curPage;
     export let maxPage;
     let head = $Device["isSmallScreen"] ? 1 : 2;
-    let subhead = 0.8 * head;
+    let subhead = 1;
     let context = 0.8 * subhead;
     let ButtonType = -1
     let doubleClickTimer;
