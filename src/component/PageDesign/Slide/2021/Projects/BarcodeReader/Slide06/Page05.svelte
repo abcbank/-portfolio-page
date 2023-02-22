@@ -8,7 +8,7 @@
 </script>
 
 <DefaultPage color={color} fontSize={subhead}>
-    <h3>Solution</h3>
+    <p>Solution</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
             - 이 부분 또한 얘기가 됐다고 전달받음<br/>

@@ -9,7 +9,7 @@
 </script>
 
 <DefaultPage color={color} fontSize={subhead}>
-    <h3>잔류 전류 검사</h3>
+    <p>잔류 전류 검사</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
             - 다운로더 / 인스펙터에서 모두 수행<br/>

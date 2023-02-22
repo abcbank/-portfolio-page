@@ -9,7 +9,7 @@
 </script>
 
 <DefaultPage color={color} fontSize={subhead}>
-    <h3>펄스 측정</h3>
+    <p>펄스 측정</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
             - USBScope 102는 최대 10V까지 측정 가능<br/>

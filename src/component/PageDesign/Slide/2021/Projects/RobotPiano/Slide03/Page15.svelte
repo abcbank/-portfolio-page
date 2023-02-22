@@ -8,7 +8,7 @@
     export const context = 1;
 </script>
 <DefaultPage color={color} fontSize={subhead}>
-    <h3>Normal 연주 - 음 연주 쓰레드</h3>
+    <p>Normal 연주 - 음 연주 쓰레드</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
             {#if $Device["isSmallSreen"]}

@@ -11,7 +11,7 @@
 </script>
 
 <DefaultPage color={color} fontSize={subhead}>
-    <h3>calc.py</h3>
+    <p>calc.py</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
             - 각 옵션에 해당되는 기능을 구현<br/>

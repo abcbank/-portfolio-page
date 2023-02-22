@@ -9,7 +9,7 @@
 </script>
 
 <DefaultPage color={color} fontSize={subhead}>
-    <h3>프로젝트 한계</h3>
+    <p>프로젝트 한계</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
             - 도착 예정 시간을 계산할때 현재 교통 상황을 고려하지 않음

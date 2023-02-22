@@ -9,7 +9,7 @@
 </script>
 
 <DefaultPage color={color} fontSize={subhead}>
-    <h3>장비 검사 프로세스</h3>
+    <p>장비 검사 프로세스</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
             1. 로봇팔을 통해 선루프를 검사 위치로 도입<br/>

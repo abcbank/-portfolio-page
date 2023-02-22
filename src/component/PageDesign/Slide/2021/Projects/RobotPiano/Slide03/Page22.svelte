@@ -8,7 +8,7 @@
     export const context = 1;
 </script>
 <DefaultPage color={color} fontSize={subhead}>
-    <h3>곡 제어의 유동성 추가</h3>
+    <p>곡 제어의 유동성 추가</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
             {#if $Device["isSmallSreen"]}

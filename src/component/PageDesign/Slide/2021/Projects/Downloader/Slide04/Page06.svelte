@@ -11,7 +11,7 @@
 </script>
 
 <DefaultPage color={color} fontSize={subhead}>
-    <h3>전류계</h3>
+    <p>전류계</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
             - 전류 검사용 전류계<br/>

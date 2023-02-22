@@ -9,7 +9,7 @@
 </script>
 
 <DefaultPage color={color} fontSize={subhead}>
-    <h3>자료형</h3>
+    <p>자료형</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
             - C 계열 위주로 사용해 적응 기간이 필요했음<br/>

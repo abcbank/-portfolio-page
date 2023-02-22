@@ -9,7 +9,7 @@
 </script>
 
 <DefaultPage color={color} fontSize={subhead}>
-    <h3>검사 종류</h3>
+    <p>검사 종류</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
             - 나사 구멍의 유무 검사<br/>

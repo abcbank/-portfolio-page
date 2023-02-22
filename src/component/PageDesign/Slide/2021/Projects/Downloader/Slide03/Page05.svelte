@@ -9,7 +9,7 @@
 </script>
 
 <DefaultPage color={color} fontSize={subhead}>
-    <h3>IR 동작 검사</h3>
+    <p>IR 동작 검사</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
             - 인스펙터에서만 수행<br/>

@@ -11,7 +11,7 @@
 </script>
 
 <DefaultPage color={color} fontSize={subhead}>
-    <h3>Light Source</h3>
+    <p>Light Source</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
             - 촬영 시 빛을 순간적으로 비춰주는 역할<br/>

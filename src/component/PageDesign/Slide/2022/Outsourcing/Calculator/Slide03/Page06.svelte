@@ -9,7 +9,7 @@
 </script>
 
 <DefaultPage color={color} fontSize={subhead}>
-    <h3>팩토리얼 연산</h3>
+    <p>팩토리얼 연산</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
             - 입력된 숫자에 대해 팩토리얼 연산 수행<br/>

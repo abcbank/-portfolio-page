@@ -8,7 +8,7 @@
 </script>
 
 <DefaultPage color={color} fontSize={subhead}>
-    <h3>촬영 영역 지정</h3>
+    <p>촬영 영역 지정</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
             {#if $Device["isSmallScreen"]}

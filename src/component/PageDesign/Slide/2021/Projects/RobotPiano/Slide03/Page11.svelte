@@ -38,7 +38,7 @@
 </script>
 <DefaultPage color={color} fontSize={subhead}>
     <div style="height:20%;">
-        <h3>곡의 분석 및 해석</h3>
+        <p>곡의 분석 및 해석</p>
     </div>
     <div style="height:80%; font-size:{context}rem;">
     {#if loaded}

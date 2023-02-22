@@ -9,7 +9,7 @@
 </script>
 
 <DefaultPage color={color} fontSize={subhead}>
-    <h3>프로젝트 한계</h3>
+    <p>프로젝트 한계</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
             - 실질적으로 판매하지 못해 여러모로 아쉬운 프로젝트<br/>

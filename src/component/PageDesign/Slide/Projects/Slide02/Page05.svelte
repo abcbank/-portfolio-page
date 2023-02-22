@@ -10,7 +10,7 @@
 </script>
 
 <DefaultPage color={color} fontSize={subhead}>
-    <h3>수행 직무</h3>
+    <p>수행 직무</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
             - C# 기반 PC 프로그램<br/>

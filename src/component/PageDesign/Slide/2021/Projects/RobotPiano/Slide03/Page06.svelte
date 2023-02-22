@@ -8,7 +8,7 @@
     export const context = 1;
 </script>
 <DefaultPage color={color} fontSize={subhead}>
-    <h3>곡의 분석 및 해석</h3>
+    <p>곡의 분석 및 해석</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
             {#if $Device["isSmallScreen"]}

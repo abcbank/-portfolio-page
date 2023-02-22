@@ -9,7 +9,7 @@
 </script>
 
 <DefaultPage color={color} fontSize={subhead}>
-    <h3>언더바 홈페이지 리뉴얼</h3>
+    <p>언더바 홈페이지 리뉴얼</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
             1. 전체적인 디자인 컨셉 변경<br/>

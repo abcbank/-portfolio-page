@@ -10,7 +10,7 @@
 </script>
 
 <DefaultPage color={color} fontSize={subhead}>
-    <h3>Keyence Camera</h3>
+    <p>Keyence Camera</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
             {#if $Device["isSmallScreen"]}

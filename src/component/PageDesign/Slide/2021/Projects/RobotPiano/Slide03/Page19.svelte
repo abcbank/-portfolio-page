@@ -8,7 +8,7 @@
     export const context = 1;
 </script>
 <DefaultPage color={color} fontSize={subhead}>
-    <h3>기타 기능 추가</h3>
+    <p>기타 기능 추가</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
             - 영상 / 음원 재생 기능<br/>

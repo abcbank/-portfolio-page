@@ -9,7 +9,7 @@
 </script>
 
 <DefaultPage color={color} fontSize={subhead}>
-    <h3>소수 판별</h3>
+    <p>소수 판별</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
             - 입력된 숫자가 소수인지 판별<br/>

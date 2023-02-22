@@ -13,7 +13,7 @@
 
 <DefaultPage color={color} fontSize={subhead} bind:curPage={curPage}>
     <div style="position:absolute; top:5%; width:100%;">
-        <h3>구성 요소</h3>
+        <p>구성 요소</p>
     </div>
     <div class="borderBox" 
     on:click={()=> {curPage = 3}} on:keydown={()=>{}}

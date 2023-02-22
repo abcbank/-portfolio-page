@@ -9,7 +9,7 @@
 </script>
 
 <DefaultPage color={color} fontSize={subhead}>
-    <h3>수행 직무</h3>
+    <p>수행 직무</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
             - 라즈베리파이에 올라갈 파이썬 스크립트 작성

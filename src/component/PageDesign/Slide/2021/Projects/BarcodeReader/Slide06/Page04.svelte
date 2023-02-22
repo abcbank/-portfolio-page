@@ -8,7 +8,7 @@
 </script>
 
 <DefaultPage color={color} fontSize={subhead}>
-    <h3>택타임 및 로딩 조건</h3>
+    <p>택타임 및 로딩 조건</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
             {#if $Device["isSmallScreen"]}

@@ -8,7 +8,7 @@
 </script>
 
 <DefaultPage color={color} fontSize={subhead}>
-    <h3>곡선 바코드에 대한 처리</h3>
+    <p>곡선 바코드에 대한 처리</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
             {#if $Device["isSmallScreen"]}

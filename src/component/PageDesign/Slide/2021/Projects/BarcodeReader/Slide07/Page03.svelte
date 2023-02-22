@@ -8,7 +8,7 @@
 </script>
 
 <DefaultPage color={color} fontSize={subhead}>
-    <h3>프로젝트 한계</h3>
+    <p>프로젝트 한계</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
             - 계약 후 진행했던 프로젝트라 팔 수는 있었으나...<br/>

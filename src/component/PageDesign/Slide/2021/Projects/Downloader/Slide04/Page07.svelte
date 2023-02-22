@@ -11,7 +11,7 @@
 </script>
 
 <DefaultPage color={color} fontSize={subhead}>
-    <h3>Oscilloscope</h3>
+    <p>Oscilloscope</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
             - 전압 검사용 오실로스코프<br/>

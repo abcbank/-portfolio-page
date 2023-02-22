@@ -9,7 +9,7 @@
 </script>
 
 <DefaultPage color={color} fontSize={subhead}>
-    <h3>PCB 업로드</h3>
+    <p>PCB 업로드</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
             - 다운로더에서만 수행<br/>

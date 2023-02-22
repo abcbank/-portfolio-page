@@ -11,7 +11,7 @@
 </script>
 
 <DefaultPage color={color} fontSize={subhead}>
-    <h3>Bass Arm</h3>
+    <p>Bass Arm</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
             - 사내 로봇팔 재고 사용<br/>

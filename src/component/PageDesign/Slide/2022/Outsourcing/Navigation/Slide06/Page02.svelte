@@ -9,7 +9,7 @@
 </script>
 
 <DefaultPage color={color} fontSize={subhead}>
-    <h3>위키피디아의 부정확성</h3>
+    <p>위키피디아의 부정확성</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
             - 위키피디아의 일부 JC는 개통되지 않은 상태<br/>
