@@ -6,11 +6,13 @@
     export let head = 2;
     export let subhead = 1.5;
     export let context = 1;
+    console.log(context);
 </script>
 
 <DefaultPage color={color} >
-    <p fontSize={context}>
+    <p style="font-size:{context}rem;">
         다만 일부 배경의 경우, 사양에 따라
         <br/>
-        렉이 걸릴 수 있습니다</p>
+        렉이 걸릴 수 있습니다
+    </p>
 </DefaultPage>
