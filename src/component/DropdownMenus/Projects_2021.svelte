@@ -55,7 +55,7 @@
         pushRouter("/project/2021/sunloop")
         rerandering();
         afterSelect();
-    }}   leftIcon={mdiCar } bind:isChecked={isChecked["barcode"]}>썬루프 비전</MenuItem>
+    }}   leftIcon={mdiCar } bind:isChecked={isChecked["sunloop"]}>썬루프 비전</MenuItem>
     <MenuItem on:click={() => {
         pushRouter("/project/2021/robotpiano")
         rerandering();

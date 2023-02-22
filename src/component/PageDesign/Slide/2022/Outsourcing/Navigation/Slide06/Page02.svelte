@@ -3,13 +3,13 @@
     import DefaultPage from '../../../../defaultPage.svelte'
 
     export let color = "transparent";
-    export let head = 2;
-    export let subhead = 1.5;
-    export let context = 1;
+    export const head = 2;
+    export const subhead = 1.5;
+    export const context = 1;
 </script>
 
 <DefaultPage color={color} fontSize={subhead}>
-    <p>위키피디아의 부정확성</p>
+    <h3>위키피디아의 부정확성</h3>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
             - 위키피디아의 일부 JC는 개통되지 않은 상태<br/>

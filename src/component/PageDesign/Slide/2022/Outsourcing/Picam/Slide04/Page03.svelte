@@ -3,30 +3,26 @@
     import DefaultPage from '../../../../defaultPage.svelte'
 
     export let color = "transparent";
-    export let head = 2;
-    export let subhead = 1.5;
-    export let context = 1;
+    export const head = 2;
+    export const subhead = 1.5;
+    export const context = 1;
 
     let CurPage = "main"
 </script>
 
 <DefaultPage color={color} fontSize={subhead}>
-    <p>Pi Camera</p>
+    <h3>Flask</h3>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
             {#if $Device["isSmallSreen"]}
-            - 이미지를 가져올 카메라<br/>
-            - 사내에 있던 바슬러 카메라를 사용<br/>
-            - PC측에서 이미지를 요청할 경우, GIGE를<br/>
-            &nbsp;&nbsp;통해 PC에 이미지를 전달<br/>
-            - 사용 모델: acA2440-20gm<br/>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            (Basler ace)
+            - HTML 호스팅 서버<br/>
+            - 대학 과제 수준이므로 로컬 호스트 사용<br/>
+            - JC의 선택 여부 등을 http 통신으로 받아 이에<br/>
+            &nbsp;&nbsp;대한 처리를 진행
             {:else}
-            - 이미지를 가져올 카메라<br/>
-            - 사내에 있던 바슬러 카메라를 사용<br/>
-            - PC측에서 이미지를 요청할 경우, GIGE를 통해 PC에 이미지를 전달<br/>
-            - 사용 모델: acA2440-20gm(Basler ace)
+            - HTML 호스팅 서버<br/>
+            - 대학 과제 수준이므로 로컬 호스트 사용<br/>
+            - JC의 선택 여부 등을 http 통신으로 받아 이에 대한 처리를 진행
             {/if}
         </p>
     </div>

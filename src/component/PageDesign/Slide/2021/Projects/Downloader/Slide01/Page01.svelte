@@ -3,12 +3,12 @@
     import DefaultPage from '../../../../defaultPage.svelte'
 
     export let color = "transparent";
-    export let head = 2;
-    export let subhead = 1.5;
-    export let context = 1;
+    export const head = 2;
+    export const subhead = 1.5;
+    export const context = 1;
 </script>
 
 <DefaultPage color={color} fontSize={head}>
-    <p>PCB Downloader</p>
-    <p>PCB Inspector</p>
+    <h1>PCB Downloader</h1>
+    <h1>PCB Inspector</h1>
 </DefaultPage>

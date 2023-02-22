@@ -3,20 +3,26 @@
     import DefaultPage from '../../../../defaultPage.svelte'
 
     export let color = "transparent";
-    export let head = 2;
-    export let subhead = 1.5;
-    export let context = 1;
+    export const head = 2;
+    export const subhead = 1.5;
+    export const context = 1;
 
     let CurPage = "main"
 </script>
 
 <DefaultPage color={color} fontSize={subhead}>
-    <p>Motor A</p>
+    <h3>C dll</h3>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
-            - 촬영 시 빛을 순간적으로 비춰주는 역할<br/>
-            - 엘파인 제어기를 구매 후 사용<br/>
-            - 사용 모델: LCP24-100Q
+            {#if $Device["isSmallSreen"]}
+            - 서버에서 참조하는 라이브러리 파일<br/>
+            - 그래프 및 시작점과 끝점을 전달받고, 다익스트라<br/>
+            &nbsp;&nbsp;알고리즘을 통해 최단 경로 및 거리를 찾아 리턴
+            {:else}
+            - 서버에서 참조하는 라이브러리 파일<br/>
+            - 그래프 및 시작점과 끝점을 전달받고, 다익스트라 알고리즘을 통해 최단 경로 및<br/>
+            &nbsp;&nbsp;거리를 찾아 리턴
+            {/if}
         </p>
     </div>
 </DefaultPage>

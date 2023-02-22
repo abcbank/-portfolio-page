@@ -3,13 +3,13 @@
     import DefaultPage from '../../../../defaultPage.svelte'
 
     export let color = "transparent";
-    export let head = 2;
-    export let subhead = 1.5;
-    export let context = 1;
+    export const head = 2;
+    export const subhead = 1.5;
+    export const context = 1;
 </script>
 
 <DefaultPage color={color} fontSize={subhead}>
-    <p>펄스 측정</p>
+    <h3>펄스 측정</h3>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
             - USBScope 102는 최대 10V까지 측정 가능<br/>

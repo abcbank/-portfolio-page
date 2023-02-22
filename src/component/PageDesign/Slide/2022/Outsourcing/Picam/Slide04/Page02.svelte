@@ -3,9 +3,9 @@
     import DefaultPage from '../../../../defaultPage.svelte'
 
     export let color = "transparent";
-    export let head = 2;
-    export let subhead = 1.5;
-    export let context = 1;
+    export const head = 2;
+    export const subhead = 1.5;
+    export const context = 1;
     export let curPage
 
     let CurPage = "main"
@@ -13,30 +13,24 @@
 
 <DefaultPage color={color} fontSize={subhead} bind:curPage={curPage}>
     <div style="position:absolute; top:5%; width:100%;">
-        <p>구성 요소</p>
+        <h3>구성 요소</h3>
     </div>
     <div class="borderBox" 
         on:click={()=> {curPage = 3}} on:keydown={()=>{}}
-        style="font-size:{context}rem;border: solid {$Color["btnBdrColor"][$season]} 1px; background-color:{$Color["btnBackColor"][$season]}; color:{$Color["btnBdrColor"][$season]};top: 35%; left: {$Device['isMobile'] ? "32.5%" : "40%"};">
-        Pi<br/>
-        Camera
+        style="font-size:{context}rem;border: solid {$Color["btnBdrColor"][$season]} 1px; background-color:{$Color["btnBackColor"][$season]}; color:{$Color["btnBdrColor"][$season]}; top: {$Device['isMobile'] ? "50%" : "55%"}; left: {$Device['isMobile'] ? "15%" : "30%"};">
+        Flask
     </div>
     <div class="borderBox" 
     on:click={()=> {curPage = 4}} on:keydown={()=>{}}
-        style="font-size:{context}rem;border: solid {$Color["btnBdrColor"][$season]} 1px; background-color:{$Color["btnBackColor"][$season]}; color:{$Color["btnBdrColor"][$season]};top: 35%; left: {$Device['isMobile'] ? "67.5%" : "60%"};">
-        Pi
+        style="font-size:{context}rem;border: solid {$Color["btnBdrColor"][$season]} 1px; background-color:{$Color["btnBackColor"][$season]}; color:{$Color["btnBdrColor"][$season]}; top: {$Device['isMobile'] ? "50%" : "55%"}; left: {$Device['isMobile'] ? "50%" : "50%"};">
+        Kakao<br/>
+        Map
     </div>
     <div class="borderBox" 
     on:click={()=> {curPage = 5}} on:keydown={()=>{}}
-        style="font-size:{context}rem;border: solid {$Color["btnBdrColor"][$season]} 1px; background-color:{$Color["btnBackColor"][$season]}; color:{$Color["btnBdrColor"][$season]};top: {$Device['isMobile'] ? "60%" : "75%"}; left: {$Device['isMobile'] ? "32.5%" : "40%"};">
-        Motor 1
+        style="font-size:{context}rem;border: solid {$Color["btnBdrColor"][$season]} 1px; background-color:{$Color["btnBackColor"][$season]}; color:{$Color["btnBdrColor"][$season]}; top: {$Device['isMobile'] ? "50%" : "55%"}; left: {$Device['isMobile'] ? "85%" : "70%"};">
+        C dll
     </div>
-    <div class="borderBox" 
-    on:click={()=> {curPage = 6}} on:keydown={()=>{}}
-        style="font-size:{context}rem;border: solid {$Color["btnBdrColor"][$season]} 1px; background-color:{$Color["btnBackColor"][$season]}; color:{$Color["btnBdrColor"][$season]};top: {$Device['isMobile'] ? "60%" : "75%"}; left: {$Device['isMobile'] ? "67.5%" : "60%"};">
-        Motor 2
-    </div>
-    
 </DefaultPage>
 <style>
     .borderBox{

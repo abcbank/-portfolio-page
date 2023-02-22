@@ -3,12 +3,12 @@
     import DefaultPage from '../../../../defaultPage.svelte'
 
     export let color = "transparent";
-    export let subhead = 1.5;
-    export let context = 1;
+    export const subhead = 1.5;
+    export const context = 1;
 </script>
 
 <DefaultPage color={color} fontSize={subhead}>
-    <p>프로젝트 한계</p>
+    <h3>프로젝트 한계</h3>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
             - 계약 후 진행했던 프로젝트라 팔 수는 있었으나...<br/>

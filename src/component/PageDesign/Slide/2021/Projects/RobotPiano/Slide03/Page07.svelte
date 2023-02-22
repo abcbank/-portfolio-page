@@ -5,9 +5,9 @@
     import { onMount } from "svelte";
 
     export let color = "transparent";
-    export let head = 2;
-    export let subhead = 1.5;
-    export let context = 1;
+    export const head = 2;
+    export const subhead = 1.5;
+    export const context = 1;
 
     
     let img;
@@ -39,7 +39,7 @@
 </script>
 <DefaultPage color={color} fontSize={subhead}>
     <div style="height:10%;">
-        <p>곡의 분석 및 해석</p>
+        <h3>곡의 분석 및 해석</h3>
     </div>
     <div style="height:80%; font-size:{context}rem;">
         {#if loaded}

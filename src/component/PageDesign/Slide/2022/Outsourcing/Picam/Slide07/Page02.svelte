@@ -3,32 +3,30 @@
     import DefaultPage from '../../../../defaultPage.svelte'
 
     export let color = "transparent";
-    export let head = 2;
-    export let subhead = 1.5;
-    export let context = 1;
+    export const head = 2;
+    export const subhead = 1.5;
+    export const context = 1;
 </script>
 
 <DefaultPage color={color} fontSize={subhead}>
-    <p>프로젝트를 마치며</p>
+    <h3>프로젝트를 마치며</h3>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
             {#if $Device["isSmallSreen"]}
-            - 처음으로 진행한 비전 관련 프로젝트<br/>
-            - 기존엔 비전에 대한 불신이 많았으나, Vision Pro를<br/>
-            &nbsp;&nbsp;직접 사용해보며 비전에 대한 인식이 긍정적인<br/>
-            &nbsp;&nbsp;방향으로 바뀌게 됨<br/>
-            - 첫 프로젝트다 보니, Vision Pro SDK에 대한 이해도가<br/>
-            &nbsp;&nbsp;낮아 모든 파라미터를 C# 코드 상으로 제어하진<br/>
-            &nbsp;&nbsp;못했으나, 점차 퀵빌드를 사용하지 않는 방향으로 나아감<br/>
-            - 나중에 다 끝나고 확인차 여쭤보니, 선루프 관련 비전 과제가<br/>
-            &nbsp;&nbsp;들어와 실력 확인차 시켜보신거라카시더라...
+            - 재미있어보여 하게된 프로젝트<br/>
+            - 사실상 헐값에 과제 대행을 하긴 했으나, 만드는<br/>
+            &nbsp;&nbsp;재미는 있었으니 만족함<br/>
+            - 오래간만에 새로운 api와 툴을 사용해봐서<br/>
+            &nbsp;&nbsp;보람찼다고 생각함<br/>
+            - 사실 도착 예정 시간을 계산할때 현재 도로의<br/>
+            &nbsp;&nbsp;상황을 고려해 연산하고 싶었으나, 출장과 겹쳐<br/>
+            &nbsp;&nbsp;못한게 아쉽긴 함
             {:else}
-            - 처음으로 진행한 비전 관련 프로젝트<br/>
-            - 기존엔 비전에 대한 불신이 많았으나, Vision Pro를 직접 사용해보며 비전에 대한 인식이 긍정적인<br/>
-            &nbsp;&nbsp;방향으로 바뀌게 됨<br/>
-            - 첫 프로젝트다 보니, Vision Pro SDK에 대한 이해도가 낮아 모든 파라미터를 C# 코드 상으로 제어하진<br/>
-            &nbsp;&nbsp;못했으나, 점차 퀵빌드를 사용하지 않는 방향으로 나아감
-            - 나중에 다 끝나고 확인차 여쭤보니, 선루프 관련 비전 과제가 들어와 실력 확인차 시켜보신거라카시더라...
+            - 재미있어보여 하게된 프로젝트<br/>
+            - 사실상 헐값에 과제 대행을 하긴 했으나, 만드는 재미 하나는 확실했음<br/>
+            - 오래간만에 새로운 api와 툴을 사용해봐서 보람찼다고 생각함<br/>
+            - 사실 도착 예정 시간을 계산할때 현재 도로의 상황을 고려해 연산하고 싶었으나, 출장과<br/>
+            &nbsp;&nbsp;겹쳐 못한게 아쉽긴 함
             {/if}
         </p>
     </div>

@@ -3,19 +3,21 @@
     import DefaultPage from '../../../../defaultPage.svelte'
 
     export let color = "transparent";
-    export let head = 2;
-    export let subhead = 1.5;
-    export let context = 1;
-
-    let CurPage = "main"
+    export const head = 2;
+    export const subhead = 1.5;
+    export const context = 1;
 </script>
 
 <DefaultPage color={color} fontSize={subhead}>
-    <p>Motor B</p>
+    <h3>CPython</h3>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
-            - 제품 운송용 컨베이어<br/>
-            - 사내 남아있던 재고를 사용
+            {#if $Device["isSmallSreen"]}
+            - CPython에서 매개변수 전달 방식이 매우매우<br/>
+            &nbsp;&nbsp;헷갈림
+            {:else}
+            - CPython에서 매개변수 전달 방식이 매우매우 헷갈림
+            {/if}
         </p>
     </div>
 </DefaultPage>

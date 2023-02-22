@@ -3,8 +3,8 @@
     import DefaultPage from '../../../../defaultPage.svelte'
 
     export let color = "transparent";
-    export let subhead = 1.5;
-    export let context = 1;
+    export const subhead = 1.5;
+    export const context = 1;
     export let curPage
 
     let CurPage = "main"
@@ -12,7 +12,7 @@
 
 <DefaultPage color={color} fontSize={subhead} bind:curPage={curPage}>
     <div style="position:absolute; top:5%; width:100%;">
-        <p>구성 요소</p>
+        <h3>구성 요소</h3>
     </div>
     <div class="borderBox" 
         on:click={()=> {curPage = 3}} on:keydown={()=>{}}

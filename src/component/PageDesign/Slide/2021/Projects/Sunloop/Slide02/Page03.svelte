@@ -3,13 +3,13 @@
     import DefaultPage from '../../../../defaultPage.svelte'
 
     export let color = "transparent";
-    export let head = 2;
-    export let subhead = 1.5;
-    export let context = 1;
+    export const head = 2;
+    export const subhead = 1.5;
+    export const context = 1;
 </script>
 
 <DefaultPage color={color} fontSize={subhead}>
-    <p>장비 검사 프로세스</p>
+    <h3>장비 검사 프로세스</h3>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
             1. 로봇팔을 통해 선루프를 검사 위치로 도입<br/>

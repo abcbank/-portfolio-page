@@ -3,9 +3,9 @@
     import DefaultPage from '../../../../defaultPage.svelte'
 
     export let color = "transparent";
-    export let head = 2;
+    export const head = 2;
 </script>
 
 <DefaultPage color={color} fontSize={head}>
-    <p style="font-size:{head}rem;">Outline</p>
+    <h2 style="font-size:{head}rem;">Outline</h2>
 </DefaultPage>
