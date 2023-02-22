@@ -17,8 +17,8 @@
             {#if $Device["isMobile"]}
             - HTML 호스팅 서버<br/>
             - 대학 과제 수준이므로 로컬 호스트 사용<br/>
-            - JC의 선택 여부 등을 http 통신으로 받아 이에 대한<br/>
-            &nbsp;&nbsp;처리를 진행
+            - JC의 선택 여부 등을 http 통신으로 받아 이에<br/>
+            &nbsp;&nbsp;대한 처리를 진행
             {:else}
             - HTML 호스팅 서버<br/>
             - 대학 과제 수준이므로 로컬 호스트 사용<br/>

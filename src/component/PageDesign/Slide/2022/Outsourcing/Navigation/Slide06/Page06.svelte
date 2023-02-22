@@ -12,7 +12,12 @@
     <p>CPython</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
+            {#if $Device["isMobile"]}
+            - CPython에서 매개변수 전달 방식이 매우매우<br/>
+            &nbsp;&nbsp;헷갈림
+            {:else}
             - CPython에서 매개변수 전달 방식이 매우매우 헷갈림
+            {/if}
         </p>
     </div>
 </DefaultPage>

@@ -13,7 +13,7 @@
     const MAX_SIZE = 14
   
     const MS_BETWEEN_FRAMES = 1000 / TARGET_FPS
-    const scaleOffset = $Device["isMobile"] ? 2 : 1;
+    const scaleOffset = $Device["isMobile"] ? 1 : 1;
   
     const boundary = 100;
 
