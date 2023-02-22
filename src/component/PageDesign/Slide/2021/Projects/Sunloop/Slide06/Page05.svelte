@@ -12,8 +12,15 @@
     <p>Solution</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
+            {#if $Device["isSmallSreen"]}
+            - 이동 완료 후 이전 일정 시간동안 카메라 촬영을<br/>
+            &nbsp;&nbsp;제한<br/>
+            - 택타임은 늘어났으나, 기준치 이하의 값이라 해당<br/>
+            &nbsp;&nbsp;방식으로 해결
+            {:else}
             - 이동 완료 후 이전 일정 시간동안 카메라 촬영을 제한<br/>
             - 택타임은 늘어났으나, 기준치 이하의 값이라 해당 방식으로 해결
+            {/if}
         </p>
     </div>
 </DefaultPage>

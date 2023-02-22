@@ -9,7 +9,7 @@
 </script>
 
 <DefaultPage color={color} fontSize={subhead}>
-    <p>연속적 검사 프로세스</p>
+    <p>애완동물 트래킹</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
             {#if $Device["isSmallSreen"]}

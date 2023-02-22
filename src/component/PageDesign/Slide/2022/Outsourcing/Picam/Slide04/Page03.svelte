@@ -11,7 +11,7 @@
 </script>
 
 <DefaultPage color={color} fontSize={subhead}>
-    <p>Camera</p>
+    <p>Pi Camera</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
             {#if $Device["isSmallSreen"]}

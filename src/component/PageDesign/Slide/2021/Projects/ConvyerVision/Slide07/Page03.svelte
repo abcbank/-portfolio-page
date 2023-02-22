@@ -12,6 +12,7 @@
     <p>프로젝트 한계</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
+            - 사실상 선루프가 엎어지며 같이 의미가 없어짐
         </p>
     </div>
 </DefaultPage>
