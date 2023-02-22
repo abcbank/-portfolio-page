@@ -5,9 +5,9 @@
     import { onMount } from "svelte";
 
     export let color = "transparent";
-    export const head = 2;
-    export const subhead = 1.5;
-    export const context = 1;
+    export let head = 2;
+    export let subhead = 1.5;
+    export let context = 1;
 
     
     let img;
