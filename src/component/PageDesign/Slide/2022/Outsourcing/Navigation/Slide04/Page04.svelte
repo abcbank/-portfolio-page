@@ -11,19 +11,19 @@
 </script>
 
 <DefaultPage color={color} fontSize={subhead}>
-    <p>Lens</p>
+    <p>Kakao Map</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
             {#if $Device["isMobile"]}
-            - 카메라에 부착할 렌즈<br/>
-            - 사내에 있던 렌즈를 사용<br/>
-            - 사용 모델: C11-1620-12M-P f16mm<br/>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            (Basler Lens)
+            - 웹크롤링을 통해 JC의 정확한 위치 정보를 알아내는<br/>
+            &nbsp;&nbsp;것은 힘들다고 판단<br/>
+            - 따라서 안정성이 보장된 카카오맵 api를 사용해 JC의<br/>
+            &nbsp;&nbsp;위치를 탐색<br/>
+            - 사용자에게 지도 모형을 제공
             {:else}
-            - 카메라에 부착할 렌즈<br/>
-            - 사내에 있던 렌즈를 사용<br/>
-            - 사용 모델: C11-1620-12M-P f16mm (Basler Lens)
+            - 웹크롤링을 통해 JC의 정확한 위치 정보를 알아내는 것은 힘들다고 판단<br/>
+            - 따라서 안정성이 보장된 카카오맵 api를 사용해 JC의 위치를 탐색<br/>
+            - 사용자에게 지도 모형을 제공
             {/if}
         </p>
     </div>

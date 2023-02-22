@@ -11,12 +11,17 @@
 </script>
 
 <DefaultPage color={color} fontSize={subhead}>
-    <p>Light Source</p>
+    <p>C dll</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
-            - 촬영 시 빛을 순간적으로 비춰주는 역할<br/>
-            - 엘파인 제어기를 구매 후 사용<br/>
-            - 사용 모델: LCP24-100Q
+            {#if $Device["isMobile"]}
+            - 서버에서 참조하는 라이브러리 파일<br/>
+            - 그래프 및 시작점과 끝점을 전달받고, 최단 경로<br/>
+            &nbsp;&nbsp;및 거리를 리턴
+            {:else}
+            - 서버에서 참조하는 라이브러리 파일<br/>
+            - 그래프 및 시작점과 끝점을 전달받고, 최단 경로 및 거리를 리턴
+            {/if}
         </p>
     </div>
 </DefaultPage>
