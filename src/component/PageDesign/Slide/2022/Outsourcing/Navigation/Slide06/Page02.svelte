@@ -9,15 +9,11 @@
 </script>
 
 <DefaultPage color={color} fontSize={subhead}>
-    <p>Image Acquire</p>
+    <p>위키피디아의 부정확성</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
-            {#if $Device["isMobile"]}
-            - 이동하는 객체를 사진 촬영할 경우<br/>
-            &nbsp;&nbsp;이미지의 번짐 현상이 발생<br/>
-            {:else}
-            - 이동하는 객체를 사진 촬영할 경우 이미지의 번짐 현상이 발생<br/>
-            {/if}
+            - 위키피디아의 일부 JC는 개통되지 않은 상태<br/>
+            - 따라서 위치 등 추가 정보를 정확히 알 수 없음
         </p>
     </div>
 </DefaultPage>

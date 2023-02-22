@@ -12,8 +12,7 @@
     <p>Solution</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
-            - 순환 고속도로의 경우, 시작점을 지정<br/>
-            - 일부 예외 간선에 대해서만 연결 상태를 지정
+            - 모르면 맞으면서 배워야지...
         </p>
     </div>
 </DefaultPage>

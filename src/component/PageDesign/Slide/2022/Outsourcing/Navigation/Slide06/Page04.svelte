@@ -9,16 +9,18 @@
 </script>
 
 <DefaultPage color={color} fontSize={subhead}>
-    <p>스트로브 기능 구현</p>
+    <p>고속도로의 형태</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
             {#if $Device["isMobile"]}
-            - 스트로브 기능이 필요한 일부 상황이<br/>
-            &nbsp;&nbsp;있었으나, 스트로브 기능을 지원하지 않는<br/>
-            &nbsp;&nbsp;광원 컨트롤러를 사용
+            - 순환 고속도로의 경우, 직선 형태가 아님<br/>
+            - 고속도로의 일부분의 경우, 직선이 아닐 수 있음<br/>
+            - 따라서 일부 고속도로의 실제 연결 상황과 그래프이<br/>
+            &nbsp;&nbsp;간선이 일치하지 않음
             {:else}
-            - 스트로브 기능이 필요한 일부 상황이 있었으나, 스트로브 기능을 지원하지<br/>
-            &nbsp;&nbsp;않는 광원 컨트롤러를 사용
+            - 순환 고속도로의 경우, 직선 형태가 아님<br/>
+            - 고속도로의 일부분의 경우, 직선이 아닐 수 있음<br/>
+            - 따라서 일부 고속도로의 실제 연결 상황과 그래프이 간선이 일치하지 않음
             {/if}
         </p>
     </div>
