@@ -9,13 +9,13 @@
 </script>
 
 <DefaultPage color={color} fontSize={subhead}>
-    <p>JC 정보 수집</p>
+    <p>CCTV</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
-            - 의뢰인의 강력한 주장에 따라 웹크롤링 사용<br/>
-            &nbsp;&nbsp;(필자는 웹크롤링을 별로 안좋아함)<br/>
-            - 위키피디아에서 각 JC의 이름과 연결된<br/>
-            &nbsp;&nbsp;고속도로 명을 크롤링
+            - 앱 등을 통해 반려인에게 지금 집의 <br/>
+            &nbsp;&nbsp;디스플레이<br/>
+            - 데모 버전에선 http 서버를 열어 해당 서버에<br/>
+            &nbsp;&nbsp;접속하는 방색을 채용
         </p>
     </div>
 </DefaultPage>

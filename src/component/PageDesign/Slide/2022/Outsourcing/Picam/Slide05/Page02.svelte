@@ -18,16 +18,9 @@
 </script>
 <DefaultPage color={color} fontSize={subhead}>
     <div style="font-size:{context}rem;">
-        {#if $Device["isMobile"]}
-        <p>
-            영상 재생은 데스크탑에서만 지원됩니다.<br/>
-            데스크탑으로 접속 후 확인해주세요.
-        </p>
-        {:else}
-        <iframe width="80%" height="80%" src="https://drive.google.com/file/d/14JhiqRmBSZa35r0zaNZ-4abx9THU8WLE/preview"
-        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
-        title="run_1"></iframe>
-        {/if}
+        <a href="https://github.com/abcbank/PiCameraServer">
+            소스 코드의 경우, 깃허브 링크를 참고해주세요.
+        </a>
     </div>
 </DefaultPage>
 

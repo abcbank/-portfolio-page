@@ -11,19 +11,11 @@
 </script>
 
 <DefaultPage color={color} fontSize={subhead}>
-    <p>Flask</p>
+    <p>Pi Camera</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
-            {#if $Device["isSmallSreen"]}
-            - HTML 호스팅 서버<br/>
-            - 대학 과제 수준이므로 로컬 호스트 사용<br/>
-            - JC의 선택 여부 등을 http 통신으로 받아 이에<br/>
-            &nbsp;&nbsp;대한 처리를 진행
-            {:else}
-            - HTML 호스팅 서버<br/>
-            - 대학 과제 수준이므로 로컬 호스트 사용<br/>
-            - JC의 선택 여부 등을 http 통신으로 받아 이에 대한 처리를 진행
-            {/if}
+            - 라즈베리 파이에 부착<br/>
+            - 데모 버전에서 반려동물의 이미지를 가져오기 위해 사용
         </p>
     </div>
 </DefaultPage>

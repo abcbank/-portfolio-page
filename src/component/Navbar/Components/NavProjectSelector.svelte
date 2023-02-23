@@ -24,7 +24,10 @@
 </script>
 <div class = "Project"class:side={isSide} style="height:{height}px;" in:fade={{ delay: 100 }}>
 <NavItem bind:open={isOpen} Side={ isSide }  preOpen={onOpen}>
-    <span slot="trigger" on:click={(event) => {if(!isSide)pushFunc("/projects")}} on:keypress={empty}>
+    <span slot="trigger" on:click={(event) => {
+            // if(!isSide)
+            //     pushFunc("/projects")
+        }} on:keypress={empty}>
         {#if !isSide}
         <IconButton path={mdiCodeGreaterThanOrEqual} Comment="Project" bind:showComment={isOpen} />
         {:else}

@@ -14,9 +14,10 @@
     <p>Light Source</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
-            - 촬영 시 빛을 순간적으로 비춰주는 역할<br/>
-            - 엘파인 제어기를 구매 후 사용<br/>
-            - 사용 모델: LCP24-100Q
+            - 상단 지그에서 빛을 비춰주는 광원<br/>
+            - 할로겐 램프 사용<br/>
+            - 의뢰주가 요청한 모델을 사용했으나, 이름이 기억 안남<br/>
+            - 사용 모델: ???
         </p>
     </div>
 </DefaultPage>

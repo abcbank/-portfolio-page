@@ -37,7 +37,10 @@
 </script>
 <div class = "OutsourcingSelector"class:side={isSide} style="height:{height}px;" in:fade={{ delay: 100 }}>
 <NavItem bind:open={isOpen} Side={ isSide } preOpen={onOpen}>
-    <span slot="trigger" on:click={(event) => {if(!isSide) pushFunc("/outsourcing")}} on:keypress={empty}>
+    <span slot="trigger" on:click={(event) => {
+        // if(!isSide) 
+        //     pushFunc("/outsourcing")
+        }} on:keypress={empty}>
         {#if !isSide}
         <IconButton path={mdiCurrencyKrw} Comment="Outsourcing" bind:showComment={isOpen} />
         {:else}

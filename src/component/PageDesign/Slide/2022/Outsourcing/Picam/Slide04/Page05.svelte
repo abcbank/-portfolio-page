@@ -11,18 +11,12 @@
 </script>
 
 <DefaultPage color={color} fontSize={subhead}>
-    <p>C dll</p>
+    <p>Motor</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
-            {#if $Device["isSmallSreen"]}
-            - 서버에서 참조하는 라이브러리 파일<br/>
-            - 그래프 및 시작점과 끝점을 전달받고, 다익스트라<br/>
-            &nbsp;&nbsp;알고리즘을 통해 최단 경로 및 거리를 찾아 리턴
-            {:else}
-            - 서버에서 참조하는 라이브러리 파일<br/>
-            - 그래프 및 시작점과 끝점을 전달받고, 다익스트라 알고리즘을 통해 최단 경로 및<br/>
-            &nbsp;&nbsp;거리를 찾아 리턴
-            {/if}
+            - 총 두개의 모터가 사용<br/>
+            - Motor A: 간식을 발사할때 활용<br/>
+            - Motor B: 카메라 위치 조정할때 사용
         </p>
     </div>
 </DefaultPage>

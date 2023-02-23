@@ -9,17 +9,16 @@
 </script>
 
 <DefaultPage color={color} fontSize={subhead}>
-    <p>데이터 가공</p>
+    <p>음성 연결(미구현)</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
             {#if $Device["isSmallSreen"]}
-            - 크롤링한 데이터를 고속도로에 대한 데이터로<br/>
-            &nbsp;&nbsp;가공<br/>
-            - 즉, 어떤 고속도로에 어떤 JC들이 속해있는지 <br/>
-            &nbsp;&nbsp;위주로 데이터 가공
+            - 앱의 기능 중 하나로, 자택에 있는 반려동물에게<br/>
+            &nbsp;&nbsp;내가 말하는 것을 전달<br/>
+            - 반려동물과 통화한다는 느낌
             {:else}
-            - 크롤링한 데이터를 고속도로에 대한 데이터로 가공<br/>
-            - 즉, 어떤 고속도로에 어떤 JC들이 속해있는지 위주로 데이터 가공
+            - 앱의 기능 중 하나로, 자택에 있는 반려동물에게 내가 말하는 것을 전달<br/>
+            - 반려동물과 통화한다는 느낌
             {/if}
         </p>
     </div>

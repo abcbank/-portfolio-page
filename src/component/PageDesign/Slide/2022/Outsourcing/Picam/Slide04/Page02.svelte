@@ -18,18 +18,19 @@
     <div class="borderBox" 
         on:click={()=> {curPage = 3}} on:keydown={()=>{}}
         style="font-size:{context}rem;border: solid {$Color["btnBdrColor"][$season]} 1px; background-color:{$Color["btnBackColor"][$season]}; color:{$Color["btnBdrColor"][$season]}; top: {$Device['isMobile'] ? "50%" : "55%"}; left: {$Device['isMobile'] ? "15%" : "30%"};">
-        Flask
+        Pi<br/>
+        Camera
     </div>
     <div class="borderBox" 
     on:click={()=> {curPage = 4}} on:keydown={()=>{}}
         style="font-size:{context}rem;border: solid {$Color["btnBdrColor"][$season]} 1px; background-color:{$Color["btnBackColor"][$season]}; color:{$Color["btnBdrColor"][$season]}; top: {$Device['isMobile'] ? "50%" : "55%"}; left: {$Device['isMobile'] ? "50%" : "50%"};">
-        Kakao<br/>
-        Map
+        Raspberry<br/>
+        Pi
     </div>
     <div class="borderBox" 
     on:click={()=> {curPage = 5}} on:keydown={()=>{}}
         style="font-size:{context}rem;border: solid {$Color["btnBdrColor"][$season]} 1px; background-color:{$Color["btnBackColor"][$season]}; color:{$Color["btnBdrColor"][$season]}; top: {$Device['isMobile'] ? "50%" : "55%"}; left: {$Device['isMobile'] ? "85%" : "70%"};">
-        C dll
+        Motor
     </div>
 </DefaultPage>
 <style>

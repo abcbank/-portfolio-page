@@ -9,7 +9,7 @@
 </script>
 
 <DefaultPage color={color} fontSize={subhead}>
-    <p>PCB 인스펙터</p>
+    <p>2023</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
             {#if $Device["isSmallSreen"]}

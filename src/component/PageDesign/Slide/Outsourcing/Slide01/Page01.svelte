@@ -9,6 +9,5 @@
 </script>
 
 <DefaultPage color={color} fontSize={head}>
-    <p>PCB Downloader</p>
-    <p>PCB Inspector</p>
+    <h1>Outsourcing</h1>
 </DefaultPage>

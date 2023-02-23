@@ -11,23 +11,16 @@
 </script>
 
 <DefaultPage color={color} fontSize={subhead}>
-    <p>Camera</p>
+    <p>IO</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
-            {#if $Device["isSmallSreen"]}
-            - 이미지를 가져올 카메라<br/>
-            - 사내에 있던 바슬러 카메라를 사용<br/>
-            - PC측에서 이미지를 요청할 경우, GIGE를<br/>
-            &nbsp;&nbsp;통해 PC에 이미지를 전달<br/>
-            - 사용 모델: acA2440-20gm<br/>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            (Basler ace)
-            {:else}
-            - 이미지를 가져올 카메라<br/>
-            - 사내에 있던 바슬러 카메라를 사용<br/>
-            - PC측에서 이미지를 요청할 경우, GIGE를 통해 PC에 이미지를 전달<br/>
-            - 사용 모델: acA2440-20gm(Basler ace)
-            {/if}
+            - Input<br/>
+            &nbsp;&nbsp;- Start Switch<br/>
+            &nbsp;&nbsp;- Emergency Switch<br/>
+            &nbsp;&nbsp;- Hand Sensor<br/>
+            - Output<br/><br/>
+            &nbsp;&nbsp;- Cylinder
+            - 사용 모델: EZI-IO-EN-I/O16N (Fastech)<br/>
         </p>
     </div>
 </DefaultPage>

@@ -11,19 +11,17 @@
 </script>
 
 <DefaultPage color={color} fontSize={subhead}>
-    <p>Kakao Map</p>
+    <p>Raspberry Pi</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
             {#if $Device["isSmallSreen"]}
-            - 웹크롤링을 통해 JC의 정확한 위치 정보를<br/>
-            &nbsp;&nbsp;알아내는 것은 힘들다고 판단<br/>
-            - 따라서 안정성이 보장된 카카오맵 api를<br/>
-            &nbsp;&nbsp;사용해 JC의 위치를 탐색<br/>
-            - 사용자에게 지도 모형을 제공
+            - 데모 제품의 컨트롤러 역할<br/>
+            - 파이 카메라에서 이미지를 받아와 이를 서버에 업로드<br/>
+            - 각종 기능 실행 트리거를 읽어 기능을 실제 수행
             {:else}
-            - 웹크롤링을 통해 JC의 정확한 위치 정보를 알아내는 것은 힘들다고 판단<br/>
-            - 따라서 안정성이 보장된 카카오맵 api를 사용해 JC의 위치를 탐색<br/>
-            - 사용자에게 지도 모형을 제공
+            - 데모 제품의 컨트롤러 역할<br/>
+            - 파이 카메라에서 이미지를 받아와 이를 서버에 업로드<br/>
+            - 각종 기능 실행 트리거를 읽어 기능을 실제 수행
             {/if}
         </p>
     </div>

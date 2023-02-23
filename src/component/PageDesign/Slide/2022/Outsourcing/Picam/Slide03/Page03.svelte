@@ -9,22 +9,10 @@
 </script>
 
 <DefaultPage color={color} fontSize={subhead}>
-    <p>위치 특정</p>
+    <p>간식 던져주기</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
-            {#if $Device["isSmallSreen"]}
-            - 카카오맵 api를 활용해 각 JC들의 위도, 경도<br/>
-            &nbsp;&nbsp;좌표 특정<br/>
-            - 카카오맵에 각각 JC를 검색하고, 결과가 나오는<br/>
-            &nbsp;&nbsp;경우 해당 JC는 실제로 존재하는 JC로 판단,<br/>
-            &nbsp;&nbsp;위도, 경도 데이터를 긁어옴<br/>
-            - 카카오맵에 동일한 이름의 JC가 검색되지 않을 경우<br/>
-            &nbsp;&nbsp;해당 JC에 대한 데이터는 아예 제외
-            {:else}
-            - 카카오맵 api를 활용해 각 JC들의 위도, 경도 좌표 특정<br/>
-            - 카카오맵에 각각 JC를 검색하고, 결과가 나오는 경우 해당 JC는<br/>
-            &nbsp;&nbsp;실제로 존재하는 JC로 판단, 위도, 경도 데이터를 긁어옴
-            {/if}
+            - 모터를 사용해 내장된 간식을 반려동물에게 던져줌
         </p>
     </div>
 </DefaultPage>

@@ -9,5 +9,5 @@
 </script>
 
 <DefaultPage color={color} fontSize={head}>
-    <h2>Outline</h2>
+    <h2>Analogue Plus</h2>
 </DefaultPage>

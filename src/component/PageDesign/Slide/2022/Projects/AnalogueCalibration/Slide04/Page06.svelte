@@ -11,11 +11,11 @@
 </script>
 
 <DefaultPage color={color} fontSize={subhead}>
-    <p>Convyer</p>
+    <p>Photo Sensor</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
-            - 제품 운송용 컨베이어<br/>
-            - 사내 남아있던 재고를 사용
+            - 지그 하단에서 빛을 받아 빛의 밝기를 수치화<br/>
+            - 흑유리들의 포토센서 값과 현재 포토센서의 값을 비교해<br/>
         </p>
     </div>
 </DefaultPage>

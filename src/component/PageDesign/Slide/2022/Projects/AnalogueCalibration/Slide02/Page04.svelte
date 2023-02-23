@@ -12,7 +12,9 @@
     <p>수행 직무</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
-            - 제품을 검사하기 위한 C# 기반 프로그램 제작
+            - 프로그램 전반적인 업데이트<br/>
+            - 기존 소스코드에서 문제제기된 사항 수정<br/>
+            - 의뢰주의 의견을 반영해 UI 수정
         </p>
     </div>
 </DefaultPage>

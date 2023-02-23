@@ -9,7 +9,7 @@
 </script>
 
 <DefaultPage color={color} fontSize={subhead}>
-    <p>프로젝트 목적</p>
+    <p>2021</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
             {#if $Device["isSmallSreen"]}
