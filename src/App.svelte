@@ -37,8 +37,6 @@
 
 	const routes = {
 		'/': Main,
-		'/profile': Profile,
-		'/projects':Projects,
 		'/outsourcing':Outsourcing,
 		
 		'/project/2021/barcode':BarcodeReader_2021,
