@@ -14,7 +14,7 @@
     <p>Raspberry Pi</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
-            {#if $Device["isSmallSreen"]}
+            {#if $Device["isSmallScreen"]}
             - 데모 제품의 컨트롤러 역할<br/>
             - 파이 카메라에서 이미지를 받아와 이를 서버에<br/>
             &nbsp;&nbsp;업로드<br/>

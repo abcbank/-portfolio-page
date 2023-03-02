@@ -12,7 +12,7 @@
     <p>Dijkstra</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
-            {#if $Device["isSmallSreen"]}
+            {#if $Device["isSmallScreen"]}
             - 사용자가 두 점을 지정할 경우, dll 파일로 그래프<br/>
             &nbsp;&nbsp;및 시작점, 끝점을 전달<br/>
             - 리턴으로 두 점 사이의 최단거리 및 경로를 리턴<br/>

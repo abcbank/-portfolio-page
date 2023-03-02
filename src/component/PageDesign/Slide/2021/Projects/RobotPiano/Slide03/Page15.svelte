@@ -11,7 +11,7 @@
     <p>Normal 연주 - 음 연주 쓰레드</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
-            {#if $Device["isSmallSreen"]}
+            {#if $Device["isSmallScreen"]}
             - 음 연주 쓰레드 프로세스<br/>
             &nbsp;&nbsp;1. 서스테인 처리<br/>
             &nbsp;&nbsp;2. 지정된 음에 해당되는 실린더 내림<br/>

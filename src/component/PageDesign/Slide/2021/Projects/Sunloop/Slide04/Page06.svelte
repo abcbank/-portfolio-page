@@ -14,7 +14,7 @@
     <p>Robot Arm</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
-            {#if $Device["isSmallSreen"]}
+            {#if $Device["isSmallScreen"]}
             - 테스트 진행용 로봇팔<br/>
             - 원래 프로세스는 선루프를 로봇팔로 이동하는 <br/>
             &nbsp;&nbsp;방식이었으나, 테스트 단계에선 카메라를 로봇팔에<br/>

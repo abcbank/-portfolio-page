@@ -12,7 +12,7 @@
     <p>옥타브 내림에 의한 음정 부조화</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
-            {#if $Device["isSmallSreen"]}
+            {#if $Device["isSmallScreen"]}
             - 낮은음자리 음표들은 안전거리 확보를<br/>
             &nbsp;&nbsp;위해 기본적으로 1옥타브 내려서 연주<br/>
             - 일부 곡의 경우, 이렇게 옥타브를 내린<br/>

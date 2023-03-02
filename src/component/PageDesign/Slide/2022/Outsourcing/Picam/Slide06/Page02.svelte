@@ -12,7 +12,7 @@
     <p>이미지의 불연속성</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
-            {#if $Device["isSmallSreen"]}
+            {#if $Device["isSmallScreen"]}
             - 이것저것 테스트하는 과정에서 이미지 갱신 속도를<br/>
             &nbsp;&nbsp;높일 필요성을 느낌
             {:else}

@@ -12,7 +12,7 @@
     <p>Solution</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
-            {#if $Device["isSmallSreen"]}
+            {#if $Device["isSmallScreen"]}
             - 카카오 맵 api를 통해 위치를 가져오는 과정에서,<br/>
             &nbsp;&nbsp;제대로 검색 결과가 나오지 않는 JC는 문제가<br/>
             &nbsp;&nbsp;있는 JC라고 판단<br/>

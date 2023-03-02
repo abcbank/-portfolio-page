@@ -12,7 +12,7 @@
     <p>Solution</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
-            {#if $Device["isSmallSreen"]}
+            {#if $Device["isSmallScreen"]}
             - 전자 피아노 중 고급 모델은 특정 건반을<br/>
             &nbsp;&nbsp;기준으로 양쪽을 서로 다른 옥타브에 매핑할<br/>
             &nbsp;&nbsp;수 있음<br/>

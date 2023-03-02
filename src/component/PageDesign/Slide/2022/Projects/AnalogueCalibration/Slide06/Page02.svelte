@@ -12,7 +12,7 @@
     <p>Image Acquire</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
-            {#if $Device["isSmallSreen"]}
+            {#if $Device["isSmallScreen"]}
             - 이동하는 객체를 사진 촬영할 경우<br/>
             &nbsp;&nbsp;이미지의 번짐 현상이 발생<br/>
             {:else}

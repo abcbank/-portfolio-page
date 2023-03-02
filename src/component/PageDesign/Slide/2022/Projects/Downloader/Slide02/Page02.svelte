@@ -12,7 +12,7 @@
     <p>프로젝트 목적</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
-            {#if $Device["isSmallSreen"]}
+            {#if $Device["isSmallScreen"]}
             - 컨베이어 벨트에 있는 물건들을 검사하기 위한<br/>
             &nbsp;&nbsp;기구물 구성<br/>
             - 비전 기반으로 검사 수행<br/>

@@ -11,7 +11,7 @@
     <p>Snap 연주 - 메인 쓰레드</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
-            {#if $Device["isSmallSreen"]}
+            {#if $Device["isSmallScreen"]}
             - 메인 쓰레드 프로세스<br/>
             &nbsp;&nbsp;1. 시작 직후 시간 기록<br/>
             &nbsp;&nbsp;2. 시간의 경과 여부 확인<br/>

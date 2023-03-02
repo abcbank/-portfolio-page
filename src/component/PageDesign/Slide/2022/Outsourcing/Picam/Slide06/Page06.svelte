@@ -12,7 +12,7 @@
     <p>핫스팟에 대한 특이점</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
-            {#if $Device["isSmallSreen"]}
+            {#if $Device["isSmallScreen"]}
             - 기존 핫스팟을 통해 서버를 열고, 이를 휴대폰 혹은<br/>
             &nbsp;&nbsp;노트북으로 접속해 시연하는 방식으로 진행
             - 휴대폰의 핫스팟을 다시 켤때마다 IP주소가 변경된다는<br/>

@@ -12,7 +12,7 @@
     <p>위치 특정</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
-            {#if $Device["isSmallSreen"]}
+            {#if $Device["isSmallScreen"]}
             - 카카오맵 api를 활용해 각 JC들의 위도, 경도<br/>
             &nbsp;&nbsp;좌표 특정<br/>
             - 카카오맵에 각각 JC를 검색하고, 결과가 나오는<br/>

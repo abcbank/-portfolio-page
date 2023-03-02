@@ -12,7 +12,7 @@
     <p>Solution</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
-            {#if $Device["isSmallSreen"]}
+            {#if $Device["isSmallScreen"]}
             - 외주사에서 제공해준 기존 사용하던<br/>
             &nbsp;&nbsp;콘솔 프로그램을 실행<br/>
             - 콘솔 프로그램의 출력을 읽어 업로드의<br/>

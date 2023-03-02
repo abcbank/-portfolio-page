@@ -14,7 +14,7 @@
     <p>Pi Camera</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
-            {#if $Device["isSmallSreen"]}
+            {#if $Device["isSmallScreen"]}
             - 라즈베리 파이에 부착<br/>
             - 데모 버전에서 반려동물의 이미지를 가져오기 위해<br/>
             &nbsp;&nbsp;사용

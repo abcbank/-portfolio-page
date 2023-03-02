@@ -12,7 +12,7 @@
     <p>관성에 의한 번짐 발생</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
-            {#if $Device["isSmallSreen"]}
+            {#if $Device["isSmallScreen"]}
             - 이동 완료 후 로봇팔에 부착된 카메라가 관성에<br/>
             &nbsp;&nbsp;의해 흔들리며 이미지 번짐이 발생
             {:else}

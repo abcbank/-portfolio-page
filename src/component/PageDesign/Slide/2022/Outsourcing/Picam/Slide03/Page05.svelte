@@ -12,7 +12,7 @@
     <p>반려동물 트래킹</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
-            {#if $Device["isSmallSreen"]}
+            {#if $Device["isSmallScreen"]}
             - 반려동물이 카메라에 보였을 경우, 모터들을 사용해<br/>
             &nbsp;&nbsp;반려동물이 카메라에 제대로 나오도록 카메라 위치를<br/>
             &nbsp;&nbsp;조정

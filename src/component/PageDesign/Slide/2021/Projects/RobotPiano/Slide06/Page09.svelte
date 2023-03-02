@@ -12,7 +12,7 @@
     <p>Solution</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
-            {#if $Device["isSmallSreen"]}
+            {#if $Device["isSmallScreen"]}
             - 실린더를 에어백이 내장된 실린더로 변경<br/>
             - 부딛히는 소리가 상당 부분 없어졌지만, 아예<br/>
             &nbsp;&nbsp;없어진 것은 아님.<br/>

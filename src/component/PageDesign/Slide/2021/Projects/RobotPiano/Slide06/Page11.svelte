@@ -12,7 +12,7 @@
     <p>Solution</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
-            {#if $Device["isSmallSreen"]}
+            {#if $Device["isSmallScreen"]}
             - 감정을 어느정도 넣기 위해 별도의 Snap 연주<br/>
             &nbsp;&nbsp;모드 추가<br/>
             - 보완하기 위해선 건반을 누르는 방식 자체를<br/>

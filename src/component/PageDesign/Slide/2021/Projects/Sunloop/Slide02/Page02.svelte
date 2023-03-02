@@ -12,7 +12,7 @@
     <p>프로젝트 목적</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
-            {#if $Device["isSmallSreen"]}
+            {#if $Device["isSmallScreen"]}
             - 현대차의 선루프 제조 업체의 외주<br/>
             - 선루프의 플라스틱 프레임을 제작 및검사 장비를<br/>
             &nbsp;&nbsp;제작 요청<br/>

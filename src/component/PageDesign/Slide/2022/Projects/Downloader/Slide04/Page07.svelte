@@ -14,7 +14,7 @@
     <p>PC</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
-            {#if $Device["isSmallSreen"]}
+            {#if $Device["isSmallScreen"]}
             - 주요 제어기 역할<br/>
             - 각종 센서를 통해 카메라의 ROI에 물체가<br/>
             &nbsp;&nbsp;있는지 확인하고, 물체가 있을 경우<br/>

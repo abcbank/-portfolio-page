@@ -14,7 +14,7 @@
     <p>Camera</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
-            {#if $Device["isSmallSreen"]}
+            {#if $Device["isSmallScreen"]}
             - 이미지를 가져올 카메라<br/>
             - 사내에 있던 바슬러 카메라를 사용<br/>
             - PC측에서 이미지를 요청할 경우, GIGE를<br/>

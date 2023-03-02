@@ -12,7 +12,7 @@
     <p>불연속적 검사 프로세스</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
-            {#if $Device["isSmallSreen"]}
+            {#if $Device["isSmallScreen"]}
             1. 컨베이어를 통해 제품이 로딩<br/>
             2. 로딩된 제품이 센서에 감지되는 순간,<br/>
             &nbsp;&nbsp;&nbsp;&nbsp;카메라를 통해 이미지 촬영<br/>

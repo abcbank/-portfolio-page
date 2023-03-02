@@ -12,7 +12,7 @@
     <p>UI</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
-            {#if $Device["isSmallSreen"]}
+            {#if $Device["isSmallScreen"]}
             - 사용자가 두 JC를 선택할 경우, 두 JC로<br/>
             &nbsp;&nbsp;이동하는 최단 경로를 표기<br/>
             - 선택된 JC가 없을 경우, 고속도로 연결 현황을<br/>

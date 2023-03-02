@@ -12,7 +12,7 @@
     <p>프로젝트 목적</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
-            {#if $Device["isSmallSreen"]}
+            {#if $Device["isSmallScreen"]}
             - 용접면을 생산하는 과정에서, 가변저항을 정확하게<br/>
             &nbsp;&nbsp;조정할 수 있도록 보조해주는 장비 제작<br/>
             - 사용자는 UI의 차광도를 확인해 현재 가변저항 값이<br/>

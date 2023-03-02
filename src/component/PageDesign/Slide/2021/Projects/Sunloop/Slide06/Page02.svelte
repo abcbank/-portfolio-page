@@ -12,7 +12,7 @@
     <p>이미지 번짐</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
-            {#if $Device["isSmallSreen"]}
+            {#if $Device["isSmallScreen"]}
             - 카메라 노출 시간을 대기하지 않고 카메라를<br/>
             &nbsp;&nbsp;이동해 번짐 발생<br/>
             - 일부 경우, 이동 완료 전 카메라 노출을 시작해<br/>

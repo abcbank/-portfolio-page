@@ -12,7 +12,7 @@
     <p>프로젝트를 마치며</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
-            {#if $Device["isSmallSreen"]}
+            {#if $Device["isSmallScreen"]}
             - 사실 처음엔 이걸 돈 받고 해줘도 되나 싶었음<br/>
             - 오히려 너무 어색하지 않도록 난이도를 자체<br/>
             &nbsp;&nbsp;조절하는게 더 어려웠음

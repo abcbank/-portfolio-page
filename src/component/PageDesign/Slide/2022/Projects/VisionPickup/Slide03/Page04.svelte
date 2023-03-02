@@ -12,7 +12,7 @@
     <p>연속적 검사 프로세스</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
-            {#if $Device["isSmallSreen"]}
+            {#if $Device["isSmallScreen"]}
             1. 카메라는 컨베이어의 상단에서 연속적으로<br/>
             &nbsp;&nbsp;&nbsp;&nbsp;촬영<br/>
             2. 컨베이어를 통해 제품이 로딩<br/>

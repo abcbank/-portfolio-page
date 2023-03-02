@@ -6,13 +6,15 @@
     export let head = 2;
     export let subhead = 1.5;
     export let context = 1;
+    
+    console.log($Device)
 </script>
 
 <DefaultPage color={color} fontSize={subhead}>
     <p>프로젝트 목적</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
-            {#if $Device["isSmallSreen"]}
+            {#if $Device["isSmallScreen"]}
             - 반려동물이 반려인이 자택에 없는 경우, 외로움을<br/>
             &nbsp;&nbsp;심하게 탐<br/>
             - 반대로 반려인은 자택에 없는 경우, 반려동물의 상태를<br/>

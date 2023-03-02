@@ -11,7 +11,7 @@
 
 <DefaultPage color={color} fontSize={context}>
     <p>
-        {#if $Device["isMobile"]}
+        {#if $Device["isSmallScreen"]}
             그리고 슬라이드는 휠로도<br/>이동할 수 있답니다
         {:else}
             <p>그리고 슬라이드는 휠로도 이동할 수 있답니다

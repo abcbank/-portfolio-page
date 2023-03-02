@@ -12,7 +12,7 @@
     <p>실린더 소음</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
-            {#if $Device["isSmallSreen"]}
+            {#if $Device["isSmallScreen"]}
             - 일반 실린더의 경우, 기압을 세게 넣어 동작할<br/>
             &nbsp;&nbsp;경우 소음이 크게 발생<br/>
             - 해당 소음으로 인해 연주 자체가 방해받는 경우가<br/>

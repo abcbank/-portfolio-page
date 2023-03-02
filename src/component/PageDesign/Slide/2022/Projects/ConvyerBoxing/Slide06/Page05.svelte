@@ -12,7 +12,7 @@
     <p>Solution</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
-            {#if $Device["isSmallSreen"]}
+            {#if $Device["isSmallScreen"]}
             - 스트로브와 유사하게 동작하도록 프로그램 구성<br/>
             - 실제 주요 기능을 따라 구현하긴 힘드나, 최소한<br/>
             &nbsp;&nbsp;스트로브를 수행하는 것처럼 보일 필요가<br/>
