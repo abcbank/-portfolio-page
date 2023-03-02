@@ -173,6 +173,7 @@
 	$Device["agent"] = navigator.userAgent.toLowerCase();
 
 	onMount(() => {
+		windowResize();
 		$Device["isSmallScreen"] = document.body.clientWidth > 720 ? false : true;
 		$Device["isMobile"] = false;
 		$LastPage["WindowResized"] = false;

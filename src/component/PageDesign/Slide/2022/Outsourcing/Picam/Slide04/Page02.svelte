@@ -24,7 +24,6 @@
     <div class="borderBox" 
     on:click={()=> {curPage = 4}} on:keydown={()=>{}}
         style="font-size:{context}rem;border: solid {$Color["btnBdrColor"][$season]} 1px; background-color:{$Color["btnBackColor"][$season]}; color:{$Color["btnBdrColor"][$season]}; top: {$Device['isMobile'] ? "50%" : "55%"}; left: {$Device['isMobile'] ? "50%" : "50%"};">
-        Raspberry<br/>
         Pi
     </div>
     <div class="borderBox" 

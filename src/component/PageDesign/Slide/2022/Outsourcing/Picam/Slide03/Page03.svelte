@@ -12,7 +12,12 @@
     <p>간식 던져주기</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
+            {#if $Device["isSmallSreen"]}
+            - 모터를 사용해 내장된 간식을 반려동물에게<br/>
+            &nbsp;&nbsp;던져줌
+            {:else}
             - 모터를 사용해 내장된 간식을 반려동물에게 던져줌
+            {/if}
         </p>
     </div>
 </DefaultPage>
