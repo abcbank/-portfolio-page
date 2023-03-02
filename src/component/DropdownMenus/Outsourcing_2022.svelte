@@ -1,6 +1,6 @@
 <script>
     import { LastPage,season } from '../../global'
-    import { mdiArrowLeft, mdiCalendarMonthOutline, mdiChevronRight   } from '@mdi/js';
+    import { mdiArrowLeft, mdiCalendarMonthOutline, mdiChevronRight,mdiCamera,mdiCalculatorVariant ,mdiNavigation    } from '@mdi/js';
     import MenuItem from '../Dropdown/MenuItem.svelte'
 	import MenuFrame from '../Dropdown/DefaultMenu.svelte';
     import { push } from "svelte-spa-router";
@@ -40,15 +40,15 @@
         pushRouter("/outsourcing/2022/picam")
         rerandering();
         afterSelect();
-    }}  leftIcon={mdiCalendarMonthOutline} bind:isChecked={isChecked["picam"]} >Picamera</MenuItem>
+    }}  leftIcon={mdiCamera } bind:isChecked={isChecked["picam"]} >Picamera</MenuItem>
     <MenuItem on:click={() => {
         pushRouter("/outsourcing/2022/calculator")
         rerandering();
         afterSelect();
-    }}   leftIcon={mdiCalendarMonthOutline} bind:isChecked={isChecked["calculator"]}>Calculator</MenuItem>
+    }}   leftIcon={mdiCalculatorVariant } bind:isChecked={isChecked["calculator"]}>Calculator</MenuItem>
     <MenuItem on:click={() => {
         pushRouter("/outsourcing/2022/navigation")
         rerandering();
         afterSelect();
-    }}   leftIcon={mdiCalendarMonthOutline} bind:isChecked={isChecked["navigation"]}>Navigation</MenuItem>
+    }}   leftIcon={mdiNavigation } bind:isChecked={isChecked["navigation"]}>Navigation</MenuItem>
 </MenuFrame>
