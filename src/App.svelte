@@ -12,8 +12,6 @@
 	import Router from 'svelte-spa-router'
 
 	import Main from './component/routes/Main.svelte'
-	import Profile from './component/routes/Profile.svelte'
-	import Projects from './component/routes/Projects.svelte'
 	import Outsourcing from './component/routes/Outsourcing.svelte'
 
 	import BarcodeReader_2021 from "./component/routes/2021/Projects/BarcodeReader.svelte";
