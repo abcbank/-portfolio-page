@@ -177,7 +177,7 @@
 			$Device["isSmallScreen"] = false;
 		else
 			$Device["isSmallScreen"] = true;
-			console.log($Device["isSmallScreen"]);
+		console.log($Device["isSmallScreen"]);
 
 		$Device["isMobile"] = false;
 		$LastPage["WindowResized"] = false;

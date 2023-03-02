@@ -12,7 +12,8 @@
     <p>제품 별 설정</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
-            - 의뢰주의 각 제품에 대한 옵션을 선택할수 있도록 설정
+            - 의뢰주의 각 제품에 대한 옵션을 선택할수 있도록<br/>
+            &nbsp;&nbsp;설정
             - 각 제품은 각기 다른 설정 파일을 가짐
         </p>
     </div>
