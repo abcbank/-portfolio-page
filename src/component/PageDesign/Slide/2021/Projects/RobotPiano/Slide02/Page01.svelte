@@ -9,5 +9,5 @@
 </script>
 
 <DefaultPage color={color} fontSize={head}>
-    <p>Outline</p>
+    <h2>Outline</h2>
 </DefaultPage>
