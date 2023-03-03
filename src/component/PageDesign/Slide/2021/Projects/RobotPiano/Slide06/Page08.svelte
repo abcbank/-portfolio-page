@@ -16,7 +16,7 @@
             - 일반 실린더의 경우, 기압을 세게 넣어 동작할<br/>
             &nbsp;&nbsp;경우 소음이 크게 발생<br/>
             - 해당 소음으로 인해 연주 자체가 방해받는 경우가<br/>
-            &nbsp;&nbsp;존재
+            &nbsp;&nbsp;존재<br/>
             - Program Result 8페이지의 Snap 연주 데모 영상의<br/>
             &nbsp;&nbsp;경우, 실린더를 교체하기 전 촬영한 영상임
             {:else}
