@@ -10,4 +10,5 @@
 
 <DefaultPage color={color} fontSize={head}>
     <h1>PCB Downloader</h1>
+    <h1>PCB Inspector</h1>
 </DefaultPage>
