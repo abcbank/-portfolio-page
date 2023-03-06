@@ -9,5 +9,5 @@
 </script>
 
 <DefaultPage color={color} fontSize={head}>
-    <p>Convyer Vision</p>
+    <h1>Robot Piano</h1>
 </DefaultPage>

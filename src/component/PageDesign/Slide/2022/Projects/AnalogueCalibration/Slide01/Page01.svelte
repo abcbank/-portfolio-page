@@ -9,5 +9,5 @@
 </script>
 
 <DefaultPage color={color} fontSize={head}>
-    <p>Analogue Calibration</p>
+    <h1>Analogue Calibration</h1>
 </DefaultPage>

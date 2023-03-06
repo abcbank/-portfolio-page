@@ -9,5 +9,5 @@
 </script>
 
 <DefaultPage color={color} fontSize={head}>
-    <p>Convyer Vision</p>
+    <h1>Vision Pickup</h1>
 </DefaultPage>
