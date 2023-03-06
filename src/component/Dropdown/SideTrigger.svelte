@@ -3,6 +3,7 @@
 	import IconButton from './IconButton.svelte';
 	import {mdiChevronLeft,mdiChevronRight} from "@mdi/js"
 	export let leftIcon = null;
+	export let onOpen;
 	export let isOpen;
 	export let isDropdown;
 	export let leftIconColor = "currentcolor"

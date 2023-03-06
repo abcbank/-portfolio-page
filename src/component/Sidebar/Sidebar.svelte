@@ -3,6 +3,7 @@
 	import {clickOutside} from './clickOutside.js';
 
 	export let open = false
+    
     export let asideWidth;
     export let onClose;
 

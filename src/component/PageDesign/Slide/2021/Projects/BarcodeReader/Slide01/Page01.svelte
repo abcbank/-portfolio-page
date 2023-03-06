@@ -7,5 +7,8 @@
 </script>
 
 <DefaultPage color={color} fontSize={head}>
-    <h1>Barcode Collector</h1>
+    <h1>
+    Barcode<br/>
+    Collector
+    </h1>
 </DefaultPage>

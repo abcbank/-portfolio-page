@@ -13,8 +13,8 @@
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
             {#if $Device["isSmallScreen"]}
-            - 얼추 가닥은 잡혔으나, http 서버에 대한 이해도가<br/>
-            &nbsp;&nbsp;부족해 생기는 문제점 디버깅
+            - 얼추 가닥은 잡혔으나, http 서버에 대한<br/>
+            &nbsp;&nbsp;이해도가 부족해 생기는 문제점 디버깅
             {:else}
             - 얼추 가닥은 잡혔으나, http 서버에 대한 이해도가 부족해 생기는 문제점 디버깅
             {/if}
