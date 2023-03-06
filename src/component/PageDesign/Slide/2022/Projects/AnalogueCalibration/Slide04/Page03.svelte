@@ -18,8 +18,8 @@
             &nbsp;&nbsp;- Start Switch<br/>
             &nbsp;&nbsp;- Emergency Switch<br/>
             &nbsp;&nbsp;- Hand Sensor<br/>
-            - Output<br/><br/>
-            &nbsp;&nbsp;- Cylinder
+            - Output<br/>
+            &nbsp;&nbsp;- Cylinder<br/>
             - 사용 모델: EZI-IO-EN-I/O16N (Fastech)<br/>
         </p>
     </div>
