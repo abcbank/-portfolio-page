@@ -14,6 +14,7 @@
     let isChecked = {};
     
     function rerandering(){
+        if($LastPage[])
         for(var i in isChecked)
             isChecked[i] = false;
         isChecked[$LastPage["Layer3"]] = true;
