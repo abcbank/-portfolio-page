@@ -14,10 +14,11 @@
     let isChecked = {};
     
     function rerandering(){
-        if($LastPage[])
-        for(var i in isChecked)
-            isChecked[i] = false;
-        isChecked[$LastPage["Layer3"]] = true;
+        if($LastPage["Layer2"] == "2021"){
+            for(var i in isChecked)
+                isChecked[i] = false;
+            isChecked[$LastPage["Layer3"]] = true;
+        }
     }
     function pushRouter(link){
         link = link.toLowerCase();
