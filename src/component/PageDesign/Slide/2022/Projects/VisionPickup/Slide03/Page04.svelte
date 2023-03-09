@@ -9,28 +9,55 @@
 </script>
 
 <DefaultPage color={color} fontSize={subhead}>
-    <p>박스 전처리 시퀀스</p>
+    <p>전처리 알고리즘</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
             {#if $Device["isSmallScreen"]}
-            1. 카메라는 컨베이어의 상단에서 연속적으로<br/>
-            &nbsp;&nbsp;&nbsp;&nbsp;촬영<br/>
-            2. 컨베이어를 통해 제품이 로딩<br/>
-            3. 촬영된 이미지을 통해 해당 제품이 정상<br/>
-            &nbsp;&nbsp;&nbsp;&nbsp;제품인지, 불량품인지 판단<br/>
-            4. 정상 제품일 경우 초록색, 불량품일 경우<br/>
-            &nbsp;&nbsp;&nbsp;&nbsp;빨간색으로 이미지 및 제품의 바운딩 박스를<br/>
-            &nbsp;&nbsp;&nbsp;&nbsp;사용자에게 보여줌<br/>
-            5. 현재 ROI에 있는 모든 제품의 개수, 각 제품 별<br/>
-            &nbsp;&nbsp;&nbsp;&nbsp;정확도 등을 사용자에게 표 형태로 보여줌
+            4. zMat에 대해, 유효하지 않은 영역(빛이 다시<br/>
+            &nbsp;&nbsp;반사되어 돌아오지 않은 영역)과 유효한 영역<br/>
+            &nbsp;&nbsp;(빛이 반사되어 돌아온 영역) 분리<br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            - ValidMask: 유효 영역 마스크<br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            - InvalidMask: 유효하지 않은 영역<br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;마스크<br/>
+            5. 유효하지 않은 영역의 zMat에 주변 픽셀의 평균값 대입<br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            - zMat에 그대로 대입<br/>
+            6.  가우시안 블러 수행<br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            - BlurMat: zMat에서 가우시안 블러를<br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;수행한 데이터<br/>
+            7. 천장 쓰레시홀드보다 더 높은 값을 가진<br/>
+            &nbsp;&nbsp;값을 분리<br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            - Floor: 천장 쓰레시홀드보다 더 높은<br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;영역 마스크<br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            - FloorInv: 천장 쓰레시홀드보다 더<br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;낮은 영역 마스크<br/>
+            7-1. 박스의 경우, 박스 전처리 시퀀스 수행<br/>
+            7-2. 그 외의 경우, 비닐 전처리 시퀀스 수행
             {:else}
-            1. 카메라는 컨베이어의 상단에서 연속적으로 촬영<br/>
-            2. 컨베이어를 통해 제품이 로딩<br/>
-            3. 촬영된 이미지을 통해 해당 제품이 정상 제품인지, 불량품인지 판단<br/>
-            4. 정상 제품일 경우 초록색, 불량품일 경우 빨간색으로 이미지 및<br/>
-            &nbsp;&nbsp;&nbsp;&nbsp;제품의 바운딩 박스를 사용자에게 보여줌<br/>
-            5. 현재 ROI에 있는 모든 제품의 개수, 각 제품 별 정확도 등을 사용자에게<br/>
-            &nbsp;&nbsp;&nbsp;&nbsp;표 형태로 보여줌
+            4. zMat에 대해, 유효하지 않은 영역(빛이 다시 반사되어 돌아오지 않은 영역)과 유효한 영역<br/>
+            &nbsp;&nbsp;(빛이 반사되어 돌아온 영역) 분리<br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            - ValidMask: 유효 영역 마스크<br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            - InvalidMask: 유효하지 않은 영역 마스크<br/>
+            5. 유효하지 않은 영역의 zMat에 주변 픽셀의 평균값 대입<br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            - zMat에 그대로 대입<br/>
+            6.  가우시안 블러 수행<br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            - BlurMat: zMat에서 가우시안 블러를 수행한 데이터<br/>
+            7. 천장 쓰레시홀드보다 더 높은 값을 가진 값을 분리<br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            - Floor: 천장 쓰레시홀드보다 더 높은 영역 마스크<br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            - FloorInv: 천장 쓰레시홀드보다 더 낮은 영역 마스크<br/>
+            7-1. 박스의 경우, 박스 전처리 시퀀스 수행<br/>
+            7-2. 그 외의 경우, 비닐 전처리 시퀀스 수행
             {/if}
         </p>
     </div>
