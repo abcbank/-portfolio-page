@@ -9,7 +9,7 @@
 </script>
 
 <DefaultPage color={color} fontSize={subhead}>
-    <p>전처리 알고리즘</p>
+    <p>전처리 구현</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
             {#if $Device["isSmallScreen"]}
