@@ -11,22 +11,22 @@
 </script>
 
 <DefaultPage color={color} fontSize={subhead}>
-    <p>Camera</p>
+    <p>PC</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
+            - 전반적인 스퀀스를 통제하는 PC<br/>
+            - 트리거를 통해 알고리즘을 수행하고, 그에 결과를<br/>
+            &nbsp;&nbsp;통해 로봇 팔 제어<br/>
+            - 사내 PC 사용
             {#if $Device["isSmallScreen"]}
-            - 이미지를 가져올 카메라<br/>
-            - 사내에 있던 바슬러 카메라를 사용<br/>
-            - PC측에서 이미지를 요청할 경우, GIGE를<br/>
-            &nbsp;&nbsp;통해 PC에 이미지를 전달<br/>
-            - 사용 모델: acA2440-20gm<br/>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            (Basler ace)
+            - 전반적인 스퀀스를 통제하는 PC<br/>
+            - 트리거를 통해 알고리즘을 수행하고, 그에 결과를<br/>
+            &nbsp;&nbsp;통해 로봇 팔 제어<br/>
+            - 사내 PC 사용
             {:else}
-            - 이미지를 가져올 카메라<br/>
-            - 사내에 있던 바슬러 카메라를 사용<br/>
-            - PC측에서 이미지를 요청할 경우, GIGE를 통해 PC에 이미지를 전달<br/>
-            - 사용 모델: acA2440-20gm(Basler ace)
+            - 전반적인 스퀀스를 통제하는 PC<br/>
+            - 트리거를 통해 알고리즘을 수행하고, 그에 결과를 통해 로봇 팔 제어<br/>
+            - 사내 PC 사용
             {/if}
         </p>
     </div>

@@ -11,7 +11,7 @@
 </script>
 
 <DefaultPage color={color} fontSize={subhead}>
-    <p>Convyer</p>
+    <p>Robot Hand</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
             - 제품 운송용 컨베이어<br/>

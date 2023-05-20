@@ -3,7 +3,7 @@
     import DefaultPage from "../../../PageDesign/DefaultPage.svelte"
     import Slide01 from '../../../PageDesign/Slide/2022/Projects/VisionPickup/Slide01.svelte'
     import Slide02 from '../../../PageDesign/Slide/2022/Projects/VisionPickup/Slide02.svelte'
-    import Slide03 from '../../../PageDesign/Slide/2022/Projects/VisionPickup/Slide01.svelte'
+    import Slide03 from '../../../PageDesign/Slide/2022/Projects/VisionPickup/Slide03.svelte'
     import Slide04 from '../../../PageDesign/Slide/2022/Projects/VisionPickup/Slide04.svelte'
     import Slide05 from '../../../PageDesign/Slide/2022/Projects/VisionPickup/Slide05.svelte'
     import Slide06 from '../../../PageDesign/Slide/2022/Projects/VisionPickup/Slide06.svelte'
