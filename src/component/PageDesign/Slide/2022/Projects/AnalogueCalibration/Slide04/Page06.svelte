@@ -11,7 +11,7 @@
 </script>
 
 <DefaultPage color={color} fontSize={subhead}>
-    <p>Photo Sensor</p>wht
+    <p>Photo Sensor</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
             {#if $Device["isSmallScreen"]}
@@ -22,8 +22,7 @@
             {:else}
             - 지그 하단에서 빛을 받아 빛의 밝기를 수치화<br/>
             - 흑유리들의 포토센서 값과 현재 포토센서의 값을 비교해 현재 차광도를 연산
+            {/if}
         </p>
     </div>
 </DefaultPage>
-<style>
-</style>
