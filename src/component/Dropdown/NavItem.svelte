@@ -1,11 +1,14 @@
 <script>
     import { empty } from "svelte/internal";
-
+    import { Device, ContextVisible, season } from '../../global'
+    import { onMount } from 'svelte'
     export let open = false;
     let open_pre = false;
     let t;
     let openTimerRunning = false;
     let closeTimerRunning = false;
+
+    let fontSize = 1.5
 
     export let Side = false;
     export let preOpen = isEmpty;
@@ -13,6 +16,12 @@
     function isEmpty(){
 
     }
+    onMount(()=>{
+        if($Device["isSmallScreen"])
+            fontSize = 5;
+        else
+            fontSize = 15;
+    })
   </script>
   
   <li class="nav-item" class:isSide = {Side}

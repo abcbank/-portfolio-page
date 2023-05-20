@@ -8,5 +8,5 @@
 </script>
 
 <DefaultPage color={color} fontSize={head}>
-    <h2>Finale</h2>
+    <h2>Project Review</h2>
 </DefaultPage>

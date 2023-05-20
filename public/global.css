@@ -6,13 +6,6 @@ html, body {
 	overflow-y: hidden;
 
 	font-size: 16px;
-	  
-	@media (min-width: 480px) {
-	  font-size: 8px;
-	}
-	@media (min-width: 1024px) {
-	  font-size: 12px;
-	}
 }
 
 body {
