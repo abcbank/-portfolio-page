@@ -11,11 +11,11 @@
 </script>
 
 <DefaultPage color={color} fontSize={subhead}>
-    <p>Convyer</p>
+    <p>PC</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
-            - 제품 운송용 컨베이어<br/>
-            - 사내 남아있던 재고를 사용
+            - 산업용 컴퓨터(i3) 사용<br/>
+            - PLC와 통신하며 PLC의 상태를 디스플레이
         </p>
     </div>
 </DefaultPage>

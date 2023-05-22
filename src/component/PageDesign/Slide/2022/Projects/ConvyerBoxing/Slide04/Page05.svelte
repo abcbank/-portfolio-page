@@ -11,12 +11,14 @@
 </script>
 
 <DefaultPage color={color} fontSize={subhead}>
-    <p>Light Source</p>
+    <p>PLC</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
-            - 촬영 시 빛을 순간적으로 비춰주는 역할<br/>
-            - 엘파인 제어기를 구매 후 사용<br/>
-            - 사용 모델: LCP24-100Q
+            - 두가지 프로세스를 제어<br/>
+            - IO 제어<br/>
+            - 제품 컨베이어 제어<br/>
+            - MELSEC 통신을 통해 PC와 통신<br/>
+            - 사용 모델: 미스비시 Q001
         </p>
     </div>
 </DefaultPage>

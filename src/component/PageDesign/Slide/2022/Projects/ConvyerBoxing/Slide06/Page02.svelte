@@ -9,15 +9,10 @@
 </script>
 
 <DefaultPage color={color} fontSize={subhead}>
-    <p>Image Acquire</p>
+    <p>PLC-PC Communication</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
-            {#if $Device["isSmallScreen"]}
-            - 이동하는 객체를 사진 촬영할 경우<br/>
-            &nbsp;&nbsp;이미지의 번짐 현상이 발생<br/>
-            {:else}
-            - 이동하는 객체를 사진 촬영할 경우 이미지의 번짐 현상이 발생<br/>
-            {/if}
+            - PLC-PC 사이의 MESLEC 프로토콜 구현<br/>
         </p>
     </div>
 </DefaultPage>

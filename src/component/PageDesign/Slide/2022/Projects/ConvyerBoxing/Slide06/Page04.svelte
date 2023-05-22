@@ -9,16 +9,16 @@
 </script>
 
 <DefaultPage color={color} fontSize={subhead}>
-    <p>스트로브 기능 구현</p>
+    <p>통신 속도에 의한 딜레이</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
             {#if $Device["isSmallScreen"]}
-            - 스트로브 기능이 필요한 일부 상황이<br/>
-            &nbsp;&nbsp;있었으나, 스트로브 기능을 지원하지 않는<br/>
-            &nbsp;&nbsp;광원 컨트롤러를 사용
+            - 접점을 읽어올 때, 필요 이상의 시간이 소요<br/>
+            - 특히 모니터링을 위해 많은 접점을 읽어야 하는 바,<br/>
+            &nbsp;&nbsp;UI가 버벅일 정도로 심한 딜레이가 발생
             {:else}
-            - 스트로브 기능이 필요한 일부 상황이 있었으나, 스트로브 기능을 지원하지<br/>
-            &nbsp;&nbsp;않는 광원 컨트롤러를 사용
+            - 접점을 읽어올 때, 필요 이상의 시간이 소요<br/>
+            - 특히 모니터링을 위해 많은 접점을 읽어야 하는 바, UI가 버벅일 정도로 심한 딜레이가 발생
             {/if}
         </p>
     </div>

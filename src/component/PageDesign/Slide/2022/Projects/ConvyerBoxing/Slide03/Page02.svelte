@@ -9,19 +9,19 @@
 </script>
 
 <DefaultPage color={color} fontSize={subhead}>
-    <p>비전을 통한 검사</p>
+    <p>박스 컨베이어</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
             {#if $Device["isSmallScreen"]}
-            - 동일한 제품에 대해 비전을 통한 검사 수행<br/>
-            - 각 제품은 컨베이어를 통해 이동하며, 카메라는<br/>
-            &nbsp;&nbsp;상단에서 이동하는 제품들을 촬영<br/>
-            - PC는 촬영된 이미지를 알고리즘을 통해 정상적인<br/>
-            &nbsp;&nbsp;제품인지 판단
+            - 완성된 상자가 뒤에서 하나씩 로딩<br/>
+            - 이렇게 완성된 상자는 일렬로 나열되어있다고<br/>
+            &nbsp;&nbsp;가정<br/>
+            - 나열된 상자를 정확히 하나씩 뺄 수 있는 구조<br/>
+            &nbsp;&nbsp;제작
             {:else}
-            - 동일한 제품에 대해 비전을 통한 검사 수행<br/>
-            - 각 제품은 컨베이어를 통해 이동하며, 카메라는 상단에서 이동하는 제품들을 촬영<br/>
-            - PC는 촬영된 이미지를 알고리즘을 통해 정상적인 제품인지 판단
+            - 완성된 상자가 뒤에서 하나씩 로딩<br/>
+            - 이렇게 완성된 상자는 일렬로 나열되어있다고 가정<br/>
+            - 나열된 상자를 정확히 하나씩 뺄 수 있는 구조 제작
             {/if}
         </p>
     </div>

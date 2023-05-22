@@ -9,5 +9,5 @@
 </script>
 
 <DefaultPage color={color} fontSize={head}>
-    <h1>Box Packing</h1>
+    <h1>Convyer Boxing</h1>
 </DefaultPage>

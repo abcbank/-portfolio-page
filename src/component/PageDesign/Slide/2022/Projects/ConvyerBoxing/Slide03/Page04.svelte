@@ -9,28 +9,18 @@
 </script>
 
 <DefaultPage color={color} fontSize={subhead}>
-    <p>연속적 검사 프로세스</p>
+    <p>제품 컨베이어</p>
     <div style="font-size:{context}rem; text-align:left; margin-top:20px;">
         <p>
             {#if $Device["isSmallScreen"]}
-            1. 카메라는 컨베이어의 상단에서 연속적으로<br/>
-            &nbsp;&nbsp;&nbsp;&nbsp;촬영<br/>
-            2. 컨베이어를 통해 제품이 로딩<br/>
-            3. 촬영된 이미지을 통해 해당 제품이 정상<br/>
-            &nbsp;&nbsp;&nbsp;&nbsp;제품인지, 불량품인지 판단<br/>
-            4. 정상 제품일 경우 초록색, 불량품일 경우<br/>
-            &nbsp;&nbsp;&nbsp;&nbsp;빨간색으로 이미지 및 제품의 바운딩 박스를<br/>
-            &nbsp;&nbsp;&nbsp;&nbsp;사용자에게 보여줌<br/>
-            5. 현재 ROI에 있는 모든 제품의 개수, 각 제품 별<br/>
-            &nbsp;&nbsp;&nbsp;&nbsp;정확도 등을 사용자에게 표 형태로 보여줌
+            - 택배 상자 하나에 포장할 제품들을 각 섹터별로<br/>
+            &nbsp;&nbsp;배치<br/>
+            - 컨베이어가 돌며 적외선 센서를 통해 각 섹터를<br/>
+            &nbsp;&nbsp;검사하고, 그 섹터에 제품이 있을 경우 실린더를 통해 박스에 넣어줌
             {:else}
-            1. 카메라는 컨베이어의 상단에서 연속적으로 촬영<br/>
-            2. 컨베이어를 통해 제품이 로딩<br/>
-            3. 촬영된 이미지을 통해 해당 제품이 정상 제품인지, 불량품인지 판단<br/>
-            4. 정상 제품일 경우 초록색, 불량품일 경우 빨간색으로 이미지 및<br/>
-            &nbsp;&nbsp;&nbsp;&nbsp;제품의 바운딩 박스를 사용자에게 보여줌<br/>
-            5. 현재 ROI에 있는 모든 제품의 개수, 각 제품 별 정확도 등을 사용자에게<br/>
-            &nbsp;&nbsp;&nbsp;&nbsp;표 형태로 보여줌
+            - 택배 상자 하나에 포장할 제품들을 각 섹터별로 배치<br/>
+            - 컨베이어가 돌며 적외선 센서를 통해 각 섹터를 검사하고, 그 섹터에 제품이 있을<br/>
+            &nbsp;&nbsp;경우 실린더를 통해 박스에 넣어줌
             {/if}
         </p>
     </div>

@@ -17,34 +17,23 @@
     </div>
     <div class="borderBox" 
         on:click={()=> {curPage = 3}} on:keydown={()=>{}}
-        style="font-size:{context}rem;border: solid {$Color["btnBdrColor"][$season]} 1px; background-color:{$Color["btnBackColor"][$season]}; color:{$Color["btnBdrColor"][$season]};top: 35%; left: {$Device['isMobile'] ? "15%" : "30%"};">
-        Camera
+        style="font-size:{context}rem;border: solid {$Color["btnBdrColor"][$season]} 1px; background-color:{$Color["btnBackColor"][$season]}; color:{$Color["btnBdrColor"][$season]}; top: {$Device['isMobile'] ? "30%" : "35%"}; left: {$Device['isMobile'] ? "32.5%" : "40%"};">
+        Box<br/>Convyer
     </div>
     <div class="borderBox" 
     on:click={()=> {curPage = 4}} on:keydown={()=>{}}
-        style="font-size:{context}rem;border: solid {$Color["btnBdrColor"][$season]} 1px; background-color:{$Color["btnBackColor"][$season]}; color:{$Color["btnBdrColor"][$season]};top: 35%; left: {$Device['isMobile'] ? "50%" : "50%"};">
-        Lense
-    </div>
-    <div class="borderBox" 
-    on:click={()=> {curPage = 5}} on:keydown={()=>{}}
-        style="font-size:{context}rem;border: solid {$Color["btnBdrColor"][$season]} 1px; background-color:{$Color["btnBackColor"][$season]}; color:{$Color["btnBdrColor"][$season]};top: 35%; left: {$Device['isMobile'] ? "85%" : "70%"};">
-        Light<br/>
-        Source
+        style="font-size:{context}rem;border: solid {$Color["btnBdrColor"][$season]} 1px; background-color:{$Color["btnBackColor"][$season]}; color:{$Color["btnBdrColor"][$season]}; top: {$Device['isMobile'] ? "30%" : "35%"}; left: {$Device['isMobile'] ? "67.5%" : "60%"};">
+        Product<br/>Convyer
     </div>
     <div class="borderBox" 
     on:click={()=> {curPage = 6}} on:keydown={()=>{}}
-        style="font-size:{context}rem;border: solid {$Color["btnBdrColor"][$season]} 1px; background-color:{$Color["btnBackColor"][$season]}; color:{$Color["btnBdrColor"][$season]};top: {$Device['isMobile'] ? "60%" : "75%"};left: {$Device['isMobile'] ? "15%" : "30%"};">
-        Convyer
+        style="font-size:{context}rem;border: solid {$Color["btnBdrColor"][$season]} 1px; background-color:{$Color["btnBackColor"][$season]}; color:{$Color["btnBdrColor"][$season]}; top: {$Device['isMobile'] ? "60%" : "65%"}; left: {$Device['isMobile'] ? "32.5%" : "40%"};">
+        PLC
     </div>
     <div class="borderBox" 
     on:click={()=> {curPage = 7}} on:keydown={()=>{}}
-        style="font-size:{context}rem;border: solid {$Color["btnBdrColor"][$season]} 1px; background-color:{$Color["btnBackColor"][$season]}; color:{$Color["btnBdrColor"][$season]};top: {$Device['isMobile'] ? "60%" : "75%"};left: {$Device['isMobile'] ? "50%" : "50%"};">
+        style="font-size:{context}rem;border: solid {$Color["btnBdrColor"][$season]} 1px; background-color:{$Color["btnBackColor"][$season]}; color:{$Color["btnBdrColor"][$season]}; top: {$Device['isMobile'] ? "60%" : "65%"}; left: {$Device['isMobile'] ? "67.5%" : "60%"};">
         PC
-    </div>
-    <div class="borderBox" 
-    on:click={()=> {curPage = 8}} on:keydown={()=>{}}
-        style="font-size:{context}rem;border: solid {$Color["btnBdrColor"][$season]} 1px; background-color:{$Color["btnBackColor"][$season]}; color:{$Color["btnBdrColor"][$season]};top: {$Device['isMobile'] ? "60%" : "75%"};left: {$Device['isMobile'] ? "85%" : "70%"};">
-        IO
     </div>
 </DefaultPage>
 <style>

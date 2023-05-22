@@ -13,21 +13,37 @@
 	let loaded = false;
 	let failed = false;
 	let loading = false;
-    let src = "";
+    let src = "http://drive.google.com/uc?export=view&id=1fl_YzF4lQzrRnZfZhA6kY0_o9Qo2SbyD";
 
+    onMount(() => {
+			img = new Image();
+			img.src = src;
+			loading = true;
+
+			img.onload = () => {
+                clearTimeout(t);
+                loading = false;
+                t = setTimeout(() => {
+					loaded = true;
+                }, 350)
+			};
+			img.onerror = () => {
+					loading = false;
+                t = setTimeout(() => {
+					failed = true;
+                }, 350)
+			};
+    })
 </script>
 <DefaultPage color={color} fontSize={subhead}>
     <div style="font-size:{context}rem;">
-        {#if $Device["isMobile"]}
-        <p>
-            영상 재생은 데스크탑에서만 지원됩니다.<br/>
-            데스크탑으로 접속 후 확인해주세요.
-        </p>
-        {:else}
-        <iframe width="80%" height="80%" src="https://drive.google.com/file/d/1e3SmJAOYRvqMG4wlBd5KtGB_vw_iUXoX/preview"
-        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
-        title="run_1"></iframe>
-        {/if}
+    {#if loaded}
+    <img in:fade={{ duration:300,}} {src} width="auto" height="80%" alt="downloader_inside" />
+    {:else if failed}
+    <img  width="30%" height="30%" src="https://icon-library.com/images/not-found-icon/not-found-icon-20.jpg" alt="Not Found" />
+    {:else if loading}
+    <p out:fade={{duration:300,}}>Loading Image...</p>
+    {/if}
     </div>
 </DefaultPage>
 
@@ -40,8 +56,5 @@
 		justify-content: center;
 		display: flex;
 		text-align: center;
-    }
-    iframe{
-
     }
 </style>
