@@ -8,5 +8,6 @@
 </script>
 
 <DefaultPage color={color} fontSize={head}>
-    <h2>Project Review</h2>
+    <!-- <h2>Project Review</h2> -->
+    <h2>Coming Soon...</h2>
 </DefaultPage>

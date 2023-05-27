@@ -21,22 +21,23 @@
     export let maxPage;
 
     let Pages =[
-        { index: 1, component:Page01 },
-        { index: 2, component:Page02 },
-        { index: 3, component:Page03 },
-        { index: 4, component:Page04 },
-        { index: 5, component:Page05 },
-        { index: 6, component:Page06 },
-        { index: 7, component:Page07 },
-        { index: 8, component:Page08 },
-        { index: 9, component:Page09 },
-        { index: 10, component:Page10 },
-        { index: 11, component:Page11 },
-        { index: 12, component:Page12 },
-        { index: 13, component:Page13 },
-        { index: 14, component:Page14 },
-        { index: 15, component:Page15 },
-        { index: 16, component:Page16 }
+        { index: 1, component:Page01 }
+        // ,
+        // { index: 2, component:Page02 },
+        // { index: 3, component:Page03 },
+        // { index: 4, component:Page04 },
+        // { index: 5, component:Page05 },
+        // { index: 6, component:Page06 },
+        // { index: 7, component:Page07 },
+        // { index: 8, component:Page08 },
+        // { index: 9, component:Page09 },
+        // { index: 10, component:Page10 },
+        // { index: 11, component:Page11 },
+        // { index: 12, component:Page12 },
+        // { index: 13, component:Page13 },
+        // { index: 14, component:Page14 },
+        // { index: 15, component:Page15 },
+        // { index: 16, component:Page16 }
     ]
 </script>
 

@@ -1,5 +1,5 @@
 <script>
-    import { Device } from '../../../global'
+    import { Device, Release } from '../../../global'
 
     export let color;
     export let Pages;

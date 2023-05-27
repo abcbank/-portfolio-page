@@ -8,8 +8,10 @@
     export let maxPage;
 
     let Pages =[
-        { index: 1, component:Page01 },
-        { index: 2, component:Page02 }]
+        { index: 1, component:Page01 }
+        // ,
+        // { index: 2, component:Page02 }
+        ]
 </script>
 
 <DefaultSlide Pages={Pages} bind:curPage={curPage} bind:maxPage={maxPage} bind:color={color} />
